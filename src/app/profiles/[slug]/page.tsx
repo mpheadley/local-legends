@@ -224,7 +224,7 @@ export default async function ProfilePage({
       />
 
       {/* Hero */}
-      <section className="relative bg-ll-dark text-white overflow-hidden topo-texture">
+      <section className="relative text-white overflow-hidden gradient-hero">
         {/* Ghost Initial */}
         <span className="ghost-initial" aria-hidden="true">
           {frontmatter.name.charAt(0)}

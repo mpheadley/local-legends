@@ -26,12 +26,12 @@ export default function HomePage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-ll-dark text-white overflow-hidden topo-texture">
+      <section className="relative text-white overflow-hidden gradient-hero">
         <div className="relative mx-auto max-w-5xl px-6 pt-32 pb-20 md:pt-40 md:pb-28 text-center"
           style={{ zIndex: 2 }}
         >
           <p
-            className="text-ll-accent text-base tracking-wide mb-6 animate-on-scroll"
+            className="text-white/80 text-base tracking-wide mb-6 animate-on-scroll"
             style={{ fontFamily: "var(--font-accent)" }}
           >
             Appalachian Foothills
@@ -42,7 +42,7 @@ export default function HomePage() {
           >
             {siteConfig.name}
           </h1>
-          <div className="mx-auto mt-8 mb-8 w-16 h-[3px] bg-ll-accent rounded animate-on-scroll" aria-hidden="true" />
+          <div className="mx-auto mt-8 mb-8 w-16 h-[3px] bg-white rounded animate-on-scroll" aria-hidden="true" />
           <p
             className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto animate-on-scroll"
             style={{ fontFamily: "var(--font-heading)", fontWeight: 300 }}

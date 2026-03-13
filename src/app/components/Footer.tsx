@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-ll-dark text-white/70 overflow-hidden topo-texture">
+    <footer className="relative text-white/70 overflow-hidden gradient-hero">
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">

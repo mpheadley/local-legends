@@ -17,6 +17,9 @@
   --color-ll-white: #FFFFFF;
   --color-ll-border: #E5E5E0;
 
+  /* Gradients */
+  --gradient-pine: linear-gradient(to right, #3D6B4F, #CA8A04);
+
   /* Spacing */
   --section-padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 4rem);
 }
@@ -445,6 +448,26 @@ html {
     opacity: 1;
     animation: none;
   }
+}
+
+/* ─── Gradient Hero (forest green → gold + topo) ─── */
+
+.gradient-hero {
+  background: var(--gradient-pine);
+}
+
+.gradient-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  pointer-events: none;
+  background-image: url("/topo-7.png");
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  border-radius: inherit;
+  mix-blend-mode: multiply;
+  z-index: 1;
 }
 
 /* ─── Topo Texture (dark backgrounds) ─── */

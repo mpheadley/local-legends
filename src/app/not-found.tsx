@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <main id="main-content">
-      <section className="relative bg-ll-dark text-white overflow-hidden topo-texture">
+      <section className="relative text-white overflow-hidden gradient-hero">
         <div className="relative z-10 mx-auto max-w-3xl px-6 pt-32 pb-16 md:pt-40 md:pb-24 text-center">
           <p
             className="text-8xl md:text-9xl font-bold opacity-20"

@@ -41,7 +41,7 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-ll-dark text-white overflow-hidden topo-texture">
+      <section className="relative text-white overflow-hidden gradient-hero">
         <div className="relative z-10 mx-auto max-w-3xl px-6 pt-32 pb-12 md:pt-36 md:pb-16">
           <h1
             className="text-3xl md:text-4xl font-bold animate-on-scroll"
