@@ -15,6 +15,10 @@ Local Legends is an editorial project highlighting the people and places that ma
 - **Coldwater Mountain** — Over 56 miles of singletrack and the first Leadville qualifying race east of the Mississippi
 - **The Peerless Saloon & Grille** — Alabama's oldest bar, a 1904 World's Fair relic, a former brothel, and a ghost named Lucinda
 - **Chief Ladiga Trail** — 105 miles of paved trail from Anniston to Atlanta, and the Piedmont trail town businesses built around it
+- **Noccalula Falls** — A 90-foot waterfall, a Cherokee legend, and 250 acres of gorge trails in Gadsden
+- **Cheaha State Park** — Alabama's highest point at 2,407 feet, CCC-built structures, and the Pinhoti Trail connection
+- **Alabama's Covered Bridges** — The oldest in Alabama (Oxford, built ~1850 by a formerly enslaved man) plus the Blount County trio
+- **Janney Furnace** — A Confederate iron furnace destroyed before it ever fired, still standing in Ohatchee
 
 ## Stack
 
