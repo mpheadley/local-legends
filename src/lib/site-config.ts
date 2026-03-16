@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Local Legends",
+  name: "Southern Legends",
   tagline: "Stories from the Appalachian Foothills of Northeast Alabama",
   description:
     "Spotlighting the makers, builders, and business owners who define life in Alabama's Appalachian foothills.",

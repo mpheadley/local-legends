@@ -64,7 +64,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            <strong>Local Legends</strong> is a project dedicated to finding
+            <strong>Southern Legends</strong> is a project dedicated to finding
             those people and telling their stories. Not quick blurbs or
             directory listings — real profiles, with real conversations, about
             what they do and why it matters.
@@ -119,7 +119,7 @@ export default function AboutPage() {
           </div>
 
           <p>
-            I started Local Legends because I kept meeting people whose stories
+            I started Southern Legends because I kept meeting people whose stories
             were too good not to share. The more businesses I worked with, the
             more I realized that the best part wasn&apos;t the website — it was
             sitting down and hearing someone talk about the work they love.
@@ -150,7 +150,7 @@ export default function AboutPage() {
           <hr className="my-10 border-ll-dark/10" />
 
           <p className="text-sm text-ll-text-light">
-            Local Legends is built and maintained by{" "}
+            Southern Legends is built and maintained by{" "}
             <a
               href="https://headleyweb.com"
               target="_blank"

@@ -1,6 +1,6 @@
 # Matt Headley Profile — Source Materials
 
-This folder contains the research, source documents, and reference materials used to write the Matt Headley profile for Local Legends.
+This folder contains the research, source documents, and reference materials used to write the Matt Headley profile for Southern Legends.
 
 ## Files
 
