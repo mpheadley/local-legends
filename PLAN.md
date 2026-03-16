@@ -1,4 +1,4 @@
-# Local Legends — Build Plan
+# Southern Legends — Build Plan
 
 > Editorial site profiling small business owners, makers, and notable places in Northeast Alabama's Appalachian foothills.
 > Personal/portfolio project by Matt Headley. Not a client site.
@@ -88,7 +88,7 @@ The site uses **typography as the primary visual element** instead of stock phot
 - [x] `robots.ts` — auto-generated from `site-config.ts`
 - [x] `sitemap.ts` — auto-generated from profile slugs + static pages
 - [x] `not-found.tsx` — custom 404 with noindex, on-brand design
-- [ ] `apple-touch-icon.png` — needs Local Legends-branded icon designed
+- [ ] `apple-touch-icon.png` — needs Southern Legends-branded icon designed
 - [x] OG image — typography-only: forest green→gold gradient + topo + Fraunces/Rock Salt (`og-preview.html`). Photo version deferred — CC-licensed Cheaha photo rejected (ShareAlike license). Shoot own photo later.
 - [ ] Security headers in `next.config.ts`
 - [ ] `<!-- Built by Headley Web & SEO | headleyweb.com -->` HTML comment in layout.tsx
@@ -106,7 +106,7 @@ The MDX content references "southern Appalachian foothills," "Dugger Mountain," 
 - The topo texture, earthy palette, and Parchment & Pine design system already evoke this — the copy should match
 
 ### OG image
-- Appalachian foothills landscape (green ridgelines, morning fog, layered mountains) with "Local Legends" typeset in Fraunces
+- Appalachian foothills landscape (green ridgelines, morning fog, layered mountains) with "Southern Legends" typeset in Fraunces
 - Shoot near Cheaha State Park or Little River Canyon — your own photo, not stock
 - 1200x630 for social sharing
 - This becomes the default OG image for pages without their own
@@ -114,14 +114,14 @@ The MDX content references "southern Appalachian foothills," "Dugger Mountain," 
 ### Tasks
 - [ ] Weave "Appalachian foothills" language into homepage hero/tagline and About page copy
 - [ ] Shoot or source a foothills photo for OG image (Cheaha, Little River Canyon, etc.)
-- [ ] Create branded OG image: foothills photo + Fraunces "Local Legends" overlay
-- [ ] Consider foothills photo as subtle background on About page or "Why Local Legends?" section
+- [ ] Create branded OG image: foothills photo + Fraunces "Southern Legends" overlay
+- [ ] Consider foothills photo as subtle background on About page or "Why Southern Legends?" section
 
 ---
 
 ## Headley Web & SEO — Cross-promotion Strategy
 
-Local Legends should support Headley Web as a portfolio piece and authority builder.
+Southern Legends should support Headley Web as a portfolio piece and authority builder.
 
 ### What's in place
 - Footer on every page: "A community project by Headley Web & SEO" → headleyweb.com
@@ -130,8 +130,8 @@ Local Legends should support Headley Web as a portfolio piece and authority buil
 
 ### Still to do
 - [ ] Add `<!-- Built by Headley Web & SEO | headleyweb.com -->` HTML comment in layout.tsx source
-- [ ] Add second Headley Web mention at bottom of About page (after "Know a Local Legend?" section) — subtle line: "Local Legends is built and maintained by Headley Web & SEO"
-- [ ] Add Local Legends as case study on headleyweb.com (creates backlink loop)
+- [ ] Add second Headley Web mention at bottom of About page (after "Know a Local Legend?" section) — subtle line: "Southern Legends is built and maintained by Headley Web & SEO"
+- [ ] Add Southern Legends as case study on headleyweb.com (creates backlink loop)
 - [ ] Cookie banner + GA4 analytics (when ready) — modeled after headleyweb's `CookieBanner.tsx` + `Analytics.tsx`
 
 ---
@@ -221,7 +221,7 @@ Every time a new profile is published, run through this list:
 - [ ] **Instagram** — post a photo or typographic card with a teaser excerpt. Link in bio to the profile. Stories for quick reach, Reels if there's video content.
 - [ ] **Tag the subject** — if the profile is about a business, nonprofit, or place with a social presence, tag them. They share it = free reach to their audience.
 - [ ] **Email list** — when subscribe CTA is wired up, every new profile goes to the list. "New story: [title]" with excerpt + link.
-- [ ] **Google Business Profile** — post a short update with a link (if Local Legends has a GBP).
+- [ ] **Google Business Profile** — post a short update with a link (if Southern Legends has a GBP).
 - [ ] **Cross-post to headleyweb.com** — share as a GBP post or social post from the Headley Web accounts when relevant. Positions Matt as embedded in the local community.
 
 ### Distribution — Milestone Pushes
@@ -235,21 +235,45 @@ These happen at key content thresholds, not per-profile:
 
 ### Cross-Promotion with Headley Web
 
-> See also: `headleyweb-rebuild/BLOG_POST_PLAN.md` — several posts directly reference Local Legends.
+> See also: `headleyweb-rebuild/BLOG_POST_PLAN.md` — several posts directly reference Southern Legends.
 
-- [ ] **Blog post #10c** ("5 Local Businesses in Anniston Crushing It Online") — feature Local Legends subjects where relevant. Backlink loop: headleyweb post → Local Legends profile → headleyweb footer link.
-- [ ] **Blog post #25** ("I Built a Local Storytelling Site...") — the Local Legends case study for headleyweb. Write when the site has enough real content to showcase.
-- [ ] **Roundup posts (#6-10)** — when a business featured in a headleyweb roundup also has a Local Legends profile, link between them.
-- [ ] **Keep the editorial line clear:** Local Legends profiles are narrative — no CTAs, no sales pitch. Headleyweb blog posts have CTAs and target keywords. The sites serve different purposes and the tone should never bleed.
+- [ ] **Blog post #10c** ("5 Local Businesses in Anniston Crushing It Online") — feature Southern Legends subjects where relevant. Backlink loop: headleyweb post → Southern Legends profile → headleyweb footer link.
+- [ ] **Blog post #25** ("I Built a Local Storytelling Site...") — the Southern Legends case study for headleyweb. Write when the site has enough real content to showcase.
+- [ ] **Roundup posts (#6-10)** — when a business featured in a headleyweb roundup also has a Southern Legends profile, link between them.
+- [ ] **Keep the editorial line clear:** Southern Legends profiles are narrative — no CTAs, no sales pitch. Headleyweb blog posts have CTAs and target keywords. The sites serve different purposes and the tone should never bleed.
+
+### Publication Pitching
+
+> **Trigger:** 5+ polished, published profiles on the live domain. No editor will click a Vercel preview URL.
+
+Pitch targets (in order of fit):
+1. **The Bitter Southerner** — closest editorial match. Personal, place-based, long-form Southern storytelling. Contributed pieces.
+2. **Reckon** (AL.com's editorial arm) — Alabama-specific storytelling
+3. **Scalawag** — Southern culture and community
+4. **Garden & Gun** — place profiles with strong sensory detail (Cheaha, Noccalula Falls, covered bridges)
+5. **Alabama Heritage** — academic-leaning but publishes narrative nonfiction about Alabama places and people
+
+Strategy:
+- Pitch one polished profile as a standalone piece, linking back to Southern Legends for the full collection
+- A publication feature linking back = massive credibility + SEO win
+- This is exposure, not revenue — don't expect payment
+- Proof and polish to their editorial bar before pitching
+
+Tasks:
+- [ ] Reach 5+ published profiles on live domain (trigger point)
+- [ ] Research submission guidelines for each publication
+- [ ] Select strongest profile for first pitch (likely a place profile — broadest appeal)
+- [ ] Write pitch email with link to published piece
+- [ ] Track pitches and responses
 
 ---
 
 ## Phase 7 — Monetization: Patreon
 
-> **Trigger:** Launch when Local Legends has 10+ published profiles AND visible social engagement (200-300+ engaged followers in local Facebook groups counts).
+> **Trigger:** Launch when Southern Legends has 10+ published profiles AND visible social engagement (200-300+ engaged followers in local Facebook groups counts).
 
-### Why Patreon fits Local Legends (but not Headley Web)
-- Local Legends is a **community content project**, not a service business — exactly what Patreon is built for.
+### Why Patreon fits Southern Legends (but not Headley Web)
+- Southern Legends is a **community content project**, not a service business — exactly what Patreon is built for.
 - The pitch: *"Help me tell the stories of the people who make Northeast Alabama great."*
 - Headley Web clients buy a service (audit → build → care plan). They're not patrons. Keep Patreon separate from the business.
 
@@ -273,9 +297,9 @@ These happen at key content thresholds, not per-profile:
 
 ### Tasks
 - [ ] Reach 10+ published profiles (trigger point)
-- [ ] Create new Patreon page for Local Legends (not the old farm/ministry page)
+- [ ] Create new Patreon page for Southern Legends (not the old farm/ministry page)
 - [ ] Design tier structure and perks
-- [ ] Add "Support Local Legends" link in footer and About page (only after Patreon is live)
+- [ ] Add "Support Southern Legends" link in footer and About page (only after Patreon is live)
 - [ ] Create a patron credits section on the About page
 - [ ] Announce via per-profile distribution channels (Facebook, email list, Instagram)
 

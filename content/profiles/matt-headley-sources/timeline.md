@@ -1,6 +1,6 @@
 # Matt Headley — Full Timeline & Source Notes
 
-This is the master reference for writing the Local Legends profile and the Headley Web blog post. Everything here is from Matt directly or from published sources.
+This is the master reference for writing the Southern Legends profile and the Headley Web blog post. Everything here is from Matt directly or from published sources.
 
 ---
 
@@ -102,7 +102,7 @@ This is the master reference for writing the Local Legends profile and the Headl
 - Heather grew up in Pleasant Valley — this is a return to her roots
 - **Getting stability again** — medication, new diagnosis, new understanding of what he's dealing with
 - **Headley Web & SEO is in early launch stage** — actively reaching out for referrals, looking for first clients. Hormozi flywheel strategy: free/discounted builds → portfolio + testimonials → raise prices. See `BUSINESS_STRATEGY.md` and `PLAN.md` for details. **For the profile, keep business details minimal — just honest about being in the early days.**
-- Created **Local Legends** — editorial storytelling site about NE Alabama people and places
+- Created **Southern Legends** — editorial storytelling site about NE Alabama people and places
 - Four kids still all hands on deck
 - **Heather and the family never gave up on him.** The destruction felt complete for a long time — but it wasn't, because they were still there. Former vocations (ministry, farm) are over for now, but the family held.
 
@@ -175,7 +175,7 @@ This is the master reference for writing the Local Legends profile and the Headl
 - Vulnerable but not pitying — states hard facts plainly, then moves forward
 - Uses concrete sensory details: Camp Lee pool, hiking in the woods, handing someone flowers, drying books on the trampoline, Sunny barking in the background
 - Theological depth worn lightly: Maundy Thursday, Trinity Sunday, mobile tabernacle, Romans 5 — integrated naturally, never lecture-y
-- The Local Legends profile should be MORE vulnerable than the Star article (that was written mid-recovery; this is written from the other side of a second collapse)
+- The Southern Legends profile should be MORE vulnerable than the Star article (that was written mid-recovery; this is written from the other side of a second collapse)
 - **The Patreon posts reveal a gap between the public narrative (spring/summer 2025) and the private reality.** In April he was projecting hope and sacred purpose. By July he was still farming, still preaching, still building. By November it all collapsed. That gap — the months of trying to make it work — is part of the story.
 
 ---
@@ -186,7 +186,7 @@ This is the master reference for writing the Local Legends profile and the Headl
 - Farm sale closed November 2025
 - Relocating to Pleasant Valley — November 2025
 - Starting Headley Web & SEO
-- Creating Local Legends
+- Creating Southern Legends
 - The fact that this is the SECOND time — depression, then mania, then depression again
 - The shame and embarrassment of coming out of hiding after the manic episode
 - The months of trying to make it work (April–July 2025) before the final collapse — documented in the Patreon posts, which show Matt publicly projecting hope while privately struggling

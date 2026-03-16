@@ -1,10 +1,10 @@
-# Local Legends
+# Southern Legends
 
 A content-driven storytelling site profiling small businesses, landmarks, makers, and community organizations in Northeast Alabama. Built by [Headley Web & SEO](https://headleywebseo.com).
 
 ## About
 
-Local Legends is an editorial project highlighting the people and places that make Northeast Alabama what it is — the nonprofits holding communities together, the museums hiding in plain sight, the makers and business owners who've been doing the work for decades. Each profile is researched, written in first person, and built to be useful to anyone searching for these places online.
+Southern Legends is an editorial project highlighting the people and places that make Northeast Alabama what it is — the nonprofits holding communities together, the museums hiding in plain sight, the makers and business owners who've been doing the work for decades. Each profile is researched, written in first person, and built to be useful to anyone searching for these places online.
 
 ## Current Profiles
 

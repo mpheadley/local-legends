@@ -1,7 +1,7 @@
 # Matt Headley Profile — Review Status
 
 ## What This Is
-Three-pass editorial review of `content/profiles/matt-headley.md` (the Local Legends self-profile). Source docs are in `matt-headley-sources/`.
+Three-pass editorial review of `content/profiles/matt-headley.md` (the Southern Legends self-profile). Source docs are in `matt-headley-sources/`.
 
 ## Pass 1: Coherence & Accuracy — DONE
 All fixes applied. No outstanding issues.

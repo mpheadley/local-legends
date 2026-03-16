@@ -102,7 +102,7 @@ export default function HomePage() {
             className="text-2xl md:text-3xl font-bold text-ll-dark mb-6 animate-on-scroll"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Why Local Legends?
+            Why Southern Legends?
           </h2>
           <p className="text-ll-text leading-relaxed mb-6 animate-on-scroll">
             In the Appalachian foothills of Northeast Alabama, people are doing
@@ -113,7 +113,7 @@ export default function HomePage() {
             neighbors need.
           </p>
           <p className="text-ll-text leading-relaxed mb-8 animate-on-scroll">
-            Local Legends tells their stories — not to sell anything, but because
+            Southern Legends tells their stories — not to sell anything, but because
             these people and their work deserve to be seen.
           </p>
           <a

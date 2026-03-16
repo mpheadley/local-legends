@@ -40,7 +40,7 @@ export default function Nav() {
               }`}
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Local Legends
+              Southern Legends
             </span>
           </Link>
 

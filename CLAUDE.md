@@ -1,4 +1,4 @@
-# Local Legends — Project Instructions
+# Southern Legends — Project Instructions
 
 ## What This Is
 Editorial / storytelling site profiling small business owners and makers in Northeast Alabama. Not a client site — this is a personal/portfolio project by Matt Headley. Content-driven, MDX-based, magazine-style presentation.
