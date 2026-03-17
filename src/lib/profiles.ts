@@ -14,7 +14,7 @@ export interface ProfileFrontmatter {
   date: string;
   lastModified?: string;
   excerpt: string;
-  tldr: string;
+  subtitle: string;
   heroImage: string;
   heroAlt: string;
   published: boolean;

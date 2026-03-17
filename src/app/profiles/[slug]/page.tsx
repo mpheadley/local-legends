@@ -204,10 +204,10 @@ export default async function ProfilePage({
     ...(frontmatter.heroImage && {
       image: frontmatter.heroImage,
     }),
-    ...(frontmatter.tldr && {
+    ...(frontmatter.subtitle && {
       speakable: {
         "@type": "SpeakableSpecification",
-        cssSelector: ".tldr",
+        cssSelector: ".subtitle",
       },
     }),
     about: {
@@ -301,12 +301,12 @@ export default async function ProfilePage({
             {frontmatter.title}
           </h1>
 
-          {frontmatter.tldr && (
+          {frontmatter.subtitle && (
             <p
               className="mt-6 text-base md:text-lg leading-relaxed text-white/75 max-w-2xl animate-on-scroll"
               data-speakable="true"
             >
-              {frontmatter.tldr}
+              {frontmatter.subtitle}
             </p>
           )}
 
