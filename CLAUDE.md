@@ -48,17 +48,26 @@ src/
     profiles.ts         — MDX content loader (reads content/profiles/*.mdx)
     site-config.ts      — site metadata, nav links
 content/
-  profiles/             — MDX story files
-    earl-mckinney-blacksmith.mdx
-    jimmy-dawson-musician.mdx
-    mae-ruth-foster-herbalist.mdx
+  profiles/             — MDX story files (21 profiles, see below)
+  AUTHENTIC-VOICE-GUIDE.md — writing voice reference
 ```
 
 ## Content Model
 Each profile is an `.mdx` file in `content/profiles/` with frontmatter (title, slug, category, location, excerpt, date, etc.) and long-form narrative content. Profiles use the `PullQuote` component for Rock Salt accent quotes.
 
+## Content Status
+- **Matt's writing:** `matt-headley.mdx` — Matt's own profile, written by Matt. This is the voice baseline for the site.
+- **AI-written profiles (20):** All other profiles were written entirely by Claude and tagged `aiWritten: true` in frontmatter. Do NOT reference these as examples of Matt's voice. They need Matt's review and proofing before being treated as final. Consider them drafts until Matt removes the `aiWritten` flag.
+- **Fake sample profiles deleted:** Earl McKinney, Jimmy Dawson, Mae Ruth Foster were fictional — removed.
+
+## Writing Workflow
+- **Voice guide:** `content/AUTHENTIC-VOICE-GUIDE.md` — reference for all writing on this site.
+- **Two-draft rule:** Matt writes first draft. Claude acts as editor with specific questions. Claude never writes openings, endings, or vulnerable passages.
+- **Voice baseline:** Read `matt-headley.mdx` before helping with any new profile writing.
+- **AI kill list:** Avoid words/patterns in Part 5 of the voice guide (delve, foster, leverage, tapestry, etc.)
+
 ## Current Status
-- **Done:** Design system, layout, homepage, about page, profile detail page, profile listing, 3 sample profiles (Earl/Jimmy/Mae Ruth), RSS feed, scroll animations, share buttons, story navigation, subscribe CTA
+- **Done:** Design system, layout, homepage, about page, profile detail page, profile listing, 21 profiles (1 by Matt, 20 AI drafts), RSS feed, scroll animations, share buttons, story navigation, subscribe CTA
 - **Fonts loaded via `<link>` in layout.tsx** — Fraunces and Rock Salt are Google Fonts links, not `next/font`. Source Sans 3 uses `next/font/google`. Consider migrating Fraunces/Rock Salt to `next/font` for performance.
 
 ## Build Rules
