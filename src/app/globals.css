@@ -316,11 +316,11 @@ html {
 
 /* ─── TL;DR Block ─── */
 
-.tldr {
+.subtitle {
   position: relative;
 }
 
-.tldr p:last-child {
+.subtitle p:last-child {
   margin-bottom: 0;
 }
 
