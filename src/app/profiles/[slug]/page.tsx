@@ -13,9 +13,7 @@ import ArticleImage from "@/app/components/ArticleImage";
 import PhotoCarouselLoader from "@/app/components/PhotoCarouselLoader";
 import PullQuote from "@/app/components/PullQuote";
 import VideoLoop from "@/app/components/VideoLoop";
-import ShareButtons from "@/app/components/ShareButtons";
 import StoryNav from "@/app/components/StoryNav";
-import SubscribeCTA from "@/app/components/SubscribeCTA";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -251,12 +249,15 @@ export default async function ProfilePage({
             />
           </>
         ) : (
-          <span className="ghost-initial" aria-hidden="true">
-            {frontmatter.name.charAt(0)}
-          </span>
+          <>
+            <div className="absolute inset-0 bg-black/50 z-[1]" aria-hidden="true" />
+            <span className="ghost-initial" aria-hidden="true">
+              {frontmatter.name.charAt(0)}
+            </span>
+          </>
         )}
 
-        <div className="relative max-w-3xl mx-auto px-6 pt-32 pb-16 md:pt-36 md:pb-20"
+        <div className="relative max-w-3xl mx-auto px-6 pt-28 pb-14 md:pt-32 md:pb-18"
           style={{ zIndex: 2 }}
         >
           <Link
@@ -279,27 +280,20 @@ export default async function ProfilePage({
             All Stories
           </Link>
 
-          {/* Tags */}
-          {frontmatter.tags?.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-4">
-              {frontmatter.tags.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/profiles?tag=${encodeURIComponent(tag)}`}
-                  className="category-tag hover:opacity-80 transition-opacity"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
+          {frontmatter.titleHtml ? (
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white animate-on-scroll"
+              style={{ fontFamily: "var(--font-heading)" }}
+              dangerouslySetInnerHTML={{ __html: frontmatter.titleHtml }}
+            />
+          ) : (
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white animate-on-scroll"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              {frontmatter.title}
+            </h1>
           )}
-
-          <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white animate-on-scroll"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            {frontmatter.title}
-          </h1>
 
           {frontmatter.subtitle && (
             <p
@@ -327,14 +321,6 @@ export default async function ProfilePage({
             <span>{readingTime}</span>
           </div>
 
-          {/* Share buttons */}
-          <div className="mt-6 animate-on-scroll">
-            <ShareButtons
-              url={`/profiles/${slug}`}
-              title={frontmatter.title}
-              description={frontmatter.excerpt}
-            />
-          </div>
         </div>
       </section>
 
@@ -344,6 +330,25 @@ export default async function ProfilePage({
           <MDXRemote source={content} components={mdxComponents} />
         </div>
       </article>
+
+      {/* Tags — below article */}
+      {frontmatter.tags?.length > 0 && (
+        <section className="bg-ll-light border-t border-ll-border">
+          <div className="max-w-3xl mx-auto px-6 py-8">
+            <div className="flex flex-wrap gap-2">
+              {frontmatter.tags.map((tag) => (
+                <Link
+                  key={tag}
+                  href={`/profiles?tag=${encodeURIComponent(tag)}`}
+                  className="category-tag hover:opacity-80 transition-opacity"
+                >
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Story Navigation (prev/next) */}
       <StoryNav prev={prev} next={next} />
@@ -355,23 +360,21 @@ export default async function ProfilePage({
             className="text-xl md:text-2xl font-bold text-ll-dark mb-4 animate-on-scroll"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Know a Local Legend?
+            Know Someone Worth Writing About?
           </h2>
           <p className="text-ll-text-light mb-6 max-w-xl mx-auto animate-on-scroll">
-            If you know someone in Northeast Alabama whose story deserves to be
-            told, we&apos;d love to hear about them.
+            The best profiles start with a recommendation. If you know someone
+            whose story deserves more than a paragraph in the local paper,
+            we&apos;d like to hear about them.
           </p>
           <Link
             href="/about"
             className="inline-block px-6 py-3 bg-ll-primary text-white font-semibold rounded hover:bg-ll-primary-dark transition-colors animate-on-scroll"
           >
-            Nominate Someone
+            Tell Us About Them
           </Link>
         </div>
       </section>
-
-      {/* Subscribe CTA */}
-      <SubscribeCTA />
     </main>
   );
 }

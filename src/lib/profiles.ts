@@ -18,6 +18,8 @@ export interface ProfileFrontmatter {
   heroImage: string;
   heroAlt: string;
   published: boolean;
+  featured?: boolean;
+  titleHtml?: string;
 }
 
 export interface Profile {
@@ -59,6 +61,13 @@ export function getAllProfiles(): Profile[] {
         new Date(b.frontmatter.date).getTime() -
         new Date(a.frontmatter.date).getTime()
     );
+}
+
+/** Returns the profile with `featured: true`, or falls back to the most recent published profile. */
+export function getFeaturedProfile(): Profile | null {
+  const all = getAllProfiles();
+  if (all.length === 0) return null;
+  return all.find((p) => p.frontmatter.featured) ?? all[0];
 }
 
 export function getCategories(): string[] {

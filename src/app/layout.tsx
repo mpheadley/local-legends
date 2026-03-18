@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Sans_3, Fraunces, Rock_Salt } from "next/font/google";
+import { Source_Sans_3, Fraunces, Rock_Salt, Zeyada, Permanent_Marker, Caveat } from "next/font/google";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
@@ -22,6 +22,26 @@ const fraunces = Fraunces({
 const rockSalt = Rock_Salt({
   variable: "--font-rock-salt",
   weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const zeyada = Zeyada({
+  variable: "--font-zeyada",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const permanentMarker = Permanent_Marker({
+  variable: "--font-permanent-marker",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
   display: "swap",
 });
@@ -64,7 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Built by Headley Web & SEO | headleyweb.com */}
-      <body className={`${sourceSans.variable} ${fraunces.variable} ${rockSalt.variable} antialiased`}>
+      <body className={`${sourceSans.variable} ${fraunces.variable} ${rockSalt.variable} ${zeyada.variable} ${permanentMarker.variable} ${caveat.variable} antialiased`}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-ll-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"
