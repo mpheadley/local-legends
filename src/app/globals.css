@@ -9,7 +9,7 @@
   --color-ll-primary-light: #B84A1C;
   --color-ll-accent: #CA8A04;
   --color-ll-accent-dark: #A16C03;
-  --color-ll-dark: #292524;
+  --color-ll-dark: #1C1917;
   --color-ll-light: #FAFAF7;
   --color-ll-warm: #F0EDE6;
   --color-ll-text: #3F3B36;
@@ -30,7 +30,7 @@
   --color-ll-primary-light: #B84A1C;
   --color-ll-accent: #CA8A04;
   --color-ll-accent-dark: #A16C03;
-  --color-ll-dark: #292524;
+  --color-ll-dark: #1C1917;
   --color-ll-light: #FAFAF7;
   --color-ll-warm: #F0EDE6;
   --color-ll-text: #3F3B36;
@@ -58,6 +58,19 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   line-height: 1.2;
+}
+
+/* ─── Hero Headlines ─── */
+
+.hero-headline {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-variation-settings: "opsz" 72;
+}
+
+.hero-headline-lg {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-variation-settings: "opsz" 144;
+  letter-spacing: -0.02em;
 }
 
 /* ─── Scroll Reveal ─── */

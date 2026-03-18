@@ -1,14 +1,13 @@
 import { getAllProfiles, getAllTags } from "@/lib/profiles";
 import ProfileCard from "../components/ProfileCard";
 import { siteConfig } from "@/lib/site-config";
-import SubscribeCTA from "../components/SubscribeCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "All Stories",
   description:
-    "Browse all profiles of local legends from Northeast Alabama — craftspeople, musicians, business owners, and community figures.",
+    "Browse all Southern Legends profiles — craftspeople, musicians, business owners, and community figures.",
   alternates: {
     canonical: "/profiles",
     types: {
@@ -62,14 +61,15 @@ export default async function ProfilesPage({
       />
 
       <section className="relative text-white overflow-hidden gradient-hero">
-        <div className="relative z-10 mx-auto max-w-5xl px-6 pt-32 pb-12 md:pt-36 md:pb-16">
+        <div className="absolute inset-0 bg-black/50 z-[1]" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 pb-10 md:pt-32 md:pb-14">
           <h1
-            className="text-3xl md:text-4xl font-bold animate-on-scroll"
+            className="text-3xl md:text-4xl font-bold animate-on-scroll uppercase tracking-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {tag ? `Stories tagged "${tag}"` : "All Stories"}
           </h1>
-          <p className="mt-4 text-white/60 animate-on-scroll">
+          <p className="mt-3 text-white/70 animate-on-scroll">
             {profiles.length} {profiles.length === 1 ? "story" : "stories"}
             {tag ? ` tagged "${tag}"` : ""} and counting.
           </p>
@@ -77,35 +77,7 @@ export default async function ProfilesPage({
       </section>
 
       <section className="bg-ll-light">
-        <div className="mx-auto max-w-5xl px-6 py-12 md:py-16">
-          {/* Tag filters */}
-          {allTags.length > 1 && (
-            <div className="flex flex-wrap gap-2 mb-10 animate-on-scroll">
-              {tag && (
-                <Link
-                  href="/profiles"
-                  className="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold rounded-full bg-ll-dark text-white hover:bg-ll-text transition-colors"
-                >
-                  Clear filter
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </Link>
-              )}
-              {allTags.map((t) => (
-                <Link
-                  key={t}
-                  href={`/profiles?tag=${encodeURIComponent(t)}`}
-                  className={`category-tag transition-opacity ${
-                    tag === t ? "opacity-100 ring-2 ring-ll-accent" : "opacity-70 hover:opacity-100"
-                  }`}
-                >
-                  {t}
-                </Link>
-              ))}
-            </div>
-          )}
-
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
           {profiles.length > 0 ? (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {profiles.map((profile, i) => (
@@ -123,11 +95,41 @@ export default async function ProfilesPage({
               No stories found{tag ? ` for "${tag}"` : ""}. Check back soon.
             </p>
           )}
+
+          {/* Tag filters — below the grid, subtle */}
+          {allTags.length > 1 && (
+            <div className="mt-16 pt-8 border-t border-ll-border">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ll-text-light mb-4">
+                Filter by tag
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {tag && (
+                  <Link
+                    href="/profiles"
+                    className="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold rounded-full bg-ll-dark text-white hover:bg-ll-text transition-colors"
+                  >
+                    Clear filter
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </Link>
+                )}
+                {allTags.map((t) => (
+                  <Link
+                    key={t}
+                    href={`/profiles?tag=${encodeURIComponent(t)}`}
+                    className={`category-tag transition-opacity ${
+                      tag === t ? "opacity-100 ring-2 ring-ll-accent" : "opacity-70 hover:opacity-100"
+                    }`}
+                  >
+                    {t}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
-
-      {/* Subscribe CTA */}
-      <SubscribeCTA />
     </main>
   );
 }

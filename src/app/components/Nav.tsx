@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { siteConfig } from "@/lib/site-config";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -23,46 +22,41 @@ export default function Nav() {
     };
   }, [mobileOpen]);
 
+  const navLinks = [
+    { label: "Stories", href: "/profiles" },
+    { label: "About", href: "/about" },
+  ];
+
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-ll-white/95 backdrop-blur-sm shadow-md py-3"
-            : "bg-transparent py-5"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-ll-dark/95 backdrop-blur-sm ${
+          scrolled ? "shadow-lg py-2" : "py-4"
         }`}
       >
-        <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex flex-col">
+        <div className="max-w-6xl mx-auto px-6 flex items-center gap-6">
+          {/* Wordmark */}
+          <Link href="/" className="shrink-0">
             <span
-              className={`font-bold text-xl tracking-tight transition-colors duration-300 ${
-                scrolled ? "text-ll-dark" : "text-white"
-              }`}
+              className="font-bold text-xl tracking-tight text-white uppercase tracking-[0.08em]"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Southern Legends
             </span>
           </Link>
 
-          {/* Desktop nav */}
+          {/* Nav links — left-aligned after wordmark */}
           <nav className="hidden md:flex items-center gap-6">
-            {siteConfig.nav.map((item) => {
-              const isActive =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
+            {navLinks.map((item) => {
+              const isActive = pathname.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-medium transition-colors duration-200 ${
+                  className={`text-xs font-semibold uppercase tracking-[0.15em] transition-colors duration-200 ${
                     isActive
-                      ? scrolled
-                        ? "text-ll-primary border-b-2 border-ll-accent pb-0.5"
-                        : "text-white border-b-2 border-ll-accent pb-0.5"
-                      : scrolled
-                        ? "text-ll-text-light hover:text-ll-primary"
-                        : "text-white/80 hover:text-white"
+                      ? "text-white"
+                      : "text-white/60 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -71,11 +65,24 @@ export default function Nav() {
             })}
           </nav>
 
+          {/* Spacer */}
+          <div className="hidden md:block flex-1" />
+
+          {/* RSS icon — right side */}
+          <a
+            href="/profiles/feed.xml"
+            className="hidden md:flex text-white/50 hover:text-white transition-colors"
+            aria-label="RSS Feed"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.742-7.115-15.793-15.839-15.82zm0-8.18v4.819c12.951.115 23.363 10.627 23.478 23.625h.022v-4.819h-.022c-.115-13.262-10.873-23.861-23.478-23.625z" />
+            </svg>
+          </a>
+
           {/* Mobile hamburger */}
+          <div className="flex-1 md:hidden" />
           <button
-            className={`md:hidden p-2 transition-colors ${
-              scrolled ? "text-ll-dark" : "text-white"
-            }`}
+            className="md:hidden p-2 text-white"
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
           >
@@ -126,11 +133,8 @@ export default function Nav() {
           </svg>
         </button>
         <nav className="flex flex-col items-center gap-8">
-          {siteConfig.nav.map((item) => {
-            const isActive =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+          {navLinks.map((item) => {
+            const isActive = pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
