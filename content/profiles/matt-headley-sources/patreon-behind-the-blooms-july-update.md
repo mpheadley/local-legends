@@ -52,13 +52,13 @@ Matt & Heather
 
 ## Key Details for Profile
 
-- **Video series:** "Behind the Blooms" — S1 E2, candid farm journey updates
+- **Video series:** "Behind the Blooms," S1 E2, candid farm journey updates
 - **Dog:** Sunny (heard in background of video)
 - **Business offerings (new as of July 2025):**
   - À la carte wedding flowers (budget-conscious couples)
   - Resin jewelry made from farm-grown pressed flowers (on website)
 - **Photo shoot:** Spring Street Station location, with Jessica Trammell Photography
-- **Patreon tiers updated:** $5 (greeting card), $15/month (new — coloring book PDF), $25 (resin jewelry)
+- **Patreon tiers updated:** $5 (greeting card), $15/month (new, coloring book PDF), $25 (resin jewelry)
 - **Tone:** Candid about financial strain, faith-centered, community-oriented
-- **Season:** "growth and waiting" — stretching, humbling, learning to trust
+- **Season:** "growth and waiting," stretching, humbling, learning to trust
 - **Asks:** Prayer, wedding/event referrals, Patreon shares
