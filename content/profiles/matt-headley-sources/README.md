@@ -1,4 +1,4 @@
-# Matt Headley Profile — Source Materials
+# Matt Headley Profile: Source Materials
 
 This folder contains the research, source documents, and reference materials used to write the Matt Headley profile for Southern Legends.
 
@@ -12,10 +12,10 @@ Current status of the profile (drafting, review, published). Notes any pending c
 
 ### `patreon-*.md`
 Source documents from Matt's Patreon posts during the farm era (2025). These provide direct quotes, personal narratives, and context for the profile:
-- **patreon-bio.md** — Patreon profile bio
-- **patreon-behind-the-blooms-july-update.md** — July 2025 post on farm operations
-- **patreon-leavings-are-tough.md** — April 2025 post on the farm's closure
-- **patreon-mobile-pulpit.md** — July 2025 post on ministry and transition
+- **patreon-bio.md:** Patreon profile bio
+- **patreon-behind-the-blooms-july-update.md:** July 2025 post on farm operations
+- **patreon-leavings-are-tough.md:** April 2025 post on the farm's closure
+- **patreon-mobile-pulpit.md:** July 2025 post on ministry and transition
 
 ## How to Use
 
@@ -26,5 +26,5 @@ Source documents from Matt's Patreon posts during the farm era (2025). These pro
 ## Profile Output Files
 
 The completed profile exists in two formats:
-- `../matt-headley.mdx` — Production version (uses MDX components, includes PullQuote)
-- `../matt-headley.md` — Plain Markdown version
+- `../matt-headley.mdx`: Production version (uses MDX components, includes PullQuote)
+- `../matt-headley.md`: Plain Markdown version
