@@ -3,6 +3,7 @@ import { Source_Sans_3, Fraunces, Rock_Salt, Zeyada, Permanent_Marker, Caveat } 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
+import CookieBanner from "./components/CookieBanner";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -95,6 +96,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ScrollReveal />
+        <CookieBanner />
       </body>
     </html>
   );

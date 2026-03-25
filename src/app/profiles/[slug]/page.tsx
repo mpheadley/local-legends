@@ -328,6 +328,20 @@ export default async function ProfilePage({
       <article className="bg-ll-light">
         <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 prose-profile">
           <MDXRemote source={content} components={mdxComponents} />
+          {(() => {
+            const wordsCredit = !frontmatter.aiWritten;
+            const photosCredit = !!frontmatter.photoCredit;
+            const byline = frontmatter.byline
+              || (wordsCredit && photosCredit ? `Words and photos by ${siteConfig.author}`
+                : wordsCredit ? `Words by ${siteConfig.author}`
+                : photosCredit ? `Photos by ${frontmatter.photoCredit}`
+                : null);
+            return byline ? (
+              <p className="text-sm text-ll-text-light italic mt-8 pt-6 border-t border-ll-border">
+                {byline}
+              </p>
+            ) : null;
+          })()}
         </div>
       </article>
 
