@@ -103,9 +103,9 @@ export default function AboutPage() {
           <h2>Know Someone Worth Writing About?</h2>
 
           <p>
-            The best profiles start with a recommendation. If you know someone
-            whose story deserves more than a paragraph in the local paper,
-            I&apos;d like to hear about them.
+            The best profiles start with a recommendation. If you know a person
+            or a place whose story deserves more than a paragraph in the local
+            paper, I&apos;d like to hear about it.
           </p>
 
           <p>
