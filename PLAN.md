@@ -184,6 +184,7 @@ Start with **places** instead of (or alongside) business profiles for launch:
 
 ## Phase 4 — Polish & Features
 
+- [ ] **Rotating homepage hero** — auto-cycling featured stories, Bitter Southerner-style. Cross-fade between 3 stories, auto-advance every 5-6s, pause on hover, respects `prefers-reduced-motion`. **Trigger: 6-8 published profiles.** At fewer stories, a static single-featured hero is cleaner. Implementation: mark top stories with `featured: true` (already in frontmatter), update homepage to rotate among them client-side. Accessibility: pause on focus, ARIA live region for screen readers.
 - [ ] Subscribe CTA — wire to an actual service (Buttondown, ConvertKit, Substack) or remove
 - [ ] Tag/category pages — `/profiles?tag=Craftspeople` works via query params; consider dedicated `/category/[slug]` routes if content grows
 - [ ] Search — not needed at launch, consider when >10 profiles
