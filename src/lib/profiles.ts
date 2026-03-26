@@ -82,15 +82,23 @@ export function getAllTags(): string[] {
   return Array.from(tags).sort();
 }
 
-/** Returns previous and next profiles relative to the given slug (by date). */
+/** Returns two profiles to show as "More Stories" — adjacent by date, filling gaps if at the start or end. */
 export function getAdjacentProfiles(slug: string): {
   prev: Profile | null;
   next: Profile | null;
 } {
   const all = getAllProfiles();
   const idx = all.findIndex((p) => p.slug === slug);
-  return {
-    prev: idx < all.length - 1 ? all[idx + 1] : null,
-    next: idx > 0 ? all[idx - 1] : null,
-  };
+  let prev: Profile | null = idx < all.length - 1 ? all[idx + 1] : null;
+  let next: Profile | null = idx > 0 ? all[idx - 1] : null;
+
+  if (!prev || !next) {
+    const others = all.filter(
+      (p) => p.slug !== slug && p.slug !== prev?.slug && p.slug !== next?.slug
+    );
+    if (!next && others.length > 0) next = others[0];
+    else if (!prev && others.length > 0) prev = others[others.length - 1];
+  }
+
+  return { prev, next };
 }

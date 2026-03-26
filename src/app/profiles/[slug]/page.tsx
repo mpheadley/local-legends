@@ -377,15 +377,15 @@ export default async function ProfilePage({
             Know Someone Worth Writing About?
           </h2>
           <p className="text-ll-text-light mb-6 max-w-xl mx-auto animate-on-scroll">
-            The best profiles start with a recommendation. If you know someone
-            whose story deserves more than a paragraph in the local paper,
-            we&apos;d like to hear about them.
+            The best profiles start with a recommendation. If you know a person
+            or a place whose story deserves more than a paragraph in the local
+            paper, I&apos;d like to hear about it.
           </p>
           <Link
             href="/about"
             className="inline-block px-6 py-3 bg-ll-primary text-white font-semibold rounded hover:bg-ll-primary-dark transition-colors animate-on-scroll"
           >
-            Tell Us About Them
+            Tell Me About Them
           </Link>
         </div>
       </section>
