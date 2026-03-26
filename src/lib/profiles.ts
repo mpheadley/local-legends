@@ -23,6 +23,7 @@ export interface ProfileFrontmatter {
   aiWritten?: boolean;
   photoCredit?: string;
   byline?: string;
+  metaDescription?: string;
   mobileHero?: "bg" | "stack" | "text";
 }
 
