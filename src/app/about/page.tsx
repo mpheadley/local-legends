@@ -65,7 +65,7 @@ export default function AboutPage() {
 
           <p>
             That&apos;s what Southern Legends is. Profiles of people, places,
-            and organizations in Northeast Alabama — written with enough room
+            and organizations in Northeast Alabama, written with enough room
             to actually tell the story.
           </p>
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
             <p className="text-ll-text leading-relaxed mb-6">
               I started Southern Legends because I kept meeting people whose stories
               were too good not to share. The more businesses I worked with, the
-              more I realized that the best part wasn&apos;t the website — it was
+              more I realized that the best part wasn&apos;t the website. It was
               sitting down and hearing someone talk about the work they love.
             </p>
           </div>
