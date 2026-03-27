@@ -26,7 +26,7 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
 
   useEffect(() => {
     if (paused || profiles.length <= 1) return;
-    const id = setInterval(advance, 4000);
+    const id = setInterval(advance, 6000);
     return () => clearInterval(id);
   }, [advance, paused, profiles.length]);
 
