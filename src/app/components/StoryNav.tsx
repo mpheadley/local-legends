@@ -2,6 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Profile } from "@/lib/profiles";
 
+const categoryBgClass: Record<string, string> = {
+  craftspeople: "category-bg-craftspeople",
+  food: "category-bg-food",
+  music: "category-bg-music",
+  agriculture: "category-bg-agriculture",
+};
+
+function getCategoryBg(category: string): string {
+  return categoryBgClass[category.toLowerCase()] || "category-bg-default";
+}
+
 interface StoryNavProps {
   prev: Profile | null;
   next: Profile | null;
@@ -23,8 +34,8 @@ export default function StoryNav({ prev, next }: StoryNavProps) {
           <div>
             {prev && (
               <Link href={`/profiles/${prev.slug}`} className="group block text-left">
-                {prev.frontmatter.heroImage && (
-                  <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden mb-3">
+                <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden mb-3">
+                  {prev.frontmatter.heroImage ? (
                     <Image
                       src={prev.frontmatter.heroImage}
                       alt={prev.frontmatter.heroAlt || prev.frontmatter.name}
@@ -33,8 +44,14 @@ export default function StoryNav({ prev, next }: StoryNavProps) {
                       sizes="(max-width: 768px) 45vw, 300px"
                       loading="lazy"
                     />
-                  </div>
-                )}
+                  ) : (
+                    <div className={`w-full h-full card-initial paper-grain ${getCategoryBg(prev.frontmatter.category)}`}>
+                      <span className="card-initial-letter" aria-hidden="true">
+                        {prev.frontmatter.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                </div>
                 <span
                   className="block text-base font-bold text-ll-dark group-hover:text-ll-primary transition-colors leading-snug"
                   style={{ fontFamily: "var(--font-heading)" }}
@@ -52,8 +69,8 @@ export default function StoryNav({ prev, next }: StoryNavProps) {
           <div>
             {next && (
               <Link href={`/profiles/${next.slug}`} className="group block text-left">
-                {next.frontmatter.heroImage && (
-                  <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden mb-3">
+                <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden mb-3">
+                  {next.frontmatter.heroImage ? (
                     <Image
                       src={next.frontmatter.heroImage}
                       alt={next.frontmatter.heroAlt || next.frontmatter.name}
@@ -62,8 +79,14 @@ export default function StoryNav({ prev, next }: StoryNavProps) {
                       sizes="(max-width: 768px) 45vw, 300px"
                       loading="lazy"
                     />
-                  </div>
-                )}
+                  ) : (
+                    <div className={`w-full h-full card-initial paper-grain ${getCategoryBg(next.frontmatter.category)}`}>
+                      <span className="card-initial-letter" aria-hidden="true">
+                        {next.frontmatter.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                </div>
                 <span
                   className="block text-base font-bold text-ll-dark group-hover:text-ll-primary transition-colors leading-snug"
                   style={{ fontFamily: "var(--font-heading)" }}
