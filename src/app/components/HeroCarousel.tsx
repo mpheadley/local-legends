@@ -60,7 +60,7 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
         {profiles.length > 1 && (
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 text-white/60 hover:text-white transition-colors"
+            className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 text-white/60 hover:text-white transition-colors"
             aria-label="Next story"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
