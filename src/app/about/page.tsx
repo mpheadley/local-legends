@@ -57,16 +57,14 @@ export default function AboutPage() {
       <section className="bg-ll-light">
         <div className="mx-auto max-w-3xl px-6 py-12 md:py-16 prose-profile">
           <p>
-            Most of the people worth writing about never get written about.
-            They make the local news when they open a business or win an award,
-            and that&apos;s about it. Nobody sits down and asks them how they
-            got here.
+            I profile people in Northeast Alabama. Business owners, mostly.
+            But also places and organizations that have been here long enough
+            to have a story worth hearing.
           </p>
 
           <p>
-            That&apos;s what Southern Legends is. Profiles of people, places,
-            and organizations in Northeast Alabama, written with enough room
-            to actually tell the story.
+            The format is simple. I sit down with someone, ask how they got
+            here, and write it with enough room to actually tell the story.
           </p>
 
           <h2>Who&apos;s Behind This?</h2>
@@ -80,23 +78,36 @@ export default function AboutPage() {
               className="rounded-lg float-left mr-6 mb-2"
             />
             <p className="text-ll-text leading-relaxed mb-6">
-              My name is Matt Headley. I&apos;m a web designer based in
-              Jacksonville, Alabama. I run{" "}
+              My name is Matt Headley. I live in Jacksonville. I spent nineteen
+              years in music and pastoral ministry. Then my wife and I built a
+              flower farm. Cut flowers, farmers markets, a little retail kiosk
+              on the Chief Ladiga Trail. We built that thing from the ground up,
+              with our kids underfoot. And then we lost it.
+            </p>
+            <p className="text-ll-text leading-relaxed mb-6">
+              I still drive past farms and gardens on my way to work. Some days
+              it&apos;s fine. Some days it isn&apos;t.
+            </p>
+            <p className="text-ll-text leading-relaxed mb-6">
+              What I do now is build websites for local businesses. That&apos;s{" "}
               <a
                 href="https://headleyweb.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
-                Headley Web &amp; SEO
+                Headley Web
               </a>
-              , where I build websites for local businesses.
+              . Southern Legends started because the work kept putting me across
+              the table from people, and I needed that more than I expected.
+              I&apos;d been resisting connection for a while. Turns out sitting
+              with someone and asking them to tell you their story is one of the
+              ways back.
             </p>
             <p className="text-ll-text leading-relaxed mb-6">
-              I started Southern Legends because I kept meeting people whose stories
-              were too good not to share. The more businesses I worked with, the
-              more I realized that the best part wasn&apos;t the website. It was
-              sitting down and hearing someone talk about the work they love.
+              When you&apos;ve lost something you built, you notice the people
+              who are still building. You pay attention differently. You ask
+              better questions.
             </p>
           </div>
 
