@@ -13,7 +13,7 @@ We were preparing the farm to be sold. For months we'd been killing time at the 
 
 On a trip to the dump with my Dad, he told me it was time for me to go to the hospital. He didn't want his grandkids to lose their dad.
 
-Heather called Kyle. I sat on the porch with him, looking over our flower field. He had a very positive experience, had preached about it earlier that year. Said it was his "vacation with grippy socks." I consented to Heather and my Dad driving me to the hospital.
+Heather called Kyle. I sat on the porch with him, looking over our flower field. He'd preached about it earlier that year. Called it his "vacation with grippy socks." I consented to Heather and my Dad driving me to the hospital.
 
 We parked, walked to UAB. They waited with me in the ER for 6 hours. When the psychiatrist asked me if I wanted to be admitted to the residential program, I said I did not. I left with a spring in my step...
 
@@ -23,15 +23,15 @@ I was in the hospital for 10 days. I told people and myself it was 3 weeks. I wa
 
 I found it in my bedside drawer. A cheap brown notebook with lined paper. i wrote in it with the only pencil i had, the half length one they gave me. Apparently it was less dangerous than a full length pencil. i remember the grippy socks. The sterilized hospital air. The indian girl that was kind and was also bipolar. The carrot cake. I learned out from the others that you had to write it in on the meal card. and how they often got the meal cards wrong - you wrote yours in and hoped for the best, or that there might be an extra plate with what you wanted on it. 
 
-The ones desparate to leave, screaming. The other side of the floor that was for older patients. The schizofrenic guy taling to imaginary people. The ones down the hall in thier rooms, carrying on coversation with imaginary people. . i remember all of them. 
+The ones desperate to leave, screaming. The other side of the floor that was for older patients. The schizophrenic guy talking to imaginary people. The ones down the hall in their rooms, carrying on conversation with imaginary people. i remember all of them.
 
-I journaled "I used to run, strength train, bike to work and write sermons." feeling stuck, trapped, walking in circles. The shower dribbiling water, huddling in the corner to get wet. The yoga mat calling me. Snack time, pb crackers, oreos, celery. Waking up in the middle of the night. Trying to get my Seroquel dialed in, a drug i had already been on. The psychiatrist in charge criticized my psychiatrist's method of cycling through so many different drugs without getting to maximum dosage before switching.
+I journaled "I used to run, strength train, bike to work and write sermons." Feeling stuck, trapped, walking in circles. The shower dribbling water, huddling in the corner to get wet. The yoga mat calling me. Snack time, pb crackers, oreos, celery. Waking up in the middle of the night. Trying to get my Seroquel dialed in, a drug i had already been on. The psychiatrist in charge criticized my psychiatrist's method of cycling through so many different drugs without getting to maximum dosage before switching.
 
-I called Heather at least 2-3 times a day. Heather started her new job at the museum. 
+I called Heather at least 2-3 times a day.
 
-I passed time reading a book that had been left in my room, *The Butlerian Jihad*. A late prequel in the *Dune* series. Talked with one of the attending psychiatrists about it, and Jack, who had read some of the series too. Unable to read it when I got home, even though I got Mom to bring it to me while in the psych ward when i finished the *Jihad*.
+I passed time reading a book someone had left behind, *The Butlerian Jihad*. A late prequel in the *Dune* series. Talked with one of the attending psychiatrists about it, and Jack, who had read some of the series too. Unable to read it when I got home, even though I got Mom to bring it to me while in the psych ward when i finished the *Jihad*.
 
-Heather visited me 3 times during my time there. Once to see me. Once to get the notary on staff to notarize our house closure papers and get my signature. The freeing feeling of walking out of the ward, with Heather and the social worker, to find the notary. A third time because the notary had taken the day off, so we had to reschedule and hire a mobile notary. 
+Heather visited me 3 times during my time there. Once to see me. Once to get the notary on staff to notarize our house closure papers and get my signature. Walking out of the ward, with Heather and the social worker to find the notary, felt like freedom. A third time because the notary had taken the day off, so we had to reschedule and hire a mobile notary. 
 
 On the visits, we sat where the staff could see us, in the main room where we spent all our time eating, playing cards, dominoes, watching TV. We talked quietly. Time limit was 30 minutes. Others who didn't have visitors had to stay in their rooms. It was quiet time.
 
@@ -50,11 +50,13 @@ Soren
 
 Residents going around festival stations, craft tables, getting candy, the staff dressed up as farmers, aliens, superheroes.
 
-I was missing my Halloween, walking the streets with friends and theri kids, along with thousands of others. Drinking spiked cider in my Yeti. Kids running to doors, homeowners sitting on their doorsteps handing out fistfuls of candy. Admiring the neighborhood's extravagant werewolves and vampires and spider webs.
+Walking the streets with friends and their kids, along with thousands of others. Drinking spiked cider in my Yeti. Kids running to doors, homeowners sitting on their doorsteps handing out fistfuls of candy. Admiring the neighborhood's extravagant werewolves and vampires and spider webs.
 
 After the first week, I gave in to telling them what they wanted to hear, to get out of there. That I wasn't feeling as suicidal.
 
 Stuffing things in my bag — clothes, journal, crafts we'd made in group therapy, book, toiletries. Jack said, "you've been a great roommate. The best one I've had." He had been there weeks before me, multiple visits in the past. Still waiting on his family to sort out where he would stay when he got out. He said "we're not supposed to do this. But I can give you my number if you want it. It'd be cool to stay in touch." I lost the scrap of paper he wrote it on.
+
+Heather started her new job at the museum.
 
 When I got out, I lived in my parents' camper for a month. Heather and the kids lived with her parents.
 
@@ -64,9 +66,9 @@ We got to spend Thanksgiving and Christmas together.
 
 ---
 
-This week, I met Kyle for coffee. I told him I'd been angry with him in there. He laughed. He's the one who called it a grippy sock vacation.
+This week, I met Kyle for coffee. I told him I'd been angry with him in there. He laughed. He was the one who called it a grippy sock vacation.
 
-That evening, talking with Heather outside under our sweetgum tree at dinner as the sun was setting.
+Talking with Heather that evening under our sweetgum tree at dinner. The sun was setting.
 
 She said she needed me to be gone. She couldn't take anymore. I was fighting her on selling the farm. On selling our equipment and my tools.
 

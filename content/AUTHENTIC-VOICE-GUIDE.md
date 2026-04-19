@@ -10,7 +10,6 @@ Southern Legends profiles small business owners and makers in Northeast Alabama.
 
 *For the storytelling frameworks behind the writing (StoryBrand, Lowry Loop, funnel architecture), see `STORYTELLING-FRAMEWORK.md` in the project root.*
 
-Matt's profile (`matt-headley.mdx`) is the voice baseline. Read it before helping with any new profile.
 
 ### Why This Site Exists
 
