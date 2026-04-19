@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bipolar Merch — Mockups</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #F5F2EC;
+      font-family: 'Source Sans 3', sans-serif;
+      padding: 60px 24px;
+      color: #111;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #FAFAF7;
+      border: 1px solid #E0DDD6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tee {
+      width: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    .tee-cream { background: #F5F0E8; }
+    .tee-dark  { background: #1C1917; }
+    .tee-slate { background: #2C3340; }
+    .tee-stone { background: #44403C; }
+
+    .print {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .print-light { color: #F5F0E8; }
+    .print-dark  { color: #1C1917; }
+
+    /* Typography */
+    .f-serif      { font-family: 'Fraunces', serif; }
+    .f-serif-i    { font-family: 'Fraunces', serif; font-style: italic; }
+    .f-sans       { font-family: 'Source Sans 3', sans-serif; }
+
+    .sz-xl  { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.1; }
+    .sz-lg  { font-size: clamp(1.2rem, 3vw, 1.7rem); line-height: 1.15; }
+    .sz-md  { font-size: clamp(1rem, 2.5vw, 1.35rem); line-height: 1.2; }
+    .sz-sm  { font-size: clamp(0.75rem, 1.5vw, 0.9rem); line-height: 1.4; }
+
+    .w-light  { font-weight: 300; }
+    .w-reg    { font-weight: 400; }
+    .w-semi   { font-weight: 600; }
+    .ls-wide  { letter-spacing: 0.12em; }
+    .ls-wider { letter-spacing: 0.2em; }
+    .upper    { text-transform: uppercase; }
+
+    /* Sine wave */
+    svg.wave { overflow: visible; }
+
+    /* Label */
+    .label {
+      padding: 16px 20px;
+      width: 100%;
+      border-top: 1px solid #E0DDD6;
+    }
+
+    .label-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    .label-note {
+      font-size: 0.78rem;
+      color: #888;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Bipolar Merch — Concept Mockups</h1>
+
+<div style="max-width:1100px;margin:0 auto 48px;display:flex;gap:32px;flex-wrap:wrap;">
+  <div style="background:#1C1917;color:#F5F0E8;padding:10px 20px;font-family:'Source Sans 3',sans-serif;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;">★ Hero Products — Launch These First</div>
+  <div style="background:#F5F0E8;color:#888;padding:10px 20px;font-family:'Source Sans 3',sans-serif;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;">Concepts — Hold for Later</div>
+</div>
+
+<div class="grid">
+
+  <!-- HERO 1: I Contain Multitudes -->
+  <div class="card" style="border:2px solid #1C1917;">
+    <div style="background:#1C1917;color:#F5F0E8;width:100%;text-align:center;padding:6px 0;font-family:'Source Sans 3',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">★ Hero #1</div>
+    <div class="tee tee-cream">
+      <div class="print print-dark">
+        <span class="f-sans sz-sm upper ls-wider w-light" style="opacity: 0.4;">Walt Whitman</span>
+        <span class="f-serif-i sz-lg w-light" style="line-height: 1.3;">I contain<br>multitudes.</span>
+      </div>
+    </div>
+    <div class="label">
+      <div class="label-title">I Contain Multitudes</div>
+      <div class="label-note">Whitman. Lands differently when you know. Tee + hoodie.<br>
+      <strong style="color:#555;">Blank: Comfort Colors 1717</strong> — garment-dyed, vintage Southern feel, earthy tones.</div>
+    </div>
+  </div>
+
+  <!-- HERO 2: Bipolar & Proud -->
+  <div class="card" style="border:2px solid #1C1917;">
+    <div style="background:#1C1917;color:#F5F0E8;width:100%;text-align:center;padding:6px 0;font-family:'Source Sans 3',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">★ Hero #2</div>
+    <div class="tee tee-dark">
+      <div class="print print-light">
+        <span class="f-serif sz-xl w-light">Bipolar</span>
+        <span class="f-serif-i sz-sm w-light ls-wider upper" style="opacity:0.5;">&amp;</span>
+        <span class="f-serif sz-xl w-light">Proud</span>
+      </div>
+    </div>
+    <div class="label">
+      <div class="label-title">Bipolar &amp; Proud</div>
+      <div class="label-note">Quiet confidence. No ribbon, no lightning bolt. Tee + hoodie.<br>
+      <strong style="color:#555;">Blank: AS Colour 5001T</strong> — modern, contemporary, clean silhouette.</div>
+    </div>
+  </div>
+
+  <!-- 3. Still Here -->
+  <div class="card">
+    <div class="tee tee-dark">
+      <div class="print print-light">
+        <span class="f-serif sz-xl w-light ls-wide upper" style="opacity: 0.9;">Still</span>
+        <span class="f-serif-i sz-xl w-light" style="opacity: 0.9;">here.</span>
+      </div>
+    </div>
+    <div class="label">
+      <div class="label-title">Still Here</div>
+      <div class="label-note">Two words. Means everything to the right person.</div>
+    </div>
+  </div>
+
+  <!-- 4. High Functioning -->
+  <div class="card">
+    <div class="tee tee-slate">
+      <div class="print print-light">
+        <svg class="wave" width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 16 C20 0, 40 0, 60 16 C80 32, 100 32, 120 16 C140 0, 155 4, 160 16" stroke="#F5F0E8" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+        </svg>
+        <span class="f-serif sz-lg w-light ls-wide upper" style="letter-spacing: 0.18em; opacity: 0.9;">High Functioning</span>
+        <svg class="wave" width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 16 C20 0, 40 0, 60 16 C80 32, 100 32, 120 16 C140 0, 155 4, 160 16" stroke="#F5F0E8" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+        </svg>
+      </div>
+    </div>
+    <div class="label">
+      <div class="label-title">High Functioning</div>
+      <div class="label-note">Dry, insider humor. The sine wave brackets do the talking.</div>
+    </div>
+  </div>
+
+  <!-- 5. Sine Wave Only -->
+  <div class="card">
+    <div class="tee tee-dark">
+      <div class="print print-light">
+        <svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 24 C25 0, 50 0, 75 24 C100 48, 125 48, 150 24 C175 0, 190 6, 200 24" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+    </div>
+    <div class="label">
+      <div class="label-title">Sine Wave</div>
+      <div class="label-note">No text. Recognition object for people who know what it means.</div>
+    </div>
+  </div>
+
+  <!-- 6. Manic Monday Was a Tuesday -->
+  <div class="card">
+    <div class="tee tee-stone">
+      <div class="print print-light">
+        <span class="f-serif sz-md w-light" style="opacity: 0.9; max-width: 200px; line-height: 1.4; text-align: center;">Manic Monday<br>was a Tuesday.</span>
+      </div>
+    </div>
+    <div class="label">
+      <div class="label-title">Manic Monday Was a Tuesday</div>
+      <div class="label-note">For the people who get it.</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

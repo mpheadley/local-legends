@@ -39,7 +39,7 @@ export default function SubscribeCTA({ variant = "section" }: { variant?: "secti
           Stories from Northeast Alabama
         </p>
         <p className="text-sm text-white/60 mb-3">
-          Profiles of local makers and business owners, plus occasional personal writing from Matt. One list. No spam.
+          Profiles of local makers and business owners, plus occasional personal writing from Matt.
         </p>
 
         {status === "success" ? (
@@ -96,7 +96,7 @@ export default function SubscribeCTA({ variant = "section" }: { variant?: "secti
           Stories from Northeast Alabama — and from the person writing them.
         </h2>
         <p className="text-white/60 mb-8 text-base leading-relaxed">
-          Profiles of local makers and business owners, plus occasional personal writing from Matt. One list. No spam.
+          Profiles of local makers and business owners, plus occasional personal writing from Matt.
         </p>
 
         {status === "success" ? (

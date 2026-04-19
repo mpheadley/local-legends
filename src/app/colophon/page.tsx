@@ -28,6 +28,13 @@ export default function ColophonPage() {
               because that is worth something. The site started as a way to learn to pay attention
               again after losing a lot. That is still mostly what it is.
             </p>
+            <p>
+              There is also a journal. The profiles are about other people. The journal is about
+              what is behind them — and behind me. The farm I lost, the diagnosis, the years in
+              music and ministry before any of this. It lives here because these two things are
+              not separate. The profiles make more sense once you know why someone would drive
+              forty minutes to sit with a welder and ask him careful questions.
+            </p>
           </section>
 
           <section>
@@ -47,14 +54,30 @@ export default function ColophonPage() {
               typeface by Font Diner. It marks a shift in register — a breath between the
               reported prose and whatever line a subject said that stopped the interview cold.
             </p>
+            <p>
+              The journal section draws on three additional handwritten faces —{" "}
+              <strong>Caveat</strong>, <strong>Zeyada</strong>, and{" "}
+              <strong>Permanent Marker</strong> — used sparingly for the kind of emphasis that
+              belongs in personal writing but would feel out of place in a reported profile.
+              Different content calls for different register. The type tries to follow.
+            </p>
           </section>
 
           <section>
             <h2 className="font-fraunces text-2xl text-ll-dark mb-4">Built with</h2>
             <p>
-              The site is built with Next.js and deployed on Vercel. Profiles are written in MDX
-              and live in a content directory. There is no CMS. There is no editorial team.
-              There is one person writing, one laptop, and occasionally a decent cup of coffee.
+              The site is built with Next.js and deployed on Vercel. Profiles and journal posts
+              are written in MDX and live in a content directory. There is no CMS. There is no
+              editorial team. There is one person writing, one laptop, and occasionally a decent
+              cup of coffee.
+            </p>
+            <p>
+              Readers can leave comments on profiles and journal posts. There is a newsletter —
+              infrequent, plain text, no tracking pixels. You can subscribe at{" "}
+              <a href="/subscribe" className="text-ll-primary hover:underline">/subscribe</a>.
+              If you have been reading for a while and want to help keep it going, there is a
+              support page at{" "}
+              <a href="/support" className="text-ll-primary hover:underline">/support</a>.
             </p>
           </section>
 

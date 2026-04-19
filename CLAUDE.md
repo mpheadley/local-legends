@@ -136,6 +136,7 @@ Decisions and why:
 - **Nominate CTA removed from profile pages** — lives on the About page only. Profile pages already have enough asks.
 - **Journal strip removed from homepage** — journal is discoverable via persistent nav, profile byline button, and footer. Doesn't need its own homepage band until the journal has 8–10 published pieces.
 - **No "Enjoyed this story?" label** — share and support buttons are self-explanatory. Labels were redundant.
+- **Comments: keep on both profiles and journal (decided April 2026)** — not off-brand at this stage. Visible engagement is social proof for Headley Web prospects ("here's the community this site has"). SEO benefit: UGC adds fresh keyword-relevant text. FB sharing not meaningfully affected — commenters are a small minority of readers. Revisit when SL hits 20+ profiles and the editorial identity is more established.
 
 ## Current Status
 - **Done:** Design system, layout, homepage, about page, profile detail page, profile listing, 7 published profiles (1 by Matt, 6 edited), 16 research docs in `content/research/`, RSS feed, scroll animations, share buttons, story navigation, subscribe CTA

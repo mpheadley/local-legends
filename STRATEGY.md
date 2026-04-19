@@ -457,6 +457,9 @@ Current warm network profiles skew toward business owners who already have decen
 
 Run this on **every published profile without exception**. Create CRM tasks for each step when a profile publishes.
 
+**Also on day of publish — send a Resend broadcast:**
+Go to [resend.com](https://resend.com) → Broadcasts → New Broadcast → select Southern Legends audience. Write a short personal note (2-3 sentences) about the profile — why you wrote it, one detail that stuck with you — and include the link. This is manual, not automated. 10 minutes. Do not skip it.
+
 **Touch 1 — Day of publish:**
 Send the link. Nothing else. No ask. "Your profile is live — [link]."
 Add at the end: "Feel free to share it anywhere — including your own website if you'd like." No pressure. Many will link without a separate ask.
