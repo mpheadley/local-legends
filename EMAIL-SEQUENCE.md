@@ -84,8 +84,28 @@ Matt
 
 | Email | Status | Notes |
 |-------|--------|-------|
-| Welcome (Day 0) | ✅ Live | Fires from `/api/subscribe/route.ts` |
-| Day-3 Journal Intro | ✅ Live | Resend Automation "SL Day-3 Journal", activated April 2026 |
+| Welcome (Day 0) | ✅ Live | Fires from `/api/subscribe/route.ts`. Links to `/profiles` index (not Jean specifically — subscriber may have arrived via a profile). |
+| Day-3 Journal Intro | ✅ Live | Resend Automation "SL Day-3 Journal", activated April 2026. Links to `/journal` index — evergreen, never goes stale. |
+
+## When to Add More Emails
+
+**SL:** Welcome + Day 3 is the full automated sequence. Next email is a manual broadcast when a new profile publishes. Don't add more automation until publishing consistently (roughly twice a month). Revisit at 10+ profiles live.
+
+**HW newsletter:** Welcome + Day 3 is right-sized for now. Days 7, 14, 21 make sense eventually — but only when there's blog content to pull from. Adding emails without content means writing into a vacuum. Trigger: 3-4 proofed blog posts live, or first real case study with data (Between Worlds 30-day numbers, or similar).
+
+**HW audit funnel:** Already has 5 emails (Days 0, 3, 7, 14, 21). Complete. Revisit when a real case study is ready to replace Email 4.
+
+---
+
+## Decisions & Rationale (April 2026)
+
+- **One list, not two** — no segmentation by entry point (profile vs. journal). Small list, not worth the overhead. Revisit at 500+.
+- **No specific article link in Day-3** — links to `/journal` index instead. Any specific piece would go stale. Evergreen index lets them browse.
+- **No specific profile link in welcome** — links to `/profiles` index. Subscriber may have arrived from the Jean Ellison profile; linking back is redundant.
+- **Day-3 timing** — 3 days is right for this site. Day 1 feels rushed; the welcome email gives them Jean Ellison to read first.
+- **No automation for new profiles** — each new profile gets a manual Resend broadcast. Personal note from Matt, subject line written for that story. Do not automate. See STRATEGY.md publishing checklist.
+- **First 5 subscribers (April 2026)** — all subscribed after the journal launched, likely via `im-not-going-to-disappear`. Did not receive Day-3 (automation wasn't live yet). No catch-up broadcast sent — they came from the journal, so linking back to it would be redundant. They'll receive the next broadcast when a new profile or piece publishes.
+- **Broadcasts: when to send** — every new profile. Short personal note (2-3 sentences), one link. Manual. See STRATEGY.md → Two-Touch Sequence for the publishing checklist.
 
 ---
 
