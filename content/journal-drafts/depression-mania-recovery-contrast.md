@@ -25,7 +25,10 @@ Three states, three sets of behaviors. The contrast between what depression does
 - Writing journals publicly on Southern Legends
 - Writing profiles — that's part of it too
 
-**Weight / body (raw, April 19 2026):**
+**Weight / body (raw, April 18 2026 — from the-hospital.md):**
+i've gained 35 lbs in the past 4 months, and probably 30 of those were in the hospital. weigh more now than i ever have in my life by a long shot. i napped as much as possible to pass the day and numb the heartbreak and anger. i ate carrot cake 2-3 times a day (an insider tip: if you write in "carrot cake" on your card - not a listed option - you get it most of the time.) the Seroquel caused weight gain too.
+
+**Weight / body continued (raw, April 19 2026):**
 weight gain continued after i got out of the hospital, through the living with parents, thanksgiving and christmas holidays and winter, till i started strength training 2-3 times a week for 15-30 minutes to try to burn the fat off, and eating healthier.
 
 **First depressive episode (pre-mania, pre-diagnosis):**

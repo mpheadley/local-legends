@@ -1,5 +1,5 @@
-# Easter — Two Years
-*Journal entry seed — see easter-transcript.md for verbatim source material*
+# No Shade
+*Journal entry — see easter-transcript.md for verbatim source material*
 
 ---
 
@@ -15,7 +15,7 @@ We became too busy for church after that. Sabbath gave in to the overloaded sche
 
 Then as the farm struggled into the mid-summer slump, I started getting depressed.
 
-After several heart-wrenching attempts at returning to church, I stopped going. Let Heather and the kids go for a while. Before it became too hard for her. When I had attended, folks were kind, said they were glad to see me. I told many of them I had been diagnosed bipolar. I said I realized the resignation was a manic mistake, and the reason we might lose the farm. They hugged me. Said "I'm sorry." "I understand."
+After several attempts at returning to church, I stopped going. Let Heather and the kids go for a while. Before it became too hard for her. When I had attended, folks were kind, said they were glad to see me. I told many of them I had been diagnosed bipolar. I said I realized the resignation was a manic mistake, and the reason we might lose the farm. They hugged me. Said "I'm sorry." "I understand."
 
 It took the longest break I've ever taken in my life from church. We just learned what it's like to sit at home on Sundays.
 
@@ -27,7 +27,7 @@ I wouldn't give it up, because I didn't want to give up on my kids. I didn't wan
 
 ---
 
-This Easter was our second Sunday visiting Jacksonville First United Methodist Church. Andy, the pastor, a former friend from years ago when I was at Weaver First UMC, had been there since June. On Easter during the service, he asked if anyone had been asked to help serve communion. No one had. He looked me in the eye and invited me by name. "My friend Matt Headley" to help serve communion. I felt like Mary, shocked to be named.
+This Easter was our second Sunday visiting Jacksonville First United Methodist Church. Andy, the pastor, a former friend from years ago when I was at Weaver First UMC, had been there since June. On Easter during the service, he asked if anyone had been asked to help serve communion. No one had. He looked me in the eye and invited me by name. "My friend Matt Headley" to help serve communion. I was holding the bulletin.
 
 After months of not attending church at all. After feeling like I had lost my faith. After wondering if resurrection was even possible, let alone beginning.
 
@@ -37,19 +37,21 @@ After the service Andy walked up to me. Said "Thank you. Sorry I sprung that on 
 
 A friend met me for coffee on Easter week. She has bipolar too. We sat by the window, my request, late morning light in her eyes required her to put on her sunglasses. "If you don't mind talking with me with sunglasses on." She said "Your ministry will be stronger because of what you've been through. Sharing your story can help others and help you. It helped me..."
 
-Now we're reading Harry Potter again. The Jim Kay illustrated edition. Starting from The Sorcerer's Stone. The kids look at the pictures. Soren reads it now aloud for us. Like I did years ago when the older two were little. Then we light the candle and sing. "Walk in the light, the beautiful light..."
+Now we're reading Harry Potter again. The Jim Kay illustrated edition. Starting from The Sorcerer's Stone. The kids look at the pictures. Soren reads it now aloud for us. Like I did years ago when the older two were little. Then we light the candle and sing.
 
 ---
 
 ## Notes
 
-- "Reconstruction" — keep it. Earned. Theological weight.
 - Don't oversoften past self. "I was manic and mad" is honest. Let it stand.
 - The selfies vs. serving communion: a manic person wanting to be seen → quietly handing bread and cup to someone else. Don't say it directly. Let the images carry it.
-- Voice memo transcription garbled in places — "grapefills and bird" likely "grateful and weird" or similar. Clarify when drafting.
 - Publish with a visible break between the two Easters — white space, a divider, a year passing. The scenes only mean something next to each other.
 - The middle doesn't need to carry the full weight of those months. The white space does some of it. One or two sentences to cross on, not a full narration.
 - Andy and Matt have history — former friends from Weaver First UMC days. The invitation wasn't from a stranger. That weight matters.
 - The Lucy scene: she is the Easter witness — the woman who told a disciple that resurrection was real. Don't name the connection in prose. Let the scene carry it.
-- Working title: "No Shade" — slang for no pretense, literal sunglasses, bearing light. Lucy had to put hers on. You didn't.
-- The naming: Jesus named Mary at the resurrection (John 20). Andy named Matt from the pulpit. You turned.
+- The naming: Jesus named Mary at the resurrection (John 20). Andy named Matt from the pulpit. You turned. "I felt like Mary" is cut — let the bulletin → cup carry it.
+- **"let alone beginning"** — keep this exact phrase. Don't smooth it.
+- **The triple "After"** — strong rhetorical structure, earned. Keep verbatim.
+- **The candle and song bookend** — middle (bedtime prayer) and end (Harry Potter + candle + song). The piece closes where it held on.
+- **"In the hospital, I jabbed at God in a notebook"** — earns more now that the hospital piece exists. Reader knows what that notebook was. Keep lean.
+- **Sequence:** hospital publishes first. This is the payoff.
