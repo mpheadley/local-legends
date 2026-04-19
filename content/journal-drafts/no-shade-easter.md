@@ -55,3 +55,4 @@ Now we're reading Harry Potter again. The Jim Kay illustrated edition. Starting 
 - **The candle and song bookend** — middle (bedtime prayer) and end (Harry Potter + candle + song). The piece closes where it held on.
 - **"In the hospital, I jabbed at God in a notebook"** — earns more now that the hospital piece exists. Reader knows what that notebook was. Keep lean.
 - **Sequence:** hospital publishes first. This is the payoff.
+- **IMAGES:** Three options — (1) The selfie from last Easter: purple pants, pink tie, Facebook archive. The manic document of itself. Contrast with the communion scene without saying so. (2) The candle: photograph the actual candle you light at bedtime. Simple, personal, already in the piece. (3) No hero image — the piece doesn't need illustration, and a stock photo of a church or Easter would kill it. If you use the selfie, it should be the one from that day — not a reconstruction.
