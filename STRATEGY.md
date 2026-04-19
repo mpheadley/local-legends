@@ -458,7 +458,12 @@ Current warm network profiles skew toward business owners who already have decen
 Run this on **every published profile without exception**. Create CRM tasks for each step when a profile publishes.
 
 **Also on day of publish — send a Resend broadcast:**
-Go to [resend.com](https://resend.com) → Broadcasts → New Broadcast → select Southern Legends audience. Write a short personal note (2-3 sentences) about the profile — why you wrote it, one detail that stuck with you — and include the link. This is manual, not automated. 10 minutes. Do not skip it.
+Go to [resend.com](https://resend.com) → Broadcasts → New Broadcast → select Southern Legends audience. Write a short personal note (2-3 sentences) — why you wrote it, one detail that stuck with you — and include the link. This is manual, not automated. 5 minutes. Do not skip it.
+
+This applies to **both profiles and journal posts.** For journal posts, keep it even shorter — let the piece speak for itself. Don't summarize, don't explain. Two sentences and a link.
+
+Example for a journal post:
+> I finished the hospital piece. It took a while to write. It's here if you want to read it: [link]
 
 **Touch 1 — Day of publish:**
 Send the link. Nothing else. No ask. "Your profile is live — [link]."
