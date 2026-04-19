@@ -29,7 +29,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 
 | File | What it's about | Status |
 |------|----------------|--------|
-| `the-hospital.md` | Kitchen window opening → farm sale → Kyle's grippy socks → ER refusal → asking to go back → 10 days at UAB → Halloween → Jack/Sam → camper → Thanksgiving + Christmas. Ends: "it was and it wasn't." | **Next to publish.** Spine complete, needs prose pass. Publishes before Easter — reader needs the hospital to feel the weight of the resurrection piece. |
+| `the-hospital.md` | Kitchen window opening → farm sale → Kyle's grippy socks → ER refusal → asking to go back → 10 days at UAB → Halloween → Jack/Sam → camper → Thanksgiving + Christmas. Ends: sweetgum shadows across the yard. | **Prose pass complete. Ready to promote to MDX and publish.** |
 | `manic-episode.md` | Ash Wednesday resignation → farm scaling → 16-20 hour days → "manic matt" → dozing at the wheel. **Source artifact:** 4-hour color-coded morning routine spreadsheet (Jan 2020) — 240 min, timed to the minute, vision board + dance party + family routine nested at the bottom. Contrast: 4am lowercase writing on April 17 2026. Seed for standalone piece `the-morning-routine.md` or fold into this one. | Raw material + source artifact |
 | `reading-my-manic-writing.md` | Going back through the record — Patreon posts, Facebook, texts with Justin — finding the mania in the archive | Well-developed seed, primary sources gathered |
 | `chatgpt-and-mania.md` | AI enabling mania → the article in the surgeon's office → fill-in therapist | Raw material only — may fold into `reading-my-manic-writing.md` |
@@ -42,7 +42,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 | `heathers-surgery.md` | Two weeks in Atlanta → updates on CaringBridge → knowing the farm was ending | Raw material only |
 | `jason-and-kyle.md` | 20-year friend + successor who called during the silence; Kyle who preached "grippy socks" + showed up in person the day of UAB | Raw material only |
 | `kyles-grippy-socks.md` | Kyle who preached grippy socks + showed up in person day of UAB | Raw material only — may fold into `jason-and-kyle.md` |
-| `easter.md` | Manic Easter vs. serving communion this year — the whole arc in one image. Lucy coffee scene woven in. Working title: **No Shade.** | **Full draft exists — publish after the hospital.** Hospital is the setup; Easter is the payoff. Reader needs the hospital to feel the weight of "wondering if resurrection was even possible." |
+| `no-shade-easter.md` | Manic Easter vs. serving communion this year — the whole arc in one image. Lucy coffee scene woven in. Title: **No Shade.** | **Prose pass complete. Publish after the hospital.** Hospital is the setup; Easter is the payoff. |
 | `the-church-visits.md` | Heartbreaking and anger-filled visits to First Anniston — the church where he used to work | Raw material only |
 | `ministry-grief.md` | 20-year career grief, Camp Lee chapter, slow acceptance the season was over | Matt's words, needs writing |
 | `faith-journey-raw-notes.md` | Faith through depression: 20 years of vocation, Marcus Borg + postcritical naivete, psychedelic community, "hanging out in the margins" | Voice transcript (April 13, 2026) — Matt's words verbatim |

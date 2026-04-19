@@ -33,7 +33,7 @@ After months of not attending church at all. After feeling like I had lost my fa
 
 Andy looked me right in the eye. Unusual to happen for me, being in the congregation, being addressed by name by the preacher. The cup in my hands, the bread in his. Looking in the eyes of the people who came forward to dip the bread in the cup I was holding. Saying those words I'd said thousands of times. "The blood of Jesus, shed for you."
 
-After the service Andy walked up to me. Said "Thank you. Sorry I sprung that on you. You're a great pastor." We agree to get coffee soon.
+After the service Andy walked up to me. Said "Thank you. Sorry I sprung that on you. You're a great pastor." We agreed to get coffee soon.
 
 A friend met me for coffee on Easter week. She has bipolar too. We sat by the window, my request, late morning light in her eyes required her to put on her sunglasses. "If you don't mind talking with me with sunglasses on." She said "Your ministry will be stronger because of what you've been through. Sharing your story can help others and help you. It helped me..."
 
