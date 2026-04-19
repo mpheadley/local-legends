@@ -96,6 +96,16 @@ halloween - walking the streets with thousands of parents and their kids. drinki
 
 jack wasn't supposed to give me his number. i lost his number, the scrap of paper he wrote it on. i'm still sad about that.
 
+---
+
+## Gap audit answers (April 19 2026)
+
+**Why i asked to go back:** i was home. the day after they let me go. i was in my room. i couldn't go outside. people were shopping our stuff for sale at the farm sale. kids were out helping, moping that they had to be out there all morning. my inlaws were talking to shoppers, neighbors who showed up. not a mile away — right outside our kitchen window. that's the day i decided to go back.
+
+**The ward smell:** recycled hospital air. or sterilized.
+
+**Jack leaving the number:** stuffing things in my bag, clothes, journal, crafts we'd made in group therapy, book, toiletries. he said "you've been a great roommate. the best one." he had been there weeks before me and multiple visits in the past. he was still waiting on his family to sort out where he would stay when he got out. he said "we're not supposed to do this. but i can give you my number if you want it. it'd be cool to stay in touch."
+
 my counseling sessions with sam the woman with the muslim — what's it called? a hijab. — were the most helpful. she said the move was triggering me. my history with my dad. having to move as a kid because of choices he made. and now the same thing i had worked so hard to avoid was happening to me and my family.
 
 ---
