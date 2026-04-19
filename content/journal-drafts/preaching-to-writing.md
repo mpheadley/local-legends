@@ -1,8 +1,13 @@
 # Seed: Preaching to Writing
 
-**Working title options:** "The Same Structure" / "After the Pulpit" / "Inductive" / "What I Learned to Do From a Pulpit"
+**Two versions of this piece:**
+- **SL journal** — personal, the loss of the pulpit and the craft traveling anyway. Too honest for HW. Write this first.
+- **HW blog** — craft angle: "how narrative structure from 20 years of preaching shapes how I build websites and write copy." Client-facing, SEO value, no grief required. Write after the SL version exists.
 
-**Emotional core:**
+**Working title options (SL):** "The Same Structure" / "After the Pulpit" / "Inductive" / "What I Learned to Do From a Pulpit"
+**Working title options (HW):** "Why I Structure Websites Like Sermons" / "What 20 Years of Preaching Taught Me About Web Copy"
+
+**Emotional core (SL):**
 Matt preached inductively for twenty years — tension first, resolution delayed, meaning earned rather than announced. Then he lost the pulpit. Now he writes websites and personal essays and business profiles. He keeps finding the same structure underneath all of it. The pulpit is gone. The method stayed.
 
 ---
