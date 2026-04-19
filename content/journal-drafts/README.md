@@ -12,6 +12,12 @@ Raw material files for Matt's personal writing section. These are not profiles �
 
 **Patreon closed April 14, 2026.** Personal messages sent to 4 paying supporters (see `patreon-supporters.md`). Closing post published. ✓ Complete.
 
+**On writing publicly:**
+
+Some people from the church probably prefer Matt had disappeared or stayed that way. He blindsided Tammy intentionally on the way out. Some of them want this quiet. Writing anyway is the point — that's not a reason to stop, it's a reason the writing has stakes.
+
+*"i feel like some people would prefer i have disappeared or stay that way"* — save this line. It belongs somewhere.
+
 **Up next — no set order, write what's ready:**
 
 **Planned: Headley Flower Farm journal entry** (`headley-flower-farm.md`)
@@ -23,7 +29,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 
 | File | What it's about | Status |
 |------|----------------|--------|
-| `the-hospital.md` | Dad at the dump → Kyle's grippy socks → ER refusal → asking to go back → 3 weeks at UAB → Halloween → camper in Cropwell → Thanksgiving + Christmas together | Raw material only |
+| `the-hospital.md` | Kitchen window opening → farm sale → Kyle's grippy socks → ER refusal → asking to go back → 10 days at UAB → Halloween → Jack/Sam → camper → Thanksgiving + Christmas. Ends: "it was and it wasn't." | **Next to publish.** Spine complete, needs prose pass. Publishes before Easter — reader needs the hospital to feel the weight of the resurrection piece. |
 | `manic-episode.md` | Ash Wednesday resignation → farm scaling → 16-20 hour days → "manic matt" → dozing at the wheel. **Source artifact:** 4-hour color-coded morning routine spreadsheet (Jan 2020) — 240 min, timed to the minute, vision board + dance party + family routine nested at the bottom. Contrast: 4am lowercase writing on April 17 2026. Seed for standalone piece `the-morning-routine.md` or fold into this one. | Raw material + source artifact |
 | `reading-my-manic-writing.md` | Going back through the record — Patreon posts, Facebook, texts with Justin — finding the mania in the archive | Well-developed seed, primary sources gathered |
 | `chatgpt-and-mania.md` | AI enabling mania → the article in the surgeon's office → fill-in therapist | Raw material only — may fold into `reading-my-manic-writing.md` |
@@ -36,7 +42,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 | `heathers-surgery.md` | Two weeks in Atlanta → updates on CaringBridge → knowing the farm was ending | Raw material only |
 | `jason-and-kyle.md` | 20-year friend + successor who called during the silence; Kyle who preached "grippy socks" + showed up in person the day of UAB | Raw material only |
 | `kyles-grippy-socks.md` | Kyle who preached grippy socks + showed up in person day of UAB | Raw material only — may fold into `jason-and-kyle.md` |
-| `easter.md` | Manic Easter vs. serving communion this year — the whole arc in one image | Raw material only |
+| `easter.md` | Manic Easter vs. serving communion this year — the whole arc in one image. Lucy coffee scene woven in. Working title: **No Shade.** | **Full draft exists — publish after the hospital.** Hospital is the setup; Easter is the payoff. Reader needs the hospital to feel the weight of "wondering if resurrection was even possible." |
 | `the-church-visits.md` | Heartbreaking and anger-filled visits to First Anniston — the church where he used to work | Raw material only |
 | `ministry-grief.md` | 20-year career grief, Camp Lee chapter, slow acceptance the season was over | Matt's words, needs writing |
 | `faith-journey-raw-notes.md` | Faith through depression: 20 years of vocation, Marcus Borg + postcritical naivete, psychedelic community, "hanging out in the margins" | Voice transcript (April 13, 2026) — Matt's words verbatim |
@@ -48,6 +54,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 | `mining-claude-docs-seeds.md` | Mining CLAUDE.md reasoning docs for SL journal / HW blog posts | Seed — placement TBD (SL or HW) |
 | `the-30-minute-errand.md` | Mania narrows your field of vision until the people closest to you are the ones you see least clearly. The 30-min errand that took all day. Heather needed him to come home. He couldn't. Door: Lucy not knowing about Aquality Farm. | Seed — April 2026 |
 | `red-state-revival.md` | Manic, at a Nadia Bolz-Weber revival in Birmingham — the room, the footage he never released, the selfie he did | Low priority — write after core arc pieces |
+| `after-the-acute-phase.md` | The moment you realize you're not in crisis anymore and don't know what to do with that. The weird flatness nobody writes about. | Seed — don't write until it's being lived |
 
 | `../ATTABOY.md` (root) | Encouraging responses to published pieces — fuel for when it's hard to publish | Running log |
 | `gold-star-draft-notes.md` | Dr. Hadley's office → Anniston Star article → gold star sticker → unfilled prescription. Last moment before the crash. | Well-developed seed, Matt's words + scene built |
