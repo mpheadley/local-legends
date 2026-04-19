@@ -83,5 +83,24 @@ The farm was Berry. The sermons were Berry. The craft traveling from pulpit to w
 
 When published, link to and from:
 - `the-same-domain.mdx` — the piece about why the journal and profiles coexist. This is the craft explanation underneath that.
-- `im-not-going-to-disappear.mdx` — the re-emergence piece. This piece explains how he writes; that one is what he wrote.
+- `im-not-going-to-disappear.mdx` — the re-emergence piece. **PUBLISHED.** This piece explains how he writes; that one is what he wrote.
+- **April 19 2026 note:** The defiance motivation belongs IN this piece, not separate from it. Craft-only reads as artificially pious — the honest version holds both: the method that traveled from pulpit to desk AND the anger underneath. "I write because the structure stayed with me" and "I write because I refuse to disappear" are the same piece. Raw material in voice memo `1600 Littlejohn Rd 9.m4a` (transcript in `manic-episode.md` notes, Tammy material) and `the-church-visits.md`.
+
+---
+
+## Matt's words — April 19 2026
+
+*Verbatim. Discovered in conversation.*
+
+what's pulling on me: the tension i discovered jsut now, in the craft and the anger held together without me being aware until i was writign/chatting with you about it, or we found that doc. the false piety. the hypocricy. my being ok with the tension, although maybe a little uncomfortable. the desire to hold the anger. that's an interesting question "what's a scene..." maybe "i'm not going to disappear" maybe i can sense it was in the writing of that. maybe in the manic episod. and the "no shade-easter" and probably all of them, to an extent.
+
+---
+
+## Claude's note — April 19 2026
+
+*"The anger is structural, not decorative."*
+
+Meaning: it's not that anger occasionally surfaces in these pieces and gives them heat. It's that the anger is the architecture — it's why the pieces exist at all, what shapes the choices of what to include and what to leave out, what makes the endings resist resolution. "No Shade" is ostensibly about returning to communion. But the first Easter section — the selfies, the videoing of the music, sharing on Facebook — that's defiance dressed as grief. The manic episode piece is defiance dressed as self-examination. "I'm Not Going to Disappear" names it directly, which is why it may be the key to unpacking how the others work.
+
+The craft piece (Lowry Loop, StoryBrand, the structure that traveled) is the "how." The anger is the "why" underneath the "how." A piece that tells only the "how" story is pious because it omits the fuel. The honest version says: I learned to build tension and delay resolution from twenty years in a pulpit, AND I use it now partly because I want to make people uncomfortable, AND I didn't fully know that until I was already doing it.
 - Any profile that uses the Lowry Loop structure naturally — a good example to point to as "this is the method in action."

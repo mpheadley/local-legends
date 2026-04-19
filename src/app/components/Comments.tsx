@@ -71,7 +71,7 @@ export default function Comments({ slug }: { slug: string }) {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: subscribeEmail }),
+        body: JSON.stringify({ email: subscribeEmail, source: "comment" }),
       });
       setSubscribeStatus(res.ok ? "done" : "idle");
     } catch {

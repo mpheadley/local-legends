@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function SubscribeCTA({ variant = "section" }: { variant?: "section" | "inline" }) {
+export default function SubscribeCTA({ variant = "section", source }: { variant?: "section" | "inline"; source?: string }) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -15,7 +15,7 @@ export default function SubscribeCTA({ variant = "section" }: { variant?: "secti
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), firstName: firstName.trim() }),
+        body: JSON.stringify({ email: email.trim(), firstName: firstName.trim(), source: source ?? (variant === "inline" ? "footer" : "homepage") }),
       });
       if (res.ok) {
         setStatus("success");
