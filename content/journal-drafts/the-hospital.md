@@ -5,7 +5,7 @@
 
 ## Matt's words
 
-I was home, in my room, watching out our kitchen window. Shoppers were picking through our stuff. Kids were out helping, moping that they had to be out there all morning. My in-laws were talking to shoppers, neighbors who showed up.  I couldn't go outside.
+I was home pacing around the house, glancing out our kitchen window. Shoppers were picking through our stuff. Kids were out helping, moping that they had to be out there all morning. My in-laws were talking to shoppers, neighbors who showed up.  I couldn't go outside.
 
 I decided I had to go back to the hospital.
 
@@ -21,7 +21,7 @@ The next day, I said I needed to go back. Dad took me.
 
 I was in the hospital for 10 days. I told people and myself it was 3 weeks. I was sure it was, until I checked the journal.
 
-I found it in my bedside drawer. A cheap brown notebook with lined paper. i wrote in it with the only pencil i had, the half length one they gave me. Apparently it was less dangerous than a full length pencil. i remember the grippy socks. The sterilized hospital air. The indian girl that was kind and was also bipolar. The carrot cake. I learned out from the others that you had to write it in on the meal card. and how they often got the meal cards wrong - you wrote yours in and hoped for the best, or that there might be an extra plate with what you wanted on it. 
+I found it in my bedside drawer. A cheap brown notebook with lined paper. i wrote in it with the only pencil i had, the half length one they gave me. Apparently it was less dangerous than a full length pencil. i remember the grippy socks. The sterilized hospital air. The indian girl that was kind and was also bipolar. The carrot cake. I learned from the others that you had to write it in on the meal card. and how they often got the meal cards wrong - you wrote yours in and hoped for the best, or that there might be an extra plate with what you wanted on it. 
 
 The ones desperate to leave, screaming. The other side of the floor that was for older patients. The schizophrenic guy talking to imaginary people. The ones down the hall in their rooms, carrying on conversation with imaginary people. i remember all of them.
 
@@ -68,11 +68,9 @@ We got to spend Thanksgiving and Christmas together.
 
 This week, I met Kyle for coffee. I told him I'd been angry with him in there. He laughed. He was the one who called it a grippy sock vacation.
 
-Talking with Heather that evening under our sweetgum tree at dinner. The sun was setting.
+Heather asked me that evening if I thought it was good for me, in hindsight. I said it was. It was and it wasn't. She said she had needed me to be gone. She couldn't take anymore. I was fighting her on selling the farm. Our equipment and my tools.
 
-She said she needed me to be gone. She couldn't take anymore. I was fighting her on selling the farm. On selling our equipment and my tools.
-
-She asked me if I thought it was good for me, in hindsight. I said it was. It was and it wasn't.
+We sat quietly for a while at the table under the tree. The shadows of the sweetgum were leaning across the yard.
 
 ---
 
@@ -84,14 +82,18 @@ Discharged: Tuesday, November 4, 2025
 
 ---
 
-## After — Kyle, Heather (raw, April 18 2026, 6am)
+## Source archive — superseded by draft above
+
+*The sections below are original raw material. The draft incorporates all of it. Keep for reference.*
+
+### After — Kyle, Heather (raw, April 18 2026, 6am)
 
 Kyle and I met for coffee yesterday. I told him i was in there 3 weeks. It was awkward, but good. I told him i was angry with him when i was in the hospital. He told me he thought i should go, when he came to see. Kyle asked if I met anyone there that ate oatmeal with their hands. My best story was of me and my comrades playing badminton in a little gym in our hospital gowns and grippy socks. I was frustrated that the resident psychiatrist criticized my psychiatrist's approach of cycling me through meds before getting to the full maximum dosage on any of them. It was bewildering, not knowing who was right. They started me back on Seroquel when i got there, a drug i had discontinued before. But they would see results faster on Seroquel than on what had just started, lamotrigine. And the point of the 4 west, was to get you out as soon as you are stable. So eventually, after the first 10 days or so, i realized I'd have to start telling them what they wanted to hear, to get out of there. That i wasn't feeling as suicidal.
 
 They did a good job. They were mostly compassionate, except some of the techs (?what was their role?) that were paternalistic and patronizing. before i went. I told him it was not at all a "grippy sock vacation" like he had experienced.
 
 That evening, talking with Heather about my chat with Kyle, outside under our sweetgum tree at dinner as the sun was setting. We talked about the hospital visit. she was skeptical that it was 3 weeks. She asked me if i thought it was good for me, in hindsight. I said it was. it was and it wasn't.
-She said she needed me to be gone. She couldn't take anymore. I was fighting her on selling the farm. On selling our equipment and my tools. I said it was a good place to get me away from everything. And i hated it then, but now i have a story. Not many people know what it's like to be in a psych ward. 
+She said she needed me to be gone. She couldn't take anymore. I was fighting her on selling the farm. On selling our equipment and my tools. I said it was a good place to get me away from everything. And i hated it then, but now i have a story. Not many people know what it's like to be in a psych ward.
 
 The next morning i woke up at 5:50am to journal from the hospital. I had just found it yesterday, stashed away in my bedside table drawer. i saw the dates. It was Oct 25 through Nov 4. 10 days. i missed halloween with heather and friend and the kids on glenwood terrace, our annual tradition. and i missed the house sale.
 
@@ -99,7 +101,7 @@ on the visits, we sat awkwardly where the staff could see us, at the table in th
 
 ---
 
-## From the physical journal (October–November 2025)
+### From the physical journal (October–November 2025)
 
 "Can i find joy in being with my family in the trailer?
 I get to start over and dump the farm life… i didn't want to, but life doesn't always go the way we want.
@@ -125,7 +127,7 @@ Help me lord.
 
 ---
 
-## Inside — ten days (raw, April 17 2026, 4am)
+### Inside — ten days (raw, April 17 2026, 4am)
 
 it's a cheap brown notebook with lined paper. i wrote in it with the only pencil i had, the half length one they gave me because apparently it was less dangerous than a full length pencil. i remember the grippy socks. the air — recycled hospital air. or sterilized. Jack Swindle gave me his phone number before i left — it was against the rules for patients / residents to share contact info. he wrote it on a scrap as i was packing my things to leave. the indian girl that was kind and was also bipolar. the carrot cake. the ones who didn't want to be there, screaming. the other side of the floor that was for older patients. the guy who saw stuff, people that talked to him. the ones who talked to themselves. the half-wits. i remember all of them. feeling stuck, like i was trapped, walking in circles, literally. the shower that dribbled water. i had to huddle in the corner under that drippy thing to get wet. the yoga mat that called me. the snack time - pb crackers. waking up in the middle of the night. trying to get my Seroquel dialed in, a drug i had already been on. the way the psychiatrist in charge criticized my psychiatrist's method of cycling through so many different drugs without getting to maximum dosage before switching.
 
@@ -151,24 +153,6 @@ my counseling sessions with sam the woman with the muslim — what's it called? 
 
 ---
 
-## Gap audit answers (April 19 2026) — MOVED
-
-**Why i asked to go back:** moved to Matt's words section above.
-
-**The ward smell:** moved to Inside — ten days above.
-
-**Jack leaving the number:** moved to Inside — ten days above.
-
-**Sam:** moved to Inside — ten days above.
-
----
-
-## Weight (raw, April 18 2026)
-
-i've gained 35 lbs in the past 4 months, and probably 30 of those were in the hospital. weigh more now than i ever have in my life by a long shot. i napped as much as possible to pass the day and numb the heartbreak and anger. i ate carrot cake 2-3 times a day (an insider tip: if you write in "carrot cake" on your card - not a listed option - you get it most of the time.) the Seroquel caused weight gain too.
-
----
-
 ## Notes
 
 - Kyle's "vacation with grippy socks" sermon — the thing that made Matt willing to go. May be its own entry or woven into this one. See also: `kyles-grippy-socks.md`, `jason-and-kyle.md`
@@ -186,5 +170,5 @@ i've gained 35 lbs in the past 4 months, and probably 30 of those were in the ho
 - **"It was and it wasn't"** — his answer when Heather asked if it was good for him, in hindsight. Don't resolve it in the piece. That's the ending.
 - **The sweetgum tree:** Heather and Matt talked at dinner outside, sun setting, April 17 2026. She thought 3 weeks. He told her 3 weeks. Both wrong.
 - **Structural description** (Claude, April 18 2026): "What was happening in the ward, what was happening a mile away, and the distance between them that couldn't be measured in miles." — the hinge between the fall festival corner and the Halloween street. May become a line in the piece.
-- **Weight:** 35 lbs gained in 4 months, ~30 in the hospital. Heaviest ever. Body kept the score. Seroquel a factor. Recovery arc (strength training, eating better) moved to `depression-mania-recovery-contrast.md`.
+- **Weight:** 35 lbs gained in 4 months, ~30 in the hospital. Heaviest ever. Body kept the score. Seroquel a factor. Raw material and recovery arc both in `depression-mania-recovery-contrast.md` — Weight/body section.
 - The trailer move, the holidays — Thanksgiving and Christmas together. That's the turn toward something.
