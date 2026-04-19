@@ -691,6 +691,87 @@ html {
   margin: 0;
 }
 
+.comment-field--checkbox {
+  margin-top: -0.25rem;
+}
+
+.comment-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-ll-text);
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.comment-checkbox-label input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-ll-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.comment-subscribe-nudge {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-ll-accent);
+}
+
+.comment-subscribe-nudge p {
+  margin: 0 0 0.625rem;
+  font-size: 0.9rem;
+  color: var(--color-ll-text);
+}
+
+.comment-subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.comment-subscribe-form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-ll-accent);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  background: white;
+  color: var(--color-ll-text);
+}
+
+.comment-subscribe-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-ll-primary);
+}
+
+.comment-subscribe-form button {
+  padding: 0.5rem 1rem;
+  background: var(--color-ll-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.comment-subscribe-form button:hover {
+  opacity: 0.9;
+}
+
+.comment-subscribe-confirm {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-ll-primary);
+  font-weight: 600;
+}
+
 .comment-error {
   font-family: var(--font-body);
   font-size: 0.875rem;

@@ -24,6 +24,10 @@ export default function Comments({ slug }: { slug: string }) {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
+  // Post-submit subscribe prompt
+  const [subscribeEmail, setSubscribeEmail] = useState("");
+  const [subscribeStatus, setSubscribeStatus] = useState<"idle" | "sending" | "done">("idle");
+
   useEffect(() => {
     fetch(`/api/comments/${slug}`)
       .then((r) => r.json())
@@ -44,14 +48,34 @@ export default function Comments({ slug }: { slug: string }) {
 
       if (res.ok) {
         setStatus("success");
+        // Pre-fill subscribe prompt with commenter's email
+        if (email) setSubscribeEmail(email);
         setName("");
         setEmail("");
         setMessage("");
+        setNotifyReplies(false);
       } else {
         setStatus("error");
       }
     } catch {
       setStatus("error");
+    }
+  }
+
+  async function handleSubscribe(e: React.FormEvent) {
+    e.preventDefault();
+    if (!subscribeEmail) return;
+    setSubscribeStatus("sending");
+
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: subscribeEmail }),
+      });
+      setSubscribeStatus(res.ok ? "done" : "idle");
+    } catch {
+      setSubscribeStatus("idle");
     }
   }
 
@@ -77,6 +101,28 @@ export default function Comments({ slug }: { slug: string }) {
         {status === "success" ? (
           <div className="comment-thanks">
             <p>Thank you. Your response will appear after review.</p>
+
+            {/* Inline subscribe prompt */}
+            {subscribeStatus === "done" ? (
+              <p className="comment-subscribe-confirm">You&apos;re on the list.</p>
+            ) : (
+              <div className="comment-subscribe-nudge">
+                <p>Want to hear when new stories go up?</p>
+                <form onSubmit={handleSubscribe} className="comment-subscribe-form">
+                  <input
+                    type="email"
+                    value={subscribeEmail}
+                    onChange={(e) => setSubscribeEmail(e.target.value)}
+                    required
+                    placeholder="your@email.com"
+                    aria-label="Email address for newsletter"
+                  />
+                  <button type="submit" disabled={subscribeStatus === "sending"}>
+                    {subscribeStatus === "sending" ? "..." : "Subscribe"}
+                  </button>
+                </form>
+              </div>
+            )}
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="comment-form">
@@ -93,12 +139,13 @@ export default function Comments({ slug }: { slug: string }) {
               />
             </div>
             <div className="comment-field">
-              <label htmlFor="comment-email">Email <span className="comment-optional">(optional — only used if I reply)</span></label>
+              <label htmlFor="comment-email">Email</label>
               <input
                 id="comment-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                required={notifyReplies}
                 maxLength={200}
                 autoComplete="email"
               />
