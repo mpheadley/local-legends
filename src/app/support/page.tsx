@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import StripePricingTable from "@/app/components/StripePricingTable";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
@@ -88,6 +89,59 @@ export default function SupportPage() {
               No account needed. Processed securely by Stripe.
             </p>
           </div>
+
+          <hr className="my-10 border-ll-dark/10" />
+
+          {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
+            <div className="not-prose my-10">
+              <p className="text-sm font-medium text-ll-dark mb-1">Or wear it.</p>
+              <p className="text-sm text-ll-text-light mb-6">
+                Three shirts. Proceeds support the writing.
+              </p>
+              <div className="flex gap-4 justify-center flex-wrap mb-6">
+                <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync"
+                    alt="I Contain Multitudes tee"
+                    width={140}
+                    height={140}
+                    className="rounded mb-2 mx-auto"
+                  />
+                  <span className="text-xs text-ll-text-light">I Contain Multitudes</span>
+                </a>
+                <a href="https://matt-headley-shop.fourthwall.com/products/bipolar-proud" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.com/h_96A1MIPtOTIaIiYVWIX71opxpo5aTClEo1w5juBqs/w:1920/sm:1/enc/6cyztRuBMcyK5yJ6/qW27rarZs034xiqO/uIEdXZ3wyNpBYfZu/bLqZxDSki3uIG-wV/r6rKWmuVX7Ij7c2u/T76KUWv84U9RwuRI/LB9zHEDBJydUE_RF/J14NCV4M8fBZ1kaa/FXRwj95Ef9XIM9Bo/lZsxWinD2qG6FKf5/Zwg8Tzn0duzfC-NX/OETz1p97N3Efixji/_IxGEL89KxkwdZis/XH8gGKHP_ZwkNzcR/-b99RXRadmU"
+                    alt="Bipolar & Proud tee"
+                    width={140}
+                    height={140}
+                    className="rounded mb-2 mx-auto"
+                  />
+                  <span className="text-xs text-ll-text-light">Bipolar &amp; Proud</span>
+                </a>
+                <a href="https://matt-headley-shop.fourthwall.com/products/still-here" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.com/FyWryySt9e8_rzT3yE6eItoqF6GstCkbBJSuL62LpoY/w:1920/sm:1/enc/kZytLUESOJY7WIq3/mQmU8CAxU0TQJrD2/LFh8Y-uqr4QKxZUr/-r3HZV9rDnJj-a9U/SY5J9AEtq4g5o7L3/JwKTj1OyPau1R0tC/tTw60OgXWBZkD6Hu/wWE8ibGTgAZsKMsY/WTotCATD8-xnovcw/FEwNfv2JgknjHnf0/ug0yHPZ7pcf3JZ2i/bZ0phQZB_NTgL9ld/E3bYmALpumGY4hCG/Su9KSvpN3h6FOoRK/dNXM-cTSQcw"
+                    alt="Still Here tee"
+                    width={140}
+                    height={140}
+                    className="rounded mb-2 mx-auto"
+                  />
+                  <span className="text-xs text-ll-text-light">Still Here</span>
+                </a>
+              </div>
+              <div className="text-center">
+                <a
+                  href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+                >
+                  The store →
+                </a>
+              </div>
+            </div>
+          )}
 
           <hr className="my-10 border-ll-dark/10" />
 
