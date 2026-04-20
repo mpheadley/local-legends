@@ -1,4 +1,7 @@
-# Seed: Preaching to Writing
+# Seed: Before I Had Words
+*(was: Before I Had a Word for It, was: Preaching to Writing)*
+
+**Title note — April 20 2026:** The piece holds a tension that may not resolve: pious, thoughtful, and conflicted at the same time. The craft thread (Lowry, StoryBrand, structure that traveled) reads as artificially pious without the experience thread underneath it (embarrassment, defiance, cost of publishing, anger as architecture). Separating them into two pieces risks making one pious and one just venting. The honest version holds both — don't resolve the tension, hold it. "Before I Had Words" is broader and rawer than "Before I Had a Word for It" — fits the experience thread better while still covering the craft thread.
 
 **Two versions of this piece:**
 - **SL journal** — personal, the loss of the pulpit and the craft traveling anyway. Too honest for HW. Write this first.
@@ -184,3 +187,21 @@ Searching for the word for what Matt is doing by writing publicly.
 **On craft discipline and the voice guide:** Matt built a structure for how to write honestly (the AUTHENTIC-VOICE-GUIDE) the same way he built a structure for how to preach. Both are attempts to make the thing rigorous rather than accidental. That's Enneagram 1 — anger channeled into craft discipline. Whether the voice guide belongs in the piece explicitly is an open question. Risk: it might only feel interesting because Matt is close to it — a writer explaining his own process document. Leave it out of the first draft and see if it wants to come in on its own.
 
 **On attention-seeking:** Yes — all public writing seeks attention. The question is what you're doing with it once you have it. Witness and exhibitionist both need an audience. The difference is what they're asking the audience to see. The confessionalist tradition (Plath, Sexton, Augustine) gets accused of this constantly — usually by people uncomfortable with what's being said, not people who've reckoned with why. Don't defend against the charge in the piece. Name it, hold it. The self-aware version is more honest than the version that pretends it isn't there.
+
+---
+
+## Matt's words — April 20 2026
+
+Before publishing the hospital piece: "I'm a little embarrassed to publish this." Then published anyway. That's the tension this piece is about — not resolved, held. The embarrassment doesn't go away. You ship it because the embarrassment means you told the truth, not because you've made peace with being seen.
+
+As an Enneagram 1, I've historically preferred things to be black and white, resolved. I'm enjoying and leaning into holding the tension these days, with the help of the voice guide and the guides in it. I liked sermons to be resolved too, for a long time. Then I started leaning harder into questions later in my career. Maybe I'm continuing that evolution.
+
+The guide document is itself evidence of the tension: I built a structure for how to hold complexity — which is a very Enneagram 1 thing to do. But I evolved the guide pretty early on to hold the rules gently. Rule 6 challenges the rules themselves. The rulebook eating itself. The Enneagram 1 who built a system for not being too rigid about systems. That might be the arc of the piece: resolved sermons → questions from the pulpit → writing that holds tension without answering it. The pulpit evolution and the writing evolution are the same movement.
+
+On ego death: the loosening might be simpler than ego death — just maturity. A slow loosening, not a collapse. The Enneagram 1 loosening their grip on rules and resolution may have roots in all of that — not just maturity, but having had the experience of the self coming apart and surviving it. The difference matters for the piece: ego death is dramatic and singular; what I'm describing in the sermons → questions → tension arc sounds more like evolution. Both may be true at different moments.
+
+*Matt's words, verbatim:*
+
+"ego death is a subject i've been fascinated with , from contemplative spirituality, centering prayer practice, meditation, and my research and exprince with psychadelics, including my heroic dose trip in 2024. that felt like ego death, as i integrated the expreince. it' was horrifying"
+
+"a nightmare"

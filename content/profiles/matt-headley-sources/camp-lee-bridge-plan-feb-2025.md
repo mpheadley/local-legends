@@ -1,6 +1,6 @@
 # Camp Lee Bridge Plan — February 6, 2025
 *Source artifact — email, matt@annistonfirst.info to self, 3:59 AM*
-*Cross-reference: `gold-star-draft-notes.md`, `manic-episode.md`, `ministry-grief.md`*
+*Cross-reference: `../../journal-drafts/gold-star-draft-notes.md`, `manic-episode.md`, `ministry-grief.md`*
 
 ---
 

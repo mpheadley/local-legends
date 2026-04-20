@@ -1,6 +1,6 @@
 # Wednesday March 19 Tasks
 *Source artifact — Notion, day after the Dr. Hadley gold star visit*
-*Cross-reference: `gold-star-draft-notes.md`, `tammy-sprc-letter-march-2025.md`*
+*Cross-reference: `../../journal-drafts/gold-star-draft-notes.md`, `tammy-sprc-letter-march-2025.md`*
 
 ---
 

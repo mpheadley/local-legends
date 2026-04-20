@@ -20,7 +20,7 @@ Some people from the church probably prefer Matt had disappeared or stayed that 
 
 ## Publishing Sequence (decided April 19 2026)
 
-**1. `the-hospital.md` → MDX → publish** — before publishing: Heather reads it first (she buried these things, she should see it before it's live). Kyle gets a courtesy heads-up — he showed up the day of UAB, named positively, but deserves to know. Jack and Sam are named — confirm whether they appear in ways that identify them or put them in a vulnerable light (no-kids-faces rule applies).
+**1. `the-hospital.md` → MDX → publish** — before publishing: Heather reads it first (she buried these things, she should see it before it's live). Kyle gets a courtesy heads-up before publishing — named throughout, his daughter's death mentioned by name in context of the grippy socks sermon. He deserves to see it first. Pete (pseudonym for Jack Swindle — real name not used) and Sam are named — confirm whether they appear in ways that identify them or put them in a vulnerable light.
 **2. `no-shade-easter.md` → share with Lucy and Andy first (both are in it) → then MDX → publish**
 **3. `reading-my-manic-writing.md` → write → publish**
 **4. `gold-star-draft-notes.md` → write → publish**
@@ -64,7 +64,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 | `the-church-visits.md` | Heartbreaking and anger-filled visits to First Anniston — the church where he used to work | Raw material only |
 | `ministry-grief.md` | 20-year career grief, Camp Lee chapter, slow acceptance the season was over | Matt's words, needs writing |
 | `faith-journey-raw-notes.md` | Faith through depression: 20 years of vocation, Marcus Borg + postcritical naivete, psychedelic community, "hanging out in the margins" | Voice transcript (April 13, 2026) — Matt's words verbatim |
-| `preaching-to-writing.md` | The inductive structure from 20 years of preaching → now in essays and profiles | Seed |
+| `before-i-had-words.md` | Craft traveling from pulpit to writing desk. Anger as architecture. Embarrassment and publishing anyway. Pious, thoughtful, and conflicted — hold the tension, don't resolve it. (was: preaching-to-writing.md) | Seed |
 | `community-rootedness.md` | Cut from the-same-domain: building the business reclaimed the community built over years | Seed — one line, needs expansion |
 | `becoming-a-web-designer.md` | Solitaire → coding class → cold calls → first client | Raw material only |
 | `public-school.md` | The kids' world ended too — homeschool, farm, land — then public school and something new | Seed |
@@ -75,7 +75,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 | `after-the-acute-phase.md` | The moment you realize you're not in crisis anymore and don't know what to do with that. The weird flatness nobody writes about. | Seed — don't write until it's being lived |
 
 | `../ATTABOY.md` (root) | Encouraging responses to published pieces — fuel for when it's hard to publish | Running log |
-| `gold-star-draft-notes.md` | Dr. Hadley's office → Anniston Star article → gold star sticker → unfilled prescription. Last moment before the crash. | Well-developed seed, Matt's words + scene built |
+| `gold-star-draft-notes.md` | Dr. Hadley's office → Anniston Star article → gold star sticker → unfilled prescription. Last moment before the crash. Voice transcript: `../profiles/matt-headley-sources/gold-star-voice-transcript-april-19-2026.md`. | Well-developed seed, Matt's words + scene built |
 
 **⚠️ Substack/private only — do NOT publish on SL:**
 | File | Why |

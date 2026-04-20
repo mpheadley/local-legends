@@ -1,6 +1,6 @@
 # Headley Farm, Venue & Retreat Center Vision Document
 *Source artifact — Notion/ChatGPT canvas, March 2025*
-*Cross-reference: `manic-episode.md`, `gold-star-draft-notes.md`*
+*Cross-reference: `manic-episode.md`, `../../journal-drafts/gold-star-draft-notes.md`*
 
 ---
 

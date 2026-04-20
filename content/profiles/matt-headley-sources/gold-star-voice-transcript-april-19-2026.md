@@ -1,6 +1,6 @@
 # Gold Star — Voice Chat Transcript
 *April 19, 2026 — Matt's words only, verbatim*
-*Cross-reference: `gold-star-draft-notes.md`*
+*Cross-reference: `../../journal-drafts/gold-star-draft-notes.md`*
 
 ---
 

@@ -2,7 +2,7 @@
 
 *In progress — April 10, 2026*
 *This is the second Patreon post. The first post is "Why Southern Legends" — write that one first.*
-*Voice transcript (April 19, 2026): `gold-star-voice-transcript-april-19-2026.md`*
+*Voice transcript (April 19, 2026): `../profiles/matt-headley-sources/gold-star-voice-transcript-april-19-2026.md`*
 
 **Source artifacts:**
 - `dr-hadley-appointment-prep-march-18-2025.md` — prep notes written before the gold star visit. He was asking about THC, psilocybin microdosing, propranolol contraindications. He walked in already researching sleep optimizations.
