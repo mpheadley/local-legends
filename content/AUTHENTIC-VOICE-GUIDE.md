@@ -89,7 +89,7 @@ This rule is downstream of Ted Chiang's argument (via Rebecca Heilweil, Fast Com
 
 ### Hard List — Never Use
 
-These are AI fingerprints. Their presence in a sentence signals a machine wrote it.
+These are AI fingerprints. Their presence in a sentence signals a machine wrote it. The principle behind this list is Orwell's: vague, inflated language isn't just bad style — it's dishonest. Precision is a form of honesty.
 
 **Verbs:** delve, foster, leverage, harness, underscore, showcase, navigate (metaphorically), bolster, streamline, optimize, unlock, unleash, elevate, align, empower, revolutionize, supercharge, transform
 
@@ -165,7 +165,7 @@ Promotional language doing marketing work instead of journalism. Sells the subje
 
 **Mirror paragraphs.** AI follows the same internal paragraph structure: topic sentence, explanation, example, concluding thought. Vary the shapes. Some paragraphs should be one sentence. Some should be eight.
 
-**Hedging reflex.** "It could be argued that..." / "One might say..." / "In many ways..." If the sentence is true, say it. If it isn't, don't write it.
+**Hedging reflex.** "It could be argued that..." / "One might say..." / "In many ways..." If the sentence is true, say it. If it isn't, don't write it. (Orwell Rule 3: if it is possible to cut a word out, always cut it out.)
 
 **False balance.** Presenting "both sides" when one side is obviously right is not nuance — it's cowardice. Real nuance means holding complexity, not splitting the difference.
 
@@ -217,6 +217,22 @@ Honor your feelings, support them with evidence. The feeling first, then the sce
 
 ---
 
+## On Attention-Seeking
+
+All public writing seeks attention. The question is what you're doing with it once you have it. Witness and exhibitionist both need an audience. The difference is what they're asking the audience to see.
+
+The confessionalist tradition gets accused of attention-seeking constantly:
+- **Augustine** — *Confessions* is literally named for public self-disclosure. Critics called it vanity. It became the template for Western autobiography.
+- **Sylvia Plath** — accused of using suffering as performance. The charge never lands because the work is too precise to be mere display.
+- **Anne Sexton** — same tradition, same accusation. Her response: "I am not a good poet, but a very good entertainer." She owned the performance and kept writing.
+- **Mary Karr** — *The Liar's Club* was criticized for airing family history. She wrote two more memoirs.
+- **Montaigne** — the original essayist, took himself as subject, was criticized for it. "Every man carries the whole form of the human condition within him." The defense of self-disclosure as universal.
+- **James Baldwin** — wrote from inside his own experience of race, exile, anger. The personal was never separate from the political argument.
+
+The self-aware version is more honest than the version that pretends the charge isn't there. Name it in the work. Don't defend against it — hold it. The reader who accuses you of attention-seeking is usually uncomfortable with what you're saying, not with the fact that you're saying it.
+
+---
+
 ## Transitions
 
 Don't use "Moreover," "Furthermore," "Additionally," or any other connector that announces a transition is happening. Literary journalism transitions by cutting. White space. A time marker ("Three weeks later"). A scene shift. Or the last image of one paragraph echoes the first word of the next. If a transition word is doing the work, the structure probably needs fixing, not patching.
@@ -248,7 +264,7 @@ When in doubt, ask one question, not three. One good question is more useful tha
 
 ## Self-Audit Checklist
 
-Run this before returning any draft or edit to Matt.
+Run this before returning any draft or edit to Matt. The checklist finds problems — the ear solves them. Apply these as prompts, not verdicts. If following a rule makes the writing worse, invoke Orwell's Rule 6 and break it.
 
 - [ ] Any hard-kill words? (search: delve, leverage, harness, foster, robust, pivotal, seamless, tapestry)
 - [ ] Em dashes present? Replace with period, comma, colon, or rewrite.
@@ -273,7 +289,7 @@ Run this before returning any draft or edit to Matt.
 4. **Show, then trust.** Build the scene. Give the details. Then stop. Don't explain what it means.
 5. **Matt writes first.** Always. Every time.
 6. **Read aloud.** If it sounds like a press release, cut it.
-7. **Resist smoothness.** Too polished means the life has been edited out.
+7. **Resist smoothness.** Too polished means the life has been edited out. (Orwell: vague, inflated language is a form of dishonesty. Precision is a form of honesty.)
 8. **Write from the South, not about it.**
 9. **Let people be people.** Not symbols, not characters, not representatives of anything.
 10. **When in doubt: add a detail, remove an adjective.**
@@ -315,7 +331,16 @@ Jamison reframes show-don't-tell: feelings are "made of the way we speak them" �
 "Simply thinking, focused thinking, with words attached to memories attached to images." The narrator's felt experience as the organizing principle — not the events, but the thinking attached to them.
 
 **George Orwell — "Politics and the English Language" (1946)**
-Six rules, all still operative. The most applicable here: *"Never use a long word where a short one will do."* And: *"If it is possible to cut a word out, always cut it out."* Orwell's argument is moral as much as stylistic — vague, inflated language is dishonest. Precision is a form of honesty. The essay is free online and worth reading in full.
+Orwell's argument is moral as much as stylistic — vague, inflated language is dishonest. Precision is a form of honesty. The essay is free online and worth reading in full. The six rules:
+
+1. Never use a metaphor, simile, or other figure of speech which you are used to seeing in print.
+2. Never use a long word where a short one will do.
+3. If it is possible to cut a word out, always cut it out.
+4. Never use the passive where you can use the active.
+5. Never use a foreign phrase, a scientific word, or a jargon word if you can think of an everyday English equivalent.
+6. Break any of these rules sooner than say anything outright barbarous.
+
+**Rule 6 is the governing one.** Follow the first five until they make the writing worse — stiffer, flatter, less true. Then break them. The rules serve honesty. Honesty doesn't serve the rules. A writer who never uses passive voice but drains the life out of every sentence has followed the rules and failed.
 
 **Fred Craddock — *Preaching***
 The homiletics text where Matt first encountered the inductive preaching principle — build through scene and example, let the listener arrive at the conclusion rather than stating it up front. The same principle as "report, don't explain." Craddock's *Overhearing the Gospel* extends this further: the most powerful communication is what people arrive at on their own, not what they're told.
