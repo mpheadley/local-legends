@@ -11,7 +11,7 @@ Pulled from Notion: a ChatGPT-generated summary titled "Headley Resignation and 
 - March 13, 2025: Matt texted Tammy his resignation.
 - March 14, 2025: Effective last day. Four weeks vacation + April housing allowance processed.
 
-**Note:** Other source files reference "the Ash Wednesday resignation." Ash Wednesday 2025 was March 5. The resignation text was sent March 13 — eight days after Ash Wednesday. Either the "Ash Wednesday" framing is how Matt remembers the timing, or there was an earlier communication (possibly informal) around Ash Wednesday. The formal text was March 13.
+**Note:** Other source files reference "the Ash Wednesday resignation." Ash Wednesday 2025 was March 5. The resignation text was sent March 13 — nine days after Ash Wednesday. The "Ash Wednesday" framing is how Matt remembers the timing; the formal text to Tammy came nine days later.
 
 ---
 

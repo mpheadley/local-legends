@@ -4,7 +4,9 @@
 - **SL journal** — personal, the loss of the pulpit and the craft traveling anyway. Too honest for HW. Write this first.
 - **HW blog** — craft angle: "how narrative structure from 20 years of preaching shapes how I build websites and write copy." Client-facing, SEO value, no grief required. Write after the SL version exists.
 
-**Working title options (SL):** "The Same Structure" / "After the Pulpit" / "Inductive" / "What I Learned to Do From a Pulpit"
+**Working title options (SL):** "Before I Had a Word for It" (leading candidate) / "The Same Structure" / "After the Pulpit" / "Inductive"
+
+**On the title doing double duty:** "Before I Had a Word for It" covers both threads — the structure (Lowry named what was already there) and the anger (Enneagram 1 named what was already there). Both were present before they were named. That double duty might be the crux of the piece.
 **Working title options (HW):** "Why I Structure Websites Like Sermons" / "What 20 Years of Preaching Taught Me About Web Copy"
 
 **Emotional core (SL):**
@@ -88,7 +90,35 @@ When published, link to and from:
 
 ---
 
-## Matt's words — April 19 2026
+## Matt's words — April 19 2026 (second session)
+
+*Verbatim.*
+
+Davis johnson told me about the lowry loop, and it clicked with all the narrative / story driven ideas i picked up in seminary and lived through my college theater experience, singing, studying classical voice, experience with hte gospels, and just life experience.
+i like the "it's how i survive"
+i like "heres what i am"
+
+---
+
+*On the anger:*
+
+i'm always angry.
+
+---
+
+*On Heather:*
+
+heather says she has buried these things. it's hard reliving them again as i'm talking through them with her.
+
+---
+
+*Finding the shape of the piece:*
+
+could be the title. could be the crux of the piece? the anger probably has its own narrative arc. are we dealing with that here?
+
+---
+
+## Matt's words — April 19 2026 (first session)
 
 *Verbatim. Discovered in conversation.*
 
@@ -104,3 +134,53 @@ Meaning: it's not that anger occasionally surfaces in these pieces and gives the
 
 The craft piece (Lowry Loop, StoryBrand, the structure that traveled) is the "how." The anger is the "why" underneath the "how." A piece that tells only the "how" story is pious because it omits the fuel. The honest version says: I learned to build tension and delay resolution from twenty years in a pulpit, AND I use it now partly because I want to make people uncomfortable, AND I didn't fully know that until I was already doing it.
 - Any profile that uses the Lowry Loop structure naturally — a good example to point to as "this is the method in action."
+
+---
+
+## Form note — April 19 2026
+
+**On scenes:** Not necessarily required. If the defiance thread stays in the piece, the abstraction has enough heat to carry itself. If defiance goes missing, scenes become necessary to compensate.
+
+**Matt's live scenes (April 19 2026):** Driving in the car chatting with Claude, driving near the church in downtown Anniston, picking up his boys from visiting their friend Ashley (Kyle's son). These are contemporary — today — not archival pulpit memories. The piece may be happening in present tense, not recovered from the past.
+
+**Form model: Didion's "Why I Write"** — entirely meta, no scenes in the traditional sense, but never cold because the personal stakes are always present. Explore whether this piece works the same way.
+
+---
+
+## Origin reframe — April 19 2026
+
+**The theater/classical voice thread — underdeveloped, needs expansion in the draft:**
+The structure was assembled before seminary — in Matt's college theater experience, classical voice training, singing, and engagement with the gospels. This pushes the origin earlier than Lowry, earlier than the pulpit. By the time Davis Johnson named the Lowry Loop, the terrain was already built. The performing arts background is where it started — embodied, in front of an audience, learning what makes people lean in. Seminary gave it a homiletical framework. The pulpit gave it a room. But the instinct was already there.
+
+**Davis Johnson told Matt about the Lowry Loop.** Davis was the former youth pastor at the church when Matt was music director — before Matt became associate pastor, a few years after Davis left.
+
+**The StoryBrand click happened on Thursday afternoons** — driving his daughter to dance lessons, listening to the StoryBrand podcast. That's when the parallel with Lowry landed. It clicked because it named something already assembled — theater, classical voice training, the gospels, seminary, life experience. Lowry didn't teach him the structure. He handed Matt a map of terrain Matt had already been walking.
+
+This reframes the entire piece: it's not "twenty years of practice revealed a structure." It's recognition, not learning. The loop was already there. Lowry just named it.
+
+**The center:** "It's not the technique I use. It's what I am. It's how I survive."
+
+**On the anger:** Matt is an Enneagram 1. Mania increases anger and irritability. The anger isn't episodic — it's baseline. Bruce Banner / Hulk: "I'm always angry." The defiance in the writing isn't a reaction to specific losses. It's the operating condition. Verbatim: "i'm always angry."
+
+The Enneagram 1 framework gave him language for it — same move as Lowry gave him language for the structure. He was already that person before he had a word for it.
+
+**Handling the anger in this piece:** Present it as fuel, not subject. The reader needs to feel the defiance underneath — not be walked through why it's there. The full arc (church, farm, loss) lives in the other pieces. If the anger becomes subject here, it swamps the craft thread. What this piece needs is the fact of it: always there, always running, named late.
+
+---
+
+## What kind of writer is this — April 19 2026
+
+Searching for the word for what Matt is doing by writing publicly.
+
+- **Raconteur** — a person who tells personal stories publicly, with craft. New word to Matt, worth sitting with.
+- **Witness** — bearing testimony to what you've lived through. Fits the religious background.
+- **Prophet** — speaks uncomfortable truth publicly, often unwelcome, often angry. Fits the Enneagram 1 with a pulpit.
+- **Apostate** — one who publicly breaks from a faith tradition. Loaded, possibly accurate.
+
+**Heather's note (April 19 2026):** She has buried these things. Reliving them as Matt talks through them with her is hard. That cost is real and belongs somewhere in the reckoning of what public writing does — not just to Matt, but to the people who were there.
+
+**It's not just Matt's story to tell.** That tension might belong in the piece somewhere, or at least inform how carefully some of it gets handled.
+
+**On craft discipline and the voice guide:** Matt built a structure for how to write honestly (the AUTHENTIC-VOICE-GUIDE) the same way he built a structure for how to preach. Both are attempts to make the thing rigorous rather than accidental. That's Enneagram 1 — anger channeled into craft discipline. Whether the voice guide belongs in the piece explicitly is an open question. Risk: it might only feel interesting because Matt is close to it — a writer explaining his own process document. Leave it out of the first draft and see if it wants to come in on its own.
+
+**On attention-seeking:** Yes — all public writing seeks attention. The question is what you're doing with it once you have it. Witness and exhibitionist both need an audience. The difference is what they're asking the audience to see. The confessionalist tradition (Plath, Sexton, Augustine) gets accused of this constantly — usually by people uncomfortable with what's being said, not people who've reckoned with why. Don't defend against the charge in the piece. Name it, hold it. The self-aware version is more honest than the version that pretends it isn't there.

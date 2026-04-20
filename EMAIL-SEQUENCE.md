@@ -97,6 +97,25 @@ Matt
 
 ---
 
+## Source Tracking (April 2026)
+
+Every new SL subscriber triggers a notification email to matt@headleyweb.com with the source in the subject line.
+
+**Subject format:** `New subscriber: {email} (source: {source})`
+
+**Why:** Resend's free plan has no custom contact attributes — there's no way to tag a contact with where they came from. Notification email is the workaround: Matt gets a copy per subscriber, source visible at a glance.
+
+**Sources tracked:**
+| Source value | Where it fires |
+|---|---|
+| `homepage` | Section SubscribeCTA on the homepage |
+| `footer` | Inline SubscribeCTA in the footer |
+| `comment` | Inline subscribe nudge after comment submit |
+
+**Code:** `source` prop on `SubscribeCTA` and `Comments.tsx` → passed to `/api/subscribe` body → included in notification email. Defaults to `"footer"` (inline) or `"homepage"` (section) if prop is omitted.
+
+---
+
 ## Decisions & Rationale (April 2026)
 
 - **One list, not two** — no segmentation by entry point (profile vs. journal). Small list, not worth the overhead. Revisit at 500+.

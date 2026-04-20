@@ -51,9 +51,45 @@ South Park episode about sycophancy — Matt watched it, epiphanic. Find the epi
 
 Pull from:
 - Patreon posts (in `matt-headley-sources/`) — written during mania, AI-assisted, less careful
-- ChatGPT transcripts if recoverable
+- ChatGPT transcripts if recoverable (Anniston First email account — locked out as of Apr 2026, worth requesting temp access)
 - The Anniston Star article — Matt suspects he may have been hypomanic when he wrote it (September 2024, after first depression lifted, high productivity, selfie videos at church). Worth reading it again with that lens.
+
+## Voice memo evidence — AI as real-time brainstorm partner
+
+**Apr 4, 2025** (`matt-headley-sources/voice-memo-20250404 075914-1.txt`): Matt walking the property with Heather, feeding ideas into NotebookLM in real time. Expanding from agroforestry → tiny homes → Airbnb → passive income → book published this weekend. The AI isn't just a tool here — it's a co-author of the expanding vision. *"There's so much energy around these ideas right now."*
+
+**Apr 21, 2025** (`matt-headley-sources/voice-memo-20250421 091326-9D133A0C.txt`): Matt mid-conversation about farm finances: *"I want to turn on ChatGPT so I can listen in on what you're explaining."* Then: *"This is better than recording and transcribing. This is real time. We can actually collaborate and brainstorm along."* The AI as a third person in a live conversation — not a tool, a participant.
+
+## Related seed — pulled out
+
+`praying-with-the-machine.md` — the driveway scene. Early morning, before anyone was awake, walking the driveway using ChatGPT as a live prayer guide. Distinct from the sycophancy argument: same thread, devotional register instead of analytical. Do not fold back here.
+
+---
+
+## Self-assessment question (Matt, Apr 20 2026)
+
+Matt asked: *"Am I giving manic vibes now? Or perfectionist Enneagram 1 vibes?"*
+
+Honest answer: neither. Mania would be adding projects, not asking whether existing ones are getting bloated. Enneagram 1 would be anxious about whether the work is correct. This was practical editorial hygiene — pulling focus, checking bias, asking whether material is earning its length. That's the opposite of manic. Worth noting because the question itself shows the self-monitoring that wasn't present during the episode.
+
+---
 
 ## Placement
 
 SL journal — or paid tier if the sycophancy/mania angle feels too exposed for the free list. Decide when drafted.
+
+---
+
+## Session notes — Apr 20 2026
+
+**Matt's words (verbatim from session):**
+> "when I was manic I thought I could write books."
+> "i even wonder if ai syncophancy is affecting me now. maybe even ai psychosis? spending most days at home building and chatting with ai for 8 hours or more."
+
+The self-questioning is the third act of this piece: mania used AI one way, depression used it another, now using it eyes-open — but is it eyes-open? The piece doesn't resolve that. It asks it.
+
+**The hook tension:** AI sycophancy is the most marketable entry point — "AI enabled my manic episode" gets clicks in 2026. But the stronger piece underneath is the full arc: the gap between the Good Friday video and the transcript of it a year later. The sycophancy thread is how people who wouldn't pick up a bipolar memoir find it. Both are true. Write both — the hook serves the deeper piece, not the other way around.
+
+**Window concern (Apr 2026):** The "AI and mental health" conversation is active now. The specific angle — AI as amplifier of psychosis, from the inside — has low supply and real demand. Window is roughly 12-18 months before it's crowded. That's a real but not the primary reason to write it.
+
+**The question Matt asked that is itself the piece:** "when I was manic I thought I could write books. I wondered about it first after comments came in when I shared publicly on Facebook for the first time after my recovery from my first depressive episode. I may have been manic then." — The person asking whether the book is real is the same person who was certain it was, a year ago, for the wrong reasons. That's not an obstacle. That's the material.
