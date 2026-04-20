@@ -24,6 +24,8 @@ export default function Comments({ slug }: { slug: string }) {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
+  const [notifyReplies, setNotifyReplies] = useState(false);
+
   // Post-submit subscribe prompt
   const [subscribeEmail, setSubscribeEmail] = useState("");
   const [subscribeStatus, setSubscribeStatus] = useState<"idle" | "sending" | "done">("idle");
