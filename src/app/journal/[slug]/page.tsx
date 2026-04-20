@@ -253,6 +253,9 @@ export default async function JournalPostPage({ params }: { params: Params }) {
                 className="w-full rounded-lg object-cover"
                 priority
               />
+              {frontmatter.imageCaption && (
+                <p className="mt-2 text-xs text-center italic text-ll-text-light">{frontmatter.imageCaption}</p>
+              )}
             </div>
           )}
           <MDXRemote source={content} components={mdxComponents} />
