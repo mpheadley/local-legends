@@ -204,6 +204,10 @@ Searching for the word for what Matt is doing by writing publicly.
 
 *Note: The instinct to archive predates the vocation. Fifteen years of daily private writing aimed at an eventual public — not performance, not therapy, a long preparation. The hospital notebook wasn't a new instinct. It was the same one. The Lowry Loop, the anger, the craft — all of it sits on top of fifteen years of daily journaling that was always pointed outward, even when no one was reading.*
 
+Before publishing the hospital piece: "I'm a little embarrassed to publish this." Then published anyway. Heather read it and said: "I love it and I hate it at the same time." Asked to say more: "It's good writing, but it feels hard to think about." That's the bar.
+
+On the same day the piece was finished, UAB called — a psychiatrist asking if Matt would participate in a study on bipolar patients who'd been in the psych center. The study required current depression and a mood stabilizer that wasn't working. Matt said he was no longer depressed. She said she was glad, but he wouldn't qualify. He noted the timing: finishing the piece, getting this call on the same day. The hospital follows him even as he's closing the chapter on it.
+
 Before publishing the hospital piece: "I'm a little embarrassed to publish this." Then published anyway. That's the tension this piece is about — not resolved, held. The embarrassment doesn't go away. You ship it because the embarrassment means you told the truth, not because you've made peace with being seen.
 
 As an Enneagram 1, I've historically preferred things to be black and white, resolved. I'm enjoying and leaning into holding the tension these days, with the help of the voice guide and the guides in it. I liked sermons to be resolved too, for a long time. Then I started leaning harder into questions later in my career. Maybe I'm continuing that evolution.
