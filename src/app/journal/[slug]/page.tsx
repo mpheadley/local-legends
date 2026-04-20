@@ -283,10 +283,10 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             <p className="text-xs uppercase tracking-widest text-ll-text-light mb-4">
               If this landed
             </p>
-            {(frontmatter.merchImage ?? "https://cdn.fourthwall.com/customizations/sh_e4ddeafb-55a9-49a3-88e1-bd120d2b7129/2ee82aed-3b0f-452b-9f71-3055f10c28ce.webp") && (
+            {(frontmatter.merchImage ?? "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync") && (
               <div className="mb-5">
                 <Image
-                  src={frontmatter.merchImage ?? "https://cdn.fourthwall.com/customizations/sh_e4ddeafb-55a9-49a3-88e1-bd120d2b7129/2ee82aed-3b0f-452b-9f71-3055f10c28ce.webp"}
+                  src={frontmatter.merchImage ?? "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync"}
                   alt="Merch"
                   width={200}
                   height={200}
