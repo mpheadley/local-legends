@@ -16,4 +16,6 @@ It was a relief to get away from the farm.
 - "It was a relief to get away from the farm" — that line holds a lot. The farm was already a weight by then.
 - The surgery was at the Center for Endometriosis Care (Atlanta)
 - Matt was diagnosed bipolar just before the surgery — he was carrying that news while being Heather's support in Atlanta
-- What was that time like? Not written yet. This is the piece that goes there.
+- **Estefania thread:** Estefania had been diagnosed bipolar the same year as Matt. Her diagnosis resonated with her immediately — his didn't. She sent him a dozen+ podcasts including TalkBD (Bipolar Disorder podcast). Matt listened to many of them while Heather was in surgery in Atlanta. Estefania was the on-ramp to understanding what the diagnosis meant — and he was processing it alone in a waiting room while Heather was in the OR.
+- Also: Matt read the AI sycophancy article in that same waiting room (Center for Endometriosis Care). Two reckonings in the same building.
+- What was that two weeks like? Not written yet. This is the piece that goes there.

@@ -102,6 +102,8 @@ Every business in that ecosystem already knows Matt Headley built it. When they 
 
 **Short-term:** Message the 4 paying Patreon supporters personally. Thank them, apologize for the silence, invite them to follow the SL essays page. They cancel Patreon, subscribe via Resend.
 
+**Current Resend subscriber list (as of April 16, 2026):** 4 contacts — Matt (mpheadley@gmail.com), Sherill (pastorsherill@gmail.com), Becky (bholli7201@aol.com), Marjorie (tannermarj@yahoo.com). Raw CSV at `~/Downloads/contacts-1776600502376.csv`.
+
 ### Patreon Content Plan
 
 Write these in order — they build on each other:

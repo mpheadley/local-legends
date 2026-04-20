@@ -18,6 +18,24 @@ Some people from the church probably prefer Matt had disappeared or stayed that 
 
 *"i feel like some people would prefer i have disappeared or stay that way"* — save this line. It belongs somewhere.
 
+## Publishing Sequence (decided April 19 2026)
+
+**1. `the-hospital.md` → MDX → publish** — before publishing: Heather reads it first (she buried these things, she should see it before it's live). Kyle gets a courtesy heads-up — he showed up the day of UAB, named positively, but deserves to know. Jack and Sam are named — confirm whether they appear in ways that identify them or put them in a vulnerable light (no-kids-faces rule applies).
+**2. `no-shade-easter.md` → share with Lucy and Andy first (both are in it) → then MDX → publish**
+**3. `reading-my-manic-writing.md` → write → publish**
+**4. `gold-star-draft-notes.md` → write → publish**
+**5. ... more arc pieces ...**
+**6. `preaching-to-writing.md` → write → publish (distance piece, earns its weight later)**
+
+**Rationale:**
+- Hospital first — audience reentry. GoFundMe donors and CaringBridge followers went silent with Matt. They need to know he's okay before anything else. Lead with survival.
+- Easter second — the payoff. Hospital is the setup; Easter is the landing. The whole arc in one image.
+- Reading-my-manic-writing before gold-star — reader sees the archive first (mania in the record), then gold star lands harder because they understand what they're looking at.
+- Gold star third — not first. If gold star is the first thing readers see after the silence, it ends before the crash and they don't yet know he made it. Published third, after survival is established, it becomes a flashback — now you can show them how close it was.
+- Preaching-to-writing held until piece 8 or 9 — it's the distance piece, the reflection on what all of it made him. Needs the arc underneath it before it earns its weight.
+
+---
+
 **Up next — no set order, write what's ready:**
 
 **Planned: Headley Flower Farm journal entry** (`headley-flower-farm.md`)
@@ -90,3 +108,4 @@ The silence itself is part of the story. "I haven't texted or called anyone, exc
 - `justin-texts-april-august-2025.md` — text thread with Justin, April–August 2025. Mania through depression arc in real time.
 - `tammy-jackson-texts-nov-2025.md` — texts with Tammy after hospitalization. Handle carefully (see `manic-episode.md` naming note).
 - `20260415 134931-1E6A79C4.txt` / `20260415 141246-B6B256A4.txt` — voice memo transcripts, April 15 2026.
+- **weaverfirstumc@gmail.com Google Takeout** — request via takeout.google.com. Prioritize YouTube: likely contains sermon recordings from First Weaver UMC. Also check Drive, Gmail for ministry documents, correspondence. Source for `preaching-to-writing.md`, `ministry-grief.md`, and the planned old-sermons audio component. CRM task #459 tracking this.
