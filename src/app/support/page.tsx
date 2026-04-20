@@ -59,18 +59,18 @@ export default function SupportPage() {
       <section className="bg-ll-light">
         <div className="mx-auto max-w-3xl px-6 py-12 md:py-16 prose-profile">
           <p>
-            Southern Legends is free.
+            Southern Legends is free. There&apos;s real time in it — interviews, edits, drives across the county to sit with someone and get the story right.
           </p>
 
           <p>
-            There&apos;s real time in this. If you&apos;ve read something here that meant something, this is a way to say so. A story that sounded like someone you know. A place you&apos;ve driven past a hundred times without stopping.
+            If something here has landed, here&apos;s one way to carry it with you.
           </p>
 
           {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
             <div className="not-prose mt-10">
               <p className="text-sm font-medium text-ll-dark mb-1">Wear it.</p>
               <p className="text-sm text-ll-text-light mb-6">
-                Three shirts. Proceeds support the writing.
+                Comfort Colors tees. Three designs. Each one means something.
               </p>
               <div className="flex gap-4 justify-center flex-wrap mb-6">
                 <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
@@ -119,28 +119,28 @@ export default function SupportPage() {
 
           <hr className="my-10 border-ll-dark/10" />
 
+          <p className="mb-6">
+            Rather give directly? A monthly contribution keeps the work going. Cancel any time.
+          </p>
+
           <div className="not-prose">
             <StripePricingTable />
           </div>
 
-          <hr className="my-10 border-ll-dark/10" />
-
-          <p className="text-sm font-medium text-ll-dark">Prefer a one-time gift?</p>
-
-          <div className="not-prose mt-4">
+          <div className="not-prose mt-8">
             {process.env.NEXT_PUBLIC_STRIPE_SUPPORT_URL && (
-              <a
-                href={process.env.NEXT_PUBLIC_STRIPE_SUPPORT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-support inline-block px-7 py-3 bg-ll-primary font-bold text-sm rounded-md hover:bg-ll-primary-dark"
-              >
-                Give a one-time gift →
-              </a>
+              <>
+                <p className="text-sm text-ll-text-light mb-3">Or a one-time gift — no account needed.</p>
+                <a
+                  href={process.env.NEXT_PUBLIC_STRIPE_SUPPORT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-support inline-block px-7 py-3 bg-ll-primary font-bold text-sm rounded-md hover:bg-ll-primary-dark"
+                >
+                  Give a one-time gift →
+                </a>
+              </>
             )}
-            <p className="text-sm text-ll-text-light mt-4">
-              No account needed. Processed securely by Stripe.
-            </p>
           </div>
 
           <hr className="my-10 border-ll-dark/10" />
