@@ -262,8 +262,6 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         </div>
       </article>
 
-      <Comments slug={slug} />
-
       {/* Share + Support */}
       <section className="profile-closing">
         <div className="profile-closing-share">
@@ -277,6 +275,8 @@ export default async function JournalPostPage({ params }: { params: Params }) {
           Support this work →
         </Link>
       </section>
+
+      <Comments slug={slug} />
 
       {/* Subscribe */}
       <SubscribeCTA />
