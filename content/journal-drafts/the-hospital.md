@@ -91,6 +91,8 @@ my counseling sessions with sam the woman with the muslim — what's it called? 
 
 ## Notes
 
+- **Heather's response on reading the finished piece (April 20 2026):** "I love it and I hate it at the same time." Asked to say more: "It's good writing, but it feels hard to think about."
+- **UAB call (April 20 2026, same day piece was finished):** A UAB psychiatrist called asking if Matt would participate in a study on bipolar patients who'd been in the psych center. Study was focused on people currently depressed whose mood stabilizer wasn't working. Matt said he was no longer depressed — she said she was glad, but he wouldn't qualify. He noted the timing: finishing the piece, getting this call on the same day.
 - Kyle's "vacation with grippy socks" sermon — the thing that made Matt willing to go. May be its own entry or woven into this one. See also: `kyles-grippy-socks.md`, `jason-and-kyle.md`
 - The refusal, then asking to go back the next day — that turn is the emotional center of this piece
 - **DATES CORRECTED:** Admitted Oct 25, discharged Nov 4 — 10 days, not 3 weeks. Matt told Kyle 3 weeks at coffee. Heather thought 3 weeks. Neither right. Notebook says 10 days. Gap between memory and record is itself a detail.
@@ -99,6 +101,7 @@ my counseling sessions with sam the woman with the muslim — what's it called? 
 - **Sam:** real name. Muslim counselor (hijab). Most helpful sessions. Her insight: the move was triggering Matt's history with his dad — having to move as a kid because of his dad's choices, and now the same thing happening to his own family despite everything he'd done to avoid it.
 - **"choices my Dad made" — do not cut.** The line is vague to all readers except his dad. The backstory: court martial, dishonorable discharge, loss of Marine retirement — a dark chapter, never discussed between them. Matt and his dad have not talked about it and likely won't. The line earns its place as Sam's clinical explanation; without it, her scene loses weight. Decision April 20 2026: leave it in, no pre-publish conversation with dad required. Strangers won't know what it refers to.
 - **Dr. Bhatia:** the resident psychiatrist who criticized Matt's doctor's cycling-through-meds approach. Named in the physical journal.
+- **Michelle:** the rude tech — "Sit up so I can take your temperature." Real name confirmed April 20 2026. Left anonymous in the piece ("I can't remember her name") intentionally.
 - **The children:** Hannah, Noah, Sage, Soren — listed by name in the journal on Halloween. Keep verbatim.
 - **The notary visits:** Heather came 3 times. Once to see him. Once for house closure papers — he signed away the house from inside the psych ward. Third time because staff notary wasn't there, had to hire mobile notary.
 - **Missed:** Halloween on Glenwood Terrace (annual tradition). The house sale. Both happened while he was inside.
