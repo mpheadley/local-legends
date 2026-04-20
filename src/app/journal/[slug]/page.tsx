@@ -300,7 +300,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
               rel="noopener noreferrer"
               className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
             >
-              Shop →
+              The store →
             </a>
           </div>
         </section>
