@@ -45,6 +45,7 @@ export async function POST(request: NextRequest) {
       name: name.trim(),
       email: email?.trim() || null,
       message: message.trim(),
+      approved: true,
       notify_replies: notifyReplies && !!email?.trim(),
     })
     .select("id")
