@@ -102,7 +102,7 @@ export default function Comments({ slug }: { slug: string }) {
 
         {status === "success" ? (
           <div className="comment-thanks">
-            <p>Thank you. Your response will appear after review.</p>
+            <p>Thank you. Your response will appear shortly.</p>
 
             {/* Inline subscribe prompt */}
             {subscribeStatus === "done" ? (
