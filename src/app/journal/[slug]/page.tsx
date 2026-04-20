@@ -295,7 +295,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
               </div>
             )}
             <a
-              href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}
+              href={frontmatter.merchUrl ?? process.env.NEXT_PUBLIC_MERCH_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
