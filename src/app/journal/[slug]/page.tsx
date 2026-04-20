@@ -276,6 +276,36 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         </Link>
       </section>
 
+      {/* Merch — only renders when NEXT_PUBLIC_MERCH_STORE_URL is set */}
+      {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
+        <section className="bg-ll-warm py-12 border-t border-ll-border text-center">
+          <div className="max-w-xs mx-auto px-6">
+            <p className="text-xs uppercase tracking-widest text-ll-text-light mb-4">
+              If this landed
+            </p>
+            {(frontmatter.merchImage ?? "https://cdn.fourthwall.com/customizations/sh_e4ddeafb-55a9-49a3-88e1-bd120d2b7129/2ee82aed-3b0f-452b-9f71-3055f10c28ce.webp") && (
+              <div className="mb-5">
+                <Image
+                  src={frontmatter.merchImage ?? "https://cdn.fourthwall.com/customizations/sh_e4ddeafb-55a9-49a3-88e1-bd120d2b7129/2ee82aed-3b0f-452b-9f71-3055f10c28ce.webp"}
+                  alt="Merch"
+                  width={200}
+                  height={200}
+                  className="mx-auto rounded"
+                />
+              </div>
+            )}
+            <a
+              href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+            >
+              Shop →
+            </a>
+          </div>
+        </section>
+      )}
+
       <Comments slug={slug} />
 
       {/* Subscribe */}
