@@ -15,6 +15,7 @@ export interface JournalFrontmatter {
   imageAlt?: string;
   imageCaption?: string;
   featured?: boolean;
+  merchImage?: string;
   originalPublication?: {
     name: string;
     url: string;
