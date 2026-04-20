@@ -178,6 +178,42 @@ export default function AboutPage() {
 
           <hr className="my-10 border-ll-dark/10" />
 
+          {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
+            <div className="not-prose text-center my-10">
+              <p
+                className="text-xs uppercase tracking-widest text-ll-dark mb-1"
+                style={{ opacity: 0.32, letterSpacing: "0.22em" }}
+              >
+                Walt Whitman
+              </p>
+              <p
+                className="text-3xl text-ll-dark leading-snug mb-4"
+                style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300 }}
+              >
+                I contain<br />multitudes.
+              </p>
+              <div className="mb-5">
+                <Image
+                  src="https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync"
+                  alt="I Contain Multitudes tee"
+                  width={200}
+                  height={200}
+                  className="mx-auto rounded"
+                />
+              </div>
+              <a
+                href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+              >
+                The store →
+              </a>
+            </div>
+          )}
+
+          <hr className="my-10 border-ll-dark/10" />
+
           <p className="text-sm text-ll-text-light">
             Southern Legends is built and maintained by{" "}
             <a
