@@ -28,7 +28,7 @@ This folder contains research, source documents, and reference materials for the
 
 | File | Date | What It Is |
 |---|---|---|
-| `gold-star-draft-notes.md` | Apr 10, 2026 | Piece-in-progress notes. Arc, scene, the unfilled prescription. |
+| `../../journal-drafts/gold-star-draft-notes.md` | Apr 10, 2026 | Piece-in-progress notes. Arc, scene, the unfilled prescription. **Moved to journal-drafts/ — this is a draft piece, not a source artifact.** |
 | `gold-star-voice-transcript-april-19-2026.md` | Apr 19, 2026 | Matt's verbatim words from voice session on the gold star arc |
 | `march-19-tasks-notion.md` | Mar 19 | Day after the appointment. Exit interview, GoFundMe, Heather conversation guide — all same morning. |
 | `chatgpt-memory-export-march-19-2025.md` | Mar 19 | Four days after appointment. CSA partnerships, Toggl, VA delegation. Also: "Gold Star Realty" as floral client — same week. |
@@ -89,7 +89,7 @@ The completed profile exists in:
 ## How to Use
 
 - **Writing a piece?** Start with `timeline.md` for facts/dates.
-- **Gold star piece?** See `gold-star-draft-notes.md` and `gold-star-voice-transcript-april-19-2026.md`.
+- **Gold star piece?** See `../../journal-drafts/gold-star-draft-notes.md` (draft) and `gold-star-voice-transcript-april-19-2026.md` (source transcript, this folder).
 - **Manic episode arc?** Documents are ordered chronologically in the table above. Feb 6 camp-lee email → March 15 ChatGPT export → March 18 appointment → farm sale (Sept 2025).
 - **Direct quotes (Matt's voice)?** Patreon posts and `gold-star-voice-transcript-april-19-2026.md`.
 - **Writing rules:** Two-draft rule. Matt writes first draft. Never write openings, endings, or vulnerable passages. Preserve verbatim raw material.

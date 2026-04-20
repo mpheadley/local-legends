@@ -1,6 +1,6 @@
 # ChatGPT Memory Export — March 19, 2025
 *Source artifact — Notion export*
-*Cross-reference: `manic-episode.md`, `gold-star-draft-notes.md`*
+*Cross-reference: `manic-episode.md`, `../../journal-drafts/gold-star-draft-notes.md`*
 
 ---
 

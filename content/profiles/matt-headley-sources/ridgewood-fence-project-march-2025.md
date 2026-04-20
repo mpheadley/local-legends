@@ -1,6 +1,6 @@
 # Ridgewood Farm Fence Installation Project Plan
 *Source artifact — Notion, late March 2025*
-*Cross-reference: `manic-episode.md`, `gold-star-draft-notes.md`*
+*Cross-reference: `manic-episode.md`, `../../journal-drafts/gold-star-draft-notes.md`*
 
 ---
 

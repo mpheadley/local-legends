@@ -1,6 +1,6 @@
 # Headley Resignation and Transition at Anniston First UMC
 *Source artifact — Notion, ChatGPT-generated summary of events (manic-era account)*
-*Cross-reference: `tammy-sprc-letter-march-2025.md`, `march-19-tasks-notion.md`, `gold-star-draft-notes.md`, `manic-episode.md`*
+*Cross-reference: `tammy-sprc-letter-march-2025.md`, `march-19-tasks-notion.md`, `../../journal-drafts/gold-star-draft-notes.md`, `manic-episode.md`*
 
 ---
 

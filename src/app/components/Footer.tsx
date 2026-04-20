@@ -105,9 +105,14 @@ export default function Footer() {
               Headley Web &amp; SEO
             </a>
           </p>
-          <Link href="/privacy" className="hover:text-white/80 transition-colors">
-            Privacy Policy
-          </Link>
+          <div className="flex gap-6">
+            <Link href="/colophon" className="hover:text-white/80 transition-colors">
+              Colophon
+            </Link>
+            <Link href="/privacy" className="hover:text-white/80 transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 # Ventures with Preston — March 24, 2025
 *Source artifact — Notion voice-to-text, March 24 2025*
-*Cross-reference: `gold-star-draft-notes.md`, `manic-episode.md`*
+*Cross-reference: `../../journal-drafts/gold-star-draft-notes.md`, `manic-episode.md`*
 
 ---
 

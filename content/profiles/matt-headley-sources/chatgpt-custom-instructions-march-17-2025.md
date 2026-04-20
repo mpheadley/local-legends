@@ -1,6 +1,6 @@
 # ChatGPT Custom Instructions — March 17, 2025
 *Source artifact — Notion export, day before the Dr. Hadley appointment*
-*Cross-reference: `chatgpt-memory-export-march-15-2025.md`, `gold-star-draft-notes.md`, `chatgpt-and-mania.md`*
+*Cross-reference: `chatgpt-memory-export-march-15-2025.md`, `../../journal-drafts/gold-star-draft-notes.md`, `chatgpt-and-mania.md`*
 
 ---
 

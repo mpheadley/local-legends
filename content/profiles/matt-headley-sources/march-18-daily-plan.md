@@ -1,6 +1,6 @@
 # Daily Plan — Tuesday, March 18, 2025
 *Source artifact — Notion, day of the Dr. Hadley gold star visit*
-*Cross-reference: `gold-star-draft-notes.md`*
+*Cross-reference: `../../journal-drafts/gold-star-draft-notes.md`*
 
 ---
 

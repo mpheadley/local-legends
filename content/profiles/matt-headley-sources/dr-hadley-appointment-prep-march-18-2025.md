@@ -1,6 +1,6 @@
 # Dr. Hadley Appointment Prep — March 18, 2025
 *Source artifact — Notion export*
-*Cross-reference: `gold-star-draft-notes.md`*
+*Cross-reference: `../../journal-drafts/gold-star-draft-notes.md`*
 
 ---
 
