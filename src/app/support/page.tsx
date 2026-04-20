@@ -66,35 +66,9 @@ export default function SupportPage() {
             There&apos;s real time in this. If you&apos;ve read something here that meant something, this is a way to say so. A story that sounded like someone you know. A place you&apos;ve driven past a hundred times without stopping.
           </p>
 
-          <div className="not-prose mt-10">
-            <StripePricingTable />
-          </div>
-
-          <hr className="my-10 border-ll-dark/10" />
-
-          <p className="text-sm font-medium text-ll-dark">Prefer a one-time gift?</p>
-
-          <div className="not-prose mt-4">
-            {process.env.NEXT_PUBLIC_STRIPE_SUPPORT_URL && (
-              <a
-                href={process.env.NEXT_PUBLIC_STRIPE_SUPPORT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-support inline-block px-7 py-3 bg-ll-primary font-bold text-sm rounded-md hover:bg-ll-primary-dark"
-              >
-                Give a one-time gift →
-              </a>
-            )}
-            <p className="text-sm text-ll-text-light mt-4">
-              No account needed. Processed securely by Stripe.
-            </p>
-          </div>
-
-          <hr className="my-10 border-ll-dark/10" />
-
           {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
-            <div className="not-prose my-10">
-              <p className="text-sm font-medium text-ll-dark mb-1">Or wear it.</p>
+            <div className="not-prose mt-10">
+              <p className="text-sm font-medium text-ll-dark mb-1">Wear it.</p>
               <p className="text-sm text-ll-text-light mb-6">
                 Three shirts. Proceeds support the writing.
               </p>
@@ -142,6 +116,32 @@ export default function SupportPage() {
               </div>
             </div>
           )}
+
+          <hr className="my-10 border-ll-dark/10" />
+
+          <div className="not-prose">
+            <StripePricingTable />
+          </div>
+
+          <hr className="my-10 border-ll-dark/10" />
+
+          <p className="text-sm font-medium text-ll-dark">Prefer a one-time gift?</p>
+
+          <div className="not-prose mt-4">
+            {process.env.NEXT_PUBLIC_STRIPE_SUPPORT_URL && (
+              <a
+                href={process.env.NEXT_PUBLIC_STRIPE_SUPPORT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-support inline-block px-7 py-3 bg-ll-primary font-bold text-sm rounded-md hover:bg-ll-primary-dark"
+              >
+                Give a one-time gift →
+              </a>
+            )}
+            <p className="text-sm text-ll-text-light mt-4">
+              No account needed. Processed securely by Stripe.
+            </p>
+          </div>
 
           <hr className="my-10 border-ll-dark/10" />
 
