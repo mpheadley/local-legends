@@ -243,6 +243,18 @@ export default async function JournalPostPage({ params }: { params: Params }) {
       {/* Article */}
       <article className="bg-ll-light">
         <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 prose-journal">
+          {frontmatter.image && (
+            <div className="not-prose mb-10">
+              <Image
+                src={frontmatter.image}
+                alt={frontmatter.imageAlt ?? frontmatter.title}
+                width={900}
+                height={600}
+                className="w-full rounded-lg object-cover"
+                priority
+              />
+            </div>
+          )}
           <MDXRemote source={content} components={mdxComponents} />
         </div>
       </article>
