@@ -108,12 +108,16 @@ SL is the right home because the personal writing isn't separate from the editor
 
 MDX files in `content/letters/` (or `content/notes/` depending on name). Frontmatter: title, slug, date, excerpt, optional featuredMedia type.
 
-**Components needed:**
-- Audio player (sermons, podcast)
-- Video embed (YouTube, Vimeo)
-- Music embed (Spotify, SoundCloud, Bandcamp)
-- ArtCredit (image + attribution for other artists' work)
-- SongCard ("Today's Anthem" pattern)
+**MDX components — all built, registered in `src/app/journal/[slug]/page.tsx`:**
+- `AudioPlayer` — custom player with scrubber. Props: `src`, `title?`, `caption?`
+- `SermonCard` — AudioPlayer + "Preached at…" label above. Props: `src`, `title`, `preachedAt?`, `caption?`
+- `VideoEmbed` — YouTube (no-cookie) + Vimeo. IntersectionObserver lazy-load, 16:9 no-shift. Props: `url`, `caption?`
+- `MusicEmbed` — Spotify compact (152px) + Bandcamp (120px), auto-detected from URL. Props: `url`, `caption?`
+- `SongCard` — "Today's Anthem" link card, no iframe. Props: `title`, `artist`, `url`, `note?`
+- `PhotoStrip` — horizontal snap-scroll filmstrip for inline journal photos (lighter than `PhotoCarousel`). Props: `photos` (array of `{src, alt, caption?}`), `caption?`
+- `ArtCredit` — image + artist attribution line. Props: `src`, `alt`, `artist`, `artistUrl?`, `caption?`, `width?`, `height?`
+- `TimelineBlock` — vertical dot timeline for chronological essays. Props: `items` (array of `{date, label, detail?}`), `caption?`
+- `PullQuote`, `ArticleImage`, `FeaturedImage`, `InlineImage`, `Dateline` — existing prose components
 
 **Portfolio value:** Building clean multimedia handling in Next.js (lazy loading, no layout shift, proper aspect ratios) is a real Headley Web skill. Clients ask for this. SL is the live demo.
 
