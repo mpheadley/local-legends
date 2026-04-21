@@ -62,10 +62,10 @@ export default function JournalPage() {
         <section className="bg-ll-light border-b border-ll-border">
           <div className="mx-auto max-w-3xl px-6 pt-12 pb-10 md:pt-16 md:pb-12">
             <Link href={`/journal/${featured.slug}`} className="group block">
-              {featured.frontmatter.image && (
+              {(featured.frontmatter.cardImage ?? featured.frontmatter.image) && (
                 <div className="w-full aspect-[16/9] rounded-lg overflow-hidden mb-6">
                   <Image
-                    src={featured.frontmatter.image}
+                    src={featured.frontmatter.cardImage ?? featured.frontmatter.image}
                     alt={featured.frontmatter.imageAlt ?? featured.frontmatter.title}
                     width={900}
                     height={394}
@@ -100,10 +100,10 @@ export default function JournalPage() {
               {rest.map((post) => (
                 <li key={post.slug} className="border-b border-ll-border pb-10 last:border-0 last:pb-0">
                   <Link href={`/journal/${post.slug}`} className="group flex gap-6 items-start">
-                    {post.frontmatter.image && (
+                    {(post.frontmatter.cardImage ?? post.frontmatter.image) && (
                       <div className="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden">
                         <Image
-                          src={post.frontmatter.image}
+                          src={post.frontmatter.cardImage ?? post.frontmatter.image}
                           alt={post.frontmatter.imageAlt ?? post.frontmatter.title}
                           width={128}
                           height={128}
