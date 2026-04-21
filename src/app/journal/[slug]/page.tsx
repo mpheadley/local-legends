@@ -8,6 +8,8 @@ import { getAllProfiles } from "@/lib/profiles";
 import { siteConfig } from "@/lib/site-config";
 import ShareButtons from "@/app/components/ShareButtons";
 import PullQuote from "@/app/components/PullQuote";
+import ArticleImage from "@/app/components/ArticleImage";
+import AudioPlayer from "@/app/components/AudioPlayer";
 import Comments from "@/app/components/Comments";
 import JournalCard from "@/app/components/JournalCard";
 import ProfileCard from "@/app/components/ProfileCard";
@@ -110,6 +112,8 @@ const mdxComponents = {
   ),
   hr: () => <hr className="my-10 border-t border-ll-border" />,
   PullQuote,
+  ArticleImage,
+  AudioPlayer,
   FeaturedImage,
   InlineImage,
   Dateline,
