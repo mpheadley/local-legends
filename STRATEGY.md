@@ -283,6 +283,23 @@ These readers don't know you yet. They don't need to. The piece is the introduct
 
 ---
 
+### The Hospital + No Shade Launch Sequence (decided April 2026)
+
+**Publish both pieces on the site simultaneously** — cross-discoverability starts immediately. Anyone who arrives at The Hospital via Facebook, Google, the Star byline, or a shared link sees No Shade as the first card in "More from the Journal." The pieces are linked in both the body (No Shade links to The Hospital inline) and the cards (via `related` frontmatter).
+
+**Facebook posts are spaced one week apart** — that's where the "moments" happen, not the publish dates. Readers don't experience publish dates as events; your Facebook posts create the waves.
+
+- **Week 1:** Post The Hospital on Facebook. Its own wave, its own moment.
+- **Week 2:** Post No Shade on Facebook. Second wave, full acquisition moment.
+
+**Why not post them together:** Two separate Facebook posts = two separate moments of reach. Posting both at once collapses that into one. The Hospital is the heavier piece and earns its own space.
+
+**No Shade unlisted until Jason Wright consents:** The piece is live at the direct URL (for sharing with Jason and Lucy) but hidden from listings, homepage, and "More" cards until consent is confirmed. Remove `unlisted: true` from frontmatter when Jason gives the yes.
+
+**Organic cross-discoverability:** Anyone who finds The Hospital — via Facebook share, Google, Anniston Star byline, or direct link — lands on the page where No Shade is the first suggested piece. This works from the moment both are published, without any Facebook announcement needed.
+
+---
+
 ### What Not To Do
 
 - Don't necro the disappear post with a comment blast — reply personally first, one thread comment after
