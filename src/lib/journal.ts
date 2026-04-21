@@ -15,6 +15,7 @@ export interface JournalFrontmatter {
   imageAlt?: string;
   imageCaption?: string;
   featured?: boolean;
+  related?: string[];
   merchImage?: string;
   merchUrl?: string;
   originalPublication?: {
@@ -75,9 +76,14 @@ export function getAdjacentJournalPosts(slug: string): {
 }
 
 export function getOtherJournalPosts(slug: string, count = 2): JournalPost[] {
-  return getAllJournalPosts()
-    .filter((p) => p.slug !== slug)
-    .slice(0, count);
+  const current = getJournalPostBySlug(slug);
+  const related = current?.frontmatter.related ?? [];
+  const all = getAllJournalPosts().filter((p) => p.slug !== slug);
+  const relatedPosts = related
+    .map((r) => all.find((p) => p.slug === r))
+    .filter((p): p is JournalPost => p !== undefined);
+  const rest = all.filter((p) => !related.includes(p.slug));
+  return [...relatedPosts, ...rest].slice(0, count);
 }
 
 export function getAllJournalPosts(): JournalPost[] {
