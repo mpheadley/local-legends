@@ -89,10 +89,6 @@ export default function Footer() {
 
         <hr className="border-white/20 my-10" />
 
-        <SubscribeCTA variant="inline" />
-
-        <hr className="border-white/20 my-10" />
-
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.name}. Built by{" "}
