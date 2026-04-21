@@ -70,7 +70,7 @@ Matt Headley
 southernlegends.blog`;
 
     await resend.emails.send({
-      from: "Matt Headley <noreply@southernlegends.blog>",
+      from: "Matt Headley <noreply@headleyweb.com>",
       to: email,
       subject: "You're in",
       html: welcomeHtml,
