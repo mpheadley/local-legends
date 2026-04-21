@@ -21,6 +21,7 @@ I worked at Camp Lee for about two weeks hoping that I might be able to get a jo
 - The manic episode resignation, the harm it caused, the regret — already touched in "Holding on to Hope" but not fully
 - The Camp Lee chapter is interesting — trying to find a way back
 - The acceptance moment is the ending: that season was over
+- **"Manic Matt"** — people had been joking about it for months before the resignation. The nickname existed before the diagnosis. That detail belongs in this piece: others saw it before he did, named it informally, and he still didn't know. The gap between what the congregation saw and what Matt understood about himself is part of the grief — he wasn't just lost, he was visibly lost to everyone but himself.
 
 ---
 

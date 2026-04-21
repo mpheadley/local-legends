@@ -279,6 +279,16 @@ Matt's note: The February membership vows sermon may have been his last at AFUMC
 
 ---
 
+## Detail: "Manic Matt"
+
+People had been calling him "Manic Matt" for months before the resignation — informally, as a joke, before any diagnosis existed. The nickname preceded the clinical language. Others saw it and named it before he did.
+
+This belongs in the piece as part of the not-knowing: he was preaching about AI and trust while his congregation had already coined a name for what they were watching. The irony compounds — the pastor who named things for a living couldn't name what was happening to himself.
+
+**Possible use:** The gap between what the congregation saw and what Matt understood. The nickname as the moment the community named it before medicine did.
+
+---
+
 ## Physical archive detail (memory — April 2026)
 
 Matt's words (verbatim, April 2026):
