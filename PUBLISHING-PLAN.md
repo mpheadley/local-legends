@@ -30,6 +30,12 @@ For each piece of content, follow this order:
 
 ---
 
+## Facebook Timing Rule (decided April 21, 2026)
+
+Before sharing a piece on personal Facebook, give Donna 48 hours after her editorial meeting. If she says yes, the Star gets proximity — it shouldn't feel like it's been circulating publicly for a week. If she passes, share on Facebook that day.
+
+---
+
 ## Why This Order Works
 
 - You own the original publication and control the narrative.

@@ -38,13 +38,13 @@ The trail and the bathtub are the same impulse. Motion and stillness as containe
 
 ## Detail: The Gemini parking lot (contrast moment)
 
-Early March 2026, library parking lot, Pleasant Valley. Matt sat in the car and talked to Google Gemini to get the courage to walk into Cold Coffee. They agreed on a plan: sit there, read for an hour, say hello, don't perform, just exist.
+Early March 2026, library parking lot, Pleasant Valley. Matt sat in the car and talked to Google Gemini to get the courage to walk into Called Coffee. They agreed on a plan: sit there, read for an hour, say hello, don't perform, just exist.
 
 This is the direct contrast with the manic episode AI use — same format (voice/text chat with AI), opposite function. During the episode: AI amplified grandiosity, generated plans at 1am, had no friction. During recovery: AI provided grounding, helped him set a minimal achievable goal, helped him show up.
 
 **Why it belongs here:** The piece holds the tension of Matt still using AI while writing about AI psychosis. The Gemini parking lot moment is evidence that the relationship with AI changed — not abandoned, but recalibrated. He knew what it could and couldn't do by then.
 
-**Full detail in:** `content/journal-drafts/cold-coffee.md`. Verbatim transcript: `content/journal-drafts/cold-coffee-transcript.md`.
+**Full detail in:** `content/journal-drafts/called-coffee.md`. Verbatim transcript: `content/journal-drafts/called-coffee-transcript.md`.
 
 ---
 

@@ -206,6 +206,7 @@ export default async function OGImage({
           >
             {title}
           </div>
+
         </div>
       </div>
     ),

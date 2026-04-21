@@ -217,6 +217,38 @@ Honor your feelings, support them with evidence. The feeling first, then the sce
 
 ---
 
+## Humor
+
+Dry, incidental, never announced. The reader discovers it — you don't signal it.
+
+**Where it lives:**
+
+**Bathos.** Drop the mundane detail into the heavy moment. After the kids cry about leaving the church: "Took the kids to IHOP." No commentary. The IHOP does the work. The mundane is the joke and the grace at once.
+
+**Specificity doing double duty.** A precise detail can be both honest and funny. "Snacks, coffee, and handshakes with latecomers" — "snacks" first, before coffee, before the pastoral handshakes. The ordering is the joke. A former associate pastor slipping out for snacks. Never stated.
+
+**The short sentence after weight.** Timing is rhythm. "I thought I was fine. Better than fine. Better than ever." Three sentences, each one an escalation. The repetition is what makes it land. The structure does the comedy. Nothing is labeling it as dark irony.
+
+**The throughline payoff.** Purple pants at Easter. Jason's "I love those pants!" later. The callback earns the laugh because the detail was already there doing honest work.
+
+**What kills it:**
+
+- **Announcing it.** If you're signaling that something is funny, it isn't. "Snacks (yes, really)" is death. "Snacks" is alive.
+- **Too much.** Comedy calibrated wrong undercuts what comes after. No Shade's humor works because the communion scene has to land. Every laugh is borrowed from the ending.
+- **Setup-punchline structure.** That's standup. This is not standup. The laugh should surprise the reader, not arrive on schedule.
+
+**The test:** Did you notice you were being funny when you wrote it, or did you just write what happened and the funny is in the facts? If you noticed, cut it and find the version where you didn't notice.
+
+Matt's best comic lines in his own work:
+- "Took the kids to IHOP."
+- "Better than ever."
+- "Played on my phone during the sermon."
+- "Jason checked on me weekly. I was hiding."
+
+None of them are trying.
+
+---
+
 ## On Attention-Seeking
 
 All public writing seeks attention. The question is what you're doing with it once you have it. Witness and exhibitionist both need an audience. The difference is what they're asking the audience to see.
@@ -347,6 +379,23 @@ The homiletics text where Matt first encountered the inductive preaching princip
 
 **Eugene Lowry — *The Homiletical Plot***
 Lowry's "narrative loop" — begin with tension, delay resolution, let meaning accumulate. The structure underneath many of Matt's best journal pieces.
+
+### On Humor
+
+**E.B. White — "Some Remarks on Humor" (1941)**
+Preface to *A Subtreasury of American Humor*. The canonical American craft essay on the subject. White's argument: the comic writer must work with "great sincerity" — trying to be funny kills the humor. The frog dissection line is his: *"Humor can be dissected as a frog can, but the thing dies in the process and the innards are discouraging to any but the pure scientific mind."* The operating principle behind the "don't notice you're being funny" test.
+
+**Mark Twain — *Following the Equator* (1897)**
+"The secret source of humor itself is not joy but sorrow. There is no humor in heaven." Short, foundational. Explains why the comedy in pieces like No Shade works — the IHOP, the purple pants, the phone during the sermon are funny because they're downstream of real loss, not separate from it.
+
+**Del Close & Charna Halpern — *Truth in Comedy* (1994)**
+The improv textbook Stephen Colbert trained on at Second City. Central principle: comedy that tries to be funny fails; comedy that tells the truth gets laughs as a byproduct. The direct lineage for Colbert's instincts. Better to cite the source than the student.
+
+**Stephen Colbert — GQ profile, ca. 2015**
+Shortly after taking over The Late Show, Colbert was profiled in GQ and explained the improv principle that shaped his approach: when something goes wrong in a scene, you don't fight it — you embrace it and make it the scene. The bomb is the thing that wasn't supposed to happen. You love it anyway. White and Twain describe what humor does mechanically. Colbert names the disposition that makes it possible in the first place — a posture, not a technique. Matt preached from this principle. The farm failing, the resignation, the diagnosis — these are the bombs. The humor in the writing isn't despite them. It's because he loved them enough to look at them directly, and IHOP is what loving the bomb looks like in practice.
+
+**David Sedaris — *Me Talk Pretty One Day* and collected essays**
+Not a theorist but the clearest living exemplar of bathos in personal essay. Sedaris sustains the mundane-in-the-heavy as a craft practice across book-length work. Read him for the rhythm, not the subject matter.
 
 ### Exemplary Pieces (Bitter Southerner)
 

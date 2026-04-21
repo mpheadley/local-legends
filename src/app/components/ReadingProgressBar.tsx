@@ -23,8 +23,8 @@ export default function ReadingProgressBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 z-[60] h-[3px] bg-ll-primary"
-      style={{ width: `${progress}%`, transition: "width 80ms linear" }}
+      className="fixed top-0 left-0 z-[60] h-[4px] bg-ll-accent"
+      style={{ width: `${progress}%`, transition: "width 80ms linear", boxShadow: "0 0 6px rgba(202,138,4,0.7)" }}
       aria-hidden="true"
     />
   );

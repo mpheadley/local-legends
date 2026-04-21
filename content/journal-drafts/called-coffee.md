@@ -1,4 +1,4 @@
-# Cold Coffee
+# Called Coffee
 
 **Status:** Raw material — voice notes April 21, 2026. Matt's words, not yet drafted.
 **When to write:** After No Shade publishes. This is the connective tissue between the hospital and returning to public life.
@@ -17,7 +17,7 @@ The story of going back. After the farm failure, the manic episode, the public h
 
 > "I remember being so devastated that all this experience and expertise I'd developed over twenty years of ministry had just... landed with me painting someone's deck in Jacksonville."
 
-**The humiliation:** Not just the work — the geography. Cold Coffee is where he used to deliver flowers and mason jar arrangements from the farm for two years. That's Jared's place. You don't just show up and exist there; you show up where you used to be someone else.
+**The humiliation:** Not just the work — the geography. Called Coffee is where he used to deliver flowers and mason jar arrangements from the farm for two years. That's Jared's place. You don't just show up and exist there; you show up where you used to be someone else.
 
 **The gap (October 2025–March 2026):** Five months of mostly hiding. The hospital was October. What filled those months — the camper, the trailer on Littlejohn Road, Christmas — is in The Hospital piece. But the internal state: shame, fear that people would think he was being manic again if he reached out.
 
@@ -31,10 +31,10 @@ The story of going back. After the farm failure, the manic episode, the public h
 
 ## Key details
 
-- **Cold Coffee** — the coffee shop. Jared is the owner. River is second in command.
+- **Called Coffee** — the coffee shop. Jared is the owner. River is second in command.
 - **45 minutes from Pleasant Valley** — the drive itself is a commitment. Showing up isn't casual anymore.
 - **The Gemini conversation** — he needed AI encouragement just to walk in. That's the texture of that moment. (Note: contrast with the AI psychosis piece — here AI is grounding him, not amplifying him.)
-- **The library parking lot** — specific location. Not outside Cold Coffee, the library.
+- **The library parking lot** — specific location. Not outside Called Coffee, the library.
 - **River's smile** — the moment that mattered. No explanation required.
 - **Jared's wave** — confirmed on a later visit. The relationship survived the gap.
 - **Heather on Littlejohn Road** — she saw the gap. He couldn't.
@@ -57,7 +57,7 @@ The story of going back. After the farm failure, the manic episode, the public h
 
 ## What this piece is NOT
 
-- Not about Cold Coffee as a place
+- Not about Called Coffee as a place
 - Not about web design or SL outreach specifically
 - Not a recovery arc with a clean ending
 
@@ -68,6 +68,6 @@ It is: the specific texture of showing your face again after public collapse. Th
 ## Connections to other pieces
 
 - **The Hospital** — sets up the timeline; this is what came after
-- **No Shade** — Easter is the spiritual return; Cold Coffee is the social/professional return; same season, different arena
+- **No Shade** — Easter is the spiritual return; Called Coffee is the social/professional return; same season, different arena
 - **Ministry Grief** — the Preston month belongs there too; the 20-year expertise landing on a deck is that grief made physical
 - **AI Psychosis** — the Gemini parking lot detail connects; note the contrast (grounding vs. amplifying)
