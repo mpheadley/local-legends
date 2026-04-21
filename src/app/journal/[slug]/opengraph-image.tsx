@@ -55,10 +55,15 @@ export default async function OGImage({
 
   const { title, image } = post.frontmatter;
 
+  const resolvedImage = image || (() => {
+    const fallback = join(process.cwd(), "public", `images/journal/${slug}-hero.webp`);
+    try { readFileSync(fallback); return `/images/journal/${slug}-hero.webp`; } catch { return null; }
+  })();
+
   let heroSrc: string | null = null;
-  if (image) {
+  if (resolvedImage) {
     try {
-      const imagePath = join(process.cwd(), "public", image);
+      const imagePath = join(process.cwd(), "public", resolvedImage);
       const buffer = readFileSync(imagePath);
       const meta = await sharp(buffer).metadata();
       const srcW = meta.width || 1200;

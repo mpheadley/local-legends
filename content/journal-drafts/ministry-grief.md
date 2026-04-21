@@ -26,6 +26,52 @@ I worked at Camp Lee for about two weeks hoping that I might be able to get a jo
 
 ---
 
+## The associate pastor title (Anniston First)
+
+- The title was initially promised, then withheld. Had to wait for two other pastors to resign or leave before the opportunity was offered.
+- When offered, no pay increase. Had to advocate to the SPRC chair himself — Tammy (the pastor) wouldn't budge.
+- Eventually got both the title and the raise. But the fight to get what was promised is part of the grief — the career was real, the expertise was real, and even getting recognized for it required fighting.
+- **The timing irony:** Fought for years to become associate pastor. Finally got it. Resigned while manic. The title he earned landed him in the same sentence as the thing he lost. This is the grief behind the orienting line in No Shade — "Anniston First, where I used to be associate pastor" — the word *used to* carrying everything this section holds.
+
+---
+
+## Jacksonville First Methodist (ca. 2023)
+
+- Led worship there as part-time staff worship leader — small Sunday night service, once a week, for about 18 months. Around 2023.
+- Context: frustrated he couldn't get a raise or promotion to associate pastor at Anniston First. Going to Jacksonville was "kind of a jab and maybe opportunistic" — working both churches simultaneously.
+- "They were good to me."
+- Andy told him: "You're a talented musician and a great pastor." The congregation knew him as a worship leader. That's why Andy's naming him from the pulpit in No Shade carries extra weight — it wasn't random grace to a stranger. Andy knew exactly who he was calling forward.
+- **Seed:** The same gym where he led worship for 18 months is where he sat in the back row at Easter 2026, then walked to the communion table.
+
+---
+
+## Camp Lee (post-resignation, pre-hospital)
+
+Matt's words, verbatim: "I worked at Camp Lee for about two weeks hoping that I might be able to get a job at the church again somehow. I dropped that right before I went to the hospital."
+
+- Camp Lee is owned by Anniston First — the same church he resigned from. Working there was a way to stay proximate, to leave a door open.
+- He dropped it right before the hospitalization. The last attempt to find a way back, abandoned at the edge.
+- The Camp Lee chapter sits between Preston and the hospital — physical labor → proximity-seeking → collapse. That's the arc of the grief in its final stage before hospitalization.
+- **The irony:** The associate pastor title he fought for, the career he built over two decades, landed him painting decks and hoping the camp director might put in a word. The grief made administrative.
+
+---
+
+## The resignation morning (early Lent 2025)
+
+- Sat the kids down in the living room first. Then FaceTimed Jason Wright — he was teaching at Piedmont. He answered because Matt never called like that. Jason said: "I know you're doing this because you feel like you have to. I understand."
+- Then took them to IHOP — trying to celebrate, lift their spirits.
+- **On seeing Jason at Easter that year:** "I can kind of see Jason's discomfort in his smile in that picture. He was happy to see me there after weeks of absence, everyone was, it seemed to me. But it was awkward. Tammy side hugged me, which felt performative, and made me angry after I reacted and let her do it." — Matt's words, verbatim. He was relieved the resignation was done. Also angry about how it was playing out.
+- **Tammy** (church leadership) was rushing his exit. He had offered to help with the transition. She felt blindsided and moved to control the narrative.
+- That same day, a churchwide email went out. Matt hadn't responded quickly enough to her question about how he wanted the announcement handled. She drafted the statement for him — redacted his words about a graceful transition.
+- He had written about a graceful transition. She edited it out.
+- The gap between what he offered (help, continuity) and what he got (his words removed, his exit managed for him) is part of the grief — not just losing the job, but losing the ability to leave on his own terms.
+
+**Seed image:** IHOP booth, kids across from him, orange juice on the table. Relief and anger sharing the same body.
+
+**Connection to No Shade:** IHOP morning is one sentence in No Shade's resignation paragraph — the tender surface of that day. The Tammy details are the underside. They belong here, not there.
+
+---
+
 ## Artifact: Everyday Revival podcast (2019)
 
 21MB MP3 on Google Drive — "Podcast Everyday Revival" folder. File: `Everyday Revival - 10:5:19, 3.10 PM.mp3`
