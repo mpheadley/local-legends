@@ -34,6 +34,11 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
     audio.addEventListener("timeupdate", onTimeUpdate);
     audio.addEventListener("durationchange", onDurationChange);
     audio.addEventListener("ended", onEnded);
+
+    if (audio.duration && !isNaN(audio.duration)) {
+      durationRef.current = audio.duration;
+      setDuration(audio.duration);
+    }
     return () => {
       audio.removeEventListener("timeupdate", onTimeUpdate);
       audio.removeEventListener("durationchange", onDurationChange);
@@ -70,7 +75,15 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
 
   return (
     <figure className="not-prose my-8 bg-ll-warm border border-ll-border rounded-lg px-5 py-4">
-      <audio ref={audioRef} src={src} preload="metadata" />
+      <audio
+        ref={audioRef}
+        src={src}
+        preload="metadata"
+        onLoadedMetadata={(e) => {
+          durationRef.current = e.currentTarget.duration;
+          setDuration(e.currentTarget.duration);
+        }}
+      />
 
       <div className="flex items-center gap-4">
         <button
@@ -109,7 +122,7 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
               seekFromEvent(e.clientX);
             }}
           >
-            <div ref={scrubberRef} className="relative h-1.5 bg-ll-border rounded-full pointer-events-none">
+            <div ref={scrubberRef} className="relative h-2 rounded-full pointer-events-none" style={{ backgroundColor: "#999" }}>
               <div
                 className="absolute inset-y-0 left-0 bg-ll-primary rounded-full"
                 style={{ width: `${progress}%` }}
