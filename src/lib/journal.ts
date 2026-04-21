@@ -15,6 +15,7 @@ export interface JournalFrontmatter {
   imageAlt?: string;
   imageCaption?: string;
   featured?: boolean;
+  unlisted?: boolean;
   related?: string[];
   merchImage?: string;
   merchUrl?: string;
@@ -89,7 +90,7 @@ export function getOtherJournalPosts(slug: string, count = 2): JournalPost[] {
 export function getAllJournalPosts(): JournalPost[] {
   return getJournalSlugs()
     .map(getJournalPostBySlug)
-    .filter((p): p is JournalPost => p !== null && p.frontmatter.published)
+    .filter((p): p is JournalPost => p !== null && p.frontmatter.published && !p.frontmatter.unlisted)
     .sort(
       (a, b) =>
         new Date(b.frontmatter.date).getTime() -
