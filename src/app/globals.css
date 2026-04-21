@@ -418,7 +418,7 @@ mark {
 .profile-closing > * { position: relative; z-index: 1; }
 
 .subscribe-cta {
-  background: linear-gradient(to right, #2A4A36, #7A5203);
+  background: linear-gradient(to right, #1e3527, #5c3d02);
   position: relative;
   overflow: hidden;
 }
