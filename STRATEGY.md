@@ -17,6 +17,7 @@
 | [Building in Public](#building-in-public) | The concept underneath the site |
 | [Open Question](#open-question--what-is-southern-legends) | What SL actually is — TBD after writing |
 | [The Real Center](#the-real-center) | The story underneath everything |
+| [Audience Acquisition](#audience-acquisition) | Reclaiming existing audience, channels beyond personal FB |
 | [Syndication Strategy](#syndication-strategy) | SL → Anniston Star → Calhoun Journal order of operations |
 | [Target Businesses](#target-businesses) | Who to profile and why |
 | [Two-Track Outreach Strategy](#two-track-outreach-strategy-april-2026) | Premium (SL) vs. volume (drop-by) — opener toolkit by business type |
@@ -220,6 +221,74 @@ Everything connects to this:
 You spent your life being the one with the answers — from the pulpit, from the Anniston Star, from the self-care disciplines that were supposed to hold. The second depression took all of that away. The mania felt like recovery. The gold star felt like the end of the hard chapter. Neither was true.
 
 That's not a Southern Legends detail. That's the book. And the Patreon is where you write your way toward it.
+
+---
+
+## Audience Acquisition
+
+### The Honest Model
+
+Facebook friends engage because they know you. Acquisition beyond that circle requires the writing to do the work. The Hospital and No Shade are the two pieces most likely to travel. The disappear post couldn't have. These can.
+
+Individual posts will get fewer comments than the reappearance announcement — that was a relief-response, not a literary one. The goal shifts from splash to accumulation. Someone who reads The Hospital, then No Shade, then subscribes is worth more than ten comments on the announcement.
+
+The email list is where this transitions from "splash" to durable. Every subscriber is someone who doesn't require you to make noise on Facebook to reach them.
+
+---
+
+### Reclaiming the "Disappear" Post Audience
+
+The "I'm not going to disappear" Facebook post got significant engagement with no capture funnel in place — no subscribe, no support, no link. Here's how to reclaim it:
+
+**Step 1 — Reply individually to each commenter**
+Respond personally before posting anything new. Each reply leads with the person, not the link. Something like:
+> "[Name] — thanks for this, means a lot. I've been writing more of it over at Southern Legends if you want to follow along. The Hospital just went up."
+Warm. Not promotional. Link at the end, not the front. No subscribe ask in individual replies — that's a second ask on top of "come read this."
+
+**Step 2 — Drop a thread comment after individual replies**
+After replying to everyone, one comment at the bottom of the thread:
+> "Next chapter is up at southernlegends.blog/journal/the-hospital — if you want the next one in your inbox, there's a subscribe at the bottom of every piece."
+This is where the subscribe mention belongs. Not in individual replies.
+
+---
+
+### Making Each New Post an Acquisition Moment
+
+The site is now ready — subscribe is wired, support is live, shirts exist. Use it.
+
+**Facebook post structure for journal pieces:**
+- Open with the hook (not "I wrote a thing")
+- One paragraph of context
+- Link to the piece
+- Close with subscribe CTA: "Subscribe at the bottom of the piece if you want the next one."
+
+**Don't summarize the piece in the Facebook post.** Give them a reason to click, then let the piece do the work.
+
+---
+
+### Acquisition Channels Beyond Personal Facebook
+
+**Anniston Star (highest leverage)**
+The Hospital and No Shade are pitchable as personal essays — direct sequel to the 2024 depression piece Donna Barton published. Byline pointing to southernlegends.blog reaches readers outside existing Facebook circle entirely. This is the single highest-leverage acquisition move available. See [Anniston Star](#anniston-star) section.
+
+**Mental health communities**
+The Hospital and No Shade travel in bipolar/mental health spaces in a way profiles don't. Share as "I wrote about my hospitalization" — not self-promotion:
+- Facebook bipolar support groups
+- r/bipolar (Reddit)
+- NAMI community spaces
+These readers don't know you yet. They don't need to. The piece is the introduction.
+
+**Email list (retention, not acquisition — but the bridge)**
+4 subscribers haven't received anything yet. Sending The Hospital is the first step toward making the list real. Every piece that goes out builds the habit on both ends — you sending, them expecting.
+
+---
+
+### What Not To Do
+
+- Don't necro the disappear post with a comment blast — reply personally first, one thread comment after
+- Don't stack asks in individual replies (link + subscribe + support = too much)
+- Don't chase Facebook engagement as the primary metric — the list is what compounds
+- Don't hold pieces waiting for the "right moment" — the acquisition moment is the publish moment
 
 ---
 
