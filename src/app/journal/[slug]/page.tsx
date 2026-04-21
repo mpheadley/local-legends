@@ -10,6 +10,13 @@ import ShareButtons from "@/app/components/ShareButtons";
 import PullQuote from "@/app/components/PullQuote";
 import ArticleImage from "@/app/components/ArticleImage";
 import AudioPlayer from "@/app/components/AudioPlayer";
+import VideoEmbed from "@/app/components/VideoEmbed";
+import MusicEmbed from "@/app/components/MusicEmbed";
+import SongCard from "@/app/components/SongCard";
+import PhotoStrip from "@/app/components/PhotoStrip";
+import ArtCredit from "@/app/components/ArtCredit";
+import SermonCard from "@/app/components/SermonCard";
+import TimelineBlock from "@/app/components/TimelineBlock";
 import Comments from "@/app/components/Comments";
 import JournalCard from "@/app/components/JournalCard";
 import ProfileCard from "@/app/components/ProfileCard";
@@ -118,6 +125,13 @@ const mdxComponents = {
   PullQuote,
   ArticleImage,
   AudioPlayer,
+  VideoEmbed,
+  MusicEmbed,
+  SongCard,
+  PhotoStrip,
+  ArtCredit,
+  SermonCard,
+  TimelineBlock,
   FeaturedImage,
   InlineImage,
   Dateline,
@@ -284,8 +298,8 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         </Link>
       </section>
 
-      {/* Merch — only renders when NEXT_PUBLIC_MERCH_STORE_URL is set */}
-      {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
+      {/* Merch — renders when frontmatter.merchUrl is set, or NEXT_PUBLIC_MERCH_STORE_URL as fallback */}
+      {(frontmatter.merchUrl || process.env.NEXT_PUBLIC_MERCH_STORE_URL) && (
         <section className="bg-ll-warm py-12 border-t border-ll-border text-center">
           <div className="max-w-xs mx-auto px-6">
             <p className="text-xs uppercase tracking-widest text-ll-text-light mb-4">
