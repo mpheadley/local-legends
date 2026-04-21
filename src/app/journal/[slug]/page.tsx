@@ -110,7 +110,11 @@ const mdxComponents = {
   strong: (props: React.ComponentProps<"strong">) => (
     <strong className="font-bold text-ll-dark" {...props} />
   ),
-  hr: () => <hr className="my-10 border-t border-ll-border" />,
+  hr: () => (
+    <div className="my-10 text-center text-ll-accent tracking-[0.5em] select-none" aria-hidden="true">
+      · · ·
+    </div>
+  ),
   PullQuote,
   ArticleImage,
   AudioPlayer,
