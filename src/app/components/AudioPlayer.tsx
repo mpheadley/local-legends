@@ -39,20 +39,35 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
   function togglePlay() {
     const audio = audioRef.current;
     if (!audio) return;
-    if (playing) {
-      audio.pause();
-    } else {
+    if (audio.paused) {
       audio.play();
+      setPlaying(true);
+    } else {
+      audio.pause();
+      setPlaying(false);
     }
-    setPlaying(!playing);
+  }
+
+  function seekTo(clientX: number, el: HTMLDivElement) {
+    const audio = audioRef.current;
+    if (!audio || !duration) return;
+    const rect = el.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    audio.currentTime = ratio * duration;
   }
 
   function seek(e: React.MouseEvent<HTMLDivElement>) {
-    const audio = audioRef.current;
-    if (!audio || !duration) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const ratio = (e.clientX - rect.left) / rect.width;
-    audio.currentTime = ratio * duration;
+    seekTo(e.clientX, e.currentTarget);
+  }
+
+  function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    seekTo(e.clientX, e.currentTarget);
+  }
+
+  function onPointerMove(e: React.PointerEvent<HTMLDivElement>) {
+    if (e.buttons !== 1) return;
+    seekTo(e.clientX, e.currentTarget);
   }
 
   function fmt(s: number) {
@@ -93,13 +108,17 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
 
           {/* Scrubber */}
           <div
-            className="relative h-1.5 bg-ll-border rounded-full cursor-pointer"
+            className="relative py-2 cursor-pointer"
             onClick={seek}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
           >
+          <div className="relative h-1.5 bg-ll-border rounded-full pointer-events-none">
             <div
               className="absolute inset-y-0 left-0 bg-ll-primary rounded-full transition-[width] duration-100"
               style={{ width: `${progress}%` }}
             />
+          </div>
           </div>
 
           {/* Times */}
