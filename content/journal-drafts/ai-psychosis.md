@@ -44,7 +44,7 @@ This is the direct contrast with the manic episode AI use — same format (voice
 
 **Why it belongs here:** The piece holds the tension of Matt still using AI while writing about AI psychosis. The Gemini parking lot moment is evidence that the relationship with AI changed — not abandoned, but recalibrated. He knew what it could and couldn't do by then.
 
-**Full detail in:** `cold-coffee.md` and `cold-coffee-transcript.md`
+**Full detail in:** `content/journal-drafts/cold-coffee.md`. Verbatim transcript: `content/journal-drafts/cold-coffee-transcript.md`.
 
 ---
 
