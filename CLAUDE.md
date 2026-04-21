@@ -35,21 +35,30 @@ src/
     page.tsx            — homepage (hero, latest stories grid, about teaser)
     globals.css         — full design system + component styles
     about/page.tsx      — about page
+    search/
+      page.tsx          — search page (server: builds index, passes to client)
+      SearchClient.tsx  — client component: input, scoring, keyword highlight
     profiles/
-      page.tsx          — all stories listing
-      [slug]/page.tsx   — individual profile (MDX rendering)
-      feed.xml/route.ts — RSS feed
+      page.tsx          — all stories listing (tag filter via ?tag= search param)
+      [slug]/page.tsx   — individual profile (MDX rendering, progress bar, related stories)
+      feed.xml/route.ts — RSS feed (full-text content:encoded)
+    journal/
+      page.tsx          — journal listing
+      [slug]/page.tsx   — individual journal post
     components/
-      Nav.tsx           — site navigation
+      Nav.tsx           — site navigation (search icon links to /search)
       Footer.tsx        — site footer
       ProfileCard.tsx   — story card for grids
       PullQuote.tsx     — Rock Salt accent quotes
+      ReadingProgressBar.tsx — fixed top bar tracking scroll through <article>
       ScrollReveal.tsx  — IntersectionObserver scroll animations
       ShareButtons.tsx  — social sharing
       StoryNav.tsx      — prev/next story navigation
       SubscribeCTA.tsx  — email subscribe block
   lib/
     profiles.ts         — MDX content loader (reads content/profiles/*.mdx)
+    journal.ts          — MDX content loader (reads content/journal/*.mdx)
+    search.ts           — builds search index from profiles + journal (stripMdx util inside)
     site-config.ts      — site metadata, nav links
 content/
   profiles/             — MDX story files that ship (Matt + edited profiles only)
@@ -146,7 +155,7 @@ Decisions and why:
 - **No on-site replies** — reply privately via email or on Facebook. Public reply threads are a future feature, not now.
 
 ## Current Status
-- **Done:** Design system, layout, homepage, about page, profile detail page, profile listing, 7 published profiles (1 by Matt, 6 edited), 16 research docs in `content/research/`, RSS feed, scroll animations, share buttons, story navigation, subscribe CTA
+- **Done:** Design system, layout, homepage, about page, profile detail page, profile listing (with tag filtering), search page (`/search`), reading progress bar on profiles, related stories by tag on profiles, full-text RSS, 7 published profiles (1 by Matt, 6 edited), 16 research docs in `content/research/`, scroll animations, share buttons, story navigation, subscribe CTA
 - **Fonts loaded via `<link>` in layout.tsx** — Fraunces and Rock Salt are Google Fonts links, not `next/font`. Source Sans 3 uses `next/font/google`. Consider migrating Fraunces/Rock Salt to `next/font` for performance.
 
 ## OG Images
