@@ -8,7 +8,7 @@ Two recordings. Same song. Different contexts.
 
 **File:** `public/audio/journal/walk-in-the-light-bedtime.mp3` (trimmed to 0:36 start)
 **Source WAV:** `Walk_in_the_light.wav` (87 seconds full)
-**Recorded:** ca. 2018
+**Recorded:** October 4, 2019 (confirmed via Google Drive file metadata)
 **Speakers:** 3 (Matt, a child doing the antiphon, another voice for Amen — possibly Heather)
 
 ### Full version transcript (87 seconds):
@@ -69,4 +69,6 @@ Starts at 0:36 — "Come here, Sage. Come here, funny girl." → silence → sin
 
 "Walk in the Light" (Charles Wesley / traditional Methodist). The bedtime version uses "Jesus, the light of the **world**." The solo uses "Jesus, the light of my **life**." Whether that's a different verse or a memory variant is unclear — both are in the tradition.
 
-The song connects: ministry years (Everyday Revival podcast, 2019) → bedtime ritual through the worst of it (hospital, farm loss) → still singing it now (No Shade). It's the through-line.
+The song connects: ministry years (Everyday Revival podcast, Oct 5, 2019) → bedtime recording (Oct 4, 2019 — one day earlier, same week) → ritual through the worst of it (hospital, farm loss) → still singing it now (No Shade). It's the through-line.
+
+Note: The bedtime recording and the Everyday Revival podcast were made the same week. The song was already the household liturgy before it became the podcast theme.
