@@ -78,6 +78,18 @@ export default function Nav() {
             {supportLink.label}
           </Link>
 
+          {/* Search icon — right side */}
+          <Link
+            href="/search"
+            className="hidden md:flex text-white/50 hover:text-white transition-colors"
+            aria-label="Search"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </Link>
+
           {/* RSS icon — right side */}
           <a
             href="/profiles/feed.xml"
@@ -161,6 +173,18 @@ export default function Nav() {
               </Link>
             );
           })}
+          <Link
+            href="/search"
+            className="text-2xl font-semibold text-white hover:text-ll-accent transition-colors flex items-center gap-2"
+            style={{ fontFamily: "var(--font-heading)" }}
+            onClick={() => setMobileOpen(false)}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Search
+          </Link>
           <Link
             href={supportLink.href}
             className="px-6 py-2 bg-ll-primary text-white text-xl font-semibold rounded hover:bg-ll-primary-dark transition-colors"
