@@ -66,8 +66,7 @@ export default function SupportPage() {
             If something here has landed, here&apos;s one way to carry it with you.
           </p>
 
-          {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
-            <div className="not-prose mt-10">
+          <div className="not-prose mt-10">
               <p className="text-sm font-medium text-ll-dark mb-1">Wear it.</p>
               <p className="text-sm text-ll-text-light mb-6">
                 Comfort Colors tees. Three designs. Each one means something.
@@ -106,7 +105,7 @@ export default function SupportPage() {
               </div>
               <div className="text-center">
                 <a
-                  href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}
+                  href="https://matt-headley-shop.fourthwall.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
@@ -114,8 +113,7 @@ export default function SupportPage() {
                   The store →
                 </a>
               </div>
-            </div>
-          )}
+          </div>
 
           <hr className="my-10 border-ll-dark/10" />
 
