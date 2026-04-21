@@ -59,7 +59,7 @@ export default function SupportPage() {
       <section className="bg-ll-light">
         <div className="mx-auto max-w-3xl px-6 py-12 md:py-16 prose-profile">
           <p>
-            Southern Legends is free. There&apos;s real time in it — interviews, edits, drives across the county to sit with someone and get the story right.
+            Southern Legends is free — the profiles, the journal, all of it. Stories from Northeast Alabama, and from inside one life in it.
           </p>
 
           <p>
@@ -67,10 +67,6 @@ export default function SupportPage() {
           </p>
 
           <div className="not-prose mt-10">
-              <p className="text-sm font-medium text-ll-dark mb-1">Wear it.</p>
-              <p className="text-sm text-ll-text-light mb-6">
-                Comfort Colors tees. Three designs. Each one means something.
-              </p>
               <div className="flex gap-4 justify-center flex-wrap mb-6">
                 <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
                   <Image
