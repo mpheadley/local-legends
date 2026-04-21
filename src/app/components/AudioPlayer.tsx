@@ -10,10 +10,12 @@ interface AudioPlayerProps {
 
 export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const scrubberRef = useRef<HTMLDivElement>(null);
+  const durationRef = useRef(0);
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -21,9 +23,12 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
 
     const onTimeUpdate = () => {
       setCurrentTime(audio.currentTime);
-      setProgress(duration > 0 ? (audio.currentTime / duration) * 100 : 0);
+      setProgress(durationRef.current > 0 ? (audio.currentTime / durationRef.current) * 100 : 0);
     };
-    const onDurationChange = () => setDuration(audio.duration);
+    const onDurationChange = () => {
+      durationRef.current = audio.duration;
+      setDuration(audio.duration);
+    };
     const onEnded = () => setPlaying(false);
 
     audio.addEventListener("timeupdate", onTimeUpdate);
@@ -34,7 +39,16 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
       audio.removeEventListener("durationchange", onDurationChange);
       audio.removeEventListener("ended", onEnded);
     };
-  }, [duration]);
+  }, []);
+
+  function seekFromEvent(clientX: number) {
+    const audio = audioRef.current;
+    const scrubber = scrubberRef.current;
+    if (!audio || !scrubber || !durationRef.current) return;
+    const rect = scrubber.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    audio.currentTime = ratio * durationRef.current;
+  }
 
   function togglePlay() {
     const audio = audioRef.current;
@@ -48,28 +62,6 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
     }
   }
 
-  function seekTo(clientX: number, el: HTMLDivElement) {
-    const audio = audioRef.current;
-    if (!audio || !duration) return;
-    const rect = el.getBoundingClientRect();
-    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
-    audio.currentTime = ratio * duration;
-  }
-
-  function seek(e: React.MouseEvent<HTMLDivElement>) {
-    seekTo(e.clientX, e.currentTarget);
-  }
-
-  function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
-    e.currentTarget.setPointerCapture(e.pointerId);
-    seekTo(e.clientX, e.currentTarget);
-  }
-
-  function onPointerMove(e: React.PointerEvent<HTMLDivElement>) {
-    if (e.buttons !== 1) return;
-    seekTo(e.clientX, e.currentTarget);
-  }
-
   function fmt(s: number) {
     const m = Math.floor(s / 60);
     const sec = Math.floor(s % 60);
@@ -81,7 +73,6 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
       <audio ref={audioRef} src={src} preload="metadata" />
 
       <div className="flex items-center gap-4">
-        {/* Play/pause */}
         <button
           onClick={togglePlay}
           aria-label={playing ? "Pause" : "Play"}
@@ -106,23 +97,27 @@ export default function AudioPlayer({ src, title, caption }: AudioPlayerProps) {
             </p>
           )}
 
-          {/* Scrubber */}
+          {/* Scrubber — tall hit target, thin visual bar */}
           <div
             className="relative py-2 cursor-pointer"
-            onClick={seek}
-            onPointerDown={onPointerDown}
-            onPointerMove={onPointerMove}
+            onPointerDown={(e) => {
+              e.currentTarget.setPointerCapture(e.pointerId);
+              seekFromEvent(e.clientX);
+            }}
+            onPointerMove={(e) => {
+              if (e.buttons !== 1) return;
+              seekFromEvent(e.clientX);
+            }}
           >
-          <div className="relative h-1.5 bg-ll-border rounded-full pointer-events-none">
-            <div
-              className="absolute inset-y-0 left-0 bg-ll-primary rounded-full transition-[width] duration-100"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
+            <div ref={scrubberRef} className="relative h-1.5 bg-ll-border rounded-full pointer-events-none">
+              <div
+                className="absolute inset-y-0 left-0 bg-ll-primary rounded-full"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
           </div>
 
-          {/* Times */}
-          <div className="flex justify-between mt-1.5 text-xs text-ll-text-light tabular-nums">
+          <div className="flex justify-between text-xs text-ll-text-light tabular-nums">
             <span>{fmt(currentTime)}</span>
             <span>{duration ? fmt(duration) : "—"}</span>
           </div>
