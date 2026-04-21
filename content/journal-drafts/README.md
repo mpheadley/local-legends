@@ -9,6 +9,8 @@ Raw material files for Matt's personal writing section. These are not profiles �
 4. **Attempt 73** (was "Pushing Through") — LIVE at `/journal/attempt-73`
 5. **My Writing Has a New Home** (Patreon closing post) — LIVE at `/journal/my-writing-has-a-new-home`
 6. **The Same Domain** — LIVE at `/journal/the-same-domain`
+7. **The Hospital** — LIVE at `/journal/the-hospital` (published 2026-04-20)
+8. **No Shade** — LIVE at `/journal/no-shade` (published 2026-04-21; Jason consented)
 
 **Patreon closed April 14, 2026.** Personal messages sent to 4 paying supporters (see `patreon-supporters.md`). Closing post published. ✓ Complete.
 
@@ -70,6 +72,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 | `public-school.md` | The kids' world ended too — homeschool, farm, land — then public school and something new | Seed |
 | `the-profiles-i-didnt-finish.md` | The story of the profiles that will never ship — sometimes more interesting than the finished piece | Concept note |
 | `mining-claude-docs-seeds.md` | Mining CLAUDE.md reasoning docs for SL journal / HW blog posts | Seed — placement TBD (SL or HW) |
+| `called-coffee.md` | Library parking lot → Gemini conversation → walking into Called Coffee for the first time after collapse. The social/professional return. Jared's place, where he used to deliver flowers. River's smile. Heather's insight on Littlejohn Road. | Well-developed seed — write after No Shade publishes |
 | `the-30-minute-errand.md` | Mania narrows your field of vision until the people closest to you are the ones you see least clearly. The 30-min errand that took all day. Heather needed him to come home. He couldn't. Door: Lucy not knowing about Aquality Farm. | Seed — April 2026 |
 | `red-state-revival.md` | Manic, at a Nadia Bolz-Weber revival in Birmingham — the room, the footage he never released, the selfie he did | Low priority — write after core arc pieces |
 | `after-the-acute-phase.md` | The moment you realize you're not in crisis anymore and don't know what to do with that. The weird flatness nobody writes about. | Seed — don't write until it's being lived |

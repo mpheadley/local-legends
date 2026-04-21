@@ -13,7 +13,7 @@ interface PhotoStripProps {
   caption?: string;
 }
 
-export default function PhotoStrip({ photos, caption }: PhotoStripProps) {
+export default function PhotoStrip({ photos = [], caption }: PhotoStripProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   function scroll(dir: "left" | "right") {

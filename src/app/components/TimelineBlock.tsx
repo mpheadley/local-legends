@@ -9,7 +9,7 @@ interface TimelineBlockProps {
   caption?: string;
 }
 
-export default function TimelineBlock({ items, caption }: TimelineBlockProps) {
+export default function TimelineBlock({ items = [], caption }: TimelineBlockProps) {
   return (
     <figure className="not-prose my-8 bg-ll-warm border border-ll-border rounded-lg px-5 py-5">
       <ol className="relative border-l border-ll-border ml-3 space-y-6">

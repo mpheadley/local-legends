@@ -4,6 +4,28 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## April 21, 2026 — Jason (text message)
+
+> "I love it, my friend, and I love you. You have had quite a journey, thank you for sharing with us!"
+
+**Why it matters:** Someone who knows the journey — not just the writing — said *I love you* and *thank you*. That's not a reaction to a post. That's a response to a life.
+
+---
+
+## April 21, 2026 — Donna Barton, Editor, Anniston Star (text message)
+
+Matt sent Donna the link to *The Hospital* — his first time reaching out since she published his depression piece in 2024. She responded the same day.
+
+> "That's a very thought provoking; poignant essay."
+
+Then, after Matt asked about fit for the Star:
+
+> "Let me bring it up at tomorrow's editorial meeting. I'll get back to you as soon as I can."
+
+**Why it matters:** A working editor at a real regional newspaper read a cold link on a Monday, called it poignant, and took it to her editorial meeting. She published his personal writing once before. She's doing it again on purpose. This is not a favor — it's a professional judgment.
+
+---
+
 ## April 16, 2026 — Cale and Kelly Cosby (Facebook comment)
 
 After Matt shared "I'm Not Going to Disappear":
@@ -32,9 +54,13 @@ Instagram: https://www.instagram.com/p/CqalB7XrM1n/?igsh=MTNsYjZpb2hxcnYwdA==
 
 ---
 
-## April 16, 2026 — Lucy Morris (text message)
+## April 16, 2026 — Lucy Morris, two messages (text)
 
-After Matt shared the personal essay "I'm Not Going to Disappear":
+After Matt shared the Jean Ellison profile:
+
+> "Love the article on Jean! Great pictures too! You're a wonderful writer."
+
+After Matt shared "I'm Not Going to Disappear":
 
 > "So well written!!! Thank you for putting yourself out there and being YOU! Your writing inspires me, and I can relate. Read the article on the sawyers too. I shared that one w Andrew's dad. He will love it. I had no clue about Aquality Farm. I know it was hard to write it even through you fully support them, but you are part of their mission!!! Stay strong, my friend! Coffee again soon!"
 > "Makes me realize how badly I need to get to the farmers market!"
