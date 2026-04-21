@@ -65,7 +65,7 @@ export default function JournalPage() {
               {(featured.frontmatter.cardImage ?? featured.frontmatter.image) && (
                 <div className="w-full aspect-[16/9] rounded-lg overflow-hidden mb-6">
                   <Image
-                    src={featured.frontmatter.cardImage ?? featured.frontmatter.image}
+                    src={(featured.frontmatter.cardImage ?? featured.frontmatter.image)!}
                     alt={featured.frontmatter.imageAlt ?? featured.frontmatter.title}
                     width={900}
                     height={394}
@@ -103,7 +103,7 @@ export default function JournalPage() {
                     {(post.frontmatter.cardImage ?? post.frontmatter.image) && (
                       <div className="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden">
                         <Image
-                          src={post.frontmatter.cardImage ?? post.frontmatter.image}
+                          src={(post.frontmatter.cardImage ?? post.frontmatter.image)!}
                           alt={post.frontmatter.imageAlt ?? post.frontmatter.title}
                           width={128}
                           height={128}
