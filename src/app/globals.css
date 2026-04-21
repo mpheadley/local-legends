@@ -288,6 +288,15 @@ html {
   background-color: var(--color-ll-dark);
 }
 
+/* ─── Search highlight ─── */
+
+mark {
+  background-color: color-mix(in srgb, var(--color-ll-accent) 25%, transparent);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
 /* ─── Accent Rule Divider ─── */
 
 .accent-rule {
@@ -407,6 +416,26 @@ html {
 }
 
 .profile-closing > * { position: relative; z-index: 1; }
+
+.subscribe-cta {
+  background: linear-gradient(to right, #2A4A36, #7A5203);
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/topo-7.png");
+  background-size: 500px 500px;
+  opacity: 0.5;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+.subscribe-cta > * { position: relative; z-index: 1; }
 
 .profile-closing-author {
   display: flex;

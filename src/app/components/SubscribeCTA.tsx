@@ -87,7 +87,7 @@ export default function SubscribeCTA({ variant = "section", source }: { variant?
   }
 
   return (
-    <section className="subscribe-cta bg-ll-dark text-white">
+    <section className="subscribe-cta text-white">
       <div className="max-w-xl mx-auto px-6 py-14 md:py-18 text-center">
         <h2
           className="text-2xl md:text-3xl font-bold mb-3"
@@ -95,9 +95,6 @@ export default function SubscribeCTA({ variant = "section", source }: { variant?
         >
           Stories from Northeast Alabama — and from the person writing them.
         </h2>
-        <p className="text-white/60 mb-8 text-base leading-relaxed">
-          Profiles of local makers and business owners, plus occasional personal writing from Matt.
-        </p>
 
         {status === "success" ? (
           <p className="text-lg font-medium text-ll-accent">
