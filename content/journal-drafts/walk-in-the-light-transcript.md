@@ -8,6 +8,7 @@ Two recordings. Same song. Different contexts.
 
 **File:** `public/audio/journal/walk-in-the-light-bedtime.mp3` (trimmed to 0:36 start)
 **Source WAV:** `Walk_in_the_light.wav` (87 seconds full)
+**Recorded:** ca. 2018
 **Speakers:** 3 (Matt, a child doing the antiphon, another voice for Amen — possibly Heather)
 
 ### Full version transcript (87 seconds):
