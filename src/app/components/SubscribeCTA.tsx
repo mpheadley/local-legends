@@ -87,7 +87,7 @@ export default function SubscribeCTA({ variant = "section", source }: { variant?
   }
 
   return (
-    <section className="subscribe-cta text-white">
+    <section className="subscribe-cta text-white" style={{ background: "linear-gradient(to right, #1e3527, #5c3d02)" }}>
       <div className="max-w-xl mx-auto px-6 py-14 md:py-18 text-center">
         <h2
           className="text-2xl md:text-3xl font-bold mb-3"
