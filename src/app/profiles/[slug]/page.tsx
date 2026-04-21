@@ -8,6 +8,7 @@ import {
   getProfileBySlug,
   getPublishedSlugs,
   getAdjacentProfiles,
+  getAllProfiles,
 } from "@/lib/profiles";
 import { siteConfig } from "@/lib/site-config";
 import { notFound } from "next/navigation";
@@ -21,6 +22,8 @@ import ScrollytellingProfile from "@/app/components/ScrollytellingProfile";
 import ParallaxHero from "@/app/components/ParallaxHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 import Comments from "@/app/components/Comments";
+import ReadingProgressBar from "@/app/components/ReadingProgressBar";
+import ProfileCard from "@/app/components/ProfileCard";
 import { scrollytellingConfigs } from "@/lib/scrollytelling-configs";
 
 const mdxComponents = {
@@ -165,6 +168,18 @@ export default async function ProfilePage({
   const { prev, next } = getAdjacentProfiles(slug);
   const scrollyConfig = scrollytellingConfigs[slug];
 
+  const profileTags = frontmatter.tags ?? [];
+  const related = getAllProfiles()
+    .filter((p) => p.slug !== slug)
+    .map((p) => ({
+      profile: p,
+      shared: (p.frontmatter.tags ?? []).filter((t) => profileTags.includes(t)).length,
+    }))
+    .filter(({ shared }) => shared > 0)
+    .sort((a, b) => b.shared - a.shared)
+    .slice(0, 2)
+    .map(({ profile }) => profile);
+
   // If a scrollytelling config exists, render the immersive layout
   if (scrollyConfig) {
     return (
@@ -245,6 +260,7 @@ export default async function ProfilePage({
 
   return (
     <main id="main-content">
+      <ReadingProgressBar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -451,6 +467,25 @@ export default async function ProfilePage({
         </div>
 
       </section>
+
+      {/* Related Stories by tag */}
+      {related.length > 0 && (
+        <section className="bg-ll-warm border-t border-ll-border py-12 md:py-16">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2
+              className="text-sm font-semibold uppercase tracking-[0.15em] text-ll-text-light mb-8"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              More Like This
+            </h2>
+            <div className={`grid gap-8 ${related.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}>
+              {related.map((p) => (
+                <ProfileCard key={p.slug} profile={p} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Story Navigation (prev/next) */}
       <StoryNav prev={prev} next={next} />
