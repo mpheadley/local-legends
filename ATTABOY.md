@@ -4,6 +4,16 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## April 22, 2026 — Lewis Downing (text)
+
+After Matt sent the finished profile:
+
+> "Hey dude. I totally spaced on getting back to you. Thank you so much. That's so generous."
+
+**Why it matters:** He called it generous. Not "cool" or "thanks" — generous. The man who runs a sixty-year family business on Gurnee Avenue, who just won a landslide election, who had a beer in one hand and crawfish in the other at the Sinclair Social — he read what you wrote about him and called it generous. That's not nothing.
+
+---
+
 ## April 22, 2026 — Rev. Andy Curtis (email)
 
 After Matt shared his mental health writing:
