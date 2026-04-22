@@ -85,7 +85,7 @@ export default function AboutPage() {
               that, my wife and I built a
               flower farm. Cut flowers, farmers markets, a little retail kiosk
               on the Chief Ladiga Trail. We built that thing from the ground up,
-              with our kids underfoot. And then we lost it.
+              with our kids underfoot. And then we sold it.
             </p>
             <p className="text-ll-text leading-relaxed mb-6">
               I still drive past farms and gardens on my way to work. Some days
