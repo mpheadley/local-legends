@@ -72,6 +72,67 @@ Matt's words, verbatim: "I worked at Camp Lee for about two weeks hoping that I 
 
 ---
 
+## Sermons section on SL — anchor this piece first (decided April 2026)
+
+When ministry-grief.md is drafted, it becomes the natural home for a `/sermons` section on Southern Legends — or individual journal posts embedding sermon audio/video. The framing: "a pastor who lost everything, here's what he used to preach."
+
+**What's available:**
+- Weaver UMC YouTube channel: https://www.youtube.com/@weaverfirstunitedmethodist8791 — 26 videos, 2020–2022. Embed via `VideoEmbed` using individual video URLs, don't host the MP4s.
+- Baptism photos from 2015 (Weaver UMC Google Photos) — archival context
+- Everyday Revival podcast MP3 (2019) — `SermonCard` candidate, transcript in `everyday-revival-transcript.md`
+- Walk in the Light recordings — bedtime and solo versions, already in `public/audio/journal/`
+
+**Decision:** No standalone sermon site. Folds into SL — the sermons matter because of what came after them.
+
+---
+
+## Archived sermon transcripts (April 22, 2026)
+
+Three Weaver UMC sermons transcribed via Whisper. MP4 + MP3 + JSON transcript all on Samsung T5 at `/Volumes/Samsung_T5/`. All pre-recorded during COVID (2020).
+
+### Sermon for June 7, 2020 — "Open Our Eyes" (Great Commission + George Floyd)
+**File:** `Sermon for June 7-011 (1).mp4` | **Transcript:** `transcripts/Sermon for June 7-011 (1).json`
+
+The fullest sermon of the three. 40+ segments, one speaker. Preaching on Matthew 28 (the Great Commission) during the week of George Floyd's death, framed through the UMC series "Open Our Eyes."
+
+**Seed lines:**
+- "May the Lord be with you. I miss hearing your voices as you would often say and also with you." — the pandemic's cost on worship, the longing to gather
+- "My family is my lab for knowing and learning and trying out different ways of discipleship." — Sage and the kids in the kiddie pool, mock-baptizing, "thank you, Jesus"
+- "We told our children this and I will never forget the look in their eyes. Their eyes were opened to the injustice in this world." — telling the kids about George Floyd
+- "A disciple of Jesus Christ is a person who loves God and others by giving unconditionally and accepting all." — Weaver's congregational definition, which he helped write
+
+**Why it matters for ministry-grief:** This is the vision of the ministry at its most coherent — racial justice, child discipleship, incarnational presence, all woven into one sermon. The contrast with the manic resignation five years later is the whole arc.
+
+---
+
+### Christmas Eve (Pre-recorded), 2020
+**File:** `Christmas Eve (Pre-recorded)-010.mp4` | **Transcript:** `transcripts/Christmas Eve (Pre-recorded)-010.json`
+
+Short — 18 segments, two speakers (Matt + liturgist reading Isaiah). Pre-recorded, no congregation present.
+
+**Seed lines:**
+- "Welcome. My name is Matt and I'm the pastor with this Weaver First United Methodist Church." — present tense, confident, in role. That sentence lands differently now.
+- "it is we who need to remember, who need to see again your presence, who need to allow your with us-ness to flood our hearts and lives." — the pastoral theology of the era, before the mania
+- "This celebration is about the interruption to end all interruptions. God tearing open the heavens to reside among us in the body of a child."
+
+**Why it matters for ministry-grief:** The shortest of the three but the most compressed. "My name is Matt and I'm the pastor" — stated plainly, matter-of-factly, in a room with no one listening. The Advent framing (interruption, arrival, waiting) maps cleanly onto the grief arc.
+
+---
+
+### The Wilderness Journey from Palms to Passion (Palm/Passion Sunday, 2020)
+**File:** `The Wilderness Journey from Palms to Passion-002.mp4` | **Transcript:** `transcripts/The Wilderness Journey from Palms to Passion-002.json`
+
+The most ambitious of the three — 346 segments, 7 speakers. A Midrash service: five characters from Holy Week read aloud (the woman at the temple tables, a Pharisee, the woman with the alabaster jar, Judas, a disciple in Gethsemane). Matt hosts and narrates as SPEAKER_03.
+
+**Seed lines:**
+- "Each Sunday has been a different kind of service as we are adapting to this wilderness that we found ourselves in." — pandemic as wilderness, written before he knew his own wilderness was coming
+- "Today is a special service because this week is unlike any other week in the Christian calendar." — Palm Sunday framing, which also describes his life in 2025
+- "Midrash is an ancient Jewish tradition that weaves together the art of storytelling and the truth of scripture, inviting us to imagine and wonder about the details that exist between the lines." — his whole method as a preacher
+
+**Why it matters for ministry-grief:** The title alone — *The Wilderness Journey from Palms to Passion* — is the arc of his next five years. He preached this in April 2020 not knowing. The Midrash form (imagining what it felt like from inside the story) is also the form the journal pieces use. This sermon is evidence of the creative vision that was lost.
+
+---
+
 ## Artifact: Everyday Revival podcast (2019)
 
 21MB MP3 on Google Drive — "Podcast Everyday Revival" folder. File: `Everyday Revival - 10:5:19, 3.10 PM.mp3`
@@ -91,6 +152,36 @@ Context: Recorded Oct 5, 2019. Connected to the "Order of the Flame" movement �
 - The contrast: this devotional vision in 2019 → resignation in a manic episode → losing the farm.
 
 Potential use: audio artifact for a ministry-years piece. Not for No Shade (no singing, too long). Worth embedding — AudioPlayer component is now built and live on SL.
+
+---
+
+### Prodigal Grace — April 2, 2022 (Lent 5, Anniston First UMC)
+**File:** `Prodigal Grace - April 2 2022.mp3` (Samsung T5) | **Transcript:** `/Volumes/Samsung_T5/transcripts/Prodigal Grace - April 2 2022.json` ✓ 268 segments
+
+268 segments, two speakers. First sermon preached at Anniston First after leaving Weaver — a full year away from the pulpit.
+
+**Seed lines:**
+- "Friends, my name's Matt Headley. I've been a prodigal from the pulpit for the last 52 weeks." — the return framed as the parable itself; preaching the prodigal son as the prodigal preacher
+- "I used to be a pastor at Weaver United Methodist Church, and so I've got a lot of preaching to get out of my system today." — past tense. "Used to be." Said plainly to a new congregation.
+- "God's grace, in fact, is prodigal, that God's grace is wasteful in some ways, illogical, excessive, even full to the brim, breaking the rules of who we might think is deserving of grace and who's not." — the theology of return, preached by someone returning
+- The food pantry story — Weaver UMC corner of Anniston Street and Parker, kids Hannah and Noah in the photo, Sunday school class around the little box pantry. A memory of the ministry he'd just left, offered warmly to people who hadn't known him there.
+
+**Why it matters for ministry-grief:** This is the hinge sermon — the moment between Weaver and Anniston First, between the pastor he was and the one he was becoming. "I used to be a pastor at Weaver" is the first time the past tense appears publicly. The Lenten frame (not Easter — Lent 5, April 2) makes the return incomplete by design. Not resurrection yet. Still on the way.
+
+---
+
+### Feeding the Five Thousand — August 10, 2023 (Anniston First UMC)
+**File:** `Feeding the Five Thousand - Aug 10 2023.mp3` (Samsung T5) | **Transcript:** `/Volumes/Samsung_T5/transcripts/Feeding the Five Thousand - Aug 10 2023.json` ✓ 231 segments
+
+231 segments, two speakers. Preached during a summer series at Anniston First, in person, warm sanctuary.
+
+**Seed lines:**
+- "Today, God has set a table for us. The table is set and God's people are here to be fed." — the opening, eucharistic framing before the text
+- "Jesus has just learned that his friend, John the Baptist... has just been executed by the government. Jesus has just learned of this. His friend, his mentor, his predecessor, and maybe even his cousin has just been beheaded. And so Jesus is going to practice some self-care. He's going to go away to grieve, to be alone, to weep for his friend. But unfortunately for Jesus, his plans are interrupted." — preaching grief and interrupted self-care eighteen months before his own grief interrupted everything
+- "My daughter pointed out, 5,000 plus women and children, 15,000 maybe, 10,000, who knows?" — Hannah in the congregation, paying attention, doing the math
+- "Jesus steals the kid's lunch and feeds 5,000 people." — the humor that was still there in August 2023
+
+**Why it matters for ministry-grief:** This is the last sermon in the archive — August 2023, nineteen months before the resignation. The Jesus-grieving-John-the-Baptist passage is the one he chose. A man preaching about grief, interrupted self-care, and miraculous provision from scarcity. He didn't know yet. The text knew.
 
 ---
 

@@ -31,6 +31,7 @@ export interface ProfileFrontmatter {
   facebook?: string;
   parallaxHero?: boolean;
   heroTextBottom?: boolean;
+  displayTitle?: boolean;
 }
 
 export interface Profile {
@@ -53,8 +54,9 @@ export function getPublishedSlugs(): string[] {
   return getAllProfiles().map((p) => p.slug);
 }
 
-export function getProfileBySlug(slug: string): Profile {
+export function getProfileBySlug(slug: string): Profile | null {
   const filePath = path.join(contentDir, `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
   const stats = readingTime(content);
@@ -71,7 +73,7 @@ export function getAllProfiles(): Profile[] {
   const slugs = getProfileSlugs();
   return slugs
     .map(getProfileBySlug)
-    .filter((p) => p.frontmatter.published && !p.frontmatter.aiWritten)
+    .filter((p): p is Profile => p !== null && p.frontmatter.published && !p.frontmatter.aiWritten)
     .sort(
       (a, b) =>
         new Date(b.frontmatter.date).getTime() -

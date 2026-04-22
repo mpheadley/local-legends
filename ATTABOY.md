@@ -4,6 +4,16 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## April 22, 2026 — Rev. Andy Curtis (email)
+
+After Matt shared his mental health writing:
+
+> "Hi Matt. Your vulnerability and faith are inspiring. Thank you for sharing and I hope your experiences and story are helpful to others. I also hope things get easier for you guys very soon. If I, or others, can help you shoulder some weight, let us know how to lighten the yoke. Are you available for coffee on Monday, May 4th?"
+
+**Why it matters:** A reverend — a peer — read the writing and moved toward it. "Lighten the yoke" is pastoral language; he's offering what pastors offer. And he asked for coffee. The people who know what this life costs are showing up.
+
+---
+
 ## April 21, 2026 — Jason (text message)
 
 > "I love it, my friend, and I love you. You have had quite a journey, thank you for sharing with us!"
@@ -22,7 +32,17 @@ Then, after Matt asked about fit for the Star:
 
 > "Let me bring it up at tomorrow's editorial meeting. I'll get back to you as soon as I can."
 
-**Why it matters:** A working editor at a real regional newspaper read a cold link on a Monday, called it poignant, and took it to her editorial meeting. She published his personal writing once before. She's doing it again on purpose. This is not a favor — it's a professional judgment.
+Then, after more conversation:
+
+> "Is it the Southern Legends series you're interested in having published?"
+
+Matt: "The journals or the profiles, or both. Curious what you think would be a good fit for the Star?"
+
+Donna: "Let me bring it up at tomorrow's editorial meeting. I'll get back to you as soon as I can."
+
+Also mentioned: writing Foothills magazine profiles of local farms with Lisa Davis — separate opportunity, same relationship.
+
+**Why it matters:** A working editor at a real regional newspaper read a cold link on a Monday, called it poignant, and took it to her editorial meeting. She published his personal writing once before. She's doing it again on purpose. She's not just considering one piece — she's asking about the whole series. This is not a favor — it's a professional judgment.
 
 ---
 
@@ -51,6 +71,26 @@ Amber: "We have a couple of weeks left before summer!!! But I could do Monday Ma
 Instagram: https://www.instagram.com/p/CqalB7XrM1n/?igsh=MTNsYjZpb2hxcnYwdA==
 
 **Why it matters:** She's been through the same triad — ministry + mental health + small business. Not just sympathy, recognition. And she moved toward coffee, not just kind words. Coffee set for May 4.
+
+---
+
+## April 22, 2026 — Lucy Morris (text)
+
+After Matt shared *The Hospital*:
+
+> "Great article that I can very much relate to. Was the hospital good for you? 'It was and it wasn't.' So true. Thank you for opening your heart and sharing your story like this. I hope you're finding it to be therapeutic"
+
+**Why it matters:** She didn't just read it — she quoted it back. "It was and it wasn't" landed. She's been in a hospital waiting room with someone she loves; she knows what that sentence costs. And she asked if the writing itself was helping. Not "is the piece good" — "is this good for you." That's a friend.
+
+---
+
+## April 21, 2026 — Lucy Morris (text)
+
+After Matt shared *The Hospital*:
+
+> "Oh, Matt! I love it! You keep it up, brother!!"
+
+**Why it matters:** Lucy has responded to multiple pieces now — Jean Ellison, "I'm Not Going to Disappear," the Sawyers. She keeps showing up. This one was short and immediate. Sometimes that's the whole review.
 
 ---
 

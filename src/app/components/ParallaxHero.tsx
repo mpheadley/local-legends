@@ -17,6 +17,7 @@ interface ParallaxHeroProps {
   heroAlt: string;
   heroPosition?: string;
   heroTextBottom?: boolean;
+  displayTitle?: boolean;
   slug?: string;
 }
 
@@ -29,6 +30,7 @@ export default function ParallaxHero({
   heroAlt,
   heroPosition,
   heroTextBottom = false,
+  displayTitle = false,
   slug,
 }: ParallaxHeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -116,7 +118,7 @@ export default function ParallaxHero({
               </p>
             )}
             <h1
-              className="ph-title st-hero-title"
+              className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
               style={{ margin: 0, opacity: 1, transform: "none", fontSize: "clamp(1.5rem, 3.5vw, 2.75rem)" }}
             >
               {title}
@@ -130,11 +132,11 @@ export default function ParallaxHero({
             {eyebrow && <p className="ph-eyebrow st-hero-eyebrow">{eyebrow}</p>}
             {titleHtml ? (
               <h1
-                className="ph-title st-hero-title"
+                className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
               />
             ) : (
-              <h1 className="ph-title st-hero-title">{title}</h1>
+              <h1 className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}>{title}</h1>
             )}
             {subtitle && (
               <div

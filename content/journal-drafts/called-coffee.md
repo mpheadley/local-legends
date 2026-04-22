@@ -31,15 +31,40 @@ The story of going back. After the farm failure, the manic episode, the public h
 
 ## Key details
 
-- **Called Coffee** — the coffee shop. Jared is the owner. River is second in command.
+- **Called Coffee** — the coffee shop. Jerod is the owner. River is second in command.
 - **45 minutes from Pleasant Valley** — the drive itself is a commitment. Showing up isn't casual anymore.
 - **The Gemini conversation** — he needed AI encouragement just to walk in. That's the texture of that moment. (Note: contrast with the AI psychosis piece — here AI is grounding him, not amplifying him.)
 - **The library parking lot** — specific location. Not outside Called Coffee, the library.
 - **River's smile** — the moment that mattered. No explanation required.
-- **Jared's wave** — confirmed on a later visit. The relationship survived the gap.
+- **Jerod's wave** — confirmed on a later visit. The relationship survived the gap.
 - **Heather on Littlejohn Road** — she saw the gap. He couldn't.
 - **The torn meniscus** — physical detail that lands the Preston section. 42 years old, body not built for this work.
 - **The Tacoma** — bought it, knew he'd lose money selling it back. Carrying that knowledge while painting.
+
+---
+
+## February 8, 2026 — The Pre-Visit Session (ChatGPT, mpheadley account)
+
+Found in the mpheadley ChatGPT export. This is the Sunday before he reaches out to Jerod — drafting the text, and then asking the real question:
+
+> [Matt]: It's Sunday but I could go ahead and draft a text to Jerod of called coffee to send tomorrow for my foothills profiles local legends project? How's this? Hey man I hope you and the family are doing well. I'm beginning to write profiles of local business owners to help build community — calling it Foothills Profiles. I'm also doing a little digital marketing on the side, but the profiles are a separate project. Would you be up to an interview on the phone or at Called?
+
+ChatGPT refines it. Then:
+
+> [Matt]: I've been so quiet on social media since we lost the farm and I was hospitalized. I've been seen in public, but I was visibly not ok. I've been kind of invisible lately. This has gone on for months. I'm a little uneasy about starting a very public project so abruptly after this long public failure, depression and silence. Is this a bad idea, or do I need to do it to get traction for creating some income opportunities for myself?
+
+ChatGPT's response: it's not a bad idea, but it doesn't have to be all-or-nothing. Could do interviews privately first without posting. Could start small.
+
+**Sequence reconstruction:**
+- **Feb 4–5, 2026** (Gemini): Research the Local Legends model; Called Coffee StoryBrand deep-dive
+- **Feb 8, 2026** (ChatGPT): Draft text to Jerod; name the fear ("I've been invisible")
+- **Feb 9, 2026** (Gemini): "Jerod is the absolute perfect choice" — chose him, text likely sent
+- **Late Feb – early March 2026**: The actual parking lot visit (not yet located in archive)
+- **March 13, 2026** (Gemini voice): "I've been nervous about reaching out to profile people on..." — may predate the interview or refer to other subjects
+
+**What this adds to the piece:** The library parking lot was not spontaneous courage. It was the end of a weeks-long approach sequence. The Feb 8 ChatGPT session is the moment the fear is named explicitly — *invisible, not ok, public failure, long silence.* The parking lot is where that sequence ends: he finally goes.
+
+**Note on dating:** The called-coffee.md seed says "early March 2026" for the parking lot. The Feb 8 ChatGPT session and Feb 9 Gemini session suggest the outreach to Jerod happened in early February. The parking lot visit and the actual interview would be after that — possibly late February or early March.
 
 ---
 

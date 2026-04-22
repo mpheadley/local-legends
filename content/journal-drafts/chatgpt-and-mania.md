@@ -47,12 +47,55 @@ South Park episode about sycophancy — Matt watched it, epiphanic. Find the epi
 
 ---
 
+## Life Vision Document — March 5, 2025 (Ash Wednesday)
+
+**Key fact:** Ash Wednesday 2025 was March 5, 2025 — the same day as this document, and the same day Matt resigned from the church. This is not a vision session from a hopeful period. It was written during active mania, possibly the same day as or within hours of the resignation.
+
+The document is AI-generated life coaching output — ChatGPT reflecting the mania back without friction. Signals:
+- Everything launching simultaneously with no tradeoffs
+- "Local Roots, Expansive Journey" — branding an entire life
+- The Wendell Berry comparison presented as destiny
+- No mention of Heather, the kids, financial reality, sustainability
+- Cheerleading closer: "you're not just offering content — you're offering a way forward"
+
+What survived into the actual present work: Berry connection, faith/mental health bridging, storytelling as medium. Those survived because they're genuinely true — not because the doc was right. The doc got lucky on those threads.
+
+The document is a timestamp, not a roadmap. "This is what March 5, 2025 looked like from the inside." The journal does it better — but the doc is a clean artifact of AI amplifying mania in real time. Use it.
+
+The "Sinclair Social" faith community, the homestead income streams, the coaching/consulting offerings, the podcast production operation — none of it materialized. The things that did were quieter and came from grief, not expansion.
+
+---
+
 ## Samples to include
 
 Pull from:
 - Patreon posts (in `matt-headley-sources/`) — written during mania, AI-assisted, less careful
 - ChatGPT transcripts if recoverable (Anniston First email account — locked out as of Apr 2026, worth requesting temp access)
 - The Anniston Star article — Matt suspects he may have been hypomanic when he wrote it (September 2024, after first depression lifted, high productivity, selfie videos at church). Worth reading it again with that lens.
+
+## February 11, 2025 — The Manic Shopping Cluster (mpheadley account)
+
+Four ChatGPT sessions in a single day, from the mpheadley@gmail.com account, three weeks before the Ash Wednesday resignation:
+
+**4:34 AM — "Living Room Chair Ideas"**
+He has "a dozen or two tabs" open in Chrome shopping for furniture. Asking ChatGPT to draft an affectionate message to Heather about which chair she'd like for a "living room office project." He asks how to send photos from his open browser tabs.
+
+**4:56 AM — "Altec Lansing Octiv 450 Review"**
+Twenty-two minutes later: researching a vintage iPad speaker dock. No context.
+
+**7:39 PM — "Mini Cow Grazing Guide"**
+Researching rotational grazing for miniature cows. Planning paddock sizes.
+
+**8:21 PM — "Strawberry Cow Plushies"**
+> [user]: "big strobare cow"
+
+Searching for oversized strawberry cow stuffed animals. Returns giant Squishable plush, 27" wide.
+
+**Why it matters for this piece:** The manic browser is using AI the same way it's using the 24 open Chrome tabs — as another place to take the surplus. Not a therapist, not a collaborator, just a frictionless receiver. The tool doesn't push back when you ask it to help you decorate at 4 AM. It helps. The topics are unconnected. That's the point — mania doesn't pursue a plan, it pursues stimulation. Compare to the Gemini February 8, 2025 bathtub session (Apple Watch added to a shopping list at 12:45 AM). Three days apart, same pattern, different tools.
+
+Source: `chatgpt-mpheadley-archive.md`
+
+---
 
 ## Voice memo evidence — AI as real-time brainstorm partner
 
