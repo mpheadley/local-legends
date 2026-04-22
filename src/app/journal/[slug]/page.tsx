@@ -315,13 +315,15 @@ export default async function JournalPostPage({ params }: { params: Params }) {
           <section className="bg-ll-warm py-12 border-t border-ll-border text-center">
             <div className="mx-auto px-6 flex gap-8 justify-center items-start max-w-sm">
               <div className="flex flex-col items-center gap-4">
-                <Image
-                  src={primaryImage}
-                  alt="Merch"
-                  width={160}
-                  height={160}
-                  className="rounded"
-                />
+                <a href={primaryUrl} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={primaryImage}
+                    alt="Merch"
+                    width={160}
+                    height={160}
+                    className="rounded hover:opacity-90 transition-opacity"
+                  />
+                </a>
                 <a
                   href={primaryUrl}
                   target="_blank"
@@ -332,13 +334,15 @@ export default async function JournalPostPage({ params }: { params: Params }) {
                 </a>
               </div>
               <div className="flex flex-col items-center gap-4">
-                <Image
-                  src={secondImage}
-                  alt={secondAlt}
-                  width={160}
-                  height={160}
-                  className="rounded"
-                />
+                <a href={secondUrl} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={secondImage}
+                    alt={secondAlt}
+                    width={160}
+                    height={160}
+                    className="rounded hover:opacity-90 transition-opacity"
+                  />
+                </a>
                 <a
                   href={secondUrl}
                   target="_blank"
