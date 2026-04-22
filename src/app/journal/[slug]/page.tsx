@@ -298,32 +298,56 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         </Link>
       </section>
 
-      {/* Merch — renders when frontmatter.merchUrl is set, or NEXT_PUBLIC_MERCH_STORE_URL as fallback */}
-      {(frontmatter.merchUrl || process.env.NEXT_PUBLIC_MERCH_STORE_URL) && (
-        <section className="bg-ll-warm py-12 border-t border-ll-border text-center">
-          <div className="max-w-xs mx-auto px-6">
-            {(frontmatter.merchImage ?? "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync") && (
-              <div className="mb-5">
+      {/* Merch — primary shirt from frontmatter, plus I Contain Multitudes as evergreen second option */}
+      {(frontmatter.merchUrl || process.env.NEXT_PUBLIC_MERCH_STORE_URL) && (() => {
+        const ICM_URL = "https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes";
+        const ICM_IMAGE = "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync";
+        const primaryUrl = frontmatter.merchUrl ?? process.env.NEXT_PUBLIC_MERCH_STORE_URL ?? "";
+        const primaryImage = frontmatter.merchImage ?? ICM_IMAGE;
+        const showICM = primaryUrl !== ICM_URL;
+        return (
+          <section className="bg-ll-warm py-12 border-t border-ll-border text-center">
+            <div className={`mx-auto px-6 flex gap-8 justify-center items-start ${showICM ? "max-w-sm" : "max-w-xs"}`}>
+              <div className="flex flex-col items-center gap-4">
                 <Image
-                  src={frontmatter.merchImage ?? "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync"}
+                  src={primaryImage}
                   alt="Merch"
-                  width={200}
-                  height={200}
-                  className="mx-auto rounded"
+                  width={160}
+                  height={160}
+                  className="rounded"
                 />
+                <a
+                  href={primaryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+                >
+                  Wear it →
+                </a>
               </div>
-            )}
-            <a
-              href={frontmatter.merchUrl ?? process.env.NEXT_PUBLIC_MERCH_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
-            >
-              Wear it →
-            </a>
-          </div>
-        </section>
-      )}
+              {showICM && (
+                <div className="flex flex-col items-center gap-4">
+                  <Image
+                    src={ICM_IMAGE}
+                    alt="I Contain Multitudes tee"
+                    width={160}
+                    height={160}
+                    className="rounded"
+                  />
+                  <a
+                    href={ICM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+                  >
+                    Wear it →
+                  </a>
+                </div>
+              )}
+            </div>
+          </section>
+        );
+      })()}
 
       <Comments slug={slug} />
 
