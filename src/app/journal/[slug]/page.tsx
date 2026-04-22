@@ -284,74 +284,90 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         </div>
       </article>
 
-      {/* Share + Support */}
-      <section className="profile-closing">
-        <div className="profile-closing-share">
-          <ShareButtons
-            url={`/journal/${slug}`}
-            title={frontmatter.title}
-            description={frontmatter.excerpt}
-          />
-        </div>
-        <Link href="/support" className="journal-support-btn">
-          Support this work →
-        </Link>
-      </section>
-
-      {/* Merch — always shows two shirts: primary from frontmatter, plus a second evergreen option.
-          ICM-primary posts pair with Still Here. All others pair with ICM. */}
-      {(frontmatter.merchUrl || process.env.NEXT_PUBLIC_MERCH_STORE_URL) && (() => {
+      {/* Share + Merch + Support — unified closing section */}
+      {(() => {
         const ICM_URL = "https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes";
         const ICM_IMAGE = "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync";
         const SH_URL = "https://matt-headley-shop.fourthwall.com/products/still-here";
         const SH_IMAGE = "https://imgproxy.fourthwall.com/FyWryySt9e8_rzT3yE6eItoqF6GstCkbBJSuL62LpoY/w:1920/sm:1/enc/kZytLUESOJY7WIq3/mQmU8CAxU0TQJrD2/LFh8Y-uqr4QKxZUr/-r3HZV9rDnJj-a9U/SY5J9AEtq4g5o7L3/JwKTj1OyPau1R0tC/tTw60OgXWBZkD6Hu/wWE8ibGTgAZsKMsY/WTotCATD8-xnovcw/FEwNfv2JgknjHnf0/ug0yHPZ7pcf3JZ2i/bZ0phQZB_NTgL9ld/E3bYmALpumGY4hCG/Su9KSvpN3h6FOoRK/dNXM-cTSQcw";
-        const primaryUrl = frontmatter.merchUrl ?? process.env.NEXT_PUBLIC_MERCH_STORE_URL ?? "";
+        const BP_URL = "https://matt-headley-shop.fourthwall.com/products/bipolar-proud";
+        const SHIRT_NAMES: Record<string, string> = {
+          [ICM_URL]: "I Contain Multitudes",
+          [SH_URL]: "Still Here",
+          [BP_URL]: "Bipolar & Proud",
+        };
+        const primaryUrl = frontmatter.merchUrl ?? ICM_URL;
         const primaryImage = frontmatter.merchImage ?? ICM_IMAGE;
         const isICMPrimary = primaryUrl === ICM_URL;
         const secondUrl = isICMPrimary ? SH_URL : ICM_URL;
         const secondImage = isICMPrimary ? SH_IMAGE : ICM_IMAGE;
         const secondAlt = isICMPrimary ? "Still Here tee" : "I Contain Multitudes tee";
+        const primaryName = SHIRT_NAMES[primaryUrl] ?? "";
+        const secondName = SHIRT_NAMES[secondUrl] ?? "";
         return (
-          <section className="bg-ll-warm py-12 border-t border-ll-border text-center">
-            <div className="mx-auto px-6 flex gap-8 justify-center items-start max-w-sm">
-              <div className="flex flex-col items-center gap-4">
+          <section className="profile-closing">
+            {/* Share */}
+            <div className="profile-closing-share">
+              <ShareButtons
+                url={`/journal/${slug}`}
+                title={frontmatter.title}
+                description={frontmatter.excerpt}
+              />
+            </div>
+
+            {/* Shirts */}
+            <div className="flex gap-8 justify-center items-start mt-8">
+              <div className="flex flex-col items-center gap-3">
                 <a href={primaryUrl} target="_blank" rel="noopener noreferrer">
                   <Image
                     src={primaryImage}
-                    alt="Merch"
-                    width={160}
-                    height={160}
+                    alt={primaryName || "Merch"}
+                    width={140}
+                    height={140}
                     className="rounded hover:opacity-90 transition-opacity"
                   />
                 </a>
+                {primaryName && (
+                  <span className="text-xs text-white/60">{primaryName}</span>
+                )}
                 <a
                   href={primaryUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+                  className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
                 >
                   Wear it →
                 </a>
               </div>
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-3">
                 <a href={secondUrl} target="_blank" rel="noopener noreferrer">
                   <Image
                     src={secondImage}
                     alt={secondAlt}
-                    width={160}
-                    height={160}
+                    width={140}
+                    height={140}
                     className="rounded hover:opacity-90 transition-opacity"
                   />
                 </a>
+                {secondName && (
+                  <span className="text-xs text-white/60">{secondName}</span>
+                )}
                 <a
                   href={secondUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+                  className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
                 >
                   Wear it →
                 </a>
               </div>
+            </div>
+
+            {/* Support */}
+            <div className="mt-8">
+              <Link href="/support" className="journal-support-btn">
+                Support this work →
+              </Link>
             </div>
           </section>
         );
