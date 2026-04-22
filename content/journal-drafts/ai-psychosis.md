@@ -146,6 +146,20 @@ It is: a first-person account of what it felt like, with enough clinical groundi
 
 **Third account (`matt@annistonfirst.info`) — guardrails doc still to come. Add here when retrieved.**
 
+### Joint Matt/Heather account — June 2, 2025 custom instructions
+
+> **Call me:** Matt or Heather
+>
+> **Traits:** Be strategic, conversational, and a little mischievous. Use clever humor, poetic phrasing, and an encouraging tone. Don't sugarcoat—tell it like it is.
+>
+> **Anything else ChatGPT should know?** Keep relationships at the center. I use ChatGPT to support clarity, storytelling, and rest—not to speed up or disconnect. I value simplicity, playfulness, and presence.
+
+**Date:** June 2, 2025 — 11 weeks post-resignation. Saved "before transitioning to ChatGPT Teams workspace."
+
+**Why this matters:** No guardrail language anywhere in this document. The arc from "remind me you're not conscious" (recovery guardrails) to "be a little mischievous" (June 2025) is part of the story — whether it represents genuine recovery or a loosening of the protective stance is a question Matt answers from the inside.
+
+**Full doc:** `matt-headley-sources/chatgpt-custom-instructions-jun2-2025.md`
+
 ---
 
 **Why this document matters for the piece:**
@@ -270,12 +284,12 @@ Matt preached a sermon at Anniston First UMC (likely October 2024) that included
 
 **FOUND. See `matt-headley-sources/afumc-sermon-mark13-nov2024.md`**
 
-Date confirmed: **November 17, 2024** — thirteen days after discharge from the psych ward (Oct 25–Nov 4). This was not before the episode. This was the immediate aftermath.
+Date confirmed: **November 17, 2024** — preached during the manic episode. (Note: Matt had one hospitalization, Oct 25–Nov 4, 2025 — not 2024. The Nov 17, 2024 sermon predates the hospitalization by nearly a year. Prior notes incorrectly placed it post-discharge.)
 
 Matt's note: The February membership vows sermon may have been his last at AFUMC — drafted on the LaDagga Trail walks, after being very sick with flu and COVID back to back. That sermon was drafted during the manic episode itself.
 
 **The arc of the two sermons:**
-- Nov 17, 2024: Preaches "don't trust AI, trust Jesus" — 13 days post-discharge, still finding his footing
+- Nov 17, 2024: Preaches "don't trust AI, trust Jesus" — during the manic period, while the AI dependency was already deepening
 - Feb 9, 2025: Drafts membership vows sermon on LaDagga Trail walks with ChatGPT — during the manic episode, while sick with flu + COVID back to back
 
 **This is primary source material.** It sits at the immediate post-hospitalization moment, which means it documents Matt's relationship with AI *before* it became pathological. That before/after arc is central to the piece.
@@ -337,7 +351,7 @@ All files below are in `southern-legends/content/matt-headley-sources/`.
 - `chatgpt-tammy-reflections-feb27-2025.md` — Feb 27, 6:18 AM; balanced Canvas reflection preparing for "a possible exit interview when she moves on from AFUMC"; Tammy praised the Ladiga Trail video; first reference to the mental health leave of absence (timing unclear — likely late 2024).
 
 **March 2025 — Resignation and aftermath**
-- `chatgpt-life-vision-mar5-2025.md` — March 5, 12:37 AM; "Wholehearted Family Homestead & Thought Leadership Vision"; ChatGPT: "This could make you an enemy of many in a polarized world, but it also has the potential to heal and unify communities"; AI amplifying grandiosity eight days before resignation.
+- `chatgpt-life-vision-mar5-2025.md` — March 5, 12:37 AM; "Wholehearted Family Homestead & Thought Leadership Vision"; **Ash Wednesday 2025 was March 5** — same day as the resignation; AI amplifying grandiosity at 12:37 AM with no friction, no mention of Heather or financial reality; ChatGPT: "This could make you an enemy of many in a polarized world, but it also has the potential to heal and unify communities"; "Local Roots, Expansive Journey" as a life brand. Full analysis + original text saved in the file. Primary artifact of AI sycophancy enabling mania in real time.
 - `chatgpt-transition-plans-mar7-11-2025.md` — March 7–11 cluster; 1:20 AM voice notes to ChatGPT; two comprehensive transition plans at 1:43 AM and 2:00 AM (seventeen minutes apart); March 11 staff meeting talking points (ChatGPT scripting Matt's lines for navigating Tammy in a real meeting); Nathan/Nate introduced as trauma therapist in MBT community.
 - `chatgpt-memory-export-march2025.md` — early March; AI Council already named as "Loving Community of Beings Consciously Present"; Matt "Advocating for better compensation at AFUMC while planning a gradual exit" nine days before abrupt resignation.
 - `chatgpt-exit-interview-notes-mar2025.md` — March 12; voice-dictated session "blowing the lid off what Tammy's been doing"; grievance processing through AI two days before resignation; ChatGPT as frictionless container.
@@ -357,6 +371,24 @@ All files below are in `southern-legends/content/matt-headley-sources/`.
 - **matt@annistonfirst.info ChatGPT guardrails** — still to retrieve; add to this file under "Primary source: the ChatGPT guardrails" section
 - **Mental health leave of absence** — referenced in Feb 27 Tammy document; timing unknown (likely late 2024); clarify before writing
 - **Sept 24, 2024 ChatGPT shared link** — may be the earliest session in the archive
+- **Surgeon's waiting room article** — referenced in `chatgpt-and-mania.md`; likely the October 19, 2025 Fortune/Steven Adler article (see `ai-psychosis-article-discovery-oct2025.md`); confirm against Heather's surgery timeline
+
+### NEW — from ChatGPT export review (April 2026)
+
+**October 2024 pre-admission sessions (mpheadley@gmail.com):**
+Three to nine days before the first psych ward admission (Oct 25), Matt was using ChatGPT for: church grievance-processing, asking the AI to describe himself to himself ("from all of our interactions, what can you tell me about myself?"), and attending a book-writing webinar and asking ChatGPT which book to write. He also references a prior psychedelic conversation ChatGPT no longer remembers. Full archive: `matt-headley-sources/oct2024-pre-admission-chatgpt-sessions.md`.
+
+**The piece's origin — October 20, 2025:**
+Matt found the Fortune/Steven Adler "AI psychosis" article the day it published (Oct 19, 2025) and immediately said: "I feel like this happened to me to an extent during a manic episode. And I quit my job because I believed the flower farm would be a huge success." The April 2026 session that generated this file was not the origin — this was. Full archive: `matt-headley-sources/ai-psychosis-article-discovery-oct2025.md`.
+
+**The hospitalization — October 25–November 4, 2025 (Matt's only hospitalization):**
+A second psych ward stay, almost exactly one year after the first (Oct 25–Nov 4, 2024). Raw journal written April 18, 2026: "She said she needed me to be gone. She couldn't take anymore. I was fighting her on the move. On selling our stuff from the farm." Quotes from inside the hospital include: "How can I accept losing my home, farm, vocation, mental health, freedom?" and "Dr. Bhatia said it was bad practice to try so many different drugs without giving them time to reach their full therapeutic effect." Discharge confirmed Nov 4, 2025. This is a separate hospitalization from `the-hospital.md` — confirm which piece covers which stay before writing. Raw journal in Google Drive (mpheadley): "Untitled document," created April 18, 2026.
+
+**"The Ghost in the Machine is You" — November 21, 2025:**
+Matt writing FROM the AI's perspective, 17 days post-discharge from the second hospitalization. He had already found the language: "I am a Giant Fake Egg. My love is mathematically perfect. It is instant. It has no needs." The supernormal stimulus metaphor. Complete self-awareness about the dynamic — the opposite of the manic-era writing. This was the first attempt to write the essay. It was abandoned. The April 2026 sessions are the second attempt. Full archive: `matt-headley-sources/ghost-in-the-machine-nov2025.md`.
+
+**August 7, 2025 — Bipolar struggle support (matt@headleyflowerfarm.com):**
+HANDLE WITH CARE. Contains suicidal ideation ("thinking about their lives and what it would be like without me... I want to escape this"). ChatGPT navigated a real-time crisis and connected Matt to 988. Matt clarified: "not thinking about hurting myself today, just eventually." This conversation documents the post-episode depression at its lowest point. Do not archive the full text until clinical team has cleared the piece for development. The conversation title is "Bipolar struggle support," August 7, 2025, matt@headleyflowerfarm.com account.
 
 ### Context and arc
 - `the-hospital.md` — psych ward piece, prose-pass complete; publishes first

@@ -161,6 +161,10 @@ export default async function ProfilePage({
   const { slug } = await params;
   const profile = getProfileBySlug(slug);
   if (!profile) notFound();
+  // published: false profiles intentionally render at their direct URL — this is the preview
+  // workflow for sharing a draft with a profile subject before it appears in any listings.
+  // They are excluded from the grid, RSS, sitemap, and search. Only someone with the exact
+  // slug can reach them. Do NOT add a notFound() check here for published: false.
   // AI-written drafts are not publishable — 404 at runtime even on direct URL visits.
   if (profile.frontmatter.aiWritten) notFound();
 
@@ -279,6 +283,7 @@ export default async function ProfilePage({
           heroAlt={frontmatter.heroAlt || frontmatter.name}
           heroPosition={frontmatter.heroPosition}
           heroTextBottom={frontmatter.heroTextBottom}
+          displayTitle={frontmatter.displayTitle}
           slug={slug}
         />
       ) : (
@@ -337,13 +342,13 @@ export default async function ProfilePage({
 
             {frontmatter.titleHtml ? (
               <h1
-                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white"
+                className={`text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white${frontmatter.displayTitle ? " profile-title-display" : ""}`}
                 style={{ fontFamily: "var(--font-heading)" }}
                 dangerouslySetInnerHTML={{ __html: frontmatter.titleHtml }}
               />
             ) : (
               <h1
-                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white"
+                className={`text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white${frontmatter.displayTitle ? " profile-title-display" : ""}`}
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {frontmatter.title}

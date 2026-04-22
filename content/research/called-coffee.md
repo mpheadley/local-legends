@@ -2,13 +2,25 @@
 
 ## Facts
 - **Owner:** Jerod Snider (spelling confirmed: JEROD, not Jerrod)
-- **Address:** 1208 Quintard Avenue, Anniston, AL
+- **Address:** 1400 Quintard Avenue, Anniston, AL ⚠️ Gemini says 1400 — draft says 1208, verify before publish
 - **Website/hours:** TBD (need to verify)
-- **Category:** Coffee shop and roastery
-- **Origin:** Started as mobile espresso van at Anniston downtown farmers market
-- **Brick-and-mortar:** Opened 2021 in former Daylight Donuts building on Quintard Ave
-- **Roasting:** On-site, direct from growers in Peru
-- **Community:** Hosts Chamber of Commerce networking events on Friday mornings, supports local nonprofits and businesses
+- **Category:** Coffee shop, roastery, podcast
+- **Self-description:** "Accidental entrepreneur"
+- **Peru origin:** 2017 — went to Peru to establish a church, discovered a 15-acre family coffee farm. Farmers were being underpaid; began helping them export beans directly to US. Now pays them reportedly 4x what they were receiving before.
+- **Mission:** Business exists to fund ongoing mission work and support the Peruvian farming families
+- **Growth timeline:**
+  - 2018: Coffee cart
+  - 2019: Food truck
+  - Then: Pop-up at Quintard Mall
+  - February 2023: Permanent brick-and-mortar at 1400 Quintard Ave
+- **Roasting:** On-site, direct trade from Peru farm
+- **Podcast:** "Called Coffee Podcast" — interviews doctors, teachers, community leaders about their personal "callings." Jerod understands the interview from both sides.
+- **Civic:** Appointed to Anniston Downtown Development Authority, Ward 4 representative (late 2025)
+- **Philanthropy:** Board of Directors, United Way of East Central Alabama
+- **Community:** Hosts Chamber of Commerce networking events on Friday mornings
+
+## Weaver Connection
+Jerod's hometown is Weaver, AL (confirmed in Spotlight). Matt was pastoring in Weaver during the years Jerod was building Called Coffee. Worth one sentence in the profile — they were in the same small town before either of them knew what the other was building.
 
 ## Matt's Connection
 - Got 5-gallon buckets of coffee grounds for flower farm
@@ -31,6 +43,33 @@
 5. You checked on me when things were falling apart — where does that instinct to care for the neighborhood come from?
 6. What should people try first when they visit?
 7. Tell me about the podcast — what made you start it, and what are you trying to do with it that a coffee shop alone can't?
+
+## Key Story Details (from Star / Yahoo News)
+- **2016:** Jerod and Hannah sold everything, moved to Huancayo, Peru with their 8-month-old daughter to plant a church
+- **The farm:** A church member named Elisa gave him beans from her father Gregorio's highland farm (La Vida Dor). "I had no idea they had a coffee farm. I tasted it, and at that time, it was the best coffee I had ever had."
+- **The ask:** "We just agreed to help them try to get it to the U.S. And I had no idea how to do that."
+- **The economics:** "Where originally he was selling his coffee for five soles a kilo — this last year, it's gotten so good, we were able to pay 28 soles per kilo. I'm super proud of that."
+- **Drive-thru:** Now accounts for 70% of business
+- **House blend:** Honduras, chocolate and nut notes (separate from the Peru beans)
+- **Shop design:** Pale wood, white chairs, brick countering, olive-green accent wall, mural of coffee supply chain
+- **Pastries/food:** Artisanal Baked Goods + Heirloom Taco
+- **Hours:** Mon–Fri 6am–7pm, Sat 8am–4pm
+
+## Key Jerod Quotes
+- "I had no idea they had a coffee farm. I tasted it, and at that time, it was the best coffee I had ever had."
+- "We just agreed to help them try to get it to the U.S. And I had no idea how to do that."
+- "Where originally he was selling his coffee for five soles a kilo — this last year, it's gotten so good, we were able to pay 28 soles per kilo. I'm super proud of that."
+- "We've been so blessed with just an amazing team. Our goal is, when you come in, you just feel welcome."
+- "Called Coffee is — we believe that everybody's called to do something. There's always something you can do to help somebody else out."
+- "I've never started it with an intention of doing any of this. I was just trying to sell a bag. Still don't know what's next."
+- "We feel like it's something we're called to do, and we also feel like every person...is created to do something specific. We try to inspire people...to know they have a purpose in life."
+
+## Primary Sources
+- **Calhoun Journal interview:** https://calhounjournal.com — direct Jerod quote: *"Called Coffee actually began in 2017. My family and I were living in Peru as missionaries and some of the members of the church down there are..."* Also: *"The family that grows our coffee, we're paying 4 times as much now as they were getting before, so it's drastically changed their lives. We still do a lot of..."*
+- **Calhoun County Insight:** https://www.calhouncountyinsight.com/drink-like-a-local-called-coffee — confirms address 1400 Quintard, growth timeline (cart → truck → mall pop-up → permanent)
+- **Called Coffee Podcast on Apple Podcasts:** https://podcasts.apple.com — "What are you called to do? Join Jerod as he explores this big question with guest speakers from diverse backgrounds"
+- **United Way of East Central Alabama board listing:** https://uweca.org/board-of-directors
+- **City Council board appointment:** Calhoun Journal — Anniston City Council approves board appointments
 
 ## Draft Issues (from prior review)
 - Too much Matt, not enough Jerod — Jerod must be main character
