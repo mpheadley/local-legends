@@ -5,15 +5,19 @@ export interface TimelineItem {
 }
 
 interface TimelineBlockProps {
-  items: TimelineItem[];
+  items?: TimelineItem[];
+  itemsJson?: string;
   caption?: string;
 }
 
-export default function TimelineBlock({ items = [], caption }: TimelineBlockProps) {
+export default function TimelineBlock({ items, itemsJson, caption }: TimelineBlockProps) {
+  const resolvedItems: TimelineItem[] = itemsJson
+    ? (JSON.parse(itemsJson) as TimelineItem[])
+    : (items ?? []);
   return (
     <figure className="not-prose my-8 bg-ll-warm border border-ll-border rounded-lg px-5 py-5">
       <ol className="relative border-l border-ll-border ml-3 space-y-6">
-        {items.map((item, i) => (
+        {resolvedItems.map((item, i) => (
           <li key={i} className="pl-6">
             {/* Dot */}
             <span

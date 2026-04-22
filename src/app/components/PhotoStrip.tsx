@@ -9,11 +9,15 @@ export interface StripPhoto {
 }
 
 interface PhotoStripProps {
-  photos: StripPhoto[];
+  photos?: StripPhoto[];
+  photosJson?: string;
   caption?: string;
 }
 
-export default function PhotoStrip({ photos = [], caption }: PhotoStripProps) {
+export default function PhotoStrip({ photos, photosJson, caption }: PhotoStripProps) {
+  const resolvedPhotos: StripPhoto[] = photosJson
+    ? (JSON.parse(photosJson) as StripPhoto[])
+    : (photos ?? []);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   function scroll(dir: "left" | "right") {
@@ -31,7 +35,7 @@ export default function PhotoStrip({ photos = [], caption }: PhotoStripProps) {
           className="flex gap-2 overflow-x-auto snap-x snap-mandatory px-4 py-4 scrollbar-none"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {photos.map((photo, i) => (
+          {resolvedPhotos.map((photo, i) => (
             <div
               key={i}
               className="flex-shrink-0 snap-start relative rounded overflow-hidden"
@@ -55,7 +59,7 @@ export default function PhotoStrip({ photos = [], caption }: PhotoStripProps) {
         </div>
 
         {/* Scroll buttons */}
-        {photos.length > 2 && (
+        {resolvedPhotos.length > 2 && (
           <>
             <button
               onClick={() => scroll("left")}
