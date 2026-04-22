@@ -63,6 +63,10 @@ export default function SupportPage() {
           </p>
 
           <p>
+            It funds the next profile — the interview, the drive, the hours it takes to get it right — and keeps everything here free to read.
+          </p>
+
+          <p>
             If something here has landed, here&apos;s one way to carry it with you.
           </p>
 
