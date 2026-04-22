@@ -15,7 +15,8 @@ Shannon is someone who sees people and shows up — personally and professionall
 - Crossed paths at the church when United Way was in conversations about hosting a warming station on the church property — before United Way purchased the property to build the homeless shelter
 - Gas station bump-in in Golden Springs → Shannon reached out, they started having coffee
 - Shannon showed up for Matt during his mental health leave from the church — checking in, encouraging him to seek psychiatric help, telling him it was going to be okay
-- At Full Belly Deli (mentioned in the Freedom Riders profile): Shannon told Matt **"Don't be afraid to dream."** — direct quote, vivid moment, worth getting on record
+- At Full Belly Deli (next door to the Freedom Riders Monument — crosslink opportunity): bumped into each other in line — Shannon may have been with Kyle, Matt may have been with Tammy and Emmalie, both groups arriving around the same time. Shannon told Matt **"Don't be afraid to dream."** — during Matt's first depression, before his leave of absence. Direct quote, needs Shannon's confirmation.
+- **Note:** Shannon didn't leave a meeting to find Matt — it was a coincidental encounter in line. Still carries weight: the people who diminished Matt were right there, and Shannon saw him anyway.
 - When Matt was manic (post-resignation, flood of nonprofit ideas): Shannon gently encouraged him to pace himself sharing the ideas because people could get overwhelmed. Sound, patient advice — didn't know Matt was manic, just showed wisdom
 - Recommends music: referred Matt to a Cory Asbury album about faith/fatherhood. At April 9 coffee meeting, recommended the last two Mumford & Sons albums when Matt mentioned he'd quit listening to music during his depression
 - Shannon's son has had mental health challenges — informed his empathy toward Matt. **Do not write about the son's story — it's not Shannon's to share publicly and not Matt's to tell.**
@@ -36,6 +37,7 @@ Shannon is someone who sees people and shows up — personally and professionall
 - Studied marketing at Jacksonville State University
 - Thought he'd go into full-time career ministry — did music ministry at his church
 - Difficult experience with church music ministry, realized it wasn't for him
+- Worked at Movie Gallery as a college student
 - Took over graphic design business from his wife — she had started it before print shops had in-house designers
 - Early Apple computer, 8 megabytes of memory — laughed about how different it was
 - Worked from home, felt isolated — needed to get out of the house
@@ -80,6 +82,18 @@ Shannon is someone who sees people and shows up — personally and professionall
 - ASR articles — search for United Way / Shannon Jenkins coverage
 
 ---
+
+## Opening Arc (decided April 2026)
+
+- **True version:** Shannon saw Matt before Matt knew he saw him. The gas station wasn't a stranger reaching out — it was a recognition that had been waiting for the right moment.
+- Matt's verbatim (opening sentence candidate): *"I knew who he was but didn't feel I could take up space or tell him how I knew of him."*
+- Shannon gave full attention in the hallway — eye contact, handshake, smile. The institution diminished Matt; Shannon didn't.
+- **Framing note:** Shannon's profile doesn't carry Matt's anger at Tammy and Kyle. What it carries is the contrast — the institution diminished Matt, and Shannon, inside that same institution, saw him anyway.
+- Lead with: *"I'd heard his name for years before I ever shook his hand."*
+- Then: hallway at Anniston First, Shannon with Kyle and Tammy — Matt stopped, Shannon shook his hand like it mattered
+- **Crosslink opportunity:** Anniston First UMC — no SL profile yet. Add link when that piece is written.
+- Then: gas station — Shannon reached out because Matt had made an impression. Matt didn't know he'd left one.
+- Shannon's Facebook message is the reversal: *"just seeing your familiar face helped"*
 
 ## Outreach Plan
 

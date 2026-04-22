@@ -33,6 +33,15 @@ I worked at Camp Lee for about two weeks hoping that I might be able to get a jo
 - Eventually got both the title and the raise. But the fight to get what was promised is part of the grief — the career was real, the expertise was real, and even getting recognized for it required fighting.
 - **The timing irony:** Fought for years to become associate pastor. Finally got it. Resigned while manic. The title he earned landed him in the same sentence as the thing he lost. This is the grief behind the orienting line in No Shade — "Anniston First, where I used to be associate pastor" — the word *used to* carrying everything this section holds.
 
+## The bait and switch — how he got to Anniston First (April 2026, verbatim)
+
+- **Demoted from Weaver First.** Went from pastor to something less. Then bait-and-switched onto the Anniston First staff.
+- **Tammy's offer:** She was the one who reached out. Told him the position was going to be staff — no housing allowance. Less than a week to accept. He took it. He felt he'd been hired under false pretenses.
+- **The hallway moment with Shannon Jenkins:** First saw Shannon on the Anniston First campus when Shannon was meeting with Kyle about the homeless shelter director position. They may have been very briefly introduced in the hallway. Matt's words: *"I was not important enough for a full introduction."*
+- **The emotional context:** He was more than a little begrudged at this point — demoted, bait-and-switched, operating inside an institution that had already shown him what he was worth to them. The hallway non-introduction wasn't personal to Shannon. But it landed on top of everything else.
+- **Why this matters for the Shannon Jenkins profile:** The gas station message from Shannon — *"just seeing your familiar face helped"* — is the reversal. The man who didn't rate a full introduction became someone whose face, at a gas pump, could help a person get through a hard morning. That's the opening.
+- **Kimberly Westbrooks connection:** Kimberly at Weaver First UMC told Matt about Shannon around 2019, when Matt was dealing with homelessness issues in Weaver as pastor. She said Shannon was doing a good job helping Anniston reduce the duplication of resources and advised Matt to connect with him. Matt heard Shannon's name — and his reputation — before he ever met him.
+
 ---
 
 ## Jacksonville First Methodist (ca. 2023)
