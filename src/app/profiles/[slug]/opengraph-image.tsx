@@ -122,23 +122,6 @@ export default async function OGImage({
           }}
         />
 
-        {/* Topo texture overlay */}
-        <img
-          src={`data:image/png;base64,${readFileSync(join(process.cwd(), "public/topo-7.png")).toString("base64")}`}
-          alt=""
-          width={500}
-          height={500}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            opacity: 0.15,
-          }}
-        />
-
 
         {/* Top bar — solid dark, like the site nav */}
         <div
