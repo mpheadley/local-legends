@@ -158,6 +158,36 @@ Decisions and why:
 - **Done:** Design system, layout, homepage, about page, profile detail page, profile listing (with tag filtering), search page (`/search`), reading progress bar on profiles, related stories by tag on profiles, full-text RSS, 7 published profiles (1 by Matt, 6 edited), 16 research docs in `content/research/`, scroll animations, share buttons, story navigation, subscribe CTA
 - **Fonts loaded via `<link>` in layout.tsx** — Fraunces and Rock Salt are Google Fonts links, not `next/font`. Source Sans 3 uses `next/font/google`. Consider migrating Fraunces/Rock Salt to `next/font` for performance.
 
+## Journal MDX Components — Status (browser-tested April 2026)
+
+All components registered in `src/app/journal/[slug]/page.tsx` under `mdxComponents`.
+
+**Working (simple string/url props):**
+- `VideoEmbed` — YouTube embed, correct 16:9 aspect ratio, caption renders
+- `MusicEmbed` — Spotify embed, correct height, caption renders
+- `SongCard` — "Today's Anthem" card, title/artist/note all render
+- `ArtCredit` — image + "Art: [artist]" attribution renders correctly
+- `SermonCard` — wraps AudioPlayer, "Preached at" label renders, audio functional
+
+**Fixed — JSON string prop workaround (April 2026):**
+- `PhotoStrip` — use `photosJson='[{"src":"...","alt":"...","caption":"..."}]'` instead of `photos={[...]}`. Component parses the JSON string internally.
+- `TimelineBlock` — use `itemsJson='[{"date":"...","label":"...","detail":"..."}]'` instead of `items={[...]}`. Component parses the JSON string internally.
+
+**Root cause:** Turbopack/next-mdx-remote v6 RSC drops object-array JSX prop expressions at the MDX source level. Simple string props pass through fine. JSON string props are simple strings — they survive the compilation.
+
+**MDX usage example:**
+```mdx
+<TimelineBlock
+  caption="My timeline"
+  itemsJson='[{"date":"2019","label":"Started farming","detail":"Planted the first field."},{"date":"2024","label":"Started over"}]'
+/>
+
+<PhotoStrip
+  caption="My photos"
+  photosJson='[{"src":"/images/photo.webp","alt":"Description","caption":"Optional caption"}]'
+/>
+```
+
 ## OG Images
 - **Manual OG (preferred):** Open `og-preview.html`, edit title/name/image/position, screenshot at 1200x630, save to `public/images/social/{slug}-og.png`. The site auto-detects and uses it.
 - **Satori fallback:** `src/app/profiles/[slug]/opengraph-image.tsx` auto-generates for profiles without a manual screenshot.
