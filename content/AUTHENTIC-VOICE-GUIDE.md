@@ -327,6 +327,7 @@ Run this before returning any draft or edit to Matt. The checklist finds problem
 10. **When in doubt: add a detail, remove an adjective.**
 11. **Prefer idiomatic over literary.** "Kicked in" over "commenced." "Quit" over "abandoned." "Stuck" over "remained." Write in the language you actually think in — the native tongue is more honest than the literary one. (Karr, Orwell)
 12. **Direct speech gets quotes. Indirect speech doesn't.** Words actually said in the moment: put them in quotes. Paraphrase, summary, reported speech: no quotes. *"Just checking it out"* is a quote. *He asked about the farm* is not. Mixing them without quotes flattens the difference between what was witnessed and what was reconstructed.
+13. **Ground quotes in their source.** Before using a quote, know where it came from — heard directly, or from a news article or public record. If you can't remember, treat it as reported speech, not direct. Quotes imply witness. Using sourced material as if it were firsthand is a trust problem.
 
 ---
 
