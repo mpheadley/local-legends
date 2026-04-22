@@ -79,7 +79,7 @@ export default function AboutPage() {
               height={120}
               className="rounded-lg float-left mr-6 mb-2"
             />
-            <p className="text-ll-text leading-relaxed mb-6">
+            <p id="farm" className="text-ll-text leading-relaxed mb-6">
               My name is Matt Headley. I live in Jacksonville. I spent nineteen
               years in music and pastoral ministry. Somewhere in the middle of
               that, my wife and I built a
