@@ -298,16 +298,22 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         </Link>
       </section>
 
-      {/* Merch — primary shirt from frontmatter, plus I Contain Multitudes as evergreen second option */}
+      {/* Merch — always shows two shirts: primary from frontmatter, plus a second evergreen option.
+          ICM-primary posts pair with Still Here. All others pair with ICM. */}
       {(frontmatter.merchUrl || process.env.NEXT_PUBLIC_MERCH_STORE_URL) && (() => {
         const ICM_URL = "https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes";
         const ICM_IMAGE = "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync";
+        const SH_URL = "https://matt-headley-shop.fourthwall.com/products/still-here";
+        const SH_IMAGE = "https://imgproxy.fourthwall.com/FyWryySt9e8_rzT3yE6eItoqF6GstCkbBJSuL62LpoY/w:1920/sm:1/enc/kZytLUESOJY7WIq3/mQmU8CAxU0TQJrD2/LFh8Y-uqr4QKxZUr/-r3HZV9rDnJj-a9U/SY5J9AEtq4g5o7L3/JwKTj1OyPau1R0tC/tTw60OgXWBZkD6Hu/wWE8ibGTgAZsKMsY/WTotCATD8-xnovcw/FEwNfv2JgknjHnf0/ug0yHPZ7pcf3JZ2i/bZ0phQZB_NTgL9ld/E3bYmALpumGY4hCG/Su9KSvpN3h6FOoRK/dNXM-cTSQcw";
         const primaryUrl = frontmatter.merchUrl ?? process.env.NEXT_PUBLIC_MERCH_STORE_URL ?? "";
         const primaryImage = frontmatter.merchImage ?? ICM_IMAGE;
-        const showICM = primaryUrl !== ICM_URL;
+        const isICMPrimary = primaryUrl === ICM_URL;
+        const secondUrl = isICMPrimary ? SH_URL : ICM_URL;
+        const secondImage = isICMPrimary ? SH_IMAGE : ICM_IMAGE;
+        const secondAlt = isICMPrimary ? "Still Here tee" : "I Contain Multitudes tee";
         return (
           <section className="bg-ll-warm py-12 border-t border-ll-border text-center">
-            <div className={`mx-auto px-6 flex gap-8 justify-center items-start ${showICM ? "max-w-sm" : "max-w-xs"}`}>
+            <div className="mx-auto px-6 flex gap-8 justify-center items-start max-w-sm">
               <div className="flex flex-col items-center gap-4">
                 <Image
                   src={primaryImage}
@@ -325,25 +331,23 @@ export default async function JournalPostPage({ params }: { params: Params }) {
                   Wear it →
                 </a>
               </div>
-              {showICM && (
-                <div className="flex flex-col items-center gap-4">
-                  <Image
-                    src={ICM_IMAGE}
-                    alt="I Contain Multitudes tee"
-                    width={160}
-                    height={160}
-                    className="rounded"
-                  />
-                  <a
-                    href={ICM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
-                  >
-                    Wear it →
-                  </a>
-                </div>
-              )}
+              <div className="flex flex-col items-center gap-4">
+                <Image
+                  src={secondImage}
+                  alt={secondAlt}
+                  width={160}
+                  height={160}
+                  className="rounded"
+                />
+                <a
+                  href={secondUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+                >
+                  Wear it →
+                </a>
+              </div>
             </div>
           </section>
         );
