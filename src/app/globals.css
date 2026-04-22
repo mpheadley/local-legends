@@ -1696,9 +1696,9 @@ mark {
 /* ─── Display Title (opt-in via displayTitle: true in frontmatter) ─── */
 .st-hero-title.profile-title-display,
 h1.profile-title-display {
-  font-size: clamp(3rem, 8vw, 6rem);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  font-size: clamp(4.5rem, 14vw, 11rem);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
 }
 
 .st-hero-subtitle {
