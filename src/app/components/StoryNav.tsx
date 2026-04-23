@@ -24,11 +24,6 @@ export default function StoryNav({ prev, next }: StoryNavProps) {
   return (
     <nav className="story-nav border-t border-ll-border" aria-label="More stories">
       <div className="max-w-3xl mx-auto px-6 pt-8 pb-10">
-        <p
-          className="text-xs font-medium uppercase tracking-wider text-ll-text-light mb-6"
-        >
-          More Stories
-        </p>
         <div className="grid grid-cols-2 gap-6">
           {/* Left card */}
           <div>
