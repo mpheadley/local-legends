@@ -23,7 +23,7 @@ import ParallaxHero from "@/app/components/ParallaxHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 import Comments from "@/app/components/Comments";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
-import ProfileCard from "@/app/components/ProfileCard";
+import ProfileCardHero from "@/app/components/ProfileCardHero";
 import { scrollytellingConfigs } from "@/lib/scrollytelling-configs";
 
 const mdxComponents = {
@@ -495,9 +495,9 @@ export default async function ProfilePage({
             >
               More Like This
             </h2>
-            <div className={`grid gap-8 ${related.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}>
+            <div className={`grid gap-8 ${related.length > 1 ? "sm:grid-cols-2" : "max-w-sm mx-auto"}`}>
               {related.map((p) => (
-                <ProfileCard key={p.slug} profile={p} />
+                <ProfileCardHero key={p.slug} profile={p} />
               ))}
             </div>
           </div>
