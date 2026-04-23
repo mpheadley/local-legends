@@ -65,7 +65,9 @@ export default async function OGImage({
       const scale = Math.max(1200 / srcW, 630 / srcH);
       const scaledW = Math.round(srcW * scale);
       const scaledH = Math.round(srcH * scale);
-      const topOffset = Math.round((scaledH - 630) * 0.35);
+      // topOffset: 0 = crop from top (face high in frame), 1.0 = crop from bottom (face low). Default 0.35.
+      const ogPosition = profile.frontmatter.ogPosition ?? 0.35;
+      const topOffset = Math.round((scaledH - 630) * ogPosition);
       const leftOffset = Math.round((scaledW - 1200) / 2);
       const pngBuffer = await sharp(buffer)
         .resize(scaledW, scaledH)
