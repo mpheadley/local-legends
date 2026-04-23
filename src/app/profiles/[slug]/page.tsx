@@ -16,7 +16,6 @@ import ArticleImage from "@/app/components/ArticleImage";
 import PhotoCarouselLoader from "@/app/components/PhotoCarouselLoader";
 import PullQuote from "@/app/components/PullQuote";
 import VideoLoop from "@/app/components/VideoLoop";
-import StoryNav from "@/app/components/StoryNav";
 import ShareButtons from "@/app/components/ShareButtons";
 import ScrollytellingProfile from "@/app/components/ScrollytellingProfile";
 import ParallaxHero from "@/app/components/ParallaxHero";
@@ -499,12 +498,19 @@ export default async function ProfilePage({
                 <ProfileCardHero key={p.slug} profile={p} />
               ))}
             </div>
+            {/* Journal aside */}
+            <div className="mt-10 pt-6 border-t border-ll-border text-center">
+              <Link
+                href="/journal/no-shade"
+                className="text-sm hover:text-ll-primary transition-colors"
+                style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-text-light)" }}
+              >
+                Meanwhile in the journal: <em>No Shade</em> →
+              </Link>
+            </div>
           </div>
         </section>
       )}
-
-      {/* Story Navigation (prev/next) */}
-      <StoryNav prev={prev} next={next} />
 
       {/* Subscribe */}
       <SubscribeCTA />
