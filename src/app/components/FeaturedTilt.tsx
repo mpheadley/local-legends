@@ -255,8 +255,8 @@ export default function FeaturedTilt({ cards }: { cards: FeaturedCard[] }) {
               const textTransform: React.CSSProperties["textTransform"] = (isCondensed || card.cardFont === "serif-caps") ? "uppercase" : undefined;
               const letterSpacing = card.cardFont === "serif-caps" ? "0.08em" : undefined;
               const titleColor = card.cardTitleColor === "gold" ? "var(--color-ll-accent)" : "#FAFAF7";
-              // 700px: FeaturedTilt is full-screen, much wider than a grid card
-              const titleFontSize = computeCardFontSize(displayTitle, card.cardFont, card.cardFontSize, 700);
+              // 456px: panel content max-width 520px minus ~2rem padding each side
+              const titleFontSize = computeCardFontSize(displayTitle, card.cardFont, card.cardFontSize, 456);
               return (
                 <Link
                   href={`/profiles/${card.slug}`}
@@ -273,13 +273,13 @@ export default function FeaturedTilt({ cards }: { cards: FeaturedCard[] }) {
                   {useHtml ? (
                     <h2
                       className="featured-panel-name ft-stagger"
-                      style={{ fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, fontSize: titleFontSize, overflowWrap: "break-word", maxWidth: "100%" }}
+                      style={{ fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, fontSize: titleFontSize, overflowWrap: "normal", maxWidth: "100%" }}
                       dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
                     />
                   ) : (
                     <h2
                       className="featured-panel-name ft-stagger"
-                      style={{ fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, fontSize: titleFontSize, overflowWrap: "break-word", maxWidth: "100%" }}
+                      style={{ fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, fontSize: titleFontSize, overflowWrap: "normal", maxWidth: "100%" }}
                     >
                       {displayTitle}
                     </h2>
