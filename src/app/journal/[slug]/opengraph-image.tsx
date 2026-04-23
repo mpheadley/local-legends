@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getJournalPostBySlug, getAllJournalPosts } from "@/lib/journal";
+import { getJournalPostBySlug } from "@/lib/journal";
 import { readFileSync } from "fs";
 import { join } from "path";
 import sharp from "sharp";
@@ -9,18 +9,14 @@ export const alt = "Southern Legends journal";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+const BASE_URL = "https://southernlegends.blog";
+
 const frauncesSemiBold = readFileSync(
   join(process.cwd(), "src/app/fonts/Fraunces-SemiBold.ttf")
 );
 const sourceSans = readFileSync(
   join(process.cwd(), "src/app/fonts/SourceSans3-Regular.ttf")
 );
-
-export function generateStaticParams() {
-  return getAllJournalPosts()
-    .filter((p) => p.frontmatter.published)
-    .map((p) => ({ slug: p.slug }));
-}
 
 export default async function OGImage({
   params,
@@ -54,17 +50,14 @@ export default async function OGImage({
   }
 
   const { title, image } = post.frontmatter;
-
-  const resolvedImage = image || (() => {
-    const fallback = join(process.cwd(), "public", `images/journal/${slug}-hero.webp`);
-    try { readFileSync(fallback); return `/images/journal/${slug}-hero.webp`; } catch { return null; }
-  })();
+  const resolvedImage = image || `/images/journal/${slug}-hero.webp`;
 
   let heroSrc: string | null = null;
-  if (resolvedImage) {
-    try {
-      const imagePath = join(process.cwd(), "public", resolvedImage);
-      const buffer = readFileSync(imagePath);
+  try {
+    const res = await fetch(`${BASE_URL}${resolvedImage}`);
+    if (res.ok) {
+      const arrayBuffer = await res.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
       const meta = await sharp(buffer).metadata();
       const srcW = meta.width || 1200;
       const srcH = meta.height || 630;
@@ -79,9 +72,9 @@ export default async function OGImage({
         .png({ quality: 80 })
         .toBuffer();
       heroSrc = `data:image/png;base64,${pngBuffer.toString("base64")}`;
-    } catch {
-      heroSrc = null;
     }
+  } catch {
+    heroSrc = null;
   }
 
   return new ImageResponse(
@@ -125,7 +118,6 @@ export default async function OGImage({
             background: "linear-gradient(to right, rgba(41,37,36,0.5) 0%, transparent 30%, transparent 70%, rgba(41,37,36,0.5) 100%)",
           }}
         />
-
 
         <div
           style={{
@@ -206,7 +198,6 @@ export default async function OGImage({
           >
             {title}
           </div>
-
         </div>
       </div>
     ),

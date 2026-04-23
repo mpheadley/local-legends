@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getProfileBySlug, getPublishedSlugs } from "@/lib/profiles";
+import { getProfileBySlug } from "@/lib/profiles";
 import { readFileSync } from "fs";
 import { join } from "path";
 import sharp from "sharp";
@@ -9,16 +9,14 @@ export const alt = "Southern Legends profile";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+const BASE_URL = "https://southernlegends.blog";
+
 const frauncesSemiBold = readFileSync(
   join(process.cwd(), "src/app/fonts/Fraunces-SemiBold.ttf")
 );
 const sourceSans = readFileSync(
   join(process.cwd(), "src/app/fonts/SourceSans3-Regular.ttf")
 );
-
-export function generateStaticParams() {
-  return getPublishedSlugs().map((slug) => ({ slug }));
-}
 
 export default async function OGImage({
   params,
@@ -28,7 +26,6 @@ export default async function OGImage({
   const { slug } = await params;
   const profile = getProfileBySlug(slug);
 
-  // AI-written drafts are not publishable — render the generic fallback rather than an OG card for the draft.
   if (!profile || profile.frontmatter.aiWritten) {
     return new ImageResponse(
       (
@@ -57,8 +54,9 @@ export default async function OGImage({
   let heroSrc: string | null = null;
   if (heroImage) {
     try {
-      const imagePath = join(process.cwd(), "public", heroImage);
-      const buffer = readFileSync(imagePath);
+      const res = await fetch(`${BASE_URL}${heroImage}`);
+      const arrayBuffer = await res.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
       const meta = await sharp(buffer).metadata();
       const srcW = meta.width || 1200;
       const srcH = meta.height || 630;
@@ -93,7 +91,6 @@ export default async function OGImage({
           overflow: "hidden",
         }}
       >
-        {/* Hero image background */}
         {heroSrc && (
           <img
             src={heroSrc}
@@ -111,7 +108,6 @@ export default async function OGImage({
           />
         )}
 
-        {/* Side gradients — dark edges like homepage hero */}
         <div
           style={{
             display: "flex",
@@ -124,8 +120,6 @@ export default async function OGImage({
           }}
         />
 
-
-        {/* Top bar — solid dark, like the site nav */}
         <div
           style={{
             display: "flex",
@@ -165,7 +159,6 @@ export default async function OGImage({
           </span>
         </div>
 
-        {/* Title overlay — centered on image below bar */}
         <div
           style={{
             display: "flex",
@@ -180,7 +173,6 @@ export default async function OGImage({
             padding: "48px 60px",
           }}
         >
-          {/* Decorative rule above title */}
           <div
             style={{
               display: "flex",
@@ -191,7 +183,6 @@ export default async function OGImage({
             }}
           />
 
-          {/* Profile title */}
           <div
             style={{
               display: "flex",
@@ -209,7 +200,6 @@ export default async function OGImage({
             {title}
           </div>
 
-          {/* Business/place name */}
           {name && name !== title && (
             <div
               style={{
