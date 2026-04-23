@@ -32,8 +32,8 @@ export function computeCardFontSize(
   // Longest word must fit in one line without breaking.
   // charWidthFactor: approximate em-width per character (serif ~0.62, caps+tracking ~0.68, condensed ~0.52)
   const maxWordLen = stripped.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
-  // serif-caps: 0.76 accounts for uppercase glyph width + the 0.08em letter-spacing always applied
-  const charWidthFactor = isCondensed ? 0.52 : isSerifCaps ? 0.76 : 0.62;
+  // serif-caps: 0.85 accounts for uppercase glyph width (~0.75) + 0.08em letter-spacing + small safety margin
+  const charWidthFactor = isCondensed ? 0.52 : isSerifCaps ? 0.85 : 0.62;
   const wordCapRem = cardContentPx / (maxWordLen * charWidthFactor) / 16;
 
   return `${Math.min(lengthBasedRem, wordCapRem).toFixed(2)}rem`;

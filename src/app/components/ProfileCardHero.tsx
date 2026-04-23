@@ -55,7 +55,7 @@ export default function ProfileCardHero({ profile }: { profile: Profile }) {
           </div>
         )}
 
-        {/* Gradient — flips direction based on text position */}
+        {/* Gradient overlay */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
@@ -80,20 +80,29 @@ export default function ProfileCardHero({ profile }: { profile: Profile }) {
           {useHtml ? (
             <h3
               className="leading-[1.0]"
-              style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, overflowWrap: "break-word", maxWidth: "100%" }}
+              style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, overflowWrap: "normal", maxWidth: "100%" }}
               dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
             />
           ) : (
             <h3
               className="leading-[1.0]"
-              style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, overflowWrap: "break-word", maxWidth: "100%" }}
+              style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, overflowWrap: "normal", maxWidth: "100%" }}
             >
               {displayTitle}
             </h3>
           )}
+          {/* Glass pill for subtitle */}
           <p
-            className="leading-snug"
-            style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300, fontSize: "0.95rem", color: "rgba(250,250,247,0.65)" }}
+            className="leading-snug self-start"
+            style={{
+              fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300, fontSize: "0.85rem", color: "#FAFAF7",
+              background: "rgba(20,16,14,0.45)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              border: "1px solid rgba(250,250,247,0.15)",
+              borderRadius: "4px",
+              padding: "0.2rem 0.75rem",
+            }}
           >
             {name}&nbsp;&nbsp;·&nbsp;&nbsp;{location}
           </p>
