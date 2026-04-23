@@ -1,22 +1,12 @@
 import { ImageResponse } from "next/og";
 import { getProfileBySlug } from "@/lib/profiles";
-import { readFileSync } from "fs";
-import { join } from "path";
-import sharp from "sharp";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const alt = "Southern Legends profile";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const BASE_URL = "https://southernlegends.blog";
-
-const frauncesSemiBold = readFileSync(
-  join(process.cwd(), "src/app/fonts/Fraunces-SemiBold.ttf")
-);
-const sourceSans = readFileSync(
-  join(process.cwd(), "src/app/fonts/SourceSans3-Regular.ttf")
-);
 
 export default async function OGImage({
   params,
@@ -25,6 +15,20 @@ export default async function OGImage({
 }) {
   const { slug } = await params;
   const profile = getProfileBySlug(slug);
+
+  const [frauncesSemiBold, sourceSans] = await Promise.all([
+    fetch(new URL("../../fonts/Fraunces-SemiBold.ttf", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    ),
+    fetch(new URL("../../fonts/SourceSans3-Regular.ttf", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    ),
+  ]);
+
+  const fonts = [
+    { name: "Fraunces", data: frauncesSemiBold, style: "normal" as const, weight: 600 as const },
+    { name: "Source Sans 3", data: sourceSans, style: "normal" as const, weight: 400 as const },
+  ];
 
   if (!profile || profile.frontmatter.aiWritten) {
     return new ImageResponse(
@@ -45,38 +49,13 @@ export default async function OGImage({
           Southern Legends
         </div>
       ),
-      { ...size }
+      { ...size, fonts }
     );
   }
 
   const { title, name, location, heroImage } = profile.frontmatter;
-
-  let heroSrc: string | null = null;
-  if (heroImage) {
-    try {
-      const res = await fetch(`${BASE_URL}${heroImage}`);
-      const arrayBuffer = await res.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
-      const meta = await sharp(buffer).metadata();
-      const srcW = meta.width || 1200;
-      const srcH = meta.height || 630;
-      const scale = Math.max(1200 / srcW, 630 / srcH);
-      const scaledW = Math.round(srcW * scale);
-      const scaledH = Math.round(srcH * scale);
-      // topOffset: 0 = crop from top (face high in frame), 1.0 = crop from bottom (face low). Default 0.35.
-      const ogPosition = profile.frontmatter.ogPosition ?? 0.35;
-      const topOffset = Math.round((scaledH - 630) * ogPosition);
-      const leftOffset = Math.round((scaledW - 1200) / 2);
-      const pngBuffer = await sharp(buffer)
-        .resize(scaledW, scaledH)
-        .extract({ left: leftOffset, top: topOffset, width: 1200, height: 630 })
-        .png({ quality: 80 })
-        .toBuffer();
-      heroSrc = `data:image/png;base64,${pngBuffer.toString("base64")}`;
-    } catch {
-      heroSrc = null;
-    }
-  }
+  const ogPosition = profile.frontmatter.ogPosition ?? 0.35;
+  const heroUrl = heroImage ? `${BASE_URL}${heroImage}` : null;
 
   return new ImageResponse(
     (
@@ -91,9 +70,9 @@ export default async function OGImage({
           overflow: "hidden",
         }}
       >
-        {heroSrc && (
+        {heroUrl && (
           <img
-            src={heroSrc}
+            src={heroUrl}
             alt=""
             width={1200}
             height={630}
@@ -104,6 +83,7 @@ export default async function OGImage({
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              objectPosition: `center ${(ogPosition * 100).toFixed(0)}%`,
             }}
           />
         )}
@@ -220,22 +200,6 @@ export default async function OGImage({
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [
-        {
-          name: "Fraunces",
-          data: frauncesSemiBold,
-          style: "normal",
-          weight: 600,
-        },
-        {
-          name: "Source Sans 3",
-          data: sourceSans,
-          style: "normal",
-          weight: 400,
-        },
-      ],
-    }
+    { ...size, fonts }
   );
 }
