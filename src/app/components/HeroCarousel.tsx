@@ -7,6 +7,7 @@ import type { Profile } from "@/lib/profiles";
 import { computeCardFontSize } from "@/lib/card-font-size";
 
 
+
 interface HeroCarouselProps {
   profiles: Profile[];
 }
@@ -72,14 +73,15 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
           const displayTitle = cardTitle || title;
           const useHtml = !!cardTitleHtml || (!cardTitle && !!titleHtml);
           const resolvedHtml = cardTitleHtml || titleHtml;
-          const isCondensed = cardFont === "condensed";
-          const fontFamily = isCondensed ? "var(--font-condensed)" : "var(--font-heading)";
-          const fontWeight = cardFont === "serif-bold" ? 700 : isCondensed ? 700 : 400;
-          const fontStyle = cardFont === "serif-italic" ? "italic" : "normal";
-          const textTransform: React.CSSProperties["textTransform"] = (isCondensed || cardFont === "serif-caps") ? "uppercase" : undefined;
-          const letterSpacing = cardFont === "serif-caps" ? "0.08em" : undefined;
-          const titleColor = cardTitleColor === "gold" ? "var(--color-ll-accent)" : "#FAFAF7";
-          const titleFontSize = computeCardFontSize(displayTitle, cardFont, cardFontSize);
+          // Editorial display style — consistent across all carousel cards
+          const fontFamily = "var(--font-heading)";
+          const fontWeight = 700;
+          // Word-cap sizing: fill the container width based on longest word
+          const strippedTitle = (resolvedHtml || displayTitle).replace(/<[^>]+>/g, "");
+          const maxWordLen = strippedTitle.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
+          const wordCapRem = (346 / (maxWordLen * 0.62) / 16);
+          const baseSizeRem = parseFloat(computeCardFontSize(displayTitle, cardFont, cardFontSize, 390));
+          const titleFontSize = `${Math.min(baseSizeRem * 1.4, wordCapRem).toFixed(2)}rem`;
 
           return (
             <Link
@@ -119,13 +121,13 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
                 {useHtml ? (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, overflowWrap: "break-word", maxWidth: "100%" }}
+                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7", overflowWrap: "normal", maxWidth: "100%" }}
                     dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
                   />
                 ) : (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor }}
+                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7" }}
                   >
                     {displayTitle}
                   </h2>
