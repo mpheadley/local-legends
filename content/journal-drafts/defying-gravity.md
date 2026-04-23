@@ -33,10 +33,13 @@ We even bought the soundtrack. We bought the soundtrack, uh, on vinyl and, you k
 - **Room sensory hit:** Dark and quiet.
 - **Still missing:** what Matt's body was doing when the "delusions of grandeur" line landed. Visual of Tammy/kids at the moment.
 
-### Home / vinyl scene
-- **Room:** Living room.
-- **Body sensory hit:** Goosebumps on his skin listening to the Wicked vinyl.
-- **Still missing:** time of day, alone or with family, which spot in the room, what Matt looked like — was anyone watching him be this way?
+### Home / vinyl + movie scene
+- **Room:** Living room of the farmhouse. On the couch, in front of the TV.
+- **Activity:** Not only the vinyl — also watching the *Wicked* movie with the family on the TV.
+- **Who:** Heather and the kids on the couch with him.
+- **Body sensory hit:** Goosebumps on his skin. Being "so moved."
+- **Editor's note:** This is not a "Heather watches Matt be unwell" scene. Everyone was watching the same movie. The tension is that Matt was being moved *differently* than anyone in the room knew — the "delusions of grandeur" line landing on him as personal prophecy while his family was just enjoying a family movie night. The horror of the scene, if there is one, is the hiddenness of that difference.
+- **Still could sharpen:** morning, evening, weekend? Which kid was closest to him on the couch? Did Heather say anything he remembers?
 
 ### 6 AM Gungor / kids scene
 - **Still missing:** all three — anchor, sensory hit, visual of the kids and of Matt.
