@@ -62,7 +62,6 @@ export default async function OGImage({
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
           width: "100%",
           height: "100%",
           backgroundColor: "#292524",
@@ -70,133 +69,132 @@ export default async function OGImage({
           overflow: "hidden",
         }}
       >
+        {/* Image fills right 55% */}
         {heroUrl && (
-          <img
-            src={heroUrl}
-            alt=""
-            width={1200}
-            height={630}
+          <div
             style={{
+              display: "flex",
               position: "absolute",
               top: 0,
-              left: 0,
-              width: "100%",
+              right: 0,
+              width: "55%",
               height: "100%",
-              objectFit: "cover",
-              objectPosition: `center ${(ogPosition * 100).toFixed(0)}%`,
+              overflow: "hidden",
             }}
-          />
+          >
+            <img
+              src={heroUrl}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: `center ${(ogPosition * 100).toFixed(0)}%`,
+              }}
+            />
+            {/* Fade left edge of image into the dark panel */}
+            <div
+              style={{
+                display: "flex",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "40%",
+                height: "100%",
+                background: "linear-gradient(to right, #292524, transparent)",
+              }}
+            />
+          </div>
         )}
 
+        {/* Dark left panel — title lives here */}
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
             position: "absolute",
             top: 0,
             left: 0,
-            width: "100%",
+            width: "52%",
             height: "100%",
-            background: "linear-gradient(to right, rgba(41,37,36,0.5) 0%, transparent 30%, transparent 70%, rgba(41,37,36,0.5) 100%)",
-          }}
-        />
-
-        <div
-          style={{
-            display: "flex",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: 80,
-            backgroundColor: "#292524",
-            padding: "0 60px",
-            alignItems: "center",
-            justifyContent: "space-between",
+            padding: "60px 56px",
           }}
         >
+          {/* Site name */}
           <span
             style={{
               fontFamily: "Fraunces",
-              fontSize: 28,
+              fontSize: 22,
               fontWeight: 600,
               color: "#FAFAF7",
-              letterSpacing: "0.15em",
+              letterSpacing: "0.18em",
               textTransform: "uppercase" as const,
+              opacity: 0.7,
+              marginBottom: 32,
             }}
           >
             Southern Legends
           </span>
 
-          <span
-            style={{
-              fontFamily: "Source Sans 3",
-              fontSize: 24,
-              color: "#FAFAF7",
-              opacity: 0.7,
-            }}
-          >
-            By Matt Headley · {location}
-          </span>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "absolute",
-            top: 80,
-            left: 0,
-            width: "100%",
-            height: 550,
-            padding: "48px 60px",
-          }}
-        >
+          {/* Gold rule */}
           <div
             style={{
               display: "flex",
-              width: 80,
+              width: 60,
               height: 3,
               backgroundColor: "#CA8A04",
               marginBottom: 28,
             }}
           />
 
+          {/* Profile title */}
           <div
             style={{
               display: "flex",
               fontFamily: "Fraunces",
-              fontSize: title.length > 40 ? 72 : title.length > 25 ? 84 : 96,
+              fontSize: title.length > 30 ? 60 : title.length > 20 ? 72 : 80,
               fontWeight: 600,
               color: "#FAFAF7",
-              textAlign: "center",
-              lineHeight: 1.15,
-              maxWidth: 1000,
-              justifyContent: "center",
-              textShadow: "0 3px 12px rgba(0,0,0,0.8)",
+              lineHeight: 1.1,
+              marginBottom: 20,
             }}
           >
             {title}
           </div>
 
+          {/* Name */}
           {name && name !== title && (
             <div
               style={{
                 display: "flex",
                 fontFamily: "Source Sans 3",
-                fontSize: 36,
+                fontSize: 28,
                 fontWeight: 400,
                 color: "#CA8A04",
                 letterSpacing: "0.15em",
                 textTransform: "uppercase" as const,
-                marginTop: 24,
-                textShadow: "0 2px 8px rgba(0,0,0,0.7)",
               }}
             >
               {name}
             </div>
           )}
+
+          {/* Location — bottom of panel */}
+          <div
+            style={{
+              display: "flex",
+              position: "absolute",
+              bottom: 48,
+              left: 56,
+              fontFamily: "Source Sans 3",
+              fontSize: 20,
+              color: "#FAFAF7",
+              opacity: 0.5,
+            }}
+          >
+            By Matt Headley · {location}
+          </div>
         </div>
       </div>
     ),
