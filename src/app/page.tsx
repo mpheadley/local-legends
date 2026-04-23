@@ -121,79 +121,92 @@ export default function HomePage() {
 
       {/* ─── Journal Teaser ─── */}
       {featuredJournal && (
-        <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <section style={{ position: "relative", backgroundColor: "#F0EDE6" }}>
+          <div aria-hidden="true" className="grid-topo" />
+          <div className="mx-auto max-w-6xl px-6 py-16 md:py-20" style={{ position: "relative", zIndex: 1 }}>
 
-          {/* Full-width image card with text overlay */}
-          <Link
-            href={`/journal/${featuredJournal.slug}`}
-            className="group block relative overflow-hidden rounded-sm mx-auto max-w-2xl"
-            style={{ aspectRatio: "16 / 9" }}
-          >
-            {featuredJournal.frontmatter.cardImage && (
-              <Image
-                src={featuredJournal.frontmatter.cardImage}
-                alt={featuredJournal.frontmatter.cardImageAlt || featuredJournal.frontmatter.title}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                style={{ objectPosition: "center center" }}
-                sizes="(max-width: 640px) 100vw, 1152px"
-              />
-            )}
-            {/* Gradient */}
+            {/* Glass card — backdrop-filter + background on same element, no overflow-hidden here */}
             <div
-              aria-hidden="true"
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(to top, rgba(20,16,14,0.92) 0%, rgba(20,16,14,0.55) 40%, rgba(20,16,14,0.1) 70%, transparent 100%)" }}
-            />
-            {/* Text overlay */}
-            <div className="absolute bottom-0 left-0 right-0 px-8 pb-8 md:px-10 md:pb-10">
-              <p
-                className="text-xs uppercase tracking-widest mb-3"
-                style={{ color: "var(--color-ll-accent)", fontFamily: "var(--font-heading)", fontWeight: 600 }}
+              className="mx-auto max-w-2xl rounded-xl"
+              style={{
+                background: "rgba(250,250,247,0.45)",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                border: "1px solid rgba(250,250,247,0.7)",
+                boxShadow: "0 8px 32px rgba(41,37,36,0.14)",
+              }}
+            >
+              {/* Image card — overflow-hidden here clips photo to rounded-t-xl */}
+              <Link
+                href={`/journal/${featuredJournal.slug}`}
+                className="group block relative overflow-hidden rounded-t-xl"
+                style={{ aspectRatio: "16 / 9" }}
               >
-                From the Journal
-              </p>
-              <h2
-                className="text-3xl md:text-5xl mb-3 leading-tight"
-                style={{ fontFamily: "var(--font-heading)", fontWeight: 400, fontStyle: "italic", color: "#FAFAF7" }}
-              >
-                {featuredJournal.frontmatter.title}
-              </h2>
-              <p
-                className="text-sm md:text-base max-w-xl"
-                style={{ fontFamily: "var(--font-body)", color: "rgba(250,250,247,0.75)", lineHeight: 1.65 }}
-              >
-                {featuredJournal.frontmatter.excerpt}
-              </p>
-            </div>
-          </Link>
-
-          {/* Merch card below — centered */}
-          {featuredJournal.frontmatter.merchImage && featuredJournal.frontmatter.merchUrl && (
-            <div className="mt-4 flex justify-center">
-              <a
-                href={featuredJournal.frontmatter.merchUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 transition-opacity hover:opacity-75 mx-auto"
-              >
-                <div className="relative shrink-0 rounded-sm overflow-hidden" style={{ width: "3rem", height: "3rem" }}>
+                {featuredJournal.frontmatter.cardImage && (
                   <Image
-                    src={featuredJournal.frontmatter.merchImage}
-                    alt="I Contain Multitudes shirt"
+                    src={featuredJournal.frontmatter.cardImage}
+                    alt={featuredJournal.frontmatter.cardImageAlt || featuredJournal.frontmatter.title}
                     fill
-                    className="object-cover"
-                    sizes="48px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    style={{ objectPosition: "center center" }}
+                    sizes="(max-width: 640px) 100vw, 672px"
                   />
+                )}
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(to top, rgba(20,16,14,0.92) 0%, rgba(20,16,14,0.55) 40%, rgba(20,16,14,0.1) 70%, transparent 100%)" }}
+                />
+                <div className="absolute bottom-0 left-0 right-0 px-8 pb-8 md:px-10 md:pb-10">
+                  <p
+                    className="text-xs uppercase tracking-widest mb-3"
+                    style={{ color: "var(--color-ll-accent)", fontFamily: "var(--font-heading)", fontWeight: 600 }}
+                  >
+                    From the Journal
+                  </p>
+                  <h2
+                    className="text-3xl md:text-4xl mb-3 leading-tight"
+                    style={{ fontFamily: "var(--font-heading)", fontWeight: 400, fontStyle: "italic", color: "#FAFAF7" }}
+                  >
+                    {featuredJournal.frontmatter.title}
+                  </h2>
+                  <p
+                    className="text-sm md:text-base max-w-xl"
+                    style={{ fontFamily: "var(--font-body)", color: "rgba(250,250,247,0.75)", lineHeight: 1.65 }}
+                  >
+                    {featuredJournal.frontmatter.excerpt}
+                  </p>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold" style={{ fontFamily: "var(--font-heading)", color: "rgba(250,250,247,0.9)" }}>I Contain Multitudes</p>
-                  <p className="text-xs" style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-accent)" }}>Support this work &rarr;</p>
-                </div>
-              </a>
-            </div>
-          )}
+              </Link>
 
+              {/* Merch row inside glass card */}
+              {featuredJournal.frontmatter.merchImage && featuredJournal.frontmatter.merchUrl && (
+                <div className="px-6 py-4 flex justify-center">
+                  <a
+                    href={featuredJournal.frontmatter.merchUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 transition-opacity hover:opacity-75"
+                  >
+                    <div className="relative shrink-0 rounded-sm overflow-hidden" style={{ width: "5rem", height: "5rem" }}>
+                      <Image
+                        src={featuredJournal.frontmatter.merchImage}
+                        alt="I Contain Multitudes shirt"
+                        fill
+                        className="object-cover"
+                        sizes="80px"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold" style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-dark)" }}>I Contain Multitudes</p>
+                      <p className="text-xs" style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-primary)" }}>Support this work &rarr;</p>
+                    </div>
+                  </a>
+                </div>
+              )}
+            </div>
+
+          </div>
         </section>
       )}
 
