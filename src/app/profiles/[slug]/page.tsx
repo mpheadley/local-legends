@@ -173,16 +173,15 @@ export default async function ProfilePage({
   const scrollyConfig = scrollytellingConfigs[slug];
 
   const profileTags = frontmatter.tags ?? [];
-  const related = getAllProfiles()
-    .filter((p) => p.slug !== slug)
-    .map((p) => ({
-      profile: p,
-      shared: (p.frontmatter.tags ?? []).filter((t) => profileTags.includes(t)).length,
-    }))
+  const others = getAllProfiles().filter((p) => p.slug !== slug);
+  const tagMatched = others
+    .map((p) => ({ profile: p, shared: (p.frontmatter.tags ?? []).filter((t) => profileTags.includes(t)).length }))
     .filter(({ shared }) => shared > 0)
     .sort((a, b) => b.shared - a.shared)
-    .slice(0, 2)
     .map(({ profile }) => profile);
+  const tagMatchedSlugs = new Set(tagMatched.map((p) => p.slug));
+  const rest = others.filter((p) => !tagMatchedSlugs.has(p.slug));
+  const related = [...tagMatched, ...rest].slice(0, 3);
 
   // If a scrollytelling config exists, render the immersive layout
   if (scrollyConfig) {
@@ -493,9 +492,9 @@ export default async function ProfilePage({
               className="text-sm font-semibold uppercase tracking-[0.15em] text-ll-text-light mb-8"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              More Like This
+              More Stories
             </h2>
-            <div className={`grid gap-8 ${related.length > 1 ? "sm:grid-cols-2" : "max-w-sm mx-auto"}`}>
+            <div className={`grid gap-8 ${related.length === 1 ? "max-w-sm" : related.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
               {related.map((p) => (
                 <ProfileCardHero key={p.slug} profile={p} />
               ))}
