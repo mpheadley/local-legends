@@ -15,6 +15,7 @@ export interface JournalFrontmatter {
   imageAlt?: string;
   imageCaption?: string;
   cardImage?: string;
+  cardImageAlt?: string;
   featured?: boolean;
   unlisted?: boolean;
   related?: string[];
@@ -86,6 +87,11 @@ export function getOtherJournalPosts(slug: string, count = 2): JournalPost[] {
     .filter((p): p is JournalPost => p !== undefined);
   const rest = all.filter((p) => !related.includes(p.slug));
   return [...relatedPosts, ...rest].slice(0, count);
+}
+
+export function getFeaturedJournalPost(): JournalPost | null {
+  const all = getAllJournalPosts();
+  return all.find((p) => p.frontmatter.featured) ?? all[0] ?? null;
 }
 
 export function getAllJournalPosts(): JournalPost[] {
