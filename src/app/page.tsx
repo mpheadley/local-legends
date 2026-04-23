@@ -1,5 +1,5 @@
 import { getAllProfiles, getFeaturedProfiles } from "@/lib/profiles";
-import ProfileCard from "./components/ProfileCard";
+import ProfileCardHero from "./components/ProfileCardHero";
 import FeaturedTilt from "./components/FeaturedTilt";
 import HeroCarousel from "./components/HeroCarousel";
 import { siteConfig } from "@/lib/site-config";
@@ -19,6 +19,11 @@ export default function HomePage() {
     name: p.frontmatter.name,
     title: p.frontmatter.title,
     titleHtml: p.frontmatter.titleHtml,
+    cardTitle: p.frontmatter.cardTitle,
+    cardTitleHtml: p.frontmatter.cardTitleHtml,
+    cardFont: p.frontmatter.cardFont,
+    cardTitleColor: p.frontmatter.cardTitleColor,
+    cardFontSize: p.frontmatter.cardFontSize,
     subtitle: p.frontmatter.subtitle,
     excerpt: p.frontmatter.excerpt,
     location: p.frontmatter.location,
@@ -62,11 +67,8 @@ export default function HomePage() {
       <div className="hidden sm:block">
         <FeaturedTilt cards={featuredCards} />
       </div>
-      <section className="sm:hidden gradient-hero relative overflow-hidden">
-        {/* z-[3] sits above the topo ::after (z-index: 2); pt-14 clears fixed nav */}
-        <div className="relative z-[3] max-w-6xl mx-auto px-6 pt-20 pb-2">
-          <HeroCarousel profiles={featuredProfiles} />
-        </div>
+      <section className="sm:hidden relative overflow-hidden" style={{ backgroundColor: "#292524" }}>
+        <HeroCarousel profiles={featuredProfiles} />
       </section>
 
       {/* ─── Stories Grid ─── */}
@@ -106,7 +108,7 @@ export default function HomePage() {
                   className="animate-on-scroll"
                   style={{ transitionDelay: `${i * 50}ms` }}
                 >
-                  <ProfileCard profile={profile} />
+                  <ProfileCardHero profile={profile} />
                 </div>
               ))}
             </div>

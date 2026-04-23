@@ -1328,10 +1328,9 @@ mark {
 
 .featured-panel-name {
   font-size: clamp(2.25rem, 5.5vw, 4rem);
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-ll-white);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.0;
   font-variation-settings: "opsz" 72;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);
 }
@@ -1733,24 +1732,44 @@ h1.profile-title-display {
   .ph-hero.st-hero {
     align-items: flex-end;
   }
-  .ph-overlay--side {
-    background: linear-gradient(to top, rgba(20,16,14,0.92) 0%, rgba(20,16,14,0.55) 45%, rgba(20,16,14,0.1) 75%, transparent 100%);
+  /* Match card gradient exactly */
+  .ph-overlay--side,
+  .ph-overlay--bottom {
+    background: linear-gradient(to top, rgba(20,16,14,0.95) 0%, rgba(20,16,14,0.5) 45%, rgba(20,16,14,0.05) 70%, transparent 100%);
   }
+  /* Override inline paddingTop so content anchors flush to bottom */
   .st-hero-content {
-    padding-bottom: 2.5rem;
+    padding: 0 1.25rem 1.75rem !important;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Order: title → subtitle → name·location */
+  .st-hero-content .st-hero-title {
+    order: 1;
+  }
+  .ph-subtitle-card {
+    display: none !important;
+  }
+  .st-hero-content .st-hero-eyebrow {
+    order: 2;
+    color: rgba(250, 250, 247, 0.45);
+    letter-spacing: 0.12em;
+    font-size: 0.7rem;
+    margin-bottom: 0;
+    margin-top: 0.6rem;
+    text-shadow: none;
   }
   .st-hero-title.profile-title-display,
   h1.profile-title-display {
     font-size: clamp(2.5rem, 10vw, 4rem);
   }
-  .ph-subtitle-card {
-    display: none;
-  }
   .ph-scroll-hint.st-hero-scroll-hint {
     display: none;
+    order: 4;
   }
 }
+
 
 /* ── PROSE SECTIONS ── */
 .st-prose-section {
