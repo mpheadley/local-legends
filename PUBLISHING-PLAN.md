@@ -65,7 +65,7 @@ Written essays for now, not video. Written form is more intimate and lets reader
 
 **Recommended byline for both the Anniston Star and the Calhoun Journal:**
 
-> Matt Headley is a former pastor, classically trained singer, and flower farmer. He writes local business profiles and personal essays about mental health and faith at Southern Legends (southernlegends.blog). He runs Headley Web & SEO in Jacksonville, Alabama.
+> Matt Headley is a former pastor, flower farmer, and classically trained singer from Northeast Alabama. He writes local business profiles and personal essays at Southern Legends (https://southernlegends.blog). He builds websites for small businesses at Headley Web & SEO.
 
 **Key points:**
 
