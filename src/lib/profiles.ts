@@ -26,12 +26,14 @@ export interface ProfileFrontmatter {
   metaDescription?: string;
   mobileHero?: "bg" | "stack" | "text";
   heroPosition?: string;
+  heroPositionMobile?: string;
   ogPosition?: number;
   heroCaption?: string;
   heroCaptionHtml?: string;
   facebook?: string;
   parallaxHero?: boolean;
   heroTextBottom?: boolean;
+  heroFontSize?: string;
   displayTitle?: boolean;
   cardTextPosition?: "top" | "bottom";
   cardTitle?: string;

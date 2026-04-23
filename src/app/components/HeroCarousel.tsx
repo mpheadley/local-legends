@@ -68,7 +68,7 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
       >
         {profiles.map((profile, i) => {
           const { slug, frontmatter } = profile;
-          const { title, titleHtml, cardTitle, cardTitleHtml, cardFont, cardFontSize, cardTitleColor, name, location, heroImage, heroAlt, heroPosition } = frontmatter;
+          const { title, titleHtml, cardTitle, cardTitleHtml, cardFont, cardFontSize, cardTitleColor, name, location, heroImage, heroAlt, heroPosition, heroPositionMobile } = frontmatter;
           const displayTitle = cardTitle || title;
           const useHtml = !!cardTitleHtml || (!cardTitle && !!titleHtml);
           const resolvedHtml = cardTitleHtml || titleHtml;
@@ -98,7 +98,7 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
                   className="object-cover"
                   sizes="100vw"
                   priority={i === 0}
-                  style={heroPosition ? { objectPosition: heroPosition } : undefined}
+                  style={{ objectPosition: heroPositionMobile || heroPosition || "center center" }}
                 />
               ) : (
                 <div className="absolute inset-0" style={{ backgroundColor: "#292524" }} />
