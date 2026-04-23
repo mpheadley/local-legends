@@ -8,6 +8,15 @@ export const contentType = "image/png";
 
 const BASE_URL = "https://southernlegends.blog";
 
+const CATEGORY_COLORS: Record<string, string> = {
+  craftspeople: "#9A3412",
+  food: "#CA8A04",
+  music: "#6B4C8A",
+  agriculture: "#3D6B4F",
+  places: "#3D6B4F",
+  people: "#9A3412",
+};
+
 export default async function OGImage({
   params,
 }: {
@@ -16,9 +25,16 @@ export default async function OGImage({
   const { slug } = await params;
   const profile = getProfileBySlug(slug);
 
-  const [frauncesSemiBold, sourceSans] = await Promise.all([
+  const [frauncesSemiBold, frauncesSemiBoldItalic, sourceSans] = await Promise.all([
     fetch(new URL("../../fonts/Fraunces-SemiBold.ttf", import.meta.url)).then(
       (res) => res.arrayBuffer()
+    ),
+    fetch(new URL("../../fonts/Fraunces-SemiBoldItalic.ttf", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    ).catch(() =>
+      fetch(new URL("../../fonts/Fraunces-SemiBold.ttf", import.meta.url)).then(
+        (res) => res.arrayBuffer()
+      )
     ),
     fetch(new URL("../../fonts/SourceSans3-Regular.ttf", import.meta.url)).then(
       (res) => res.arrayBuffer()
@@ -27,6 +43,7 @@ export default async function OGImage({
 
   const fonts = [
     { name: "Fraunces", data: frauncesSemiBold, style: "normal" as const, weight: 600 as const },
+    { name: "Fraunces", data: frauncesSemiBoldItalic, style: "italic" as const, weight: 600 as const },
     { name: "Source Sans 3", data: sourceSans, style: "normal" as const, weight: 400 as const },
   ];
 
@@ -53,9 +70,10 @@ export default async function OGImage({
     );
   }
 
-  const { title, name, location, heroImage } = profile.frontmatter;
+  const { title, name, location, heroImage, category, subtitle } = profile.frontmatter;
   const ogPosition = profile.frontmatter.ogPosition ?? 0.35;
   const heroUrl = heroImage ? `${BASE_URL}${heroImage}` : null;
+  const categoryColor = CATEGORY_COLORS[(category || "").toLowerCase()] || "#9A3412";
 
   return new ImageResponse(
     (
@@ -69,131 +87,144 @@ export default async function OGImage({
           overflow: "hidden",
         }}
       >
-        {/* Image fills right 55% */}
+        {/* Full-bleed hero image */}
         {heroUrl && (
-          <div
+          <img
+            src={heroUrl}
+            alt=""
             style={{
-              display: "flex",
               position: "absolute",
               top: 0,
-              right: 0,
-              width: "55%",
+              left: 0,
+              width: "100%",
               height: "100%",
-              overflow: "hidden",
+              objectFit: "cover",
+              objectPosition: `center ${(ogPosition * 100).toFixed(0)}%`,
             }}
-          >
-            <img
-              src={heroUrl}
-              alt=""
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: `center ${(ogPosition * 100).toFixed(0)}%`,
-              }}
-            />
-            {/* Fade left edge of image into the dark panel */}
-            <div
-              style={{
-                display: "flex",
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "40%",
-                height: "100%",
-                background: "linear-gradient(to right, #292524, transparent)",
-              }}
-            />
-          </div>
+          />
         )}
 
-        {/* Dark left panel — title lives here */}
+        {/* Bottom gradient for text readability */}
+        <div
+          style={{
+            display: "flex",
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "75%",
+            background: "linear-gradient(to top, rgba(41,37,36,0.97) 0%, rgba(41,37,36,0.7) 40%, transparent 100%)",
+          }}
+        />
+
+        {/* Side vignette */}
+        <div
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "linear-gradient(to right, rgba(41,37,36,0.3) 0%, transparent 40%)",
+          }}
+        />
+
+        {/* Top-right: site name */}
+        <div
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: 40,
+            right: 56,
+            fontFamily: "Source Sans 3",
+            fontSize: 18,
+            color: "#FAFAF7",
+            opacity: 0.5,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+          }}
+        >
+          southernlegends.blog
+        </div>
+
+        {/* Bottom-left: content block */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             position: "absolute",
-            top: 0,
-            left: 0,
-            width: "52%",
-            height: "100%",
-            padding: "60px 56px",
+            bottom: 56,
+            left: 64,
+            maxWidth: 720,
           }}
         >
-          {/* Site name */}
-          <span
+          {/* Category tag */}
+          <div
             style={{
-              fontFamily: "Fraunces",
-              fontSize: 22,
-              fontWeight: 600,
+              display: "flex",
+              backgroundColor: categoryColor,
               color: "#FAFAF7",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase" as const,
-              opacity: 0.7,
-              marginBottom: 32,
+              fontSize: 14,
+              fontFamily: "Source Sans 3",
+              fontWeight: 700,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              padding: "4px 14px",
+              borderRadius: 3,
+              marginBottom: 20,
+              width: "fit-content",
             }}
           >
-            Southern Legends
-          </span>
+            {category}
+          </div>
 
-          {/* Gold rule */}
-          <div
-            style={{
-              display: "flex",
-              width: 60,
-              height: 3,
-              backgroundColor: "#CA8A04",
-              marginBottom: 28,
-            }}
-          />
-
-          {/* Profile title */}
+          {/* Title */}
           <div
             style={{
               display: "flex",
               fontFamily: "Fraunces",
-              fontSize: title.length > 30 ? 60 : title.length > 20 ? 72 : 80,
+              fontSize: title.length > 35 ? 64 : title.length > 22 ? 76 : 88,
               fontWeight: 600,
               color: "#FAFAF7",
               lineHeight: 1.1,
-              marginBottom: 20,
+              letterSpacing: "-0.02em",
+              marginBottom: 16,
             }}
           >
             {title}
           </div>
 
-          {/* Name */}
-          {name && name !== title && (
+          {/* Subtitle */}
+          {subtitle && (
             <div
               style={{
                 display: "flex",
-                fontFamily: "Source Sans 3",
-                fontSize: 28,
-                fontWeight: 400,
-                color: "#CA8A04",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase" as const,
+                fontFamily: "Fraunces",
+                fontSize: 26,
+                fontStyle: "italic",
+                color: "rgba(255,255,255,0.85)",
+                lineHeight: 1.4,
+                marginBottom: 20,
+                maxWidth: 640,
               }}
             >
-              {name}
+              {subtitle.length > 80 ? subtitle.slice(0, 80) + "…" : subtitle}
             </div>
           )}
 
-          {/* Location — bottom of panel */}
+          {/* Name · Location */}
           <div
             style={{
               display: "flex",
-              position: "absolute",
-              bottom: 48,
-              left: 56,
               fontFamily: "Source Sans 3",
-              fontSize: 20,
-              color: "#FAFAF7",
-              opacity: 0.5,
+              fontSize: 18,
+              color: "rgba(255,255,255,0.6)",
+              letterSpacing: "0.06em",
+              textTransform: "uppercase",
             }}
           >
-            By Matt Headley · {location}
+            {name}&nbsp;&nbsp;·&nbsp;&nbsp;{location}
           </div>
         </div>
       </div>
