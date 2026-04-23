@@ -20,6 +20,12 @@ We even bought the soundtrack. We bought the soundtrack, uh, on vinyl and, you k
 
 ---
 
+## Through-line (Matt's words)
+
+> "The mania made the aspirational feel achievable. That's probably the whole experience in a nutshell."
+
+Every scene in this piece is evidence for that sentence. The Wicked line ("delusions of grandeur") landed as prophecy because mania was translating aspiration into achievability in real time. The vinyl, the family movie night, the 6 AM Gungor wake-ups — all the same phenomenon, rendered in different rooms.
+
 ## Verbatim answers (Matt's words, preserved)
 
 > "Theater was dark and quiet. Sitting in my living room as well we would listen to the vinyl and it would just make my skin goosebumps."
