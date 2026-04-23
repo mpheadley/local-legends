@@ -1,6 +1,6 @@
 # Shannon Jenkins — Research Notes
 **United Way of East Central Alabama, President & CEO**
-*Notes from Matt's memory of April 9, 2026 coffee meeting. Needs verification with Shannon before treating as final. Profile is LIVE — send Shannon the link before publishing as complete.*
+*Profile LIVE. Link sent to Shannon Apr 24, 2026 — awaiting his response.*
 
 ---
 
