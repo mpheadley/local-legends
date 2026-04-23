@@ -25,16 +25,9 @@ export default async function OGImage({
   const { slug } = await params;
   const profile = getProfileBySlug(slug);
 
-  const [frauncesSemiBold, frauncesSemiBoldItalic, sourceSans] = await Promise.all([
+  const [frauncesSemiBold, sourceSans] = await Promise.all([
     fetch(new URL("../../fonts/Fraunces-SemiBold.ttf", import.meta.url)).then(
       (res) => res.arrayBuffer()
-    ),
-    fetch(new URL("../../fonts/Fraunces-SemiBoldItalic.ttf", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    ).catch(() =>
-      fetch(new URL("../../fonts/Fraunces-SemiBold.ttf", import.meta.url)).then(
-        (res) => res.arrayBuffer()
-      )
     ),
     fetch(new URL("../../fonts/SourceSans3-Regular.ttf", import.meta.url)).then(
       (res) => res.arrayBuffer()
@@ -43,7 +36,6 @@ export default async function OGImage({
 
   const fonts = [
     { name: "Fraunces", data: frauncesSemiBold, style: "normal" as const, weight: 600 as const },
-    { name: "Fraunces", data: frauncesSemiBoldItalic, style: "italic" as const, weight: 600 as const },
     { name: "Source Sans 3", data: sourceSans, style: "normal" as const, weight: 400 as const },
   ];
 
@@ -202,7 +194,7 @@ export default async function OGImage({
                 display: "flex",
                 fontFamily: "Fraunces",
                 fontSize: 26,
-                fontStyle: "italic",
+
                 color: "rgba(255,255,255,0.85)",
                 lineHeight: 1.4,
                 marginBottom: 20,
