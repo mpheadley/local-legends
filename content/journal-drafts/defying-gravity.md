@@ -34,6 +34,10 @@ Every scene in this piece is evidence for that sentence. The Wicked line ("delus
 
 > "Yes, I was receiving it as prophecy. That's a great way to put it."
 
+> "All the above, cast though a sophisticated web of speakers I set up custom."
+
+> "All above. All above on diff occasions." *(on what he was doing physically, and what the kids and Heather looked like during the 6 AM wake-ups)*
+
 ## Artifacts
 
 - **Photo from that day** (theater / Wicked outing, Quintard Mall, Oxford, Jan/Feb 2025): https://photos.app.goo.gl/b8Gdot4ZYWb9wwPY8
@@ -55,8 +59,18 @@ Every scene in this piece is evidence for that sentence. The Wicked line ("delus
 - **Matt's language for the tension:** "I was receiving it as prophecy." Family watching the movie together; Matt experiencing it as a message specifically for him. The hiddenness of that difference is the scene.
 - **Still could sharpen:** morning, evening, weekend? Which kid was closest to him on the couch? Did Heather say anything he remembers?
 
-### 6 AM Gungor / kids scene
-- **Still missing:** all three — anchor, sensory hit, visual of the kids and of Matt.
+### 6 AM Gungor / kids scene (answered — a pattern, not a single scene)
+
+This was recurring behavior, not one morning. Matt's answers verbatim:
+
+- **Where in the house:** "All the above, cast though a sophisticated web of speakers I set up custom."
+- **What he was doing physically:** "All above" (dancing, pacing, singing along, standing in the doorway).
+- **What the kids / Heather looked like:** "All above on diff occasions" (groggy, annoyed, laughing, silent; Heather sometimes up, sometimes still in bed, sometimes speaking).
+
+**Editor's read:**
+The answer "all of the above" is itself the scene. This wasn't one 6 AM; it was many. The specific, damning detail is "a sophisticated web of speakers I set up custom." That sentence is the scene in miniature — the mania isn't just "Dad plays loud music," it's "Dad engineered a whole-house audio system so the music could reach every room at once." The project of the speakers is the evidence. The piece should name the speaker system early; everything else follows from it.
+
+When drafting: don't pick one morning. Write the *pattern*, then land on one specific morning as the anchor — the one Matt remembers most clearly (that one may need a follow-up question before drafting).
 
 ## Editor's note to self
 
