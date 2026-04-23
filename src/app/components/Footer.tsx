@@ -46,17 +46,11 @@ export default function Footer() {
                 Nominate a Story
               </Link>
               <Link
-                href="/journal"
-                className="text-sm text-white/80 hover:text-white transition-colors"
-              >
-                Journal
-              </Link>
-              <Link
                 href="/journal/no-shade"
-                className="text-sm text-white/60 hover:text-white transition-colors"
+                className="text-sm text-white/80 hover:text-white transition-colors"
                 style={{ fontStyle: "italic" }}
               >
-                From the Journal: No Shade →
+                No Shade →
               </Link>
               <Link
                 href="/support"
