@@ -24,22 +24,23 @@ We even bought the soundtrack. We bought the soundtrack, uh, on vinyl and, you k
 
 - **Photo from that day** (theater / Wicked outing, Quintard Mall, Oxford, Jan/Feb 2025): https://photos.app.goo.gl/b8Gdot4ZYWb9wwPY8
 
-## Scene anchor (gap 1 — answered)
+## Scene anchors (gap audit in progress)
 
+### Theater scene
 - **Venue:** Premiere/Master theater, Quintard Mall, Oxford, AL
 - **When:** January or February 2025, mania onset
 - **Who:** Church group outing. Matt's kids on one side. Tammy (Matt's boss) sitting next to him.
+- **Room sensory hit:** Dark and quiet.
+- **Still missing:** what Matt's body was doing when the "delusions of grandeur" line landed. Visual of Tammy/kids at the moment.
 
-## Scenes implied (for gap audit)
+### Home / vinyl scene
+- **Room:** Living room.
+- **Body sensory hit:** Goosebumps on his skin listening to the Wicked vinyl.
+- **Still missing:** time of day, alone or with family, which spot in the room, what Matt looked like — was anyone watching him be this way?
 
-1. **The theater — seeing Wicked, Jan/Feb 2025, mania onset.** The "delusions of grandeur" line hitting. The organizing image of the piece.
-2. **Listening to the Wicked vinyl at home.** Repeated, habitual. Less a scene, more a texture.
-3. **Waking the kids at 6 AM to Gungor's "A Million Eyes."** Maybe the most visceral scene in the material — the kids as witnesses to the energy.
+### 6 AM Gungor / kids scene
+- **Still missing:** all three — anchor, sensory hit, visual of the kids and of Matt.
 
-## Gap audit status
+## Editor's note to self
 
-- [ ] Theater scene — time/place anchor, first sensory hit, specific visual of Matt and whoever was with him
-- [ ] Home vinyl listening — does this stay a montage or earn a scene?
-- [ ] 6 AM wake-up — time/place anchor, first sensory hit, visual of the kids and of Matt
-
-Gap audit in progress. One question at a time.
+Matt's body memory lives in the living room, not the theater. The theater is where the line first hit; the living room is where the line took hold. That may re-center the piece: theater as inciting scene, living room vinyl as the engine, 6 AM Gungor with the kids as the scene that names the cost. Don't scaffold yet — still filling gaps.
