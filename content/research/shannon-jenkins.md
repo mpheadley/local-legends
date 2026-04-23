@@ -1,6 +1,6 @@
 # Shannon Jenkins — Research Notes
 **United Way of East Central Alabama, President & CEO**
-*Notes from Matt's memory of April 9, 2026 coffee meeting. Needs verification with Shannon before publishing.*
+*Notes from Matt's memory of April 9, 2026 coffee meeting. Needs verification with Shannon before treating as final. Profile is LIVE — send Shannon the link before publishing as complete.*
 
 ---
 
@@ -13,10 +13,10 @@ Shannon is someone who sees people and shows up — personally and professionall
 ## Personal Relationship (Matt + Shannon)
 
 - Crossed paths at the church when United Way was in conversations about hosting a warming station on the church property — before United Way purchased the property to build the homeless shelter
-- Gas station bump-in in Golden Springs → Shannon reached out, they started having coffee
+- Gas station bump-in at the **Circle K in Golden Springs** — happened AFTER the hallway at Anniston First, not after the Weaver period. He was standing behind his car at the adjacent pump. He spoke first. About a week later, sent Matt a Facebook message.
 - Shannon showed up for Matt during his mental health leave from the church — checking in, encouraging him to seek psychiatric help, telling him it was going to be okay
-- At Full Belly Deli (next door to the Freedom Riders Monument — crosslink opportunity): bumped into each other in line — Shannon may have been with Kyle, Matt may have been with Tammy and Emmalie, both groups arriving around the same time. Shannon told Matt **"Don't be afraid to dream."** — during Matt's first depression, before his leave of absence. Direct quote, needs Shannon's confirmation.
-- **Note:** Shannon didn't leave a meeting to find Matt — it was a coincidental encounter in line. Still carries weight: the people who diminished Matt were right there, and Shannon saw him anyway.
+- At Full Belly Deli (next door to the Freedom Riders Monument): bumped into each other — **Sy and his wife were behind the counter making sandwiches**, room full of attorneys and construction workers, Matt was there with staff. Shannon told Matt **"Don't be afraid to dream."** — before his leave of absence. Direct quote, needs Shannon's confirmation.
+- **Note:** Coincidental encounter, not a meeting. The people who diminished Matt were right there; Shannon saw him anyway.
 - **May 7, 2025 — Called Coffee manic ideas meeting (CONFIRMED):** After Matt resigned in March 2025 while manic, he prepared a fiscal sponsorship brief titled "ReModel City & Wholehearted Roots" (Google Drive doc, created May 5, modified May 7–8) for a May 7, 2025 coffee conversation at Called Coffee with Shannon. This is the "flood of nonprofit ideas" scene in the profile — the document Matt sent Shannon to take home and read. Shannon gently advised pacing himself.
 - **April 9, 2026** — Called Coffee interview for this profile. Shannon recommended the last two Mumford & Sons albums when Matt mentioned he'd quit listening to music during his depression.
 - Recommends music: referred Matt to a Cory Asbury album about faith/fatherhood.
@@ -101,6 +101,23 @@ Shannon is someone who sees people and shows up — personally and professionall
 ## Outreach Plan
 
 Shannon already said Matt can profile him "anytime." Send the journal link first (personal reconnection), then follow up separately to say you're working on his profile and want to verify a few quotes and details. Don't send the draft — have the conversation first, then let the draft shape itself from what he confirms.
+
+---
+
+## Live United Scene (Oxford Civic Center, ~Sept 2023 or 2024)
+
+- Room of 200+, catered lunch, AL Power on board, Brian Howell (VP of Auto Custom Carpets, also on board) on panel with Shannon and others
+- Matt attended as a farm sponsor of United Way
+- Shannon onstage being interviewed — sincere, cried, laughed about crying
+- Gave a shout-out to Jared at Called Coffee who was there helping with drinks, waiting tables
+- Matt has photos — check Google Photos, search "Live United" Sept 2023 and 2024
+- **Crosslink:** Add link to Jared/Called Coffee profile when written — placeholder comment already in profile body
+
+---
+
+## Unused Scene Seed — Farm / Live United Offer
+
+Shannon offered to let Heather sell bud vases on the tables at the 2025 Live United event (Oxford Civic Center, ~September 2025) to support the farm. Heather's surgery was the same day — they couldn't do it. The farm was crashing at that point. Shannon was trying to help without making it charity. Belongs in a journal piece about the farm, not this profile — it centers Matt too much here.
 
 ---
 
