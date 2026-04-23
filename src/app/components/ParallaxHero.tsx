@@ -87,14 +87,8 @@ export default function ParallaxHero({
           />
           <div
             aria-hidden="true"
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: heroTextBottom
-                ? "linear-gradient(to top, rgba(20,16,14,0.85) 0%, rgba(20,16,14,0.4) 35%, transparent 60%)"
-                : "linear-gradient(to right, rgba(20,16,14,0.75) 0%, rgba(20,16,14,0.3) 30%, transparent 50%)",
-              zIndex: 1,
-            }}
+            className={heroTextBottom ? "ph-overlay ph-overlay--bottom" : "ph-overlay ph-overlay--side"}
+            style={{ position: "absolute", inset: 0, zIndex: 1 }}
           />
         </div>
         {heroTextBottom ? (
@@ -140,7 +134,7 @@ export default function ParallaxHero({
             )}
             {subtitle && (
               <div
-                className="ph-subtitle st-hero-subtitle"
+                className="ph-subtitle ph-subtitle-card st-hero-subtitle"
                 style={{
                   display: "inline-block",
                   background: "rgba(20, 16, 14, 0.25)",
