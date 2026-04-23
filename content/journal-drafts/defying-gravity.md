@@ -20,6 +20,16 @@ We even bought the soundtrack. We bought the soundtrack, uh, on vinyl and, you k
 
 ---
 
+## Artifacts
+
+- **Photo from that day** (theater / Wicked outing, Quintard Mall, Oxford, Jan/Feb 2025): https://photos.app.goo.gl/b8Gdot4ZYWb9wwPY8
+
+## Scene anchor (gap 1 — answered)
+
+- **Venue:** Premiere/Master theater, Quintard Mall, Oxford, AL
+- **When:** January or February 2025, mania onset
+- **Who:** Church group outing. Matt's kids on one side. Tammy (Matt's boss) sitting next to him.
+
 ## Scenes implied (for gap audit)
 
 1. **The theater — seeing Wicked, Jan/Feb 2025, mania onset.** The "delusions of grandeur" line hitting. The organizing image of the piece.
