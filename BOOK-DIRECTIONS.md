@@ -175,3 +175,53 @@ If Matt commits to Option 2:
 ## Next step
 
 Read this doc once. Wait a day. Read it again. Then decide — or decide not to decide yet. The journal pieces keep happening either way.
+
+---
+
+## Market Angles (April 2026)
+
+Ranked by market strength *right now*. Use this to pressure-test the Option choice above — the strongest book for Matt might not be the strongest book for the market, and vice versa.
+
+### 1. AI harm — first-person testimony *(strongest)*
+
+The cultural conversation in 2026 is about AI's effects on users, relationships, and mental health. Kevin Roose's NYT pieces, ChatGPT-induced delusion case studies, the AI-companion app lawsuits, the early wave of "AI and psychosis" clinical papers.
+
+**What's missing from the shelf:** book-length first-person testimony from the harmed side. Most writing is from journalists, researchers, or tech critics. Matt's specific claim — *the same tool amplified mania, then scaffolded depression* — is rarer still.
+
+**Timeliness window:** roughly 12–18 months before saturation. A 2027 book hits; a 2029 book is late.
+
+### 2. AI + Faith — the underserved intersection
+
+Adjacent to #1, arguably stronger for Matt's specific voice. Christian publishing has started circling AI (ethics panels, *Christianity Today* essays) but has almost no serious book-length work from someone with both a ministry background and firsthand experience of AI-amplified mental breakdown.
+
+This is a niche, not a category — small but loyal. Nobody else stands on this three-legged stool (AI, faith, mental illness). Potentially bigger than pure AI-harm because it reaches clergy, seminary, and thoughtful-evangelical readers who won't buy a secular tech critique.
+
+### 3. Bipolar + faith memoir
+
+Stable, modest. The "faith wrestling with mental illness" shelf (Kay Redfield Jamison–inflected, but Christian) has enduring readership but is not growing. If framed as memoir-only (Option 1 above), this is the shelf the book lands on.
+
+### 4. Clergy memoir
+
+Saturated. Barbara Brown Taylor defined it; the imitators are crowded. Not a growth market for a debut.
+
+### 5. Southern literary essay / agrarian
+
+Real but platform-dependent. Margaret Renkl and Rick Bass sell because they already had audiences. Entering this market cold as a debut author is hard regardless of quality.
+
+---
+
+### The actionable read
+
+**Angle 1 alone makes the book trade-publishable.** Angle 2 (AI + Faith) layered onto Angle 1 is what makes it *specifically Matt's* — a book nobody else in the country is positioned to write. That's the unfair advantage.
+
+### The one-sentence pitch (if Option 2 + Angles 1 & 2)
+
+> A former pastor on how AI amplified his mania and then helped him survive the depression that followed — and what that means for faith, machines, and being known.
+
+That's a book a New York editor can pitch to their colleagues in one sentence. That matters for acquisition more than any single chapter does.
+
+### What this doesn't mean
+
+- Not a mandate to pivot today. Read the options. Sit with them.
+- Not a reason to stop writing journal pieces. The pieces feed every option.
+- Not a claim that the strongest market angle is the truest book. Sometimes they're the same, sometimes they're not. If they diverge for Matt, the truer book wins. Market is a consideration; it is not the author.
