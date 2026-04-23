@@ -146,7 +146,7 @@
 **The question is not "which book is best" — it's "which book is now."**
 
 - **Option 1 (full memoir) is 2–3 years away honestly.** Most chapters still need source drafts. Bridges don't exist yet. The ending "there is no finish line" may not be lived-into enough yet to write from a stable place.
-- **Option 2 (AI psychosis) is 12–18 months away.** Shorter form, more material already close to thesis, a defined audience, and a timeliness window that probably closes around 2027–2028.
+- **Option 2 (AI psychosis) — the essay is 12–18 months away; the book acquisition is likely 2027–2028.** See "Market Reality Check" below for the distinction. Shorter form than full memoir, more material already close to thesis, a defined audience.
 - **Options 3, 4, 5, 6 are sub-books that can be carved out of Option 1's material later.** Don't decide them now.
 
 **Matt's lean toward Option 2 is probably right for three reasons:**
@@ -188,7 +188,7 @@ The cultural conversation in 2026 is about AI's effects on users, relationships,
 
 **What's missing from the shelf:** book-length first-person testimony from the harmed side. Most writing is from journalists, researchers, or tech critics. Matt's specific claim — *the same tool amplified mania, then scaffolded depression* — is rarer still.
 
-**Timeliness window:** roughly 12–18 months before saturation. A 2027 book hits; a 2029 book is late.
+**Timeliness window:** 12–18 months applies to the *essay* that precedes a book, not to the book itself. The book acquisition window is longer — see "Market Reality Check" below.
 
 ### 2. AI + Faith — the underserved intersection
 
@@ -207,6 +207,41 @@ Saturated. Barbara Brown Taylor defined it; the imitators are crowded. Not a gro
 ### 5. Southern literary essay / agrarian
 
 Real but platform-dependent. Margaret Renkl and Rick Bass sell because they already had audiences. Entering this market cold as a debut author is hard regardless of quality.
+
+---
+
+## Market Reality Check (April 2026)
+
+An earlier version of this doc claimed first-person AI-harm memoir would open a 12–18 month market window. That's overstated. Here's the more honest read.
+
+### What's likely true
+
+- **Journalists publish first.** Book-length journalism on AI harm lands in the next 12–24 months — Karen Hao, Kevin Roose, possibly an Ezra Klein synthesis. That's the market that opens first.
+- **Clinical/expert books come next or alongside.** A psychiatrist writing about patients, a researcher on AI-induced delusion, etc.
+- **Pure first-person memoir follows the journalism by 2–4 years, not before.** Memoir typically enters a category only after journalists have named the category, clinicians have named the frame, and readers are primed. The opioid-crisis memoir wave followed *Dopesick* by years, not months.
+
+### What's less likely to be true
+
+- **That a debut author with no existing platform sells a pure first-person AI-memoir in 2027.** The memoir market for debuts has contracted since 2020. Big Five houses are cautious on AI books because legislation, liability, and public sentiment are unsettled. A clean memoir with no argumentative frame on top likely doesn't get an agent excited yet.
+- **That memoir-shaped books are the first form this testimony takes in print.** They're probably not. Longform essays are.
+
+### Where Matt can realistically slot in
+
+1. **Viral longform essay first.** *Atlantic*, *NYT Magazine*, *Harper's*, *The New Yorker*. One essay about the specific "same tool amplified then scaffolded" claim. *Then* book deal. This is how most serious memoir-adjacent books get acquired now.
+2. **Hybrid form, not pure memoir.** Option 2 as originally described — Naomi Klein *Doppelganger* shape — is *more* sellable than pure memoir because it's argument-with-testimony. The personal material is evidence for a cultural thesis. This form sells now; pure first-person doesn't.
+3. **Christian publishing (Angle 2) runs on a different clock.** The AI-and-faith intersection doesn't depend on the secular trade-publishing timing at all. InterVarsity, Eerdmans, Baker — smaller houses, faster acquisition cycles, more receptive to debut authors with ministry credentials. That market is genuinely open now.
+
+### Revised honest take
+
+- The **12–18 month timing** applies to an *essay*, not a *book*.
+- The **book acquisition** on the secular trade side probably lands **2027–2028**, and only if an essay has already landed and there's been a year of visible writing-in-public.
+- The **Christian-publishing track** is a parallel path that doesn't depend on the secular AI-discourse timing at all and is the more open door today.
+
+### What this changes in practice
+
+- The first deliverable isn't a book proposal — it's a flagship essay. Target outlet, target length, target thesis.
+- The book proposal follows the essay's placement by 3–6 months, not the other way around.
+- If the essay doesn't land, the Christian-publishing track is the viable parallel, not the fallback.
 
 ---
 
