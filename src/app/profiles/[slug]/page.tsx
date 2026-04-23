@@ -391,6 +391,18 @@ export default async function ProfilePage({
         </section>
       )}
 
+      {/* Mobile deck — subtitle below hero, visible on mobile only */}
+      {frontmatter.parallaxHero !== false && frontmatter.heroImage && frontmatter.subtitle && (
+        <div className="sm:hidden bg-ll-light px-6 pt-6 pb-2">
+          <p
+            className="max-w-3xl mx-auto text-base italic leading-relaxed"
+            style={{ color: "var(--color-ll-text)", fontFamily: "var(--font-heading)", fontWeight: 300 }}
+          >
+            {frontmatter.subtitle}
+          </p>
+        </div>
+      )}
+
       {/* Hero Caption */}
       {(frontmatter.heroCaption || frontmatter.heroCaptionHtml) && (
         <div className="bg-ll-light border-b border-ll-border">

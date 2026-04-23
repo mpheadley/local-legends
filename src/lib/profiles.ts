@@ -33,6 +33,15 @@ export interface ProfileFrontmatter {
   parallaxHero?: boolean;
   heroTextBottom?: boolean;
   displayTitle?: boolean;
+  cardTextPosition?: "top" | "bottom";
+  cardTitle?: string;
+  cardTitleHtml?: string;
+  cardFont?: "serif" | "serif-bold" | "serif-italic" | "serif-caps" | "condensed";
+  cardTitleColor?: "white" | "gold";
+  cardFontSize?: "sm" | "md" | "lg";
+  cardGradientOffset?: number;
+  cardTall?: boolean;
+  cardShort?: boolean;
 }
 
 export interface Profile {
