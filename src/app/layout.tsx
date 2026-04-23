@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/images/southern-legends-og.png",
+        url: "/images/southern-legends-og.webp",
         width: 2396,
         height: 1250,
         alt: "Southern Legends — Stories from Northeast Alabama",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/images/southern-legends-og.png"],
+    images: ["/images/southern-legends-og.webp"],
   },
   authors: [{ name: siteConfig.author }],
   robots: {
