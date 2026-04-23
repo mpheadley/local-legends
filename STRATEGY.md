@@ -581,6 +581,35 @@ No testimonial asks. The profile IS the marketing. Don't attach strings to the g
 
 ---
 
+## Facebook Posting Process — Business Profiles
+
+Run this on every published profile. Two posts: SL page first, personal share second.
+
+### SL Page Post
+1. **Write short and personal** — 2–3 tight paragraphs. Lead with a specific moment or detail, not a summary. Show don't tell.
+2. **No link in the body** — Facebook suppresses reach on posts with external links. Drop the link in the first comment immediately after posting.
+3. **Tag the business's Facebook page** in the post body.
+4. **Set location to the city** (Anniston, AL) — or tag a specific location if relevant.
+5. **Share into local Facebook groups** — Downtown Anniston, relevant community groups. Same post, no changes needed.
+
+### Personal FB Share
+1. **One or two sentences of personal context** — "New one's up. Wrote this about a guy I've known since the flower farm days." Don't summarize the post you're sharing.
+2. **Tag the subject's personal profile** in the share text — they're the subject, it's natural.
+3. **Tag other subjects mentioned** (e.g., Jean, Samuel) in the **comments**, not the post — keeps the post clean, they still get the notification.
+
+### Post Structure — What Works
+- Open with a specific moment or line of dialogue from the profile
+- One paragraph of context (the family history, the stakes)
+- One closing line if it earns its place — otherwise stop
+- No AI clichés, no "incredible story," no "honored to share"
+- The $600 gallon-of-paint structure is the model: hook → context → stop
+
+### After Posting
+- Check back for comments and reply personally
+- If the subject hasn't responded to their profile link, the Facebook tag often prompts it — don't send a separate follow-up until after the post goes up
+
+---
+
 ## The Outreach Approach — Editorial vs. Web Services
 
 Keep editorial and web services cleanly separate. Never pitch web design inside paid editorial content.

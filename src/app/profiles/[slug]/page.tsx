@@ -281,6 +281,7 @@ export default async function ProfilePage({
           heroAlt={frontmatter.heroAlt || frontmatter.name}
           heroPosition={frontmatter.heroPosition}
           heroTextBottom={frontmatter.heroTextBottom}
+          heroFontSize={frontmatter.heroFontSize}
           displayTitle={frontmatter.displayTitle}
           slug={slug}
         />
@@ -446,7 +447,7 @@ export default async function ProfilePage({
               <Link href="/journal/hope-in-the-wilderness" className="profile-closing-link">
                 Anniston Star
               </Link>
-              . He builds websites for small businesses at{" "}
+              . He writes personal essays on mental health, faith, and farming. He builds websites for small businesses at{" "}
               <a href="https://headleyweb.com" target="_blank" rel="noopener noreferrer" className="profile-closing-link">
                 headleyweb.com
               </a>
