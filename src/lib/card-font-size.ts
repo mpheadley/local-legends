@@ -27,7 +27,7 @@ export function computeCardFontSize(
     ? SIZES[cardFontSize]
     : isCondensed
     ? stripped.length > 32 ? 4 : stripped.length > 22 ? 5 : 6.5
-    : stripped.length > 32 ? 3.5 : stripped.length > 22 ? 4.25 : 5.5;
+    : stripped.length > 32 ? 3.0 : stripped.length > 22 ? 3.75 : 4.5;
 
   // Longest word must fit in one line without breaking.
   // charWidthFactor: approximate em-width per character (serif ~0.62, caps+tracking ~0.68, condensed ~0.52)
