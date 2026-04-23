@@ -20,6 +20,14 @@ We even bought the soundtrack. We bought the soundtrack, uh, on vinyl and, you k
 
 ---
 
+## Verbatim answers (Matt's words, preserved)
+
+> "Theater was dark and quiet. Sitting in my living room as well we would listen to the vinyl and it would just make my skin goosebumps."
+
+> "Listening with the kids. Actually also watching the movie with the kids and being so moved sitting on our couch there in the farmhouse in front of the TV with Heather and the kids."
+
+> "Yes, I was receiving it as prophecy. That's a great way to put it."
+
 ## Artifacts
 
 - **Photo from that day** (theater / Wicked outing, Quintard Mall, Oxford, Jan/Feb 2025): https://photos.app.goo.gl/b8Gdot4ZYWb9wwPY8
@@ -38,7 +46,7 @@ We even bought the soundtrack. We bought the soundtrack, uh, on vinyl and, you k
 - **Activity:** Not only the vinyl — also watching the *Wicked* movie with the family on the TV.
 - **Who:** Heather and the kids on the couch with him.
 - **Body sensory hit:** Goosebumps on his skin. Being "so moved."
-- **Editor's note:** This is not a "Heather watches Matt be unwell" scene. Everyone was watching the same movie. The tension is that Matt was being moved *differently* than anyone in the room knew — the "delusions of grandeur" line landing on him as personal prophecy while his family was just enjoying a family movie night. The horror of the scene, if there is one, is the hiddenness of that difference.
+- **Matt's language for the tension:** "I was receiving it as prophecy." Family watching the movie together; Matt experiencing it as a message specifically for him. The hiddenness of that difference is the scene.
 - **Still could sharpen:** morning, evening, weekend? Which kid was closest to him on the couch? Did Heather say anything he remembers?
 
 ### 6 AM Gungor / kids scene
