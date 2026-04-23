@@ -52,6 +52,13 @@ export default function Footer() {
                 Journal
               </Link>
               <Link
+                href="/journal/no-shade"
+                className="text-sm text-white/60 hover:text-white transition-colors"
+                style={{ fontStyle: "italic" }}
+              >
+                From the Journal: No Shade →
+              </Link>
+              <Link
                 href="/support"
                 className="text-sm text-white/80 hover:text-white transition-colors"
               >
