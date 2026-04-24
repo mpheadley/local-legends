@@ -411,7 +411,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
                 Read the Stories
               </Link>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 gap-6">
               {profiles.map((p) => (
                 <ProfileCardHero key={p.slug} profile={p} />
               ))}
