@@ -142,7 +142,7 @@ MDX files in `content/letters/` (or `content/notes/` depending on name). Frontma
 **Portfolio value:** Building clean multimedia handling in Next.js (lazy loading, no layout shift, proper aspect ratios) is a real Headley Web skill. Clients ask for this. SL is the live demo.
 
 **Site architecture:**
-- `/letters` (or `/notes`) — dedicated page, own layout. Cards with photo, title, date, excerpt — warmer and more personal than profile cards. Warm background (`#F0EDE6`) to signal different space.
+- `/journal` — editorial column layout on warm parchment (`#F0EDE6`). Large Fraunces display heading, gold "Personal writing" eyebrow, ruled list of posts: date + title + excerpt only. **No thumbnails** — the subject matter (bipolar, grief, farm loss) is heavy enough that images push it toward "content" and away from "writing." The Bitter Southerner and The Atavist don't use thumbnails on essay listings. The title and opening line do the work. Images show up inside the piece.
 - **Homepage** — quiet callout below the profiles grid. Not a full section.
 - **Nav** — distinct nav link alongside profiles.
 
