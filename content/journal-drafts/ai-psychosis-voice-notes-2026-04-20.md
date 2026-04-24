@@ -51,7 +51,7 @@
 
 ---
 
-"This kind of reminds me of long walks on the LaDagga Trail when I was manic and living at the farm right next to the trail. And that may be worth noting or documenting."
+"This kind of reminds me of long walks on the Ladiga Trail when I was manic and living at the farm right next to the trail. And that may be worth noting or documenting."
 
 ---
 

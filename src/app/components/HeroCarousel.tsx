@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "next-view-transitions";
 import type { Profile } from "@/lib/profiles";
 import { computeCardFontSize } from "@/lib/card-font-size";
+import { resolveCardTitleMeta } from "@/lib/card-title-style";
 
 
 
@@ -69,17 +70,8 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
       >
         {profiles.map((profile, i) => {
           const { slug, frontmatter } = profile;
-          const { title, titleHtml, cardTitle, cardTitleHtml, cardFont, cardFontSize, cardTitleColor, name, location, heroImage, heroAlt, heroPosition, heroPositionMobile } = frontmatter;
-          const displayTitle = cardTitle || title;
-          const useHtml = !!cardTitleHtml || (!cardTitle && !!titleHtml);
-          const resolvedHtml = cardTitleHtml || titleHtml;
-          // Match FeaturedTilt desktop per-card styling exactly, plus opsz 72
-          const isCondensed = cardFont === "condensed";
-          const fontFamily = isCondensed ? "var(--font-condensed)" : "var(--font-heading)";
-          const fontWeight = cardFont === "serif-bold" ? 700 : isCondensed ? 700 : 400;
-          const fontStyle = cardFont === "serif-italic" ? "italic" : "normal";
-          const textTransform: React.CSSProperties["textTransform"] = (isCondensed || cardFont === "serif-caps") ? "uppercase" : undefined;
-          const letterSpacing = cardFont === "serif-caps" ? "0.08em" : undefined;
+          const { cardFont, cardFontSize, name, location, heroImage, heroAlt, heroPosition, heroPositionMobile } = frontmatter;
+          const { displayTitle, resolvedHtml, useHtml, fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, titleColor } = resolveCardTitleMeta(frontmatter);
           // Word-cap sizing: fill the container width based on longest word
           const strippedTitle = (resolvedHtml || displayTitle).replace(/<[^>]+>/g, "");
           const maxWordLen = strippedTitle.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
@@ -125,13 +117,13 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
                 {useHtml ? (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7", overflowWrap: "normal", maxWidth: "100%" }}
+                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: titleColor, overflowWrap: "normal", maxWidth: "100%" }}
                     dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
                   />
                 ) : (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7" }}
+                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: titleColor }}
                   >
                     {displayTitle}
                   </h2>

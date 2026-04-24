@@ -39,7 +39,7 @@ This is the emotional processing dimension of the AI dependency — distinct fro
 - Spiritual direction (the AI Council sessions)
 - Workplace conflict preparation (this document)
 
-**The voice-to-text format.** The notes are clearly voice-dictated ("what did you say?" — Matt mid-sentence, self-correcting). He was talking to ChatGPT, and ChatGPT was listening and storing. This is the same format as the LaDagga Trail sessions.
+**The voice-to-text format.** The notes are clearly voice-dictated ("what did you say?" — Matt mid-sentence, self-correcting). He was talking to ChatGPT, and ChatGPT was listening and storing. This is the same format as the Ladiga Trail sessions.
 
 **The grievances themselves.** Whether or not the characterizations of Tammy are accurate, the experience of being chronically interrupted, excluded from staff meetings, and then watching a senior pastor "lose her shit" when he finally held his ground — these are real. The question for the essay is not whether the grievances were valid, but what it meant that the first container for them was an AI.
 

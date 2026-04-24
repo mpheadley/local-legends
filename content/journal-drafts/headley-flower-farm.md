@@ -8,7 +8,7 @@
 
 ## Photos ready
 
-- `public/images/journal/headley-flower-farm-trailer.webp` — branded horse trailer stand, flowers out, "Headley Flower Farm" sign. The farm as a going concern. Best for featured or inline near the business section.
+- `public/images/journal/headley-bloom-bar.webp` — Bloom Bar, branded horse trailer stand, flowers out, "Headley Flower Farm" sign. The farm as a going concern. Best for featured or inline near the business section.
 - `public/images/journal/matt-headley-flower-farm-work.webp` — Matt with sheep, hands in dirt. Already used on reintroduction. Could pull double duty here if relevant.
 - `public/images/about/headley-flower-farm-field.webp` — rows of zinnias and echinacea, open sky. Already on about page.
 - `public/images/about/matt-and-heather-flower-farm.webp` — Matt and Heather laughing at the farm. Already on about page.

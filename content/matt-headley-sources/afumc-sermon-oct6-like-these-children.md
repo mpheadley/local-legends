@@ -123,7 +123,7 @@ Playing is how we continue to learn and grow as adults.
 
 **Hannah's question.** *"Dad, do you enjoy this?"* — His daughter saw the depression before he named it publicly. This is a scene.
 
-**Walking through the woods writing the sermon.** The AI-generated notes say "Maybe talk about how I wrote this entire sermon in a state of creative flow while I was literally walking through the woods." This is the LaDagga Trail dynamic already present in October 2024 — walking, generating, AI-assisted, creative flow. The manic episode amplified what was already a pattern.
+**Walking through the woods writing the sermon.** The AI-generated notes say "Maybe talk about how I wrote this entire sermon in a state of creative flow while I was literally walking through the woods." This is the Ladiga Trail dynamic already present in October 2024 — walking, generating, AI-assisted, creative flow. The manic episode amplified what was already a pattern.
 
 **The psychedelic conference reference.** Matt was engaging with psychedelic research material and considering weaving it into a Sunday sermon. This connects to the psilocybin writing space thread — but note the CLAUDE.md placement decision: psilocybin content does NOT go on Southern Legends.
 
@@ -131,6 +131,6 @@ Playing is how we continue to learn and grow as adults.
 - Sept 26, 2024: Clips Zapier "6 ways to stand out from AI writing" — used for Anniston Star article and sermon writing
 - Oct 6, 2024: "Like These Children" sermon — first public depression disclosure, AI-annotated notes, walking-the-woods drafting pattern already present
 - Nov 17, 2024: Mark 13 / AI vs. Jesus sermon
-- Feb 9, 2025: Membership vows sermon (likely last at AFUMC) — drafted on LaDagga Trail during manic episode, after flu + COVID back to back
+- Feb 9, 2025: Membership vows sermon (likely last at AFUMC) — drafted on Ladiga Trail during manic episode, after flu + COVID back to back
 - March 13/14, 2025: Resigned from AFUMC
 - Oct 25–Nov 4, 2025: Psych ward

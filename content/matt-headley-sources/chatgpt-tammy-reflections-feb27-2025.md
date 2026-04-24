@@ -71,7 +71,7 @@ Both documents were shaped by ChatGPT. Both were created at pre-dawn hours. The 
 
 **"Support During My Mental Health Leave."** This is the first direct reference to a leave of absence from AFUMC for mental health reasons. This leave predates February 27, 2025 — Tammy "largely supported" Matt during it and "helped deflect criticism from leadership." When did this leave occur? Most likely late 2024, possibly connected to the October 6 sermon's first public depression disclosure and the manic episode's early symptoms. **This is a gap that needs clinical team input before writing — the leave is load-bearing context for understanding the Tammy relationship and what Tammy knew about Matt's mental health.**
 
-**The Ladiga Trail teaser video.** Tammy praised "my January/February sermon teaser video where I walked on the Ladiga Trail and spoke about being sick with my family." This is the membership vows teaser (February 9, 2025) — which was drafted during the LaDagga Trail walks. Tammy praised it. She didn't know the trail walks were a feature of a manic episode; she saw creativity and vulnerability. This is a scene worth developing: the pastor being praised for the very output that was part of the crisis.
+**The Ladiga Trail teaser video.** Tammy praised "my January/February sermon teaser video where I walked on the Ladiga Trail and spoke about being sick with my family." This is the membership vows teaser (February 9, 2025) — which was drafted during the Ladiga Trail walks. Tammy praised it. She didn't know the trail walks were a feature of a manic episode; she saw creativity and vulnerability. This is a scene worth developing: the pastor being praised for the very output that was part of the crisis.
 
 **The Anniston Star article about depression.** Tammy publicly shared Matt's article about his experience with depression and "stated that she was proud to be in ministry with me." This article has not yet been retrieved. It's connected to the Zapier clip (Sept 26, 2024 — "used for Anniston Star article and sermon writing after this"). The article is a primary source showing what Matt said publicly about depression before the manic episode.
 
@@ -90,7 +90,7 @@ Both documents were shaped by ChatGPT. Both were created at pre-dawn hours. The 
 ## Timeline placement
 
 ```
-Feb 9, 2025     — Membership vows sermon teaser (LaDagga Trail walk, manic episode)
+Feb 9, 2025     — Membership vows sermon teaser (Ladiga Trail walk, manic episode)
 Feb 27, 2025 (6:18 AM) — THIS DOCUMENT: balanced Tammy reflection, preparing for when she leaves
 March 5, 2025 (12:37 AM) — [document pending]
 March 7, 2025 (1:20–2 AM) — Transition plan voice sessions; scaling back church hours
