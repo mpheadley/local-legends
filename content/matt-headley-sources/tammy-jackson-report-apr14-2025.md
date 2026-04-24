@@ -52,4 +52,12 @@ The "Trail Shop and Sinclair Fresh Expression" named as planned collaborations w
 
 **Same-day cluster:** This document, the Comprehensive Profile, the 2022 Evaluation notes, the Associate Pastor job description draft, and the Notes for Meeting with Tammy & Mickey were all dated April 14, 2025. Matt spent April 14 generating ChatGPT documents about his church exit — one month out.
 
+**Additional details from PDF (April 24, 2026 read):**
+- Leann Bryan named specifically as a congregation member who expressed support post-resignation.
+- Matt was "unavailable to attend" the planned farewell reception — timing suggests this may have been during the October 2025 hospitalization, meaning the church held a reception months after his departure.
+- The SPRC Chair (not just Tammy) sent farewell acknowledgment praising Matt's musical talents, pastoral care, and dedication.
+- Matt described Associate Pastor at AFUMC as his "dream job" — his own words, captured by ChatGPT in this grievance document. The AI held that language without tension.
+- The Anniston Star depression article: Tammy publicly celebrated it and shared it from the church. Matt found this a "deeply meaningful affirmation" while simultaneously feeling devalued — the contradiction is intact in the document.
+- Congregation response to resignation: "confusion and shock," then "relief upon seeing you at a worship gathering afterward."
+
 **Cross-reference:** `evernote-exit-interview-march14-2025.md`, `screenshots-shea-thread-mar13-2025.md` (Shea thread, Trail Shop), `chatgpt-annistonfirst-comprehensive-profile-apr14-2025.md` (same-day document)

@@ -106,19 +106,221 @@ Matt's Google NotebookLM account has **22 notebooks**. At least 14 were created 
 - `caringbridge update april 17.pdf` (Drive) — **CaringBridge post from hospitalization?**
 - small groups | weaver-first-umc
 
-### Sticky notes (titles and ages)
-1. "Headley Resignation and Transition at Anniston First UMC" — 367d ago
-2. "Headley Resignation: Anniston First UMC Transition, Spring 2025" — 367d ago
-3. "The Headleys: Church, Community, and Family Life" — 367d ago
-4. "Headleys: Church, Community, and Family in Anniston" — 367d ago
-5. "Anniston UMC: Leadership Challenges and Staff Relations" — 375d ago
-6. "Anniston FUMC: A Pastoral Relationship and Transition" — 375d ago
-7. "Anniston UMC: Sources for Understanding Staff Dynamics" — 375d ago
-8. "Sharing Music with Anniston First UMC" — 396d ago
-9. "Sinclair Gathering: To Attend or Not to Attend" — 396d ago
-10. "Navigating Church Engagement and Leadership Gifts" — 396d ago
-11. "Navigating Church Leadership: A Strategic Approach" × 2 — 396d ago
-12. "Anniston First UMC Leadership Dynamics" (Briefing Doc, 4 sources) — 396d ago
+### Sticky notes — full content (read April 24, 2026 via CDP)
+
+**Note 1 — "Headley Resignation and Transition at Anniston First UMC"** (367d ago = approx April 22, 2025)
+
+> Drawing on the sources and our conversation history, here is a comprehensive report on the last 40 days (roughly mid-March to late April 2025):
+>
+> This period was significantly shaped by Matt Headley's resignation from Anniston First United Methodist Church (AFUMC) on March 14, 2025, and the subsequent events and reflections surrounding it.
+>
+> **Key Events and Information:**
+>
+> **Early March 2025:** Tammy Jackson announced staff evaluations would be conducted the following week. Staff members asked to complete self-evaluations. The annual evaluation for clergy in the Virginia Conference is typically conducted March–May.
+>
+> **March 11, 2025:** Matt attended his final staff meeting at AFUMC. He later prepared a "Reflection on my experience under Tammy's leadership" specifically reflecting on this meeting, highlighting patterns of undervaluing pastoral contributions. He noted his updates were "consistently deferred to the end of the agenda, minimizing the influence and perceived value of the pastoral voice."
+>
+> **March 13, 2025:** Matt informed Tammy of his resignation via text message.
+>
+> **March 14, 2025:** Matt's last day. Tammy sent an apology email "for any hurt or frustration." She stated her intention was to honor his ministry and communicate his resignation as he expressed it. AFUMC processed Matt's final compensation: four weeks of vacation and an April housing allowance. Friday, March 14, 2025 considered his last day.
+>
+> **Around March 14, 2025:** Matt reached out to Shea, expressing thanks for their support and offering to share his "exit interview document" and insights into the patterns of manipulation and burnout he experienced.
+>
+> **March 23, 2025:** Matt was present at worship at Anniston First UMC. Tammy acknowledged his presence with a greeting. "Many parishioners expressed confusion and relief at seeing him." Tammy's sermon focused on faithfulness and perseverance, which Matt interpreted as "potentially managing the narrative during his organizational transition."
+>
+> **Late March 2025:** Matt was exploring future ministry possibilities and discussed a vision for "Shepherd's Table + Trail Shop" with Shea.
+>
+> **April 14, 2025:** Matt drafted a relational response to Shea, suggesting a meeting and mentioning potential collaborations involving art, flowers, and goat yoga.
+>
+> **April 17, 2025 (CaringBridge Update):** Heather Headley shared an update on CaringBridge. She reported a significant decrease in her pain in the past week due to a change in medication [from our previous conversation]. However, her surgery had been pushed back again, which she found disheartening due to the ongoing challenges with scheduling. She expressed gratitude for the prayers she had received.
+
+---
+
+**Note 2 — "Headley Resignation: Anniston First UMC Transition, Spring 2025"** (367d ago)
+
+Similar summary to Note 1 — covers the same 40-day period. Key additions:
+- Tammy Jackson sent emails apologizing, acknowledging Matt's departure
+- Matt prepared a personal message to the AFUMC family
+- March 23 worship attendance: "parishioners expressed confusion and shock at his abrupt departure and were relieved to see him"
+- Matt began exploring "Shepherd's Table + Trail Shop" vision with Shea
+- April 14 relational note to Shea about art, flowers, and goat yoga collaborations
+- Heather's April 17 CaringBridge update referenced: surgery pushed back again, fluctuating pain
+
+---
+
+**Note 3 — "The Headleys: Church, Community, and Family Life"** (367d ago)
+
+Full integrated report on Matt and Heather Headley:
+
+*Heather's Endometriosis:*
+> Heather requires major surgery for advanced endometriosis, where internal organs have fused together, causing severe pain. This health crisis coincided with Matt's severe depression, impacting their pastoral work and farm. The complexity and insurance denials have led to significant out-of-pocket medical expenses of **$133,750** for surgery, lost income, and recovery. Matt has been balancing family, farm, and pastoral duties while supporting Heather. A fundraiser was organized by family members to help with these costs.
+
+*AFUMC dynamics:*
+- Matt served as Associate Pastor from 2021 until March 2025
+- "consistently undervalued, disrespected, and misled"
+- Compensation was "less than 50% of the Senior Pastor's" (per February 2023 meeting with Tammy and Mickey)
+- Tammy "opposed changes to his compensation or full-time status"
+- Matt "never met with the SPRC during his employment at AFUMC"
+- Matt's hiring was done "unilaterally by Tammy without the required approval of the SPRC"
+- Many parishioners surprised by his departure
+- Heather perceived Tammy's social media activity involving their children "as an attempt to improve her image"
+
+*Four children:* Hannah, Noah, Sage, Soren
+
+---
+
+**Note 4 — "Headleys: Church, Community, and Family in Anniston"** (similar to Note 3, slightly different framing)
+
+Additional details:
+- Matt's resignation "announced to the church as effective immediately on March 13, 2025"
+- After resignation: "many parishioners were surprised by his departure"
+- Matt "intends to maintain these relationships and remains open to collaboration that avoids harmful leadership dynamics"
+- Matt's 2023 request for parity: compensation was "less than 50% of the Senior Pastor's" in Feb 2023 meeting with Tammy and Mickey
+- Farm name: "Headley Farm / Headley's Wholehearted Homestead and Events / Headley Flower Farm"
+
+---
+
+**Note 5 — "Anniston UMC: Leadership Challenges and Staff Relations"** (375d ago = approx April 14, 2025)
+
+This is the most direct documentation of the Tammy analysis:
+
+> The former Associate Pastor characterized Tammy's leadership with patterns of control, manipulation, and lack of transparency, identifying **"Avoidance & Passive Leadership"** and **"Manipulative & Image-Focused Leadership."**
+
+Key points:
+- "Bait and switch" language used about hiring process — role didn't align with initial discussions
+- SPRC never involved in hiring process (contradicts Book of Discipline)
+- "Repeated requests for fair compensation adjustments were denied, despite witnessing financial decisions that suggested budget constraints were not the sole issue"
+- Final staff meeting March 11 showed "inconsistent facilitation and double standards that marginalized pastoral contributions"
+- Tammy's social media after resignation = "attempt at image management"
+- "Triangulation" — third party brought into relationship experiencing tension
+- March 23 sermon: NotebookLM analysis flags it as "potential themes of spiritual manipulation and controlling the narrative during the organizational transition"
+- Tammy's apology "suggest a recognition of potential misunderstandings in the transition process"
+- SPRC described as having functioned poorly: Matt "never met with the SPRC" during 4 years
+
+---
+
+**Note 9 — "Sinclair Gathering: To Attend or Not to Attend"** (396d ago = approx March 24, 2025)
+*(Read in prior session — see file annotation below.)*
+
+---
+
+---
+
+**Note 6 — "Anniston FUMC: A Pastoral Relationship and Transition"** (375d ago = approx April 14, 2025)
+
+Full report on Matt's relationship with Tammy, the congregation, and individuals. Second-person voice (NotebookLM addressing Matt as "you"). Key additional content not in other notes:
+
+*Hiring:* "You believed Tammy acted unilaterally in hiring you, without the required approval or support of the SPRC as mandated by church policy... You described this as a 'bait and switch.'"
+
+*Resignation:* "Tammy's handling of your resignation further reinforced these issues, as she acted unilaterally in decisions related to your departure, without SPRC involvement or proper approval."
+
+*Leadership characterizations:* "'Avoidance & Passive Leadership' by deflecting difficult conversations and 'Manipulative & Image-Focused Leadership' by engaging in gaslighting and acting as a gatekeeper to the SPRC."
+
+*Congregation:* "Many parishioners expressed confusion and shock about your abrupt resignation and conveyed their relief upon seeing you at a worship gathering afterward."
+
+*Tammy's apologies:* Tammy and the SPRC Chair "acknowledged your musical talents, dedication to faith and preaching, and the pastoral care you offered as a true blessing to the congregation... expressed gratitude for the ways you enriched their ministry."
+
+*Tammy on public sharing:* "You observed instances where Tammy publicly shared your Anniston Star article about your experience with depression and celebrated your work, which you found to be a deeply meaningful affirmation." [This is the Hope in the Wilderness piece — Tammy was using Matt's depression article publicly while also (per Matt) treating him dismissively.]
+
+*Future vision:* "Sinclair Fresh Expression" as "a healthier and more autonomous space for potential re-engagement." Collaborations with Preston (construction), Kathryn (wellness), Karrie & Taylor (design/hospitality), parents/in-laws (spiritual support).
+
+---
+
+**Note 7 — "Anniston UMC: Sources for Understanding Staff Dynamics"** (375d ago)
+
+A meta-note — NotebookLM listing what additional information it would need to understand the situation better:
+1. SPRC perspectives — meeting minutes, communications, formal responses to Matt's concerns
+2. Other staff experiences — current or former staff testimonials, exit interviews
+3. Congregational feedback — newsletters, town hall summaries, informal communication
+4. Church policies — bylaws, staff handbook, hiring procedures, compensation structures
+5. Tammy's perspective beyond direct communication with Matt
+6. Follow-up on transition plan — Eve Hamrick was supposed to contact Matt
+
+> "Having more information in these areas would provide a more complete picture of the situation, potentially validating different perspectives and offering a stronger basis for understanding the organizational dynamics at play."
+
+---
+
+**Note 8 — "Sharing Music with Anniston First UMC"** (396d ago = approx March 24, 2025)
+
+NotebookLM responding to Matt's idea of recording music videos for YouTube/Facebook to share with the AFUMC congregation:
+
+> "Given the 'unresolved conflict with Tammy' and the limitations on your re-engagement at the main church campus, as well as your past experiences of feeling undervalued and your wife Heather's reaction to Tammy's social media activity, creating your own platform to share your music allows you to bypass these negative dynamics and offer your gifts directly."
+
+- Matt's "Wholehearted Life Vision" document included using musical gifts "in worship in safe environments like Sinclair"
+- Matt's "Strategic Blueprint" included YouTube and Facebook as platforms for expression
+- NotebookLM framed YouTube music sharing as: "allows you to bypass these negative dynamics," "your own online platform becomes another such space where you have control"
+- "A proactive step during a time of transition: While you are focusing on your new venture, continuing to share your musical gifts in this way keeps that aspect of your ministry alive and relevant within your former church community, should opportunities for reconciliation or different forms of engagement arise in the future under potentially new leadership"
+
+---
+
+**Note 10 — "Navigating Church Engagement and Leadership Gifts"** (396d ago)
+
+NotebookLM advising Matt on how to re-engage with the Sinclair Fresh Expression and share his gifts:
+
+- "Consider [Sinclair] as a potentially safer initial point of engagement. Given your desire to maintain connections with the church community while distancing yourself from Tammy's direct leadership..."
+- On music leadership at the main church: "directly resuming music leadership within the main church while Tammy is still Senior Pastor could be challenging and potentially trigger past negative experiences"
+- On church committees: "Joining committees within the main church while Tammy is still the senior pastor could potentially involve navigating similar dynamics that led to your resignation"
+- Strategic advice: "consider your long-term goals for your involvement with Anniston First UMC... waiting for Tammy's departure might be a safer and more positive path for more prominent roles"
+- The note directly quotes from Matt's "Wholehearted Life Vision" and "Strategic Blueprint" — documents he uploaded as sources
+
+---
+
+**Note 11 — "Navigating Church Leadership: A Strategic Approach"** (396d ago)
+
+NotebookLM analyzing two strategic options for Matt:
+
+> *Option 1: Communicating general criticism to Tammy and the SPRC now*
+> Safety risk — Tammy's past "Avoidance & Passive Leadership" and "Manipulative & Image-Focused Leadership" means criticism will be deflected. SPRC won't be receptive.
+>
+> *Option 2: Waiting for Tammy to leave and engaging as a non-staff member*
+> "This approach is likely the safer option in the short term... You can maintain your relationships within the congregation without directly challenging the current leadership."
+
+The note quotes what appears to be Matt's exact words (from a conversation with NotebookLM that was saved as context):
+> "Honestly, do I want the culture to change this way? Or by this means? or would I rather wait Tammy out... and change the culture from within as an engaged member and non-staff leader? Or possibly to rejoin the staff part-time in the future, or partner as a pioneer of the Fresh Expressions of the church?"
+
+NotebookLM's conclusion:
+> "Given your past experiences with Tammy's leadership, your desire to maintain relationships within the church, and your consideration of future involvement, waiting for Tammy to leave and then working to influence the culture as an engaged non-staff member appears to be a safer and potentially more fruitful approach for you."
+
+---
+
+---
+
+**Note 12 — "Anniston First UMC Leadership Dynamics"** (Briefing Doc · 4 sources · 396d ago)
+
+Auto-generated NotebookLM Briefing Document. Ostensibly "Date: October 26, 2023" — this date appears to be wrong or auto-generated (the resignation wasn't until March 2025). Read April 24, 2026 via CDP.
+
+> **Briefing Document: Analysis of Leadership Dynamics at Anniston First UMC**
+>
+> This briefing document summarizes the main themes and important ideas emerging from the provided sources concerning the leadership environment at AFUMC, particularly focusing on the experiences shared by Matt Headley under Tammy's leadership and the broader institutional narratives being presented.
+
+**Source 1 (of 4): "Reflection on my experience under Tammy's leadership at Anniston First United Methodist Church.pdf" — Matt Headley's Account**
+
+This is the PDF uploaded to the notebook (`746867c6...` in the source list). Key themes the briefing doc extracts:
+
+- *"Bait and Switch":* Matt "was initially contacted for an Associate Pastor role, framed as his 'dream job' by Tammy, which would allow him to maintain pastoral duties while overseeing the music program. However, the actual job offer significantly differed, resembling a 'glorified Music Director role with far less authority and compensation.'"
+- *"Consistent Undervaluing":* "undervalued, disrespected, and misled throughout his four-year tenure."
+- *"Avoidance & Passive Leadership":* "Refusing to engage directly in difficult conversations, instead redirecting or deflecting issues rather than solving them."
+- *"Manipulative & Image-Focused Leadership":* "offering empty affirmations in public settings but failing to advocate for me in private leadership conversations," "gaslighting behavior," and "acting as a gatekeeper to SPRC."
+- *"Lack of Institutional Integrity & Professionalism":* "making unilateral decisions that impacted staff without proper governance oversight."
+- Matt's stated goal: "advocate for fair treatment and transparency in leadership... believes his experiences reflect 'larger leadership patterns that could affect future staff and the health of the church overall.'"
+
+**Source 2: "Pasted Text" — Quotes Illustrating Institutional Dynamics**
+
+Critical framing of Tammy's language as "narrative control," "spiritual manipulation," "masking institutional dysfunction":
+- "God has always come looking for faithfulness among us" → framed as narrative control
+- "The gardener says, give up. Let's not give up just yet" → framed as "urging perseverance without acknowledging legitimate concerns"
+- "In order to make us healthier and stronger, God has to dig at the roots" → framed as "discourage questioning of leadership decisions"
+
+**Source 3: "Pasted Text" — Notes from worship March 23, Anniston First UMC (Transcript)**
+
+Transcript of Tammy's March 23, 2025 sermon. Matt was present — 10 days after his resignation. The sermon covered: God's persistent faithfulness (gardener analogy), role of discomfort in growth, letting go of dependencies (caffeine anecdote used as metaphor), submitting to God's process.
+
+**Source 4: "Pasted Text" — Integrated Sermon Summary with Broader Context**
+
+Critical interpretation connecting the March 23 sermon to "broader context of potential leadership challenges and Headley's departure":
+- "Institutional Control Masked as Spiritual Guidance" — the sermon's themes are read as a way to exert institutional control under the guise of spiritual direction.
+
+The Briefing Doc was generated from 4 uploaded "Pasted Text" items and the Tammy reflection PDF. This is NotebookLM taking Matt's personal grievance document + sermon notes and generating an organizational analysis — the AI as institutional critic, citing its own sources (which are all Matt's perspective).
 
 ### NotebookLM auto-summary
 "The provided documents detail the formal and practical frameworks governing pastoral appointments and leadership transitions within the United Methodist Church. According to the Book of Discipline, bishops and cabinets manage an open itineracy system that prioritizes congregational needs and clergy gifts while promoting diversity and inclusive placements. Complementary resources from the East Ohio Conference emphasize the emotional and spiritual health of both the congregation and the moving pastor through prayer, organized hospitality, and intentional farewell rituals. Additionally, the sources provide structured guidance on recruiting associate pastors, highlighting the importance of clear job descriptions and a humble, teachable spirit in subordinate leadership. Collectively, these texts serve as a comprehensive guide for managing the legal, administrative, and relational complexities of church staffing."
@@ -131,9 +333,13 @@ Matt's Google NotebookLM account has **22 notebooks**. At least 14 were created 
 
 **"Sinclair Gathering: To Attend or Not to Attend"** — a strategic memo written 396 days ago (mid-March 2025, week of resignation) while Matt was deciding whether to attend the Sinclair gathering that Shea had organized. The same question that appears in the Shea iMessage thread.
 
-**"caringbridge update april 17.pdf"** — this date (April 17, 2025) is after the farm closed. A CaringBridge post during or after the crisis. Not yet read — in the Reflection notebook as a source.
+**"caringbridge update april 17.pdf"** — CaringBridge content is partially confirmed via Note 1: "She reported a significant decrease in her pain in the past week due to a change in medication... Her surgery had been pushed back again... She expressed gratitude for the prayers." This is from the notes (citing "our previous conversation") — not from the PDF itself. The PDF source has not yet been directly read.
 
-**GoFundMe** — "Fundraiser for Heather Headley by Adriana Headley: Help Heather & Matt Heal: Surgery, Mental Health, and Family" — Adriana Headley (Justin's wife?) created a fundraiser. Matt uploaded it as a source. Appears in both this notebook and the Flower Farm notebook.
+**GoFundMe** — "Fundraiser for Heather Headley by Adriana Headley: Help Heather & Matt Heal: Surgery, Mental Health, and Family" — Note 3 confirms the surgery costs: **$133,750 out-of-pocket** for Heather's advanced endometriosis surgery (internal organs fused together). Adriana Headley created the fundraiser. Appears in both this notebook and the Flower Farm notebook.
+
+**Heather's compensation disparity** — Note 3 confirms Matt's compensation was "less than 50% of the Senior Pastor's" per a February 2023 meeting with Tammy and Mickey where he requested parity. Tammy "opposed changes to his compensation or full-time status."
+
+**AI as grievance researcher** — the sticky notes were generated by NotebookLM after Matt uploaded all his church documentation. The AI synthesized the SPRC failure, the compensation gap, the "bait and switch," the "unilateral decision making," and the "manipulative & image-focused leadership" characterizations. These are the AI's labels for what Matt was experiencing — they were then saved as sticky notes by Matt, making them preserved artifacts of how the AI framed his workplace grievance in the weeks after his resignation.
 
 ---
 
