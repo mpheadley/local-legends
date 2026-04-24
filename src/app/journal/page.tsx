@@ -104,6 +104,7 @@ export default function JournalPage() {
                     marginBottom: "0.6rem",
                   }}>
                     {formatDate(post.frontmatter.date)}
+                    {" "}&middot;{" "}{post.readingTime}
                     {post.frontmatter.originalPublication && (
                       <> &middot; {post.frontmatter.originalPublication.name}</>
                     )}
