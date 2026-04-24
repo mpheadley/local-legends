@@ -60,29 +60,36 @@ export default async function ProfilesPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <section className="bg-ll-light border-b border-ll-border">
-        <div className="mx-auto max-w-6xl px-6 pt-28 pb-10 md:pt-32 md:pb-14">
+      <section className="gradient-hero no-pseudo-topo" style={{ position: "relative" }}>
+        <div aria-hidden="true" className="grid-topo" />
+
+        {/* Header */}
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 pb-10 md:pt-36 md:pb-12">
           <h1
-            className="text-3xl md:text-5xl text-ll-dark"
-            style={{ fontFamily: "var(--font-heading)", fontWeight: 400, lineHeight: 1.1 }}
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(3rem, 8vw, 6rem)",
+              fontWeight: 400,
+              lineHeight: 1.0,
+              color: "#FAFAF7",
+              fontVariationSettings: '"opsz" 72',
+            }}
           >
             {tag ? `Stories tagged "${tag}"` : "All Stories"}
           </h1>
           {!tag && (
-            <p className="mt-4 text-base md:text-lg text-ll-text max-w-xl leading-relaxed">
+            <p className="mt-5 text-base md:text-lg max-w-xl leading-relaxed" style={{ color: "rgba(250,250,247,0.65)" }}>
               I sit down with people in Northeast Alabama. Business owners, mostly. I ask how they got here and write it with enough room to actually tell the story.
             </p>
           )}
-          <p className="mt-3 text-ll-text-light text-sm">
+          <p className="mt-3 text-sm" style={{ color: "rgba(250,250,247,0.4)" }}>
             {profiles.length} {profiles.length === 1 ? "story" : "stories"}
             {tag ? ` tagged "${tag}"` : ""} and counting.
           </p>
         </div>
-      </section>
 
-      <section className="gradient-hero no-pseudo-topo" style={{ position: "relative" }}>
-        <div aria-hidden="true" className="grid-topo" />
-        <div className="mx-auto max-w-6xl px-6 py-12 md:py-16" style={{ position: "relative", zIndex: 1 }}>
+        {/* Grid */}
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16">
           {profiles.length > 0 ? (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {profiles.map((profile, i) => (
@@ -101,7 +108,7 @@ export default async function ProfilesPage({
             </p>
           )}
 
-          {/* Tag filters — below the grid, subtle */}
+          {/* Tag filters */}
           {allTags.length > 1 && (
             <div className="mt-16 pt-8 border-t border-white/10">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">
