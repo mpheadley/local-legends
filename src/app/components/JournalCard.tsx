@@ -1,5 +1,4 @@
 import { Link } from "next-view-transitions";
-import Image from "next/image";
 import type { JournalPost } from "@/lib/journal";
 
 function formatDate(dateStr: string): string {
@@ -11,34 +10,57 @@ function formatDate(dateStr: string): string {
 }
 
 export default function JournalCard({ post }: { post: JournalPost }) {
-  const { slug, frontmatter } = post;
+  const { slug, frontmatter, readingTime } = post;
 
   return (
     <Link href={`/journal/${slug}`} className="group block">
-      <div className="aspect-[3/2] relative overflow-hidden rounded-lg bg-ll-warm">
-        {frontmatter.image ? (
-          <Image
-            src={frontmatter.image}
-            alt={frontmatter.imageAlt || frontmatter.title}
-            fill
-            className="object-cover img-zoom"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        ) : (
-          <div className="w-full h-full bg-ll-warm" />
-        )}
-      </div>
-      <div className="mt-4">
-        <p className="text-xs text-ll-text-light mb-1">{formatDate(frontmatter.date)}</p>
-        <h3
-          className="text-lg font-bold text-ll-dark group-hover:text-ll-primary transition-colors leading-snug"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
-          {frontmatter.title}
-        </h3>
-        <p className="mt-2 text-sm text-ll-text line-clamp-2">{frontmatter.excerpt}</p>
-        <span className="mt-3 inline-block text-sm font-medium text-ll-primary">Read →</span>
-      </div>
+      <p style={{
+        fontFamily: "var(--font-source-sans)",
+        fontSize: "0.6875rem",
+        fontWeight: 600,
+        letterSpacing: "0.12em",
+        textTransform: "uppercase",
+        color: "#9C8E84",
+        marginBottom: "0.5rem",
+      }}>
+        {formatDate(frontmatter.date)} &middot; {readingTime}
+      </p>
+      <h3
+        className="group-hover:text-ll-primary transition-colors"
+        style={{
+          fontFamily: "var(--font-heading)",
+          fontSize: "1.25rem",
+          fontWeight: 400,
+          lineHeight: 1.15,
+          color: "var(--color-ll-dark)",
+          marginBottom: "0.5rem",
+          fontVariationSettings: '"opsz" 36',
+        }}
+      >
+        {frontmatter.title}
+      </h3>
+      <p style={{
+        fontFamily: "var(--font-body)",
+        fontSize: "0.875rem",
+        lineHeight: 1.6,
+        color: "#5C534A",
+        display: "-webkit-box",
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: "vertical",
+        overflow: "hidden",
+      }}>
+        {frontmatter.excerpt}
+      </p>
+      <span className="group-hover:underline" style={{
+        display: "inline-block",
+        marginTop: "0.75rem",
+        fontSize: "0.8125rem",
+        fontWeight: 500,
+        color: "var(--color-ll-primary)",
+        fontFamily: "var(--font-source-sans)",
+      }}>
+        Read →
+      </span>
     </Link>
   );
 }
