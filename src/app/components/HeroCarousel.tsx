@@ -130,7 +130,7 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
                 {/* Name · Location */}
                 <p
                   className="leading-snug mt-1"
-                  style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300, fontSize: "2rem", color: "rgba(250,250,247,0.65)" }}
+                  style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", color: "rgba(250,250,247,0.65)" }}
                 >
                   {name}&nbsp;&nbsp;·&nbsp;&nbsp;{location}
                 </p>
