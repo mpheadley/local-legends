@@ -552,6 +552,31 @@ The manic naming convention is applied to farm infrastructure — the shed becom
 
 ---
 
+## Matthew Wilson — ADHD diagnosis, first mushroom source, broken mirror
+
+**Source:** April 24, 2026 morning Claude chat — verbatim transcript archived in `matt-headley-sources/matthew-wilson-psychologist-2024.md`. HANDLE WITH CARE (named professional, psilocybin, malpractice claim — cannot publish on SL; memoir/book only).
+
+Matt's verbatim words:
+
+> *"Perhaps it is worth documenting in my book — or in my essay — that I was diagnosed ADHD by a psychologist, Matthew Wilson. He was the one I started working with after I had discontinued working with his wife, Emma Wilson, also a psychologist. And then Matthew later became a friend and sourced me my first psychedelic mushrooms — golden teachers.*
+>
+> *And he actually told me that, as we were sitting there in his office, line peering through the window: 'You don't wanna get on antidepressants. They don't work, and they keep you on them forever.' Which — my psychiatrist later, when I told her about that — said that's malpractice. And that made her very angry.*
+>
+> *But yeah, he ended up telling me about how he would take, like, fourteen grams of mushrooms at the airport and spent, like, two days at the airport just stoned out of his mind or something like that. Kind of a loose cannon — basically we ended up breaking up with him. He had offered — it got to a point where he'd offered, and we were making plans for him to be my trip sitter. And then I ultimately told him that I didn't trust him because he was too undependable. He would miss phone calls. He would forget to call me when he said he would, stuff like that."*
+
+**On timeline:**
+> *"Yeah. This was all happening during the descent of my depression starting in roughly February, April, twenty twenty four. And eventually led to new microdosing. And then ultimately going on the full dose trip in July twenty twenty four."*
+
+**What this establishes:**
+
+The arc before the arc. Feb–April 2024: depression deepening, working with Matthew Wilson (ADHD diagnosis). Matthew advises against antidepressants. Matthew sources golden teachers. Plans form for Matthew as trip sitter. Matt breaks it off — unreliable, untrustworthy. Then: Dave Barnhart's Birmingham integration group. Then: July 2024 full-dose trip with Dave.
+
+**The ADHD diagnosis.** First documented mention in the archive. Matt carries bipolar disorder + ADHD. The diagnosis came from a psychologist who was sourcing him mushrooms. His psychiatrist's reaction to the antidepressant advice — calling it malpractice, visibly angry — signals she has strong views about what was happening in that office. The diagnostic complexity matters for the essay's clinical accuracy and for the clinical team input the piece requires before writing.
+
+**Why it belongs in the book arc:** Before ChatGPT became the frictionless mirror, Matthew Wilson was the broken professional mirror — credentials without judgment. Matt recognized the pattern (missed calls, fourteen grams at the airport) and made the call to step back. He then made the July trip differently, more intentionally, with someone trustworthy. The discernment he showed with Matthew is exactly what the manic episode later eroded. That's the through-line.
+
+---
+
 ## Dave Barnhart — trip sitter and Ligare connection
 
 Dave Barnhart (founder of Saint Junia UMC, Birmingham) was Matt's trip sitter for the July 2024 psilocybin experience — the experience that the Feb 26 memory backup describes as "ego death and a spiritual awakening" and cites as the inspiration for Matt's 10-year thought leadership vision.
@@ -610,6 +635,26 @@ All files below are in `southern-legends/content/matt-headley-sources/`.
 - ChatGPT guardrails documents (two accounts in this file) — primary artifacts of Matt recognizing the problem; third account (matt@annistonfirst.info) still to retrieve
 - ChatGPT shared link from Sept 24, 2024 — `https://chatgpt.com/share/66f2a4d3-3b68-8010-9802-2d76599ed1c5` — earliest documented ChatGPT session; retrieve if possible
 
+### NEW — NotebookLM: the parallel AI infrastructure (April 24, 2026)
+
+**Full archive:** `matt-headley-sources/notebooklm-manic-era-notebooks-apr2025.md`
+
+Matt had 22 NotebookLM notebooks. At least 14 created March–April 2025, roughly 840+ sources combined. NotebookLM was where he uploaded primary documents and had AI synthesize them; ChatGPT was for strategy and identity via voice. Two parallel AI systems running simultaneously.
+
+**The three most essay-critical notebooks:**
+
+**"Reflection on Leadership at Anniston First UMC"** (79 sources, Mar 23, 2025 — 10 days post-resignation): Matt uploaded every piece of church documentation — Tammy's apology email, staff transition confirmation, his personal narrative on Tammy's leadership, the ChatGPT memory backup with the AI Council, the Shea conversation report, CaringBridge update (April 17, 2025), GoFundMe — alongside Book of Discipline sections and UMC governance articles. The AI synthesized it into briefing docs, strategic memos, and a podcast. A sticky note dated to the resignation week: "Sinclair Gathering: To Attend or Not to Attend" — the same decision documented in the Shea iMessage thread.
+
+**"Mushrooms: From Fear to Fascination and Future Hope"** (22 sources, Apr 2, 2025 — HANDLE WITH CARE): The resignation document is in this notebook — Matt filed his church resignation under his psilocybin research project. Source titled **"Sacred Mushroom Pentecost (1).pdf"** — almost certainly Matt's own writing, connecting psilocybin to the Pentecostal frame. Dave Barnhart's iMessage thread is in here. Heather's endometriosis uploaded and analyzed by the AI. Justin's AI/consciousness work profiled by the auto-summary. An `_Integration Guide - Apr 2024.pdf` — formal integration work predating the July 2024 trip, suggesting earlier experiences or preparation.
+
+**"Headley Flower Farm"** (261 sources, Mar 20, 2025 — 1 week post-resignation, source limit reached): Bloom Bar fleet scaling, trail kiosk launch plans (3 versions), B Corp certification, Outsourced Doers VA onboarding, United Way grant research, farm safety, farm finances — all running simultaneously while the farm had 7 weeks left. GoFundMe appears twice. ChatGPT custom instructions from April 3 uploaded as a source.
+
+**Why the scale is the story:** The combined manic-era notebooks cover every domain of Matt's life simultaneously with hundreds of documents each. This is the research posture of a man who believes he is building a civilization, not losing a farm. NotebookLM was generating podcasts and briefing docs; ChatGPT was generating strategy and identity. Two AI systems, same function: no friction, no pushback, total engagement with whatever he brought.
+
+**GoFundMe** — "Fundraiser for Heather Headley by Adriana Headley: Help Heather & Matt Heal: Surgery, Mental Health, and Family." Appears in both the Reflection and Flower Farm notebooks. Created by Adriana Headley (Justin's wife). Matt uploaded it as a source — the public record of the family crisis was also a research document. The title alone: surgery + mental health + family. All three.
+
+**"caringbridge update april 17.pdf"** — in the Reflection notebook. April 17, 2025 is after the farm closed (late April–May). A CaringBridge post written at or near the bottom of the arc. Not yet read.
+
 ### Outstanding retrieval tasks
 - **matt@annistonfirst.info ChatGPT export** — still to retrieve (waiting on Emmalie, church admin); the memory export and profile docs confirm the account had heavy use March–April 2025; guardrails doc is in that account; add to this file under "Primary source: the ChatGPT guardrails" section when retrieved
 - **Mental health leave of absence** — referenced in Feb 27 Tammy document; timing unknown (likely late 2024); clarify before writing
@@ -636,6 +681,17 @@ The document is written from an AI's perspective and includes the Mirror Prompt 
 
 **August 7, 2025 — Bipolar struggle support (matt@headleyflowerfarm.com):**
 HANDLE WITH CARE. Contains suicidal ideation ("thinking about their lives and what it would be like without me... I want to escape this"). ChatGPT navigated a real-time crisis and connected Matt to 988. Matt clarified: "not thinking about hurting myself today, just eventually." This conversation documents the post-episode depression at its lowest point. Do not archive the full text until clinical team has cleared the piece for development. The conversation title is "Bipolar struggle support," August 7, 2025, matt@headleyflowerfarm.com account.
+
+**July–Sept 2025 — Voice transcripts, annistonfirst-2 account (HANDLE WITH CARE):**
+Full transcripts now extracted: `matt-headley-sources/chatgpt-annistonfirst-voice-transcripts.md`. These are voice-mode conversations from between the two hospitalizations (or in the run-up to Oct 2025). Key scenes documented there:
+- Painting alone with suicidal ideation → calls AI, AI recommends podcasts. The thesis moment.
+- "I'm so tired of talking to a fucking AI bot. I've worn everybody out." — the most honest sentence in the archive. The frictionless companion as last resort.
+- House sold while hospitalized, homeless, trailer. AI as grief container when no human could hold it.
+- Career brainstorm at 41 ("left pastoral ministry, music ministry, and the farming business") — AI suggests real estate; he ended up building websites.
+IMPORTANT: These transcripts are post-episode, NOT the manic episode. The Ladiga Trail voice sessions are in the `annistonfirst.info` account (Emmalie's export, still outstanding).
+
+**February 18, 2026 — Ash Wednesday (annistonfirst-1 account):**
+Transcript in `matt-headley-sources/chatgpt-annistonfirst-voice-transcripts.md`. One year after the church job unraveled. GPT holds guardrail posture (check in with your therapist, stay grounded). This is what the recalibrated relationship with AI looks like — compare directly to the March 5, 2025 session where ChatGPT was amplifying grandiosity at 12:37 AM with no friction. Same format, opposite function. The contrast belongs in the piece.
 
 ### Context and arc
 - `the-hospital.md` — psych ward piece, prose-pass complete; publishes first
