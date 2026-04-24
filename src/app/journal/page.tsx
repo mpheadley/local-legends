@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { getAllJournalPosts } from "@/lib/journal";
 import { siteConfig } from "@/lib/site-config";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
@@ -22,8 +21,6 @@ function formatDate(dateStr: string): string {
 
 export default function JournalPage() {
   const posts = getAllJournalPosts();
-  const featured = posts.find((p) => p.frontmatter.featured) ?? posts[0] ?? null;
-  const rest = posts.filter((p) => p.slug !== featured?.slug);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -35,119 +32,124 @@ export default function JournalPage() {
   };
 
   return (
-    <main id="main-content">
+    <main id="main-content" style={{ backgroundColor: "#F0EDE6" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero */}
-      <section className="relative text-white overflow-hidden gradient-hero">
-        <div className="absolute inset-0 bg-black/50 z-[1]" aria-hidden="true" />
-        <div className="relative z-10 mx-auto max-w-3xl px-6 pt-28 pb-10 md:pt-32 md:pb-14">
-          <h1
-            className="text-3xl md:text-4xl font-bold uppercase tracking-tight"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Journal
-          </h1>
-          <p className="mt-4 text-base md:text-lg text-white/75 max-w-xl">
-            I write about what&apos;s behind the profiles. And what&apos;s behind me.
-          </p>
-        </div>
-      </section>
+      {/* Header */}
+      <div className="mx-auto max-w-2xl px-6 pt-28 pb-6 md:pt-36 md:pb-8">
+        <p style={{
+          fontFamily: "var(--font-source-sans)",
+          fontSize: "0.7rem",
+          fontWeight: 600,
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          color: "var(--color-ll-accent)",
+          marginBottom: "1rem",
+        }}>
+          Personal writing
+        </p>
+        <h1 style={{
+          fontFamily: "var(--font-heading)",
+          fontSize: "clamp(2.5rem, 7vw, 4.5rem)",
+          fontWeight: 400,
+          lineHeight: 1.0,
+          color: "var(--color-ll-dark)",
+          fontVariationSettings: '"opsz" 72',
+        }}>
+          Journal
+        </h1>
+        <p style={{
+          marginTop: "1.25rem",
+          fontFamily: "var(--font-body)",
+          fontSize: "1.0625rem",
+          lineHeight: 1.65,
+          color: "#5C534A",
+          maxWidth: "32rem",
+        }}>
+          I write about what&apos;s behind the profiles. And what&apos;s behind me.
+        </p>
+      </div>
 
-      {/* Featured post */}
-      {featured && (
-        <section className="bg-ll-light border-b border-ll-border">
-          <div className="mx-auto max-w-3xl px-6 pt-12 pb-10 md:pt-16 md:pb-12">
-            <Link href={`/journal/${featured.slug}`} className="group block">
-              {(featured.frontmatter.cardImage ?? featured.frontmatter.image) && (
-                <div className="w-full aspect-[16/9] rounded-lg overflow-hidden mb-6">
-                  <Image
-                    src={(featured.frontmatter.cardImage ?? featured.frontmatter.image)!}
-                    alt={featured.frontmatter.imageAlt ?? featured.frontmatter.title}
-                    width={900}
-                    height={394}
-                    className="w-full h-full object-cover object-center"
-                    priority
-                  />
-                </div>
-              )}
-              <p className="text-xs text-ll-text-light mb-3 uppercase tracking-wide">
-                {formatDate(featured.frontmatter.date)}
-              </p>
-              <h2
-                className="text-2xl md:text-3xl font-bold text-ll-dark group-hover:text-ll-primary transition-colors mb-4"
-                style={{ fontFamily: "var(--font-heading)" }}
+      {/* Ruled divider */}
+      <div className="mx-auto max-w-2xl px-6">
+        <div style={{ height: "1px", backgroundColor: "var(--color-ll-border)" }} />
+      </div>
+
+      {/* Post list */}
+      <div className="mx-auto max-w-2xl px-6 py-12 md:py-16">
+        {posts.length === 0 ? (
+          <p style={{ color: "#9C8E84", fontSize: "0.875rem" }}>Coming soon.</p>
+        ) : (
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {posts.map((post, i) => (
+              <li
+                key={post.slug}
+                style={{
+                  borderBottom: i < posts.length - 1 ? "1px solid var(--color-ll-border)" : "none",
+                  paddingBottom: i < posts.length - 1 ? "2.5rem" : 0,
+                  marginBottom: i < posts.length - 1 ? "2.5rem" : 0,
+                }}
               >
-                {featured.frontmatter.title}
-              </h2>
-              <p className="text-ll-text leading-relaxed max-w-xl">{featured.frontmatter.excerpt}</p>
-              <span className="inline-block mt-5 text-sm font-medium text-ll-primary group-hover:underline">
-                Read →
-              </span>
-            </Link>
-          </div>
-        </section>
-      )}
-
-      {/* Remaining posts */}
-      {rest.length > 0 && (
-        <section className="bg-ll-light">
-          <div className="mx-auto max-w-3xl px-6 py-12 md:py-16">
-            <ul className="space-y-10">
-              {rest.map((post) => (
-                <li key={post.slug} className="border-b border-ll-border pb-10 last:border-0 last:pb-0">
-                  <Link href={`/journal/${post.slug}`} className="group flex gap-6 items-start">
-                    {(post.frontmatter.cardImage ?? post.frontmatter.image) && (
-                      <div className="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden">
-                        <Image
-                          src={(post.frontmatter.cardImage ?? post.frontmatter.image)!}
-                          alt={post.frontmatter.imageAlt ?? post.frontmatter.title}
-                          width={128}
-                          height={128}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                <Link href={`/journal/${post.slug}`} className="group block">
+                  <p style={{
+                    fontFamily: "var(--font-source-sans)",
+                    fontSize: "0.6875rem",
+                    fontWeight: 600,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "#9C8E84",
+                    marginBottom: "0.6rem",
+                  }}>
+                    {formatDate(post.frontmatter.date)}
+                    {post.frontmatter.originalPublication && (
+                      <> &middot; {post.frontmatter.originalPublication.name}</>
                     )}
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs text-ll-text-light mb-2 uppercase tracking-wide">
-                        {formatDate(post.frontmatter.date)}
-                        {post.frontmatter.originalPublication && (
-                          <> &middot; Originally in {post.frontmatter.originalPublication.name}</>
-                        )}
-                      </p>
-                      <h2
-                        className="text-xl md:text-2xl font-bold text-ll-dark group-hover:text-ll-primary transition-colors mb-3"
-                        style={{ fontFamily: "var(--font-heading)" }}
-                      >
-                        {post.frontmatter.title}
-                      </h2>
-                      <p className="text-ll-text leading-relaxed">{post.frontmatter.excerpt}</p>
-                      <span className="inline-block mt-4 text-sm font-medium text-ll-primary group-hover:underline">
-                        Read →
-                      </span>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
+                  </p>
+                  <h2 style={{
+                    fontFamily: "var(--font-heading)",
+                    fontSize: "clamp(1.5rem, 3.5vw, 2rem)",
+                    fontWeight: 400,
+                    lineHeight: 1.1,
+                    color: "var(--color-ll-dark)",
+                    marginBottom: "0.75rem",
+                    fontVariationSettings: '"opsz" 36',
+                    transition: "color 0.15s",
+                  }}
+                  className="group-hover:text-ll-primary"
+                  >
+                    {post.frontmatter.title}
+                  </h2>
+                  <p style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.9375rem",
+                    lineHeight: 1.65,
+                    color: "#5C534A",
+                  }}>
+                    {post.frontmatter.excerpt}
+                  </p>
+                  <span style={{
+                    display: "inline-block",
+                    marginTop: "1rem",
+                    fontSize: "0.8125rem",
+                    fontWeight: 500,
+                    color: "var(--color-ll-primary)",
+                    fontFamily: "var(--font-source-sans)",
+                  }}
+                  className="group-hover:underline"
+                  >
+                    Read →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
 
-      {posts.length === 0 && (
-        <section className="bg-ll-light">
-          <div className="mx-auto max-w-3xl px-6 py-12">
-            <p className="text-ll-text-light text-sm">Coming soon.</p>
-          </div>
-        </section>
-      )}
-
-      {/* Subscribe */}
       <SubscribeCTA />
-
     </main>
   );
 }
