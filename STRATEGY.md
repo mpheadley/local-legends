@@ -311,7 +311,29 @@ These readers don't know you yet. They don't need to. The piece is the introduct
 
 ## Syndication Strategy
 
-### Order of Operations
+### April 2026 reframe (read this first before the sections below)
+
+Two pieces of feedback this week changed the shape of the syndication plan:
+
+1. **Donna Barton (Anniston Star):** SL profiles are a better fit for *Foothills Magazine* than for the Star — the Star's arts and culture section is already crowded. This redirects the profile track. Donna remains the right home for personal first-person essays (she already published the 2024 depression essay and is considering the reintroduction).
+2. **Foothills Magazine constraints:** Foothills doesn't take first-person editorial. They want third-person features. That means Foothills fits the *profile* track cleanly, but the *journal / personal essay* track can't go there.
+
+**The practical split, as of April 2026:**
+
+| Track | Primary outlet | Secondary | Why |
+|---|---|---|---|
+| **Profiles (3rd person)** | Foothills Magazine | Calhoun Journal | Donna's redirect; Foothills wants this voice; Calhoun Journal has broad reach |
+| **Personal essays (1st person)** | Anniston Star | SL canonical only | Star accepts first-person; Foothills doesn't; sequel to 2024 essay already in play |
+| **Lead-gen from Foothills** | — | — | Foothills access is as valuable for local-business introductions as it is for syndication. Treat it as a dual channel. |
+
+**Order of operations (revised):**
+
+1. SL publishes first. Always. Canonical home.
+2. **For profiles:** pitch Foothills Magazine next. Calhoun Journal after.
+3. **For personal essays:** pitch the Star next. Nowhere else locally.
+4. Do not disclose other outlets up front when pitching any single editor. Let each respond on their own terms.
+
+### Order of Operations (legacy — retained for reference)
 
 1. Walk in / contact the business owner — introduce yourself as someone who runs Southern Legends and would like to profile them. Mention that profiles get picked up by the Anniston Star and the Calhoun Journal.
 2. Interview them
@@ -319,6 +341,8 @@ These readers don't know you yet. They don't need to. The piece is the introduct
 4. Publish on **Southern Legends** first (your owned platform — permanent canonical home)
 5. Wait one to two weeks — pitch to **Anniston Star** (Donna Barton) for syndication
 6. Syndicate to **Calhoun Journal** (Lee) after another one to two weeks
+
+*(Steps 5–6 superseded by the April 2026 reframe above — profile track now routes Foothills first, Star for personal essays only.)*
 
 **Why SL publishes first (decided April 2026):**
 SL is the primary home — you own it permanently, it demonstrates your web design ability to the subject firsthand, and it's already generating real social proof (Jean Ellison and Samuel Sawyer both shared their profiles multiple times without being asked). The gift dynamic — "I chose you for my personal project" — creates stronger personal goodwill than a Star assignment would. The Star and CJ are distribution on top of something that already works, not the primary credibility play.
@@ -330,6 +354,50 @@ Considered and rejected April 2026. The Star credential is valuable for cold out
 > "I run a community storytelling project called Southern Legends — profiles of interesting people and small business owners across northeast Alabama. I'd love to feature you. The profiles also get picked up by the Anniston Star and the Calhoun Journal."
 
 This keeps SL as the gift and the syndication as a bonus — the business owner understands you chose them, the papers just happen to run it too.
+
+---
+
+### Foothills Magazine
+
+**Contact:** TBD — Matt has a writing gig in play; log the editor's name and contact method here once confirmed.
+
+**What it is:** Regional arts, culture, and lifestyle magazine. Third-person features. Distributed as a subscriber insert/pairing with the Anniston Star. Strong local-business adjacency.
+
+**Why it fits the profile track (per Donna's April 2026 redirect):** SL profiles are already the voice Foothills wants — third-person, local, feature-length, sensory, grounded in place. Donna said so directly. The Star's arts and culture coverage is already crowded; Foothills has the slot.
+
+**What Foothills does NOT take:** First-person editorial. No "I." Matt's personal essays / journal pieces cannot syndicate here. Don't try.
+
+**Dual value (important):**
+- **Syndication channel** for profiles — routes SL work to an audience it already serves.
+- **Lead-generation channel** for Headley Web — the writing gig puts Matt in front of local business owners and gives him a reason to approach them ("I'm writing a feature for Foothills"). This is arguably the more valuable side of the relationship today, given that SL profiles already have the Star and Calhoun Journal backing and the Foothills version is adapted (third-person, different framing).
+
+**Workflow for profiles:**
+1. Write the SL version first (canonical, first-person-adjacent editorial voice where applicable; third-person where the piece calls for it).
+2. After SL publishes, adapt for Foothills — strip any first-person framing, tighten to their word count, adjust the hook to match their section tone.
+3. Pitch Calhoun Journal as the third stop (their free model and broad reach).
+
+**Keep editorial and sales separate:** When the Foothills gig also creates a business conversation, route those leads through the Headley Web track (separate card, separate follow-up). Never pitch web design inside a Foothills feature.
+
+---
+
+### Longer-Term Syndication Horizons (April 2026)
+
+Right now the three-outlet local pipeline (Foothills / Star / Calhoun Journal) is the focus. Don't chase national or regional publications until SL has 15–20 published profiles and a visible journal arc. When that threshold is reached, here are the realistic next rungs, roughly in order:
+
+**For the profile track:**
+- **Alabama Heritage** — quarterly, state-wide, deep-dive features. Good fit for historical or place-rooted profiles.
+- **Alabama Writers' Forum** — publishes + signal-boosts Alabama writers; worth joining before pitching.
+- **Garden & Gun** (their "Due South" and local-focused sections) — long shot, but the voice could fit once the body of work is bigger.
+- **The Bitter Southerner** — the natural ceiling for SL's voice. Reads like the publication SL is already shadowing. Submission windows are narrow; a handful of the strongest profiles (Jean Ellison, Aquality, Freedom Riders) would be the pitch set.
+
+**For the personal essay track:**
+- **Southern Cultures** (UNC Press quarterly) — essays on Southern life, memory, faith. High editorial bar; long lead times.
+- **The Bitter Southerner** (first-person features) — again, the voice ceiling.
+- **Oxford American** — the long shot. The voice fits; the competition is everything from everyone. Worth one specific, well-timed pitch when the arc is clearer.
+
+**Don't pursue now:** Christian / ministry-specific outlets (Christianity Today, Relevant, Plough) — the writing is post-ministry and wrestles with faith rather than affirming it; pitching there risks mismatched framing and could narrow how SL gets perceived.
+
+**Guardrail:** More outlets ≠ more audience. Every additional editor is more editorial negotiation, more adaptation work, more brand dilution. The bottleneck isn't distribution — it's published volume. Grow the body of work first; let inbound pitches come when they come.
 
 ---
 
