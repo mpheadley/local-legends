@@ -283,6 +283,7 @@ export default async function ProfilePage({
           heroTextBottom={frontmatter.heroTextBottom}
           heroFontSize={frontmatter.heroFontSize}
           displayTitle={frontmatter.displayTitle}
+          cardFont={frontmatter.cardFont}
           slug={slug}
         />
       ) : (
