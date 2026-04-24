@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getProfileBySlug } from "@/lib/profiles";
+import { getProfileBySlug, getPublishedSlugs } from "@/lib/profiles";
 
 export const runtime = "nodejs";
 export const alt = "Southern Legends profile";
@@ -16,6 +16,10 @@ const CATEGORY_COLORS: Record<string, string> = {
   places: "#3D6B4F",
   people: "#9A3412",
 };
+
+export function generateStaticParams() {
+  return getPublishedSlugs().map((slug) => ({ slug }));
+}
 
 export default async function OGImage({
   params,
@@ -39,6 +43,7 @@ export default async function OGImage({
     { name: "Source Sans 3", data: sourceSans, style: "normal" as const, weight: 400 as const },
   ];
 
+  // AI-written drafts are not publishable — render the generic fallback rather than an OG card for the draft.
   if (!profile || profile.frontmatter.aiWritten) {
     return new ImageResponse(
       (
