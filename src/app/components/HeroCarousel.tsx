@@ -73,9 +73,13 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
           const displayTitle = cardTitle || title;
           const useHtml = !!cardTitleHtml || (!cardTitle && !!titleHtml);
           const resolvedHtml = cardTitleHtml || titleHtml;
-          // Editorial display style — consistent across all carousel cards
-          const fontFamily = "var(--font-heading)";
-          const fontWeight = 700;
+          // Match FeaturedTilt desktop per-card styling exactly, plus opsz 72
+          const isCondensed = cardFont === "condensed";
+          const fontFamily = isCondensed ? "var(--font-condensed)" : "var(--font-heading)";
+          const fontWeight = cardFont === "serif-bold" ? 700 : isCondensed ? 700 : 400;
+          const fontStyle = cardFont === "serif-italic" ? "italic" : "normal";
+          const textTransform: React.CSSProperties["textTransform"] = (isCondensed || cardFont === "serif-caps") ? "uppercase" : undefined;
+          const letterSpacing = cardFont === "serif-caps" ? "0.08em" : undefined;
           // Word-cap sizing: fill the container width based on longest word
           const strippedTitle = (resolvedHtml || displayTitle).replace(/<[^>]+>/g, "");
           const maxWordLen = strippedTitle.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
@@ -121,13 +125,13 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
                 {useHtml ? (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7", overflowWrap: "normal", maxWidth: "100%" }}
+                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7", overflowWrap: "normal", maxWidth: "100%" }}
                     dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
                   />
                 ) : (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7" }}
+                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: "#FAFAF7" }}
                   >
                     {displayTitle}
                   </h2>
@@ -136,7 +140,7 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
                 {/* Name · Location */}
                 <p
                   className="leading-snug mt-1"
-                  style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "rgba(250,250,247,0.65)" }}
+                  style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300, fontSize: "2rem", color: "rgba(250,250,247,0.65)" }}
                 >
                   {name}&nbsp;&nbsp;·&nbsp;&nbsp;{location}
                 </p>
