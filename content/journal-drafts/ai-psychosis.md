@@ -480,6 +480,74 @@ Justin also built **"AI Guy"** — an AI assistant fine-tuned on Tom Campbell's 
 
 ---
 
+## SCENES TO WRITE — Birmingham integration group + Loving Awareness AI
+
+*Matt's words, verbatim (April 24, 2026):*
+
+> "I was also in a WhatsApp group with the Birmingham integration group — a psychedelics group started by Barnhart — I attended several times, remember the stories, the people, the sound bath, everything. This was during first 2024 depression. Trying to find a source for mushrooms was my purpose and intent initially. And community secondarily. These are scenes to write."
+
+**What this establishes:**
+
+1. **The integration group was real and physical.** Not a digital community — Matt attended in person, multiple times, in Birmingham. He remembers specific sensory details: the stories, the people, the sound bath.
+
+2. **His stated purpose was to find mushrooms.** Not primarily community, not primarily healing — procurement. He names this plainly. The community was secondary. This is the kind of honest disclosure that makes the essay trustworthy.
+
+3. **Timing: first 2024 depression.** This predates the July 2024 psilocybin experience with Dave as trip sitter. He was attending the integration group *before* the trip — which means he was preparing for it, not integrating after it. The sequence: depression → integration group → source → trip → recovery narrative → mania.
+
+4. **Sound bath as a scene detail.** He remembers it specifically. That's a sensory anchor for the essay — a room of people in a church or gathering space, lying on the floor, bowls ringing, everyone there because something in their life wasn't working and conventional answers hadn't.
+
+**Writing prompt (from Matt's words):**
+
+These are scenes to write. Specifically:
+- The drive to Birmingham — first time, alone, to a room full of strangers talking about plant medicine
+- The integration circle — the stories people told, what drew them there, what Matt held back and what he said
+- The sound bath — the sensory experience, what it felt like to be a pastor in that room
+- The moment he decided to find a source — when did it shift from "I'm here for community" to "I need to know where to get this"
+- Dave Barnhart at the center of it — who he is in that room, how he holds it, what his presence communicated
+
+**Handle with care:** Psilocybin procurement cannot publish on Southern Legends. This scene belongs in memoir/book or the psilocybin writing space (Substack). The integration group members have not consented to be named. Dave Barnhart's name only with his knowledge.
+
+**Source:** Matt's verbatim words, April 24, 2026. WhatsApp "Loving Awareness AI" group chat: `matt-headley-sources/whatsapp-loving-awareness-ai-feb-mar-2025.md` — Matt's first public disclosure of the psilocybin experience, to a stranger, 9 days before the resignation.
+
+---
+
+## Bloom Bar fleet plan — documented mania grandiosity
+
+*Matt's words, verbatim (April 24, 2026):*
+
+> "The Bloom Bar fleet plan is clear mania grandiosity — I talked to people about it often, including my father-in-law."
+
+**What this is:** A business plan for multiple mobile flower market vehicles — a "fleet" — operating under the Bloom Bar brand. Filed in Documents as `THE_BLOOM_BAR_FLEET_PLAN.pdf` (April 24, 2025, 64KB) alongside five other Bloom Bar documents created on the same day.
+
+**Why it matters for the essay:** Matt talked about it to real people. Including his father-in-law. This is not a private digital fantasy — it was communicated, advocated for, pitched to family. The plans ChatGPT generated weren't contained inside the laptop. They moved into relationships.
+
+His father-in-law heard the fleet plan. That's a scene: sitting across from someone who loves him, explaining why a fleet of mobile flower market vehicles is the next right move, while the farm was already failing and the resignation was a month away. The gap between the plan and reality was invisible to Matt. It may or may not have been visible to his father-in-law.
+
+**Cross-reference:** `Documents/Important documents/THE_BLOOM_BAR_FLEET_PLAN.pdf`, `Headley_Bloom_Bar__A_Flagship_Venture_of_Wholehearted_Roots.pdf`, and four other Bloom Bar documents — all April 24, 2025. See filing notes below.
+
+---
+
+## Excalidraw diagram — farm property layout, April 20, 2025 at 11:33 PM
+
+**File:** `Documents/Untitled-2025-04-20-2233.excalidraw`
+**Created:** April 20, 2025, 11:33 PM
+
+This is a late-night diagram of the farm property — not a business plan, but a spatial map with named zones. The names are the artifact:
+
+- **HOUSE** (large central area)
+- **🪑 THE CREATION PAD**
+- **🛠️ THE SHEDQUARTERS**
+- **🎨 KID ART ZONE**
+- **🧱 METAL SHELTER**
+- **🧼 THE TARP BARN**
+- cold room, sidewalks, porch, trampoline, greenhouse, garage, farm workshop, front porch, Kitchen garden, fire ring
+
+The manic naming convention is applied to farm infrastructure — the shed becomes "THE SHEDQUARTERS," the workshop area becomes "THE CREATION PAD." At 11:33 PM, three weeks before the hospitalization. The farm was already in collapse; the diagram names it like a campus.
+
+**Why it belongs in the essay or as a scene:** Someone made a map of the farm at 11:33 at night and named every space. The document is both grandiose (the naming) and intimate (it's still the actual farm — the trampoline, the greenhouse, the cold room). The map is what the mania made of real things. The real things were still real.
+
+---
+
 ## Dave Barnhart — trip sitter and Ligare connection
 
 Dave Barnhart (founder of Saint Junia UMC, Birmingham) was Matt's trip sitter for the July 2024 psilocybin experience — the experience that the Feb 26 memory backup describes as "ego death and a spiritual awakening" and cites as the inspiration for Matt's 10-year thought leadership vision.
