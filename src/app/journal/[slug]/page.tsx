@@ -187,7 +187,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
   if (!post) notFound();
 
   const moreJournal = getOtherJournalPosts(slug, 2);
-  const profiles = getAllProfiles().slice(0, 3);
+  const profiles = getAllProfiles().slice(0, 2);
 
   const { frontmatter, content, readingTime } = post;
 
