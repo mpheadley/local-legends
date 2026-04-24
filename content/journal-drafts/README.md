@@ -40,7 +40,7 @@ Some people from the church probably prefer Matt had disappeared or stayed that 
 
 **Up next — PRIORITY:**
 
-**Headley Flower Farm journal entry** (`headley-flower-farm.md`) — **HIGH PRIORITY.** Multiple profiles (Lewis Downing, Aquality Farms) and journal posts link to `/about#farm` as a placeholder. The farm piece is the right destination for all of them. Write this before the next profile.
+**Headley Flower Farm journal entry** (`headley-flower-farm.md`) — **HIGH PRIORITY.** `/about#farm` is a working anchor on the about page — not a dead link. The farm piece is the right destination for readers who want more than the about page summary, but it's not blocking anything live. Write this when ready, not urgently.
 The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, the markets, the kids underfoot, and losing it. Several Anniston Star articles written by others exist as source material (not Matt's writing — link from within the entry, not from the about page). When written, the about page "Chief Ladiga Trail" mention can link to the SL profile/entry, and the about page farm reference earns a link too.
 
 ---

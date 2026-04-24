@@ -2,7 +2,7 @@
 
 **Status:** Raw material only. Matt writes first.
 **Planned slug:** `headley-flower-farm` (or title-driven)
-**When written:** Link from about page "flower farm" mention + "Chief Ladiga Trail" mention
+**When written:** `/about#farm` is a working anchor (not a dead link). When this piece publishes, the about page can deeplink here instead of anchoring to itself.
 
 ---
 
