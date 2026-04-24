@@ -60,30 +60,28 @@ export default async function ProfilesPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <section className="relative text-white overflow-hidden gradient-hero">
-        <div className="absolute inset-0 bg-black/50 z-[1]" aria-hidden="true" />
-        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 pb-10 md:pt-32 md:pb-14">
+      <section className="bg-ll-light border-b border-ll-border">
+        <div className="mx-auto max-w-6xl px-6 pt-28 pb-10 md:pt-32 md:pb-14">
           <h1
-            className="text-3xl md:text-4xl font-bold uppercase tracking-tight"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="text-3xl md:text-5xl text-ll-dark"
+            style={{ fontFamily: "var(--font-heading)", fontWeight: 400, lineHeight: 1.1 }}
           >
             {tag ? `Stories tagged "${tag}"` : "All Stories"}
           </h1>
           {!tag && (
-            <p className="mt-4 text-base md:text-lg text-white/75 max-w-xl">
+            <p className="mt-4 text-base md:text-lg text-ll-text max-w-xl leading-relaxed">
               I sit down with people in Northeast Alabama. Business owners, mostly. I ask how they got here and write it with enough room to actually tell the story.
             </p>
           )}
-          <p className="mt-3 text-white/70 text-sm">
+          <p className="mt-3 text-ll-text-light text-sm">
             {profiles.length} {profiles.length === 1 ? "story" : "stories"}
             {tag ? ` tagged "${tag}"` : ""} and counting.
           </p>
         </div>
       </section>
 
-      <section className="gradient-hero no-pseudo-topo" style={{ position: "relative" }}>
-        <div aria-hidden="true" className="grid-topo" />
-        <div className="mx-auto max-w-6xl px-6 py-12 md:py-16" style={{ position: "relative", zIndex: 1 }}>
+      <section className="bg-ll-light">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
           {profiles.length > 0 ? (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {profiles.map((profile, i) => (
@@ -97,7 +95,7 @@ export default async function ProfilesPage({
               ))}
             </div>
           ) : (
-            <p className="text-center text-white/60 py-12">
+            <p className="text-center text-ll-text-light py-12">
               No stories found{tag ? ` for "${tag}"` : ""}. Check back soon.
             </p>
           )}
@@ -105,7 +103,7 @@ export default async function ProfilesPage({
           {/* Tag filters — below the grid, subtle */}
           {allTags.length > 1 && (
             <div className="mt-16 pt-8 border-t border-white/10">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ll-text-light mb-4">
                 Filter by tag
               </p>
               <div className="flex flex-wrap gap-2">
