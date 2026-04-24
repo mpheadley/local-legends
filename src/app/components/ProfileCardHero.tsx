@@ -1,23 +1,17 @@
 import { Link } from "next-view-transitions";
 import Image from "next/image";
 import type { Profile } from "@/lib/profiles";
-import { computeCardFontSize } from "@/lib/card-font-size";
+import { resolveCardTitle } from "@/lib/card-title-style";
 
 export default function ProfileCardHero({ profile }: { profile: Profile }) {
   const { slug, frontmatter } = profile;
-  const { title, titleHtml, cardTitle, cardTitleHtml, cardFont, cardFontSize, cardGradientOffset, cardTitleColor, cardTall, cardShort, name, location, heroImage, heroAlt, heroPosition, cardTextPosition } = frontmatter;
-  const displayTitle = cardTitle || title;
-  const useHtml = !!cardTitleHtml || (!cardTitle && !!titleHtml);
-  const resolvedHtml = cardTitleHtml || titleHtml;
+  const { cardGradientOffset, cardTall, cardShort, name, location, heroImage, heroAlt, heroPosition, cardTextPosition } = frontmatter;
   const isTop = cardTextPosition === "top";
-  const isCondensed = cardFont === "condensed";
-  const fontFamily = isCondensed ? "var(--font-condensed)" : "var(--font-heading)";
-  const fontWeight = cardFont === "serif-bold" ? 700 : isCondensed ? 700 : 400;
-  const fontStyle = cardFont === "serif-italic" ? "italic" : "normal";
-  const textTransform: React.CSSProperties["textTransform"] = (isCondensed || cardFont === "serif-caps") ? "uppercase" : undefined;
-  const letterSpacing = cardFont === "serif-caps" ? "0.08em" : undefined;
-  const titleColor = cardTitleColor === "gold" ? "var(--color-ll-accent)" : "#FAFAF7";
-  const titleFontSize = computeCardFontSize(displayTitle, cardFont, cardFontSize);
+
+  const { displayTitle, resolvedHtml, useHtml, titleStyle } = resolveCardTitle(frontmatter, {
+    containerPx: 300,
+    extraStyle: { lineHeight: "1.0", overflowWrap: "normal", maxWidth: "100%" },
+  });
 
   return (
     <Link href={`/profiles/${slug}`} className="group block">
@@ -80,18 +74,14 @@ export default function ProfileCardHero({ profile }: { profile: Profile }) {
           {useHtml ? (
             <h3
               className="leading-[1.0]"
-              style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, overflowWrap: "normal", maxWidth: "100%" }}
+              style={titleStyle}
               dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
             />
           ) : (
-            <h3
-              className="leading-[1.0]"
-              style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, overflowWrap: "normal", maxWidth: "100%" }}
-            >
+            <h3 className="leading-[1.0]" style={titleStyle}>
               {displayTitle}
             </h3>
           )}
-          {/* Glass pill for subtitle */}
           <p
             className="leading-snug self-start"
             style={{

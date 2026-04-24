@@ -1,5 +1,5 @@
 import { getAllProfiles, getAllTags } from "@/lib/profiles";
-import ProfileCard from "../components/ProfileCard";
+import ProfileCardHero from "../components/ProfileCardHero";
 import { siteConfig } from "@/lib/site-config";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -90,7 +90,7 @@ export default async function ProfilesPage({
                   className="animate-on-scroll"
                   style={{ transitionDelay: `${i * 50}ms` }}
                 >
-                  <ProfileCard profile={profile} />
+                  <ProfileCardHero profile={profile} />
                 </div>
               ))}
             </div>
