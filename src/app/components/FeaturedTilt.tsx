@@ -266,13 +266,13 @@ export default function FeaturedTilt({ cards }: { cards: FeaturedCard[] }) {
                   {useHtml ? (
                     <h2
                       className="featured-panel-name ft-stagger"
-                      style={{ fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, fontSize: titleFontSize, overflowWrap: "normal", maxWidth: "100%" }}
+                      style={titleStyle}
                       dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
                     />
                   ) : (
                     <h2
                       className="featured-panel-name ft-stagger"
-                      style={{ fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, color: titleColor, fontSize: titleFontSize, overflowWrap: "normal", maxWidth: "100%" }}
+                      style={titleStyle}
                     >
                       {displayTitle}
                     </h2>
