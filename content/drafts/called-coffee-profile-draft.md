@@ -2,6 +2,8 @@
 
 **Status:** First draft — Matt's words. Research complete. Editorial plan done. Ready for Matt to rewrite.
 
+**Crosslink note:** Shannon Jenkins' profile (`content/profiles/shannon-jenkins.mdx`, line 79) has a flagged comment: `{/* Crosslink opportunity: Jared, Called Coffee owner — profile upcoming */}`. When this profile publishes, add an inline link from that passage in Shannon's piece to this profile. Shannon and Matt both had important conversations with Jerod at Called Coffee — the shop is connective tissue across multiple profiles.
+
 **Editorial plan (2026-04-21):**
 - KEEP: buckets opener, bud vases/mason jar section, big window scene (strangers exchanging business cards)
 - CUT: paragraphs 2–4 (all Matt setup before reader meets Jerod), Chamber of Commerce sentence, ending summary paragraph
