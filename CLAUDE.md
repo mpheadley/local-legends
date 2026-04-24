@@ -142,7 +142,9 @@ MDX files in `content/letters/` (or `content/notes/` depending on name). Frontma
 **Portfolio value:** Building clean multimedia handling in Next.js (lazy loading, no layout shift, proper aspect ratios) is a real Headley Web skill. Clients ask for this. SL is the live demo.
 
 **Site architecture:**
-- `/journal` — editorial column layout on warm parchment (`#F0EDE6`). Large Fraunces display heading, gold "Personal writing" eyebrow, ruled list of posts: date + title + excerpt only. **No thumbnails** — the subject matter (bipolar, grief, farm loss) is heavy enough that images push it toward "content" and away from "writing." The Bitter Southerner and The Atavist don't use thumbnails on essay listings. The title and opening line do the work. Images show up inside the piece.
+- `/journal` — editorial column layout on warm parchment (`#F0EDE6`). Large Fraunces display heading, gold "Personal writing" eyebrow, ruled list of posts: date + reading time + title + excerpt only. **No thumbnails** — the subject matter (bipolar, grief, farm loss) is heavy enough that images push it toward "content" and away from "writing." The Bitter Southerner and The Atavist don't use thumbnails on essay listings. The title and opening line do the work. Images show up inside the piece.
+- **"Read the Stories" cards at the bottom of journal posts** — use `ProfileCardHero` in a 2-column grid (not 3). Three columns is too narrow inside `max-w-3xl` and clips titles. Never shrink `containerPx` on `resolveCardTitle` to compensate — that produces lighter-weight cards than the profiles page uses for the same component. Pull the column count lever, not the font size lever.
+- **JournalCard** (More from the Journal section) — no thumbnail, matches listing page: date · reading time + title + excerpt.
 - **Homepage** — quiet callout below the profiles grid. Not a full section.
 - **Nav** — distinct nav link alongside profiles.
 
