@@ -1,4 +1,5 @@
 import type React from "react";
+import { computeCardFontSize } from "./card-font-size";
 
 interface CardStyleInput {
   title: string;
@@ -14,25 +15,47 @@ export interface CardTitleMeta {
   displayTitle: string;
   resolvedHtml: string | undefined;
   useHtml: boolean;
-  fontFamily: string;
-  fontWeight: number;
-  fontStyle: React.CSSProperties["fontStyle"];
-  textTransform: React.CSSProperties["textTransform"];
-  letterSpacing: string | undefined;
-  titleColor: string;
+  titleStyle: React.CSSProperties;
+}
+
+interface ResolveOptions {
+  /** Inner content width in px — used for word-cap font sizing. */
+  containerPx: number;
+  /** Multiply the length-based size before applying word-cap. Default 1. Carousel uses 1.4. */
+  scale?: number;
+  /** font-variation-settings opsz value. Pass 72 for large editorial display. */
+  opsz?: number;
+  /** Override default title color (#FAFAF7). */
+  defaultColor?: string;
+  /** Extra style properties merged into titleStyle (e.g. lineHeight, overflowWrap). */
+  extraStyle?: React.CSSProperties;
 }
 
 /**
  * Single source of truth for editorial card title styling.
- * Used by HeroCarousel, FeaturedTilt, and any future card component.
- * Font size is intentionally excluded — each component uses a different
- * container width, so they call computeCardFontSize() with their own px value.
+ * Returns a ready-to-spread titleStyle object plus rendering helpers.
+ *
+ * Usage:
+ *   const { displayTitle, resolvedHtml, useHtml, titleStyle } = resolveCardTitle(card, { containerPx: 456 });
+ *   <h2 style={titleStyle} dangerouslySetInnerHTML={...} />
+ *
+ * containerPx values:
+ *   FeaturedTilt desktop  → 456
+ *   HeroCarousel mobile   → 346, scale: 1.4, opsz: 72
  */
-export function resolveCardTitleMeta(
+export function resolveCardTitle(
   card: CardStyleInput,
-  defaultColor = "#FAFAF7"
+  options: ResolveOptions
 ): CardTitleMeta {
-  const { title, titleHtml, cardTitle, cardTitleHtml, cardFont, cardTitleColor } = card;
+  const {
+    containerPx,
+    scale = 1,
+    opsz,
+    defaultColor = "#FAFAF7",
+    extraStyle,
+  } = options;
+
+  const { title, titleHtml, cardTitle, cardTitleHtml, cardFont, cardFontSize, cardTitleColor } = card;
 
   const displayTitle = cardTitle || title;
   const useHtml = !!cardTitleHtml || (!cardTitle && !!titleHtml);
@@ -45,17 +68,32 @@ export function resolveCardTitleMeta(
   const textTransform: React.CSSProperties["textTransform"] =
     isCondensed || cardFont === "serif-caps" ? "uppercase" : undefined;
   const letterSpacing = cardFont === "serif-caps" ? "0.08em" : undefined;
-  const titleColor = cardTitleColor === "gold" ? "var(--color-ll-accent)" : defaultColor;
+  const color = cardTitleColor === "gold" ? "var(--color-ll-accent)" : defaultColor;
 
-  return {
-    displayTitle,
-    resolvedHtml,
-    useHtml,
+  // Font size: length-based + word-cap
+  const baseSizeRem = parseFloat(computeCardFontSize(displayTitle, cardFont, cardFontSize, containerPx));
+  let finalSizeRem = baseSizeRem * scale;
+  if (scale !== 1) {
+    // Re-apply word-cap at the actual visual container width after scaling
+    const stripped = (resolvedHtml || displayTitle).replace(/<[^>]+>/g, "");
+    const maxWordLen = stripped.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
+    const charWidthFactor = isCondensed ? 0.52 : cardFont === "serif-caps" ? 0.85 : 0.62;
+    const wordCapRem = containerPx / (maxWordLen * charWidthFactor) / 16;
+    finalSizeRem = Math.min(finalSizeRem, wordCapRem);
+  }
+  const fontSize = `${finalSizeRem.toFixed(2)}rem`;
+
+  const titleStyle: React.CSSProperties = {
     fontFamily,
+    fontSize,
     fontWeight,
     fontStyle,
-    textTransform,
-    letterSpacing,
-    titleColor,
+    ...(textTransform ? { textTransform } : {}),
+    ...(letterSpacing ? { letterSpacing } : {}),
+    ...(opsz !== undefined ? { fontVariationSettings: `"opsz" ${opsz}` } : {}),
+    color,
+    ...extraStyle,
   };
+
+  return { displayTitle, resolvedHtml, useHtml, titleStyle };
 }

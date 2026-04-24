@@ -4,8 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 import type { Profile } from "@/lib/profiles";
-import { computeCardFontSize } from "@/lib/card-font-size";
-import { resolveCardTitleMeta } from "@/lib/card-title-style";
+import { resolveCardTitle } from "@/lib/card-title-style";
 
 
 
@@ -70,14 +69,13 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
       >
         {profiles.map((profile, i) => {
           const { slug, frontmatter } = profile;
-          const { cardFont, cardFontSize, name, location, heroImage, heroAlt, heroPosition, heroPositionMobile } = frontmatter;
-          const { displayTitle, resolvedHtml, useHtml, fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, titleColor } = resolveCardTitleMeta(frontmatter);
-          // Word-cap sizing: fill the container width based on longest word
-          const strippedTitle = (resolvedHtml || displayTitle).replace(/<[^>]+>/g, "");
-          const maxWordLen = strippedTitle.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
-          const wordCapRem = (346 / (maxWordLen * 0.62) / 16);
-          const baseSizeRem = parseFloat(computeCardFontSize(displayTitle, cardFont, cardFontSize, 390));
-          const titleFontSize = `${Math.min(baseSizeRem * 1.4, wordCapRem).toFixed(2)}rem`;
+          const { name, location, heroImage, heroAlt, heroPosition, heroPositionMobile } = frontmatter;
+          const { displayTitle, resolvedHtml, useHtml, titleStyle } = resolveCardTitle(frontmatter, {
+            containerPx: 346,
+            scale: 1.4,
+            opsz: 72,
+            extraStyle: { lineHeight: "1.0", overflowWrap: "normal", maxWidth: "100%" },
+          });
 
           return (
             <Link
@@ -117,13 +115,13 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
                 {useHtml ? (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: titleColor, overflowWrap: "normal", maxWidth: "100%" }}
+                    style={titleStyle}
                     dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
                   />
                 ) : (
                   <h2
                     className="leading-[1.0]"
-                    style={{ fontFamily, fontSize: titleFontSize, fontWeight, fontStyle, textTransform, letterSpacing, fontVariationSettings: '"opsz" 72', lineHeight: "1.0", color: titleColor }}
+                    style={titleStyle}
                   >
                     {displayTitle}
                   </h2>

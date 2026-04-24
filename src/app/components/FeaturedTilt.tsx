@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import { computeCardFontSize } from "@/lib/card-font-size";
-import { resolveCardTitleMeta } from "@/lib/card-title-style";
+import { resolveCardTitle } from "@/lib/card-title-style";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -246,9 +245,11 @@ export default function FeaturedTilt({ cards }: { cards: FeaturedCard[] }) {
 
             {/* Content overlay — entire content card is clickable */}
             {(() => {
-              const { displayTitle, resolvedHtml, useHtml, fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, titleColor } = resolveCardTitleMeta(card);
               // 456px: panel content max-width 520px minus ~2rem padding each side
-              const titleFontSize = computeCardFontSize(displayTitle, card.cardFont, card.cardFontSize, 456);
+              const { displayTitle, resolvedHtml, useHtml, titleStyle } = resolveCardTitle(card, {
+                containerPx: 456,
+                extraStyle: { overflowWrap: "normal", maxWidth: "100%" },
+              });
               return (
                 <Link
                   href={`/profiles/${card.slug}`}

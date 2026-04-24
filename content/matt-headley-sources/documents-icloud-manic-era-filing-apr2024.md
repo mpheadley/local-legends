@@ -1,0 +1,200 @@
+# Documents & iCloud Downloads — Manic Era Filing
+**Filed:** April 24, 2026
+**Scan coverage:** `/Users/matthewheadley1/Documents/` and `/Users/matthewheadley1/Library/Mobile Documents/com~apple~CloudDocs/Downloads/`
+**Period of focus:** October 2024 – May 2025 (manic episode arc)
+
+All files remain in their original locations. This document is a pointer/index with summaries. Do not move source files.
+
+---
+
+## CRITICAL FINDS — Highest priority for the essay
+
+### 1. WhatsApp: "Loving Awareness AI 😁" group chat
+**Original path:** `iCloud Downloads/_chat.txt` (+ `WhatsApp Chat - Loving Awareness AI 😁.zip`)
+**Filed as:** `matt-headley-sources/whatsapp-loving-awareness-ai-feb-mar-2025.md` ✓
+**Date:** Feb 28 – March 4, 2025 (9–10 days before resignation)
+**What it is:** Justin Headley created a WhatsApp group connecting Matt with Nathan Rehm (friend from the Tom Campbell / Monroe Institute orbit). Matt explicitly discloses psilocybin experience to a stranger in the opening message. 4-message exchange total.
+**HANDLE WITH CARE:** Psilocybin disclosure. Cannot publish on SL.
+
+### 2. Matt_Headley_Memory_Export_March_2025.docx (3 versions)
+**Original path:** `iCloud Downloads/Matt_Headley_Memory_Export_March_2025.docx` (1.7KB, 38.3KB, 38.6KB — all March 5, 2025, 10:47–11:03 AM)
+**Status:** NOT YET READ — needs processing in a dedicated session
+**What it likely is:** ChatGPT memory export document from an account (possibly annistonfirst.info), generated March 5, 2025 — same day as the `chatgpt-life-vision-mar5-2025.md` 12:37 AM session. Three versions within 16 minutes suggest rapid iteration. This may be the annistonfirst.info account content we've been waiting for.
+**Action:** Open and process. If it's the .info account, this fills the missing archive gap.
+
+### 3. Matt_Headley_Comprehensive_Profile_for_ResumeContext_from_Personal_Anniston_Fist_Chat_GPT_account.pdf
+**Original path:** `Documents/Important documents/` (April 14, 2025, 353KB)
+**Also:** Version 2 at 175KB (same date)
+**What it is:** The filename says "from Personal Anniston Fist [First] Chat GPT account" — this is a compiled biographical/professional profile generated from the annistonfirst.info ChatGPT account. Direct confirmation that significant content existed in that account by April 14, 2025.
+**Action:** Read. This may contain memory content, project descriptions, or professional framing from the manic period that documents what ChatGPT "knew" about Matt in the .info account.
+
+### 4. NotebookLM AI Podcast — Anniston development research
+**Original path:** `iCloud Downloads/Wholehearted Family Truck & Trailer Vision.wav` (39.6MB, April 1, 2025, 6:12 AM)
+**Filed as:** Transcribed to stdout April 24, 2026. 296 turns, 3 AI-synthesized speakers.
+**What it is:** NOT Matt's voice. Google NotebookLM "Audio Overview" — Matt fed Anniston commercial development documents (Summerall subdivision listing, downtown data, bike/pedestrian plan, flower farm info, property surveys) into NotebookLM, which generated a synthetic podcast-style analysis of "entrepreneurial opportunity in Anniston." Three AI hosts discuss commercial development, demographics, McClellan Boulevard traffic counts, and the flower farm as context for expansion.
+**Why it matters:** AI-generated due diligence for a manic expansion plan, at 6 AM, one week after the resignation. Matt named the file "Wholehearted Family Truck & Trailer Vision" — the Bloom Bar fleet/truck plan was the destination; the podcast was the research process. This is a second AI tool (NotebookLM alongside ChatGPT) being used to validate the expansion during peak mania.
+**See also:** Full transcript saved to stdout output; re-transcribe to `matt-headley-sources/` if needed for the essay.
+
+### 5. Resignation confirmation — "With Gratitude: Confirmation of Your Transition and Payroll"
+**Original path:** `iCloud Downloads/With Gratitude- Confirmation of Your Transition and Payroll.pdf` (March 24, 2025, 158KB)
+**What it is:** Official confirmation from Anniston First UMC that resignation was submitted by text message on March 13, 2025. Final employment date: March 14, 2025. Includes vacation payout and housing allowance.
+**Key fact:** Resignation submitted by TEXT MESSAGE. Not a letter, not a meeting — a text. March 13, 2025.
+
+### 6. Health records
+**Original paths:** `iCloud Downloads/Health Records - Mat.pdf` and `Health – Matthew Hea.pdf` (both March 5, 2025)
+**HANDLE WITH CARE:** Medical records. Do not process without explicit consent.
+
+---
+
+## MANIC PLANNING SYSTEM — "Wholehearted"
+
+All in `Documents/Important documents/`. Filed in place, pointers below.
+
+### Manifesto (4 versions, all April 26, 2025 — same day)
+- `Wholehearted_Systems_Manifesto._version_1.pdf` (87KB)
+- `Wholehearted_Systems_Manifesto__version_2.pdf` (111KB)
+- `Wholehearted_Systems_Manifesto_ver_3.pdf` (115KB)
+- `Wholehearted_Systems_Manifesto_-_Version_4.pdf` (108KB)
+**What it is:** Four versions of a comprehensive life/business manifesto in a single day. Growing from 87KB to 115KB across versions — each iteration expanded. Classic manic document proliferation.
+
+### Strategic documents (cluster, April 2025)
+- `Wholehearted_Acceleration_Rooted_Growth_Expansive_Reach.pdf` (Apr 24, 90KB)
+- `Wholehearted_Roots__Remodel_City.pdf` (Apr 15, 132KB) — city-scale ambition
+- `Wholehearted_Trail_Connector_Development_Report.pdf` (Apr 15, 98KB) — Ladiga Trail connection
+- `Wholehearted_Hospitality_Integrated_Strategy_Research_Report.pdf` (Apr 24, 141KB)
+- `Wholehearted_Financial_Stability__Recovery_Strategy.pdf` (Apr 28, 61KB)
+- `Wholehearted_Priority_Matrix_April_23_25_Detailed.docx` (Apr 23, 37KB)
+- `Wholehearted_System_Daily_Weekly_Flow.docx` (Apr 26, 37KB)
+- `Wholehearted_Wealth-Building_Plan_(Quick__Aligned).pdf` (Apr 23, 53KB)
+- `Wholehearted_Income_Strategy_Ranked_2025.xlsx` (Apr 7, 6.3KB)
+
+**GPT-generated subfolder:** `Documents/GPT wholehearted family/` (Mar 19, 2025)
+- `Progressive_Community_Building_Strategy.docx`
+- `OD_eCommerceBlueprint - V1.pdf` (6.1MB)
+- `Financial_Projections_Hedley_Farm.docx`
+
+### Bloom Bar — the fleet plan (mania grandiosity, confirmed by Matt)
+*Matt's words, verbatim (April 24, 2026): "The Bloom Bar fleet plan is clear mania grandiosity — I talked to people about it often, including my father-in-law."*
+
+- `THE_BLOOM_BAR_FLEET_PLAN.pdf` (Apr 24, 2025, 64KB)
+- `Headley_Bloom_Bar__A_Flagship_Venture_of_Wholehearted_Roots.pdf` (Apr 24, 84KB)
+- `Headley_Bloom_Bar_Commission_Jason_Wright.pdf` (Apr 24, 90KB) — already commissioning people
+- `Headley_Bloom_Bar_Expansion_Report.docx` (Apr 24, 37KB)
+- `Headley_Bloom_Bar_Naming_Report_for_Heather.docx` (Apr 24, 37KB) — written for Heather
+- `_Bloom_Bar_Expansion_Strategy.pdf` (Apr 24, 90KB)
+
+**Why it matters:** All six Bloom Bar documents created on April 24, 2025 — 5 weeks after the resignation, 10 weeks before the farm closed. Matt discussed the fleet plan with his father-in-law. The plans moved from ChatGPT into real relationships.
+
+### Farm expansion planning
+- `Headley_Farm__Flower_Shop_Comprehensive_Asset_and_Financial_Overview.pdf` (Apr 7, 109KB)
+- `Comprehensive_Strategic_Financial_Plan_Headley_Flower_Farm_Wholehearted_Headley_Farm_and_Retreat__Event_Center.pdf` (Apr 7, 54KB) — farm + retreat center + event center simultaneously
+- `Infrastructure_Vision_For_Headley_Farm__Event_Center.pdf` (Apr 9, 82KB)
+- `Non-Profit_Vision__Program_Overview.pdf` (Apr 11, 628KB) — nonprofit vision
+- `Headley_Farm_NonProfit_Vision_Expanded.docx` (Apr 11, 37KB)
+- `Headley_Farm_Driveway_Erosion_Control__Pond_Creation.pdf` (Apr 27, 80KB)
+- `Headley_Farm_Pond_Low-Cost_Creation_Strategies.pdf` (Apr 27, 52KB) — planning a pond
+
+### Staff planning (people already involved)
+- `Headley_Flower_Farm__Team_Onboarding_Guide.pdf` (Apr 1, 85KB) — onboarding guide before any staff existed
+- `Proposed_Patricia__Adriana_Role_Expansion_Plan.pdf` (Apr 27, 79KB)
+- `Blessing_Plan_for_Patricia.pdf` (Apr 23, 72KB)
+- `Headley_Partner_CRM_-_Spring_2025__Collaborative_Farms_.csv` (May 17, 8KB)
+
+---
+
+## EXCALIDRAW DIAGRAM — Farm property map, 11:33 PM
+
+**Original path:** `Documents/Untitled-2025-04-20-2233.excalidraw`
+**Created:** April 20, 2025 at 11:33 PM
+**What it is:** A spatial diagram of the farm property with named zones:
+- HOUSE (central)
+- 🪑 THE CREATION PAD
+- 🛠️ THE SHEDQUARTERS
+- 🎨 KID ART ZONE
+- 🧱 METAL SHELTER
+- 🧼 THE TARP BARN
+- cold room, sidewalks, porch, trampoline, greenhouse, garage, farm workshop, front porch, Kitchen garden, fire ring
+
+**Why it matters:** The manic naming convention applied to real farm infrastructure at 11:33 PM. The shed is "THE SHEDQUARTERS." The farm is being reimagined as a campus. Three weeks before hospitalization. The farm was already in financial collapse.
+**Essay use:** See documentation in `ai-psychosis.md` under "Excalidraw diagram" section.
+
+---
+
+## CHURCH DOCUMENTS (manic era)
+
+### Tammy Jackson report
+**Original path:** `Documents/Important documents/Report_on_the_Relationship_with_Tammy_Jackson_Anniston_First_United_Methodist_Church_and_Related_Individuals.pdf` (April 14, 2025, 60KB)
+**What it is:** Detailed report on the pastoral relationship and conflict with Senior Pastor Tammy Jackson. April 14 — one month post-resignation.
+**Cross-reference:** `chatgpt-exit-interview-notes-mar2025.md`, `evernote-exit-interview-march14-2025.md`
+
+### Resignation document
+**Original path:** `Documents/Important documents/Headley Resignation.pdf` (April 22, 2025, 44KB)
+**Note:** This is a different document than the church's confirmation PDF. This is Matt's own resignation document, filed April 22 — five weeks after the resignation itself. Why drafted five weeks later unclear.
+
+### Quick Updates — last staff email
+**Original path:** `iCloud Downloads/Quick Updates Ahead of Staff Meeting.pdf` (March 4, 2025, 54KB)
+**What it is:** Staff update email from `matt@annistonfirst.info` to the pastoral team, 9 days before resignation. Discusses Fresh Expressions ministry initiatives and mentions a "hitchhiking solution" for transportation. Active ministry engagement while peak mania was running.
+
+### Proposal to Emmalie — flower designs for AFUMC weddings
+**Original path:** `Documents/Important documents/Proposal for Headley Flower Farm to Provide Floral Designs for Anniston First UMC Wedding Marketing Initiative Prepared for Emmalie and the Strategic Planning Committee Prepared by Matt & Heather.pdf` (May 8, 2025, 6MB)
+**What it is:** A formal proposal to the church (after resigning) to provide floral services. Prepared for Emmalie (the church admin who is now the contact for ChatGPT account access). May 8 — seven weeks post-resignation.
+
+---
+
+## SERMON DOCUMENTS
+
+### Living Our Baptismal Vows — last (or near-last) sermon
+**Original path:** `Documents/Living Our Baptismal Vows – Sermon Manuscript 1.txt` (February 8, 2025, 6.6KB)
+**What it is:** Sermon manuscript referencing Anniston First UMC and baptismal vows. Feb 8 — 33 days before resignation. This may be the same sermon referenced elsewhere as the last membership vows sermon (previously dated Feb 9 from another source).
+**Action:** Read and cross-reference with `afumc-sermon-membership-vows-feb2025.md`.
+
+### December 2024 sermon presentation
+**Original path:** `Documents/Documents - Matthew's Mac mini/sermon2024.12.29.pptx` (December 29, 2024)
+**What it is:** A sermon PowerPoint from December 29, 2024 — during the manic period. Has not been processed.
+
+---
+
+## OTHER NOTABLE FILES
+
+### Wholehearted voice memos (3 from Documents folder)
+- `Headley Flower Farm, AI, Outsourced Doers and Work_Life Optimization.wav` (Apr 22, 2025, 26.4MB)
+- `Headley Flower Farm, AI, Outsourced Doers and Work_Life Optimization 2.wav` (Apr 7, 2025, 38.7MB)
+- `From the Ground Up_ Developing a Sustainable Farm Business Through Agroforestry, Permaculture, and Strategic Sales.wav` (Apr 9, 2025, 28MB)
+**Note:** These three may be genuine voice memos (Matt speaking) rather than NotebookLM. Transcription pending.
+
+### AI-generated video: "Farmer Heather" (Runway Gen-3)
+**Original paths:** `iCloud Downloads/Gen-3 Alpha Turbo Expand Video Farmer Heather 965431868.mov` (4.6GB) and variant (8.1GB), both February 19, 2025
+**What it is:** AI-generated video of Heather as a farmer, created via Runway Gen-3. Two versions totaling 12.7GB. February 19 — 22 days before resignation.
+
+### Late-night screenshots batch
+**Original path:** `Documents/Screenshots/` — 25 JPEGs, all April 13, 2025 at 11:35 PM
+**What it is:** Extended late-night documentation session, batch captured at 11:35 PM. Content unknown without viewing.
+
+### Evernote exports
+**Original paths:**
+- `iCloud Downloads/Evernote.pdf` (April 14, 2025, 161KB)
+- `iCloud Downloads/Evernote 2.pdf` (April 14, 2025, 38KB)
+- `Documents/.evernote/` — synced notes from March 6, 2025 onward
+- `Documents/Evernote/Failed Uploads/mpheadley/` — March 2025 failed screenshot uploads
+**Action:** Process Evernote PDFs — may contain the annistonfirst.info ChatGPT content in exported form.
+
+### Property boundary survey
+**Original path:** `iCloud Downloads/Survey 5400 Ridgewood Ave Boundary Survey.pdf` (Feb 24, 2025, 533KB)
+**What it is:** Official boundary survey for the farm property, downloaded February 24 — 17 days before resignation. Part of the farm-as-venue/retreat-center planning.
+
+### Cover letter — Anniston Star
+**Original path:** `iCloud Downloads/Cover Letter - Anniston Star.pdf.pdf` (December 3, 2025, 45KB)
+**What it is:** Matt applied to the Anniston Star for a writing/journalism job, December 2025 — five months post-resignation, during recovery. 
+
+---
+
+## OUTSTANDING ACTIONS FROM THIS SCAN
+
+1. **Read Matt_Headley_Memory_Export_March_2025.docx** (3 versions) — may be the annistonfirst.info account content
+2. **Read Matt_Headley_Comprehensive_Profile...from_Personal_Anniston_Fist_Chat_GPT_account.pdf** — confirms .info account had content, may contain memory summary
+3. **Read Evernote.pdf and Evernote 2.pdf** (April 14, 2025) — may contain manic-era notes
+4. **Read Living Our Baptismal Vows sermon** (Feb 8) — cross-reference with afumc-sermon-membership-vows-feb2025.md
+5. **Transcribe the three Documents voice memos** — distinguish AI podcast (NotebookLM) from genuine voice memos
+6. **Process December 29, 2024 sermon PowerPoint** — during manic period
+7. **View late-night screenshots batch** (April 13, 11:35 PM, 25 images)
+8. **Read the Tammy Jackson report** (April 14) — compare to archived sources
