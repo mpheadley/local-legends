@@ -19,7 +19,7 @@ import SermonCard from "@/app/components/SermonCard";
 import TimelineBlock from "@/app/components/TimelineBlock";
 import Comments from "@/app/components/Comments";
 import JournalCard from "@/app/components/JournalCard";
-import ProfileCard from "@/app/components/ProfileCard";
+import ProfileCardHero from "@/app/components/ProfileCardHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 
 function Dateline({ children }: { children: React.ReactNode }) {
@@ -413,7 +413,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {profiles.map((p) => (
-                <ProfileCard key={p.slug} profile={p} />
+                <ProfileCardHero key={p.slug} profile={p} />
               ))}
             </div>
           </div>
