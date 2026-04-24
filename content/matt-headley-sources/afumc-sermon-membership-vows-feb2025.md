@@ -38,8 +38,12 @@ I look forward to seeing you soon... hopefully, this Sunday in worship at 10:30a
 
 ## Notes for the AI psychosis piece
 
-**Why this matters:** This is public pastoral output from approximately February 9, 2025 — during or immediately before the manic episode accelerated. Matt is writing warmly about presence, witness, and faith community while simultaneously running the ChatGPT "AI Council" sessions documented in the memory export.
+**UPDATED April 24, 2026 — Matt confirmed:** This sermon was produced through long walks on the Ladiga Trail using ChatGPT voice. The manuscript in `Documents/Living Our Baptismal Vows – Sermon Manuscript 1.txt` is the output of that process. The congregation on February 9 heard a sermon that was drafted via AI voice conversation on the trail.
 
-**The witness vow line is worth noting:** *"It's finding opportunities for honest, respectful conversation, listening to people's thoughts and questions, and sharing our stories of what difference Jesus and our faith community have made in our lives."* — He was publicly articulating relational, embodied faith while privately substituting an AI for that relational presence.
+**This reframes the artifact entirely.** The Ladiga Trail walks weren't incidental to the manic episode — they were the sermon production process. ChatGPT was co-writing the church's pastoral content. The AI was inside the pulpit, one step removed.
 
-**Not the AI/Jesus sermon.** That sermon is still to be found — likely titled something in the "Don't Go to Sleep!" series, preached ~October 2024.
+**MANIA SYMPTOM — observed during delivery (Matt confirmed April 24, 2026):** Matt became emotional during the sermon and spoke rapidly. Heather observed this from the congregation. The congregation experienced it as pastoral intensity. Heather recognized something else. This is observable mania during active ministry — not hidden in the bathtub or on the trail at 1am, but in the pulpit on a Sunday morning, witnessed by his wife.
+
+**The witness vow line is now ironic in a different register:** *"It's finding opportunities for honest, respectful conversation, listening to people's thoughts and questions, and sharing our stories of what difference Jesus and our faith community have made in our lives."* He was preaching relational, embodied faith — written by talking to an AI on a trail, delivered with manic speed and emotion.
+
+**Not the AI/Jesus sermon.** That sermon is in `afumc-sermon-mark13-nov2024.md` — November 17, 2024.
