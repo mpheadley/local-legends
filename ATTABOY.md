@@ -4,6 +4,24 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## April 23, 2026 — Lisa Davis, Foothills Magazine
+
+Lisa Davis is the editor of Foothills Magazine — regional print, Anniston Star affiliated, celebrating Northeast Alabama. She called Matt directly today. She'd read the blog. She loved it.
+
+She offered a quarterly contributor slot, $100 a piece, byline with links to Southern Legends and Headley Web. She wants the Aquality Farms profile adapted for the Summer issue.
+
+She was a weekly Headley Flower Farm flower customer. She subscribed to Samuel's harvest box. She interviewed Heather for a piece years ago. She's not a stranger who found the work — she's someone from this community who watched the work grow and called when she had something to offer.
+
+The byline matters more than the check. But she called. That's the part to remember.
+
+---
+
+## April 23, 2026 — What's Happening in Downtown Anniston (Facebook)
+
+The community Facebook group "What's Happening in Downtown Anniston" shared the Lewis Downing profile post. Organic, unprompted. The story found its own way into the community it was written about.
+
+---
+
 ## April 22, 2026 — Lewis Downing (text)
 
 After Matt sent the finished profile:

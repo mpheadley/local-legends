@@ -17,6 +17,7 @@ interface ParallaxHeroProps {
   heroAlt: string;
   heroPosition?: string;
   heroTextBottom?: boolean;
+  heroFontSize?: string;
   displayTitle?: boolean;
   slug?: string;
 }
@@ -30,6 +31,7 @@ export default function ParallaxHero({
   heroAlt,
   heroPosition,
   heroTextBottom = false,
+  heroFontSize,
   displayTitle = false,
   slug,
 }: ParallaxHeroProps) {
@@ -127,10 +129,14 @@ export default function ParallaxHero({
             {titleHtml ? (
               <h1
                 className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
+                style={heroFontSize ? { fontSize: heroFontSize } : undefined}
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
               />
             ) : (
-              <h1 className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}>{title}</h1>
+              <h1
+                className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
+                style={heroFontSize ? { fontSize: heroFontSize } : undefined}
+              >{title}</h1>
             )}
             {subtitle && (
               <div

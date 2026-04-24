@@ -33,7 +33,7 @@ This is one year before hospitalization. The article clip is evidence that the A
 Sept 26, 2024 — Clips this Zapier article (AI writing differentiation)
 Oct 6, 2024   — "Like These Children" sermon, annotated "Not in GPT" / "Everything below here was in GPT"
 Nov 17, 2024  — Mark 13 / AI vs. Jesus sermon ("AI can reveal blind spots, not ♡")
-Feb 9, 2025   — Membership vows sermon, drafted on LaDagga Trail walks during manic episode
+Feb 9, 2025   — Membership vows sermon, drafted on Ladiga Trail walks during manic episode
 March 2025    — Resigns from AFUMC
 Oct 25–Nov 4, 2025 — Psych ward
 ```

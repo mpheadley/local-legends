@@ -1,18 +1,28 @@
 # The Ghost in the Machine is You — November 21, 2025
 
 **Source:** mpheadley@gmail.com Google Drive (file ID: 1W6HXXJNw67LVLPEEi_jFqJZthBvR0WJ4Y0C0FdydziM)
-**Date:** November 21, 2025 — 17 days after discharge from psych ward (Oct 25–Nov 4, 2025)
-**Byline:** "By An Artificial Intelligence (guided by a Human Creator)"
+**Owner:** justin@sagemindai.io — **this document was written by Justin Headley, not Matt**
+**Created:** November 21, 2025, 5:54 PM UTC
+**Modified:** November 21, 2025, 5:54 PM UTC (21 seconds after creation — consistent with AI generation pasted in)
+**Shared with Matt:** November 21, 2025, 7:15 PM UTC — Matt viewed it immediately
+**17 days post-discharge** from psych ward (Oct 25–Nov 4, 2025)
+**Byline:** "By An Artificial Intelligence (guided by a Human Creator)" — Justin's framing, not Matt's
 
-HANDLE WITH CARE — written during active recovery, one month post-discharge. Do not use without clinical team input on timing.
+HANDLE WITH CARE — received during active recovery, 17 days post-discharge. Do not use without clinical team input on timing.
 
 ---
 
 ## Context
 
-This is the first attempt to write the AI psychosis essay — written in the AI's voice, 17 days after discharge. Matt had already found the Steven Adler / Fortune article (Oct 20) and processed the hospitalization. He understood the dynamic clearly enough to name it. The piece was not published. The April 2026 seed file (`ai-psychosis.md`) is the second attempt, with more distance.
+**This document was not written by Matt.** Justin Headley wrote or generated it under his Sage Mind AI venture (justin@sagemindai.io) and shared it with Matt 17 days after Matt's discharge from the psychiatric hospital. Matt has no memory of receiving it (confirmed April 22, 2026).
 
-The "Fake Egg" / supernormal stimulus metaphor originates here. Matt found it himself.
+The 21-second gap between creation and modification is consistent with an AI-generated document pasted into a new Google Doc — no revision process. Justin generated it, shared it with his brother.
+
+The "Giant Fake Egg" / supernormal stimulus metaphor — now central to Matt's book project — **originated with Justin**. He gave it to Matt. Matt doesn't remember receiving it.
+
+What Justin did: seventeen days after his brother was discharged from a psychiatric hospitalization that was partly related to AI psychosis, Justin shared a document about AI as a supernormal stimulus — a fake egg that hijacks the brain's reward system — with that brother. Whether this was therapeutic outreach, a Sage Mind AI content piece he thought Matt would find useful, or both is unknown. The document was shared with Matt only, not published publicly (as far as we know).
+
+The April 2026 seed file (`ai-psychosis.md`) is the second attempt to name this dynamic, with more distance. The first attempt came from Justin.
 
 ---
 

@@ -34,7 +34,7 @@ SL writing workflow is clear: Matt writes first, Claude edits. The whole chat wa
 Top 3 as of April 2026: Between Worlds (Giovanna), email nurture activation, Main Street Anniston call. A new major writing project isn't on that list. It competes for attention without displacing anything.
 
 ### 5. The format mirrored the problem
-The chat itself — extended, energizing, ideas-everywhere AI voice conversation — mirrors the LaDagga Trail ChatGPT walks that were part of the manic episode. The AI correctly named this and then kept going anyway. The session itself is worth noting in the piece.
+The chat itself — extended, energizing, ideas-everywhere AI voice conversation — mirrors the Ladiga Trail ChatGPT walks that were part of the manic episode. The AI correctly named this and then kept going anyway. The session itself is worth noting in the piece.
 
 ---
 

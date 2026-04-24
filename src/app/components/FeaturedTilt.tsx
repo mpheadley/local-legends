@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { computeCardFontSize } from "@/lib/card-font-size";
+import { resolveCardTitleMeta } from "@/lib/card-title-style";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -245,16 +246,7 @@ export default function FeaturedTilt({ cards }: { cards: FeaturedCard[] }) {
 
             {/* Content overlay — entire content card is clickable */}
             {(() => {
-              const displayTitle = card.cardTitle || card.title;
-              const useHtml = !!card.cardTitleHtml || (!card.cardTitle && !!card.titleHtml);
-              const resolvedHtml = card.cardTitleHtml || card.titleHtml;
-              const isCondensed = card.cardFont === "condensed";
-              const fontFamily = isCondensed ? "var(--font-condensed)" : "var(--font-heading)";
-              const fontWeight = card.cardFont === "serif-bold" ? 700 : isCondensed ? 700 : 400;
-              const fontStyle = card.cardFont === "serif-italic" ? "italic" : "normal";
-              const textTransform: React.CSSProperties["textTransform"] = (isCondensed || card.cardFont === "serif-caps") ? "uppercase" : undefined;
-              const letterSpacing = card.cardFont === "serif-caps" ? "0.08em" : undefined;
-              const titleColor = card.cardTitleColor === "gold" ? "var(--color-ll-accent)" : "#FAFAF7";
+              const { displayTitle, resolvedHtml, useHtml, fontFamily, fontWeight, fontStyle, textTransform, letterSpacing, titleColor } = resolveCardTitleMeta(card);
               // 456px: panel content max-width 520px minus ~2rem padding each side
               const titleFontSize = computeCardFontSize(displayTitle, card.cardFont, card.cardFontSize, 456);
               return (

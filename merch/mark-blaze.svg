@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <rect width="200" height="300" fill="#FAFAF7"/>
+  <!-- Trail blaze: 2:1 height:width, prominent -->
+  <rect x="70" y="60" width="60" height="120" rx="4" fill="#1C1917"/>
+</svg>

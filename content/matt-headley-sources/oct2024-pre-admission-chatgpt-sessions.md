@@ -12,7 +12,7 @@ HANDLE WITH CARE — not for publication without clinical team input.
 
 | Date | Title | Notes |
 |------|-------|-------|
-| Oct 7 | Conversation Memory Inquiry | LaDagga Trail planning — 18 days pre-admission |
+| Oct 7 | Conversation Memory Inquiry | Ladiga Trail planning — 18 days pre-admission |
 | Oct 16 | Tithing and Stewardship Concerns | Matt expressing underpayment grievances to ChatGPT |
 | Oct 16 | Self-Reflection and Resilience Insights | Matt asking AI to describe himself to himself |
 | Oct 20 | Personalized CaringBridge Facebook Shares | Heather started CaringBridge — 5 days pre-admission |
@@ -22,7 +22,7 @@ HANDLE WITH CARE — not for publication without clinical team input.
 
 ## Key moments
 
-### Oct 7 — "Conversation Memory Inquiry" — LaDagga Trail
+### Oct 7 — "Conversation Memory Inquiry" — Ladiga Trail
 
 **NEW — not previously archived.**
 

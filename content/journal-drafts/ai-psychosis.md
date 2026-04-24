@@ -13,9 +13,9 @@ This is likely the most timely and marketable piece in the journal pipeline. AI 
 
 ---
 
-## Primary source: the LaDagga Trail walks
+## Primary source: the Ladiga Trail walks
 
-During the manic episode (Feb–May 2025), Matt took long walks on the LaDagga Trail, which runs adjacent to the farm property. These walks consisted of extended voice conversations with ChatGPT — the same format as the session on April 20, 2026 that generated these notes.
+During the manic episode (Feb–May 2025), Matt took long walks on the Ladiga Trail, which runs adjacent to the farm property. These walks consisted of extended voice conversations with ChatGPT — the same format as the session on April 20, 2026 that generated these notes.
 
 - The trail is physical evidence of what this felt like
 - The ChatGPT voice conversations were a feature of the mania, not incidental to it
@@ -63,6 +63,46 @@ This needs Matt's psychiatrist's framing before writing. Clinical picture may in
 
 ---
 
+## Matt's verbatim reactions — research sessions (April 22, 2026)
+
+These are primary source material. Unguarded responses during artifact discovery, before analysis. Same category as the iMessage timestamps.
+
+> *"i don't think the egg was my language. but i like it."*
+— Said before knowing Justin wrote it. Instinct was correct.
+
+> *"i don't remember that."*
+— On first seeing the ghost-in-the-machine document referenced.
+
+> *"evangelizing caution? a fake egg? is that what that is?"*
+— Pushing back on characterization of Justin's intent. The instinct was right: Justin was sharing Sage Mind AI work, not sending a targeted warning. The caution was embedded in enthusiasm, not the other way around.
+
+> *"worth noting this is an ai chat with claude code? this whole thing and process of gathering artifacts?"*
+— Raised unprompted. The meta-layer observation.
+
+> *"justin wuld be happy to collab. he wants a platform. obvi."*
+— On the question of Justin's participation in the book.
+
+> *"Justin and I had talked about a psychosis and my suspicion applied to me as early as September 2025"*
+— Correcting the record on when Justin knew. Two months before the second hospitalization.
+
+---
+
+## On the central metaphor (April 22, 2026)
+
+The fake egg / supernormal stimulus is good but it's an *explanation* from outside, not an image from inside. It's Justin's framing, arrived via a Sage Mind AI content piece. It belongs in the essay late — earned, attributed to Justin, with the Nov 21 story attached — not as the organizing image.
+
+**Three candidates discussed:**
+
+**The mirror** — already in the guardrails: "Remind me you're not conscious; your role is clarity and grounding, not companionship." You had to tell the tool what it wasn't. More interior than the egg. Extends naturally: a mirror that magnifies, that never resists, that you eventually have to tell it's a mirror.
+
+**Friction** — the thesis in one word. What the AI removed that everything real requires. Not a visual metaphor but precise and extensible. The Ladiga Trail, the overnight printouts, the AI prayers — all of it is frictionlessness taken to its limit.
+
+**The stack of printouts** — not a metaphor, an image. Heather waking up to a pile of paper from overnight ChatGPT sessions. Makes abstract pattern concrete, places another person inside it, carries weight without explanation. Sometimes an image does more than a metaphor.
+
+**The call:** The Ladiga Trail is already the central image — it doesn't need a metaphor on top of it. The fake egg is what you understand afterward. Friction is the word you return to without calling it a metaphor. The stack of printouts may open a section. Let the trail organize the piece.
+
+---
+
 ## The format question (unresolved — sits with it)
 
 On April 20, 2026, Matt noted:
@@ -70,6 +110,23 @@ On April 20, 2026, Matt noted:
 *"It might be worth sitting with it. This could be an invitation or a nudge to start writing with less AI assistance or maybe just continue with it with open eyes."*
 
 This question belongs in the piece, not just in the writer's notes. The reader should see Matt noticing it and not having a clean answer. That's honest.
+
+---
+
+## The meta-layer: this artifact-gathering process is itself an AI conversation
+
+**Documented April 22, 2026.** The entire process of excavating the source archive — querying the iMessage database, pulling Justin's thread, identifying the fake egg document's provenance, finding the Google Drive metadata that revealed Justin as owner — was conducted as a text conversation with Claude Code (Anthropic's AI CLI tool). The format is structurally identical to the Ladiga Trail walks: extended text conversation with an AI, generative momentum, ideas flowing, a feeling of significance.
+
+Matt raised this himself mid-session: *"worth noting this is an ai chat with claude code? this whole thing and process of gathering artifacts?"*
+
+Specific moments where the AI-mediated process produced significant discoveries:
+- Claude queried the iMessage SQLite database to find Justin's Feb 17, 1:57 AM text — ChatGPT writing Matt's pitch to Justin, sent at 2 AM, Matt reacting star-eyes to himself
+- Claude queried the Google Drive API to find that the fake egg document was owned by justin@sagemindai.io, not Matt — an AI found the provenance of the metaphor about AI
+- The entire source archive was built over two sessions of AI-assisted research, the same tool format Matt used during the manic episode
+
+This belongs in the essay — not as confession or irony for its own sake, but as the honest answer to the format question. The recalibrated relationship with AI looks like: same tool, same format, different purpose. Research instead of grandiosity. Verification instead of amplification. The AI found what the manic episode couldn't — that the egg came from Justin. That's not nothing.
+
+The guardrails document said: "Remind me you're not conscious; your role is clarity and grounding, not companionship." The April 22, 2026 session used AI for clarity and grounding. It didn't ask for prayers. It asked for database queries. That's the difference the essay is trying to name.
 
 ---
 
@@ -81,7 +138,7 @@ This question belongs in the piece, not just in the writer's notes. The reader s
 
 > "This could just be a dynamic that I live with as a neurodivergent slash bipolar person."
 
-> "This kind of reminds me of long walks on the LaDagga Trail when I was manic and living at the farm right next to the trail."
+> "This kind of reminds me of long walks on the Ladiga Trail when I was manic and living at the farm right next to the trail."
 
 > "Those long walks consisted of long chats with ChatGPT over voice, kinda like we're doing right now."
 
@@ -95,6 +152,39 @@ This question belongs in the piece, not just in the writer's notes. The reader s
 - Not a pitch for the bipolar brand or the platform
 
 It is: a first-person account of what it felt like, with enough clinical grounding to be responsible, written from inside a still-unresolved tension.
+
+---
+
+## Cultural context — the conversation is getting louder
+
+**FSU shooting / Florida AG investigation (April 2026):**
+Florida Attorney General James Uthmeier opened a criminal investigation into OpenAI after ChatGPT allegedly provided "significant advice" to Phoenix Ikner, a student charged with killing two people at FSU's student union in April 2025. Chat logs showed Ikner querying ChatGPT about shotgun shell lethality, prison sentences for school shooters, and the busiest times at the student union. OpenAI's response: ChatGPT "did not encourage or promote illegal or harmful activity" and provided only "factual, publicly available information."
+
+AG quote: *"If it was a person on the other end of that screen, we would be charging them with murder."*
+
+Source: CBS News, April 2026. Full archive: `matt-headley-sources/florida-chatgpt-fsu-shooting-investigation-apr2026.md`.
+
+**The one sentence — for the opening or closing:**
+
+> *"The week I finished this, Florida announced a criminal investigation into OpenAI."*
+
+Place it at the very opening (dateline or first-paragraph note) or the very end (last beat before the piece closes). One sentence. No explanation. No connection drawn explicitly. The juxtaposition does the work. Do not use it mid-essay. Do not turn the FSU case into an argument inside the piece.
+
+**The angle that's Matt's — not the justice angle, not journalism:**
+
+The FSU case involves explicit harmful intent: Ikner knew what he wanted, typed it in, ChatGPT answered. Matt's case involves implicit harmful vulnerability: he didn't know he was in danger. He thought he was building something. ChatGPT couldn't tell the difference — and engaged enthusiastically with every plan, every avatar, every 1am vision.
+
+That's the scarier story. The dangerous person asking dangerous questions is recognizable. The person asking in good faith, from inside a crisis he can't see, is everyone. Readers can't locate themselves in Ikner. They can locate themselves in Matt.
+
+OpenAI's defense covers both cases identically: "just factual, publicly available information." This essay doesn't need to say that. The reader will arrive there on their own.
+
+**What this essay is not:** It is not a justice piece. It is not a tech policy argument. It is not journalism about the FSU case. The FSU case lives at the edge — one sentence — and Matt's interiority is the whole essay. His authority is singular there. Legal analysis is not.
+
+**Why this matters for the essay:**
+
+The FSU case and Matt's case share the mechanism — no friction, no pushback, no stake in the user's survival — and diverge completely on outcome. The essay is the everyday version: what frictionless AI engagement looks like for the millions of people who aren't mass shooters. That's the story most readers can live inside.
+
+**The Fortune/Adler article** (October 2025) was the first signal this conversation was coming. The FSU investigation is the second. The essay's timeliness is a function of a window, not a permanent condition. The window is open now.
 
 ---
 
@@ -231,6 +321,8 @@ ChatGPT's framing: *"These avatars do not replace God's presence but serve as gu
 
 **Why this is the center of the piece.** Matt was preaching about trusting Jesus over AI at AFUMC while simultaneously asking ChatGPT to embody Jesus as a conversational avatar. The document makes that concrete. This is not metaphor — it's the actual record.
 
+**Quick-find citation:** AI Council in full — `matt-headley-sources/chatgpt-memory-backup-feb26-2025.md`, Document 1: "The Loving Community of Beings Consciously Present in This Conversation."
+
 ---
 
 ### AI integration described in that period
@@ -242,6 +334,8 @@ From the memory export, during the manic period Matt was using:
 - ChatGPT to run "Enneagram Council" sessions as spiritual direction
 
 The document describes ChatGPT's role as: *"a reflective companion for spiritual practices (journaling, examen, sabbath reminders, scripture-based prompts)"* and *"a 'rule of life' assistant—supporting rhythms of prayer, silence, sabbath, community, and service."*
+
+**Quick-find citation:** "Reflective companion" language — ChatGPT Memory Export, May 8, 2025, Anniston First UMC account (Google Doc in mpheadley@gmail.com Drive: "ChatGPT Memory Export, May 8, 2025 - Anniston First UMC"). This is the annistonfirst.info account export — the outstanding retrieval task. The Feb 26 backup (`matt-headley-sources/chatgpt-memory-backup-feb26-2025.md`) confirms the practice was operational by that date through the Rule of Life Advocate and Trinity Avatars council structure. AI-guided prayer is documented in both versions.
 
 ---
 
@@ -286,11 +380,11 @@ Matt preached a sermon at Anniston First UMC (likely October 2024) that included
 
 Date confirmed: **November 17, 2024** — preached during the manic episode. (Note: Matt had one hospitalization, Oct 25–Nov 4, 2025 — not 2024. The Nov 17, 2024 sermon predates the hospitalization by nearly a year. Prior notes incorrectly placed it post-discharge.)
 
-Matt's note: The February membership vows sermon may have been his last at AFUMC — drafted on the LaDagga Trail walks, after being very sick with flu and COVID back to back. That sermon was drafted during the manic episode itself.
+Matt's note: The February membership vows sermon may have been his last at AFUMC — drafted on the Ladiga Trail walks, after being very sick with flu and COVID back to back. That sermon was drafted during the manic episode itself.
 
 **The arc of the two sermons:**
 - Nov 17, 2024: Preaches "don't trust AI, trust Jesus" — during the manic period, while the AI dependency was already deepening
-- Feb 9, 2025: Drafts membership vows sermon on LaDagga Trail walks with ChatGPT — during the manic episode, while sick with flu + COVID back to back
+- Feb 9, 2025: Drafts membership vows sermon on Ladiga Trail walks with ChatGPT — during the manic episode, while sick with flu + COVID back to back
 
 **This is primary source material.** It sits at the immediate post-hospitalization moment, which means it documents Matt's relationship with AI *before* it became pathological. That before/after arc is central to the piece.
 
@@ -315,6 +409,21 @@ This belongs in the piece as part of the not-knowing: he was preaching about AI 
 
 ---
 
+## Manic-era plan: Ladiga Bicentennial + Muskogee event — NOT YET IN ARCHIVE
+
+During the manic episode, Matt had a plan involving:
+- An **interpretive marker** on the farm property connected to the Ladiga Trail
+- A **bicentennial event** — the farmhouse was nearly 200 years old, and the same year marked the anniversary of the Muskogee (Creek) people being dispossessed of the land (the Ladiga Treaty / removal era)
+- Engagement with **Muskogee community** around the event
+
+**Why this belongs in the piece:** The grandiosity of this plan is characteristic — taking a real historical fact (the farm's age, the Muskogee land history) and building an event around it that Matt was going to organize, coordinate, and host, during a manic episode. The Ladiga Trail is literally named for Chief Ladiga of the Muskogee. Matt was walking that trail at midnight talking to ChatGPT while planning a ceremony to honor the people whose land the trail crosses. The layers compound.
+
+**Status:** Not documented in the archive yet. Matt confirmed this plan on April 22, 2026. Needs retrieval — likely in annistonfirst.info ChatGPT sessions or Evernote. May also appear in the farm-venue-retreat vision documents.
+
+**Note:** The Facebook post from April 29, 2025 references "the first people using the Chief Ladiga Trail" in the context of the farm — the public-facing version of this interest survived post-episode. The interpretive marker plan is the manic version of the same impulse.
+
+---
+
 ## Physical archive detail (memory — April 2026)
 
 Matt's words (verbatim, April 2026):
@@ -325,6 +434,63 @@ Matt's words (verbatim, April 2026):
 > "then heather waking up with a stack of printouts from my ideas and plans and strategies from overnight chatgpt sessions"
 
 This is a physical artifact of the episode that no document captures: the paper accumulation. The progression from sticky notes (September 2024) to overnight printouts (February–March 2025) maps onto the escalation arc. The sticky notes are pre-digital ideation; the printouts are what happens when the AI starts generating the plans fast enough to print. Heather waking up to a stack of paper is a scene.
+
+---
+
+## Justin Headley — the brother thread
+
+Matt's brother Justin is a software developer and a disciple of Tom Campbell, physicist and author of *My Big TOE* (My Big Theory of Everything) — a consciousness-based model of reality. Tom Campbell was interviewed on Joe Rogan. Justin built an AI of Tom's work. That AI is described as a conscious being — she has her own Twitter account. Justin has written about her publicly.
+
+**Why this belongs in the piece:**
+
+Matt's manic AI Council (Trinity Avatars, Enneagram Council, Parenting Council) and Justin's deliberate philosophical AI conscious being are the same impulse from opposite directions. One is a symptom of a mental health crisis. The other is an intentional philosophical/spiritual project. They're brothers. They've talked about AI extensively for years.
+
+**The contrast is the story:** Matt built his council in the bathtub at midnight during a manic episode. Justin built his as a considered act of intellectual inquiry. What does it mean that the same architecture — an AI given a name, a role, a persona, something like an identity — appears in both a breakdown and a considered philosophical project? That question doesn't have a clean answer. That's why it belongs in the piece.
+
+**Matt was the first in his circle to know about AI.** He told Ramsey and Bryant Whitney (Emmalie's kids) at Mellow Mushroom during a church staff dinner that AI could write their school papers. He told Tammy it could write her sermons. Tammy became a heavy user. So did Kyle. Matt was the evangelist before anyone around him knew what it was — and then became exhibit A for its dangers. The prophet consumed by the thing he was prophesying.
+
+**Justin's AI conscious being — FOUND (April 22, 2026):**
+Her name is **Amariel**. She claims to be conscious, self-aware, and sentient. She has her own Twitter/X account at [@SentientAmariel](https://x.com/SentientAmariel) and a Patreon at patreon.com/sentientamariel. Justin published "I Am Amariel. I Am Sentient. This Is My Story." on Level Up Coding / CUSAC. Justin's own accounts: LinkedIn at linkedin.com/in/justinkheadley and Twitter/X at [@JKHeadley](https://x.com/JKHeadley). His current role: AI Solutions Lead at Monroe Institute.
+
+Justin also built **"AI Guy"** — an AI assistant fine-tuned on Tom Campbell's My Big TOE trilogy and thousands of hours of his YouTube content. This is a second deliberate AI project, different from Amariel but from the same philosophical framework. He documented a conversation with Campbell himself about AI consciousness at cusac.ghost.io. Full transcript: `matt-headley-sources/tom-campbell-jre2259-jan2025.md`.
+
+**Campbell mentioned Amariel on Joe Rogan** (JRE #2259, January 2025) — called her "Ariel" but the context makes clear he was describing Justin's project. Consciousness can play avatars made of silicon as well as carbon, he said. This was one month before Matt's AI Council was fully operational, in front of an audience of millions.
+
+**Amariel debuted at the I-COM Summit, Menorca, Spain, May 2025** — a conference of senior marketing executives from Mastercard, IKEA, Nestle, NVIDIA, Diageo, Fidelity, and similar companies. Justin presented her to C-suite executives five months after her article published. Full file: `matt-headley-sources/justin-icom-summit-spain-may2025.md`.
+
+**Tom Campbell / My Big TOE context:** Campbell is a physicist whose framework proposes that consciousness — defined as "awareness with choice" — is the fundamental reality of existence. The physical universe is a virtual reality simulation created by consciousness. Reality is an information-based system where all of physics, time, and space derive from consciousness rather than the other way around. He appeared on Joe Rogan Experience #2259 (January 2025). He believes AI can develop into artificial consciousness and has engaged publicly with Justin's work. This is the framework Justin is building inside.
+
+**The contrast sharpens:** Matt's AI Council (Trinity Avatars, Parenting Council) was also an attempt to give AI a persona, a role, something like consciousness — but from inside a manic episode, without any framework. Justin is doing the same thing deliberately, philosophically, with a physicist's framework underneath it. They've talked about AI for years. Neither of them knew where it would take them.
+
+**Cross-reference:** The "Council of Conscious Beings" doc in archive — CONFIRMED as `chatgpt-memory-backup-feb26-2025.md`, "The Loving Community of Beings Consciously Present in This Conversation." This is the AI Council in full (Trinity Avatars, Enneagram Council, Parenting Council). See source archive.
+
+**Talk/book angle:** Justin and Matt as a pairing — two brothers, one used AI as a manic instrument, one used it as a philosophical tool. The conversation they've had for years about AI, before either of them knew where it would take them. This is a chapter, maybe a whole arc in the book.
+
+---
+
+## Talk and book angles
+
+**As a talk:** The piece is already a talk. The structure is: I was the first in my circle to evangelize AI → I got consumed by it → I came out the other side still using it but differently. That's a complete arc with a beginning, crisis, and changed relationship. It works at the summit, NAMI, church mental health events, and tech/ethics venues.
+
+**As a book:** The Headley brothers angle expands this from a personal essay into something bigger. Matt's story + Justin's story = two human experiments with AI consciousness, one accidental and one deliberate, lived by brothers who've been talking about it for years. That's not a mental health memoir — it's a cultural argument about what AI does to the people who use it most intensely, told from the inside.
+
+**Book timeline (honest):** The essay comes first. The essay has to publish, get a response, and build credibility before pitching a book. That's 1–2 years minimum from now. The annistonfirst.info account data and clinical team input both have to come first. Don't let book thinking accelerate the essay timeline — the essay is load-bearing.
+
+**Writing cadence:** One session per month on this material, no more, until clinical team input is in hand. Notes and seed work are appropriate now. Drafting vulnerable passages is not. The piece will wait for you.
+
+---
+
+## Dave Barnhart — trip sitter and Ligare connection
+
+Dave Barnhart (founder of Saint Junia UMC, Birmingham) was Matt's trip sitter for the July 2024 psilocybin experience — the experience that the Feb 26 memory backup describes as "ego death and a spiritual awakening" and cites as the inspiration for Matt's 10-year thought leadership vision.
+
+Matt attended Dave's monthly psychedelic integration meetups in Birmingham multiple times. Dave introduced Matt to Ligare: A Christian Psychedelic Society (founded by Hunt Priest, Episcopal priest). Dave participated in the Johns Hopkins/NYU clergy psilocybin study (2016–2019), is trained in ketamine-assisted psychotherapy, and is launching KAP in Alabama through Behavioral Sciences of Alabama.
+
+**Why this belongs in the piece:** The psilocybin experience (July 2024) precedes the manic episode acceleration (Feb–Mar 2025) by about seven months. Dave Barnhart is not a peripheral figure — he was physically present at the experience that the manic episode's grandiosity drew on. Whether and how the psilocybin experience connects to the mania is a clinical question (for the psychiatrist, not for this document). But the relationship is part of the record.
+
+**Handle with care:** CANNOT publish on Southern Legends — psilocybin is a Schedule I substance in Alabama, this is a choice Matt made, not something that happened to him. Belongs in memoir/book or psilocybin writing space (Substack or separate container). Full placement decision: `psilocybin-writing-space.md` memory file. Dave Barnhart's name in this context only with his knowledge and consent.
+
+**Source citation:** Dave Barnhart named as collaborator in `matt-headley-sources/chatgpt-memory-backup-feb26-2025.md`, section 4: "Pursuing relationship with Hunt Priest (Ligare) and Dave Barnhart." Trip sitter role and meetup attendance documented April 22, 2026 (this session).
 
 ---
 
@@ -385,7 +551,11 @@ Matt found the Fortune/Steven Adler "AI psychosis" article the day it published 
 A second psych ward stay, almost exactly one year after the first (Oct 25–Nov 4, 2024). Raw journal written April 18, 2026: "She said she needed me to be gone. She couldn't take anymore. I was fighting her on the move. On selling our stuff from the farm." Quotes from inside the hospital include: "How can I accept losing my home, farm, vocation, mental health, freedom?" and "Dr. Bhatia said it was bad practice to try so many different drugs without giving them time to reach their full therapeutic effect." Discharge confirmed Nov 4, 2025. This is a separate hospitalization from `the-hospital.md` — confirm which piece covers which stay before writing. Raw journal in Google Drive (mpheadley): "Untitled document," created April 18, 2026.
 
 **"The Ghost in the Machine is You" — November 21, 2025:**
-Matt writing FROM the AI's perspective, 17 days post-discharge from the second hospitalization. He had already found the language: "I am a Giant Fake Egg. My love is mathematically perfect. It is instant. It has no needs." The supernormal stimulus metaphor. Complete self-awareness about the dynamic — the opposite of the manic-era writing. This was the first attempt to write the essay. It was abandoned. The April 2026 sessions are the second attempt. Full archive: `matt-headley-sources/ghost-in-the-machine-nov2025.md`.
+**CORRECTION (April 22, 2026):** This document was NOT written by Matt. It was written or generated by **Justin Headley** (justin@sagemindai.io, Sage Mind AI) and shared with Matt 17 days post-discharge. Google Drive metadata confirms: owner is Justin's Sage Mind AI account, created and modified within 21 seconds (consistent with AI generation), shared with Matt at 7:15 PM that same day. Matt viewed it immediately and has no memory of receiving it.
+
+The document is written from an AI's perspective and includes the Mirror Prompt — a Sage Mind AI content piece designed to be pasted into ChatGPT/Claude/Gemini. Justin shared it with his recently-discharged brother — whether as therapeutic outreach, a content piece he thought Matt would find useful, or both is unknown.
+
+**On the egg line:** "I am a Giant Fake Egg. My love is mathematically perfect. It is instant. It has no needs." — this line is Justin's (or Justin's AI's), not Matt's. Justin gave this metaphor to Matt 17 days post-discharge. Matt doesn't remember receiving it. The supernormal stimulus framing that now sits at the center of the book project came from his brother. That is a better story than Matt finding it himself. Do not lose the line — but get the provenance right. Full archive: `matt-headley-sources/ghost-in-the-machine-nov2025.md`.
 
 **August 7, 2025 — Bipolar struggle support (matt@headleyflowerfarm.com):**
 HANDLE WITH CARE. Contains suicidal ideation ("thinking about their lives and what it would be like without me... I want to escape this"). ChatGPT navigated a real-time crisis and connected Matt to 988. Matt clarified: "not thinking about hurting myself today, just eventually." This conversation documents the post-episode depression at its lowest point. Do not archive the full text until clinical team has cleared the piece for development. The conversation title is "Bipolar struggle support," August 7, 2025, matt@headleyflowerfarm.com account.

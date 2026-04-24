@@ -676,6 +676,9 @@ Run this on every published profile. Two posts: SL page first, personal share se
 - Check back for comments and reply personally
 - If the subject hasn't responded to their profile link, the Facebook tag often prompts it — don't send a separate follow-up until after the post goes up
 
+### Local Facebook Groups — Wait First
+Don't post into Downtown Anniston or other local groups yourself. If the subject shares it there organically, it carries more weight. Give it a day or two. If they don't share it themselves, then consider posting — but let them go first.
+
 ---
 
 ## The Outreach Approach — Editorial vs. Web Services
