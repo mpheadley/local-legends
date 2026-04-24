@@ -4,6 +4,20 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## April 24, 2026 — Shannon Jenkins (text)
+
+After Matt sent him the finished profile:
+
+> "Matt!!! This is beautiful. I am flattered and humbled, but I am even more overwhelmed with the thought that I could be a glimmer of positivity for you in some pretty dark moments."
+>
+> "I love you, man!"
+
+He also caught a factual error — said he attended JSU but didn't graduate there, finished his degree online later. Asked Matt to change it to "He studied marketing in college." Corrected.
+
+**Why it matters:** He read it carefully enough to fact-check it. And his first response wasn't about himself — it was about being useful to Matt in dark moments. That's not a subject reviewing a profile. That's a friend.
+
+---
+
 ## April 23, 2026 — Lisa Davis, Foothills Magazine
 
 Lisa Davis is the editor of Foothills Magazine — regional print, Anniston Star affiliated, celebrating Northeast Alabama. She called Matt directly today. She'd read the blog. She loved it.
