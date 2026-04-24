@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import type React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,6 +21,7 @@ interface ParallaxHeroProps {
   heroFontSize?: string;
   displayTitle?: boolean;
   slug?: string;
+  cardFont?: "serif" | "serif-bold" | "serif-italic" | "serif-caps" | "condensed";
 }
 
 export default function ParallaxHero({
@@ -34,7 +36,10 @@ export default function ParallaxHero({
   heroFontSize,
   displayTitle = false,
   slug,
+  cardFont,
 }: ParallaxHeroProps) {
+  const heroFontStyle: React.CSSProperties["fontStyle"] = cardFont === "serif-italic" ? "italic" : "normal";
+  const heroFontWeight = cardFont === "serif-bold" ? 700 : undefined;
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -129,13 +134,13 @@ export default function ParallaxHero({
             {titleHtml ? (
               <h1
                 className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
-                style={heroFontSize ? { fontSize: heroFontSize } : undefined}
+                style={{ ...(heroFontSize ? { fontSize: heroFontSize } : {}), fontStyle: heroFontStyle, ...(heroFontWeight ? { fontWeight: heroFontWeight } : {}) }}
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
               />
             ) : (
               <h1
                 className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
-                style={heroFontSize ? { fontSize: heroFontSize } : undefined}
+                style={{ ...(heroFontSize ? { fontSize: heroFontSize } : {}), fontStyle: heroFontStyle, ...(heroFontWeight ? { fontWeight: heroFontWeight } : {}) }}
               >{title}</h1>
             )}
             {subtitle && (
