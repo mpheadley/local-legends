@@ -27,7 +27,7 @@ export default function JournalPage() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-      { "@type": "ListItem", position: 2, name: "Journal", item: `${siteConfig.url}/journal` },
+      { "@type": "ListItem", position: 2, name: "Essays", item: `${siteConfig.url}/essays` },
     ],
   };
 
