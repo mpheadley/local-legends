@@ -9,6 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 import ShareButtons from "@/app/components/ShareButtons";
 import PullQuote from "@/app/components/PullQuote";
 import ArticleImage from "@/app/components/ArticleImage";
+import InlineImage from "@/app/components/InlineImage";
 import AudioPlayer from "@/app/components/AudioPlayer";
 import VideoEmbed from "@/app/components/VideoEmbed";
 import VideoLoop from "@/app/components/VideoLoop";
@@ -49,22 +50,6 @@ function FeaturedImage({ src, alt, caption }: { src: string; alt: string; captio
   );
 }
 
-function InlineImage({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
-  return (
-    <div className="not-prose my-8 mx-auto" style={{ maxWidth: "400px" }}>
-      <Image
-        src={src}
-        alt={alt}
-        width={400}
-        height={533}
-        className="w-full rounded-lg object-cover"
-      />
-      {caption && (
-        <p className="mt-2 text-xs text-center italic text-ll-text-light">{caption}</p>
-      )}
-    </div>
-  );
-}
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {

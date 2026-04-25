@@ -13,6 +13,7 @@ import {
 import { siteConfig } from "@/lib/site-config";
 import { notFound } from "next/navigation";
 import ArticleImage from "@/app/components/ArticleImage";
+import InlineImage from "@/app/components/InlineImage";
 import PhotoCarouselLoader from "@/app/components/PhotoCarouselLoader";
 import PullQuote from "@/app/components/PullQuote";
 import VideoLoop from "@/app/components/VideoLoop";
@@ -85,6 +86,7 @@ const mdxComponents = {
   ),
   hr: () => <hr className="my-10 border-t border-ll-border" />,
   ArticleImage,
+  InlineImage,
   PhotoCarousel: PhotoCarouselLoader,
   PullQuote,
   VideoLoop,
