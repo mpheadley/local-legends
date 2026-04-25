@@ -3,14 +3,15 @@
 Raw material files for Matt's personal writing section. These are not profiles — they are Matt's story.
 
 **Published:**
-1. **I'm Not Going to Disappear** — LIVE at `/journal/im-not-going-to-disappear`
-2. **A Letter Never Sent** (was "Holding on to Hope") — LIVE at `/journal/a-letter-never-sent`
-3. **Hope in the Wilderness** (Anniston Star reprint) — LIVE at `/journal/hope-in-the-wilderness`
-4. **Attempt 73** (was "Pushing Through") — LIVE at `/journal/attempt-73`
-5. **My Writing Has a New Home** (Patreon closing post) — LIVE at `/journal/my-writing-has-a-new-home`
-6. **The Same Domain** — LIVE at `/journal/the-same-domain`
-7. **The Hospital** — LIVE at `/journal/the-hospital` (published 2026-04-20)
-8. **No Shade** — LIVE at `/journal/no-shade` (published 2026-04-21; Jason consented)
+1. **I'm Not Going to Disappear** — LIVE at `/essays/im-not-going-to-disappear`
+2. **A Letter Never Sent** (was "Holding on to Hope") — LIVE at `/essays/a-letter-never-sent`
+3. **Hope in the Wilderness** (Anniston Star reprint) — LIVE at `/essays/hope-in-the-wilderness`
+4. **Attempt 73** (was "Pushing Through") — LIVE at `/essays/attempt-73`
+5. **My Writing Has a New Home** (Patreon closing post) — LIVE at `/essays/my-writing-has-a-new-home`
+6. **The Same Domain** — LIVE at `/essays/the-same-domain`
+7. **The Hospital** — LIVE at `/essays/the-hospital` (published 2026-04-20)
+8. **No Shade** — LIVE at `/essays/no-shade` (published 2026-04-21; Jason consented)
+9. **Chief Ladiga, 1832** — LIVE at `/essays/chief-ladiga-trail` (published 2026-04-25; also in Profiles)
 
 **Patreon closed April 14, 2026.** Personal messages sent to 4 paying supporters (see `patreon-supporters.md`). Closing post published. ✓ Complete.
 

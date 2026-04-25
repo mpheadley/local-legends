@@ -247,7 +247,7 @@ Warm. Not promotional. Link at the end, not the front. No subscribe ask in indiv
 
 **Step 2 — Drop a thread comment after individual replies**
 After replying to everyone, one comment at the bottom of the thread:
-> "Next chapter is up at southernlegends.blog/journal/the-hospital — if you want the next one in your inbox, there's a subscribe at the bottom of every piece."
+> "Next chapter is up at southernlegends.blog/essays/the-hospital — if you want the next one in your inbox, there's a subscribe at the bottom of every piece."
 This is where the subscribe mention belongs. Not in individual replies.
 
 ---
