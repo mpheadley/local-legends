@@ -13,7 +13,7 @@ export default function JournalCard({ post }: { post: JournalPost }) {
   const { slug, frontmatter, readingTime } = post;
 
   return (
-    <Link href={`/journal/${slug}`} className="group block">
+    <Link href={`/essays/${slug}`} className="group block">
       <p style={{
         fontFamily: "var(--font-source-sans)",
         fontSize: "0.6875rem",

@@ -47,6 +47,33 @@ Do not publish publicly anywhere — not indexed, not findable by potential clie
 
 ---
 
+## Primary source
+
+**Full trip record archived:** `content/matt-headley-sources/barnhart-trip-notes-july2024.md`
+
+Dave's timestamped notes from July 5, 2024, 9:00 AM – 1:55 PM. Sent to Matt and Heather on July 6. Matt forwarded to Evernote on July 9. The record ends when Heather arrived.
+
+Dave characterized the session as not producing the effect Matt was hoping for — described it as a "bump or afterglow" rather than a full experience. The notes tell a different story: significant emotional processing across nearly 6 hours.
+
+### Lines that anchor a piece
+
+- **11:26** (whispering, barely audible): *"Thank you, world turned upside down, have a great time, every moment is a gift. Heaven's just about right here. It's all gonna make sense. Moment by moment. It's really great."*
+- **11:42**: *"I'm going to come out of here a butterfly."*
+- **12:33**: *"I may do something bad, something good, may be bishop, may be the Destroyer? … I don't know how to get back. So far so far so far. Forgive my sin. … My intention is pure."*
+- **12:43** (naming children): *"I want them to have a beautiful life. Slowly slipping away though."*
+- **12:46** (looking at a photo): *"I did my best."*
+- **1:04**: *"Donald Trump — I could be him. My grandfather committed suicide, trying not to become him."*
+- **1:15**: *"Heather I miss you. Lost in the woods. Never forgot their names."*
+- **1:50**: *"It doesn't turn out well. (What?) Life. I'm going to keep making messes and keep cleaning up. There's no way out."*
+- **1:54**: *"How heartbreaking. (What's heartbreaking?) The sincerity."*
+- **1:55**: *"I wasn't supposed to be one of those. There's no end."*
+
+### Dave's clinical note (same email)
+
+Dave flagged an OCD possibility after the session — "harming others" obsession with a worrying compulsion, reassurance-seeking from Heather as a tell. Mentioned Rogers Nashville and Erlanger Behavioral Health Chattanooga as IOP/inpatient options. This was July 2024 — three months before the hospitalization.
+
+---
+
 ## Before writing
 
 - Talk to Barnhart. Does he want to be named? What's his comfort level?

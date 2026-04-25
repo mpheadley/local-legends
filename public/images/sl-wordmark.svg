@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  <!-- SL Wordmark Lockup — Parchment & Pine palette -->
+  <!-- Fonts: Georgia approximates Fraunces for print export. Convert text to outlines before sending to printer. -->
+
+  <!-- Icon mark -->
+  <rect x="0" y="10" width="96" height="96" rx="8" fill="#1C1917"/>
+  <text x="48" y="72" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700" font-size="42" fill="#FAFAF7" letter-spacing="-1">SL</text>
+
+  <!-- Divider -->
+  <line x1="116" y1="14" x2="116" y2="102" stroke="#9A3412" stroke-width="1.5"/>
+
+  <!-- Wordmark text block -->
+  <text x="136" y="52"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700" font-size="34" fill="#1C1917" letter-spacing="3">SOUTHERN LEGENDS</text>
+
+  <!-- Rule under wordmark -->
+  <line x1="136" y1="62" x2="476" y2="62" stroke="#CA8A04" stroke-width="1.5"/>
+
+  <!-- Tagline / URL -->
+  <text x="136" y="82"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="400" font-size="13" fill="#9A3412" letter-spacing="2">NORTHEAST ALABAMA · southernlegends.blog</text>
+</svg>

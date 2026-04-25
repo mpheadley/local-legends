@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820" width="600" height="820">
+  <!-- No background fill — shirt color shows through -->
+
+  <!-- ══════════════════════════════════
+       TOP TYPOGRAPHY
+       ══════════════════════════════════ -->
+
+  <!-- Thin rule above title -->
+  <line x1="80" y1="72" x2="520" y2="72"
+    stroke="#1C1917" stroke-width="1"/>
+
+  <!-- CHIEF LADIGA TRAIL — stacked, large serif, generous tracking -->
+  <text x="300" y="128"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="64"
+    fill="#1C1917"
+    letter-spacing="10">CHIEF</text>
+
+  <text x="300" y="200"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="64"
+    fill="#1C1917"
+    letter-spacing="10">LADIGA</text>
+
+  <text x="300" y="272"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="64"
+    fill="#1C1917"
+    letter-spacing="10">TRAIL</text>
+
+  <!-- Thin rule below title -->
+  <line x1="80" y1="290" x2="520" y2="290"
+    stroke="#1C1917" stroke-width="1"/>
+
+  <!-- ══════════════════════════════════
+       COMPASS ROSE — hand-drawn style
+       Positioned top-right of map area
+       ══════════════════════════════════ -->
+  <g transform="translate(495, 360)">
+    <!-- N/S/E/W arms — thin strokes -->
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="#1C1917" stroke-width="1.2"/>
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#1C1917" stroke-width="1.2"/>
+    <!-- Diagonal tick marks, shorter -->
+    <line x1="-12" y1="-12" x2="12" y2="12" stroke="#1C1917" stroke-width="0.7"/>
+    <line x1="12" y1="-12" x2="-12" y2="12" stroke="#1C1917" stroke-width="0.7"/>
+    <!-- Arrowhead for North -->
+    <polygon points="0,-22 -5,-10 5,-10" fill="#1C1917"/>
+    <!-- N label -->
+    <text x="0" y="-26"
+      text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="10"
+      font-weight="700"
+      fill="#1C1917">N</text>
+    <!-- Small circle center -->
+    <circle cx="0" cy="0" r="3" fill="none" stroke="#1C1917" stroke-width="1"/>
+  </g>
+
+  <!-- ══════════════════════════════════
+       MAP AREA — trail line + towns
+       Trail runs west (Anniston ~x=90) to east (State Line ~x=510)
+       y range ~310 to ~500, organic dip and rise
+       ══════════════════════════════════ -->
+
+  <!-- Subtle elevation sketch lines — suggest landscape without noise -->
+  <!-- Gentle hatch suggesting hills, east side -->
+  <line x1="390" y1="320" x2="410" y2="345" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.25"/>
+  <line x1="400" y1="318" x2="422" y2="346" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.25"/>
+  <line x1="412" y1="319" x2="432" y2="347" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.25"/>
+  <line x1="424" y1="321" x2="442" y2="348" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.25"/>
+  <line x1="436" y1="322" x2="452" y2="350" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.25"/>
+  <!-- Gentle hatch suggesting hills, west side -->
+  <line x1="108" y1="360" x2="126" y2="388" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.2"/>
+  <line x1="118" y1="355" x2="138" y2="385" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.2"/>
+  <line x1="130" y1="353" x2="148" y2="382" stroke="#1C1917" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <!-- THE TRAIL LINE
+       West end: Anniston (90, 410)
+       Weaver: (175, 390)
+       Jacksonville: (270, 368)
+       Piedmont: (390, 380)
+       State Line: (510, 395)
+       Organic cubic bezier — feels hand-plotted on topo paper
+  -->
+  <path
+    d="M 90,410
+       C 110,405 145,402 175,390
+       C 205,378 230,360 270,368
+       C 310,376 355,390 390,380
+       C 420,372 470,388 510,395"
+    fill="none"
+    stroke="#1C1917"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-dasharray="8 0"
+  />
+
+  <!-- Secondary texture pass — slightly irregular overlay to simulate hand-drawn weight -->
+  <path
+    d="M 90,412
+       C 112,406 147,403 177,392
+       C 207,380 232,362 270,370
+       C 308,378 353,392 390,382
+       C 422,374 472,390 510,397"
+    fill="none"
+    stroke="#1C1917"
+    stroke-width="0.8"
+    stroke-opacity="0.3"
+    stroke-linecap="round"
+  />
+
+  <!-- ── ANNISTON (west terminus) ── -->
+  <!-- End cap bar — trail terminus marker -->
+  <line x1="90" y1="400" x2="90" y2="422"
+    stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="90" cy="410" r="6" fill="#1C1917"/>
+  <circle cx="90" cy="410" r="3" fill="#FAFAF7"/>
+  <text x="90" y="442"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="13"
+    font-weight="700"
+    fill="#1C1917">ANNISTON</text>
+
+  <!-- ── WEAVER ── -->
+  <circle cx="175" cy="390" r="4.5" fill="#1C1917"/>
+  <text x="175" y="412"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="11"
+    fill="#1C1917">WEAVER</text>
+
+  <!-- ── JACKSONVILLE ── -->
+  <circle cx="270" cy="368" r="5.5" fill="#1C1917"/>
+  <!-- Label above — avoids crowding the line -->
+  <text x="270" y="354"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="13"
+    font-weight="700"
+    fill="#1C1917">JACKSONVILLE</text>
+
+  <!-- ── PIEDMONT ── -->
+  <circle cx="390" cy="380" r="4.5" fill="#1C1917"/>
+  <text x="390" y="402"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="11"
+    fill="#1C1917">PIEDMONT</text>
+
+  <!-- ── STATE LINE (east terminus) ── -->
+  <!-- End cap bar -->
+  <line x1="510" y1="385" x2="510" y2="407"
+    stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="510" cy="395" r="6" fill="#1C1917"/>
+  <circle cx="510" cy="395" r="3" fill="#FAFAF7"/>
+  <text x="510" y="427"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="11"
+    fill="#1C1917">STATE</text>
+  <text x="510" y="441"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="11"
+    fill="#1C1917">LINE</text>
+
+  <!-- Georgia callout — angled label east of state line -->
+  <text x="524" y="375"
+    text-anchor="start"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="9"
+    font-style="italic"
+    fill="#1C1917"
+    stroke="none"
+    opacity="0.7">GA</text>
+
+  <!-- Faint state-line dashed vertical -->
+  <line x1="510" y1="315" x2="510" y2="475"
+    stroke="#1C1917" stroke-width="0.8"
+    stroke-dasharray="4 4"
+    stroke-opacity="0.35"/>
+
+  <!-- ══════════════════════════════════
+       MILEAGE TICK MARKS
+       Small ticks every ~10mi along path
+       10mi ~= x+137, 20mi ~= x+270, 30mi ~= x+408 (approx)
+       ══════════════════════════════════ -->
+  <!-- Approximate interpolated points along the bezier -->
+  <!-- 10 mi mark ~(195, 385) -->
+  <line x1="195" y1="378" x2="195" y2="394"
+    stroke="#1C1917" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="195" y="372"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="8"
+    fill="#1C1917"
+    opacity="0.55">10</text>
+  <!-- 20 mi mark ~(315, 373) -->
+  <line x1="315" y1="366" x2="315" y2="382"
+    stroke="#1C1917" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="315" y="360"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="8"
+    fill="#1C1917"
+    opacity="0.55">20</text>
+  <!-- 30 mi mark ~(450, 383) -->
+  <line x1="450" y1="376" x2="450" y2="392"
+    stroke="#1C1917" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="450" y="370"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="8"
+    fill="#1C1917"
+    opacity="0.55">30</text>
+
+  <!-- ══════════════════════════════════
+       BOTTOM TYPOGRAPHY
+       ══════════════════════════════════ -->
+
+  <!-- Thin rule above sub-text -->
+  <line x1="100" y1="490" x2="500" y2="490"
+    stroke="#1C1917" stroke-width="1"/>
+
+  <!-- ANNISTON · ALABAMA -->
+  <text x="300" y="520"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="18"
+    fill="#1C1917"
+    letter-spacing="6">ANNISTON · ALABAMA</text>
+
+  <!-- 33 MILES -->
+  <text x="300" y="548"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="13"
+    fill="#1C1917"
+    letter-spacing="5">33 MILES</text>
+
+  <!-- Thin rule below sub-text -->
+  <line x1="180" y1="562" x2="420" y2="562"
+    stroke="#1C1917" stroke-width="0.8"/>
+
+  <!-- ══════════════════════════════════
+       TRAIL BLAZE ICON
+       Classic rectangular trail blaze centered below sub-text
+       ══════════════════════════════════ -->
+  <rect x="276" y="580" width="48" height="66" rx="3"
+    fill="#1C1917"/>
+  <rect x="284" y="590" width="32" height="46" rx="2"
+    fill="#FAFAF7"/>
+
+  <!-- ══════════════════════════════════
+       SL MARK — bottom anchor
+       ══════════════════════════════════ -->
+  <rect x="274" y="700" width="52" height="52" rx="8"
+    fill="#1C1917"/>
+  <text x="300" y="733"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="24"
+    fill="#FAFAF7"
+    letter-spacing="-0.5">SL</text>
+
+  <!-- Thin rule flanking SL mark -->
+  <line x1="80" y1="726" x2="264" y2="726"
+    stroke="#1C1917" stroke-width="0.8" stroke-opacity="0.4"/>
+  <line x1="336" y1="726" x2="520" y2="726"
+    stroke="#1C1917" stroke-width="0.8" stroke-opacity="0.4"/>
+
+</svg>

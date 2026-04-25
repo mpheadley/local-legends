@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/featured", destination: "/", permanent: true },
+      { source: "/journal", destination: "/essays", permanent: true },
+      { source: "/journal/:slug", destination: "/essays/:slug", permanent: true },
     ];
   },
   async headers() {

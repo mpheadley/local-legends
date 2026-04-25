@@ -45,7 +45,7 @@ export function buildSearchIndex(): SearchEntry[] {
     content: stripMdx(p.content),
     type: "journal" as const,
     date: p.frontmatter.date,
-    href: `/journal/${p.slug}`,
+    href: `/essays/${p.slug}`,
   }));
 
   return [...profiles, ...journal];

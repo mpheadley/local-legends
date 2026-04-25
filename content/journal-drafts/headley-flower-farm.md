@@ -41,6 +41,7 @@
 - `headley-farm-exterior-feb2022-wide.jpg` → same as public farmhouse but source copy.
 
 **Videos in research/pdfs/ — self-host when farm essay is written:**
+- `headley-farm-first-day-fulltime-farmers-instagram.mp4` — Instagram reel, ~March–April 2024. First day as full-time farmers. Child with Cookie Monster on porch, snapdragons netted for storm. Caption: "Nothing like kicking off full-time farming with a boss battle against the weather." Key transition moment — resignation → farm. Full caption filed: `headley-farm-first-day-fulltime-farmers-instagram.md`.
 - `headley-farm-brushcutter-dancing-reel.mp4` — Matt dancing wide-stance with brushcutter, dusk, bare field, cowboy hat. Text overlay: "Matt Headley : v.40 / Faith. Farming. Family. (And the occasional dance break.)" Facebook reel 651060140998306. Use in manic chapter. Self-host: copy H.264 version to `public/videos/`, wire via `<VideoPlayer>` component.
 - `headley-farm-brushcutter-reel-facebook.mp4` — the manic-era "Badass Brushcutter" text post reel (974201334914182). Brushcutter work footage. Same era, companion piece.
 - `headley-farm-bee-swarm-porch-column-apr2022.mp4` — 101MB. Bees swarming from front porch column, April 2022. Too large to self-host — upload to YouTube (unlisted) and wire via `VideoEmbed` component.
@@ -76,6 +77,12 @@
 Not a business profile. This is Matt's story of what the farm was, what it cost to build it, what it felt like during the manic phase, and what it meant to lose it. The about page says "we built that thing from the ground up, with our kids underfoot. And then we lost it." This is that story.
 
 The universal question underneath it — same as every SL profile — is what kept them going. But here the answer is complicated: mania kept him going past the point where stopping would have been the right call. That's not a simple resilience narrative.
+
+---
+
+## Scene details to wire in
+
+- **Ciara Smith visiting the farm** — She came by on what appears to have been her first official ride on the south extension in 2025, with Patrick Wigley. She gave Sage a hug. This is in the CLT essay (post hole scene) but the Sage hug detail belongs in the farm essay where the family is the subject.
 
 ---
 

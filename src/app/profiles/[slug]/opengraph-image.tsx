@@ -1,5 +1,14 @@
 import { ImageResponse } from "next/og";
-import { getProfileBySlug, getPublishedSlugs } from "@/lib/profiles";
+import { readFileSync } from "fs";
+import path from "path";
+import { getProfileBySlug } from "@/lib/profiles";
+
+const frauncesSemiBold = readFileSync(
+  path.join(process.cwd(), "src/app/fonts/Fraunces-SemiBold.ttf")
+);
+const sourceSans = readFileSync(
+  path.join(process.cwd(), "src/app/fonts/SourceSans3-Regular.ttf")
+);
 
 export const runtime = "nodejs";
 export const alt = "Southern Legends profile";
@@ -17,10 +26,6 @@ const CATEGORY_COLORS: Record<string, string> = {
   people: "#9A3412",
 };
 
-export function generateStaticParams() {
-  return getPublishedSlugs().map((slug) => ({ slug }));
-}
-
 export default async function OGImage({
   params,
 }: {
@@ -28,15 +33,6 @@ export default async function OGImage({
 }) {
   const { slug } = await params;
   const profile = getProfileBySlug(slug);
-
-  const [frauncesSemiBold, sourceSans] = await Promise.all([
-    fetch(new URL("../../fonts/Fraunces-SemiBold.ttf", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    ),
-    fetch(new URL("../../fonts/SourceSans3-Regular.ttf", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    ),
-  ]);
 
   const fonts = [
     { name: "Fraunces", data: frauncesSemiBold, style: "normal" as const, weight: 600 as const },

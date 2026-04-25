@@ -77,6 +77,7 @@ The farm as a story — the kiosk on the Chief Ladiga Trail, the cut flowers, th
 | `the-30-minute-errand.md` | Mania narrows your field of vision until the people closest to you are the ones you see least clearly. The 30-min errand that took all day. Heather needed him to come home. He couldn't. Door: Lucy not knowing about Aquality Farm. | Seed — April 2026 |
 | `red-state-revival.md` | Manic, at a Nadia Bolz-Weber revival in Birmingham — the room, the footage he never released, the selfie he did | Low priority — write after core arc pieces |
 | `after-the-acute-phase.md` | The moment you realize you're not in crisis anymore and don't know what to do with that. The weird flatness nobody writes about. | Seed — don't write until it's being lived |
+| `heather-when-you-post.md` | Heather's night ritual of reading his posts and grieving. "When you post, I grieve again. I wake up the next morning and it's a little bit easier." Not a secret — she and Sarah joke about it at the Plant Place. Quote: "When the lights come on, the shadows make sense." Transcribed from handwritten notebook, April 21, 2026. | Seed — raw notes only |
 
 | `../ATTABOY.md` (root) | Encouraging responses to published pieces — fuel for when it's hard to publish | Running log |
 | `gold-star-draft-notes.md` | Dr. Hadley's office → Anniston Star article → gold star sticker → unfilled prescription. Last moment before the crash. Voice transcript: `../profiles/matt-headley-sources/gold-star-voice-transcript-april-19-2026.md`. | Well-developed seed, Matt's words + scene built |

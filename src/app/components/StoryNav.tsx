@@ -101,7 +101,7 @@ export default function StoryNav({ prev, next }: StoryNavProps) {
         {/* Journal aside */}
         <div className="mt-8 pt-6 border-t border-ll-border text-center">
           <Link
-            href="/journal/no-shade"
+            href="/essays/no-shade"
             className="text-sm hover:text-ll-primary transition-colors"
             style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-text-light)" }}
           >

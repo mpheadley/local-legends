@@ -7,6 +7,7 @@ const contentDir = path.join(process.cwd(), "content/journal");
 
 export interface JournalFrontmatter {
   title: string;
+  subtitle?: string;
   slug: string;
   date: string;
   excerpt: string;
