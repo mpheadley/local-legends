@@ -254,6 +254,12 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             {frontmatter.title}
           </h1>
 
+          {frontmatter.subtitle && (
+            <p className="mt-3 text-lg md:text-xl text-white/70 italic" style={{ fontFamily: "var(--font-heading)" }}>
+              {frontmatter.subtitle}
+            </p>
+          )}
+
           <div className="flex flex-wrap items-center gap-4 mt-6 text-sm text-white/60">
             <span>By {siteConfig.author}</span>
             <span aria-hidden="true">&middot;</span>
