@@ -127,14 +127,14 @@ export default function AboutPage() {
               with someone and asking them to tell you their story is one of the
               ways back. I wrote more about{" "}
               <Link
-                href="/journal/the-same-domain"
+                href="/essays/the-same-domain"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
                 why this site exists
               </Link>
               {" "}in the journal. My writing has appeared in the{" "}
               <Link
-                href="/journal/hope-in-the-wilderness"
+                href="/essays/hope-in-the-wilderness"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
                 Anniston Star
@@ -169,7 +169,7 @@ export default function AboutPage() {
               Support this work →
             </Link>
             <Link
-              href="/journal"
+              href="/essays"
               className="btn-journal inline-block px-5 py-2 border-2 border-ll-accent font-bold text-sm rounded-md hover:bg-ll-accent transition-colors text-center"
             >
               Matt also writes about his own story →
@@ -192,14 +192,27 @@ export default function AboutPage() {
               >
                 I contain<br />multitudes.
               </p>
-              <div className="mb-5">
-                <Image
-                  src="https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync"
-                  alt="I Contain Multitudes tee"
-                  width={200}
-                  height={200}
-                  className="mx-auto rounded"
-                />
+              <div className="flex gap-6 justify-center flex-wrap mb-5">
+                <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync"
+                    alt="I Contain Multitudes tee"
+                    width={160}
+                    height={160}
+                    className="mx-auto rounded mb-1"
+                  />
+                  <span className="text-xs text-ll-text-light">I Contain Multitudes</span>
+                </a>
+                <a href="https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.com/bHccj44L1ev8agAF-wIegw5E4RCpSXSjV6EofGCuOAs/w:1920/sm:1/enc/XBYPBuD-JAm0ldGB/C_il-GBKr_m-hGFF/q0r9c956tj7SBm-A/kEovJx6hlHwRpqWE/YwxX-829rTCOA_lV/PNR4Cpydyiy1QDkd/Tz56NiaVzcBLDOjW/Vs0EAnicbLeedKJF/kfUVcMHs6YwPpHn1/Yth_teKqtBgkuRFS/4GmyZmRy7zIQCeJ0/25x19MxN7ULq-BZc/TvQM3VK0eXNiMckp/z45whZ_dp8h2wMpX/tFw3mbn-kHE"
+                    alt="Ladiga's Land tee"
+                    width={160}
+                    height={160}
+                    className="mx-auto rounded mb-1"
+                  />
+                  <span className="text-xs text-ll-text-light">Ladiga&apos;s Land</span>
+                </a>
               </div>
               <a
                 href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}

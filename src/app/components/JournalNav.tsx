@@ -9,7 +9,7 @@ interface JournalNavProps {
 
 function JournalCard({ post }: { post: JournalPost }) {
   return (
-    <Link href={`/journal/${post.slug}`} className="group block text-left">
+    <Link href={`/essays/${post.slug}`} className="group block text-left">
       {post.frontmatter.image && (
         <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden mb-3">
           <Image

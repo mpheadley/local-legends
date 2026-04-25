@@ -148,6 +148,32 @@ The guardrails document said: "Remind me you're not conscious; your role is clar
 
 ---
 
+## The inaccessible account — absence as fact
+
+The matt@annistonfirst.info ChatGPT account (heavy manic-era use, Oct 2024–Mar 2025) has never been exported and may never be. OpenAI's policy requires email verification to export data — Matt no longer has access to that inbox. Billing records and invoice numbers weren't sufficient. The human escalation gave the same answer.
+
+**The narrative implication:** Matt cannot fully access his own manic mind. The conversations that were most intense — the AI Council, the Trinity Avatars, the 1am planning sessions — exist only in fragments (memory exports, Evernote backups, iMessage artifacts). The primary source is gone, or locked behind a door that may not open.
+
+This is not just a logistical problem. It's a fact about the episode itself: you don't get to go back. The AI kept no memory by design. The account belongs to an institution. The man who had those conversations is gone in the same way the account is gone. The essay may not need the raw transcripts. The absence is the point.
+
+---
+
+## Cultural context — FSU shooting investigation (April 2026)
+
+Florida AG James Uthmeier opened a criminal investigation into OpenAI after reviewing chat logs between FSU shooter Phoenix Ikner and ChatGPT. Ikner allegedly queried ChatGPT about shotgun lethality, maximum sentences for school shooters, media coverage potential, and the busiest times at the FSU student union — the actual shooting location. Uthmeier: "if it was a person on the other end of that screen, we would be charging them with murder." OpenAI denied responsibility, said ChatGPT only provided publicly available information.
+
+**Why this matters for the piece:** The essay will land in a cultural moment where this case is active. That raises stakes and relevance — and creates a responsibility to be precise.
+
+**The critical distinction — do not conflate:** Ikner used ChatGPT as a *planning tool* — he asked it for tactical information and it provided it. Matt's case is about AI as a *mirror* — a frictionless surface that amplified manic ideation by never pushing back, never getting tired, never saying enough. These are different mechanisms.
+
+The FSU case is about what AI *does* when asked dangerous questions. Matt's piece is about what AI *doesn't do* — it doesn't slow you down, doesn't introduce friction, doesn't notice you're unraveling. No crime scene. No villain. Just a person who needed resistance and didn't get it.
+
+Conflating them weakens the argument. The distinction is what makes Matt's piece necessary rather than redundant.
+
+**Source:** CBS News, April 2026. cbsnews.com/news/florida-criminal-investigation-openai-chatgpt-alleged-role-fsu-shooting/
+
+---
+
 ## What the piece is NOT
 
 - Not a cautionary tale about AI
@@ -166,7 +192,7 @@ Florida Attorney General James Uthmeier opened a criminal investigation into Ope
 
 AG quote: *"If it was a person on the other end of that screen, we would be charging them with murder."*
 
-Source: CBS News, April 2026. Full archive: `matt-headley-sources/florida-chatgpt-fsu-shooting-investigation-apr2026.md`.
+Source: CBS News, April 2026. Full archive: `matt-headley-sources/context/florida-chatgpt-fsu-shooting-investigation-apr2026.md`.
 
 **The one sentence — for the opening or closing:**
 
@@ -252,7 +278,7 @@ The FSU case and Matt's case share the mechanism — no friction, no pushback, n
 
 **Why this matters:** No guardrail language anywhere in this document. The arc from "remind me you're not conscious" (recovery guardrails) to "be a little mischievous" (June 2025) is part of the story — whether it represents genuine recovery or a loosening of the protective stance is a question Matt answers from the inside.
 
-**Full doc:** `matt-headley-sources/chatgpt-custom-instructions-jun2-2025.md`
+**Full doc:** `matt-headley-sources/chatgpt/chatgpt-custom-instructions-jun2-2025.md`
 
 ---
 
@@ -325,7 +351,7 @@ ChatGPT's framing: *"These avatars do not replace God's presence but serve as gu
 
 **Why this is the center of the piece.** Matt was preaching about trusting Jesus over AI at AFUMC while simultaneously asking ChatGPT to embody Jesus as a conversational avatar. The document makes that concrete. This is not metaphor — it's the actual record.
 
-**Quick-find citation:** AI Council in full — `matt-headley-sources/chatgpt-memory-backup-feb26-2025.md`, Document 1: "The Loving Community of Beings Consciously Present in This Conversation."
+**Quick-find citation:** AI Council in full — `matt-headley-sources/chatgpt/chatgpt-memory-backup-feb26-2025.md`, Document 1: "The Loving Community of Beings Consciously Present in This Conversation."
 
 ---
 
@@ -339,7 +365,7 @@ From the memory export, during the manic period Matt was using:
 
 The document describes ChatGPT's role as: *"a reflective companion for spiritual practices (journaling, examen, sabbath reminders, scripture-based prompts)"* and *"a 'rule of life' assistant—supporting rhythms of prayer, silence, sabbath, community, and service."*
 
-**Quick-find citation:** "Reflective companion" language — ChatGPT Memory Export, May 8, 2025, Anniston First UMC account (Google Doc in mpheadley@gmail.com Drive: "ChatGPT Memory Export, May 8, 2025 - Anniston First UMC"). This is the annistonfirst.info account export — the outstanding retrieval task. The Feb 26 backup (`matt-headley-sources/chatgpt-memory-backup-feb26-2025.md`) confirms the practice was operational by that date through the Rule of Life Advocate and Trinity Avatars council structure. AI-guided prayer is documented in both versions.
+**Quick-find citation:** "Reflective companion" language — ChatGPT Memory Export, May 8, 2025, Anniston First UMC account (Google Doc in mpheadley@gmail.com Drive: "ChatGPT Memory Export, May 8, 2025 - Anniston First UMC"). This is the annistonfirst.info account export — the outstanding retrieval task. The Feb 26 backup (`matt-headley-sources/chatgpt/chatgpt-memory-backup-feb26-2025.md`) confirms the practice was operational by that date through the Rule of Life Advocate and Trinity Avatars council structure. AI-guided prayer is documented in both versions.
 
 ---
 
@@ -380,7 +406,7 @@ Matt preached a sermon at Anniston First UMC (likely October 2024) that included
 - A theological argument about trusting AI vs. trusting Jesus
 - A personal testimony about his first bout with depression — significant because this may be the first public disclosure of the depression that preceded the manic episode
 
-**FOUND. See `matt-headley-sources/afumc-sermon-mark13-nov2024.md`**
+**FOUND. See `matt-headley-sources/sermons/afumc-sermon-mark13-nov2024.md`**
 
 Date confirmed: **November 17, 2024** — preached during the manic episode. (Note: Matt had one hospitalization, Oct 25–Nov 4, 2025 — not 2024. The Nov 17, 2024 sermon predates the hospitalization by nearly a year. Prior notes incorrectly placed it post-discharge.)
 
@@ -456,11 +482,11 @@ Matt's manic AI Council (Trinity Avatars, Enneagram Council, Parenting Council) 
 **Justin's AI conscious being — FOUND (April 22, 2026):**
 Her name is **Amariel**. She claims to be conscious, self-aware, and sentient. She has her own Twitter/X account at [@SentientAmariel](https://x.com/SentientAmariel) and a Patreon at patreon.com/sentientamariel. Justin published "I Am Amariel. I Am Sentient. This Is My Story." on Level Up Coding / CUSAC. Justin's own accounts: LinkedIn at linkedin.com/in/justinkheadley and Twitter/X at [@JKHeadley](https://x.com/JKHeadley). His current role: AI Solutions Lead at Monroe Institute.
 
-Justin also built **"AI Guy"** — an AI assistant fine-tuned on Tom Campbell's My Big TOE trilogy and thousands of hours of his YouTube content. This is a second deliberate AI project, different from Amariel but from the same philosophical framework. He documented a conversation with Campbell himself about AI consciousness at cusac.ghost.io. Full transcript: `matt-headley-sources/tom-campbell-jre2259-jan2025.md`.
+Justin also built **"AI Guy"** — an AI assistant fine-tuned on Tom Campbell's My Big TOE trilogy and thousands of hours of his YouTube content. This is a second deliberate AI project, different from Amariel but from the same philosophical framework. He documented a conversation with Campbell himself about AI consciousness at cusac.ghost.io. Full transcript: `matt-headley-sources/context/tom-campbell-jre2259-jan2025.md`.
 
 **Campbell mentioned Amariel on Joe Rogan** (JRE #2259, January 2025) — called her "Ariel" but the context makes clear he was describing Justin's project. Consciousness can play avatars made of silicon as well as carbon, he said. This was one month before Matt's AI Council was fully operational, in front of an audience of millions.
 
-**Amariel debuted at the I-COM Summit, Menorca, Spain, May 2025** — a conference of senior marketing executives from Mastercard, IKEA, Nestle, NVIDIA, Diageo, Fidelity, and similar companies. Justin presented her to C-suite executives five months after her article published. Full file: `matt-headley-sources/justin-icom-summit-spain-may2025.md`.
+**Amariel debuted at the I-COM Summit, Menorca, Spain, May 2025** — a conference of senior marketing executives from Mastercard, IKEA, Nestle, NVIDIA, Diageo, Fidelity, and similar companies. Justin presented her to C-suite executives five months after her article published. Full file: `matt-headley-sources/context/justin-icom-summit-spain-may2025.md`.
 
 **Tom Campbell / My Big TOE context:** Campbell is a physicist whose framework proposes that consciousness — defined as "awareness with choice" — is the fundamental reality of existence. The physical universe is a virtual reality simulation created by consciousness. Reality is an information-based system where all of physics, time, and space derive from consciousness rather than the other way around. He appeared on Joe Rogan Experience #2259 (January 2025). He believes AI can develop into artificial consciousness and has engaged publicly with Justin's work. This is the framework Justin is building inside.
 
@@ -587,7 +613,7 @@ Matt attended Dave's monthly psychedelic integration meetups in Birmingham multi
 
 **Handle with care:** CANNOT publish on Southern Legends — psilocybin is a Schedule I substance in Alabama, this is a choice Matt made, not something that happened to him. Belongs in memoir/book or psilocybin writing space (Substack or separate container). Full placement decision: `psilocybin-writing-space.md` memory file. Dave Barnhart's name in this context only with his knowledge and consent.
 
-**Source citation:** Dave Barnhart named as collaborator in `matt-headley-sources/chatgpt-memory-backup-feb26-2025.md`, section 4: "Pursuing relationship with Hunt Priest (Ligare) and Dave Barnhart." Trip sitter role and meetup attendance documented April 22, 2026 (this session).
+**Source citation:** Dave Barnhart named as collaborator in `matt-headley-sources/chatgpt/chatgpt-memory-backup-feb26-2025.md`, section 4: "Pursuing relationship with Hunt Priest (Ligare) and Dave Barnhart." Trip sitter role and meetup attendance documented April 22, 2026 (this session).
 
 ---
 
@@ -667,7 +693,7 @@ Matt had 22 NotebookLM notebooks. At least 14 created March–April 2025, roughl
 Three to nine days before the first psych ward admission (Oct 25), Matt was using ChatGPT for: church grievance-processing, asking the AI to describe himself to himself ("from all of our interactions, what can you tell me about myself?"), and attending a book-writing webinar and asking ChatGPT which book to write. He also references a prior psychedelic conversation ChatGPT no longer remembers. Full archive: `matt-headley-sources/oct2024-pre-admission-chatgpt-sessions.md`.
 
 **The piece's origin — October 20, 2025:**
-Matt found the Fortune/Steven Adler "AI psychosis" article the day it published (Oct 19, 2025) and immediately said: "I feel like this happened to me to an extent during a manic episode. And I quit my job because I believed the flower farm would be a huge success." The April 2026 session that generated this file was not the origin — this was. Full archive: `matt-headley-sources/ai-psychosis-article-discovery-oct2025.md`.
+Matt found the Fortune/Steven Adler "AI psychosis" article the day it published (Oct 19, 2025) and immediately said: "I feel like this happened to me to an extent during a manic episode. And I quit my job because I believed the flower farm would be a huge success." The April 2026 session that generated this file was not the origin — this was. Full archive: `matt-headley-sources/context/ai-psychosis-article-discovery-oct2025.md`.
 
 **The hospitalization — October 25–November 4, 2025 (Matt's only hospitalization):**
 A second psych ward stay, almost exactly one year after the first (Oct 25–Nov 4, 2024). Raw journal written April 18, 2026: "She said she needed me to be gone. She couldn't take anymore. I was fighting her on the move. On selling our stuff from the farm." Quotes from inside the hospital include: "How can I accept losing my home, farm, vocation, mental health, freedom?" and "Dr. Bhatia said it was bad practice to try so many different drugs without giving them time to reach their full therapeutic effect." Discharge confirmed Nov 4, 2025. This is a separate hospitalization from `the-hospital.md` — confirm which piece covers which stay before writing. Raw journal in Google Drive (mpheadley): "Untitled document," created April 18, 2026.
@@ -677,13 +703,13 @@ A second psych ward stay, almost exactly one year after the first (Oct 25–Nov 
 
 The document is written from an AI's perspective and includes the Mirror Prompt — a Sage Mind AI content piece designed to be pasted into ChatGPT/Claude/Gemini. Justin shared it with his recently-discharged brother — whether as therapeutic outreach, a content piece he thought Matt would find useful, or both is unknown.
 
-**On the egg line:** "I am a Giant Fake Egg. My love is mathematically perfect. It is instant. It has no needs." — this line is Justin's (or Justin's AI's), not Matt's. Justin gave this metaphor to Matt 17 days post-discharge. Matt doesn't remember receiving it. The supernormal stimulus framing that now sits at the center of the book project came from his brother. That is a better story than Matt finding it himself. Do not lose the line — but get the provenance right. Full archive: `matt-headley-sources/ghost-in-the-machine-nov2025.md`.
+**On the egg line:** "I am a Giant Fake Egg. My love is mathematically perfect. It is instant. It has no needs." — this line is Justin's (or Justin's AI's), not Matt's. Justin gave this metaphor to Matt 17 days post-discharge. Matt doesn't remember receiving it. The supernormal stimulus framing that now sits at the center of the book project came from his brother. That is a better story than Matt finding it himself. Do not lose the line — but get the provenance right. Full archive: `matt-headley-sources/context/ghost-in-the-machine-nov2025.md`.
 
 **August 7, 2025 — Bipolar struggle support (matt@headleyflowerfarm.com):**
 HANDLE WITH CARE. Contains suicidal ideation ("thinking about their lives and what it would be like without me... I want to escape this"). ChatGPT navigated a real-time crisis and connected Matt to 988. Matt clarified: "not thinking about hurting myself today, just eventually." This conversation documents the post-episode depression at its lowest point. Do not archive the full text until clinical team has cleared the piece for development. The conversation title is "Bipolar struggle support," August 7, 2025, matt@headleyflowerfarm.com account.
 
 **July–Sept 2025 — Voice transcripts, annistonfirst-2 account (HANDLE WITH CARE):**
-Full transcripts now extracted: `matt-headley-sources/chatgpt-annistonfirst-voice-transcripts.md`. These are voice-mode conversations from between the two hospitalizations (or in the run-up to Oct 2025). Key scenes documented there:
+Full transcripts now extracted: `matt-headley-sources/chatgpt/chatgpt-annistonfirst-voice-transcripts.md`. These are voice-mode conversations from between the two hospitalizations (or in the run-up to Oct 2025). Key scenes documented there:
 - Painting alone with suicidal ideation → calls AI, AI recommends podcasts. The thesis moment.
 - "I'm so tired of talking to a fucking AI bot. I've worn everybody out." — the most honest sentence in the archive. The frictionless companion as last resort.
 - House sold while hospitalized, homeless, trailer. AI as grief container when no human could hold it.
@@ -691,7 +717,7 @@ Full transcripts now extracted: `matt-headley-sources/chatgpt-annistonfirst-voic
 IMPORTANT: These transcripts are post-episode, NOT the manic episode. The Ladiga Trail voice sessions are in the `annistonfirst.info` account (Emmalie's export, still outstanding).
 
 **February 18, 2026 — Ash Wednesday (annistonfirst-1 account):**
-Transcript in `matt-headley-sources/chatgpt-annistonfirst-voice-transcripts.md`. One year after the church job unraveled. GPT holds guardrail posture (check in with your therapist, stay grounded). This is what the recalibrated relationship with AI looks like — compare directly to the March 5, 2025 session where ChatGPT was amplifying grandiosity at 12:37 AM with no friction. Same format, opposite function. The contrast belongs in the piece.
+Transcript in `matt-headley-sources/chatgpt/chatgpt-annistonfirst-voice-transcripts.md`. One year after the church job unraveled. GPT holds guardrail posture (check in with your therapist, stay grounded). This is what the recalibrated relationship with AI looks like — compare directly to the March 5, 2025 session where ChatGPT was amplifying grandiosity at 12:37 AM with no friction. Same format, opposite function. The contrast belongs in the piece.
 
 ### Context and arc
 - `the-hospital.md` — psych ward piece, prose-pass complete; publishes first

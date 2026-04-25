@@ -139,7 +139,7 @@ export default function HomePage() {
               {/* Left — journal photo */}
               {featuredJournal.frontmatter.cardImage && (
                 <Link
-                  href={`/journal/${featuredJournal.slug}`}
+                  href={`/essays/${featuredJournal.slug}`}
                   className="group relative shrink-0 self-stretch overflow-hidden"
                   style={{ width: "9rem" }}
                 >
@@ -155,7 +155,7 @@ export default function HomePage() {
               )}
 
               {/* Middle — text */}
-              <Link href={`/journal/${featuredJournal.slug}`} className="flex-1 min-w-0 px-5 py-4 hover:opacity-80 transition-opacity">
+              <Link href={`/essays/${featuredJournal.slug}`} className="flex-1 min-w-0 px-5 py-4 hover:opacity-80 transition-opacity">
                 <p
                   className="text-xs uppercase tracking-widest mb-1"
                   style={{ color: "rgba(250,220,150,0.9)", fontFamily: "var(--font-heading)", fontWeight: 600 }}

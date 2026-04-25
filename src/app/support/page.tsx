@@ -59,15 +59,11 @@ export default function SupportPage() {
       <section className="bg-ll-light">
         <div className="mx-auto max-w-3xl px-6 py-12 md:py-16 prose-profile">
           <p>
-            Southern Legends is free — the profiles, the journal, all of it. Stories from Northeast Alabama, and from inside one life in it.
+            Southern Legends is free — the profiles, the journal, all of it. No paywall, no algorithm, no monthly reminder that you still haven&apos;t subscribed.
           </p>
 
           <p>
-            It funds the next profile — the interview, the drive, the hours it takes to get it right — and keeps everything here free to read.
-          </p>
-
-          <p>
-            If something here has landed, here&apos;s one way to carry it with you.
+            It costs time, miles, and a lot of cold coffee. If you want to help keep it going, here&apos;s how.
           </p>
 
           <div className="not-prose mt-10">
@@ -101,6 +97,16 @@ export default function SupportPage() {
                     className="rounded mb-2 mx-auto"
                   />
                   <span className="text-xs text-ll-text-light">Still Here</span>
+                </a>
+                <a href="https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.com/bHccj44L1ev8agAF-wIegw5E4RCpSXSjV6EofGCuOAs/w:1920/sm:1/enc/XBYPBuD-JAm0ldGB/C_il-GBKr_m-hGFF/q0r9c956tj7SBm-A/kEovJx6hlHwRpqWE/YwxX-829rTCOA_lV/PNR4Cpydyiy1QDkd/Tz56NiaVzcBLDOjW/Vs0EAnicbLeedKJF/kfUVcMHs6YwPpHn1/Yth_teKqtBgkuRFS/4GmyZmRy7zIQCeJ0/25x19MxN7ULq-BZc/TvQM3VK0eXNiMckp/z45whZ_dp8h2wMpX/tFw3mbn-kHE"
+                    alt="Ladiga's Land tee"
+                    width={140}
+                    height={140}
+                    className="rounded mb-2 mx-auto"
+                  />
+                  <span className="text-xs text-ll-text-light">Ladiga&apos;s Land</span>
                 </a>
               </div>
               <div className="text-center">

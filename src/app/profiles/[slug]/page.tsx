@@ -445,7 +445,7 @@ export default async function ProfilePage({
                 Matt Headley
               </Link>{" "}
               is a former pastor, flower farmer, and classically trained singer from Northeast Alabama. His work has appeared in the{" "}
-              <Link href="/journal/hope-in-the-wilderness" className="profile-closing-link">
+              <Link href="/essays/hope-in-the-wilderness" className="profile-closing-link">
                 Anniston Star
               </Link>
               . He writes personal essays on mental health, faith, and farming. He builds websites for small businesses at{" "}
@@ -456,7 +456,7 @@ export default async function ProfilePage({
             </p>
             <div className="mt-3">
               <Link
-                href="/journal"
+                href="/essays"
                 className="btn-journal inline-block px-5 py-2 border-2 border-ll-accent font-bold text-sm rounded-md hover:bg-ll-accent transition-colors"
               >
                 Matt also writes about his own story →
@@ -503,7 +503,7 @@ export default async function ProfilePage({
             {/* Journal aside */}
             <div className="mt-10 pt-6 border-t border-ll-border text-center">
               <Link
-                href="/journal/no-shade"
+                href="/essays/no-shade"
                 className="text-sm hover:text-ll-primary transition-colors"
                 style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-text-light)" }}
               >
