@@ -11,6 +11,7 @@ import PullQuote from "@/app/components/PullQuote";
 import ArticleImage from "@/app/components/ArticleImage";
 import AudioPlayer from "@/app/components/AudioPlayer";
 import VideoEmbed from "@/app/components/VideoEmbed";
+import VideoLoop from "@/app/components/VideoLoop";
 import MusicEmbed from "@/app/components/MusicEmbed";
 import SongCard from "@/app/components/SongCard";
 import PhotoStrip from "@/app/components/PhotoStrip";
@@ -126,6 +127,7 @@ const mdxComponents = {
   ArticleImage,
   AudioPlayer,
   VideoEmbed,
+  VideoLoop,
   MusicEmbed,
   SongCard,
   PhotoStrip,
@@ -291,10 +293,12 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         const SH_URL = "https://matt-headley-shop.fourthwall.com/products/still-here";
         const SH_IMAGE = "https://imgproxy.fourthwall.com/FyWryySt9e8_rzT3yE6eItoqF6GstCkbBJSuL62LpoY/w:1920/sm:1/enc/kZytLUESOJY7WIq3/mQmU8CAxU0TQJrD2/LFh8Y-uqr4QKxZUr/-r3HZV9rDnJj-a9U/SY5J9AEtq4g5o7L3/JwKTj1OyPau1R0tC/tTw60OgXWBZkD6Hu/wWE8ibGTgAZsKMsY/WTotCATD8-xnovcw/FEwNfv2JgknjHnf0/ug0yHPZ7pcf3JZ2i/bZ0phQZB_NTgL9ld/E3bYmALpumGY4hCG/Su9KSvpN3h6FOoRK/dNXM-cTSQcw";
         const BP_URL = "https://matt-headley-shop.fourthwall.com/products/bipolar-proud";
+        const CLT_URL = "https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail";
         const SHIRT_NAMES: Record<string, string> = {
           [ICM_URL]: "I Contain Multitudes",
           [SH_URL]: "Still Here",
           [BP_URL]: "Bipolar & Proud",
+          [CLT_URL]: "Ladiga's Land",
         };
         const primaryUrl = frontmatter.merchUrl ?? ICM_URL;
         const primaryImage = frontmatter.merchImage ?? ICM_IMAGE;
