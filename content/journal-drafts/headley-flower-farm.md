@@ -8,11 +8,57 @@
 
 ## Photos ready
 
-- `public/images/journal/headley-bloom-bar.webp` — Bloom Bar, branded horse trailer stand, flowers out, "Headley Flower Farm" sign. The farm as a going concern. Best for featured or inline near the business section.
-- `public/images/journal/matt-headley-flower-farm-work.webp` — Matt with sheep, hands in dirt. Already used on reintroduction. Could pull double duty here if relevant.
-- `public/images/about/headley-flower-farm-field.webp` — rows of zinnias and echinacea, open sky. Already on about page.
-- `public/images/about/matt-and-heather-flower-farm.webp` — Matt and Heather laughing at the farm. Already on about page.
-- Trail Wagon loaded with flowers (x2) — `Photos_3/IMG_3852` and `Photos_4/IMG_3849` in Downloads. Not yet converted.
+**Already in public/images/journal/ — ready to wire:**
+- `chief-ladiga-trail-farmhouse.webp` — 1832 house exterior, Feb 2022, wide shot showing full property, blue sky, bare trees.
+- `chief-ladiga-trail-high-tunnel.webp` — Matt tilling the high tunnel, early spring, red Alabama clay, no face.
+- `chief-ladiga-trail-flower-field.webp` — zinnias and echinacea in bloom, open field, dramatic cloud sky.
+- `chief-ladiga-trail-snapdragons.webp` — snapdragons and mixed flowers growing in high tunnel rows, no people.
+- `chief-ladiga-trail-sheep.webp` — two sheep at golden hour in electric netting, January 2025, tarp behind.
+- `headley-bloom-bar.webp` — Bloom Bar, branded horse trailer, "Headley Flower Farm" sign.
+- `matt-headley-flower-farm-work.webp` — Matt with sheep, hands in dirt (used on about page, could pull double duty).
+
+**In research/pdfs/ — convert when needed:**
+- `headley-farm-bee-swarm-wide-apr2022.webp` — bees swarming from porch column into blue April sky, full house visible. Wire near/after any mention of the bees or the house being alive.
+- `headley-farm-bee-on-hand-apr2022.webp` — single bee landed on Matt's hand, wedding ring, porch blurred behind. The intimate closer shot.
+- `headley-farm-bee-swarm-porch-column-apr2022.mp4` — full video (101MB, host on YouTube or Facebook embed via VideoEmbed component)
+- `chief-ladiga-trail-sheep-camp-spring2022.mov` — sheep on the farm, spring 2022. B-roll.
+- `chief-ladiga-trail-sheep-fence-netting.mov` — sheep in electric netting. B-roll.
+- `headley-farm-exterior-feb2021.jpg` — alternate farmhouse exterior, overcast sky, Feb 2021.
+- `headley-farm-interior-heather-sweeping-mar2021.jpg` — Heather sweeping interior, heart pine floors + original fireplace. Face visible — Heather's call.
+- `headley-farm-ridgewood-farmstead-logo.png` — hand-drawn farm logo illustration, "est. 2021". Brand artifact.
+- `headley-farm-flower-field-bloom-summer.heic` — zinnias/echinacea portrait orientation, lush summer. Farmhouse faint in background.
+- `headley-farm-high-tunnel-tilling.webp` — same as public version, source copy.
+- `0FA2BC56...jpg` → foxgloves held in hand, high tunnel behind. No faces.
+- `468A8475...jpg` → foxgloves in rows inside tunnel. No people.
+- `IMG_3025.jpg` → ranunculus in bloom inside tunnel, pink/white. No people.
+- `IMG_3031.jpg` → pink ranunculus bouquet, hand only. No faces.
+- `IMG_3217.jpg` → foxgloves + poppies in tunnel, farmhouse visible through open end. No people. Strong.
+- `IMG_4136.jpg` → marigold + zinnia harvest loaded into Trail Wagon, outdoor. No people.
+- `29AF5E5E...jpg` → Matt portrait in field, black plastic mulch rows, wide-brim hat, earmuffs. Face visible.
+- `15126540...jpg` → Heather with large ranunculus/tulip/lisianthus bouquet in high tunnel. Face visible.
+- `82AE976B...jpg` → Heather harvesting ranunculus, crouching in tunnel. Face visible.
+- `B2A819F0...jpg` → family planting in high tunnel, kids' faces visible. Do NOT publish.
+- `headley-farm-exterior-feb2022-wide.jpg` → same as public farmhouse but source copy.
+
+**Videos in research/pdfs/ — self-host when farm essay is written:**
+- `headley-farm-brushcutter-dancing-reel.mp4` — Matt dancing wide-stance with brushcutter, dusk, bare field, cowboy hat. Text overlay: "Matt Headley : v.40 / Faith. Farming. Family. (And the occasional dance break.)" Facebook reel 651060140998306. Use in manic chapter. Self-host: copy H.264 version to `public/videos/`, wire via `<VideoPlayer>` component.
+- `headley-farm-brushcutter-reel-facebook.mp4` — the manic-era "Badass Brushcutter" text post reel (974201334914182). Brushcutter work footage. Same era, companion piece.
+- `headley-farm-bee-swarm-porch-column-apr2022.mp4` — 101MB. Bees swarming from front porch column, April 2022. Too large to self-host — upload to YouTube (unlisted) and wire via `VideoEmbed` component.
+- `headley-farm-flower-field-bloom-summer.mp4` — flower field in bloom, summer. B-roll for farm-at-peak section.
+
+**Manic-era brand artifacts in research/pdfs/ — document the vision:**
+- `headley-bloom-bar-illustration-manic.png` — Bloom Bar illustrated concept
+- `headley-farm-enterprise-flower-diagram-manic.png` — enterprise diagram from manic planning
+- `headley-flower-farm-cart-illustration-manic.png` — flower cart illustration
+- `headley-flower-farm-trailer-illustration-manic.png` — trailer concept illustration
+- `headley-homestead-trailhead-logo-manic.png` — "Wholehearted Homestead" trailhead logo concept
+- `rooted-and-blooming-brand-copy-manic.png` — brand copy from manic era
+- `headley-farm-trail-shop-proposal-map.png` — trail shop site map/proposal
+- `headley-farm-ladiga-trail-connection-p2.jpg` — trail connection proposal page 2
+
+**Badass Brushcutter Facebook post** — FILED: `content/research/pdfs/headley-farm-facebook-manic-update-post.md`. Confirms sheep creep naming, "The Front Porch" trail shop concept, "Wholehearted Homestead" vision, post-resignation dating. Text captured in full.
+
+**Resignation announcement** — FILED: `content/research/pdfs/headley-resignation-facebook-announcement.md`. Public pastoral resignation from Anniston First UMC. Note the tone gap between public language ("after much prayer and discernment") and the manic backstory.
 
 ---
 
