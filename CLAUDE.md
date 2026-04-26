@@ -63,14 +63,14 @@ src/
 content/
   profiles/             — MDX story files that ship (Matt + edited profiles only)
   research/             — .md research docs; raw material, never ships
-  research/pdfs/        — source PDFs (Anniston Star, Calhoun Journal, public records)
+  research/sources/        — source PDFs (Anniston Star, Calhoun Journal, public records)
   AUTHENTIC-VOICE-GUIDE.md — writing voice reference
 ```
 
 ## Research Doc & Source Filing (automatic — do not skip)
 
 When Matt provides PDFs, links, markdown docs, or any primary source material during a session:
-1. **PDFs** → copy to `content/research/pdfs/` with a clean name: `[subject-slug]-[outlet]-[type]-[year].pdf`
+1. **PDFs** → copy to `content/research/sources/` with a clean name: `[subject-slug]-[outlet]-[type]-[year].pdf`
 2. **Markdown research docs** → copy to `content/research/` with a clean name: `[subject-slug]-[descriptor].md`
 3. **Create or update** `content/research/[subject-slug].md` — the primary source record for that profile. Include: source citations, verified direct quotes with attribution, facts to confirm with subject, cross-link opportunities to other profiles.
 4. Do this in the same session the material is provided, before moving on.
