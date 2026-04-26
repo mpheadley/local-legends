@@ -21,6 +21,8 @@
   - Elevated Grounds — coffee shop steps from trail
   - Ladiga Trail Trikes — Neal Gladden, second location (also runs Rocket City Trikes in Huntsville), recumbent trikes
   - Main Street South — 10,000 sq ft vendor mall/mercantile, Eubanks Welcome Center
+- **Trail-end business, Piedmont — name change:** The business at the Piedmont terminus was formerly called the **Chief Ladiga Trading Post** — trading on his name to sell firearms and fudge at the end of the trail named for him. It has since rebranded as **Dugger Mountain Fudge and Firearms** (4.8 stars, 129 Google reviews, still operating). The original name was the whole essay's argument made commercial: a Creek chief who signed away his people's land under duress, buried in an unmarked grave near his homeplace, with his name on a gun shop at the end of the trail. Whether the rebrand was intentional or just marketing, the original choice was made.
+  - Essay use: state it plainly, no outrage. "The trading post at the end used to carry his name." The reader will feel what they feel.
 - **Websites:** piedmontcity.org, traillink.com, downtownpiedmont.com
 
 ## Primary Source — Toby Bennington
@@ -89,7 +91,7 @@ A trail named after a man whose people were removed to build the railroad that b
 **Article 1:** "Artists in Action: Unique rest stop planned along the Chief Ladiga Trail"
 - By Hervey Folsom, Artists in Action column
 - Published: **June 21, 2025** — during the manic episode, weeks after the canceled June 13 City Hall meeting
-- Filed: `content/research/pdfs/headley-flower-farm-anniston-star-trail-shop-jun2025.pdf`
+- Filed: `content/research/sources/headley-flower-farm-anniston-star-trail-shop-jun2025.pdf`
 - URL: annistonstar.com/features/entertainment/artists_in_action/article_9e8ca691-7cdd-460c-b0f8-981579b5fb40.html
 - Key quotes: *"We're raising flowers, our kids and community, inviting others to slow down and bloom."* (Matt) · *"For me this is a sanctuary. I want this to become a destination."* (Matt)
 - The 1832 connection confirmed in print with a source: *"The farmhouse style home was built in 1832, the year that a group of land speculators bought 320 acres of land from the Creek Indian Chief Ladiga, according to The Jacksonville News, edition Nov. 26, 1832."*
@@ -100,7 +102,7 @@ A trail named after a man whose people were removed to build the railroad that b
 **Article 2:** "At this local family flower farm, it's all hands on deck"
 - By Faith Dorn, freelance writer (faith.h.dorn@gmail.com)
 - Published: **May 7, 2025** — during active manic episode
-- Filed: `content/research/pdfs/headley-flower-farm-anniston-star-foothills-may2025.pdf`
+- Filed: `content/research/sources/headley-flower-farm-anniston-star-foothills-may2025.pdf`
 - URL: annistonstar.com/foothills/article_ce1eb554-1c77-4065-b841-cac369320665.html
 - Key quotes: *"Our property is in the back of the Lenlock Heights neighborhood, and our property line is the back of Walmart — which has benefits and drawbacks."* (Heather) · *"Not everybody saw the dream, but people are catching the vision now."* (Heather) · *"Our vision is to be a sanctuary in the middle of the rush and the hustle and bustle and never stopping. For us, this has been a real sanctuary. Matt went through a mental health crisis last year, and I have health issues, as well."* (Heather) · *"Instead of pesticides, we bring in beneficial insects. We try to plant in a way that brings in birds."* (Heather)
 - Sheep names confirmed: **Silver and Shadow**, named after "Sonic the Hedgehog" characters
@@ -122,7 +124,7 @@ A trail named after a man whose people were removed to build the railroad that b
 - `content/research/karla-eden-correspondence.md` — April–May 2025 iMessages: Noble Street Festival, Bloom Bar signs, Karla as customer
 - `content/research/shea-miller-correspondence.md` — March 26, 2025 iMessages (same day as Jackson FB thread): "you guys are in a position to seriously be on a goldmine with ladiga"; Shea offering to include Matt in regional trails meetings; April 2025 trail shop delivery message. Source images: `pdfs/shea-miller-imessage-mar26-2025-p1/2/3.jpg`, `pdfs/shea-miller-imessage-apr2025-p1/2.jpg`
 
-**Manic-era proposal docs (archived in `content/research/pdfs/`):**
+**Manic-era proposal docs (archived in `content/research/sources/`):**
 - `headley-farm-ladiga-trail-connection-v1/v2/v3.pdf` — the one-pager Matt shared March 26, 2025 with Jackson/Karla/Shea; multiple versions
 - `headley-farm-trail-shop-site-diagram-v1/v2-2025.pdf` — site diagrams for the trail shop and proposed bridge
 - `headley-farm-message-to-toby-2025.docx` — formal written request to Toby after City Hall meeting: brush clearing, privet removal, pedestrian bridge permission, includes survey + Google Maps coordinates

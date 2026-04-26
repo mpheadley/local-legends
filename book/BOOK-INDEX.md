@@ -159,7 +159,7 @@ Located in `content/research/`. These are raw source material for profiles — f
 **Research that may become a future profile (alphabetical):**
 brian-howell, called-coffee (multiple), cheaha-state-park, chief-ladiga-trail, ciara-smith-roston, coldwater-mountain, covered-bridges-alabama, foothills-sip-and-shop-sept2025, howard-core-company, jacksonville-christian-outreach-center, janney-furnace, jay-jenkins, jsu-music-theater, justin-hall (multiple), kress-mercantile, lewis-downing (multiple — feeds published profile), michelle-hornsby-red-bird-willow, michelle-mcgrady-anniston-star-may2025, peerless-saloon, pinhoti-pizza, pleasant-valley, shannon-jenkins (multiple — feeds published profile), shepherds-table, waldenfarmacy, weaver-alabama.
 
-PDFs: `content/research/pdfs/` (primary sources — Anniston Star, Calhoun Journal, public records).
+PDFs: `content/research/sources/` (primary sources — Anniston Star, Calhoun Journal, public records).
 
 ---
 
