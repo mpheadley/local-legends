@@ -2,7 +2,7 @@
 
 ## Facts
 - **Owner:** Jerod Snider (spelling confirmed: JEROD, not Jerrod)
-- **Address:** 1400 Quintard Avenue, Anniston, AL ⚠️ Gemini says 1400 — draft says 1208, verify before publish
+- **Address:** 1400 Quintard Avenue, Anniston, AL (confirmed via Yelp + multiple sources in 2026 research compilation; the "1208" draft figure was wrong)
 - **Website/hours:** TBD (need to verify)
 - **Category:** Coffee shop, roastery, podcast
 - **Self-description:** "Accidental entrepreneur"
@@ -76,3 +76,39 @@ Jerod's hometown is Weaver, AL (confirmed in Spotlight). Matt was pastoring in W
 - No interview yet — zero quotes from Jerod
 - AI voice — needs kill list pass after interview
 - Ending is soft summary, needs specific image/moment
+
+## From research compilation PDF (April 2026)
+Source: `sources/called-coffee-research-compilation-2026.pdf` — AI-aggregated from Anniston Star, Calhoun Journal, Yahoo, Yelp, MenuPix, Roadtrippers, Nonfictioncoffee, Instagram. Treat as a pointer to primary sources, not a primary source itself. Verify quotes from the original outlets before publishing.
+
+**New facts not already in this record:**
+- **Wife's name:** Hannah Snider
+- **Move year:** 2016 — sold everything, moved to Huancayo, Peru with 8-month-old daughter
+- **Region:** Junín region, mountainous
+- **Farm:** La Vida Dor, San Martín de Pangoa, 1,700–2,000m elevation
+- **Wine to Water:** NC nonprofit donated water filters Jerod hauled into the jungle
+- **First export:** $6,000 paid on trust to a young Peruvian exporter
+- **First US buyer:** Non-Fiction Coffee Co. (Birmingham) — agreed to buy as much as Jerod could send
+- **Why they came home:** Hannah's second pregnancy had medical complications; Jerod's words: "may not have been survivable in Peru"
+- **Truck debut:** Oxford Festival of Lights — 300 customers night one
+- **Full-time:** March 2020, two weeks before COVID shutdown
+- **Mall pop-up ribbon cutting:** October 2021
+- **Brick-and-mortar:** February 2023, in former Daylight Donuts building
+- **Roaster:** Diedrich IR-12, capable of 20 lbs every 15 min
+- **Award:** Calhoun County Chamber Emerging Small Business of the Year
+- **Pricing:** honey lattes $4.95–$5.45, cappuccinos $3.95
+- **Signature drinks:** Snow Day Latte (white mocha + hazelnut), Honey Lavender Latte, Coconut Mocha
+- **Pastries:** sourced daily from Artisanal Baked Goods (Anniston)
+- **Bean varieties:** Caturra and Bourbon — Called Coffee + Non-Fiction are the only two roasters outside Peru with access to the Torre family beans
+- **Eddie Torre:** Gregorio's son once "wanted nothing to do with the coffee business" — now runs his own coffee shop in Huancayo featuring his father's beans
+- **Farm investments funded by partnership:** wash tank, drying beds, road
+- **Reviews:** Yelp 99/100, MenuPix 4.5 (#1 in Anniston), TripAdvisor unclaimed (opportunity)
+- **Instagram:** @calledcoffee — ~2,182 followers, 218 posts
+- **Civic talks:** Calhoun County Rotary Club, June 2025
+- **Community partners:** Martha's Hope (homeless shelter near the shop), Chamber ("Coffee with the Chamber")
+- **Chain competitor:** Scooter's Coffee (opened March 2022) — Called consistently rated higher
+- **Jerod quote (humor):** "a reason and a tax write-off for my trips to Peru because it's for business"
+
+**Useful detail for the profile's specific-image ending Matt is missing:**
+- "12 hours into the jungle" to visit La Vida Dor — concrete sensory anchor
+- The Diedrich IR-12 roaster on Quintard Ave — visual contrast with the hillside in San Martín de Pangoa
+- Eddie's café in Huancayo as the second-generation echo — could close the loop
