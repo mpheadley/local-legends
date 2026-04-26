@@ -50,7 +50,7 @@ content/matt-headley-sources/chatgpt-export-annistonfirst-2/
 next-env.d.ts
 
 # Large source videos — keep on disk, never commit
-content/research/pdfs/*.mp4
-content/research/pdfs/*.mov
-content/research/pdfs/*.MP4
-content/research/pdfs/*.MOV
+content/research/sources/*.mp4
+content/research/sources/*.mov
+content/research/sources/*.MP4
+content/research/sources/*.MOV

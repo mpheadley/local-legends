@@ -17,7 +17,7 @@
 - `headley-bloom-bar.webp` — Bloom Bar, branded horse trailer, "Headley Flower Farm" sign.
 - `matt-headley-flower-farm-work.webp` — Matt with sheep, hands in dirt (used on about page, could pull double duty).
 
-**In research/pdfs/ — convert when needed:**
+**In research/sources/ — convert when needed:**
 - `headley-farm-bee-swarm-wide-apr2022.webp` — bees swarming from porch column into blue April sky, full house visible. Wire near/after any mention of the bees or the house being alive.
 - `headley-farm-bee-on-hand-apr2022.webp` — single bee landed on Matt's hand, wedding ring, porch blurred behind. The intimate closer shot.
 - `headley-farm-bee-swarm-porch-column-apr2022.mp4` — full video (101MB, host on YouTube or Facebook embed via VideoEmbed component)
@@ -40,14 +40,14 @@
 - `B2A819F0...jpg` → family planting in high tunnel, kids' faces visible. Do NOT publish.
 - `headley-farm-exterior-feb2022-wide.jpg` → same as public farmhouse but source copy.
 
-**Videos in research/pdfs/ — self-host when farm essay is written:**
+**Videos in research/sources/ — self-host when farm essay is written:**
 - `headley-farm-first-day-fulltime-farmers-instagram.mp4` — Instagram reel, ~March–April 2024. First day as full-time farmers. Child with Cookie Monster on porch, snapdragons netted for storm. Caption: "Nothing like kicking off full-time farming with a boss battle against the weather." Key transition moment — resignation → farm. Full caption filed: `headley-farm-first-day-fulltime-farmers-instagram.md`.
 - `headley-farm-brushcutter-dancing-reel.mp4` — Matt dancing wide-stance with brushcutter, dusk, bare field, cowboy hat. Text overlay: "Matt Headley : v.40 / Faith. Farming. Family. (And the occasional dance break.)" Facebook reel 651060140998306. Use in manic chapter. Self-host: copy H.264 version to `public/videos/`, wire via `<VideoPlayer>` component.
 - `headley-farm-brushcutter-reel-facebook.mp4` — the manic-era "Badass Brushcutter" text post reel (974201334914182). Brushcutter work footage. Same era, companion piece.
 - `headley-farm-bee-swarm-porch-column-apr2022.mp4` — 101MB. Bees swarming from front porch column, April 2022. Too large to self-host — upload to YouTube (unlisted) and wire via `VideoEmbed` component.
 - `headley-farm-flower-field-bloom-summer.mp4` — flower field in bloom, summer. B-roll for farm-at-peak section.
 
-**Manic-era brand artifacts in research/pdfs/ — document the vision:**
+**Manic-era brand artifacts in research/sources/ — document the vision:**
 - `headley-bloom-bar-illustration-manic.png` — Bloom Bar illustrated concept
 - `headley-farm-enterprise-flower-diagram-manic.png` — enterprise diagram from manic planning
 - `headley-flower-farm-cart-illustration-manic.png` — flower cart illustration
@@ -57,9 +57,9 @@
 - `headley-farm-trail-shop-proposal-map.png` — trail shop site map/proposal
 - `headley-farm-ladiga-trail-connection-p2.jpg` — trail connection proposal page 2
 
-**Badass Brushcutter Facebook post** — FILED: `content/research/pdfs/headley-farm-facebook-manic-update-post.md`. Confirms sheep creep naming, "The Front Porch" trail shop concept, "Wholehearted Homestead" vision, post-resignation dating. Text captured in full.
+**Badass Brushcutter Facebook post** — FILED: `content/research/sources/headley-farm-facebook-manic-update-post.md`. Confirms sheep creep naming, "The Front Porch" trail shop concept, "Wholehearted Homestead" vision, post-resignation dating. Text captured in full.
 
-**Resignation announcement** — FILED: `content/research/pdfs/headley-resignation-facebook-announcement.md`. Public pastoral resignation from Anniston First UMC. Note the tone gap between public language ("after much prayer and discernment") and the manic backstory.
+**Resignation announcement** — FILED: `content/research/sources/headley-resignation-facebook-announcement.md`. Public pastoral resignation from Anniston First UMC. Note the tone gap between public language ("after much prayer and discernment") and the manic backstory.
 
 ---
 
