@@ -54,3 +54,45 @@ That's enough. Don't oversell it.
 - Write the Facebook post in your own voice — never use the excerpt verbatim.
 - Don't explain too much. Short post, let the piece do the work.
 - Space posts at least 2–3 days apart.
+
+---
+
+## Hashtags
+
+**Personal Facebook posts: no hashtags.** They read as marketing on a personal post about mental illness, faith, or anything editorial. Undercuts the tone the piece earns. The "I'm Not Going to Disappear" post had zero hashtags and got 96 likes / 26 comments — the voice without tags is working. Don't change it.
+
+**Why hashtags don't help on Facebook:**
+- FB hashtags barely drive discovery in 2026 — largely vestigial.
+- They pull a personal post into broader hashtag streams where it competes with low-quality content.
+- They signal "this is content marketing," which is the opposite of the editorial register the journal pieces are written in.
+
+**Two narrow exceptions:**
+
+1. **SL Page share (not personal post):** one tag is fine to build the brand handle — `#SouthernLegends`. Skip everything else. Don't add `#bipolar #mentalhealth #Easter` even when the piece touches all three.
+2. **Bipolar support groups / NAMI / r/bipolar / mental-health communities:** different audience, different conventions. Tags like `#bipolar` and `#mentalhealthawareness` are non-promotional in those spaces. But that's a separate post written for that audience — not the personal post.
+
+**Don't use ever:**
+- Stacking 3+ tags on a personal post (even relevant ones)
+- Generic discovery tags on the SL page (`#blog`, `#writer`, `#author`)
+- Tags that compete with the piece's emotional register (a piece on hospitalization with `#blessed` is jarring)
+
+**Rule of thumb:** If a tag exists to help readers find you, use it sparingly on the SL page. If a tag exists because everyone else uses tags, skip it.
+
+---
+
+## CTA wording in posts
+
+The link + auto-generated preview card on Facebook is functionally a CTA — clicking either the link or the preview card opens the piece. But for older / less-FB-native audiences (a real chunk of the NE Alabama list), a subtle directional cue between the post body and the link helps without sounding promotional.
+
+**Use:**
+- *"The piece is up:"*
+- *"Wrote about it here:"*
+- *"Posted the whole thing here:"*
+- *"Full piece:"*
+
+**Don't use:**
+- "Click here!" / "Don't miss this!" / "Read now →" — marketing voice, wrong register.
+- "Click the image to read" — reads as instruction-to-grandma; FB users understand preview cards are clickable.
+- Multiple exclamation points anywhere in the post.
+
+**Subscribe CTA at the end is enough.** Per STRATEGY.md launch-sequence guidance: *"Subscribe at the bottom of the piece if you want the next one."* That single line at the end of the post is the only acquisition CTA that belongs in the post body. Don't stack a second one ("hit follow!", "share this!") — readers feel the pile-on.
