@@ -45,10 +45,18 @@ During my first bipolar depression I was afraid I'd become one of these people w
 
 ---
 
+## Pull Quotes
+
+- **In use:** *"I thought you would want to know, because I knew you developed a relationship with him."* — Kyle, via text, after the hair stylist died
+- **Pending:** April Lafollette quote — waiting on her response (contacted April 28 2026)
+
+---
+
 ## Notes
 
 - All material from this session is now in the profile (April 28 2026).
-- **Shepherd's Table:** crosslinked to `/essays/hope-in-the-wilderness`. Dale Clem credited as founder.
-- **Shannon crosslink:** "United Way" in The Campus section links to `/profiles/shannon-jenkins`.
+- **Shepherd's Table:** crosslinked to `/essays/hope-in-the-wilderness`. Dale Clem credited as founder. Arc of Calhoun and Cleburne Counties noted as volunteer group.
+- **Photo added:** `shepherds-table-jan-2025.webp` — Matt with guitar, his daughter, Cheyenne, Pati Tiller (ED, Arc), Arc volunteer. January 12 2025.
+- **Shannon crosslink:** "United Way" links to `/profiles/shannon-jenkins`.
 - **Six programs:** condensed to EA full paragraph + one sentence for the other five.
 - **Personal essay seed:** the hair stylist, Taz, and Kaffie have more material than fits in the profile. Full treatment belongs in a separate personal essay — working title territory: *the people i stepped around*.
