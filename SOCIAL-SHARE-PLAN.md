@@ -145,6 +145,42 @@ If a piece has no clear "before/after" structure, this template won't fit cleanl
 
 ---
 
+## Comments — default on, with discipline
+
+**Default: leave comments on for journal-piece shares.** The pieces are written in a register that invites response. The journal exists because Matt didn't disappear. A "comments off" setting on a piece about returning to community works against the piece's own argument.
+
+The IGD post (96 likes, 26 comments) was strengthened by the comments — old friends saying "I had no idea, sending love" did real relational work and gave scrolling strangers social proof that the piece was worth reading.
+
+### Why not comments-off as default
+
+- **Algorithm hit.** FB rewards three engagement signals: comments, shares, reactions. Removing one suppresses reach.
+- **Loses the "reclaim" play.** STRATEGY.md launch sequence depends on commenters being there to reply to (warm individual replies → one thread comment with subscribe link). Comments-off kills that entire acquisition flow.
+- **Loses warmth.** The relational reason to share in the first place evaporates.
+- **Tonal contradiction** with the piece's own move toward visibility.
+- **Shares fragment conversation.** Friends-of-friends who want to engage end up commenting on someone else's share, not the original. Conversation scatters.
+
+### Middle-ground moves when comments-on feels too exposing
+
+These let you keep comments on without taking the full emotional load:
+
+- **Mute notifications for 24 hours after posting.** Post, put the phone down, reply tomorrow.
+- **Verify friends-only on personal posts** (default, but worth confirming).
+- **Post-and-walk-away.** Post in the morning, don't open FB for 6 hours. Read once, batch-reply later.
+- **Pre-decide reply rules.** Use SOCIAL-RESPONSES.md templates. If a comment doesn't fit any template, you don't have to reply. Not every comment requires engagement.
+- **Hide individual comments.** Nuclear option for specific problematic ones. Hiding only shows the comment to the commenter and their friends — you and everyone else stop seeing it. Less visible than deleting.
+
+### When comments-off IS the right call
+
+Narrow exceptions, not policy:
+
+- **A future piece that names someone who hasn't consented** (e.g., the Tammy / paranoia material in Ch 8 of the manuscript). Real legal/relational risk.
+- **A piece published in a hard week** when the reply load can't be managed. One-off, not standing policy.
+- **Anything intended as record/archive** rather than a community moment.
+
+For most journal-piece shares: comments on. The middle-ground moves are how you protect yourself without closing the door.
+
+---
+
 ## CTA wording in posts
 
 The link + auto-generated preview card on Facebook is functionally a CTA — clicking either the link or the preview card opens the piece. But for older / less-FB-native audiences (a real chunk of the NE Alabama list), a subtle directional cue between the post body and the link helps without sounding promotional.
