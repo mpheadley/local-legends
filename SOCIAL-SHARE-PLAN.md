@@ -145,21 +145,60 @@ If a piece has no clear "before/after" structure, this template won't fit cleanl
 
 ---
 
-## Comments — default on, with discipline
+## Comments — two channels, both on
 
-**Default: leave comments on for journal-piece shares.** The pieces are written in a register that invites response. The journal exists because Matt didn't disappear. A "comments off" setting on a piece about returning to community works against the piece's own argument.
+The site has its own moderated comment system per essay (`src/app/components/Comments.tsx` on main — submit/approve flow, email-required, post-submit subscribe prompt). That means there are now **two channels** for comments on every shared piece, not one. They do different jobs.
 
-The IGD post (96 likes, 26 comments) was strengthened by the comments — old friends saying "I had no idea, sending love" did real relational work and gave scrolling strangers social proof that the piece was worth reading.
+### What each channel is for
 
-### Why not comments-off as default
+| | FB comments | Site comments |
+|---|---|---|
+| **Volume** | High (hours) | Low (days) |
+| **Friction** | Tap and type | Fill form, give email |
+| **Audience** | Warm network | Deliberate-enough readers |
+| **Tone** | Performative, social, often surface | More considered (friction filters) |
+| **Moderation** | Reactive (hide/delete after) | Proactive (approve before posting) |
+| **Acquisition** | None directly | Email capture + subscribe prompt |
+| **Algorithm** | Boosts FB reach | Irrelevant |
+| **Permanence** | Meta-owned, can vanish | Owned; lives with the piece |
+
+These are **complementary, not competing.** Don't try to route FB engagement to the site or vice versa — let each surface do what it does.
+
+### Default: both on
+
+- **FB comments on**, for warmth, social proof, and reach. The pieces are written in a register that invites response. The journal exists because Matt didn't disappear. A "comments off" setting on a piece about returning to community works against the piece's own argument.
+- **Site comments on**, as the depth layer and the acquisition surface. Even one or two thoughtful site comments per piece compounds — they live with the essay forever and feed the email list.
+
+The IGD post (96 likes, 26 comments) was strengthened by FB comments — old friends saying "I had no idea, sending love" did real relational work and gave scrolling strangers social proof.
+
+### Why not FB-comments-off as default
 
 - **Algorithm hit.** FB rewards three engagement signals: comments, shares, reactions. Removing one suppresses reach.
-- **Loses the "reclaim" play.** STRATEGY.md launch sequence depends on commenters being there to reply to (warm individual replies → one thread comment with subscribe link). Comments-off kills that entire acquisition flow.
-- **Loses warmth.** The relational reason to share in the first place evaporates.
+- **Loses the "reclaim" play.** STRATEGY.md launch sequence depends on commenters being there to reply to (warm individual replies → one thread comment with subscribe link). Comments-off kills that flow.
+- **Friction kills warm-network engagement.** Friends-of-friends who'd drop a "love you, glad you're back" comment on FB won't navigate to a website and fill out a form to do the same thing. Site comments don't replace FB comments for warmth.
 - **Tonal contradiction** with the piece's own move toward visibility.
-- **Shares fragment conversation.** Friends-of-friends who want to engage end up commenting on someone else's share, not the original. Conversation scatters.
+- **Shares fragment conversation** when comments are off — friends-of-friends comment on someone else's share, conversation scatters across reposts.
 
-### Middle-ground moves when comments-on feels too exposing
+### When to route FB readers to site comments — not yet
+
+Eventually, the thread comment (the one Matt drops after individual replies) might include a line directing thoughtful responses to the site. **Don't do this yet.** Two reasons:
+
+1. **The site comment system is empty.** Pointing readers at a blank form looks anticlimactic. They expect community, see absence, leave.
+2. **Stacked asks weaken the strongest one.** The thread comment already carries the subscribe link. Adding "also comment over there" dilutes the subscribe CTA.
+
+**Wait until site comments have built ~3–5 entries per recent piece.** Then the redirect line earns its place. Site comments build organically from non-FB readers (Google, Calhoun Journal, Anniston Star byline, direct links) — let that traffic seed the system first.
+
+**When the time comes, the wording matters.** Don't write *"if you want to leave something more considered than a FB comment"* — that subtly grades the warm-network commenters who are doing exactly the work you want them to do. Use neutral wording:
+
+> Comments are open on the piece too — if you'd rather respond there.
+
+Or even more neutrally:
+
+> There's also a comment thread at the piece itself.
+
+No comparison, no grading. Reader chooses.
+
+### Middle-ground moves when FB-comments-on feels too exposing
 
 These let you keep comments on without taking the full emotional load:
 
@@ -167,17 +206,27 @@ These let you keep comments on without taking the full emotional load:
 - **Verify friends-only on personal posts** (default, but worth confirming).
 - **Post-and-walk-away.** Post in the morning, don't open FB for 6 hours. Read once, batch-reply later.
 - **Pre-decide reply rules.** Use SOCIAL-RESPONSES.md templates. If a comment doesn't fit any template, you don't have to reply. Not every comment requires engagement.
-- **Hide individual comments.** Nuclear option for specific problematic ones. Hiding only shows the comment to the commenter and their friends — you and everyone else stop seeing it. Less visible than deleting.
+- **Hide individual comments.** Nuclear option for specific problematic ones. Hiding only shows the comment to the commenter and their friends — less visible than deleting, no escalation invitation.
 
-### When comments-off IS the right call
+### Operational requirement for site comments
+
+Site comments are moderated. That only works if Matt actually moderates. Before pointing readers there, confirm:
+
+- Where do approval requests go? Email? A queue?
+- What's the SLA? Same day? Within 48 hours?
+- Who responds to commenters who use the "notify replies" opt-in?
+
+If the moderation workflow doesn't exist, the site comment system stays invisible regardless of how good the redirect copy is.
+
+### When FB-comments-off IS the right call
 
 Narrow exceptions, not policy:
 
-- **A future piece that names someone who hasn't consented** (e.g., the Tammy / paranoia material in Ch 8 of the manuscript). Real legal/relational risk.
+- **A piece naming someone who hasn't consented** (e.g., the Tammy / paranoia material in Ch 8 of the manuscript). Real legal/relational risk.
 - **A piece published in a hard week** when the reply load can't be managed. One-off, not standing policy.
 - **Anything intended as record/archive** rather than a community moment.
 
-For most journal-piece shares: comments on. The middle-ground moves are how you protect yourself without closing the door.
+For most journal-piece shares: FB comments on, site comments on, treat them as different channels doing different jobs.
 
 ---
 
