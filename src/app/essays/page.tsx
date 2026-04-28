@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 
 export const metadata: Metadata = {
-  title: "Journal",
+  title: "Essays",
   description: `Matt Headley writes about what's behind the profiles — and what's behind him.`,
   alternates: { canonical: "/essays" },
   openGraph: { url: "/essays" },

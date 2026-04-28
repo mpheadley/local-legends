@@ -145,16 +145,16 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       description: post.frontmatter.excerpt,
       type: "article",
       publishedTime: post.frontmatter.date,
-      ...(post.frontmatter.image && {
-        images: [{ url: post.frontmatter.image, alt: post.frontmatter.imageAlt ?? post.frontmatter.title }],
+      ...((post.frontmatter.image || post.frontmatter.cardImage) && {
+        images: [{ url: (post.frontmatter.image || post.frontmatter.cardImage)!, alt: post.frontmatter.imageAlt ?? post.frontmatter.title }],
       }),
     },
     twitter: {
       card: "summary_large_image",
       title: post.frontmatter.title,
       description: post.frontmatter.excerpt,
-      ...(post.frontmatter.image && {
-        images: [post.frontmatter.image],
+      ...((post.frontmatter.image || post.frontmatter.cardImage) && {
+        images: [(post.frontmatter.image || post.frontmatter.cardImage)!],
       }),
     },
   };
