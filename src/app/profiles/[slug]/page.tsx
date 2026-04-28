@@ -482,37 +482,67 @@ export default async function ProfilePage({
           {(() => {
             const ICM_URL = "https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes";
             const ICM_IMAGE = "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync";
+            const SH_URL = "https://matt-headley-shop.fourthwall.com/products/still-here";
+            const SH_IMAGE = "https://imgproxy.fourthwall.com/FyWryySt9e8_rzT3yE6eItoqF6GstCkbBJSuL62LpoY/w:1920/sm:1/enc/kZytLUESOJY7WIq3/mQmU8CAxU0TQJrD2/LFh8Y-uqr4QKxZUr/-r3HZV9rDnJj-a9U/SY5J9AEtq4g5o7L3/JwKTj1OyPau1R0tC/tTw60OgXWBZkD6Hu/wWE8ibGTgAZsKMsY/WTotCATD8-xnovcw/FEwNfv2JgknjHnf0/ug0yHPZ7pcf3JZ2i/bZ0phQZB_NTgL9ld/E3bYmALpumGY4hCG/Su9KSvpN3h6FOoRK/dNXM-cTSQcw";
             const SHIRT_NAMES: Record<string, string> = {
               [ICM_URL]: "I Contain Multitudes",
-              "https://matt-headley-shop.fourthwall.com/products/still-here": "Still Here",
+              [SH_URL]: "Still Here",
               "https://matt-headley-shop.fourthwall.com/products/bipolar-proud": "Bipolar & Proud",
               "https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail": "Ladiga's Land",
             };
-            const merchUrl = (frontmatter as Record<string, string>).merchUrl ?? ICM_URL;
-            const merchImage = (frontmatter as Record<string, string>).merchImage ?? ICM_IMAGE;
-            const merchName = SHIRT_NAMES[merchUrl] ?? "";
+            const primaryUrl = (frontmatter as Record<string, string>).merchUrl ?? ICM_URL;
+            const primaryImage = (frontmatter as Record<string, string>).merchImage ?? ICM_IMAGE;
+            const isICMPrimary = primaryUrl === ICM_URL;
+            const secondUrl = isICMPrimary ? SH_URL : ICM_URL;
+            const secondImage = isICMPrimary ? SH_IMAGE : ICM_IMAGE;
+            const primaryName = SHIRT_NAMES[primaryUrl] ?? "";
+            const secondName = SHIRT_NAMES[secondUrl] ?? "";
             return (
-              <div className="flex flex-col items-center gap-3 mt-8">
-                <a href={merchUrl} target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src={merchImage}
-                    alt={merchName || "Merch"}
-                    width={140}
-                    height={140}
-                    className="rounded hover:opacity-90 transition-opacity"
-                  />
-                </a>
-                {merchName && (
-                  <span className="text-xs text-ll-text-light">{merchName}</span>
-                )}
-                <a
-                  href={merchUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"
-                >
-                  Get the shirt →
-                </a>
+              <div className="flex gap-8 justify-center items-start mt-8">
+                <div className="flex flex-col items-center gap-3">
+                  <a href={primaryUrl} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={primaryImage}
+                      alt={primaryName || "Merch"}
+                      width={140}
+                      height={140}
+                      className="rounded hover:opacity-90 transition-opacity"
+                    />
+                  </a>
+                  {primaryName && (
+                    <span className="text-xs text-ll-text-light">{primaryName}</span>
+                  )}
+                  <a
+                    href={primaryUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"
+                  >
+                    Get the shirt →
+                  </a>
+                </div>
+                <div className="flex flex-col items-center gap-3">
+                  <a href={secondUrl} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={secondImage}
+                      alt={secondName}
+                      width={140}
+                      height={140}
+                      className="rounded hover:opacity-90 transition-opacity"
+                    />
+                  </a>
+                  {secondName && (
+                    <span className="text-xs text-ll-text-light">{secondName}</span>
+                  )}
+                  <a
+                    href={secondUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"
+                  >
+                    Get the shirt →
+                  </a>
+                </div>
               </div>
             );
           })()}
