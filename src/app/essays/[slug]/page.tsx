@@ -331,7 +331,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
                   rel="noopener noreferrer"
                   className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
                 >
-                  Support this work →
+                  Get the shirt →
                 </a>
               </div>
               <div className="flex flex-col items-center gap-3">
@@ -353,7 +353,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
                   rel="noopener noreferrer"
                   className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
                 >
-                  Support this work →
+                  Get the shirt →
                 </a>
               </div>
             </div>
