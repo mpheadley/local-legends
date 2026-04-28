@@ -17,7 +17,7 @@ I often watched these people from outside my office window — walking, talking,
 
 I did stop to talk to people.
 
-One man, whose name I can't remember, was old with long hair. He used to be a hair stylist. I would stop and talk to him outside the gym where he would sit usually, and occasionally bump into him on a sidewalk around downtown on 14th Street or directly on Noble Street. We had several conversations, and then I abruptly stopped seeing him. A few months later I learned he had died. My friend Kyle, who was over the warming station, texted me a screenshot of the police report, saying "I thought you would want to know, because I knew you developed a relationship with him."
+One man, whose name I can't remember, was old with long hair. He used to be a hair stylist. He was in a wheelchair. I would stop and talk to him outside the gym where he would usually be parked, and occasionally bump into him in quiet spots on the sidewalk around downtown on 14th Street or directly on Noble Street. We had several conversations, and then I abruptly stopped seeing him. A few months later I learned he had died. My friend Kyle, who was over the warming station, texted me a screenshot of the police report, saying "I thought you would want to know, because I knew you developed a relationship with him."
 
 There were several people like this. Another man who always went by the name Taz. I remember meeting him on Quintard Avenue outside of Matas Pizza while I was still a pastor at Weaver. He was always drunk. I had several conversations with him while working at the church. He'd often be sitting on the park bench in the courtyard garden area right outside our office entry.
 
