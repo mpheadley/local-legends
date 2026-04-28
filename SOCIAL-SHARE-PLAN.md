@@ -80,6 +80,28 @@ That's enough. Don't oversell it.
 
 ---
 
+## Emojis
+
+**Personal Facebook posts on journal pieces: no emojis.** Same reasoning as hashtags — emojis read as softening, and the editorial pieces don't need softening. They need to land. A 🙏 or ❤️ at the end of a post about psychiatric hospitalization or manic Easter undercuts what the piece does. The "I'm Not Going to Disappear" post had zero emojis and got 96 likes / 26 comments. The voice without emojis is working.
+
+**Three narrow exceptions:**
+
+1. **Replies, when matching a commenter's energy.** If they used 🙏 or ❤️ in their comment, dropping it in your reply feels cold. Match what they used; don't escalate. See `SOCIAL-RESPONSES.md`.
+2. **SL Page profile shares** (third-person business profiles). One restrained emoji can work — a bakery with 🥐, a coffee shop with ☕. Default is still clean. Never on a journal-piece share.
+3. **Headley Web / kids / lighter posts.** Different register entirely. Emojis fine there.
+
+**Don't use ever on journal-piece posts:**
+
+- 👇 (down-pointing hand) — marketing convention; reads as "Click here!" in emoji form. The link preview already tells readers the link is below; 👇 is redundant *and* tonally jarring on a heavy post.
+- 🙏 ❤️ ✨ 🌟 — softening emojis at the end of a serious post flatten the actual emotion.
+- 😔 ... 😊 (bittersweet sandwich) — fakes a tidy arc the pieces deliberately refuse.
+- 🧵 thread emoji — you're not on Twitter.
+- Any emoji you'd hesitate before tapping. Hesitation is the signal — trust it.
+
+**Rule of thumb:** If the emoji would survive being read aloud at the kitchen table, it's probably fine. If it would only make sense as visual punctuation on a screen, skip it.
+
+---
+
 ## CTA wording in posts
 
 The link + auto-generated preview card on Facebook is functionally a CTA — clicking either the link or the preview card opens the piece. But for older / less-FB-native audiences (a real chunk of the NE Alabama list), a subtle directional cue between the post body and the link helps without sounding promotional.
