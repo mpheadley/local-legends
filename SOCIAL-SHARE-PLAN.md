@@ -1,7 +1,7 @@
 # Southern Legends — Social Share Plan
 *Journal launch sequence. None of these have been shared publicly yet (as of April 15, 2026).*
 
-*Related: [STRATEGY.md](STRATEGY.md) (Two-Touch Follow-Up Sequence, Weekly Rhythm) · [content/journal-drafts/JOURNAL-WRITING-WORKFLOW.md](content/journal-drafts/JOURNAL-WRITING-WORKFLOW.md)*
+*Related: [STRATEGY.md](STRATEGY.md) (Two-Touch Follow-Up Sequence, Weekly Rhythm) · [SOCIAL-RESPONSES.md](SOCIAL-RESPONSES.md) (reply templates for FB comments) · [content/journal-drafts/JOURNAL-WRITING-WORKFLOW.md](content/journal-drafts/JOURNAL-WRITING-WORKFLOW.md)*
 
 ---
 
