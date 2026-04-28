@@ -70,7 +70,7 @@ export default function SupportPage() {
               <div className="flex gap-4 justify-center flex-wrap mb-6">
                 <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
                   <Image
-                    src="https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync"
+                    src="https://imgproxy.fourthwall.dev/IMNy3eu4RC0MEIbGmpUUg-5yMjSRyFtKLGn1Mjh5S84/w:1920/sm:1/enc/ZedkaYftBaqinaIZ/Jr40_xy3Eb4tySwk/rScelYdmKxyZS6jZ/NJHeSvZlktqX-xYh/WSHRJ-RhgMHeSlMQ/27Iq7L_pckKRXOOp/v5oIB6B1Vnyt8g_D/jmvq7ZBuLrTpLBdn/gKhmeo_IvtrJEkf4/Yfl8j3qjiOOsC3F3/Z2VGxXEwJGMrAnzQ/2Xzk5fe0iRKeZTw2/UCV0r3RWKam0aN3r/8xpuJ8LPfqX3Axj4/fUq1cLuAVw8.jpg"
                     alt="I Contain Multitudes tee"
                     width={140}
                     height={140}
@@ -100,13 +100,23 @@ export default function SupportPage() {
                 </a>
                 <a href="https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail" target="_blank" rel="noopener noreferrer" className="text-center">
                   <Image
-                    src="https://imgproxy.fourthwall.com/bHccj44L1ev8agAF-wIegw5E4RCpSXSjV6EofGCuOAs/w:1920/sm:1/enc/XBYPBuD-JAm0ldGB/C_il-GBKr_m-hGFF/q0r9c956tj7SBm-A/kEovJx6hlHwRpqWE/YwxX-829rTCOA_lV/PNR4Cpydyiy1QDkd/Tz56NiaVzcBLDOjW/Vs0EAnicbLeedKJF/kfUVcMHs6YwPpHn1/Yth_teKqtBgkuRFS/4GmyZmRy7zIQCeJ0/25x19MxN7ULq-BZc/TvQM3VK0eXNiMckp/z45whZ_dp8h2wMpX/tFw3mbn-kHE"
-                    alt="Ladiga's Land tee"
+                    src="https://imgproxy.fourthwall.dev/ZF3dCHiMwN_oLeMILCG_ZyO-yLWVBfdGdJMTSYB-VXY/w:1920/sm:1/enc/xbK5_Zj8qaLU0EP3/UfOi6qpauX8X4zZD/AWPss1Zx9hhOgARc/CZqplVE_aYujz1uM/epI7dRMx0-wU71TK/3ma_163k4tMHBodv/YrGnTZCy-6dzW-bm/mAPjyxMJSQCG5oDM/9dFf4zGHoj51RgVo/E53wJphu1Azmz6CY/uVVj-1cu4Ost7nHt/mSLxEtUbNZifhAY-/Jc8wVoo-eZhrCxWg/lW9fJ68l0YPLbqD5/8B9AixuIqDc.jpg"
+                    alt="Chief Ladiga Trail tee"
                     width={140}
                     height={140}
                     className="rounded mb-2 mx-auto"
                   />
-                  <span className="text-xs text-ll-text-light">Ladiga&apos;s Land</span>
+                  <span className="text-xs text-ll-text-light">Chief Ladiga Trail</span>
+                </a>
+                <a href="https://matt-headley-shop.fourthwall.com/products/the-model-city-anniston-alabama" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.dev/bCKGvDFomR4x6_Zlk-RenE-MeR-Zb6uKO6B8jy1nJ6A/w:1920/sm:1/enc/8Tc1-v11kCUQnxAj/xbkOwN2Vmv1CmS5b/iH46ky6mYZkr7k1T/sj-wL9p2g_mBO1xo/11U6ggMM2EaOCyuu/ZKr9z6B4zHOG8DIq/zuwI3c9jJmiOwIiV/VVBN7X34q-o7BDHm/mSLvFXaNgCicXSW1/oVoxxnVrSMwkzOC5/pb5-h4tqgXuvRrep/XjTo_ygy8ePtMBxI/mrLLJArS604vJop5/0ZWri4eShE8mN6Mk/R8CBRTe6q5c.jpg"
+                    alt="The Model City tee"
+                    width={140}
+                    height={140}
+                    className="rounded mb-2 mx-auto"
+                  />
+                  <span className="text-xs text-ll-text-light">The Model City</span>
                 </a>
               </div>
               <div className="text-center">
