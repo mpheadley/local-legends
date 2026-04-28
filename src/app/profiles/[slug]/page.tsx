@@ -477,6 +477,46 @@ export default async function ProfilePage({
             title={frontmatter.title}
             description={frontmatter.excerpt}
           />
+
+          {/* Merch */}
+          {(() => {
+            const ICM_URL = "https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes";
+            const ICM_IMAGE = "https://imgproxy.fourthwall.com/XnWvYiZD4UjuNBJBJ6PsIFbGJQ0_vwWMnwXmZZYM284/w:1920/sm:1/enc/Iii2cVJX6gm0Z5eT/n-DKEGZRRMgLOx8E/IMyMVfwhzQTkbK2F/ogivFZtKqq4b1QIL/_tvLMpcuJd30nKeQ/7m10OvKkDUX2YfjK/syPaHP0XhDTrPN8F/0_ggD-iszhBag0N-/wWGI-LmU8ECYrvT1/vdaFyt063kd6W_Jv/PICxh677t92H8jr9/o_obaRxZjzsHyJKE/UU6f8Ge6SFWzHK6Q/UuJAyx3H18_uoK5U/ud3AIRtDync";
+            const SHIRT_NAMES: Record<string, string> = {
+              [ICM_URL]: "I Contain Multitudes",
+              "https://matt-headley-shop.fourthwall.com/products/still-here": "Still Here",
+              "https://matt-headley-shop.fourthwall.com/products/bipolar-proud": "Bipolar & Proud",
+              "https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail": "Ladiga's Land",
+            };
+            const merchUrl = (frontmatter as Record<string, string>).merchUrl ?? ICM_URL;
+            const merchImage = (frontmatter as Record<string, string>).merchImage ?? ICM_IMAGE;
+            const merchName = SHIRT_NAMES[merchUrl] ?? "";
+            return (
+              <div className="flex flex-col items-center gap-3 mt-8">
+                <a href={merchUrl} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={merchImage}
+                    alt={merchName || "Merch"}
+                    width={140}
+                    height={140}
+                    className="rounded hover:opacity-90 transition-opacity"
+                  />
+                </a>
+                {merchName && (
+                  <span className="text-xs text-ll-text-light">{merchName}</span>
+                )}
+                <a
+                  href={merchUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"
+                >
+                  Get the shirt →
+                </a>
+              </div>
+            );
+          })()}
+
           <Link
             href="/support"
             className="btn-support inline-block mt-4 px-7 py-3 bg-ll-primary font-bold text-sm rounded-md hover:bg-ll-primary-dark transition-colors"
