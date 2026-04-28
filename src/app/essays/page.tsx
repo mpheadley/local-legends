@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllJournalPosts } from "@/lib/journal";
+import { getAllJournalPosts, getFeaturedJournalPost } from "@/lib/journal";
 import { siteConfig } from "@/lib/site-config";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 
@@ -20,7 +20,8 @@ function formatDate(dateStr: string): string {
 }
 
 export default function JournalPage() {
-  const posts = getAllJournalPosts();
+  const featured = getFeaturedJournalPost();
+  const posts = getAllJournalPosts().filter(p => p.slug !== featured?.slug);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -72,6 +73,72 @@ export default function JournalPage() {
           I write about what&apos;s behind the profiles. And what&apos;s behind me.
         </p>
       </div>
+
+      {/* Featured post hero */}
+      {featured && (
+        <div className="mx-auto max-w-2xl px-6 pt-10 pb-12">
+          <p style={{
+            fontFamily: "var(--font-source-sans)",
+            fontSize: "0.6375rem",
+            fontWeight: 600,
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "var(--color-ll-accent)",
+            marginBottom: "1rem",
+          }}>
+            Latest
+          </p>
+          <Link href={`/essays/${featured.slug}`} className="group block">
+            <h2 style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2rem, 5.5vw, 3.25rem)",
+              fontWeight: 400,
+              lineHeight: 1.05,
+              color: "var(--color-ll-dark)",
+              marginBottom: "1rem",
+              fontVariationSettings: '"opsz" 60',
+              transition: "color 0.15s",
+            }}
+            className="group-hover:text-ll-primary"
+            >
+              {featured.frontmatter.title}
+            </h2>
+            <p style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "1.0625rem",
+              lineHeight: 1.65,
+              color: "#5C534A",
+              marginBottom: "1.25rem",
+              maxWidth: "36rem",
+            }}>
+              {featured.frontmatter.excerpt}
+            </p>
+            <p style={{
+              fontFamily: "var(--font-source-sans)",
+              fontSize: "0.6875rem",
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "#9C8E84",
+              marginBottom: "1.25rem",
+            }}>
+              {formatDate(featured.frontmatter.date)} · {featured.readingTime}
+            </p>
+            <span style={{
+              display: "inline-block",
+              fontSize: "0.9375rem",
+              fontWeight: 600,
+              color: "var(--color-ll-primary)",
+              fontFamily: "var(--font-source-sans)",
+              letterSpacing: "0.02em",
+            }}
+            className="group-hover:underline"
+            >
+              Read →
+            </span>
+          </Link>
+        </div>
+      )}
 
       {/* Ruled divider */}
       <div className="mx-auto max-w-2xl px-6">
