@@ -102,6 +102,49 @@ That's enough. Don't oversell it.
 
 ---
 
+## Hook discipline — name the setup, don't deliver the payoff
+
+The strongest FB hook for a journal piece **names the vulnerable setup and gestures at the contrast — without delivering the contrast itself.** Summary kills clicks because it removes the question the piece is built to answer.
+
+### Worked example: No Shade (April 2026)
+
+**Weaker (Claude's first draft, summary-leaning):**
+> A year ago at Easter I was manic and didn't know it yet.
+>
+> This Easter someone called me by name from the pulpit and asked me to help serve communion.
+
+**Stronger (Matt's revision):**
+> A year ago at Easter I was manic and didn't know it yet. This Easter was very different.
+
+**Why the revision is better:**
+- **Keeps the communion scene as the payoff inside the piece.** A reader who already knows "called by name from the pulpit, served communion" has been handed the most evocative image in the essay. The click feels less necessary.
+- **"Was very different" creates a question.** The reader has to click to find out *how* different. Specific abstraction (very different *from what?*) is doing more work than concrete summary.
+- **Trusts the reader.** A vague second line after a specific first line implies the writer respects the reader's intelligence enough not to over-explain.
+- **Honors the rule "let the piece do the work."** The post sets up the click; it doesn't try to perform the piece.
+
+### The pattern
+
+Line 1: **Specific, vulnerable, concrete.** Names the setup with a detail that earns the click. ("I was manic and didn't know it yet.")
+
+Line 2: **Gestures at the contrast — abstractly.** Signals there's a turn without enacting it. ("This Easter was very different." / "Something changed." / "It didn't go the way I expected.")
+
+Line 3: **Directional cue + link.** ("Wrote about it here:" + URL.)
+
+Line 4: **Subscribe CTA.** ("Subscribe at the bottom of the piece if you want the next one.")
+
+### When to break the pattern
+
+If a piece has no clear "before/after" structure, this template won't fit cleanly. Don't force it. The principle (setup-not-payoff) still holds; the line-by-line shape may not.
+
+### Tells that you've over-summarized
+
+- The post is longer than 4 lines.
+- A reader who reads only the post knows the piece's emotional arc.
+- You've named the most specific image from the piece in the post itself.
+- You've used a line from the piece verbatim. (Voice guide rule: never use the excerpt verbatim — but this is also a hook discipline issue. The line that lands inside the piece is rarely the line that pulls a click.)
+
+---
+
 ## CTA wording in posts
 
 The link + auto-generated preview card on Facebook is functionally a CTA — clicking either the link or the preview card opens the piece. But for older / less-FB-native audiences (a real chunk of the NE Alabama list), a subtle directional cue between the post body and the link helps without sounding promotional.
