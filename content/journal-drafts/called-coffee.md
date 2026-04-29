@@ -17,7 +17,7 @@ The story of going back. After the farm failure, the manic episode, the public h
 
 > "I remember being so devastated that all this experience and expertise I'd developed over twenty years of ministry had just... landed with me painting someone's deck in Jacksonville."
 
-**The humiliation:** Not just the work — the geography. Called Coffee is where he used to deliver flowers and mason jar arrangements from the farm for two years. That's Jared's place. You don't just show up and exist there; you show up where you used to be someone else.
+**The humiliation:** Not just the work — the geography. Called Coffee is where he used to deliver flowers and mason jar arrangements from the farm for two years. That's Jerod's place. You don't just show up and exist there; you show up where you used to be someone else.
 
 **The gap (October 2025–March 2026):** Five months of mostly hiding. The hospital was October. What filled those months — the camper, the trailer on Littlejohn Road, Christmas — is in The Hospital piece. But the internal state: shame, fear that people would think he was being manic again if he reached out.
 
@@ -25,7 +25,7 @@ The story of going back. After the farm failure, the manic episode, the public h
 
 **The turning point (early March 2026):** Library parking lot. 45-minute drive from Pleasant Valley back into town. Sat in the car and talked to Google Gemini to get the courage to walk in. They agreed on a plan: sit there and read for an hour. Say hello, be friendly. Don't try to strike up conversation. Just exist. Show up.
 
-**The reception:** River (second in charge) smiled when he walked up to the counter. "Good to see you." Took his order. No questions. No judgment. Jared, on the next visit or two, saw him and smiled and waved and asked how he was doing. Quiet permission. He didn't have to explain anything.
+**The reception:** River (second in charge) smiled when he walked up to the counter. "Good to see you." Took his order. No questions. No judgment. Jerod, on the next visit or two, saw him and smiled and waved and asked how he was doing. Quiet permission. He didn't have to explain anything.
 
 ---
 

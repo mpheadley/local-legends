@@ -22,6 +22,7 @@ import ScrollytellingProfile from "@/app/components/ScrollytellingProfile";
 import ParallaxHero from "@/app/components/ParallaxHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 import Comments from "@/app/components/Comments";
+import { getProfileMerch } from "@/lib/merch";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
 import ProfileCardHero from "@/app/components/ProfileCardHero";
 import { scrollytellingConfigs } from "@/lib/scrollytelling-configs";
@@ -480,40 +481,22 @@ export default async function ProfilePage({
 
           {/* Merch */}
           {(() => {
-            const ICM_URL = "https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes";
-            const ICM_IMAGE = "https://imgproxy.fourthwall.dev/IMNy3eu4RC0MEIbGmpUUg-5yMjSRyFtKLGn1Mjh5S84/w:1920/sm:1/enc/ZedkaYftBaqinaIZ/Jr40_xy3Eb4tySwk/rScelYdmKxyZS6jZ/NJHeSvZlktqX-xYh/WSHRJ-RhgMHeSlMQ/27Iq7L_pckKRXOOp/v5oIB6B1Vnyt8g_D/jmvq7ZBuLrTpLBdn/gKhmeo_IvtrJEkf4/Yfl8j3qjiOOsC3F3/Z2VGxXEwJGMrAnzQ/2Xzk5fe0iRKeZTw2/UCV0r3RWKam0aN3r/8xpuJ8LPfqX3Axj4/fUq1cLuAVw8.jpg";
-            const SH_URL = "https://matt-headley-shop.fourthwall.com/products/still-here";
-            const SH_IMAGE = "https://imgproxy.fourthwall.com/FyWryySt9e8_rzT3yE6eItoqF6GstCkbBJSuL62LpoY/w:1920/sm:1/enc/kZytLUESOJY7WIq3/mQmU8CAxU0TQJrD2/LFh8Y-uqr4QKxZUr/-r3HZV9rDnJj-a9U/SY5J9AEtq4g5o7L3/JwKTj1OyPau1R0tC/tTw60OgXWBZkD6Hu/wWE8ibGTgAZsKMsY/WTotCATD8-xnovcw/FEwNfv2JgknjHnf0/ug0yHPZ7pcf3JZ2i/bZ0phQZB_NTgL9ld/E3bYmALpumGY4hCG/Su9KSvpN3h6FOoRK/dNXM-cTSQcw";
-            const SHIRT_NAMES: Record<string, string> = {
-              [ICM_URL]: "I Contain Multitudes",
-              [SH_URL]: "Still Here",
-              "https://matt-headley-shop.fourthwall.com/products/bipolar-proud": "Bipolar & Proud",
-              "https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail": "Ladiga's Land",
-            };
-            const primaryUrl = (frontmatter as Record<string, string>).merchUrl ?? ICM_URL;
-            const primaryImage = (frontmatter as Record<string, string>).merchImage ?? ICM_IMAGE;
-            const isICMPrimary = primaryUrl === ICM_URL;
-            const secondUrl = isICMPrimary ? SH_URL : ICM_URL;
-            const secondImage = isICMPrimary ? SH_IMAGE : ICM_IMAGE;
-            const primaryName = SHIRT_NAMES[primaryUrl] ?? "";
-            const secondName = SHIRT_NAMES[secondUrl] ?? "";
+            const { primary, secondary } = getProfileMerch(slug);
             return (
               <div className="flex gap-8 justify-center items-start mt-8">
                 <div className="flex flex-col items-center gap-3">
-                  <a href={primaryUrl} target="_blank" rel="noopener noreferrer">
+                  <a href={primary.url} target="_blank" rel="noopener noreferrer">
                     <Image
-                      src={primaryImage}
-                      alt={primaryName || "Merch"}
+                      src={primary.image}
+                      alt={primary.name}
                       width={140}
                       height={140}
                       className="rounded hover:opacity-90 transition-opacity"
                     />
                   </a>
-                  {primaryName && (
-                    <span className="text-xs text-ll-text-light">{primaryName}</span>
-                  )}
+                  <span className="text-xs text-ll-text-light">{primary.name}</span>
                   <a
-                    href={primaryUrl}
+                    href={primary.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"
@@ -522,20 +505,18 @@ export default async function ProfilePage({
                   </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
-                  <a href={secondUrl} target="_blank" rel="noopener noreferrer">
+                  <a href={secondary.url} target="_blank" rel="noopener noreferrer">
                     <Image
-                      src={secondImage}
-                      alt={secondName}
+                      src={secondary.image}
+                      alt={secondary.name}
                       width={140}
                       height={140}
                       className="rounded hover:opacity-90 transition-opacity"
                     />
                   </a>
-                  {secondName && (
-                    <span className="text-xs text-ll-text-light">{secondName}</span>
-                  )}
+                  <span className="text-xs text-ll-text-light">{secondary.name}</span>
                   <a
-                    href={secondUrl}
+                    href={secondary.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"

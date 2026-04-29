@@ -26,6 +26,79 @@ I worked at Camp Lee for about two weeks hoping that I might be able to get a jo
 
 ---
 
+## Pre-arrival state — June 2020 journals (voice memo, April 28 2026)
+
+Matt read from his 2020 journals. These entries pre-date the Anniston First offer (which came October/November 2021) by roughly 16 months.
+
+**June 24, 2020** — Gratitude journal: Jason Wright's encouragement, centering prayer groups, the flourishing garden. Then: *"I've been missing the practice of gratitude and optimism. Kim recommended a book to me about optimism, probably because she recognized my lack of it lately. My ego fixates on problems."* And: *"I'm beginning to feel more hopeful and attached to my work with the church."*
+
+Matt's note, reading it back: *"This is surprising reading this — that I can see I was already struggling with my mental health, optimism, back in 2020. And other people were recognizing it. Kim Westbrooks especially. I was also feeling detached from my work. And this was approximately six to eight months before I resigned [from Weaver]. I think the job [at Anniston First] was offered to me in November. Roughly October or November of 2021."*
+
+**June 28, 2020** — *"Excavating old hard drive. Full of memories. Loaded with feelings about the past and fear of unknown. It's emotionally exhausting. But I have to do something with this stuff, don't I? Or do I just need to let it go? I want to live in the present, not the past. I'm afraid of letting go — like my life will be meaningless without preserving the good things I've done, or I won't be able to escape my past wrongdoings. I fear. Grace says I am loved, I am enough, and I am forgiven."*
+
+**What this means:** He didn't arrive at Anniston First healthy and then get ground down. He arrived already struggling — detached, ego-fixating on problems, afraid of meaninglessness, with people around him already noticing. The bait-and-switch landed on someone who was already wounded from Weaver.
+
+---
+
+## The long descent — journal readings (voice memo, April 28 2026)
+
+### June 22, 2025
+Beginning to sense the end. Worry disengagement practice: *"Worried about running out of money to pay the high interest debt. Worried that family and community will judge me for being irresponsible — spending $18,000 given by the GoFundMe and we still have not had surgery yet and now we are almost out of cash. I'm worried about the stress I could experience if I go back into pastoral ministry for income. I'm worried about stressing Heather and her suffering increasing."*
+
+The inner child work: *"Young Matthew, it is okay to be worried about people judging you, or money running out, losing esteem and control and security. These are very human, beautiful gifts of your humanity."*
+
+### June 23, 2025
+Heather told him he was "fixing constantly" and couldn't tell him how she was feeling anymore. *"I feel very upset, hurt, and afraid. She has not offered me much lately. Maybe I need it from somewhere else — myself. You are doing your best. You are humble and willing to change. You are secure. She loves you. You are enough."*
+
+### June 24, 2025
+2am: *"Lord, I feel trapped and panicked. I keep waking up at 2am each night, for days now. Afraid about money. Afraid of humiliation. Of losing the farm, Heather, my family, esteem, security, control. Why has life got so hard?"* Two hours later, 4am: *"Help me stay here. I race ahead. Help me to be a steady, safe, non-anxious presence for my wife and children."*
+
+### July 2025
+The farm income reassurance that isn't reassuring: *"You are in a typical transition experience. This is the scariest, slowest time of the year for the farm. Income will grow soon."* Then the fear list — mental health tanking, not finding a lucrative enough job, raiding retirement, kids resenting him for failing to give them a good childhood.
+
+### August 14, 2025 (Thursday, 7am)
+*"Don't know what to do with myself. I'm dragging my feet about preparing to sell this house and move, about getting a job — or is that a question. Am I dragging my feet, or waiting for the motivation to come? I've been awake since 5am but kept going back to bed because I don't want to do anything else."*
+
+### August 20, 2025
+*"I wake and don't want to be awake. I feel overwhelmed by the challenges before me. I miss being manic. Excited to get up and start work each day. I just want to eat and sleep now."*
+
+### August (Thursday, 5:15pm)
+*"I feel so sad. I don't think I will ever want to renovate a house again. How am I supposed to be happy about moving into a trailer? Everywhere I look around this house is a reminder of what I am losing or have lost. Aborted dreams."*
+
+### October 18, 2025
+The workshop/farm sell-off day: *"I feel weak. Help me be a good dad and husband today, and not check out. Is it okay that I just want to veg out with a screen? No, I have to get things done."*
+
+### October 21, 2025 — last entry in that journal
+Gratitude, then the question list: *"Where is God in all this? What is to be of my career? Halloween costumes for the kids. How will Hannah and the kids commute to work? How do I manage my feelings around the kids? Why did mania wreck my life? How do I get unstuck? What is to become of kids' social and church life?"*
+
+That's the last entry before April 2026.
+
+---
+
+## The faith thread — John Keble (voice memo 19, April 28 2026, 4:45am)
+
+Matt read from *The Divine Hours*, Office of Dawn, page 130: *"Abide with me when night is nigh / For without you I dare not die."* — John Keble, K-E-B-L-E.
+
+*"My dark night felt angry, then ambivalent toward God. Maybe hurt too. Definitely betrayed. But when it came to thoughts of death, I couldn't articulate better what kept me tethered — even from thoughts of suicide, or through it. 'Without you I dare not die.' These words touch on, or point to, what I felt. Read them for years."*
+
+Closing: *"I haven't given up on you, God. Thank you for not giving up on me. And for a faith that holds space for doubt and darkness."*
+
+**Seed:** The Keble line as a recurring motif in the book — the thing that held through suicidal ideation is not hope or recovery but a specific kind of tethering to God that couldn't be let go of even in the dark. Not triumphant faith. Anchored faith. "Without you I dare not die" is also the confession of someone who still believes, even when they don't want to.
+
+---
+
+## Tim Stigers — "I lost my calling" (April 28 2026)
+
+*"ive thought often of a pastor mentor 'tim stigers' a presbyterian minister turned hospice chaplain, who went through a sort of depression after he was fired because his preaching wasn't good enough, and reflected aloud with me and the bible study he was leading with me and our young adult group in ministry 'i lost my calling'"*
+
+*"i still feel i haven't completely lost my calling, though i thought i had."*
+
+**Placement:** This scene belongs in this piece AND in the manic crash piece. Tim modeled naming the loss out loud — to a room of young adults, including Matt — before Matt ever had to. The circle: Tim said "I lost my calling." Matt thought he had. He hadn't.
+
+**Tim Stigers:** Presbyterian minister → hospice chaplain. Fired because his preaching wasn't good enough. Southern Legends profile candidate.
+
+---
+
 ## The associate pastor title (Anniston First)
 
 - The title was initially promised, then withheld. Had to wait for two other pastors to resign or leave before the opportunity was offered.
