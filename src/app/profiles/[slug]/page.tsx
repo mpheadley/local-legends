@@ -483,48 +483,51 @@ export default async function ProfilePage({
           {(() => {
             const { primary, secondary } = getProfileMerch(slug);
             return (
-              <div className="flex gap-8 justify-center items-start mt-8">
-                <div className="flex flex-col items-center gap-3">
-                  <a href={primary.url} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src={primary.image}
-                      alt={primary.name}
-                      width={140}
-                      height={140}
-                      className="rounded hover:opacity-90 transition-opacity"
-                    />
-                  </a>
-                  <span className="text-xs text-ll-text-light">{primary.name}</span>
-                  <a
-                    href={primary.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"
-                  >
-                    Get the shirt →
-                  </a>
+              <>
+                <p className="text-xs text-ll-accent text-center mt-8 mb-2" style={{ letterSpacing: "0.05em" }}>Purchases support Southern Legends.</p>
+                <div className="flex gap-8 justify-center items-start">
+                  <div className="flex flex-col items-center gap-3">
+                    <a href={primary.url} target="_blank" rel="noopener noreferrer">
+                      <Image
+                        src={primary.image}
+                        alt={primary.name}
+                        width={140}
+                        height={140}
+                        className="rounded hover:opacity-90 transition-opacity"
+                      />
+                    </a>
+                    <span className="text-xs text-white/60">{primary.name}</span>
+                    <a
+                      href={primary.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
+                    >
+                      Get the shirt →
+                    </a>
+                  </div>
+                  <div className="flex flex-col items-center gap-3">
+                    <a href={secondary.url} target="_blank" rel="noopener noreferrer">
+                      <Image
+                        src={secondary.image}
+                        alt={secondary.name}
+                        width={140}
+                        height={140}
+                        className="rounded hover:opacity-90 transition-opacity"
+                      />
+                    </a>
+                    <span className="text-xs text-white/60">{secondary.name}</span>
+                    <a
+                      href={secondary.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
+                    >
+                      Get the shirt →
+                    </a>
+                  </div>
                 </div>
-                <div className="flex flex-col items-center gap-3">
-                  <a href={secondary.url} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src={secondary.image}
-                      alt={secondary.name}
-                      width={140}
-                      height={140}
-                      className="rounded hover:opacity-90 transition-opacity"
-                    />
-                  </a>
-                  <span className="text-xs text-ll-text-light">{secondary.name}</span>
-                  <a
-                    href={secondary.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-sm font-medium border border-ll-border px-4 py-2 hover:bg-ll-warm transition-colors"
-                  >
-                    Get the shirt →
-                  </a>
-                </div>
-              </div>
+              </>
             );
           })()}
 
