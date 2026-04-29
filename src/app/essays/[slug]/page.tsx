@@ -311,7 +311,8 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             </div>
 
             {/* Shirts */}
-            <div className="flex gap-8 justify-center items-start mt-8">
+            <p className="text-xs text-ll-text-light text-center mt-8 mb-2" style={{ letterSpacing: "0.05em" }}>Purchases support Southern Legends.</p>
+            <div className="flex gap-8 justify-center items-start">
               <div className="flex flex-col items-center gap-3">
                 <a href={primaryUrl} target="_blank" rel="noopener noreferrer">
                   <Image
