@@ -23,6 +23,7 @@ import Comments from "@/app/components/Comments";
 import JournalCard from "@/app/components/JournalCard";
 import ProfileCardHero from "@/app/components/ProfileCardHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
+import { getEssayMerch } from "@/lib/merch";
 
 function Dateline({ children }: { children: React.ReactNode }) {
   return (
@@ -279,26 +280,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
       {/* Share + Merch + Support — unified closing section */}
       {(() => {
-        const ICM_URL = "https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes";
-        const ICM_IMAGE = "https://imgproxy.fourthwall.dev/IMNy3eu4RC0MEIbGmpUUg-5yMjSRyFtKLGn1Mjh5S84/w:1920/sm:1/enc/ZedkaYftBaqinaIZ/Jr40_xy3Eb4tySwk/rScelYdmKxyZS6jZ/NJHeSvZlktqX-xYh/WSHRJ-RhgMHeSlMQ/27Iq7L_pckKRXOOp/v5oIB6B1Vnyt8g_D/jmvq7ZBuLrTpLBdn/gKhmeo_IvtrJEkf4/Yfl8j3qjiOOsC3F3/Z2VGxXEwJGMrAnzQ/2Xzk5fe0iRKeZTw2/UCV0r3RWKam0aN3r/8xpuJ8LPfqX3Axj4/fUq1cLuAVw8.jpg";
-        const SH_URL = "https://matt-headley-shop.fourthwall.com/products/still-here";
-        const SH_IMAGE = "https://imgproxy.fourthwall.com/FyWryySt9e8_rzT3yE6eItoqF6GstCkbBJSuL62LpoY/w:1920/sm:1/enc/kZytLUESOJY7WIq3/mQmU8CAxU0TQJrD2/LFh8Y-uqr4QKxZUr/-r3HZV9rDnJj-a9U/SY5J9AEtq4g5o7L3/JwKTj1OyPau1R0tC/tTw60OgXWBZkD6Hu/wWE8ibGTgAZsKMsY/WTotCATD8-xnovcw/FEwNfv2JgknjHnf0/ug0yHPZ7pcf3JZ2i/bZ0phQZB_NTgL9ld/E3bYmALpumGY4hCG/Su9KSvpN3h6FOoRK/dNXM-cTSQcw";
-        const BP_URL = "https://matt-headley-shop.fourthwall.com/products/bipolar-proud";
-        const CLT_URL = "https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail";
-        const SHIRT_NAMES: Record<string, string> = {
-          [ICM_URL]: "I Contain Multitudes",
-          [SH_URL]: "Still Here",
-          [BP_URL]: "Bipolar & Proud",
-          [CLT_URL]: "Ladiga's Land",
-        };
-        const primaryUrl = frontmatter.merchUrl ?? ICM_URL;
-        const primaryImage = frontmatter.merchImage ?? ICM_IMAGE;
-        const isICMPrimary = primaryUrl === ICM_URL;
-        const secondUrl = isICMPrimary ? SH_URL : ICM_URL;
-        const secondImage = isICMPrimary ? SH_IMAGE : ICM_IMAGE;
-        const secondAlt = isICMPrimary ? "Still Here tee" : "I Contain Multitudes tee";
-        const primaryName = SHIRT_NAMES[primaryUrl] ?? "";
-        const secondName = SHIRT_NAMES[secondUrl] ?? "";
+        const { primary, secondary } = getEssayMerch(slug);
         return (
           <section className="profile-closing">
             {/* Share */}
@@ -314,20 +296,18 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             <p className="text-xs text-ll-text-light text-center mt-8 mb-2" style={{ letterSpacing: "0.05em" }}>Purchases support Southern Legends.</p>
             <div className="flex gap-8 justify-center items-start">
               <div className="flex flex-col items-center gap-3">
-                <a href={primaryUrl} target="_blank" rel="noopener noreferrer">
+                <a href={primary.url} target="_blank" rel="noopener noreferrer">
                   <Image
-                    src={primaryImage}
-                    alt={primaryName || "Merch"}
+                    src={primary.image}
+                    alt={primary.name}
                     width={140}
                     height={140}
                     className="rounded hover:opacity-90 transition-opacity"
                   />
                 </a>
-                {primaryName && (
-                  <span className="text-xs text-white/60">{primaryName}</span>
-                )}
+                <span className="text-xs text-white/60">{primary.name}</span>
                 <a
-                  href={primaryUrl}
+                  href={primary.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
@@ -336,20 +316,18 @@ export default async function JournalPostPage({ params }: { params: Params }) {
                 </a>
               </div>
               <div className="flex flex-col items-center gap-3">
-                <a href={secondUrl} target="_blank" rel="noopener noreferrer">
+                <a href={secondary.url} target="_blank" rel="noopener noreferrer">
                   <Image
-                    src={secondImage}
-                    alt={secondAlt}
+                    src={secondary.image}
+                    alt={secondary.name}
                     width={140}
                     height={140}
                     className="rounded hover:opacity-90 transition-opacity"
                   />
                 </a>
-                {secondName && (
-                  <span className="text-xs text-white/60">{secondName}</span>
-                )}
+                <span className="text-xs text-white/60">{secondary.name}</span>
                 <a
-                  href={secondUrl}
+                  href={secondary.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"

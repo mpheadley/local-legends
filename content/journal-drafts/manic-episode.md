@@ -137,6 +137,30 @@ He checked every one.
 
 ---
 
+## Ash Wednesday → resignation sequence (documented April 28 2026)
+
+**Corrected timeline — critical for the manic crash piece:**
+
+The mania was cresting at the time of the resignation. It did not peak and then break before he resigned. The resignation happened *inside* the mania. The mania continued to crest through April and May 2025 — after the resignation, after the farm doubling-down, through the Patreon launch. There was no crack before the resignation. The crack came in June 2025.
+
+**The sequence:**
+
+- **Ash Wednesday, March 5, 2025** — Matt absent or late. Nine Facebook posts that day (two in consecutive minutes at 7:43–7:44am, burst 1:33–6:13pm). Tammy texts at 3:51pm: *"Matt, I don't feel like you've handled today well. Jason and I will handle it. Stay home and take care of Heather and the kids, and we'll set up a time to talk."*
+- **March 7** — Facebook post at 2:42am.
+- **March 9** — Jelly Roll post publicly framing the depression as past. Four days before resignation.
+- **March 10–12** — Performance review scheduled and conducted. Matt experienced it as attack.
+- **March 12, 1:19pm** — Publicly promotes Fresh Expression event with Tammy tagged. Still performing normal working relationship 24 hours before walking out.
+- **March 13** — Resignation by text. Then: Instagram announcement 12:10pm ("Big life update"), profile photo change 12:12pm (cowboy hat, rock and roll sign, tongue out), formal Facebook announcement 3:10pm ("Transitioning into a New Season," AI-polished tone).
+- **8 days after Ash Wednesday.** Not the day after. Eight days.
+
+**The interior of the resignation:** Felt like freedom. Felt like calling. The mania was still cresting — this was not a moment of doubt. Angry and exhilarated simultaneously. Felt he was telling his story before Tammy could tell it for him.
+
+**What came after:** Farm doubling down. 16–20 hour days. Sleeping 3–4 hours. Patreon launch April 17 (*"It's saving me"* — commenting on his own post at 3:54am). Mania still climbing through April and May.
+
+**First crack:** June 18, 2025, 1:52am journal entry — *"Was it a mistake to quit my job at Anniston First?"* That's when the certainty broke.
+
+---
+
 ## Facebook posts — key finds from export (Apr 20 2026)
 
 **March 9, 2025** (Jelly Roll's Losers Run Club group): *"Loving my Jelly Roll hype for the 5k! Y'all keep believing in yourselves! I've spent my 40th year battling clinical depression and Jelly's music helped me through, a long with family and church."* — Public reveal of the depression, four days before the resignation. The mania is already present; he's publicly framing the depression as past.
@@ -263,6 +287,32 @@ The record isn't only damage. The same season that contains the bathtub at 3am a
 The mania didn't take him away from his family. It took him away while he was there. That's harder to name, harder to see in the photos, and more honest than the simpler story of a man who disappeared.
 
 Matt's response when this was named: *"ouch."*
+
+---
+
+## Journal readings — manic period (voice memo, April 28 2026)
+
+Matt read aloud from physical journals during a voice memo recorded April 28 2026. These are the manic-period entries from notebooks spanning 2020–2025.
+
+### May 21, 2025
+Ideas list including CLT Bicentennial 2032 event series with Muscogee/Creek collaboration, lip sync video, AI software for succession planning, homesteaders for flower farms, landscape design for Headley trailhead, permaculture design, bandstand venue, living room set furniture. Matt's note reading it back: *"This looks pretty manic. I think it was kind of near the end of my mania. I was trying to follow through on all the ideas that I'd had."*
+
+### May 27–28, 2025
+Silver (the dog) was attacked by two large dogs. Iredean rescued him and chased the dogs away. Recorded the date, then immediately resumed the idea list.
+
+### May 31, 2025
+*"I've been reflecting on my Best Buy tantrum. Wow, what a mess. About $4,000 I did not need to spend."* Then immediately pivots to: new building on the farm, fruit and nut trees, chickens, cows, pigs, fencing, another cold room, workshop for the farm, farm equipment shed. The reflection on the tantrum lasts one sentence. The expansion plans that follow it are longer than the reflection.
+
+The fleshing out: *"I am rich in social capital. How do I transfer, convert that into material wealth — food, clothing, shelter, and time? Can't get time back. If I bought fruit trees now, that would shorten the time I'd wait to get a harvest."* Social capital as a form of currency to liquidate. This is late-manic thinking — the logic is internally coherent and completely disconnected from the actual financial situation.
+
+### June 18, 2025 — 1:52am
+*"Lord, I feel like my back is against a wall. Sometimes I feel like I'm drowning in debt. We have experienced the highest highs and the lowest lows — high of seeing our farm really flourish for the first time, high of a sabbatical from ministry role I couldn't win. And low feeling of the walls of debt closing in. Up to our eyeballs. I've done my best, made the best choices I could, but we are in a pinch. So I'm up, sleepless at 2am. Help me, Lord."*
+
+Then: *"Was it a mistake to quit my job at Anniston First? Could I get part-time work there? Or leverage those relationships to create income opportunities — Patreon, music gigs, piano studio at home."*
+
+**The hinge sentence.** The mania is cracking at the edges. The certainty is gone. The resignation that felt like calling now has a question mark on it. This is the first time the question surfaces in writing — *"was it a mistake?"* — and he's asking it at 1:52am while drowning in debt.
+
+Matt's note, reading it back: *"So that was kind of the beginning of the end."*
 
 ---
 
