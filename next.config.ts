@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "cdn.fourthwall.com" },
       { protocol: "https", hostname: "imgproxy.fourthwall.com" },
+      { protocol: "https", hostname: "imgproxy.fourthwall.dev" },
     ],
   },
   async redirects() {
