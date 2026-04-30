@@ -13,9 +13,27 @@
 
 ## What needs to happen
 
-1. Ryleigh confirmation that a craft vendor spot is available May 9 — before placing the Mayesh order
-2. Matt drafted message to Ryleigh (see below in this session)
+1. Ryleigh confirmation before placing the Mayesh order
+2. Send reply email below to Karla's vendor blast
 3. Once confirmed: place Mayesh order
+
+## Reply email (final — send to MarketManager@annistonal.gov)
+
+> Hi Karla and Ryleigh,
+>
+> Thanks for the update — looking forward to opening day!
+>
+> For May 2 we'll have:
+> - Fresh cut flower bouquets and arrangements
+> - Handmade jewelry
+> - Printed apparel
+>
+> We'll plan to be at the Wednesday meeting at 5:30 as well.
+>
+> One question: we'd love to be at the market on May 9 for Mother's Day weekend with a focus on flowers — we typically sell out that Saturday. Could you confirm so we can plan our wholesale order?
+>
+> Thanks so much,
+> Matt Headley
 
 ## Notes
 
