@@ -48,6 +48,56 @@ That's enough. Don't oversell it.
 
 ---
 
+## Profile Share Queue
+
+Profile shares run on a different track than journal pieces. Rule for profiles: **always ask the subject to share from their own page when possible — their share outperforms yours every time** (per STRATEGY.md). Subject-share is the highest-leverage acquisition move available.
+
+### Ready to share
+
+**Shannon Jenkins (United Way of East Central Alabama)** — published Apr 22, 2026.
+- **Subject status:** Approved. Sent Apr 24; he texted back appreciation (see `ATTABOY.md`). Has agreed to share from his page.
+- **Recommended slot:** Next Tuesday morning (Tue–Thu 7–9am window per main's STRATEGY.md timing guidance).
+- **Coordination:** Confirm with Shannon when Matt is posting so his share lands the same day.
+- **Why this is the strongest next share:** 22 years at United Way ECECA. His audience is Matt's biggest acquisition opportunity in the queue.
+- **Hook discipline draft:**
+  > I knew who Shannon Jenkins was. I didn't think I should take up space.
+  >
+  > Wrote about what happened.
+  >
+  > southernlegends.blog/profiles/shannon-jenkins
+  >
+  > Subscribe at the bottom of the piece if you want the next one.
+
+**Chief Ladiga Trail** — published Apr 25, 2026.
+- **Subject status:** N/A — place piece, no subject to coordinate.
+- **Recommended slot:** The week after Shannon (post Tue or Thu morning).
+- **Why it works as the share after Shannon:** Place pieces travel further on FB than person pieces; the land-acknowledgment angle gets cultural shares (Anniston Museum, running clubs, Indigenous-history pages); good tonal contrast after two person-driven pieces in a row.
+- **Hook discipline draft:**
+  > I've run the Chief Ladiga Trail since we moved to Anniston. I didn't know whose land I'd been running on until I wrote this.
+  >
+  > The piece is up:
+  >
+  > southernlegends.blog/profiles/chief-ladiga-trail
+  >
+  > Subscribe at the bottom of the piece if you want the next one.
+
+### Already shared (or older — past their window)
+
+- **Lewis Downing** — Apr 10. Window closed for fresh-share treatment; reshare from SL page only if a natural moment arises.
+- **Aquality Farms / Jean Ellison (Mom to Go) / Freedom Riders / Noccalula Falls / Anniston Museums & Gardens / Interfaith Ministries** — older. SL page reshares fine; not personal-post material now.
+
+### Rule when subject hasn't approved
+
+If a subject hasn't confirmed they'll share from their page, default to: **post anyway, with a soft text to the subject the morning of**:
+
+```
+[Name] — sharing the profile on FB this morning. Wanted you to see it before anyone else does. Feel free to share from your page if you want.
+```
+
+No pressure, no demand. They share or they don't. Don't let approval-waiting stall your cadence — if you don't hear back within 2–3 days, post solo.
+
+---
+
 ## Rules
 - One piece per share session. Don't post two in the same day.
 - Personal post first, SL page share after.
