@@ -89,6 +89,52 @@ If two-of-three criteria are now true, consider buying the namespace and redirec
 
 ---
 
+## Design follows writing, not the other way around
+
+The same logic that governs domains governs visual identity — maps, illustrations, merch designs, custom typography for a piece. **The writing comes first. The design serves it.**
+
+The Chief Ladiga corridor map (`public/images/clt-corridor-map.svg`) is layered the way it is because the profile exists. The map renders a thesis the writing already earned: *"the corridor of removal became the railroad became the trail."* Layers — terrain, Creek territory, railroad, trail, 1832 history, Silver Comet, towns — only mean what they mean because the profile told the reader what to see. Without the profile, those layers would be decoration.
+
+### Why the rule matters
+
+- **Design follows thesis.** A trail map is not a thesis. A trail map *of a thesis* is. If the thesis doesn't exist on the page yet, the design has nothing to render.
+- **Design without writing flatters the wrong thing.** It signals "we have an asset" rather than "we have a story." SL's editorial register collapses the moment design leads.
+- **Reverse-engineering writing from design is a losing battle.** When the design exists first, the writing tends to bend toward justifying the design — which is how editorial sites lose their voice.
+
+### The order of operations
+
+For any project that might warrant a designed visual identity:
+
+1. **Profile / piece written.** Research, interview, draft, edit. The thesis emerges through the writing.
+2. **Design serves the thesis.** Map, illustration, custom layout — only after step 1 has a clear hook the design can render.
+3. **Merch follows the design.** Stickers, T-shirts, prints — only after step 2 has produced a visual that has earned its place editorially.
+4. **Domain decision** (per the criteria above) — usually triggered by step 3, since physical merch is the strongest signal a project has reached the dedicated-domain threshold.
+
+Do these in order. Skipping ahead produces work the audience won't recognize as serious.
+
+### When the rule can break
+
+Rare exceptions — typically when the design *is* the research:
+
+- A custom map that's so labor-intensive it functions as primary research (in which case it's not really design ahead of writing — the map-making *is* the writing).
+- A merch run for an existing local institution where SL is partnering rather than originating (the Anniston Museums shirt for a museum event, e.g.). In partnership work, SL's design follows the partner's editorial logic.
+- A design done as voice/style exploration, not for publication (the early font-preview HTML files in the repo are this — they exist to find the design language, not to ship).
+
+If you can't name which exception applies, the rule still applies.
+
+### Current case: Pinhoti Trail (April 2026)
+
+The question came up: *"Could we create a Pinhoti Trail design similar to the Ladiga design that traces the actual trail?"*
+
+Answer: yes — but not yet. There is no Pinhoti profile written. Without one, a Pinhoti map is decoration. The order of operations:
+
+1. Write a Pinhoti profile (or series — the trail is too long for one piece). Research the volunteer trail-builders, interview thru-hikers, walk sections, find the narrative anchor.
+2. Once the profile has a thesis, design the corridor visual that renders it. Likely a different aspect ratio than the Ladiga (taller, north-south orientation), and possibly a paired/sister design with the Ladiga since the trails meet in Piedmont, Alabama.
+3. Merch follows.
+4. Lock `pinhotitrail.org` (or similar) cheaply now if all three brand-architecture criteria are anticipated to hold — but don't build past Phase 1 redirect until the work warrants it.
+
+---
+
 ## Decision log
 
 | Date | Project | Decision | Reasoning |
