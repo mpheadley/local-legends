@@ -1,3 +1,5 @@
+export const revalidate = 300
+
 import type { Metadata } from "next";
 import { buildSearchIndex } from "@/lib/search";
 import SearchClient from "./SearchClient";

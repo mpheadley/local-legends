@@ -1,3 +1,5 @@
+export const revalidate = 300
+
 import { getAllProfiles, getFeaturedProfiles } from "@/lib/profiles";
 import { getJournalPostBySlug } from "@/lib/journal";
 import ProfileCardHero from "./components/ProfileCardHero";
