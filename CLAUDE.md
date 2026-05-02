@@ -208,6 +208,19 @@ All components registered in `src/app/essays/[slug]/page.tsx` under `mdxComponen
 - **Satori fallback:** `src/app/profiles/[slug]/opengraph-image.tsx` auto-generates for profiles without a manual screenshot.
 - **Detection:** `generateMetadata` in `page.tsx` checks if `public/images/social/{slug}-og.png` exists. If yes, uses it. If no, Satori kicks in.
 
+## Writing Coach & Audit Triggers
+
+When the user says any of the phrases below, **immediately invoke the corresponding slash command** — no confirmation needed.
+
+| User says | Invoke |
+|---|---|
+| "writing guide", "writing coach", "coach me", "socratic coach", "voice guide", "authentic voice guide" | `/coach-sl` |
+| "audit this", "voice check", "check this draft", "run the audit" | `/coach-sl` (voice check mode — bring draft, run audit-satire.py as baseline then layer SL checks) |
+
+Matt writes first. Always. Do not generate content before coaching is complete.
+
+---
+
 ## Build Rules
 - Follow global CLAUDE.md standards (next/image, WebP, contrast checks, etc.)
 - No daisyUI — pure Tailwind + custom CSS

@@ -1,0 +1,18 @@
+<svg viewBox="0 0 3600 4800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background -->
+  <rect width="3600" height="4800" fill="none"/>
+
+  <!-- Decorative underline above text -->
+  <line x1="2900" y1="4620" x2="3400" y2="4620" stroke="#000" stroke-width="12"/>
+
+  <!-- "Est. 1872" text in bottom right corner -->
+  <text
+    x="3450"
+    y="4710"
+    font-family="Georgia, serif"
+    font-size="160"
+    fill="#000"
+    text-anchor="end"
+    font-weight="300"
+    letter-spacing="3">Est. 1872</text>
+</svg>

@@ -262,6 +262,23 @@ The site is now ready — subscribe is wired, support is live, shirts exist. Use
 - Link to the piece
 - Close with subscribe CTA: "Subscribe at the bottom of the piece if you want the next one."
 
+**No Shade launch todo (April 28 2026):**
+1. Reply to every "Disappear" commenter individually — *"[Name] — thanks for this, means a lot. I've been writing more of it over at Southern Legends if you want to follow along. No Shade just went up. southernlegends.blog/essays/no-shade"*
+2. Drop one thread comment at the bottom of the Disappear post — *"Next chapter is up at southernlegends.blog/essays/no-shade — subscribe at the bottom if you want the next one."*
+3. Post No Shade on Facebook — sentence below + URL + subscribe CTA
+4. DM Patreon supporters personally — No Shade is live, thank them
+5. Confirm Vercel deploy — southernlegends.blog/essays shows the hero
+
+**No Shade Facebook sentence (April 28 2026, Matt's words):**
+> "A year ago I was manic at Easter. This year someone handed me a cup. I wrote about it."
++ URL: https://southernlegends.blog/essays/no-shade
++ Close: "Subscribe at the bottom if you want the next one."
+
+**Personal reply to "Disappear" commenters — include the link:**
+> "[Name] — thanks for this, means a lot. I've been writing more of it over at Southern Legends if you want to follow along. No Shade just went up. southernlegends.blog/essays/no-shade"
+No subscribe ask in individual replies. One thread comment after everyone has been replied to:
+> "Next chapter is up at southernlegends.blog/essays/no-shade — subscribe at the bottom if you want the next one."
+
 **Don't summarize the piece in the Facebook post.** Give them a reason to click, then let the piece do the work.
 
 ---
