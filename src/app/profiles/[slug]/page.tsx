@@ -27,6 +27,9 @@ import ClosingSection from "@/app/components/ClosingSection";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
 import ProfileCardHero from "@/app/components/ProfileCardHero";
 import { scrollytellingConfigs } from "@/lib/scrollytelling-configs";
+import FloatingShareBar from "@/app/components/FloatingShareBar";
+import PrevNextEdgeArrows from "@/app/components/PrevNextEdgeArrows";
+import NextUpPopup from "@/app/components/NextUpPopup";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -267,6 +270,9 @@ export default async function ProfilePage({
   return (
     <main id="main-content">
       <ReadingProgressBar />
+      <PrevNextEdgeArrows prev={prev} next={next} />
+      <FloatingShareBar slug={slug} title={frontmatter.title} description={frontmatter.excerpt ?? ""} />
+      {next && <NextUpPopup next={next} />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -428,6 +434,7 @@ export default async function ProfilePage({
           <MDXRemote source={content} components={mdxComponents} />
         </div>
       </article>
+      <div id="share-bar-sentinel" aria-hidden="true" />
 
       <Comments slug={slug} />
 
