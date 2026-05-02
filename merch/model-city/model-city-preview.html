@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Model City — Design Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Playfair+Display:ital,wght@0,700;1,700&family=Abril+Fatface&family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100dvh;
+  }
+
+  .mockup-label {
+    color: #666;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  /* Shirt shape */
+  .shirt {
+    width: 320px;
+    height: 360px;
+    background: #f5f0e8;
+    clip-path: polygon(
+      15% 0%, 85% 0%,
+      100% 10%, 95% 16%, 88% 10%,
+      88% 100%, 12% 100%,
+      12% 10%, 5% 16%, 0% 10%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Dark shirt variant */
+  .shirt.dark {
+    background: #1c1917;
+  }
+
+  .design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0 28px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: #1c1917;
+    letter-spacing: 1px;
+    opacity: 0.55;
+    margin-bottom: 10px;
+  }
+
+  .dark .eyebrow {
+    color: #f5f0e8;
+  }
+
+  .rule {
+    width: 60px;
+    height: 1px;
+    background: #1c1917;
+    opacity: 0.3;
+    margin-bottom: 12px;
+  }
+
+  .dark .rule {
+    background: #f5f0e8;
+  }
+
+  .headline {
+    font-family: 'IM Fell English', serif;
+    font-size: 38px;
+    color: #1c1917;
+    line-height: 1.0;
+    letter-spacing: -0.5px;
+  }
+
+  .dark .headline {
+    color: #f5f0e8;
+  }
+
+  .subhead {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #1c1917;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    opacity: 0.75;
+  }
+
+  .dark .subhead {
+    color: #f5f0e8;
+  }
+
+  .rule-bottom {
+    width: 60px;
+    height: 1px;
+    background: #1c1917;
+    opacity: 0.3;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+
+  .dark .rule-bottom {
+    background: #f5f0e8;
+  }
+
+  .url {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 9px;
+    color: #1c1917;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+
+  .dark .url {
+    color: #f5f0e8;
+  }
+
+  .font-imfell .headline { font-family: 'IM Fell English', serif; }
+  .font-playfair .headline { font-family: 'Playfair Display', serif; font-weight: 700; font-style: italic; }
+  .font-abril .headline { font-family: 'Abril Fatface', serif; font-weight: 400; }
+  .font-bebas .headline { font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; }
+  .font-baskerville .headline { font-family: 'Libre Baskerville', serif; font-weight: 700; }
+
+  .font-label {
+    color: #888;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- IM Fell English (current standard) -->
+  <div>
+    <div class="mockup-label">IM Fell English</div>
+    <div class="shirt font-imfell">
+      <div class="design">
+        <span class="eyebrow">Anniston, Alabama</span>
+        <div class="rule"></div>
+        <span class="headline">The<br>Model<br>City</span>
+        <div class="rule-bottom"></div>
+        <span class="url">Southern Legends</span>
+      </div>
+    </div>
+    <div class="font-label">Historical / civic proclamation</div>
+  </div>
+
+  <!-- Playfair Display Italic -->
+  <div>
+    <div class="mockup-label">Playfair Display Italic</div>
+    <div class="shirt font-playfair">
+      <div class="design">
+        <span class="eyebrow">Anniston, Alabama</span>
+        <div class="rule"></div>
+        <span class="headline">The<br>Model<br>City</span>
+        <div class="rule-bottom"></div>
+        <span class="url">Southern Legends</span>
+      </div>
+    </div>
+    <div class="font-label">Southern Gothic / literary</div>
+  </div>
+
+  <!-- Abril Fatface -->
+  <div>
+    <div class="mockup-label">Abril Fatface</div>
+    <div class="shirt font-abril">
+      <div class="design">
+        <span class="eyebrow">Anniston, Alabama</span>
+        <div class="rule"></div>
+        <span class="headline">The<br>Model<br>City</span>
+        <div class="rule-bottom"></div>
+        <span class="url">Southern Legends</span>
+      </div>
+    </div>
+    <div class="font-label">Old newspaper masthead</div>
+  </div>
+
+  <!-- Bebas Neue -->
+  <div>
+    <div class="mockup-label">Bebas Neue</div>
+    <div class="shirt font-bebas">
+      <div class="design">
+        <span class="eyebrow">Anniston, Alabama</span>
+        <div class="rule"></div>
+        <span class="headline">The<br>Model<br>City</span>
+        <div class="rule-bottom"></div>
+        <span class="url">Southern Legends</span>
+      </div>
+    </div>
+    <div class="font-label">Modern / stark contrast</div>
+  </div>
+
+  <!-- Libre Baskerville Bold -->
+  <div>
+    <div class="mockup-label">Libre Baskerville Bold</div>
+    <div class="shirt font-baskerville">
+      <div class="design">
+        <span class="eyebrow">Anniston, Alabama</span>
+        <div class="rule"></div>
+        <span class="headline">The<br>Model<br>City</span>
+        <div class="rule-bottom"></div>
+        <span class="url">Southern Legends</span>
+      </div>
+    </div>
+    <div class="font-label">Editorial serif / NYT register</div>
+  </div>
+
+  <!-- Dark variant of the winner placeholder -->
+  <div>
+    <div class="mockup-label">IM Fell — Dark shirt</div>
+    <div class="shirt dark font-imfell">
+      <div class="design dark">
+        <span class="eyebrow">Anniston, Alabama</span>
+        <div class="rule"></div>
+        <span class="headline">The<br>Model<br>City</span>
+        <div class="rule-bottom"></div>
+        <span class="url">Southern Legends</span>
+      </div>
+    </div>
+    <div class="font-label">Dark colorway</div>
+  </div>
+
+</body>
+</html>

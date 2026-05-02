@@ -6,6 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 
 MERCH_DIR = os.path.dirname(os.path.abspath(__file__))
+FONTS_DIR = os.path.join(MERCH_DIR, "../fonts")
 BADGE = os.path.join(MERCH_DIR, "chief-ladiga-badge-2x.png")
 
 # Fourthwall specs
@@ -20,7 +21,7 @@ def find_font(names, size):
             pass
     return ImageFont.load_default()
 
-def build_design(canvas_size, badge_px=1800):
+def build_design(canvas_size, badge_px=1800, dark_ink=False):
     w, h = canvas_size
     img = Image.new("RGBA", canvas_size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
@@ -45,22 +46,24 @@ def build_design(canvas_size, badge_px=1800):
 
     # "1832" — IM Fell English
     font_year = find_font([
-        os.path.join(MERCH_DIR, "IMFellEnglish-Regular.ttf"),
+        os.path.join(FONTS_DIR, "IMFellEnglish-Regular.ttf"),
         "/Library/Fonts/Georgia.ttf",
         "/System/Library/Fonts/Supplemental/Georgia.ttf",
     ], 420)
 
     font_sl = find_font([
-        os.path.join(MERCH_DIR, "IMFellEnglish-Italic.ttf"),
+        os.path.join(FONTS_DIR, "IMFellEnglish-Italic.ttf"),
         "/Library/Fonts/Georgia Italic.ttf",
         "/System/Library/Fonts/Supplemental/Georgia Italic.ttf",
     ], 200)
 
-    year_text = "1832"
+    year_text = "1832 · 2032"
     sl_text = "SOUTHERN  LEGENDS"
 
-    CREAM = (245, 240, 232, 255)
-    CREAM_DIM = (245, 240, 232, 200)
+    INK = (28, 25, 23, 255) if dark_ink else (245, 240, 232, 255)
+    INK_DIM = (28, 25, 23, 200) if dark_ink else (245, 240, 232, 200)
+    CREAM = INK
+    CREAM_DIM = INK_DIM
 
     # Measure text blocks
     bbox_year = draw.textbbox((0, 0), year_text, font=font_year)
@@ -71,13 +74,14 @@ def build_design(canvas_size, badge_px=1800):
     sl_w = bbox_sl[2] - bbox_sl[0]
     sl_h = bbox_sl[3] - bbox_sl[1]
 
-    gap = 60  # space between year and SL text
-    total_h = badge_px + 80 + year_h + gap + sl_h
+    gap = 160  # space between year and SL text
+    badge_to_year = -20
+    total_h = badge_px + badge_to_year + year_h + gap + sl_h
 
     # Center the whole design block vertically
     block_top = (h - total_h) // 2
     badge_y = block_top
-    year_y = badge_y + badge_px + 80
+    year_y = badge_y + badge_px + badge_to_year
     sl_y = year_y + year_h + gap
 
     # Re-paste badge at new position
@@ -90,17 +94,17 @@ def build_design(canvas_size, badge_px=1800):
 
     return img2
 
-# Build tote
+# Build tote — dark ink for natural/cream fabric
 print("Building tote...")
-tote = build_design(TOTE_SIZE, badge_px=2000)
-tote_path = os.path.join(MERCH_DIR, "clt-sl-tote-print.png")
+tote = build_design(TOTE_SIZE, badge_px=2000, dark_ink=True)
+tote_path = os.path.join(MERCH_DIR, "clt-sl-tote-print-v2.png")
 tote.save(tote_path, "PNG")
 print(f"  Saved: {tote_path}")
 
-# Build shirt
-print("Building shirt...")
-shirt = build_design(SHIRT_SIZE, badge_px=1900)
-shirt_path = os.path.join(MERCH_DIR, "clt-sl-shirt-print.png")
+# Build shirt — dark ink for natural/cream shirt (primary)
+print("Building shirt (light)...")
+shirt = build_design(SHIRT_SIZE, badge_px=1900, dark_ink=True)
+shirt_path = os.path.join(MERCH_DIR, "clt-sl-shirt-print-v2.png")
 shirt.save(shirt_path, "PNG")
 print(f"  Saved: {shirt_path}")
 
