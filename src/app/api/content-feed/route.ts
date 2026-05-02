@@ -52,5 +52,7 @@ export async function GET() {
   const base = path.join(process.cwd(), 'content')
   const profiles = readContentDir(path.join(base, 'profiles'), 'profile')
   const journal = readContentDir(path.join(base, 'journal'), 'journal')
-  return NextResponse.json([...profiles, ...journal])
+  return NextResponse.json([...profiles, ...journal], {
+    headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' },
+  })
 }

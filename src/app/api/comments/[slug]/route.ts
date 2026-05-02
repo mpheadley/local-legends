@@ -27,5 +27,7 @@ export async function GET(
     return NextResponse.json({ comments: [] });
   }
 
-  return NextResponse.json({ comments: data ?? [] });
+  return NextResponse.json({ comments: data ?? [] }, {
+    headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' },
+  });
 }

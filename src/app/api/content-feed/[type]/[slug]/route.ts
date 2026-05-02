@@ -29,5 +29,7 @@ export async function GET(
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // links → text
     .trim()
 
-  return NextResponse.json({ slug, type, body })
+  return NextResponse.json({ slug, type, body }, {
+    headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' },
+  })
 }

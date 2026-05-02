@@ -1,3 +1,5 @@
+export const revalidate = 300
+
 import { getAllProfiles, getAllTags } from "@/lib/profiles";
 import ProfileCardHero from "../components/ProfileCardHero";
 import { siteConfig } from "@/lib/site-config";
