@@ -214,6 +214,7 @@ export default function HomePage() {
         </section>
       )}
 
+      <SubscribeCTA variant="section" source="homepage" />
     </main>
   );
 }

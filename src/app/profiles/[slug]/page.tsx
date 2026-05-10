@@ -438,6 +438,50 @@ export default async function ProfilePage({
       </article>
       <div id="share-bar-sentinel" aria-hidden="true" />
 
+      {/* PB Lead CTAs */}
+      <section className="bg-ll-light border-t border-ll-border">
+        <div className="max-w-3xl mx-auto px-6 py-10">
+          <p
+            className="text-lg font-semibold mb-2"
+            style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-dark)" }}
+          >
+            Does your business have a story this clear?
+          </p>
+          <a
+            href="https://plainspokenblueprint.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-sm font-bold"
+            style={{ color: "var(--color-ll-primary)" }}
+          >
+            Let&apos;s find it. →
+          </a>
+          <div
+            className="flex flex-col sm:flex-row gap-4 mt-6 pt-6"
+            style={{ borderTop: "1px solid var(--color-ll-border)" }}
+          >
+            <a
+              href="https://plainspokenblueprint.com/card"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm"
+              style={{ color: "var(--color-ll-text-light)", textDecoration: "underline" }}
+            >
+              Get your free digital card →
+            </a>
+            <a
+              href="https://plainspokenblueprint.com/audit"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm"
+              style={{ color: "var(--color-ll-text-light)", textDecoration: "underline" }}
+            >
+              Does your website score as well as this story reads? Free clarity check →
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Comments slug={slug} />
 
       {/* Closing */}

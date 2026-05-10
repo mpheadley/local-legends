@@ -1,5 +1,9 @@
 # Writing Authentically: A Guide for Southern Legends
 
+**Related guides:**
+- `~/Developer/webdev/starter-kit/COPY-VOICE-GUIDE.md` — kill list and rhythm test for website/marketing copy
+- `~/Developer/webdev/starter-kit/SOCIAL-COPY-GUIDE.md` — social media captions (Instagram, Facebook, LinkedIn). The literary journalism principles in this guide do NOT apply there — see that doc for what does.
+
 *Instructions for Claude when writing, editing, or reviewing content for this site.*
 
 *See also: `green-tomato/content/research/SATIRE-CRAFT-GUIDE.md` — the parallel craft guide for GT/TPT satire. The voice moves are different registers of the same core discipline: specific detail, flat delivery, no explaining the point. The satire guide's sections on the confirming detail and the sincere quote are the deadpan cousins of what this guide calls "the telling detail" and "report, don't explain."*

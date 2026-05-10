@@ -114,19 +114,23 @@ export default function AboutPage() {
 
           <div>
             <p className="text-ll-text leading-relaxed mb-6">
-              What I do now is build websites and run search campaigns for local businesses. That&apos;s{" "}
+              What I do now is help small business owners find and say the true
+              thing about what they do. I run{" "}
               <a
-                href="https://headleyweb.com"
+                href="https://plainspokenblueprint.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
-                Headley Web &amp; SEO
+                Plainspoken Blueprint
               </a>
-              . Southern Legends started because the work kept putting me across
+              {" "}— a messaging clarity practice built from fifteen years in the pulpit, a flower farm, and thirty pieces of software for
+              florists, farmers market managers, pastors, and wedding vendors. One 90-minute session. One page. A message that works before you walk in the room.
+            </p>
+            <p className="text-ll-text leading-relaxed mb-6">
+              Southern Legends started because the work kept putting me across
               the table from people, and I needed that more than I expected.
-              Turns out sitting
-              with someone and asking them to tell you their story is one of the
+              Turns out sitting with someone and asking them to tell you their story is one of the
               ways back. I wrote more about{" "}
               <Link
                 href="/essays/the-same-domain"
@@ -150,6 +154,26 @@ export default function AboutPage() {
             </p>
           </div>
 
+          {/* PB section — Matt writes the prose */}
+          <div className="not-prose my-8 p-6 rounded-lg" style={{ background: "var(--color-ll-warm)", border: "1px solid var(--color-ll-border)" }}>
+            <p className="text-xs font-semibold uppercase tracking-widest text-ll-text-light mb-3">
+              Plainspoken Blueprint
+            </p>
+            <p className="text-ll-text leading-relaxed mb-4">
+              {/* Matt writes this paragraph — what PB does, who it's for, what you leave with */}
+              [Placeholder — Matt writes this: what PB does in plain language, who it&apos;s for, what a 90-min session produces. One paragraph. First person.]
+            </p>
+            <a
+              href="https://plainspokenblueprint.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm font-bold"
+              style={{ color: "var(--color-ll-primary)", textDecoration: "underline" }}
+            >
+              Book a 90-min session →
+            </a>
+          </div>
+
           <h2>Know Someone Worth Writing About?</h2>
 
           <p>
@@ -158,7 +182,7 @@ export default function AboutPage() {
 
           <p>
             Reach out at{" "}
-            <a href="mailto:matt@headleyweb.com">matt@headleyweb.com</a>.
+            <a href="mailto:matt@plainspokenblueprint.com">matt@plainspokenblueprint.com</a>.
           </p>
 
           <hr className="my-10 border-ll-dark/10" />
@@ -241,6 +265,14 @@ export default function AboutPage() {
 
           <p className="text-sm text-ll-text-light">
             Southern Legends is built and maintained by{" "}
+            <a
+              href="https://matthewheadley.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Matt Headley
+            </a>
+            {" "}·{" "}
             <a
               href="https://headleyweb.com"
               target="_blank"

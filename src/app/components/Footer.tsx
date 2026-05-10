@@ -91,12 +91,21 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.name}. Built by{" "}
             <a
-              href="https://headleyweb.com"
+              href="https://plainspokenblueprint.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/80 hover:text-ll-accent transition-colors font-semibold"
             >
-              Headley Web &amp; SEO
+              Matt Headley
+            </a>
+            {" "}·{" "}
+            <a
+              href="https://plainspokenblueprint.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-ll-accent transition-colors"
+            >
+              Plainspoken Blueprint
             </a>
           </p>
           <div className="flex gap-6">
