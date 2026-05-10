@@ -201,7 +201,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
     author: {
       "@type": "Person",
       name: siteConfig.author,
-      url: "https://headleyweb.com",
+      url: "https://plainspokenblueprint.com",
     },
     publisher: {
       "@type": "Organization",
