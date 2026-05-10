@@ -274,11 +274,11 @@ export default function AboutPage() {
             </a>
             {" "}·{" "}
             <a
-              href="https://headleyweb.com"
+              href="https://plainspokenblueprint.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Headley Web &amp; SEO
+              Plainspoken Blueprint
             </a>
             .
           </p>

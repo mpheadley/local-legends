@@ -47,7 +47,7 @@ export default function HomePage() {
     author: {
       "@type": "Person",
       name: siteConfig.author,
-      url: "https://headleyweb.com",
+      url: "https://plainspokenblueprint.com",
     },
     publisher: {
       "@type": "Organization",
