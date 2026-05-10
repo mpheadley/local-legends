@@ -447,9 +447,9 @@ export default function ScrollytellingProfile({
               <Link href="/about" className="st-byline-name">
                 {config.authorName}
               </Link>{" "}
-              lives in Jacksonville, Alabama. He helps local businesses find and say the true thing about what they do at{" "}
+              lives in Jacksonville, Alabama. He helps business owners say the true thing about what they do.{" "}
               <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" className="st-byline-link">plainspokenblueprint.com</a>
-              {" "}and writes about the people and places he finds along the way.
+              {" "}He writes about the people and places he finds along the way.
             </p>
           </div>
         </div>
