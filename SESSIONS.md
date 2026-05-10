@@ -6,6 +6,19 @@ Newest first.
 
 ---
 
+## 2026-05-10 — Byline and JSON-LD author URL swept to Plainspoken Blueprint
+
+Finished the headleyweb.com → plainspokenblueprint.com reference sweep. Prior session caught Footer, ClosingSection, and profile CTAs. This session caught the remaining four files.
+
+**What shipped:**
+- `ScrollytellingProfile.tsx`: byline text ("builds websites at headleyweb.com" → "helps local businesses find and say the true thing at plainspokenblueprint.com"); outro credit ("Headley Web & SEO" → "Plainspoken Blueprint")
+- `about/page.tsx`: footer credit updated to Plainspoken Blueprint
+- `page.tsx` + `essays/[slug]/page.tsx`: JSON-LD `author.url` updated to plainspokenblueprint.com
+
+**Deferred:** Matt writes the PB prose paragraph in `about/page.tsx` (placeholder still in place)
+
+---
+
 ## 2026-05-10 — PB Ecosystem crosslinks: footer, ClosingSection, profile CTAs, about page
 
 All Southern Legends references to "Headley Web & SEO" or "matthewheadley.com" replaced with Plainspoken Blueprint.
