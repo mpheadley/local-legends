@@ -33,15 +33,15 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
           <p className="profile-closing-bio">
             <Link href="/about" className="profile-closing-name">
               Matt Headley
-            </Link>{" "}
-            is a former pastor, flower farmer, and classically trained singer from Northeast Alabama. His work has appeared in the{" "}
+            </Link>
+            ,{" "}
+            <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" className="profile-closing-link">
+              Plainspoken Blueprint
+            </a>
+            {" "}— former pastor, wedding officiant, and classically trained singer from Northeast Alabama. He builds software for community organizers and websites for small businesses. His writing has appeared in the{" "}
             <Link href="/essays/hope-in-the-wilderness" className="profile-closing-link">
               Anniston Star
             </Link>
-            . He writes personal essays on mental health, faith, and farming. He builds websites for small businesses at{" "}
-            <a href="https://headleyweb.com" target="_blank" rel="noopener noreferrer" className="profile-closing-link">
-              headleyweb.com
-            </a>
             .
           </p>
           <div className="mt-3">
