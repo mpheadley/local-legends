@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
     }
 
     await resend.emails.send({
-      from: "Southern Legends <noreply@headleyweb.com>",
+      from: "Southern Legends <noreply@plainspokenblueprint.com>",
       to: "matt@headleyweb.com",
       subject: `New comment on /${slug}`,
       html: `
