@@ -821,3 +821,37 @@ The habit isn't "publish a post every week." It's staying close enough to the ma
 Current strategy: free-to-fee via Southern Legends → warm outreach → Headley Web clients. Bottleneck is behavioral (initiating outreach), not strategic. One morning per week, rotate walk-ins through different towns in Northeast Alabama. Journal and Star writing builds regional authority passively alongside active outreach.
 
 Southern Legends grows into the go-to community resource for Northeast Alabama small businesses. Matt Headley is known as the guy who built it. Every business owner in the directory is a potential web design and SEO client. The community spotlight becomes a sustainable, compounding lead generation engine that no competitor can easily replicate.
+
+
+---
+
+## Session Decisions — May 12, 2026
+
+### Profile Priority & Conflict of Interest
+
+- **Ciara Smith (Mayor of Anniston) — profile first, coaching never (while employed by city)**
+  - Profile her as a Southern Legends longform piece after farmers market role is established (~1 month in)
+  - Angle toward national syndication: Bitter Southerner first, then AL.com, Politico Magazine, WaPo essay section
+  - No Blueprint coaching or testimonial asks while Matt is a city employee — conflict of interest
+  - Foreword candidate once full manuscript is complete
+
+- **Shannon Jenkins (CEO, United Way of Central Alabama)**
+  - Foreword or "In Praise Of" once full manuscript is drafted
+  - SL profile candidate — strong community credibility, cross-promotional value
+  - No conflict of interest concerns
+
+- **Jackson Hodges (PR Director, City of Anniston)**
+  - Strong SL profile candidate, good local credibility anchor
+  - Sequence after Ciara profile as follow-up city leadership piece
+  - No conflict of interest concerns
+
+### SL ↔ Plainspoken Blueprint Connection
+
+Every SL profile is a Wounded Healer story in miniature — the subject has a wound, a cleverness, a trial, a return. Writing the profiles IS writing the book. Full framework: `../plainspokenblueprint/FRAMEWORKS.md`
+
+### Farmers Market Role
+
+- Start date: summer 2026 (possibly within 1–2 weeks of May 12)
+- Duties: organizing the market, vendor coordination, grant applications
+- Keep city role cleanly separated from Blueprint business development
+- Use the role to deepen equity with Ciara and other city stakeholders before any Blueprint or book asks
