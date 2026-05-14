@@ -154,11 +154,16 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* PB section — Matt writes the prose */}
+          {/* PB section */}
           <div className="not-prose my-8 p-6 rounded-lg" style={{ background: "var(--color-ll-warm)", border: "1px solid var(--color-ll-border)" }}>
-            <p className="text-xs font-semibold uppercase tracking-widest text-ll-text-light mb-3">
-              Plainspoken Blueprint
-            </p>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="rounded-full flex items-center justify-center shrink-0" style={{ background: "#1e3a5f", width: "36px", height: "36px" }}>
+                <Image src="/images/acorn-mark-pb.png" alt="Plainspoken Blueprint" width={22} height={22} />
+              </div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-ll-text-light">
+                Plainspoken Blueprint
+              </p>
+            </div>
             <p className="text-ll-text leading-relaxed mb-4">
               <em>Clever confuses.</em> Clarity sells. I built{" "}
               <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-ll-primary)", textDecoration: "underline" }}>Plainspoken Blueprint</a>{" "}
