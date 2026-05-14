@@ -71,6 +71,7 @@ Written essays for now, not video. Written form is more intimate and lets reader
 - One outbound link: Plainspoken Blueprint with a plain-language description.
 - Drop: wedding officiant, classically trained singer, Anniston Star credit, Headley Web & SEO.
 - "Pastor and flower farmer" is load-bearing — connects to why the site exists.
+- No italic or bold on "Plainspoken Blueprint" — the link is enough. Formatting in prose bylines pulls focus from the sentence.
 
 ### Anniston Star / Calhoun Journal
 
