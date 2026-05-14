@@ -184,7 +184,7 @@ export default function AboutPage() {
                 href="https://plainspokenblueprint.com/audit"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: "inline-block", fontSize: "0.85rem", fontWeight: 700, color: "#fff", background: "#6b9f78", padding: "0.6rem 1.25rem", borderRadius: "0.375rem", textDecoration: "none" }}
+                className="pb-audit-btn"
               >
                 See how your website scores — free clarity audit →
               </a>

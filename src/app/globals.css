@@ -2316,3 +2316,19 @@ h1.profile-title-display {
   margin: 0;
 }
 .sl-nextup-link:hover .sl-nextup-name { color: var(--color-ll-primary); }
+
+.pb-audit-btn {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: #6b9f78;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.pb-audit-btn:hover {
+  background: #5a7a60;
+  transform: translateY(-2px);
+}
