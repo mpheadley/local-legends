@@ -160,17 +160,18 @@ export default function AboutPage() {
               Plainspoken Blueprint
             </p>
             <p className="text-ll-text leading-relaxed mb-4">
-              {/* Matt writes this paragraph — what PB does, who it's for, what you leave with */}
-              [Placeholder — Matt writes this: what PB does in plain language, who it&apos;s for, what a 90-min session produces. One paragraph. First person.]
+              <em>Clever confuses.</em> Clarity sells. I built{" "}
+              <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-ll-primary)", textDecoration: "underline" }}>Plainspoken Blueprint</a>{" "}
+              for small business owners who do good work but struggle to explain it clearly. One 90-minute session. One page: who your customer is, how you help them, exactly how to say it. That page becomes your homepage, your elevator pitch. I also build websites.
             </p>
             <a
-              href="https://plainspokenblueprint.com"
+              href="https://plainspokenblueprint.com/audit"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-sm font-bold"
               style={{ color: "var(--color-ll-primary)", textDecoration: "underline" }}
             >
-              Book a 90-min session →
+              See how your website scores — free clarity audit →
             </a>
           </div>
 
