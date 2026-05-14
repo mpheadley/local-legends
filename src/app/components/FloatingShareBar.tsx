@@ -11,15 +11,31 @@ interface Props {
 }
 
 export default function FloatingShareBar({ slug, title, description, basePath = "/profiles" }: Props) {
-  const [hidden, setHidden] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [atEnd, setAtEnd] = useState(false);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const sentinel = document.getElementById("share-bar-sentinel");
-    if (!sentinel) return;
-    const observer = new IntersectionObserver(([e]) => setHidden(e.isIntersecting), { threshold: 0 });
-    observer.observe(sentinel);
-    return () => observer.disconnect();
+    // Show only after hero has scrolled past; hide when closing section is reached
+    const heroSentinel = document.getElementById("hero-end-sentinel");
+    const endSentinel = document.getElementById("share-bar-sentinel");
+
+    const heroObserver = new IntersectionObserver(
+      ([e]) => setVisible(!e.isIntersecting),
+      { threshold: 0 }
+    );
+    const endObserver = new IntersectionObserver(
+      ([e]) => setAtEnd(e.isIntersecting),
+      { threshold: 0 }
+    );
+
+    if (heroSentinel) heroObserver.observe(heroSentinel);
+    if (endSentinel) endObserver.observe(endSentinel);
+
+    return () => {
+      heroObserver.disconnect();
+      endObserver.disconnect();
+    };
   }, []);
 
   const full = `${siteConfig.url}${basePath}/${slug}`;
@@ -36,7 +52,7 @@ export default function FloatingShareBar({ slug, title, description, basePath = 
   return (
     <div
       className="sl-float-share"
-      style={{ opacity: hidden ? 0 : 1, pointerEvents: hidden ? "none" : "auto" }}
+      style={{ opacity: visible && !atEnd ? 1 : 0, pointerEvents: visible && !atEnd ? "auto" : "none" }}
     >
       <span className="sl-float-share-label">Share</span>
       <a href={xUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on X" className="sl-float-share-btn">
