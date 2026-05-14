@@ -164,7 +164,7 @@ export default function AboutPage() {
             }} />
             {/* Acorn watermark */}
             <div aria-hidden="true" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-end", pointerEvents: "none", overflow: "hidden" }}>
-              <Image src="/images/acorn-mark-pb.png" alt="" width={160} height={160} style={{ opacity: 0.07, marginRight: "-20px" }} />
+              <Image src="/images/acorn-mark-pb.png" alt="" width={480} height={480} style={{ opacity: 0.07, marginRight: "-60px" }} />
             </div>
             {/* Content */}
             <div style={{ position: "relative", zIndex: 1, padding: "2rem 1.75rem" }}>
