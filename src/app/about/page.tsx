@@ -171,10 +171,11 @@ export default function AboutPage() {
               <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b9f78", marginBottom: "1rem" }}>
                 Plainspoken Blueprint
               </p>
-              <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", lineHeight: 1.2, marginBottom: "1rem" }}>
-                <span style={{ display: "block", color: "rgba(255,255,255,0.30)", fontStyle: "italic" }}>Clever confuses.</span>
+              <p style={{ fontFamily: "var(--font-heading)", fontSize: "2.25rem", lineHeight: 1.1, marginBottom: "1.25rem" }}>
+                <span style={{ display: "block", color: "rgba(255,255,255,0.28)", fontStyle: "italic" }}>Clever confuses.</span>
                 <span style={{ display: "block", color: "#fff", fontWeight: 900 }}>Clarity sells.</span>
               </p>
+              <div style={{ width: "2.5rem", height: "2px", background: "#6b9f78", marginBottom: "1.25rem" }} />
               <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "rgba(255,255,255,0.68)", marginBottom: "1.5rem" }}>
                 I built{" "}
                 <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6b9f78", textDecoration: "underline" }}>Plainspoken Blueprint</a>{" "}
@@ -186,7 +187,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="pb-audit-btn"
               >
-                See how your website scores — free clarity audit →
+                Score your message free →
               </a>
             </div>
           </div>
