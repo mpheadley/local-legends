@@ -430,6 +430,8 @@ export default async function ProfilePage({
         </div>
       )}
 
+      <div id="hero-end-sentinel" aria-hidden="true" />
+
       {/* Article Content */}
       <article className="bg-ll-light">
         <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 prose-profile">
