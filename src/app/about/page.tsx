@@ -154,30 +154,41 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* PB section */}
-          <div className="not-prose my-8 p-6 rounded-lg" style={{ background: "var(--color-ll-warm)", border: "1px solid var(--color-ll-border)" }}>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="rounded-full flex items-center justify-center shrink-0" style={{ background: "#1e3a5f", width: "36px", height: "36px" }}>
-                <Image src="/images/acorn-mark-pb.png" alt="Plainspoken Blueprint" width={22} height={22} />
-              </div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-ll-text-light">
+          {/* PB section — navy hero treatment */}
+          <div className="not-prose my-8 rounded-lg overflow-hidden" style={{ position: "relative", background: "#0c1632" }}>
+            {/* Blueprint grid */}
+            <div aria-hidden="true" style={{
+              position: "absolute", inset: 0,
+              backgroundImage: "linear-gradient(rgba(100,140,200,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(100,140,200,0.10) 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
+            }} />
+            {/* Acorn watermark */}
+            <div aria-hidden="true" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-end", pointerEvents: "none", overflow: "hidden" }}>
+              <Image src="/images/acorn-mark-pb.png" alt="" width={160} height={160} style={{ opacity: 0.07, marginRight: "-20px" }} />
+            </div>
+            {/* Content */}
+            <div style={{ position: "relative", zIndex: 1, padding: "2rem 1.75rem" }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b9f78", marginBottom: "1rem" }}>
                 Plainspoken Blueprint
               </p>
+              <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", lineHeight: 1.2, marginBottom: "1rem" }}>
+                <span style={{ display: "block", color: "rgba(255,255,255,0.30)", fontStyle: "italic" }}>Clever confuses.</span>
+                <span style={{ display: "block", color: "#fff", fontWeight: 900 }}>Clarity sells.</span>
+              </p>
+              <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "rgba(255,255,255,0.68)", marginBottom: "1.5rem" }}>
+                I built{" "}
+                <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6b9f78", textDecoration: "underline" }}>Plainspoken Blueprint</a>{" "}
+                for small business owners who do good work but struggle to explain it clearly. One 90-minute session. One page: who your customer is, how you help them, exactly how to say it. That page becomes your homepage, your elevator pitch. I also build websites.
+              </p>
+              <a
+                href="https://plainspokenblueprint.com/audit"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-block", fontSize: "0.85rem", fontWeight: 700, color: "#fff", background: "#6b9f78", padding: "0.6rem 1.25rem", borderRadius: "0.375rem", textDecoration: "none" }}
+              >
+                See how your website scores — free clarity audit →
+              </a>
             </div>
-            <p className="text-ll-text leading-relaxed mb-4">
-              <em>Clever confuses.</em> Clarity sells. I built{" "}
-              <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-ll-primary)", textDecoration: "underline" }}>Plainspoken Blueprint</a>{" "}
-              for small business owners who do good work but struggle to explain it clearly. One 90-minute session. One page: who your customer is, how you help them, exactly how to say it. That page becomes your homepage, your elevator pitch. I also build websites.
-            </p>
-            <a
-              href="https://plainspokenblueprint.com/audit"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-sm font-bold"
-              style={{ color: "var(--color-ll-primary)", textDecoration: "underline" }}
-            >
-              See how your website scores — free clarity audit →
-            </a>
           </div>
 
           <h2>Know Someone Worth Writing About?</h2>
