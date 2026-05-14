@@ -34,15 +34,11 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
             <Link href="/about" className="profile-closing-name">
               Matt Headley
             </Link>
-            ,{" "}
+            {" "}is a former pastor and flower farmer from Northeast Alabama. He is the founder and editor of Southern Legends and the founder of{" "}
             <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" className="profile-closing-link">
               Plainspoken Blueprint
             </a>
-            {" "}— former pastor, wedding officiant, and classically trained singer from Northeast Alabama. He builds software for community organizers and websites for small businesses. His writing has appeared in the{" "}
-            <Link href="/essays/hope-in-the-wilderness" className="profile-closing-link">
-              Anniston Star
-            </Link>
-            .
+            , a messaging coaching practice for small businesses.
           </p>
           <div className="mt-3">
             <Link

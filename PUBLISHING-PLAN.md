@@ -63,17 +63,31 @@ Written essays for now, not video. Written form is more intimate and lets reader
 
 ## Byline Strategy
 
-**Recommended byline for both the Anniston Star and the Calhoun Journal:**
+### Southern Legends site (ClosingSection.tsx — decided May 2026)
 
-> Matt Headley is a former pastor, flower farmer, and classically trained singer from Northeast Alabama. He writes local business profiles and personal essays at Southern Legends (https://southernlegends.blog). He builds websites for small businesses at Headley Web & SEO.
+> Matt Headley is a former pastor and flower farmer from Northeast Alabama. He is the founder and editor of Southern Legends and the founder of [Plainspoken Blueprint](https://plainspokenblueprint.com), a messaging coaching practice for small businesses.
 
-**Key points:**
+- No link on Southern Legends — redundant since the reader is already on the site.
+- One outbound link: Plainspoken Blueprint with a plain-language description.
+- Drop: wedding officiant, classically trained singer, Anniston Star credit, Headley Web & SEO.
+- "Pastor and flower farmer" is load-bearing — connects to why the site exists.
 
-- Only one link: Southern Legends. Keeps the byline clean and editorial rather than promotional.
-- Headley Web & SEO mentioned in plain text — still provides brand recognition and local SEO benefit without a second link.
-- Southern Legends mentioned before Headley Web & SEO since that's the content readers are engaging with.
-- The pastor / singer / flower farmer framing establishes you as a human with a story, not just a service provider.
-- Description of the Southern Legends content sets expectations for both business profiles and personal essays.
+### Anniston Star / Calhoun Journal
+
+> Matt Headley is a former pastor and flower farmer from Northeast Alabama. He writes local business profiles and personal essays at Southern Legends (southernlegends.blog). His writing has appeared in the Anniston Star.
+
+- Keep the Anniston Star credit for other outlet submissions.
+- Drop Headley Web & SEO from journalism bylines.
+
+### Foothills Magazine (decided May 2026)
+
+> Matt Headley covers small business and community stories in Northeast Alabama. He is the founder and editor of Southern Legends (southernlegends.blog). His writing has appeared in the Anniston Star.
+
+- Drop the personal backstory (farm, pastor, singer) — doesn't reinforce the submission in this context.
+- "Founder and editor" carries more weight than "writes profiles" with a magazine editor.
+- Anniston Star credit is the publication credential that matters here.
+- No Plainspoken Blueprint, no Headley Web — this is a journalism byline, not a business card.
+- Send headshot with submission.
 
 **Send the exact byline to editors when pitching** — editors sometimes rewrite bylines, so being upfront prevents surprises.
 
