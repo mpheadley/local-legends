@@ -25,7 +25,7 @@ export default function FloatingShareBar({ slug, title, description, basePath = 
       { threshold: 0 }
     );
     const endObserver = new IntersectionObserver(
-      ([e]) => setAtEnd(e.isIntersecting),
+      ([e]) => setAtEnd(e.isIntersecting || e.boundingClientRect.top < 0),
       { threshold: 0 }
     );
 
