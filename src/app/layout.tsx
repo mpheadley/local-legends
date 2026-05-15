@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Sans_3, Fraunces, Rock_Salt, Zeyada, Permanent_Marker, Caveat } from "next/font/google";
+import { Source_Sans_3, Fraunces, Rock_Salt, Zeyada, Permanent_Marker, Caveat, Barlow_Condensed } from "next/font/google";
 import { ViewTransitions } from "next-view-transitions";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -19,6 +19,7 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
+  style: ["normal", "italic"],
   axes: ["opsz"],
 });
 
@@ -49,6 +50,13 @@ const caveat = Caveat({
   display: "swap",
 });
 
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-condensed",
+  weight: ["600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: `${siteConfig.name} — ${siteConfig.tagline}`,
@@ -68,7 +76,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/images/southern-legends-og.png",
+        url: "/images/southern-legends-og.webp",
         width: 2396,
         height: 1250,
         alt: "Southern Legends — Stories from Northeast Alabama",
@@ -79,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/images/southern-legends-og.png"],
+    images: ["/images/southern-legends-og.webp"],
   },
   authors: [{ name: siteConfig.author }],
   robots: {
@@ -107,7 +115,7 @@ export default function RootLayout({
         />
       </head>
       {/* Built by Headley Web & SEO | headleyweb.com */}
-      <body className={`${sourceSans.variable} ${fraunces.variable} ${rockSalt.variable} ${zeyada.variable} ${permanentMarker.variable} ${caveat.variable} antialiased`}>
+      <body className={`${sourceSans.variable} ${fraunces.variable} ${rockSalt.variable} ${zeyada.variable} ${permanentMarker.variable} ${caveat.variable} ${barlowCondensed.variable} antialiased`}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-ll-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"

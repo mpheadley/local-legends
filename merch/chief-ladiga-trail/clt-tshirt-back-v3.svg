@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3600 4800" width="3600" height="4800"
+     role="img" aria-label="Chief Ladiga Trail t-shirt — back print v3 with landmark callouts">
+
+<!--
+  PRINT SPEC — BACK PRINT v3
+  ─────────────────────────────────────────────
+  Canvas: 3600×4800px = 12×16 inches at 300 DPI
+  New in v3: landmark silhouette callouts with connecting lines
+    - Anniston: 1925 depot (classical revival)
+    - Weaver: tree tunnel (arching canopy)
+    - Jacksonville: Houston Cole Library tower (13 stories, JSU)
+    - Piedmont: trail terminus marker
+  Also carries all v2 additions:
+    - Silver Comet extension, Jacksonville + Piedmont historical notes
+    - chiefladiga.org, CUSSETA spelling fix
+-->
+
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&amp;display=swap');
+    text { font-family: 'IM Fell English', Georgia, serif; }
+  </style>
+  <path id="trailPath" fill="none" d="M 300.0,3708.5 L 341.0,3493.0 L 375.7,3285.4 L 390.9,3051.4 L 392.5,3047.2 L 393.0,3044.6 L 393.6,3043.5 L 393.6,3043.0 L 396.2,3035.7 L 400.9,3020.4 L 401.5,3018.3 L 402.5,3015.7 L 403.0,3013.6 L 403.0,3012.0 L 403.6,3011.0 L 403.6,3008.8 L 403.6,3006.7 L 404.1,3005.2 L 404.1,3003.1 L 404.1,3000.4 L 403.6,2997.8 L 403.6,2994.7 L 403.0,2992.6 L 403.0,2989.9 L 403.0,2987.3 L 403.6,2984.7 L 403.6,2982.0 L 404.1,2979.4 L 405.1,2975.7 L 405.7,2974.2 L 406.2,2972.6 L 406.7,2971.0 L 407.8,2969.4 L 414.6,2956.3 L 417.8,2950.0 L 419.9,2945.8 L 421.4,2943.7 L 422.0,2942.1 L 424.6,2936.8 L 428.3,2929.5 L 434.0,2919.0 L 436.7,2913.7 L 437.7,2912.1 L 438.8,2909.5 L 439.8,2906.9 L 443.0,2901.6 L 444.6,2898.5 L 446.7,2894.8 L 450.9,2888.5 L 453.0,2885.3 L 455.6,2882.2 L 459.3,2876.9 L 460.3,2875.9 L 463.5,2871.6 L 466.6,2866.9 L 468.7,2863.8 L 472.9,2858.5 L 476.6,2853.8 L 480.3,2849.0 L 483.5,2844.8 L 485.0,2842.7 L 488.2,2838.0 L 489.2,2835.9 L 490.3,2833.8 L 491.9,2830.1 L 495.0,2822.8 L 495.5,2820.7 L 495.5,2820.1 L 496.1,2818.0 L 496.6,2815.4 L 497.1,2812.8 L 497.1,2810.7 L 497.7,2804.9 L 497.7,2800.7 L 497.7,2795.4 L 497.7,2792.8 L 498.2,2789.6 L 498.2,2786.5 L 498.7,2783.9 L 499.2,2781.2 L 499.2,2779.7 L 500.3,2777.0 L 500.8,2773.9 L 502.4,2770.2 L 502.9,2768.1 L 504.5,2765.5 L 505.5,2763.4 L 506.1,2761.8 L 509.2,2757.1 L 510.3,2755.5 L 511.8,2753.4 L 515.0,2749.7 L 517.6,2747.1 L 520.8,2743.9 L 531.8,2732.9 L 536.0,2728.7 L 540.8,2724.5 L 555.0,2709.7 L 576.0,2689.8 L 585.4,2680.3 L 593.8,2671.9 L 599.1,2666.6 L 607.0,2659.3 L 610.1,2656.1 L 614.4,2650.9 L 618.0,2646.1 L 621.7,2641.4 L 625.4,2635.1 L 628.5,2629.8 L 629.6,2627.2 L 631.7,2623.0 L 633.8,2618.3 L 636.4,2611.4 L 639.1,2602.5 L 640.6,2596.2 L 641.7,2592.5 L 642.7,2587.3 L 643.3,2581.0 L 643.8,2574.6 L 643.8,2565.7 L 643.8,2561.5 L 643.8,2561.0 L 644.3,2538.4 L 644.3,2535.7 L 644.8,2533.6 L 645.4,2531.5 L 645.9,2528.9 L 646.4,2525.8 L 646.9,2522.6 L 648.0,2520.0 L 648.5,2517.3 L 653.3,2505.8 L 676.4,2446.9 L 681.6,2433.8 L 682.2,2432.7 L 690.0,2412.7 L 690.6,2411.7 L 694.8,2400.6 L 697.9,2392.2 L 700.0,2388.6 L 701.6,2384.4 L 707.9,2368.1 L 709.5,2363.9 L 710.0,2362.8 L 713.7,2362.3 L 717.4,2355.4 L 717.4,2344.9 L 718.4,2339.1 L 724.7,2324.4 L 733.7,2301.8 L 744.7,2272.9 L 769.4,2226.1 L 815.2,2143.6 L 838.8,2106.8 L 867.7,2070.5 L 907.7,2020.1 L 933.4,1987.5 L 968.7,1950.1 L 993.9,1927.0 L 1031.7,1901.3 L 1099.0,1858.2 L 1157.4,1824.0 L 1211.0,1796.7 L 1266.2,1772.5 L 1328.2,1748.8 L 1394.4,1706.8 L 1435.4,1690.5 L 1487.0,1682.1 L 1544.8,1648.9 L 1597.4,1604.3 L 1647.8,1563.3 L 1693.0,1540.7 L 1744.0,1526.5 L 1792.9,1524.9 L 1841.3,1519.1 L 1887.0,1520.7 L 1936.9,1521.7 L 2000.5,1521.7 L 2083.1,1522.3 L 2143.0,1541.2 L 2173.5,1555.9 L 2242.4,1592.2 L 2301.2,1624.2 L 2338.5,1657.9 L 2374.8,1687.8 L 2421.6,1702.6 L 2463.7,1677.9 L 2505.2,1650.0 L 2557.8,1602.7 L 2620.3,1548.5 L 2657.1,1510.2 L 2691.8,1486.5 L 2747.0,1472.3 L 2805.3,1456.5 L 2859.0,1430.3 L 2901.0,1403.5 L 2930.5,1358.2 L 2970.9,1336.2 L 3034.0,1319.3 L 3101.8,1312.5 L 3150.7,1318.8 L 3192.2,1317.2 L 3253.2,1302.5 L 3297.9,1292.5 L 3300.0,1291.5"/>
+  <path id="silverComet" fill="none" d="M 3300.0,1291.5 L 3450,1150 L 3560,1050"/>
+</defs>
+
+
+<!-- ── TITLE ─────────────────────────────────────────────── -->
+<text x="1800" y="200" text-anchor="middle"
+      font-size="200" fill="#292524" font-weight="bold" letter-spacing="32">CHIEF LADIGA TRAIL</text>
+<text x="1800" y="350" text-anchor="middle"
+      font-size="150" fill="#292524" letter-spacing="12" font-style="italic">Anniston to Piedmont, Alabama · 39.5 miles</text>
+<text x="1800" y="600" text-anchor="middle"
+      font-size="220" fill="#9A3412" font-style="italic" letter-spacing="3">1832 — 2032</text>
+
+
+<!-- ── TRAIL ─────────────────────────────────────────────── -->
+<g>
+  <use href="#trailPath" stroke="#292524" stroke-width="60" stroke-linecap="round" stroke-linejoin="round" opacity="0.20"/>
+  <use href="#trailPath" stroke="#CA8A04" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<use href="#silverComet" stroke="#292524" stroke-width="18" stroke-linecap="round"
+     stroke-dasharray="40,40" opacity="0.35"/>
+
+
+<!-- ── TOWN DOTS ──────────────────────────────────────────── -->
+<circle cx="300" cy="3708.5" r="56" fill="#9A3412"/>
+<circle cx="300" cy="3708.5" r="56" fill="none" stroke="#292524" stroke-width="14"/>
+<text x="380" y="3735" font-size="80" fill="#292524" font-weight="bold" letter-spacing="5">ANNISTON</text>
+<text x="380" y="3808" font-size="50" fill="#292524" font-style="italic" opacity="0.60">Amtrak depot · 2025 extension</text>
+
+<circle cx="444.6" cy="2912.1" r="40" fill="none" stroke="#292524" stroke-width="13"/>
+<text x="524" y="2935" font-size="70" fill="#292524" letter-spacing="3">WEAVER</text>
+
+<circle cx="713.7" cy="2364.4" r="48" fill="none" stroke="#292524" stroke-width="13"/>
+<text x="793" y="2390" font-size="78" fill="#292524" letter-spacing="4">JACKSONVILLE</text>
+<text x="793" y="2458" font-size="52" fill="#292524" font-style="italic" opacity="0.60">Founded on Ladiga's allotment, 1833</text>
+
+<circle cx="1844.9" cy="1525.9" r="56" fill="#9A3412"/>
+<circle cx="1844.9" cy="1525.9" r="56" fill="none" stroke="#292524" stroke-width="14"/>
+<text x="1844.9" y="1450" text-anchor="middle" font-size="80" fill="#292524" font-weight="bold" letter-spacing="5">PIEDMONT</text>
+<text x="1844.9" y="1375" text-anchor="middle" font-size="50" fill="#292524" font-style="italic" opacity="0.60">Chief Ladiga is buried near here</text>
+
+<circle cx="3300.5" cy="1293.6" r="40" fill="none" stroke="#292524" stroke-width="13"/>
+<text x="3300.5" y="1230" text-anchor="middle" font-size="60" fill="#292524" letter-spacing="3" font-style="italic">→ GEORGIA</text>
+<text x="3300.5" y="1158" text-anchor="middle" font-size="44" fill="#292524" font-style="italic" opacity="0.50">Silver Comet Trail · Atlanta · 105 mi</text>
+
+
+<!-- ── TREATY STAMP ──────────────────────────────────────── -->
+<circle cx="2100" cy="3100" r="260" fill="none" stroke="#9A3412" stroke-width="11" stroke-dasharray="14,18"/>
+<circle cx="2100" cy="3100" r="200" fill="none" stroke="#9A3412" stroke-width="4"/>
+<g transform="translate(2100, 2950)">
+  <path d="M 0,-68 L 16,-12 L 74,-12 L 27,21 L 45,78 L 0,44 L -45,78 L -27,21 L -74,-12 L -16,-12 Z" fill="#9A3412"/>
+</g>
+<text x="2100" y="3200" text-anchor="middle" font-size="220" fill="#9A3412" font-style="italic" font-weight="bold">1832</text>
+<text x="2100" y="3360" text-anchor="middle" font-size="120" fill="#9A3412" letter-spacing="5" font-weight="bold">TREATY OF CUSSETA</text>
+
+
+<!-- ════════════════════════════════════════════════════════
+     LANDMARK CALLOUTS — connecting lines first, then boxes
+     ════════════════════════════════════════════════════════ -->
+
+<!-- Connecting lines — thin, low opacity -->
+<!-- Anniston depot line: dot (300,3708) → box left edge (1380,3800) -->
+<line x1="356" y1="3708" x2="1380" y2="3800" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
+<!-- Weaver tree tunnel: dot (484,2912) → box left edge (1320,2680) -->
+<line x1="484" y1="2912" x2="1320" y2="2740" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
+<!-- JSU tower: dot (761,2364) → box left edge (1620,2180) -->
+<line x1="761" y1="2364" x2="1620" y2="2260" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
+<!-- Piedmont: dot (1900,1526) → box left edge (2500,1700) -->
+<line x1="1900" y1="1526" x2="2500" y2="1760" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
+
+
+<!-- ── CALLOUT 1: ANNISTON DEPOT ─────────────────────────
+     1925 Southern Railway, classical revival
+     Pediment over 3 round-arched windows, two side wings
+     Box: 1380,3720 → 2280,4080 (900w × 360h) -->
+<rect x="1380" y="3720" width="900" height="360" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
+
+<g transform="translate(1440, 3740)">
+  <!-- Side wings -->
+  <rect x="0" y="140" width="140" height="110" fill="#292524" opacity="0.85"/>
+  <rect x="640" y="140" width="140" height="110" fill="#292524" opacity="0.85"/>
+  <!-- Main body -->
+  <rect x="100" y="150" width="580" height="100" fill="#292524" opacity="0.85"/>
+  <!-- Central pediment -->
+  <polygon points="200,150 390,55 580,150" fill="#292524" opacity="0.85"/>
+  <!-- Three arched windows (light cutouts) -->
+  <ellipse cx="285" cy="148" rx="28" ry="36" fill="#fafaf7" opacity="0.7"/>
+  <ellipse cx="390" cy="148" rx="28" ry="36" fill="#fafaf7" opacity="0.7"/>
+  <ellipse cx="495" cy="148" rx="28" ry="36" fill="#fafaf7" opacity="0.7"/>
+  <!-- Platform -->
+  <rect x="-10" y="248" width="800" height="14" fill="#292524" opacity="0.6"/>
+  <!-- Label -->
+  <text x="390" y="295" text-anchor="middle" font-size="44" fill="#292524" opacity="0.70" font-style="italic">Anniston Depot · 1925</text>
+</g>
+
+
+<!-- ── CALLOUT 2: WEAVER TREE TUNNEL ─────────────────────
+     Arching canopy over the trail corridor
+     Box: 1320,2620 → 2160,2900 (840w × 280h) -->
+<rect x="1320" y="2620" width="840" height="280" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
+
+<g transform="translate(1360, 2630)">
+  <!-- Left trunk -->
+  <rect x="20" y="165" width="28" height="80" fill="#292524" opacity="0.80"/>
+  <!-- Right trunk -->
+  <rect x="712" y="165" width="28" height="80" fill="#292524" opacity="0.80"/>
+  <!-- Left canopy arc -->
+  <path d="M 0,165 Q 80,40 380,20" stroke="#292524" stroke-width="55" fill="none" stroke-linecap="round" opacity="0.80"/>
+  <!-- Right canopy arc -->
+  <path d="M 760,165 Q 680,40 380,20" stroke="#292524" stroke-width="55" fill="none" stroke-linecap="round" opacity="0.80"/>
+  <!-- Trail path through tunnel (gap at bottom) -->
+  <rect x="340" y="220" width="80" height="10" fill="#fafaf7" opacity="0.5"/>
+  <!-- Label -->
+  <text x="380" y="245" text-anchor="middle" font-size="44" fill="#292524" opacity="0.70" font-style="italic">The Tree Tunnel · Weaver</text>
+</g>
+
+
+<!-- ── CALLOUT 3: JSU HOUSTON COLE LIBRARY ───────────────
+     13-story tower, tallest academic building in Alabama
+     Box: 1620,2080 → 2160,2580 (540w × 500h) -->
+<rect x="1620" y="2080" width="540" height="500" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
+
+<g transform="translate(1660, 2100)">
+  <!-- Tower body — narrow, 13-story -->
+  <rect x="155" y="0" width="150" height="390" fill="#292524" opacity="0.85"/>
+  <!-- Penthouse / mechanical top -->
+  <rect x="165" y="-22" width="130" height="26" fill="#292524" opacity="0.85"/>
+  <!-- Base plaza — wider -->
+  <rect x="80" y="385" width="300" height="28" fill="#292524" opacity="0.75"/>
+  <!-- Window grid — horizontal floor lines -->
+  <line x1="155" y1="30"  x2="305" y2="30"  stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="60"  x2="305" y2="60"  stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="90"  x2="305" y2="90"  stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="120" x2="305" y2="120" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="150" x2="305" y2="150" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="180" x2="305" y2="180" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="210" x2="305" y2="210" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="240" x2="305" y2="240" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="270" x2="305" y2="270" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="300" x2="305" y2="300" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="330" x2="305" y2="330" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <line x1="155" y1="360" x2="305" y2="360" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
+  <!-- Vertical center divide -->
+  <line x1="230" y1="0" x2="230" y2="385" stroke="#fafaf7" stroke-width="4" opacity="0.4"/>
+  <!-- Label -->
+  <text x="230" y="440" text-anchor="middle" font-size="40" fill="#292524" opacity="0.70" font-style="italic">Houston Cole Library</text>
+  <text x="230" y="483" text-anchor="middle" font-size="36" fill="#292524" opacity="0.55" font-style="italic">Jacksonville State · 1972</text>
+</g>
+
+
+<!-- ── CALLOUT 4: PIEDMONT TRAIL END ─────────────────────
+     Trail terminus marker post
+     Box: 2500,1700 → 3300,1960 (800w × 260h) -->
+<rect x="2500" y="1700" width="800" height="260" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
+
+<g transform="translate(2540, 1715)">
+  <!-- Post -->
+  <rect x="320" y="20" width="22" height="180" fill="#292524" opacity="0.85"/>
+  <!-- Sign board — main -->
+  <rect x="200" y="20" width="260" height="75" rx="4" fill="#292524" opacity="0.85"/>
+  <!-- Sign text (white) -->
+  <text x="330" y="67" text-anchor="middle" font-size="38" fill="#fafaf7" opacity="0.90" font-weight="bold" letter-spacing="3">END OF TRAIL</text>
+  <!-- Secondary sign below -->
+  <rect x="230" y="108" width="200" height="52" rx="3" fill="#292524" opacity="0.70"/>
+  <text x="330" y="140" text-anchor="middle" font-size="30" fill="#fafaf7" opacity="0.80">39.5 mi</text>
+  <!-- Ground line -->
+  <line x1="260" y1="200" x2="400" y2="200" stroke="#292524" stroke-width="8" opacity="0.50"/>
+  <!-- Label -->
+  <text x="330" y="230" text-anchor="middle" font-size="40" fill="#292524" opacity="0.70" font-style="italic">Piedmont Terminus</text>
+</g>
+
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<text x="1800" y="4720" text-anchor="middle"
+      font-size="70" fill="#292524" letter-spacing="8" opacity="0.38" font-style="italic">chiefladiga.org</text>
+
+</svg>

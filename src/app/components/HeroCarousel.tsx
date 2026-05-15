@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import type { Profile } from "@/lib/profiles";
+import { resolveCardTitle } from "@/lib/card-title-style";
+
 
 
 interface HeroCarouselProps {
@@ -15,13 +17,22 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
   const [paused, setPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
 
+  const pauseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const advance = useCallback(() => {
     setCurrent((i) => (i + 1) % profiles.length);
   }, [profiles.length]);
 
+  const nudge = (fn: () => void) => {
+    fn();
+    setPaused(true);
+    if (pauseTimer.current) clearTimeout(pauseTimer.current);
+    pauseTimer.current = setTimeout(() => setPaused(false), 4000);
+  };
+
   useEffect(() => {
     if (paused || profiles.length <= 1) return;
-    const id = setInterval(advance, 6000);
+    const id = setInterval(advance, 2200);
     return () => clearInterval(id);
   }, [advance, paused, profiles.length]);
 
@@ -46,154 +57,129 @@ export default function HeroCarousel({ profiles }: HeroCarouselProps) {
 
   return (
     <div
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      className="relative overflow-hidden"
+      style={{ height: "calc(100svh - 4rem)" }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
-      {/* Arrow + slide wrapper — relative so arrows can position freely without being clipped */}
-      <div className="relative h-[calc(100svh-8.5rem)] md:h-[620px]">
+      {/* Sliding track */}
+      <div
+        className="flex h-full transition-transform duration-300 ease-in-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {profiles.map((profile, i) => {
+          const { slug, frontmatter } = profile;
+          const { name, location, heroImage, heroAlt, heroPosition, heroPositionMobile } = frontmatter;
+          const { displayTitle, resolvedHtml, useHtml, titleStyle } = resolveCardTitle(frontmatter, {
+            containerPx: 346,
+            scale: 1.4,
+            opsz: 72,
+            extraStyle: { lineHeight: "1.0", overflowWrap: "normal", maxWidth: "100%" },
+          });
 
-        {/* Prev arrow — sits just left of the image */}
-        {profiles.length > 1 && (
-          <button
-            onClick={prev}
-            className="absolute -left-10 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 text-white/60 hover:text-white transition-colors"
-            aria-label="Previous story"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-        )}
-
-        {/* Next arrow — right edge of text column */}
-        {profiles.length > 1 && (
-          <button
-            onClick={next}
-            className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 text-white/60 hover:text-white transition-colors"
-            aria-label="Next story"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
-        )}
-
-        {/* Clipped sliding area — full viewport width so slides animate edge-to-edge */}
-        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen overflow-hidden">
-        {/* Sliding track — touch handlers live here for swipe support */}
-        <div
-          className="flex h-full transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          {profiles.map((profile, i) => (
+          return (
             <Link
-              key={profile.slug}
-              href={`/profiles/${profile.slug}`}
+              key={slug}
+              href={`/profiles/${slug}`}
               tabIndex={i === current ? 0 : -1}
-              className="w-full h-full flex-shrink-0 group"
+              className="relative w-full h-full flex-shrink-0 block"
+              style={{ viewTransitionName: `profile-hero-${slug}` } as React.CSSProperties}
             >
-              <div className="h-full max-w-6xl mx-auto px-6 flex flex-col md:grid md:grid-cols-2 md:gap-12 md:items-center">
-              {/* Image — band on mobile, full column on desktop */}
-              <div className="relative h-[45%] flex-shrink-0 md:h-full md:order-last overflow-hidden rounded-sm">
-                {profile.frontmatter.heroImage ? (
-                  <Image
-                    src={profile.frontmatter.heroImage}
-                    alt={profile.frontmatter.heroAlt || profile.frontmatter.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority={i === 0}
-                    style={profile.frontmatter.heroPosition ? { objectPosition: profile.frontmatter.heroPosition } : undefined}
+              {/* Image */}
+              {heroImage ? (
+                <Image
+                  src={heroImage}
+                  alt={heroAlt || name}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                  priority={i === 0}
+                  style={{ objectPosition: heroPositionMobile || heroPosition || "center center" }}
+                />
+              ) : (
+                <div className="absolute inset-0" style={{ backgroundColor: "#292524" }} />
+              )}
+
+              {/* Gradient */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background: "linear-gradient(to top, rgba(20,16,14,0.95) 0%, rgba(20,16,14,0.6) 35%, rgba(20,16,14,0.08) 65%, transparent 100%)",
+                }}
+              />
+
+              {/* Bottom content */}
+              <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 flex flex-col gap-2">
+                {/* Title */}
+                {useHtml ? (
+                  <h2
+                    className="leading-[1.0]"
+                    style={titleStyle}
+                    dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
                   />
                 ) : (
-                  <div className="w-full h-full bg-ll-dark flex items-center justify-center">
-                    <span
-                      className="text-white/[0.06] select-none"
-                      style={{
-                        fontFamily: "var(--font-heading)",
-                        fontSize: "clamp(14rem, 30vw, 28rem)",
-                        fontWeight: 900,
-                        lineHeight: 0.85,
-                      }}
-                      aria-hidden="true"
-                    >
-                      {profile.frontmatter.name.charAt(0)}
-                    </span>
-                  </div>
+                  <h2
+                    className="leading-[1.0]"
+                    style={titleStyle}
+                  >
+                    {displayTitle}
+                  </h2>
                 )}
+
+                {/* Name · Location */}
+                <p
+                  className="leading-snug mt-1"
+                  style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", color: "rgba(250,250,247,0.65)" }}
+                >
+                  {name}&nbsp;&nbsp;·&nbsp;&nbsp;{location}
+                </p>
               </div>
 
-              {/* Text */}
-              <div className="flex flex-col gap-3 py-4 px-4 md:flex-1 md:min-h-0 md:justify-between md:px-0 md:py-6 md:h-full md:flex-none md:w-full">
-                {/* Top: title + subtitle + meta — min-h-0 allows flex shrink */}
-                <div className="min-h-0 overflow-hidden">
-                  {profile.frontmatter.titleHtml ? (
-                    <h1
-                      className="text-white font-bold tracking-tight leading-[0.9] uppercase line-clamp-4 hero-headline"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                      dangerouslySetInnerHTML={{ __html: profile.frontmatter.titleHtml }}
+              {/* Progress dots — pinned to bottom edge, centered */}
+              {profiles.length > 1 && (
+                <div className="absolute bottom-0 left-0 right-0 pb-5 flex justify-center items-center gap-1.5 pointer-events-none">
+                  {profiles.map((_, j) => (
+                    <span
+                      key={j}
+                      className="block h-[3px] rounded-full transition-all duration-300"
+                      style={{
+                        width: j === current ? "1.75rem" : "0.375rem",
+                        backgroundColor: j === current ? "#FAFAF7" : "rgba(255,255,255,0.35)",
+                      }}
                     />
-                  ) : (
-                    <h1
-                      className="text-white font-bold tracking-tight leading-[0.9] uppercase line-clamp-4 hero-headline"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      {profile.frontmatter.title}
-                    </h1>
-                  )}
-                  {profile.frontmatter.subtitle && (
-                    <p
-                      className="mt-4 text-white/70 text-base md:text-xl italic leading-relaxed max-w-md line-clamp-4"
-                      style={{ fontFamily: "var(--font-heading)", fontWeight: 300 }}
-                    >
-                      {profile.frontmatter.subtitle}
-                    </p>
-                  )}
-                  <div className="mt-4 w-12 h-[2px] bg-white/30" aria-hidden="true" />
-                  <div className="mt-4 flex items-center gap-3 text-sm md:text-base text-white/50 uppercase tracking-widest">
-                    <span>{profile.frontmatter.name}</span>
-                    <span aria-hidden="true">&middot;</span>
-                    <span>{profile.frontmatter.location}</span>
-                  </div>
+                  ))}
                 </div>
-
-                {/* Bottom: CTA — always visible */}
-                <span className="flex-shrink-0 inline-flex items-center gap-2 text-base md:text-lg font-semibold text-ll-accent group-hover:gap-3 transition-all duration-300">
-                  Read the story
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 8h10M9 4l4 4-4 4" />
-                  </svg>
-                </span>
-              </div>
-              </div>
+              )}
             </Link>
-          ))}
-        </div>
-        </div>{/* end overflow-hidden */}
-      </div>{/* end relative wrapper */}
+          );
+        })}
+      </div>
 
-      {/* Nav dots — outside the clipped area, always visible */}
+      {/* Prev / Next arrows */}
       {profiles.length > 1 && (
-        <div className="flex items-center justify-center gap-0 mt-4">
-          {profiles.map((_, j) => (
-            <button
-              key={j}
-              onClick={() => setCurrent(j)}
-              className="relative flex items-center justify-center p-3"
-              aria-label={`Show story ${j + 1}`}
-            >
-              <span
-                className={`block h-1.5 rounded-full transition-all duration-300 ${
-                  j === current
-                    ? "w-6 bg-white"
-                    : "w-1.5 bg-white/30 hover:bg-white/60"
-                }`}
-              />
-            </button>
-          ))}
-        </div>
+        <>
+          <button
+            onClick={() => nudge(prev)}
+            aria-label="Previous story"
+            className="absolute left-3 top-[65%] -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 rounded-full transition-opacity duration-200 opacity-50 hover:opacity-90"
+            style={{ backgroundColor: "rgba(20,16,14,0.55)", border: "1px solid rgba(255,255,255,0.15)" }}
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M9 2L4 7L9 12" stroke="#FAFAF7" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          <button
+            onClick={() => nudge(next)}
+            aria-label="Next story"
+            className="absolute right-3 top-[65%] -translate-y-1/2 z-10 flex items-center justify-center w-8 h-8 rounded-full transition-opacity duration-200 opacity-50 hover:opacity-90"
+            style={{ backgroundColor: "rgba(20,16,14,0.55)", border: "1px solid rgba(255,255,255,0.15)" }}
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M5 2L10 7L5 12" stroke="#FAFAF7" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </>
       )}
     </div>
   );

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function SubscribeCTA({ variant = "section" }: { variant?: "section" | "inline" }) {
+export default function SubscribeCTA({ variant = "section", source }: { variant?: "section" | "inline"; source?: string }) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -15,7 +15,7 @@ export default function SubscribeCTA({ variant = "section" }: { variant?: "secti
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), firstName: firstName.trim() }),
+        body: JSON.stringify({ email: email.trim(), firstName: firstName.trim(), source: source ?? (variant === "inline" ? "footer" : "homepage") }),
       });
       if (res.ok) {
         setStatus("success");
@@ -39,7 +39,7 @@ export default function SubscribeCTA({ variant = "section" }: { variant?: "secti
           Stories from Northeast Alabama
         </p>
         <p className="text-sm text-white/60 mb-3">
-          Profiles of local makers and business owners, plus occasional personal writing from Matt. One list. No spam.
+          Profiles of local makers and business owners, plus occasional personal writing from Matt.
         </p>
 
         {status === "success" ? (
@@ -87,7 +87,7 @@ export default function SubscribeCTA({ variant = "section" }: { variant?: "secti
   }
 
   return (
-    <section className="subscribe-cta bg-ll-dark text-white">
+    <section className="subscribe-cta text-white" style={{ background: "linear-gradient(to right, #1e3527, #5c3d02)" }}>
       <div className="max-w-xl mx-auto px-6 py-14 md:py-18 text-center">
         <h2
           className="text-2xl md:text-3xl font-bold mb-3"
@@ -95,9 +95,6 @@ export default function SubscribeCTA({ variant = "section" }: { variant?: "secti
         >
           Stories from Northeast Alabama — and from the person writing them.
         </h2>
-        <p className="text-white/60 mb-8 text-base leading-relaxed">
-          Profiles of local makers and business owners, plus occasional personal writing from Matt. One list. No spam.
-        </p>
 
         {status === "success" ? (
           <p className="text-lg font-medium text-ll-accent">

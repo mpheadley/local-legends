@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Email service not configured" }, { status: 500 });
   }
 
-  let body: { email: string; firstName?: string };
+  let body: { email: string; firstName?: string; source?: string };
   try {
     body = await request.json();
   } catch {
@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
 
   const email = body.email?.trim();
   const firstName = body.firstName?.trim() ?? "";
+  const source = body.source?.trim() ?? "unknown";
 
   if (!email) {
     return NextResponse.json({ error: "Email is required" }, { status: 400 });
@@ -41,6 +42,48 @@ export async function POST(request: NextRequest) {
       console.error("Resend contacts error:", error);
       return NextResponse.json({ error: "Failed to subscribe" }, { status: 500 });
     }
+
+    // Welcome email — best-effort, doesn't block subscribe success
+    const greeting = firstName ? `${firstName},` : "Hey,";
+    const welcomeHtml = `
+      <p>${greeting}</p>
+      <p>Thanks for subscribing.</p>
+      <p>I'm Matt. I build websites for small businesses here in Northeast Alabama, and somewhere in the middle of that work I started writing about the people I met.</p>
+      <p>More stories are here when you're ready:<br>
+      <a href="https://southernlegends.blog/profiles">southernlegends.blog/profiles</a></p>
+      <p>Profiles go out when they're ready. I'm not chasing a schedule.</p>
+      <p>Matt Headley<br>
+      <a href="https://southernlegends.blog">southernlegends.blog</a></p>
+    `;
+    const welcomeText = `${greeting}
+
+Thanks for subscribing.
+
+I'm Matt. I build websites for small businesses here in Northeast Alabama, and somewhere in the middle of that work I started writing about the people I met.
+
+More stories are here when you're ready:
+https://southernlegends.blog/profiles
+
+Profiles go out when they're ready. I'm not chasing a schedule.
+
+Matt Headley
+southernlegends.blog`;
+
+    await resend.emails.send({
+      from: "Matt Headley <noreply@plainspokenblueprint.com>",
+      to: email,
+      subject: "You're in",
+      html: welcomeHtml,
+      text: welcomeText,
+    }).catch((err) => console.error("Welcome email error:", err));
+
+    // Notify Matt of new subscriber + source
+    await resend.emails.send({
+      from: "Southern Legends <noreply@plainspokenblueprint.com>",
+      to: "matt@headleyweb.com",
+      subject: `New SL subscriber — ${source}`,
+      text: `New subscriber on Southern Legends.\n\nEmail: ${email}\nName: ${firstName || "not provided"}\nSource: ${source}`,
+    }).catch((err) => console.error("Subscriber notify error:", err));
 
     return NextResponse.json({ success: true });
   } catch (err) {

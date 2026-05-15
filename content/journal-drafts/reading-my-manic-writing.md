@@ -7,6 +7,17 @@ A year later, Matt goes back through his own record — Patreon posts, Facebook,
 
 ---
 
+## The line that earns the whole project (Apr 20 2026)
+
+Matt's words from session:
+> "when I was manic I thought I could write books. I wondered about it first after comments came in when I shared publicly on Facebook for the first time after my recovery from my first depressive episode. I may have been manic then."
+
+The person asking "is this book-worthy" is the same person who was certain it was, a year ago, for the wrong reasons. That's not an obstacle to the book. That's the book. Don't resolve this tension — write into it.
+
+The Facebook comments that started the thought are themselves artifacts. Find them. They're the moment other people's responses made him think he was a writer — and then he has to ask: was that the writing, or the mania, or both?
+
+---
+
 ## The contrast that earns this piece
 
 **Manic (April 17, 2025, Patreon):**
@@ -44,6 +55,16 @@ Screenshots saved in `/Users/matthewheadley1/Downloads/` — Screenshot 2026-04-
 
 ---
 
+## The profile photo (Instagram data export)
+
+Mar 13, 2025 12:12pm — two minutes after posting the resignation announcement ("Big life update — excited (and a little nervous) for what's ahead!"), shared directly with Anniston First UMC's own Instagram account, Matt changed his profile photo to: cowboy hat, rock and roll hand sign below his face, tongue out.
+
+That two-minute gap is the piece. The announcement and the photo are the same gesture — both saying: I'm out, and I'm fine, and actually I'm more than fine. The profile photo is the manic episode in a single image.
+
+Consider using it on the journal post — not as decoration, as documentation.
+
+---
+
 ## The rereading process
 
 Matt is going back through:
@@ -52,7 +73,9 @@ Matt is going back through:
 - The Anniston Star article — possibly written hypomanic (September 2024, after first depression lifted). The high that followed recovery before the full mania set in.
 - Journals
 
-The question he's asking: *when did it start?* The mania came in waves — high after recovering from first depression (around September 2024), stable-ish October through December, then full mania after recovering from flu and COVID back to back in January 2025.
+The question he's asking: *when did it start?* The mania came in waves — high after recovering from first depression (around September 2024), stable-ish October through December, then full mania after recovering from flu and COVID back to back in January 2025. **Peak: late January 2025.** The illness was likely the physiological trigger — sleep deprivation, fever, sustained physical stress. Coming out the other side, the mania crested.
+
+Specific scene from the peak: preaching at Anniston First with Tammy present. Got choked up on stage. Speaking rapidly. The mania visible in real time — performing at the front of a church, in front of the person he was most guarded around, unable to hold the pace down.
 
 ---
 
@@ -79,6 +102,7 @@ He read an article in the surgeon's waiting room (Center for Endometriosis Care,
 ## Evidence of the scaling push (manic phase)
 
 - Ran up significant credit card debt
+- **Best Buy shopping spree** — shocked and angered Heather. Receipt photo saved in iPhone Photos. One of the moments where the mania became visible to someone else in real time. Heather's anger is part of the artifact.
 - Hired Patricia, an outsourced VA ("doer"), for $9k. Heather felt responsible for protecting Patricia from the flood of Matt's ideas — Heather as the buffer between his mania and the people around him. That detail is specific and real.
 - Hired staff to scale the farm
 - Hired people from the homeless shelter (Kyle Bryan's help) to renovate the flower workshop
@@ -121,6 +145,58 @@ This isn't a "I was sick and now I'm better" piece. It's more complicated than t
 ## When to write it
 
 After going back through the record — Facebook, journals, videos. Don't write it from memory. Write it from what you actually find.
+
+**Session note Apr 20 2026:** The record is now sufficient to write. Resignation text, Ash Wednesday confrontation, Shannon thread, Tammy reconciliation, Facebook record, bathtub scene, voice memos — all in hand. Exports still pending (Instagram, Gmail, ChatGPT) but they are supplementary, not load-bearing. The next move is the physical journals or the first sentence. Not more gathering.
+
+---
+
+## Sources still needed (session note, Apr 20 2026)
+
+- **Written journals** — Matt has physical journals from the manic period. Not yet in hand. **Get these before drafting.**
+- **ChatGPT export (Anniston First email account)** — locked out. Worth requesting temp access — this is the primary interior record, unperformed, no friction. Facebook/Patreon are the performed version. ChatGPT is the unedited thinking.
+- **Facebook posts/videos/photos** — accessible, not yet reviewed for this piece.
+
+---
+
+## Voice memos — transcribed Apr 20 2026
+
+All transcripts saved to `matt-headley-sources/voice-memo-*.txt`.
+
+**Apr 4, 2025 — Walk with Heather (~13 min)**
+`voice-memo-20250404 075914-1.txt`
+Walking the property, recording while talking. Ideas expand in real time: Ladaga Farmacy → agroforestry → tiny homes → Airbnb → passive income → "I can publish this book this weekend." Feeding conversations into NotebookLM as he walks. Heather: *"Wait a minute. Wait a minute."* Matt: *"There's so much energy around these ideas right now."* The clearest manic document in the batch — shows the acceleration in motion.
+
+**Apr 15, 2025 — Afternoon cluster (3 recordings)**
+`voice-memo-20250415 183249*.txt`, `184452*.txt`, `190009*.txt`
+Ambient conversations, multiple speakers, fragmented transcription. Legible fragments: pitching Patricia the VA to someone; Heather saying *"You're about to lose these fucking flowers"*; someone asking *"Was he psychotic?"* Slices of a busy afternoon. Hard to use as direct source material.
+
+**Apr 18, 2025 — Good Friday morning (~63 min)**
+`voice-memo-new-recording-3-good-friday.txt`
+Covers early morning market logistics (5:45am departure, trailer packing, Heather making 100 bouquets: *"I don't like flowers anymore"*), then jumps to Called Coffee where Sam has dubbed Matt "the flower king of Calhoun County." Contains the Facebook Live Matt recorded at sunrise — the performed manic voice. Key lines: *"It's a new day here at Headley Flower Farm. And a new day in my life and ministry."* / *"Just things we've been wanting to move forward on for years are really starting to happen."* / *"I'm excited about turning this into a running machine so that I can do ministry. With autonomy and control."* Also: Matt mentions talking about psilocybin with Sam the day before.
+
+**Apr 21, 2025 — Farm conversation (~2.5 min)**
+`voice-memo-20250421 091326*.txt`
+Conversation about farm sales tax structure. Matt: *"I want to turn on ChatGPT so I can listen in on what you're explaining."* Then: *"This is better than recording and transcribing. This is real time. We can actually collaborate and brainstorm along."* Short but contains the AI thread live — pulling ChatGPT into a conversation mid-stream.
+
+**Apr 30, 2025 — Test recording**
+`voice-memo-20250430 053746.txt`
+*"Yeah, I'm testing the transcript record feature for this voice memo."* Nothing else.
+
+**May 9, 2025 — Car monologue (~3.5 min)**
+`voice-memo-20250509 073254*.txt`
+Solo, driving back from Called Coffee. Up since 4am. Four markets tomorrow. Rattles off: Chelsea, Matthew Fleming, Mark and Sabrina, irrigation, sheet mulching, wedding venue pitch, Preston, chickens. Then: *"This time last year we were barely hanging on to do one market... I feel so capable and empowered and optimistic."* The list itself is the mania. The pace doesn't slow once. One of the three most valuable recordings.
+
+**May 16, 2025 — Morning check-in with Heather (~4 min)**
+`voice-memo-20250516 060025*.txt`
+6am. Woke up thinking about *"balloon bar and fireworks and selling popsicles."* Recorded a song at 4:30am. Yoga, singing prayer, 15-minute video blog. Business check-in on an Alexa timer: email to city council, trail shop, Patricia drafting a map, pitching a Walmart-to-trail bridge. Then: *"I have not been waking up feeling well. I get better as I go."* That last line lands differently than everything before it. One of the three most valuable recordings.
+
+**May 25, 2025 — Someone else's sermon (~20 min)**
+`voice-memo-20250525 105105*.txt`
+Not Matt. A retired pastor's sermon — Billy Bob's Chinese Buffet, the man in the tent, AIDS epidemic. Unrelated to this piece.
+
+---
+
+**Most valuable for this piece:** Apr 4 walk, May 9 car monologue, May 16 morning check-in, Good Friday Facebook Live (Apr 18). These four show the voice, the pace, the certainty — and the one crack in it (*"I get better as I go"*).
 
 ---
 

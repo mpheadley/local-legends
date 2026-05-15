@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { resolveCardTitle } from "@/lib/card-title-style";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,11 @@ interface FeaturedCard {
   name: string;
   title: string;
   titleHtml?: string;
+  cardTitle?: string;
+  cardTitleHtml?: string;
+  cardFont?: "serif" | "serif-bold" | "serif-italic" | "serif-caps" | "condensed";
+  cardTitleColor?: "white" | "gold";
+  cardFontSize?: "sm" | "md" | "lg";
   subtitle?: string;
   excerpt: string;
   location: string;
@@ -238,41 +244,54 @@ export default function FeaturedTilt({ cards }: { cards: FeaturedCard[] }) {
             </div>
 
             {/* Content overlay — entire content card is clickable */}
-            <Link href={`/profiles/${card.slug}`} className="featured-panel-content">
-              <span
-                className="featured-category-tag ft-stagger"
-                style={{ backgroundColor: getCategoryColor(card.category) }}
-              >
-                {card.category}
-              </span>
-
-              {card.titleHtml ? (
-                <h2
-                  className="featured-panel-name ft-stagger"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                  dangerouslySetInnerHTML={{ __html: card.titleHtml }}
-                />
-              ) : (
-                <h2
-                  className="featured-panel-name ft-stagger"
-                  style={{ fontFamily: "var(--font-heading)" }}
+            {(() => {
+              // 456px: panel content max-width 520px minus ~2rem padding each side
+              const { displayTitle, resolvedHtml, useHtml, titleStyle } = resolveCardTitle(card, {
+                containerPx: 456,
+                extraStyle: { overflowWrap: "normal", maxWidth: "100%" },
+              });
+              return (
+                <Link
+                  href={`/profiles/${card.slug}`}
+                  className="featured-panel-content"
+                  style={{ viewTransitionName: `profile-hero-${card.slug}` } as React.CSSProperties}
                 >
-                  {card.title}
-                </h2>
-              )}
+                  <span
+                    className="featured-category-tag ft-stagger"
+                    style={{ backgroundColor: getCategoryColor(card.category) }}
+                  >
+                    {card.category}
+                  </span>
 
-              {card.subtitle && (
-                <p className="featured-panel-hook ft-stagger">{card.subtitle}</p>
-              )}
+                  {useHtml ? (
+                    <h2
+                      className="featured-panel-name ft-stagger"
+                      style={titleStyle}
+                      dangerouslySetInnerHTML={{ __html: resolvedHtml! }}
+                    />
+                  ) : (
+                    <h2
+                      className="featured-panel-name ft-stagger"
+                      style={titleStyle}
+                    >
+                      {displayTitle}
+                    </h2>
+                  )}
 
-              <p className="featured-panel-location ft-stagger">
-                {card.name}&ensp;&middot;&ensp;{card.location}
-              </p>
+                  {card.subtitle && (
+                    <p className="featured-panel-hook ft-stagger">{card.subtitle}</p>
+                  )}
 
-              <span className="featured-panel-link ft-stagger">
-                Read the story →
-              </span>
-            </Link>
+                  <p className="featured-panel-location ft-stagger">
+                    {card.name}&ensp;&middot;&ensp;{card.location}
+                  </p>
+
+                  <span className="featured-panel-link ft-stagger">
+                    Read the story →
+                  </span>
+                </Link>
+              );
+            })()}
           </div>
         ))}
 

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLT Corridor Map — Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    /* ── Page shell ────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      font-family: 'IM Fell English', Georgia, serif;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* ── Toolbar ─────────────────────────────────────────── */
+    .toolbar {
+      width: 100%;
+      background: #292524;
+      color: #F0EDE6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar h1 {
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-variant: small-caps;
+      font-weight: normal;
+      color: #F0EDE6;
+      opacity: 0.90;
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-variant: small-caps;
+      padding: 6px 16px;
+      border: 1px solid #CA8A04;
+      background: transparent;
+      color: #CA8A04;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn:hover {
+      background: #CA8A04;
+      color: #292524;
+    }
+
+    .btn.active {
+      background: #CA8A04;
+      color: #292524;
+    }
+
+    .btn-print {
+      border-color: #9A3412;
+      color: #9A3412;
+    }
+
+    .btn-print:hover {
+      background: #9A3412;
+      color: #F0EDE6;
+    }
+
+    /* ── Map wrapper ─────────────────────────────────────── */
+    .map-outer {
+      width: 100%;
+      max-width: 1240px;
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .map-container {
+      width: 100%;
+      max-width: 1200px;
+      box-shadow: 0 4px 32px rgba(41, 37, 36, 0.18);
+      border-radius: 2px;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .map-container svg,
+    .map-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Status note ────────────────────────────────────── */
+    .status-note {
+      font-size: 12px;
+      font-style: italic;
+      color: #292524;
+      opacity: 0.55;
+      letter-spacing: 0.5px;
+      text-align: center;
+      max-width: 680px;
+      line-height: 1.6;
+    }
+
+    .status-note strong {
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    /* ── Layer info panel ───────────────────────────────── */
+    .layer-info {
+      width: 100%;
+      max-width: 1200px;
+      background: #F0EDE6;
+      border: 1px solid rgba(41,37,36,0.18);
+      border-radius: 2px;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px 24px;
+    }
+
+    .layer-info h2 {
+      font-size: 9px;
+      letter-spacing: 3px;
+      font-variant: small-caps;
+      color: #292524;
+      opacity: 0.55;
+      font-weight: normal;
+      grid-column: 1 / -1;
+      margin-bottom: 4px;
+    }
+
+    .layer-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: #292524;
+      opacity: 0.80;
+    }
+
+    .layer-swatch {
+      width: 32px;
+      height: 10px;
+      border-radius: 1px;
+      flex-shrink: 0;
+    }
+
+    .swatch-gold      { background: #CA8A04; }
+    .swatch-gold-dash { background: linear-gradient(90deg, #CA8A04 55%, transparent 55%); background-size: 8px 100%; }
+    .swatch-ink-dash  { background: linear-gradient(90deg, #292524 55%, transparent 55%); background-size: 6px 100%; opacity: 0.55; }
+    .swatch-sienna    { background: #9A3412; opacity: 0.72; }
+    .swatch-hatch     { background: repeating-linear-gradient(-45deg, #9A3412 0, #9A3412 1px, transparent 1px, transparent 6px); opacity: 0.40; }
+
+    /* ── Print styles ────────────────────────────────────── */
+    @media print {
+      .toolbar      { display: none !important; }
+      .status-note  { display: none !important; }
+      .layer-info   { display: none !important; }
+      .map-outer    { padding: 0; }
+      .map-container { box-shadow: none; max-width: 100%; }
+      body          { background: white; }
+
+      /* Mirror the SVG internal @media print rules for inline SVG */
+      .layer-terrain         { opacity: 0.06 !important; }
+      .layer-creek-territory { opacity: 0.10 !important; }
+      .layer-railroad        { opacity: 0.40 !important; }
+      .layer-trail           { opacity: 1    !important; }
+      .layer-history-1832    { opacity: 1    !important; }
+      .layer-silver-comet    { opacity: 0.70 !important; }
+      .layer-towns           { opacity: 1    !important; }
+      .layer-labels          { opacity: 1    !important; }
+      .layer-legend          { opacity: 1    !important; }
+      .layer-border          { opacity: 1    !important; }
+    }
+
+    /* ── Print-mode toggle class (mirrors @media print) ─── */
+    body.print-mode .map-outer {
+      background: white;
+    }
+
+    body.print-mode .layer-terrain         { opacity: 0.06 !important; }
+    body.print-mode .layer-creek-territory { opacity: 0.10 !important; }
+    body.print-mode .layer-railroad        { opacity: 0.40 !important; }
+    body.print-mode .layer-trail           { opacity: 1    !important; }
+    body.print-mode .layer-history-1832    { opacity: 1    !important; }
+    body.print-mode .layer-silver-comet    { opacity: 0.70 !important; }
+    body.print-mode .layer-towns           { opacity: 1    !important; }
+    body.print-mode .layer-labels          { opacity: 1    !important; }
+    body.print-mode .layer-legend          { opacity: 1    !important; }
+    body.print-mode .layer-border          { opacity: 1    !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <h1>Chief Ladiga Trail · Corridor Map · Preview</h1>
+    <div class="toolbar-right">
+      <button class="btn active" id="btn-web"   onclick="setMode('web')">Web view</button>
+      <button class="btn"        id="btn-print" onclick="setMode('print')">Print view</button>
+      <button class="btn btn-print" onclick="window.print()">Export PDF</button>
+    </div>
+  </div>
+
+  <!-- Map area -->
+  <div class="map-outer">
+
+    <div class="map-container" id="mapContainer">
+      <!-- Inline SVG loaded via fetch so CSS classes apply -->
+      <!-- Fallback <img> for environments where fetch isn't available -->
+      <div id="svgInline">
+        <img src="public/images/clt-corridor-map.svg"
+             alt="Chief Ladiga Trail corridor map"
+             width="1200" height="600"
+             style="width:100%; height:auto; display:block;">
+      </div>
+    </div>
+
+    <p class="status-note">
+      <strong>Print export:</strong> File &#x2192; Print &#x2192; Save as PDF — or use the Export PDF button above.
+      The print layer drops terrain and territory wash to near-invisible so the 1832 markers and trail read cleanly in grayscale.
+      Sienna (#9A3412) prints as mid-gray; gold (#CA8A04) prints as light-mid gray — both distinguishable from parchment (#F0EDE6) and ink (#292524).
+    </p>
+
+    <!-- Layer reference -->
+    <div class="layer-info">
+      <h2>Layer architecture</h2>
+
+      <div class="layer-item">
+        <div class="layer-swatch swatch-gold"></div>
+        <span>layer-trail — Chief Ladiga Trail</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch swatch-gold-dash"></div>
+        <span>layer-silver-comet — Silver Comet (east)</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch swatch-ink-dash"></div>
+        <span>layer-railroad — L&amp;N Railroad corridor</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch swatch-sienna"></div>
+        <span>layer-history-1832 — Treaty, land sale, farmhouse</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch swatch-hatch"></div>
+        <span>layer-creek-territory — Muscogee Creek homeland</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch" style="background:#292524; opacity:0.50;"></div>
+        <span>layer-terrain — Appalachian foothills</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch" style="background:#F0EDE6; border:1px solid #292524;"></div>
+        <span>layer-towns — Town markers</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch" style="background:#292524; opacity:0.28;"></div>
+        <span>layer-labels — Town names, state labels</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch" style="background:#F0EDE6; border:1px solid #292524;"></div>
+        <span>layer-legend — Bottom-right legend</span>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch" style="background:transparent; border:1px dashed #292524;"></div>
+        <span>layer-border — State line + outer frame</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // ── Mode toggle ──────────────────────────────────────────
+    function setMode(mode) {
+      const body = document.body;
+      const btnWeb   = document.getElementById('btn-web');
+      const btnPrint = document.getElementById('btn-print');
+
+      if (mode === 'print') {
+        body.classList.add('print-mode');
+        btnPrint.classList.add('active');
+        btnWeb.classList.remove('active');
+      } else {
+        body.classList.remove('print-mode');
+        btnWeb.classList.add('active');
+        btnPrint.classList.remove('active');
+      }
+    }
+
+    // ── Load inline SVG so CSS classes target layer groups ───
+    // Inline SVG allows the page CSS .print-mode rules to cascade
+    // into the SVG's layer groups, which isn't possible with <img> or <object>
+    (function loadInlineSvg() {
+      const container = document.getElementById('svgInline');
+      fetch('public/images/clt-corridor-map.svg')
+        .then(r => {
+          if (!r.ok) throw new Error('SVG fetch failed: ' + r.status);
+          return r.text();
+        })
+        .then(svgText => {
+          container.innerHTML = svgText;
+          // Make sure the SVG scales responsively
+          const svg = container.querySelector('svg');
+          if (svg) {
+            svg.style.width  = '100%';
+            svg.style.height = 'auto';
+            svg.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // Fallback: leave the <img> tag in place
+          console.warn('Inline SVG load failed, using <img> fallback.', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

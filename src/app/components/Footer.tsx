@@ -46,12 +46,6 @@ export default function Footer() {
                 Nominate a Story
               </Link>
               <Link
-                href="/journal"
-                className="text-sm text-white/80 hover:text-white transition-colors"
-              >
-                Journal
-              </Link>
-              <Link
                 href="/support"
                 className="text-sm text-white/80 hover:text-white transition-colors"
               >
@@ -97,17 +91,31 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.name}. Built by{" "}
             <a
-              href="https://headleyweb.com"
+              href="https://plainspokenblueprint.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/80 hover:text-ll-accent transition-colors font-semibold"
             >
-              Headley Web &amp; SEO
+              Matt Headley
+            </a>
+            {" "}·{" "}
+            <a
+              href="https://plainspokenblueprint.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-ll-accent transition-colors"
+            >
+              Plainspoken Blueprint
             </a>
           </p>
-          <Link href="/privacy" className="hover:text-white/80 transition-colors">
-            Privacy Policy
-          </Link>
+          <div className="flex gap-6">
+            <Link href="/colophon" className="hover:text-white/80 transition-colors">
+              Colophon
+            </Link>
+            <Link href="/privacy" className="hover:text-white/80 transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,1200 @@
+{
+  "audio": "/Users/matthewheadley1/Downloads/1600 Littlejohn Rd 9.m4a",
+  "transcribed_at": "2026-04-19T13:04:39.309751",
+  "raw": {
+    "language": "en",
+    "metrics": {},
+    "num_speakers": 1,
+    "segments": [
+      {
+        "avg_logprob": -0.237304681353271,
+        "duration": 16.8,
+        "end": 16.8,
+        "speaker": "SPEAKER_00",
+        "start": 0,
+        "text": "Part of what is driving me to write is this impulse to prove the people wrong, the people that would have preferred that I had stayed disappeared, the people that wanted me to disappear because my presence did not reflect favorably on them.",
+        "words": [
+          {
+            "end": 0.34,
+            "probability": 0.7353515625,
+            "speaker": "SPEAKER_00",
+            "start": 0,
+            "word": " Part"
+          },
+          {
+            "end": 0.44,
+            "probability": 0.90673828125,
+            "speaker": "SPEAKER_00",
+            "start": 0.34,
+            "word": " of"
+          },
+          {
+            "end": 0.58,
+            "probability": 0.87939453125,
+            "speaker": "SPEAKER_00",
+            "start": 0.44,
+            "word": " what"
+          },
+          {
+            "end": 0.76,
+            "probability": 0.8896484375,
+            "speaker": "SPEAKER_00",
+            "start": 0.58,
+            "word": " is"
+          },
+          {
+            "end": 1.06,
+            "probability": 0.81787109375,
+            "speaker": "SPEAKER_00",
+            "start": 0.76,
+            "word": " driving"
+          },
+          {
+            "end": 1.24,
+            "probability": 0.890625,
+            "speaker": "SPEAKER_00",
+            "start": 1.06,
+            "word": " me"
+          },
+          {
+            "end": 1.34,
+            "probability": 0.90185546875,
+            "speaker": "SPEAKER_00",
+            "start": 1.24,
+            "word": " to"
+          },
+          {
+            "end": 1.5,
+            "probability": 0.3251953125,
+            "speaker": "SPEAKER_00",
+            "start": 1.34,
+            "word": " write"
+          },
+          {
+            "end": 1.64,
+            "probability": 0.7509765625,
+            "speaker": "SPEAKER_00",
+            "start": 1.5,
+            "word": " is"
+          },
+          {
+            "end": 1.78,
+            "probability": 0.85498046875,
+            "speaker": "SPEAKER_00",
+            "start": 1.64,
+            "word": " this"
+          },
+          {
+            "end": 2.22,
+            "probability": 0.8486328125,
+            "speaker": "SPEAKER_00",
+            "start": 1.78,
+            "word": " impulse"
+          },
+          {
+            "end": 2.56,
+            "probability": 0.89794921875,
+            "speaker": "SPEAKER_00",
+            "start": 2.22,
+            "word": " to"
+          },
+          {
+            "end": 4.54,
+            "probability": 0.8017578125,
+            "speaker": "SPEAKER_00",
+            "start": 2.56,
+            "word": " prove"
+          },
+          {
+            "end": 6.3,
+            "probability": 0.7802734375,
+            "speaker": "SPEAKER_00",
+            "start": 4.54,
+            "word": " the"
+          },
+          {
+            "end": 6.64,
+            "probability": 0.92041015625,
+            "speaker": "SPEAKER_00",
+            "start": 6.3,
+            "word": " people"
+          },
+          {
+            "end": 7.86,
+            "probability": 0.826171875,
+            "speaker": "SPEAKER_00",
+            "start": 6.64,
+            "word": " wrong,"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.237304681353271,
+        "duration": 14.260000000000002,
+        "end": 32.82,
+        "speaker": "SPEAKER_00",
+        "start": 18.56,
+        "text": "I was on the inside of the church staff for a long time and I saw a lot of unflattering behavior that did not reflect well and when I resigned I had a strong impulse to",
+        "words": [
+          {
+            "end": 19,
+            "probability": 0.99267578125,
+            "speaker": "SPEAKER_00",
+            "start": 18.56,
+            "word": " I"
+          },
+          {
+            "end": 19.14,
+            "probability": 0.8974609375,
+            "speaker": "SPEAKER_00",
+            "start": 19,
+            "word": " was"
+          },
+          {
+            "end": 19.28,
+            "probability": 0.90087890625,
+            "speaker": "SPEAKER_00",
+            "start": 19.14,
+            "word": " on"
+          },
+          {
+            "end": 19.4,
+            "probability": 0.80908203125,
+            "speaker": "SPEAKER_00",
+            "start": 19.28,
+            "word": " the"
+          },
+          {
+            "end": 19.8,
+            "probability": 0.873046875,
+            "speaker": "SPEAKER_00",
+            "start": 19.4,
+            "word": " inside"
+          },
+          {
+            "end": 20.86,
+            "probability": 0.90625,
+            "speaker": "SPEAKER_00",
+            "start": 19.8,
+            "word": " of"
+          },
+          {
+            "end": 21.08,
+            "probability": 0.8154296875,
+            "speaker": "SPEAKER_00",
+            "start": 20.86,
+            "word": " the"
+          },
+          {
+            "end": 21.32,
+            "probability": 0.7900390625,
+            "speaker": "SPEAKER_00",
+            "start": 21.08,
+            "word": " church"
+          },
+          {
+            "end": 21.66,
+            "probability": 0.6689453125,
+            "speaker": "SPEAKER_00",
+            "start": 21.32,
+            "word": " staff"
+          },
+          {
+            "end": 22.16,
+            "probability": 0.89990234375,
+            "speaker": "SPEAKER_00",
+            "start": 21.66,
+            "word": " for"
+          },
+          {
+            "end": 22.92,
+            "probability": 0.99951171875,
+            "speaker": "SPEAKER_00",
+            "start": 22.16,
+            "word": " a"
+          },
+          {
+            "end": 23.12,
+            "probability": 0.88916015625,
+            "speaker": "SPEAKER_00",
+            "start": 22.92,
+            "word": " long"
+          },
+          {
+            "end": 23.46,
+            "probability": 0.80908203125,
+            "speaker": "SPEAKER_00",
+            "start": 23.12,
+            "word": " time"
+          },
+          {
+            "end": 23.6,
+            "probability": 0.60888671875,
+            "speaker": "SPEAKER_00",
+            "start": 23.46,
+            "word": " and"
+          },
+          {
+            "end": 23.76,
+            "probability": 0.978515625,
+            "speaker": "SPEAKER_00",
+            "start": 23.6,
+            "word": " I"
+          },
+          {
+            "end": 24,
+            "probability": 0.841796875,
+            "speaker": "SPEAKER_00",
+            "start": 23.76,
+            "word": " saw"
+          },
+          {
+            "end": 24.24,
+            "probability": 0.9990234375,
+            "speaker": "SPEAKER_00",
+            "start": 24,
+            "word": " a"
+          },
+          {
+            "end": 24.4,
+            "probability": 0.89599609375,
+            "speaker": "SPEAKER_00",
+            "start": 24.24,
+            "word": " lot"
+          },
+          {
+            "end": 24.6,
+            "probability": 0.90673828125,
+            "speaker": "SPEAKER_00",
+            "start": 24.4,
+            "word": " of"
+          },
+          {
+            "end": 25.28,
+            "probability": 0.92236328125,
+            "speaker": "SPEAKER_00",
+            "start": 24.6,
+            "word": " unflattering"
+          },
+          {
+            "end": 25.96,
+            "probability": 0.85888671875,
+            "speaker": "SPEAKER_00",
+            "start": 25.28,
+            "word": " behavior"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.20676185550360843,
+        "duration": 28.760000000000005,
+        "end": 63.7,
+        "speaker": "SPEAKER_00",
+        "start": 34.94,
+        "text": "show people and tell people what was messed up about the way I was treated from the very beginning being teased along, promised promotions and raises that I never got without having to fight for them tooth and nail and get other people involved even though Tammy was the one that had promised them. I wrote about all that in the document, I hope I can find it, the",
+        "words": [
+          {
+            "end": 35.58,
+            "probability": 0.61669921875,
+            "speaker": "SPEAKER_00",
+            "start": 34.94,
+            "word": " show"
+          },
+          {
+            "end": 36.02,
+            "probability": 0.328857421875,
+            "speaker": "SPEAKER_00",
+            "start": 35.58,
+            "word": " people"
+          },
+          {
+            "end": 36.26,
+            "probability": 0.8603515625,
+            "speaker": "SPEAKER_00",
+            "start": 36.02,
+            "word": " and"
+          },
+          {
+            "end": 36.38,
+            "probability": 0.80810546875,
+            "speaker": "SPEAKER_00",
+            "start": 36.26,
+            "word": " tell"
+          },
+          {
+            "end": 36.7,
+            "probability": 0.92041015625,
+            "speaker": "SPEAKER_00",
+            "start": 36.38,
+            "word": " people"
+          },
+          {
+            "end": 37.68,
+            "probability": 0.865234375,
+            "speaker": "SPEAKER_00",
+            "start": 36.7,
+            "word": " what"
+          },
+          {
+            "end": 37.86,
+            "probability": 0.89404296875,
+            "speaker": "SPEAKER_00",
+            "start": 37.68,
+            "word": " was"
+          },
+          {
+            "end": 38.08,
+            "probability": 0.771484375,
+            "speaker": "SPEAKER_00",
+            "start": 37.86,
+            "word": " messed"
+          },
+          {
+            "end": 38.4,
+            "probability": 0.90966796875,
+            "speaker": "SPEAKER_00",
+            "start": 38.08,
+            "word": " up"
+          },
+          {
+            "end": 39.68,
+            "probability": 0.76220703125,
+            "speaker": "SPEAKER_00",
+            "start": 38.4,
+            "word": " about"
+          },
+          {
+            "end": 39.88,
+            "probability": 0.8134765625,
+            "speaker": "SPEAKER_00",
+            "start": 39.68,
+            "word": " the"
+          },
+          {
+            "end": 40.12,
+            "probability": 0.89892578125,
+            "speaker": "SPEAKER_00",
+            "start": 39.88,
+            "word": " way"
+          },
+          {
+            "end": 40.66,
+            "probability": 0.982421875,
+            "speaker": "SPEAKER_00",
+            "start": 40.12,
+            "word": " I"
+          },
+          {
+            "end": 40.8,
+            "probability": 0.90185546875,
+            "speaker": "SPEAKER_00",
+            "start": 40.66,
+            "word": " was"
+          },
+          {
+            "end": 41.06,
+            "probability": 0.76416015625,
+            "speaker": "SPEAKER_00",
+            "start": 40.8,
+            "word": " treated"
+          },
+          {
+            "end": 41.34,
+            "probability": 0.80517578125,
+            "speaker": "SPEAKER_00",
+            "start": 41.06,
+            "word": " from"
+          },
+          {
+            "end": 41.48,
+            "probability": 0.81787109375,
+            "speaker": "SPEAKER_00",
+            "start": 41.34,
+            "word": " the"
+          },
+          {
+            "end": 41.66,
+            "probability": 0.7314453125,
+            "speaker": "SPEAKER_00",
+            "start": 41.48,
+            "word": " very"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.2458692559565621,
+        "duration": 19.659999999999997,
+        "end": 85.52,
+        "speaker": "SPEAKER_00",
+        "start": 65.86,
+        "text": "document, my exit interview or my exit testimonial and I think that's what's driving me to write now is this desire to make the people uncomfortable that would have preferred I stay invisible, that would have preferred I disappear. It's apparent that Tammy has zero interest in",
+        "words": [
+          {
+            "end": 66.34,
+            "probability": 0.51904296875,
+            "speaker": "SPEAKER_00",
+            "start": 65.86,
+            "word": " document,"
+          },
+          {
+            "end": 67,
+            "probability": 0.85498046875,
+            "speaker": "SPEAKER_00",
+            "start": 66.74,
+            "word": " my"
+          },
+          {
+            "end": 67.38,
+            "probability": 0.76171875,
+            "speaker": "SPEAKER_00",
+            "start": 67,
+            "word": " exit"
+          },
+          {
+            "end": 67.78,
+            "probability": 0.75439453125,
+            "speaker": "SPEAKER_00",
+            "start": 67.38,
+            "word": " interview"
+          },
+          {
+            "end": 68.42,
+            "probability": 0.5625,
+            "speaker": "SPEAKER_00",
+            "start": 67.78,
+            "word": " or"
+          },
+          {
+            "end": 68.8,
+            "probability": 0.9013671875,
+            "speaker": "SPEAKER_00",
+            "start": 68.42,
+            "word": " my"
+          },
+          {
+            "end": 69.14,
+            "probability": 0.78515625,
+            "speaker": "SPEAKER_00",
+            "start": 68.8,
+            "word": " exit"
+          },
+          {
+            "end": 70.18,
+            "probability": 0.899169921875,
+            "speaker": "SPEAKER_00",
+            "start": 69.14,
+            "word": " testimonial"
+          },
+          {
+            "end": 72.24,
+            "probability": 0.18359375,
+            "speaker": "SPEAKER_00",
+            "start": 70.18,
+            "word": " and"
+          },
+          {
+            "end": 72.34,
+            "probability": 0.99462890625,
+            "speaker": "SPEAKER_00",
+            "start": 72.24,
+            "word": " I"
+          },
+          {
+            "end": 72.46,
+            "probability": 0.8115234375,
+            "speaker": "SPEAKER_00",
+            "start": 72.34,
+            "word": " think"
+          },
+          {
+            "end": 72.64,
+            "probability": 0.927001953125,
+            "speaker": "SPEAKER_00",
+            "start": 72.46,
+            "word": " that's"
+          },
+          {
+            "end": 72.84,
+            "probability": 0.919677734375,
+            "speaker": "SPEAKER_00",
+            "start": 72.64,
+            "word": " what's"
+          },
+          {
+            "end": 73.1,
+            "probability": 0.84033203125,
+            "speaker": "SPEAKER_00",
+            "start": 72.84,
+            "word": " driving"
+          },
+          {
+            "end": 73.26,
+            "probability": 0.89453125,
+            "speaker": "SPEAKER_00",
+            "start": 73.1,
+            "word": " me"
+          },
+          {
+            "end": 73.36,
+            "probability": 0.75927734375,
+            "speaker": "SPEAKER_00",
+            "start": 73.26,
+            "word": " to"
+          },
+          {
+            "end": 73.52,
+            "probability": 0.57470703125,
+            "speaker": "SPEAKER_00",
+            "start": 73.36,
+            "word": " write"
+          },
+          {
+            "end": 73.8,
+            "probability": 0.87548828125,
+            "speaker": "SPEAKER_00",
+            "start": 73.52,
+            "word": " now"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.24013955847730914,
+        "duration": 37.07000000000001,
+        "end": 124.15,
+        "speaker": "SPEAKER_00",
+        "start": 87.08,
+        "text": "talking with me like when I saw her in the coffee shop last week, she had a little more to say than hello just to smile at me to make sure that the people she was meeting with Bible study for saw that she was friendly to me but it felt performative just like Tammy always did and she used to recite to Heather like or she would recite in every staff meeting the way that she destroyed people, Kevin, April, people that resisted her trying to make her look bad, Kevin resigning as camp director, April trying to suggest that the church dock her pay",
+        "words": [
+          {
+            "end": 87.56,
+            "probability": 0.72412109375,
+            "speaker": "SPEAKER_00",
+            "start": 87.08,
+            "word": " talking"
+          },
+          {
+            "end": 87.78,
+            "probability": 0.81884765625,
+            "speaker": "SPEAKER_00",
+            "start": 87.56,
+            "word": " with"
+          },
+          {
+            "end": 88,
+            "probability": 0.9013671875,
+            "speaker": "SPEAKER_00",
+            "start": 87.78,
+            "word": " me"
+          },
+          {
+            "end": 89.14,
+            "probability": 0.191162109375,
+            "speaker": "SPEAKER_00",
+            "start": 88,
+            "word": " like"
+          },
+          {
+            "end": 89.36,
+            "probability": 0.86328125,
+            "speaker": "SPEAKER_00",
+            "start": 89.14,
+            "word": " when"
+          },
+          {
+            "end": 89.5,
+            "probability": 0.99267578125,
+            "speaker": "SPEAKER_00",
+            "start": 89.36,
+            "word": " I"
+          },
+          {
+            "end": 89.66,
+            "probability": 0.802734375,
+            "speaker": "SPEAKER_00",
+            "start": 89.5,
+            "word": " saw"
+          },
+          {
+            "end": 89.76,
+            "probability": 0.88427734375,
+            "speaker": "SPEAKER_00",
+            "start": 89.66,
+            "word": " her"
+          },
+          {
+            "end": 89.86,
+            "probability": 0.888671875,
+            "speaker": "SPEAKER_00",
+            "start": 89.76,
+            "word": " in"
+          },
+          {
+            "end": 89.96,
+            "probability": 0.78125,
+            "speaker": "SPEAKER_00",
+            "start": 89.86,
+            "word": " the"
+          },
+          {
+            "end": 90.16,
+            "probability": 0.77001953125,
+            "speaker": "SPEAKER_00",
+            "start": 89.96,
+            "word": " coffee"
+          },
+          {
+            "end": 90.4,
+            "probability": 0.89111328125,
+            "speaker": "SPEAKER_00",
+            "start": 90.16,
+            "word": " shop"
+          },
+          {
+            "end": 90.66,
+            "probability": 0.81982421875,
+            "speaker": "SPEAKER_00",
+            "start": 90.4,
+            "word": " last"
+          },
+          {
+            "end": 90.94,
+            "probability": 0.83203125,
+            "speaker": "SPEAKER_00",
+            "start": 90.66,
+            "word": " week,"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.22767857426688784,
+        "duration": 10.47999999999999,
+        "end": 137.51,
+        "speaker": "SPEAKER_00",
+        "start": 127.03,
+        "text": "and then you know years later in the in the months prior to my resignation um there was a meeting she had with Heather regarding the",
+        "words": [
+          {
+            "end": 127.59,
+            "probability": 0.141357421875,
+            "speaker": "SPEAKER_00",
+            "start": 127.03,
+            "word": " and"
+          },
+          {
+            "end": 127.83,
+            "probability": 0.7294921875,
+            "speaker": "SPEAKER_00",
+            "start": 127.59,
+            "word": " then"
+          },
+          {
+            "end": 128.85,
+            "probability": 0.140625,
+            "speaker": "SPEAKER_00",
+            "start": 127.83,
+            "word": " you"
+          },
+          {
+            "end": 128.97,
+            "probability": 0.81201171875,
+            "speaker": "SPEAKER_00",
+            "start": 128.85,
+            "word": " know"
+          },
+          {
+            "end": 129.37,
+            "probability": 0.5458984375,
+            "speaker": "SPEAKER_00",
+            "start": 128.97,
+            "word": " years"
+          },
+          {
+            "end": 129.75,
+            "probability": 0.8828125,
+            "speaker": "SPEAKER_00",
+            "start": 129.37,
+            "word": " later"
+          },
+          {
+            "end": 130.77,
+            "probability": 0.67724609375,
+            "speaker": "SPEAKER_00",
+            "start": 129.75,
+            "word": " in"
+          },
+          {
+            "end": 130.95,
+            "probability": 0.8115234375,
+            "speaker": "SPEAKER_00",
+            "start": 130.77,
+            "word": " the"
+          },
+          {
+            "end": 131.17,
+            "probability": 0.1343994140625,
+            "speaker": "SPEAKER_00",
+            "start": 130.95,
+            "word": " in"
+          },
+          {
+            "end": 131.33,
+            "probability": 0.806640625,
+            "speaker": "SPEAKER_00",
+            "start": 131.17,
+            "word": " the"
+          },
+          {
+            "end": 131.61,
+            "probability": 0.71826171875,
+            "speaker": "SPEAKER_00",
+            "start": 131.33,
+            "word": " months"
+          },
+          {
+            "end": 132.51,
+            "probability": 0.87939453125,
+            "speaker": "SPEAKER_00",
+            "start": 131.61,
+            "word": " prior"
+          },
+          {
+            "end": 132.63,
+            "probability": 0.9033203125,
+            "speaker": "SPEAKER_00",
+            "start": 132.51,
+            "word": " to"
+          },
+          {
+            "end": 132.81,
+            "probability": 0.90966796875,
+            "speaker": "SPEAKER_00",
+            "start": 132.63,
+            "word": " my"
+          },
+          {
+            "end": 133.45,
+            "probability": 0.8876953125,
+            "speaker": "SPEAKER_00",
+            "start": 132.81,
+            "word": " resignation"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.1953124929711504,
+        "duration": 4.740000000000009,
+        "end": 145.43,
+        "speaker": "SPEAKER_00",
+        "start": 140.69,
+        "text": "wedding rentals of the sanctuary and Tammy spent a lot of the time with Heather",
+        "words": [
+          {
+            "end": 141.13,
+            "probability": 0.751953125,
+            "speaker": "SPEAKER_00",
+            "start": 140.69,
+            "word": " wedding"
+          },
+          {
+            "end": 141.57,
+            "probability": 0.7432861328125,
+            "speaker": "SPEAKER_00",
+            "start": 141.13,
+            "word": " rentals"
+          },
+          {
+            "end": 141.87,
+            "probability": 0.8955078125,
+            "speaker": "SPEAKER_00",
+            "start": 141.57,
+            "word": " of"
+          },
+          {
+            "end": 141.99,
+            "probability": 0.802734375,
+            "speaker": "SPEAKER_00",
+            "start": 141.87,
+            "word": " the"
+          },
+          {
+            "end": 142.33,
+            "probability": 0.70947265625,
+            "speaker": "SPEAKER_00",
+            "start": 141.99,
+            "word": " sanctuary"
+          },
+          {
+            "end": 142.67,
+            "probability": 0.79638671875,
+            "speaker": "SPEAKER_00",
+            "start": 142.33,
+            "word": " and"
+          },
+          {
+            "end": 143.05,
+            "probability": 0.53173828125,
+            "speaker": "SPEAKER_00",
+            "start": 142.67,
+            "word": " Tammy"
+          },
+          {
+            "end": 144.25,
+            "probability": 0.79931640625,
+            "speaker": "SPEAKER_00",
+            "start": 143.05,
+            "word": " spent"
+          },
+          {
+            "end": 144.49,
+            "probability": 0.99853515625,
+            "speaker": "SPEAKER_00",
+            "start": 144.25,
+            "word": " a"
+          },
+          {
+            "end": 144.63,
+            "probability": 0.8955078125,
+            "speaker": "SPEAKER_00",
+            "start": 144.49,
+            "word": " lot"
+          },
+          {
+            "end": 144.73,
+            "probability": 0.90380859375,
+            "speaker": "SPEAKER_00",
+            "start": 144.63,
+            "word": " of"
+          },
+          {
+            "end": 144.83,
+            "probability": 0.798828125,
+            "speaker": "SPEAKER_00",
+            "start": 144.73,
+            "word": " the"
+          },
+          {
+            "end": 145.05,
+            "probability": 0.7998046875,
+            "speaker": "SPEAKER_00",
+            "start": 144.83,
+            "word": " time"
+          },
+          {
+            "end": 145.21,
+            "probability": 0.80078125,
+            "speaker": "SPEAKER_00",
+            "start": 145.05,
+            "word": " with"
+          },
+          {
+            "end": 145.43,
+            "probability": 0.8759765625,
+            "speaker": "SPEAKER_00",
+            "start": 145.21,
+            "word": " Heather"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.1953124929711504,
+        "duration": 36.389999999999986,
+        "end": 184.22,
+        "speaker": "SPEAKER_00",
+        "start": 147.83,
+        "text": "retelling the story of how she destroyed Kevin and April and how right she was in the play-by-play of it all so it's it's just kind of dawning on me that part of this is maybe part of what's driving me to write now and how I'd prefer that it makes people uncomfortable and I imagine it does people especially like Tammy and those in her circles and it's it's kind of difficult because I know that anybody that stayed at the church had to take her side that was the only way that it could really make peace with any of it and I kind of sympathize with that I understand even",
+        "words": [
+          {
+            "end": 148.27,
+            "probability": 0.6976318359375,
+            "speaker": "SPEAKER_00",
+            "start": 147.83,
+            "word": " retelling"
+          },
+          {
+            "end": 148.49,
+            "probability": 0.81103515625,
+            "speaker": "SPEAKER_00",
+            "start": 148.27,
+            "word": " the"
+          },
+          {
+            "end": 148.73,
+            "probability": 0.88037109375,
+            "speaker": "SPEAKER_00",
+            "start": 148.49,
+            "word": " story"
+          },
+          {
+            "end": 148.87,
+            "probability": 0.90234375,
+            "speaker": "SPEAKER_00",
+            "start": 148.73,
+            "word": " of"
+          },
+          {
+            "end": 148.99,
+            "probability": 0.8994140625,
+            "speaker": "SPEAKER_00",
+            "start": 148.87,
+            "word": " how"
+          },
+          {
+            "end": 149.15,
+            "probability": 0.81982421875,
+            "speaker": "SPEAKER_00",
+            "start": 148.99,
+            "word": " she"
+          },
+          {
+            "end": 149.61,
+            "probability": 0.80859375,
+            "speaker": "SPEAKER_00",
+            "start": 149.15,
+            "word": " destroyed"
+          },
+          {
+            "end": 149.93,
+            "probability": 0.91162109375,
+            "speaker": "SPEAKER_00",
+            "start": 149.61,
+            "word": " Kevin"
+          },
+          {
+            "end": 150.09,
+            "probability": 0.8583984375,
+            "speaker": "SPEAKER_00",
+            "start": 149.93,
+            "word": " and"
+          },
+          {
+            "end": 150.29,
+            "probability": 0.76953125,
+            "speaker": "SPEAKER_00",
+            "start": 150.09,
+            "word": " April"
+          },
+          {
+            "end": 150.51,
+            "probability": 0.86083984375,
+            "speaker": "SPEAKER_00",
+            "start": 150.29,
+            "word": " and"
+          },
+          {
+            "end": 150.63,
+            "probability": 0.89013671875,
+            "speaker": "SPEAKER_00",
+            "start": 150.51,
+            "word": " how"
+          },
+          {
+            "end": 150.85,
+            "probability": 0.85693359375,
+            "speaker": "SPEAKER_00",
+            "start": 150.63,
+            "word": " right"
+          },
+          {
+            "end": 151.01,
+            "probability": 0.8017578125,
+            "speaker": "SPEAKER_00",
+            "start": 150.85,
+            "word": " she"
+          },
+          {
+            "end": 151.35,
+            "probability": 0.89453125,
+            "speaker": "SPEAKER_00",
+            "start": 151.01,
+            "word": " was"
+          },
+          {
+            "end": 151.49,
+            "probability": 0.560546875,
+            "speaker": "SPEAKER_00",
+            "start": 151.35,
+            "word": " in"
+          },
+          {
+            "end": 151.63,
+            "probability": 0.81201171875,
+            "speaker": "SPEAKER_00",
+            "start": 151.49,
+            "word": " the"
+          },
+          {
+            "end": 151.81,
+            "probability": 0.8720703125,
+            "speaker": "SPEAKER_00",
+            "start": 151.63,
+            "word": " play"
+          },
+          {
+            "end": 151.95,
+            "probability": 0.7091064453125,
+            "speaker": "SPEAKER_00",
+            "start": 151.81,
+            "word": "-by"
+          },
+          {
+            "end": 152.23,
+            "probability": 0.92626953125,
+            "speaker": "SPEAKER_00",
+            "start": 151.95,
+            "word": "-play"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.21649305919806164,
+        "duration": 16.5,
+        "end": 200.72,
+        "speaker": "SPEAKER_00",
+        "start": 184.22,
+        "text": "though I wanted them to choose my side I understand why they didn't why they were silent why they why they were not supportive and now there's just this again this impulse that I have to write to demonstrate that I'm not going to disappear and that I'm going to continue making them uncomfortable",
+        "words": [
+          {
+            "end": 184.38,
+            "probability": 0.7587890625,
+            "speaker": "SPEAKER_00",
+            "start": 184.22,
+            "word": " though"
+          },
+          {
+            "end": 184.48,
+            "probability": 0.9951171875,
+            "speaker": "SPEAKER_00",
+            "start": 184.38,
+            "word": " I"
+          },
+          {
+            "end": 184.68,
+            "probability": 0.796875,
+            "speaker": "SPEAKER_00",
+            "start": 184.48,
+            "word": " wanted"
+          },
+          {
+            "end": 184.84,
+            "probability": 0.72998046875,
+            "speaker": "SPEAKER_00",
+            "start": 184.68,
+            "word": " them"
+          },
+          {
+            "end": 185,
+            "probability": 0.904296875,
+            "speaker": "SPEAKER_00",
+            "start": 184.84,
+            "word": " to"
+          },
+          {
+            "end": 185.22,
+            "probability": 0.82373046875,
+            "speaker": "SPEAKER_00",
+            "start": 185,
+            "word": " choose"
+          },
+          {
+            "end": 185.4,
+            "probability": 0.90087890625,
+            "speaker": "SPEAKER_00",
+            "start": 185.22,
+            "word": " my"
+          },
+          {
+            "end": 185.7,
+            "probability": 0.81201171875,
+            "speaker": "SPEAKER_00",
+            "start": 185.4,
+            "word": " side"
+          },
+          {
+            "end": 186.9,
+            "probability": 0.951171875,
+            "speaker": "SPEAKER_00",
+            "start": 185.7,
+            "word": " I"
+          },
+          {
+            "end": 187.28,
+            "probability": 0.75048828125,
+            "speaker": "SPEAKER_00",
+            "start": 186.9,
+            "word": " understand"
+          },
+          {
+            "end": 187.5,
+            "probability": 0.81201171875,
+            "speaker": "SPEAKER_00",
+            "start": 187.28,
+            "word": " why"
+          },
+          {
+            "end": 187.68,
+            "probability": 0.7470703125,
+            "speaker": "SPEAKER_00",
+            "start": 187.5,
+            "word": " they"
+          },
+          {
+            "end": 188,
+            "probability": 0.931884765625,
+            "speaker": "SPEAKER_00",
+            "start": 187.68,
+            "word": " didn't"
+          },
+          {
+            "end": 188.78,
+            "probability": 0.73681640625,
+            "speaker": "SPEAKER_00",
+            "start": 188,
+            "word": " why"
+          },
+          {
+            "end": 188.9,
+            "probability": 0.73681640625,
+            "speaker": "SPEAKER_00",
+            "start": 188.78,
+            "word": " they"
+          },
+          {
+            "end": 189.02,
+            "probability": 0.88623046875,
+            "speaker": "SPEAKER_00",
+            "start": 188.9,
+            "word": " were"
+          },
+          {
+            "end": 189.32,
+            "probability": 0.77392578125,
+            "speaker": "SPEAKER_00",
+            "start": 189.02,
+            "word": " silent"
+          },
+          {
+            "end": 189.58,
+            "probability": 0.38037109375,
+            "speaker": "SPEAKER_00",
+            "start": 189.32,
+            "word": " why"
+          },
+          {
+            "end": 189.76,
+            "probability": 0.73486328125,
+            "speaker": "SPEAKER_00",
+            "start": 189.58,
+            "word": " they"
+          },
+          {
+            "end": 190.2,
+            "probability": 0.677734375,
+            "speaker": "SPEAKER_00",
+            "start": 189.76,
+            "word": " why"
+          }
+        ]
+      }
+    ]
+  }
+}

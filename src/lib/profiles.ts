@@ -26,11 +26,24 @@ export interface ProfileFrontmatter {
   metaDescription?: string;
   mobileHero?: "bg" | "stack" | "text";
   heroPosition?: string;
+  heroPositionMobile?: string;
+  ogPosition?: number;
   heroCaption?: string;
   heroCaptionHtml?: string;
   facebook?: string;
   parallaxHero?: boolean;
   heroTextBottom?: boolean;
+  heroFontSize?: string;
+  displayTitle?: boolean;
+  cardTextPosition?: "top" | "bottom";
+  cardTitle?: string;
+  cardTitleHtml?: string;
+  cardFont?: "serif" | "serif-bold" | "serif-italic" | "serif-caps" | "condensed";
+  cardTitleColor?: "white" | "gold";
+  cardFontSize?: "sm" | "md" | "lg";
+  cardGradientOffset?: number;
+  cardTall?: boolean;
+  cardShort?: boolean;
 }
 
 export interface Profile {
@@ -53,8 +66,9 @@ export function getPublishedSlugs(): string[] {
   return getAllProfiles().map((p) => p.slug);
 }
 
-export function getProfileBySlug(slug: string): Profile {
+export function getProfileBySlug(slug: string): Profile | null {
   const filePath = path.join(contentDir, `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
   const stats = readingTime(content);
@@ -71,7 +85,7 @@ export function getAllProfiles(): Profile[] {
   const slugs = getProfileSlugs();
   return slugs
     .map(getProfileBySlug)
-    .filter((p) => p.frontmatter.published && !p.frontmatter.aiWritten)
+    .filter((p): p is Profile => p !== null && p.frontmatter.published && !p.frontmatter.aiWritten)
     .sort(
       (a, b) =>
         new Date(b.frontmatter.date).getTime() -

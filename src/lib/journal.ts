@@ -7,13 +7,21 @@ const contentDir = path.join(process.cwd(), "content/journal");
 
 export interface JournalFrontmatter {
   title: string;
+  subtitle?: string;
   slug: string;
   date: string;
   excerpt: string;
   published: boolean;
   image?: string;
   imageAlt?: string;
+  imageCaption?: string;
+  cardImage?: string;
+  cardImageAlt?: string;
   featured?: boolean;
+  unlisted?: boolean;
+  related?: string[];
+  merchImage?: string;
+  merchUrl?: string;
   originalPublication?: {
     name: string;
     url: string;
@@ -72,15 +80,25 @@ export function getAdjacentJournalPosts(slug: string): {
 }
 
 export function getOtherJournalPosts(slug: string, count = 2): JournalPost[] {
-  return getAllJournalPosts()
-    .filter((p) => p.slug !== slug)
-    .slice(0, count);
+  const current = getJournalPostBySlug(slug);
+  const related = current?.frontmatter.related ?? [];
+  const all = getAllJournalPosts().filter((p) => p.slug !== slug);
+  const relatedPosts = related
+    .map((r) => all.find((p) => p.slug === r))
+    .filter((p): p is JournalPost => p !== undefined);
+  const rest = all.filter((p) => !related.includes(p.slug));
+  return [...relatedPosts, ...rest].slice(0, count);
+}
+
+export function getFeaturedJournalPost(): JournalPost | null {
+  const all = getAllJournalPosts();
+  return all.find((p) => p.frontmatter.featured) ?? all[0] ?? null;
 }
 
 export function getAllJournalPosts(): JournalPost[] {
   return getJournalSlugs()
     .map(getJournalPostBySlug)
-    .filter((p): p is JournalPost => p !== null && p.frontmatter.published)
+    .filter((p): p is JournalPost => p !== null && p.frontmatter.published && !p.frontmatter.unlisted)
     .sort(
       (a, b) =>
         new Date(b.frontmatter.date).getTime() -
