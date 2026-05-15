@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600"
+     role="img" aria-label="Chief Ladiga Trail editorial diagram — 1832 to present, schematic stations">
+
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&amp;display=swap');
+    text { font-family: 'IM Fell English', Georgia, 'Times New Roman', serif; }
+    .station-label { font-size: 14px; font-weight: bold; letter-spacing: 0.6px; fill: #292524; }
+    .station-sub   { font-size: 9px; font-style: italic; fill: #292524; opacity: 0.65; }
+  </style>
+
+  <filter id="paper" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" seed="2" result="n"/>
+    <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
+</defs>
+
+
+<!-- Parchment field -->
+<rect x="0" y="0" width="1200" height="600" fill="#F0EDE6" filter="url(#paper)"/>
+
+
+<!-- ════════════════════════════════════════════════
+     SUBWAY DIAGRAM — Beck-style schematic
+     Five stations on a single SW→NE diagonal corridor.
+     45° angles only. No GPS. The argument is the geometry.
+
+     Station X-spacing: 200px between stations
+     Y-positions step up consistently (NE direction)
+     Anniston (180, 480) → Weaver (320, 400) → Jacksonville (520, 320)
+       → Piedmont (820, 200) → GA border (1060, 120)
+     Each segment is a clean 45° or near-45°. No curves.
+═══════════════════════════════════════════════════ -->
+
+
+<!-- ─────────────────────────────────────────────
+     LAYER 1 — 1832 RAILROAD CORRIDOR (offset, dashed ink)
+     The ghost line. Same path, drawn first, behind.
+───────────────────────────────────────────────── -->
+<g class="layer-rr" opacity="0.45">
+  <line x1="178" y1="494" x2="318" y2="414" stroke="#292524" stroke-width="2.5" stroke-dasharray="9,5,2,5"/>
+  <line x1="318" y1="414" x2="518" y2="334" stroke="#292524" stroke-width="2.5" stroke-dasharray="9,5,2,5"/>
+  <line x1="518" y1="334" x2="818" y2="214" stroke="#292524" stroke-width="2.5" stroke-dasharray="9,5,2,5"/>
+  <line x1="818" y1="214" x2="1058" y2="134" stroke="#292524" stroke-width="2.5" stroke-dasharray="9,5,2,5"/>
+  <text x="600" y="384" font-size="9" fill="#292524" font-style="italic" opacity="0.7"
+        letter-spacing="1" transform="rotate(-21.8 600 384)">
+    Louisville &amp; Nashville Railroad · built on the removal corridor
+  </text>
+</g>
+
+
+<!-- ─────────────────────────────────────────────
+     LAYER 2 — TRAIL (gold spine, present-day)
+     Same geometry, drawn in front, weight reads.
+───────────────────────────────────────────────── -->
+<g class="layer-trail">
+  <!-- Shadow -->
+  <line x1="180" y1="480" x2="320" y2="400" stroke="#292524" stroke-width="8" stroke-linecap="round" opacity="0.18"/>
+  <line x1="320" y1="400" x2="520" y2="320" stroke="#292524" stroke-width="8" stroke-linecap="round" opacity="0.18"/>
+  <line x1="520" y1="320" x2="820" y2="200" stroke="#292524" stroke-width="8" stroke-linecap="round" opacity="0.18"/>
+  <line x1="820" y1="200" x2="1060" y2="120" stroke="#292524" stroke-width="8" stroke-linecap="round" opacity="0.18"/>
+
+  <!-- Gold spine -->
+  <line x1="180" y1="480" x2="320" y2="400" stroke="#CA8A04" stroke-width="6" stroke-linecap="round"/>
+  <line x1="320" y1="400" x2="520" y2="320" stroke="#CA8A04" stroke-width="6" stroke-linecap="round"/>
+  <line x1="520" y1="320" x2="820" y2="200" stroke="#CA8A04" stroke-width="6" stroke-linecap="round"/>
+  <line x1="820" y1="200" x2="1060" y2="120" stroke="#CA8A04" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Silver Comet continuation past GA border, dashed -->
+  <line x1="1060" y1="120" x2="1180" y2="80" stroke="#CA8A04" stroke-width="4"
+        stroke-dasharray="8,5" stroke-linecap="round" opacity="0.7"/>
+</g>
+
+
+<!-- ─────────────────────────────────────────────
+     LAYER 3 — STATIONS
+     Beck-style: white circle, ink ring. Each station is a point of memory.
+───────────────────────────────────────────────── -->
+<g class="layer-stations">
+  <!-- Anniston (terminus, sienna fill = 1832 weight) -->
+  <circle cx="180" cy="480" r="14" fill="#F0EDE6" stroke="#292524" stroke-width="3.5"/>
+  <circle cx="180" cy="480" r="6" fill="#9A3412"/>
+
+  <!-- Weaver -->
+  <circle cx="320" cy="400" r="10" fill="#F0EDE6" stroke="#292524" stroke-width="2.8"/>
+
+  <!-- Jacksonville -->
+  <circle cx="520" cy="320" r="12" fill="#F0EDE6" stroke="#292524" stroke-width="3"/>
+  <circle cx="520" cy="320" r="4" fill="#292524"/>
+
+  <!-- Piedmont (terminus, sienna fill) -->
+  <circle cx="820" cy="200" r="14" fill="#F0EDE6" stroke="#292524" stroke-width="3.5"/>
+  <circle cx="820" cy="200" r="6" fill="#9A3412"/>
+
+  <!-- GA Border -->
+  <circle cx="1060" cy="120" r="10" fill="#F0EDE6" stroke="#292524" stroke-width="2.8"/>
+</g>
+
+
+<!-- ─────────────────────────────────────────────
+     LAYER 4 — STATION LABELS
+     Above-the-line labels (Beck convention)
+───────────────────────────────────────────────── -->
+<g class="layer-labels">
+  <!-- Anniston -->
+  <text x="180" y="520" text-anchor="middle" class="station-label">ANNISTON</text>
+  <text x="180" y="535" text-anchor="middle" class="station-sub">trail terminus · 1832</text>
+
+  <!-- Weaver -->
+  <text x="320" y="438" text-anchor="middle" class="station-label">WEAVER</text>
+
+  <!-- Jacksonville -->
+  <text x="520" y="358" text-anchor="middle" class="station-label">JACKSONVILLE</text>
+  <text x="520" y="372" text-anchor="middle" class="station-sub">est. 1834 · on Ladiga's land</text>
+
+  <!-- Piedmont -->
+  <text x="820" y="178" text-anchor="middle" class="station-label">PIEDMONT</text>
+  <text x="820" y="164" text-anchor="middle" class="station-sub">trail end · 39.5 miles</text>
+
+  <!-- GA border -->
+  <text x="1060" y="100" text-anchor="middle" class="station-label" font-size="11">GA BORDER</text>
+  <text x="1060" y="86" text-anchor="middle" class="station-sub">→ Silver Comet · Atlanta</text>
+</g>
+
+
+<!-- ─────────────────────────────────────────────
+     1832 ARGUMENT MARKERS — sienna annotations
+     Hung off the diagonal corridor. Cleanly aligned.
+───────────────────────────────────────────────── -->
+<g class="layer-1832">
+
+  <!-- TREATY OF CUSSETA seal — top center, hung off the corridor -->
+  <g transform="translate(680, 380)">
+    <circle cx="0" cy="0" r="58" fill="#9A3412" fill-opacity="0.05"
+            stroke="#9A3412" stroke-width="1.5" stroke-dasharray="3,4"/>
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#9A3412" stroke-width="0.5" opacity="0.5"/>
+    <!-- Star -->
+    <path d="M0,-18 L4.3,-6 L17,-5.5 L6.8,2.2 L10.8,14.6 L0,7.2 L-10.8,14.6 L-6.8,2.2 L-17,-5.5 L-4.3,-6 Z"
+          fill="#9A3412" opacity="0.8"/>
+    <text x="0" y="-67" text-anchor="middle" font-size="11" fill="#9A3412"
+          letter-spacing="1" font-weight="bold">TREATY OF CUSSETA</text>
+    <text x="0" y="78" text-anchor="middle" font-size="32" fill="#9A3412"
+          opacity="0.9" font-style="italic">1832</text>
+    <text x="0" y="95" text-anchor="middle" font-size="9" fill="#9A3412"
+          opacity="0.85" font-style="italic">Chief Ladiga signs.</text>
+    <text x="0" y="107" text-anchor="middle" font-size="9" fill="#9A3412"
+          opacity="0.85" font-style="italic">Creek removal begins.</text>
+    <!-- Connector to corridor -->
+    <line x1="-30" y1="-50" x2="-90" y2="-110" stroke="#9A3412" stroke-width="1.2"
+          stroke-dasharray="3,4" opacity="0.6"/>
+    <circle cx="-95" cy="-115" r="3" fill="#9A3412" opacity="0.7"/>
+  </g>
+
+  <!-- LAND SOLD 1833 — anchored to Jacksonville station -->
+  <g transform="translate(380, 460)">
+    <rect x="-72" y="-22" width="144" height="44"
+          fill="#F0EDE6" fill-opacity="0.92"
+          stroke="#9A3412" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="0" y="-6" text-anchor="middle" font-size="9" fill="#9A3412"
+          font-weight="bold" letter-spacing="0.5">LAND SOLD · 1833</text>
+    <text x="0" y="6" text-anchor="middle" font-size="8" fill="#9A3412"
+          opacity="0.85" font-style="italic">to Charles White Peters · $2,000</text>
+    <text x="0" y="17" text-anchor="middle" font-size="8" fill="#9A3412"
+          opacity="0.85" font-style="italic">Jacksonville founded on this parcel</text>
+    <line x1="40" y1="-22" x2="120" y2="-130" stroke="#9A3412" stroke-width="1"
+          stroke-dasharray="3,3" opacity="0.55"/>
+  </g>
+
+  <!-- FARMHOUSE 1832 — anchored to Anniston -->
+  <g transform="translate(80, 380)">
+    <path d="M0,-16 L11,-5 L11,11 L-11,11 L-11,-5 Z" fill="none" stroke="#9A3412" stroke-width="1.5" opacity="0.85"/>
+    <path d="M-13,-5 L0,-18 L13,-5" fill="none" stroke="#9A3412" stroke-width="1.5" opacity="0.85"/>
+    <text x="0" y="28" text-anchor="middle" font-size="8.5" fill="#9A3412"
+          font-weight="bold" letter-spacing="0.4">5400 RIDGEWOOD AVE</text>
+    <text x="0" y="40" text-anchor="middle" font-size="8" fill="#9A3412"
+          opacity="0.85" font-style="italic">farmhouse · 1832</text>
+    <text x="0" y="51" text-anchor="middle" font-size="8" fill="#9A3412"
+          opacity="0.7" font-style="italic">same year</text>
+    <line x1="20" y1="11" x2="95" y2="95" stroke="#9A3412" stroke-width="0.9"
+          stroke-dasharray="2,3" opacity="0.5"/>
+  </g>
+
+</g>
+
+
+<!-- ─────────────────────────────────────────────
+     TITLE BLOCK — top center, decorative
+───────────────────────────────────────────────── -->
+<g class="layer-title">
+  <line x1="200" y1="48" x2="1000" y2="48" stroke="#292524" stroke-width="0.5" opacity="0.35"/>
+  <text x="600" y="38" text-anchor="middle" font-size="26" fill="#292524"
+        letter-spacing="6" font-weight="bold">CHIEF LADIGA TRAIL</text>
+  <text x="600" y="62" text-anchor="middle" font-size="11" fill="#292524"
+        opacity="0.65" letter-spacing="3" font-style="italic">A removal route, a railroad, a recreation trail · 1832 to present</text>
+  <line x1="200" y1="74" x2="1000" y2="74" stroke="#292524" stroke-width="0.3" opacity="0.25"/>
+</g>
+
+
+<!-- ─────────────────────────────────────────────
+     LEGEND — bottom right
+───────────────────────────────────────────────── -->
+<g class="layer-legend" transform="translate(940, 540)">
+  <rect x="0" y="0" width="248" height="48" fill="#F0EDE6" fill-opacity="0.85" stroke="#292524" stroke-width="0.6" opacity="0.85"/>
+
+  <line x1="14" y1="14" x2="44" y2="14" stroke="#CA8A04" stroke-width="4"/>
+  <text x="50" y="17" font-size="9" fill="#292524" opacity="0.85">Chief Ladiga Trail · 39.5 mi</text>
+
+  <line x1="14" y1="28" x2="44" y2="28" stroke="#292524" stroke-width="2.2" stroke-dasharray="7,3,2,3" opacity="0.55"/>
+  <text x="50" y="31" font-size="9" fill="#292524" opacity="0.85">L&amp;N Railroad · removal corridor</text>
+
+  <circle cx="22" cy="42" r="3.5" fill="none" stroke="#9A3412" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="50" y="45" font-size="9" fill="#9A3412" opacity="0.85">1832 markers</text>
+</g>
+
+<text x="600" y="595" text-anchor="middle" font-size="7" fill="#292524" opacity="0.4"
+      letter-spacing="0.5">Editorial diagram · not to geographic scale · southernlegends.blog</text>
+
+</svg>

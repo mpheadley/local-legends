@@ -35,27 +35,47 @@ src/
     page.tsx            — homepage (hero, latest stories grid, about teaser)
     globals.css         — full design system + component styles
     about/page.tsx      — about page
+    search/
+      page.tsx          — search page (server: builds index, passes to client)
+      SearchClient.tsx  — client component: input, scoring, keyword highlight
     profiles/
-      page.tsx          — all stories listing
-      [slug]/page.tsx   — individual profile (MDX rendering)
-      feed.xml/route.ts — RSS feed
+      page.tsx          — all stories listing (tag filter via ?tag= search param)
+      [slug]/page.tsx   — individual profile (MDX rendering, progress bar, related stories)
+      feed.xml/route.ts — RSS feed (full-text content:encoded)
+    essays/
+      page.tsx          — essays listing
+      [slug]/page.tsx   — individual essay
     components/
-      Nav.tsx           — site navigation
+      Nav.tsx           — site navigation (search icon links to /search)
       Footer.tsx        — site footer
       ProfileCard.tsx   — story card for grids
       PullQuote.tsx     — Rock Salt accent quotes
+      ReadingProgressBar.tsx — fixed top bar tracking scroll through <article>
       ScrollReveal.tsx  — IntersectionObserver scroll animations
       ShareButtons.tsx  — social sharing
       StoryNav.tsx      — prev/next story navigation
       SubscribeCTA.tsx  — email subscribe block
   lib/
     profiles.ts         — MDX content loader (reads content/profiles/*.mdx)
+    journal.ts          — MDX content loader (reads content/journal/*.mdx, serves /essays route)
+    search.ts           — builds search index from profiles + journal (stripMdx util inside)
     site-config.ts      — site metadata, nav links
 content/
   profiles/             — MDX story files that ship (Matt + edited profiles only)
   research/             — .md research docs; raw material, never ships
+  research/sources/        — source PDFs (Anniston Star, Calhoun Journal, public records)
   AUTHENTIC-VOICE-GUIDE.md — writing voice reference
 ```
+
+## Research Doc & Source Filing (automatic — do not skip)
+
+When Matt provides PDFs, links, markdown docs, or any primary source material during a session:
+1. **PDFs** → copy to `content/research/sources/` with a clean name: `[subject-slug]-[outlet]-[type]-[year].pdf`
+2. **Markdown research docs** → copy to `content/research/` with a clean name: `[subject-slug]-[descriptor].md`
+3. **Create or update** `content/research/[subject-slug].md` — the primary source record for that profile. Include: source citations, verified direct quotes with attribution, facts to confirm with subject, cross-link opportunities to other profiles.
+4. Do this in the same session the material is provided, before moving on.
+
+This prevents source material from staying in Downloads and becoming unfindable.
 
 ## Content Model
 Each profile is an `.mdx` file in `content/profiles/` with frontmatter (title, slug, category, location, excerpt, date, etc.) and long-form narrative content. Profiles use the `PullQuote` component for Rock Salt accent quotes.
@@ -72,22 +92,25 @@ Each profile is an `.mdx` file in `content/profiles/` with frontmatter (title, s
 - **Storytelling framework:** `STORYTELLING-FRAMEWORK.md` — StoryBrand/Lowry Loop frameworks, three-tier personal story arc, Patreon philosophy.
 - **Platform strategy:** `STRATEGY.md` — three-platform architecture, Patreon content plan, syndication order of operations, byline examples, action items.
 - **Publishing plan:** `PUBLISHING-PLAN.md` — publishing sequence (SL → Anniston Star → Calhoun Journal), byline strategy, Donna Barton reconnection pitch, immediate next steps.
+- **Syndication content handling:** SL always publishes first — it is the canonical source. Pieces syndicated out to the Star or Journal stay in `content/profiles/` or `content/journal/` as normal. No separate folder needed. The only exception: pieces that originated outside SL (e.g. a Star piece reprinted here) should use the `originalPublication` frontmatter field to flag the external canonical source. Do not create separate folders or use `published: false` as a syndication flag — frontmatter handles it.
+- **Essays publish checklist:** When publishing an essay, add these to frontmatter: (1) `published: true`, (2) `merchImage` — imgproxy URL of the most relevant product photo, (3) `merchUrl` — direct link to that product (e.g. `https://matt-headley-shop.fourthwall.com/products/still-here`). Posts without `merchUrl` fall back to the store homepage. Match product to essay: Still Here = survival/hospitalization, Bipolar & Proud = diagnosis identity, I Contain Multitudes = default/broad.
 - **Two-draft rule:** Matt writes first draft. Claude acts as editor with specific questions. Claude never writes openings, endings, or vulnerable passages.
+- **AI psychosis piece — additional guardrail:** When working on `journal-drafts/ai-psychosis.md` or any draft of that piece, flag extended ideation-heavy sessions and defer vulnerable passage work until Matt has had clinical team input. If a session starts to feel like generative momentum rather than editorial work, name it. Do not draft the piece in a planning conversation. See `journal-drafts/ai-psychosis.md` for the full seed file and context.
 - **Gap audit (runs before scaffold):** When Matt brings in raw material — voice chat, transcript, notes — run a gap audit before touching the draft. For each scene implied by the material, check three criteria: (1) time/place anchor, (2) first sensory hit when entering a space or moment, (3) specific visual of the key person. Ask one question per gap, one at a time. Wait for Matt's answer before asking the next. Only write the scaffold once the gaps are filled.
-- **Voice baseline:** Read `matt-headley.mdx` before helping with any new profile writing.
 - **AI kill list:** Avoid words/patterns in Part 5 of the voice guide (delve, foster, leverage, tapestry, etc.)
 - **Narrator vs. protagonist:** Matt writes in first person, but the subject must be the main character, not Matt. For business profiles: one personal connection sentence up front (e.g., "Sam is my friend"), then make it about them. Matt's personal stories belong in interview questions that draw out the subject's answers, not in the narrative body. Test: if you removed every sentence about Matt, does the profile still stand? If it collapses, Matt is too centered. Place/nonprofit profiles have more room for Matt's presence when his proximity IS the argument (e.g., Freedom Riders — "my kids were born at the same hospital").
+- **Called Coffee crosslink (deadline: May 11, 2026):** Shannon's profile (`content/profiles/shannon-jenkins.mdx`, line 79) has a flagged comment: `{/* Crosslink opportunity: Jared, Called Coffee owner — profile upcoming */}`. Called Coffee appears in at least Shannon's profile and potentially others — it's a recurring location in the personal writing. Writing the Called Coffee profile activates that dormant crosslink. Jared is also a natural Headley Web prospect. May 11 is the Eastaboga Bee deadline — revisit the Called Coffee profile as the next active slot after that piece is filed.
 
-## Personal Writing Section (Planned — name TBD)
+## Personal Writing Section — Essays
 
-Matt's personal writing and curated media live in a dedicated section — separate from profiles. Name is between **"Letters"** (fits the epistolary essay voice, Patreon posts opened "Dear friends") and **"Notes"** or **"Journal"** (fits the expanded multimedia content model better). Decide before building.
+Matt's personal writing and curated media live in a dedicated section — separate from profiles. **Section is called "Essays"** (decided 2026-04-25). Nav label: "Essays". Route: `/essays`. Content directory: `content/journal/` (unchanged — no file moves). Permanent 301 redirects from `/journal` and `/journal/:slug`.
 
 **Why this lives on SL (not a separate site, not Patreon):**
 SL is the right home because the personal writing isn't separate from the editorial project — it's the explanation for why it exists. The profiles raise the question: why does this person notice these people so carefully? The personal section answers it. Model: The Marginalian (everything on one owned platform), The Bitter Southerner (author voice lives alongside journalism). See design-inspiration-editorial.md.
 
-**This decision is settled (April 2026).** Patreon was wound down and 20+ followers were directed to SL journal entries. Moving the content now would break those links and relationships. The journal stays on SL.
+**This decision is settled (April 2026).** Patreon was wound down and 20+ followers were directed to SL essay links (via permanent 301 redirects). Moving the content now would break those links and relationships. The essays section stays on SL.
 
-**Client credibility note:** SL started as top-of-funnel for Headley Web. The journal's heavier content (bipolar diagnosis, psychiatric hospitalizations) is a real but manageable credibility risk in the NE Alabama small business market. Mitigation: keep the journal at low visibility (nav + footer + byline only — never a homepage feature), and treat each heavy piece as a judgment call before publishing. Farm/faith/music content is an asset. Clinical mental health material warrants more care. Most clients won't go looking; the ones who do and are put off were probably not the right fit.
+**Client credibility note:** SL started as top-of-funnel for Headley Web. The essays section's heavier content (bipolar diagnosis, psychiatric hospitalizations) is a real but manageable credibility risk in the NE Alabama small business market. Mitigation: keep the journal at low visibility (nav + footer + byline only — never a homepage feature), and treat each heavy piece as a judgment call before publishing. Farm/faith/music content is an asset. Clinical mental health material warrants more care. Most clients won't go looking; the ones who do and are put off were probably not the right fit.
 
 **Future pieces — placement decisions (decided April 2026):**
 - **Psilocybin trip:** Do NOT publish on SL. This is the hard line. Everything else is about things that happened to Matt; this is about a choice involving a Schedule I substance in Alabama. One client finding it could cost real business. Belongs on Substack or nowhere public yet — not here.
@@ -105,19 +128,25 @@ SL is the right home because the personal writing isn't separate from the editor
 - Matt's own photos, candid and personal
 - Shorter reflections
 
-MDX files in `content/letters/` (or `content/notes/` depending on name). Frontmatter: title, slug, date, excerpt, optional featuredMedia type.
+MDX files in `content/journal/` (storage directory — route is `/essays`). Frontmatter: title, slug, date, excerpt, optional featuredMedia type.
 
-**Components needed:**
-- Audio player (sermons, podcast)
-- Video embed (YouTube, Vimeo)
-- Music embed (Spotify, SoundCloud, Bandcamp)
-- ArtCredit (image + attribution for other artists' work)
-- SongCard ("Today's Anthem" pattern)
+**MDX components — all built, registered in `src/app/essays/[slug]/page.tsx`:**
+- `AudioPlayer` — custom player with scrubber. Props: `src`, `title?`, `caption?`
+- `SermonCard` — AudioPlayer + "Preached at…" label above. Props: `src`, `title`, `preachedAt?`, `caption?`
+- `VideoEmbed` — YouTube (no-cookie) + Vimeo. IntersectionObserver lazy-load, 16:9 no-shift. Props: `url`, `caption?`
+- `MusicEmbed` — Spotify compact (152px) + Bandcamp (120px), auto-detected from URL. Props: `url`, `caption?`
+- `SongCard` — "Today's Anthem" link card, no iframe. Props: `title`, `artist`, `url`, `note?`
+- `PhotoStrip` — horizontal snap-scroll filmstrip for inline journal photos (lighter than `PhotoCarousel`). Props: `photos` (array of `{src, alt, caption?}`), `caption?`
+- `ArtCredit` — image + artist attribution line. Props: `src`, `alt`, `artist`, `artistUrl?`, `caption?`, `width?`, `height?`
+- `TimelineBlock` — vertical dot timeline for chronological essays. Props: `items` (array of `{date, label, detail?}`), `caption?`
+- `PullQuote`, `ArticleImage`, `FeaturedImage`, `InlineImage`, `Dateline` — existing prose components
 
 **Portfolio value:** Building clean multimedia handling in Next.js (lazy loading, no layout shift, proper aspect ratios) is a real Headley Web skill. Clients ask for this. SL is the live demo.
 
 **Site architecture:**
-- `/letters` (or `/notes`) — dedicated page, own layout. Cards with photo, title, date, excerpt — warmer and more personal than profile cards. Warm background (`#F0EDE6`) to signal different space.
+- `/essays` — editorial column layout on warm parchment (`#F0EDE6`). Large Fraunces display heading, gold "Personal writing" eyebrow, ruled list of posts: date + reading time + title + excerpt only. **No thumbnails** — the subject matter (bipolar, grief, farm loss) is heavy enough that images push it toward "content" and away from "writing." The Bitter Southerner and The Atavist don't use thumbnails on essay listings. The title and opening line do the work. Images show up inside the piece.
+- **"Read the Stories" cards at the bottom of essays** — use `ProfileCardHero` in a 2-column grid (not 3). Three columns is too narrow inside `max-w-3xl` and clips titles. Never shrink `containerPx` on `resolveCardTitle` to compensate — that produces lighter-weight cards than the profiles page uses for the same component. Pull the column count lever, not the font size lever.
+- **EssayCard** (More from Essays section) — no thumbnail, matches listing page: date · reading time + title + excerpt.
 - **Homepage** — quiet callout below the profiles grid. Not a full section.
 - **Nav** — distinct nav link alongside profiles.
 
@@ -134,17 +163,63 @@ Decisions and why:
 - **SubscribeCTA on homepage only** — no newsletter exists yet. Add back to profiles when a real send cadence is in place. The component (`SubscribeCTA.tsx`) supports `variant="section"` (homepage) and `variant="inline"` (footer).
 - **"Support this work" lives in the byline** — not a standalone strip. It sits below share buttons inside `profile-closing-share`, grouped under the author credit where it makes contextual sense.
 - **Nominate CTA removed from profile pages** — lives on the About page only. Profile pages already have enough asks.
-- **Journal strip removed from homepage** — journal is discoverable via persistent nav, profile byline button, and footer. Doesn't need its own homepage band until the journal has 8–10 published pieces.
+- **Essays strip removed from homepage** — essays are discoverable via persistent nav, profile byline button, and footer. Doesn't need its own homepage band until there are 8–10 published essays.
 - **No "Enjoyed this story?" label** — share and support buttons are self-explanatory. Labels were redundant.
+- **Comments: keep on both profiles and essays (decided April 2026)** — not off-brand at this stage. Visible engagement is social proof for Headley Web prospects ("here's the community this site has"). SEO benefit: UGC adds fresh keyword-relevant text. FB sharing not meaningfully affected — commenters are a small minority of readers. Revisit when SL hits 20+ profiles and the editorial identity is more established.
+- **Section heading: "Responses" not "Comments"** — more editorial, fits the magazine tone. Keep.
+- **No on-site replies** — reply privately via email or on Facebook. Public reply threads are a future feature, not now.
 
 ## Current Status
-- **Done:** Design system, layout, homepage, about page, profile detail page, profile listing, 7 published profiles (1 by Matt, 6 edited), 16 research docs in `content/research/`, RSS feed, scroll animations, share buttons, story navigation, subscribe CTA
+- **Done:** Design system, layout, homepage, about page, profile detail page, profile listing (with tag filtering), search page (`/search`), reading progress bar on profiles, related stories by tag on profiles, full-text RSS, 7 published profiles (1 by Matt, 6 edited), 16 research docs in `content/research/`, scroll animations, share buttons, story navigation, subscribe CTA
 - **Fonts loaded via `<link>` in layout.tsx** — Fraunces and Rock Salt are Google Fonts links, not `next/font`. Source Sans 3 uses `next/font/google`. Consider migrating Fraunces/Rock Salt to `next/font` for performance.
+
+## Essays MDX Components — Status (browser-tested April 2026)
+
+All components registered in `src/app/essays/[slug]/page.tsx` under `mdxComponents`.
+
+**Working (simple string/url props):**
+- `VideoEmbed` — YouTube embed, correct 16:9 aspect ratio, caption renders
+- `MusicEmbed` — Spotify embed, correct height, caption renders
+- `SongCard` — "Today's Anthem" card, title/artist/note all render
+- `ArtCredit` — image + "Art: [artist]" attribution renders correctly
+- `SermonCard` — wraps AudioPlayer, "Preached at" label renders, audio functional
+
+**Fixed — JSON string prop workaround (April 2026):**
+- `PhotoStrip` — use `photosJson='[{"src":"...","alt":"...","caption":"..."}]'` instead of `photos={[...]}`. Component parses the JSON string internally.
+- `TimelineBlock` — use `itemsJson='[{"date":"...","label":"...","detail":"..."}]'` instead of `items={[...]}`. Component parses the JSON string internally.
+
+**Root cause:** Turbopack/next-mdx-remote v6 RSC drops object-array JSX prop expressions at the MDX source level. Simple string props pass through fine. JSON string props are simple strings — they survive the compilation.
+
+**MDX usage example:**
+```mdx
+<TimelineBlock
+  caption="My timeline"
+  itemsJson='[{"date":"2019","label":"Started farming","detail":"Planted the first field."},{"date":"2024","label":"Started over"}]'
+/>
+
+<PhotoStrip
+  caption="My photos"
+  photosJson='[{"src":"/images/photo.webp","alt":"Description","caption":"Optional caption"}]'
+/>
+```
 
 ## OG Images
 - **Manual OG (preferred):** Open `og-preview.html`, edit title/name/image/position, screenshot at 1200x630, save to `public/images/social/{slug}-og.png`. The site auto-detects and uses it.
 - **Satori fallback:** `src/app/profiles/[slug]/opengraph-image.tsx` auto-generates for profiles without a manual screenshot.
 - **Detection:** `generateMetadata` in `page.tsx` checks if `public/images/social/{slug}-og.png` exists. If yes, uses it. If no, Satori kicks in.
+
+## Writing Coach & Audit Triggers
+
+When the user says any of the phrases below, **immediately invoke the corresponding slash command** — no confirmation needed.
+
+| User says | Invoke |
+|---|---|
+| "writing guide", "writing coach", "coach me", "socratic coach", "voice guide", "authentic voice guide" | `/coach-sl` |
+| "audit this", "voice check", "check this draft", "run the audit" | `/coach-sl` (voice check mode — bring draft, run audit-satire.py as baseline then layer SL checks) |
+
+Matt writes first. Always. Do not generate content before coaching is complete.
+
+---
 
 ## Build Rules
 - Follow global CLAUDE.md standards (next/image, WebP, contrast checks, etc.)

@@ -10,25 +10,41 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
+function mdxToText(raw: string): string {
+  return raw
+    .replace(/^import\s.+$/gm, "")
+    .replace(/<[A-Z][A-Za-z]*[^>]*\/>/g, "")
+    .replace(/<[A-Z][A-Za-z]*[^>]*>[\s\S]*?<\/[A-Z][A-Za-z]*>/g, "")
+    .replace(/\{[^}]*\}/g, "")
+    .replace(/^#{1,6}\s+(.+)$/gm, "$1\n")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 export async function GET() {
   const profiles = getAllProfiles();
 
   const items = profiles
-    .map(
-      (p) => `
+    .map((p) => {
+      const fullText = escapeXml(mdxToText(p.content));
+      return `
     <item>
       <title>${escapeXml(p.frontmatter.title)}</title>
       <link>${siteConfig.url}/profiles/${p.slug}</link>
       <description>${escapeXml(p.frontmatter.excerpt)}</description>
+      <content:encoded><![CDATA[${fullText}]]></content:encoded>
       <pubDate>${new Date(p.frontmatter.date).toUTCString()}</pubDate>
       <guid isPermaLink="true">${siteConfig.url}/profiles/${p.slug}</guid>
       ${(p.frontmatter.tags ?? []).map((t) => `<category>${escapeXml(t)}</category>`).join("\n      ")}
-    </item>`
-    )
+    </item>`;
+    })
     .join("");
 
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>${escapeXml(siteConfig.name)}</title>
     <link>${siteConfig.url}/profiles</link>

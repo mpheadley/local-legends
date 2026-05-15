@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820" width="600" height="820">
+  <!-- background removed — shirt color shows through -->
+
+  <!-- Railroad spike — wider flat head, narrow shaft, long taper -->
+  <rect x="228" y="28" width="144" height="26" rx="2" fill="#1C1917"/>
+  <rect x="288" y="54" width="24" height="12" fill="#1C1917"/>
+  <rect x="294" y="66" width="12" height="160" fill="#1C1917"/>
+  <polygon points="294,226 306,226 300,278" fill="#1C1917"/>
+
+  <!-- Main stacked wordmark — more gap from spike -->
+  <text x="300" y="360"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="110"
+    fill="#1C1917"
+    letter-spacing="-1">CHIEF</text>
+
+  <text x="300" y="480"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="110"
+    fill="#1C1917"
+    letter-spacing="-1">LADIGA</text>
+
+  <text x="300" y="600"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="110"
+    fill="#1C1917"
+    letter-spacing="-1">TRAIL</text>
+
+  <!-- Thin rule -->
+  <line x1="100" y1="626" x2="500" y2="626"
+    stroke="#1C1917" stroke-width="1.2"/>
+
+  <!-- Sub-text -->
+  <text x="300" y="656"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="16"
+    fill="#1C1917"
+    letter-spacing="5">ANNISTON, ALABAMA</text>
+
+  <text x="300" y="680"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="16"
+    fill="#1C1917"
+    letter-spacing="5">39.5 MILES</text>
+
+  <!-- SL wordmark -->
+  <rect x="272" y="712" width="56" height="56" rx="8" fill="#1C1917"/>
+  <text x="300" y="746"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="26"
+    fill="#FAFAF7"
+    letter-spacing="-0.5">SL</text>
+</svg>

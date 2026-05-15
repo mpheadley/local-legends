@@ -1,77 +1,12 @@
-# Southern Legends
+## Previewing SVG files
 
-A content-driven storytelling site profiling small businesses, landmarks, makers, and community organizations in Northeast Alabama. Built by [Headley Web & SEO](https://headleywebseo.com).
+To accurately preview SVG files for print, especially when dealing with specific dimensions and rendering, the following steps are recommended:
 
-## About
+1.  **Check SVG dimensions**: Use `grep -i "viewBox\|width\|height" file.svg` to quickly ascertain the native `viewBox`, `width`, and `height` attributes of the SVG.
 
-Southern Legends is an editorial project highlighting the people and places that make Northeast Alabama what it is — the nonprofits holding communities together, the museums hiding in plain sight, the makers and business owners who've been doing the work for decades. Each profile is researched, written in first person, and built to be useful to anyone searching for these places online.
+2.  **Render SVG to PNG using Chrome headless**: To ensure consistent rendering across different environments (e.g., matching a print shop's rendering engine), use Chrome in headless mode to convert the SVG to a PNG at its native dimensions. This can be done with the command:
+    `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --screenshot=/tmp/preview.png --window-size=<width>,<height> "file:///full/path/to/file.svg"`
+    Replace `<width>` and `<height>` with the dimensions obtained from the `grep` command, and `/full/path/to/file.svg` with the absolute path to your SVG file.
 
-## Current Profiles
-
-- **Interfaith Ministries of Calhoun County** — The coalition of churches that's been pooling resources since 1975 to keep Calhoun County's safety net intact
-- **Jacksonville Christian Outreach Center** — The food pantry, clothing closet, and emergency hub that runs on donations and stubbornness
-- **Anniston Museum of Natural History & Longleaf Botanical Gardens** — A world-class museum and 15-acre garden campus hiding in a town of 22,000
-- **Freedom Riders National Monument** — The 1961 bus firebombing that became a turning point in the Civil Rights Movement, now a National Park Service site
-- **Coldwater Mountain** — Over 56 miles of singletrack and the first Leadville qualifying race east of the Mississippi
-- **The Peerless Saloon & Grille** — Alabama's oldest bar, a 1904 World's Fair relic, a former brothel, and a ghost named Lucinda
-- **Chief Ladiga Trail** — 105 miles of paved trail from Anniston to Atlanta, and the Piedmont trail town businesses built around it
-- **Noccalula Falls** — A 90-foot waterfall, a Cherokee legend, and 250 acres of gorge trails in Gadsden
-- **Cheaha State Park** — Alabama's highest point at 2,407 feet, CCC-built structures, and the Pinhoti Trail connection
-- **Alabama's Covered Bridges** — The oldest in Alabama (Oxford, built ~1850 by a formerly enslaved man) plus the Blount County trio
-- **Janney Furnace** — A Confederate iron furnace destroyed before it ever fired, still standing in Ohatchee
-- **WaldenFARMacy** — The permaculture herb farm in Bessemer that taught me how to think about land as a living system
-- **Weaver, Alabama** — Seven years pastoring in a town of 3,300 that taught me what community looks like
-- **JSU Music & Theater** — The departments at Jacksonville State that shaped everything that came after
-- **Shepherd's Table** — The Sunday morning breakfast ministry that changed how I saw my own church
-- **Pleasant Valley** — Home now. The place you go when you need to start again
-- **Aquality Farms** — Sam and John Mark Sawyer's hydroponic urban farm growing 24,000 heads of lettuce in downtown Anniston
-- **Howard Core Company** — One of America's largest violin dealers, operating from 99 Symphony Way, Anniston
-- **The Kress Mercantile** — A 1935 Art Deco building reborn as a downtown marketplace on Noble Street
-- **Pinhoti Pizza Company** — Brick oven pizza on the Chief Ladiga Trail in Piedmont
-
-## Stack
-
-- **Next.js 16** (App Router, `src/` directory)
-- **Tailwind CSS v4** (via `@tailwindcss/postcss`)
-- **MDX** via `next-mdx-remote` + `gray-matter` + `reading-time`
-- **Fonts:** Fraunces (headings), Rock Salt (accent/pull quotes), Source Sans 3 (body)
-- **Design system:** "Parchment & Pine" — burnt sienna, gold, warm neutrals
-- **Deploy:** Vercel
-
-## Content
-
-Profiles are MDX files in `content/profiles/` with frontmatter for metadata (title, slug, category, location, tags, excerpt, published status). Set `published: false` in frontmatter to keep a profile in draft.
-
-## Development
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Project Structure
-
-```
-src/
-  app/
-    layout.tsx          — root layout (nav, footer, scroll reveal)
-    page.tsx            — homepage (hero, latest stories, about teaser)
-    globals.css         — full design system + component styles
-    about/page.tsx      — about page
-    profiles/
-      page.tsx          — all stories listing
-      [slug]/page.tsx   — individual profile (MDX rendering)
-      feed.xml/route.ts — RSS feed
-    components/         — Nav, Footer, ProfileCard, PullQuote, etc.
-  lib/
-    profiles.ts         — MDX content loader
-    site-config.ts      — site metadata, nav links
-content/
-  profiles/             — MDX story files
-```
-
-## License
-
-All content and code in this repository is proprietary. All rights reserved.
+3.  **Open PNG in Preview**: Once the PNG is generated, open it in a reliable image viewer like macOS Preview for final inspection:
+    `open -a "Preview" /tmp/preview.png`

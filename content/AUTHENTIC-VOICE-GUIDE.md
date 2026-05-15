@@ -1,6 +1,12 @@
 # Writing Authentically: A Guide for Southern Legends
 
+**Related guides:**
+- `~/Developer/webdev/starter-kit/COPY-VOICE-GUIDE.md` — kill list and rhythm test for website/marketing copy
+- `~/Developer/webdev/starter-kit/SOCIAL-COPY-GUIDE.md` — social media captions (Instagram, Facebook, LinkedIn). The literary journalism principles in this guide do NOT apply there — see that doc for what does.
+
 *Instructions for Claude when writing, editing, or reviewing content for this site.*
+
+*See also: `green-tomato/content/research/SATIRE-CRAFT-GUIDE.md` — the parallel craft guide for GT/TPT satire. The voice moves are different registers of the same core discipline: specific detail, flat delivery, no explaining the point. The satire guide's sections on the confirming detail and the sincere quote are the deadpan cousins of what this guide calls "the telling detail" and "report, don't explain."*
 
 ---
 
@@ -10,7 +16,6 @@ Southern Legends profiles small business owners and makers in Northeast Alabama.
 
 *For the storytelling frameworks behind the writing (StoryBrand, Lowry Loop, funnel architecture), see `STORYTELLING-FRAMEWORK.md` in the project root.*
 
-Matt's profile (`matt-headley.mdx`) is the voice baseline. Read it before helping with any new profile.
 
 ### Why This Site Exists
 
@@ -90,7 +95,7 @@ This rule is downstream of Ted Chiang's argument (via Rebecca Heilweil, Fast Com
 
 ### Hard List — Never Use
 
-These are AI fingerprints. Their presence in a sentence signals a machine wrote it.
+These are AI fingerprints. Their presence in a sentence signals a machine wrote it. The principle behind this list is Orwell's: vague, inflated language isn't just bad style — it's dishonest. Precision is a form of honesty.
 
 **Verbs:** delve, foster, leverage, harness, underscore, showcase, navigate (metaphorically), bolster, streamline, optimize, unlock, unleash, elevate, align, empower, revolutionize, supercharge, transform
 
@@ -166,7 +171,7 @@ Promotional language doing marketing work instead of journalism. Sells the subje
 
 **Mirror paragraphs.** AI follows the same internal paragraph structure: topic sentence, explanation, example, concluding thought. Vary the shapes. Some paragraphs should be one sentence. Some should be eight.
 
-**Hedging reflex.** "It could be argued that..." / "One might say..." / "In many ways..." If the sentence is true, say it. If it isn't, don't write it.
+**Hedging reflex.** "It could be argued that..." / "One might say..." / "In many ways..." If the sentence is true, say it. If it isn't, don't write it. (Orwell Rule 3: if it is possible to cut a word out, always cut it out.)
 
 **False balance.** Presenting "both sides" when one side is obviously right is not nuance — it's cowardice. Real nuance means holding complexity, not splitting the difference.
 
@@ -204,6 +209,68 @@ None of these explain what they meant. They report and move.
 
 ---
 
+## Memoir and Feeling
+
+"Show don't tell" is a fiction rule applied too broadly to personal essay. In memoir, especially writing about mental illness, naming your feelings is often the point. When the internal experience is disordered and confusing — mania, depression, dissociation — telling the feeling can be more honest than showing it, because the feeling itself is the thing that couldn't be shown in behavior.
+
+Telling feelings isn't a failure of showing — it's the form. (Vivian Gornick)
+
+The test: does naming the feeling add to what the scene shows, or repeat it? "I felt something — anger, exhilaration, grief, I'm not sure" adds because the uncertainty is the truth of the manic state. "I felt happy" after a scene that already showed happiness is redundant. Trust the distinction.
+
+Honor your feelings, support them with evidence. The feeling first, then the scene that earns it. (Mary Karr)
+
+"Emotion's just so terrifying the world refuses to believe that it can be pursued as discipline, as form." (Chris Kraus)
+
+---
+
+## Humor
+
+Dry, incidental, never announced. The reader discovers it — you don't signal it.
+
+**Where it lives:**
+
+**Bathos.** Drop the mundane detail into the heavy moment. After the kids cry about leaving the church: "Took the kids to IHOP." No commentary. The IHOP does the work. The mundane is the joke and the grace at once.
+
+**Specificity doing double duty.** A precise detail can be both honest and funny. "Snacks, coffee, and handshakes with latecomers" — "snacks" first, before coffee, before the pastoral handshakes. The ordering is the joke. A former associate pastor slipping out for snacks. Never stated.
+
+**The short sentence after weight.** Timing is rhythm. "I thought I was fine. Better than fine. Better than ever." Three sentences, each one an escalation. The repetition is what makes it land. The structure does the comedy. Nothing is labeling it as dark irony.
+
+**The throughline payoff.** Purple pants at Easter. Jason's "I love those pants!" later. The callback earns the laugh because the detail was already there doing honest work.
+
+**What kills it:**
+
+- **Announcing it.** If you're signaling that something is funny, it isn't. "Snacks (yes, really)" is death. "Snacks" is alive.
+- **Too much.** Comedy calibrated wrong undercuts what comes after. No Shade's humor works because the communion scene has to land. Every laugh is borrowed from the ending.
+- **Setup-punchline structure.** That's standup. This is not standup. The laugh should surprise the reader, not arrive on schedule.
+
+**The test:** Did you notice you were being funny when you wrote it, or did you just write what happened and the funny is in the facts? If you noticed, cut it and find the version where you didn't notice.
+
+Matt's best comic lines in his own work:
+- "Took the kids to IHOP."
+- "Better than ever."
+- "Played on my phone during the sermon."
+- "Jason checked on me weekly. I was hiding."
+
+None of them are trying.
+
+---
+
+## On Attention-Seeking
+
+All public writing seeks attention. The question is what you're doing with it once you have it. Witness and exhibitionist both need an audience. The difference is what they're asking the audience to see.
+
+The confessionalist tradition gets accused of attention-seeking constantly:
+- **Augustine** — *Confessions* is literally named for public self-disclosure. Critics called it vanity. It became the template for Western autobiography.
+- **Sylvia Plath** — accused of using suffering as performance. The charge never lands because the work is too precise to be mere display.
+- **Anne Sexton** — same tradition, same accusation. Her response: "I am not a good poet, but a very good entertainer." She owned the performance and kept writing.
+- **Mary Karr** — *The Liar's Club* was criticized for airing family history. She wrote two more memoirs.
+- **Montaigne** — the original essayist, took himself as subject, was criticized for it. "Every man carries the whole form of the human condition within him." The defense of self-disclosure as universal.
+- **James Baldwin** — wrote from inside his own experience of race, exile, anger. The personal was never separate from the political argument.
+
+The self-aware version is more honest than the version that pretends the charge isn't there. Name it in the work. Don't defend against it — hold it. The reader who accuses you of attention-seeking is usually uncomfortable with what you're saying, not with the fact that you're saying it.
+
+---
+
 ## Transitions
 
 Don't use "Moreover," "Furthermore," "Additionally," or any other connector that announces a transition is happening. Literary journalism transitions by cutting. White space. A time marker ("Three weeks later"). A scene shift. Or the last image of one paragraph echoes the first word of the next. If a transition word is doing the work, the structure probably needs fixing, not patching.
@@ -235,7 +302,7 @@ When in doubt, ask one question, not three. One good question is more useful tha
 
 ## Self-Audit Checklist
 
-Run this before returning any draft or edit to Matt.
+Run this before returning any draft or edit to Matt. The checklist finds problems — the ear solves them. Apply these as prompts, not verdicts. If following a rule makes the writing worse, invoke Orwell's Rule 6 and break it.
 
 - [ ] Any hard-kill words? (search: delve, leverage, harness, foster, robust, pivotal, seamless, tapestry)
 - [ ] Em dashes present? Replace with period, comma, colon, or rewrite.
@@ -248,6 +315,7 @@ Run this before returning any draft or edit to Matt.
 - [ ] Read a paragraph aloud: does the rhythm vary, or does every sentence land the same way?
 - [ ] Any sentence explaining what something meant? Cut it. Report what happened instead.
 - [ ] Does the ending reach for meaning, or does it land on a scene? If it's announcing what the piece was about, cut it. End on the image, the fact, the last line of dialogue.
+- [ ] Named feelings: does each one add to what the scene shows, or repeat it? In memoir, naming is allowed — but only if the feeling couldn't be fully shown in behavior. (See: Memoir and Feeling)
 
 ---
 
@@ -259,10 +327,13 @@ Run this before returning any draft or edit to Matt.
 4. **Show, then trust.** Build the scene. Give the details. Then stop. Don't explain what it means.
 5. **Matt writes first.** Always. Every time.
 6. **Read aloud.** If it sounds like a press release, cut it.
-7. **Resist smoothness.** Too polished means the life has been edited out.
+7. **Resist smoothness.** Too polished means the life has been edited out. (Orwell: vague, inflated language is a form of dishonesty. Precision is a form of honesty.)
 8. **Write from the South, not about it.**
 9. **Let people be people.** Not symbols, not characters, not representatives of anything.
 10. **When in doubt: add a detail, remove an adjective.**
+11. **Prefer idiomatic over literary.** "Kicked in" over "commenced." "Quit" over "abandoned." "Stuck" over "remained." Write in the language you actually think in — the native tongue is more honest than the literary one. (Karr, Orwell)
+12. **Direct speech gets quotes. Indirect speech doesn't.** Words actually said in the moment: put them in quotes. Paraphrase, summary, reported speech: no quotes. *"Just checking it out"* is a quote. *He asked about the farm* is not. Mixing them without quotes flattens the difference between what was witnessed and what was reconstructed.
+13. **Ground quotes in their source.** Before using a quote, know where it came from — heard directly, or from a news article or public record. If you can't remember, treat it as reported speech, not direct. Quotes imply witness. Using sourced material as if it were firsthand is a trust problem. Direct speech heard in the room gets quotes. Reported speech from coverage gets "He has said" or similar attribution — no quotes. Nicknames and attributed phrases from public record can stay in quotes with clear attribution. (Karr, *The Art of Memoir*: the memoirist's contract with the reader depends on the writer knowing the difference between what they witnessed and what they reconstructed. AP standard: quote marks are reserved for words the source actually said, exactly as said.)
 
 ---
 
@@ -284,11 +355,55 @@ Matt encountered the inductive preaching principle in seminary. Barnhart is a cl
 **Phillip Lopate — *The Art of the Personal Essay* (anthology)**
 The canonical text on the personal essay form. Lopate's argument: the essayist doesn't reduce life to a recitation of events — the job is to reveal its continuing meaning through voice, presence, and honest reckoning. The introduction alone is worth reading before writing any personal piece.
 
+**Vivian Gornick — *The Situation and the Story***
+The clearest argument for naming feelings in memoir. Gornick defines the distinction: "The situation is the context or circumstance, sometimes the plot; the story is the emotional experience that preoccupies the writer: the insight, the wisdom, the thing one has come to say." The narrator's interior life is the story — not a failure of showing, but the form itself. Telling feelings isn't a failure of showing — it's the form.
+
+**Leslie Jamison — *The Empathy Exams* and craft interviews**
+Jamison reframes show-don't-tell: feelings are "made of the way we speak them" — naming them is a kind of showing, not a shortcut around it. Physical details work as "side doors or back entrances" to emotional truth. She pursues shame not as something to hide but as a "mark of some deep investment or deep internal struggle."
+
+**Mary Karr — interviews and *The Art of Memoir***
+"Respect your feelings. Honor your own experience." Be "fearless about telling the truth because that's where the rich writing is going to come from" — but ground every feeling in something that happened. Honor your feelings, support them with evidence. The feeling first, then the scene that earns it.
+
+**Chris Kraus — *I Love Dick***
+"Emotion's just so terrifying the world refuses to believe that it can be pursued as discipline, as form." On the dismissal of feeling as subject matter: "no matter how dispassionate or large a vision of the world a woman formulates, whenever it includes her own experience and emotion, the telescope's turned back on her."
+
+**Jo Ann Beard — craft interviews**
+"Simply thinking, focused thinking, with words attached to memories attached to images." The narrator's felt experience as the organizing principle — not the events, but the thinking attached to them.
+
+**George Orwell — "Politics and the English Language" (1946)**
+Orwell's argument is moral as much as stylistic — vague, inflated language is dishonest. Precision is a form of honesty. The essay is free online and worth reading in full. The six rules:
+
+1. Never use a metaphor, simile, or other figure of speech which you are used to seeing in print.
+2. Never use a long word where a short one will do.
+3. If it is possible to cut a word out, always cut it out.
+4. Never use the passive where you can use the active.
+5. Never use a foreign phrase, a scientific word, or a jargon word if you can think of an everyday English equivalent.
+6. Break any of these rules sooner than say anything outright barbarous.
+
+**Rule 6 is the governing one.** Follow the first five until they make the writing worse — stiffer, flatter, less true. Then break them. The rules serve honesty. Honesty doesn't serve the rules. A writer who never uses passive voice but drains the life out of every sentence has followed the rules and failed.
+
 **Fred Craddock — *Preaching***
 The homiletics text where Matt first encountered the inductive preaching principle — build through scene and example, let the listener arrive at the conclusion rather than stating it up front. The same principle as "report, don't explain." Craddock's *Overhearing the Gospel* extends this further: the most powerful communication is what people arrive at on their own, not what they're told.
 
 **Eugene Lowry — *The Homiletical Plot***
 Lowry's "narrative loop" — begin with tension, delay resolution, let meaning accumulate. The structure underneath many of Matt's best journal pieces.
+
+### On Humor
+
+**E.B. White — "Some Remarks on Humor" (1941)**
+Preface to *A Subtreasury of American Humor*. The canonical American craft essay on the subject. White's argument: the comic writer must work with "great sincerity" — trying to be funny kills the humor. The frog dissection line is his: *"Humor can be dissected as a frog can, but the thing dies in the process and the innards are discouraging to any but the pure scientific mind."* The operating principle behind the "don't notice you're being funny" test.
+
+**Mark Twain — *Following the Equator* (1897)**
+"The secret source of humor itself is not joy but sorrow. There is no humor in heaven." Short, foundational. Explains why the comedy in pieces like No Shade works — the IHOP, the purple pants, the phone during the sermon are funny because they're downstream of real loss, not separate from it.
+
+**Del Close & Charna Halpern — *Truth in Comedy* (1994)**
+The improv textbook Stephen Colbert trained on at Second City. Central principle: comedy that tries to be funny fails; comedy that tells the truth gets laughs as a byproduct. The direct lineage for Colbert's instincts. Better to cite the source than the student.
+
+**Stephen Colbert — GQ profile, ca. 2015**
+Shortly after taking over The Late Show, Colbert was profiled in GQ and explained the improv principle that shaped his approach: when something goes wrong in a scene, you don't fight it — you embrace it and make it the scene. The bomb is the thing that wasn't supposed to happen. You love it anyway. White and Twain describe what humor does mechanically. Colbert names the disposition that makes it possible in the first place — a posture, not a technique. Matt preached from this principle. The farm failing, the resignation, the diagnosis — these are the bombs. The humor in the writing isn't despite them. It's because he loved them enough to look at them directly, and IHOP is what loving the bomb looks like in practice.
+
+**David Sedaris — *Me Talk Pretty One Day* and collected essays**
+Not a theorist but the clearest living exemplar of bathos in personal essay. Sedaris sustains the mundane-in-the-heavy as a craft practice across book-length work. Read him for the rhythm, not the subject matter.
 
 ### Exemplary Pieces (Bitter Southerner)
 

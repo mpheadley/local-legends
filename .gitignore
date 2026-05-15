@@ -38,9 +38,19 @@ interviews/*.mp3
 interviews/*.wav
 interviews/*.json
 
+# ChatGPT export archives — transcripts are extracted into .md files; raw exports are too large for git
+content/matt-headley-sources/chatgpt-export-annistonfirst-1/
+content/matt-headley-sources/chatgpt-export-annistonfirst-2/
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large source videos — keep on disk, never commit
+content/research/sources/*.mp4
+content/research/sources/*.mov
+content/research/sources/*.MP4
+content/research/sources/*.MOV

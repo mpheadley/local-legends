@@ -17,6 +17,7 @@
 | [Building in Public](#building-in-public) | The concept underneath the site |
 | [Open Question](#open-question--what-is-southern-legends) | What SL actually is — TBD after writing |
 | [The Real Center](#the-real-center) | The story underneath everything |
+| [Audience Acquisition](#audience-acquisition) | Reclaiming existing audience, channels beyond personal FB |
 | [Syndication Strategy](#syndication-strategy) | SL → Anniston Star → Calhoun Journal order of operations |
 | [Target Businesses](#target-businesses) | Who to profile and why |
 | [Two-Track Outreach Strategy](#two-track-outreach-strategy-april-2026) | Premium (SL) vs. volume (drop-by) — opener toolkit by business type |
@@ -102,6 +103,8 @@ Every business in that ecosystem already knows Matt Headley built it. When they 
 
 **Short-term:** Message the 4 paying Patreon supporters personally. Thank them, apologize for the silence, invite them to follow the SL essays page. They cancel Patreon, subscribe via Resend.
 
+**Current Resend subscriber list (as of April 16, 2026):** 4 contacts — Matt (mpheadley@gmail.com), Sherill (pastorsherill@gmail.com), Becky (bholli7201@aol.com), Marjorie (tannermarj@yahoo.com). Raw CSV at `~/Downloads/contacts-1776600502376.csv`.
+
 ### Patreon Content Plan
 
 Write these in order — they build on each other:
@@ -173,13 +176,15 @@ Write these in order — they build on each other:
 
 ## The Book
 
+Full working document: **`BOOK.md`** — structure, connective tissue map, strategic notes on timeline, profiles that may belong in the book but aren't written yet.
+
 The Patreon is the workshop. By the time you've written enough posts, you'll have:
 
 - The inciting incident (unclear yet — gold star? the manic episode?)
 - The real center of the story (you spent your life being the one with answers; the second depression took that away)
 - The honest ending (not recovery — *there is no finish line*, per Lucy)
 
-Don't think about the book yet. Write the Patreon posts. The book will find its shape.
+Don't think about the book yet. Write the Patreon posts. The book will find its shape. `BOOK.md` is where you capture the shape as it emerges.
 
 ---
 
@@ -216,6 +221,108 @@ Everything connects to this:
 You spent your life being the one with the answers — from the pulpit, from the Anniston Star, from the self-care disciplines that were supposed to hold. The second depression took all of that away. The mania felt like recovery. The gold star felt like the end of the hard chapter. Neither was true.
 
 That's not a Southern Legends detail. That's the book. And the Patreon is where you write your way toward it.
+
+---
+
+## Audience Acquisition
+
+### The Honest Model
+
+Facebook friends engage because they know you. Acquisition beyond that circle requires the writing to do the work. The Hospital and No Shade are the two pieces most likely to travel. The disappear post couldn't have. These can.
+
+Individual posts will get fewer comments than the reappearance announcement — that was a relief-response, not a literary one. The goal shifts from splash to accumulation. Someone who reads The Hospital, then No Shade, then subscribes is worth more than ten comments on the announcement.
+
+The email list is where this transitions from "splash" to durable. Every subscriber is someone who doesn't require you to make noise on Facebook to reach them.
+
+---
+
+### Reclaiming the "Disappear" Post Audience
+
+The "I'm not going to disappear" Facebook post got significant engagement with no capture funnel in place — no subscribe, no support, no link. Here's how to reclaim it:
+
+**Step 1 — Reply individually to each commenter**
+Respond personally before posting anything new. Each reply leads with the person, not the link. Something like:
+> "[Name] — thanks for this, means a lot. I've been writing more of it over at Southern Legends if you want to follow along. The Hospital just went up."
+Warm. Not promotional. Link at the end, not the front. No subscribe ask in individual replies — that's a second ask on top of "come read this."
+
+**Step 2 — Drop a thread comment after individual replies**
+After replying to everyone, one comment at the bottom of the thread:
+> "Next chapter is up at southernlegends.blog/essays/the-hospital — if you want the next one in your inbox, there's a subscribe at the bottom of every piece."
+This is where the subscribe mention belongs. Not in individual replies.
+
+---
+
+### Making Each New Post an Acquisition Moment
+
+The site is now ready — subscribe is wired, support is live, shirts exist. Use it.
+
+**Facebook post structure for journal pieces:**
+- Open with the hook (not "I wrote a thing")
+- One paragraph of context
+- Link to the piece
+- Close with subscribe CTA: "Subscribe at the bottom of the piece if you want the next one."
+
+**No Shade launch todo (April 28 2026):**
+1. Reply to every "Disappear" commenter individually — *"[Name] — thanks for this, means a lot. I've been writing more of it over at Southern Legends if you want to follow along. No Shade just went up. southernlegends.blog/essays/no-shade"*
+2. Drop one thread comment at the bottom of the Disappear post — *"Next chapter is up at southernlegends.blog/essays/no-shade — subscribe at the bottom if you want the next one."*
+3. Post No Shade on Facebook — sentence below + URL + subscribe CTA
+4. DM Patreon supporters personally — No Shade is live, thank them
+5. Confirm Vercel deploy — southernlegends.blog/essays shows the hero
+
+**No Shade Facebook sentence (April 28 2026, Matt's words):**
+> "A year ago I was manic at Easter. This year someone handed me a cup. I wrote about it."
++ URL: https://southernlegends.blog/essays/no-shade
++ Close: "Subscribe at the bottom if you want the next one."
+
+**Personal reply to "Disappear" commenters — include the link:**
+> "[Name] — thanks for this, means a lot. I've been writing more of it over at Southern Legends if you want to follow along. No Shade just went up. southernlegends.blog/essays/no-shade"
+No subscribe ask in individual replies. One thread comment after everyone has been replied to:
+> "Next chapter is up at southernlegends.blog/essays/no-shade — subscribe at the bottom if you want the next one."
+
+**Don't summarize the piece in the Facebook post.** Give them a reason to click, then let the piece do the work.
+
+---
+
+### Acquisition Channels Beyond Personal Facebook
+
+**Anniston Star (highest leverage)**
+The Hospital and No Shade are pitchable as personal essays — direct sequel to the 2024 depression piece Donna Barton published. Byline pointing to southernlegends.blog reaches readers outside existing Facebook circle entirely. This is the single highest-leverage acquisition move available. See [Anniston Star](#anniston-star) section.
+
+**Mental health communities**
+The Hospital and No Shade travel in bipolar/mental health spaces in a way profiles don't. Share as "I wrote about my hospitalization" — not self-promotion:
+- Facebook bipolar support groups
+- r/bipolar (Reddit)
+- NAMI community spaces
+These readers don't know you yet. They don't need to. The piece is the introduction.
+
+**Email list (retention, not acquisition — but the bridge)**
+4 subscribers haven't received anything yet. Sending The Hospital is the first step toward making the list real. Every piece that goes out builds the habit on both ends — you sending, them expecting.
+
+---
+
+### The Hospital + No Shade Launch Sequence (decided April 2026)
+
+**Publish both pieces on the site simultaneously** — cross-discoverability starts immediately. Anyone who arrives at The Hospital via Facebook, Google, the Star byline, or a shared link sees No Shade as the first card in "More from the Journal." The pieces are linked in both the body (No Shade links to The Hospital inline) and the cards (via `related` frontmatter).
+
+**Facebook posts are spaced one week apart** — that's where the "moments" happen, not the publish dates. Readers don't experience publish dates as events; your Facebook posts create the waves.
+
+- **Week 1:** Post The Hospital on Facebook. Its own wave, its own moment.
+- **Week 2:** Post No Shade on Facebook. Second wave, full acquisition moment.
+
+**Why not post them together:** Two separate Facebook posts = two separate moments of reach. Posting both at once collapses that into one. The Hospital is the heavier piece and earns its own space.
+
+**No Shade unlisted until Jason Wright consents:** The piece is live at the direct URL (for sharing with Jason and Lucy) but hidden from listings, homepage, and "More" cards until consent is confirmed. Remove `unlisted: true` from frontmatter when Jason gives the yes.
+
+**Organic cross-discoverability:** Anyone who finds The Hospital — via Facebook share, Google, Anniston Star byline, or direct link — lands on the page where No Shade is the first suggested piece. This works from the moment both are published, without any Facebook announcement needed.
+
+---
+
+### What Not To Do
+
+- Don't necro the disappear post with a comment blast — reply personally first, one thread comment after
+- Don't stack asks in individual replies (link + subscribe + support = too much)
+- Don't chase Facebook engagement as the primary metric — the list is what compounds
+- Don't hold pieces waiting for the "right moment" — the acquisition moment is the publish moment
 
 ---
 
@@ -523,6 +630,14 @@ Current warm network profiles skew toward business owners who already have decen
 
 Run this on **every published profile without exception**. Create CRM tasks for each step when a profile publishes.
 
+**Also on day of publish — send a Resend broadcast:**
+Go to [resend.com](https://resend.com) → Broadcasts → New Broadcast → select Southern Legends audience. Write a short personal note (2-3 sentences) — why you wrote it, one detail that stuck with you — and include the link. This is manual, not automated. 5 minutes. Do not skip it.
+
+This applies to **both profiles and journal posts.** For journal posts, keep it even shorter — let the piece speak for itself. Don't summarize, don't explain. Two sentences and a link.
+
+Example for a journal post:
+> I finished the hospital piece. It took a while to write. It's here if you want to read it: [link]
+
 **Touch 1 — Day of publish:**
 Send the link. Nothing else. No ask. "Your profile is live — [link]."
 Add at the end: "Feel free to share it anywhere — including your own website if you'd like." No pressure. Many will link without a separate ask.
@@ -548,6 +663,38 @@ Never stack asks. One per conversation. The profile already did the heavy liftin
 **There is no scripted Touch 3.** If they respond warmly to Touch 2, the conversation is already open and the ask comes naturally in that thread. If they don't respond, you've done your part. Don't chase.
 
 No testimonial asks. The profile IS the marketing. Don't attach strings to the give.
+
+---
+
+## Facebook Posting Process — Business Profiles
+
+Run this on every published profile. Two posts: SL page first, personal share second.
+
+### SL Page Post
+1. **Write short and personal** — 2–3 tight paragraphs. Lead with a specific moment or detail, not a summary. Show don't tell.
+2. **No link in the body** — Facebook suppresses reach on posts with external links. Drop the link in the first comment immediately after posting.
+3. **Tag the business's Facebook page** in the post body.
+4. **Set location to the city** (Anniston, AL) — or tag a specific location if relevant.
+5. **Share into local Facebook groups** — Downtown Anniston, relevant community groups. Same post, no changes needed.
+
+### Personal FB Share
+1. **One or two sentences of personal context** — "New one's up. Wrote this about a guy I've known since the flower farm days." Don't summarize the post you're sharing.
+2. **Tag the subject's personal profile** in the share text — they're the subject, it's natural.
+3. **Tag other subjects mentioned** (e.g., Jean, Samuel) in the **comments**, not the post — keeps the post clean, they still get the notification.
+
+### Post Structure — What Works
+- Open with a specific moment or line of dialogue from the profile
+- One paragraph of context (the family history, the stakes)
+- One closing line if it earns its place — otherwise stop
+- No AI clichés, no "incredible story," no "honored to share"
+- The $600 gallon-of-paint structure is the model: hook → context → stop
+
+### After Posting
+- Check back for comments and reply personally
+- If the subject hasn't responded to their profile link, the Facebook tag often prompts it — don't send a separate follow-up until after the post goes up
+
+### Local Facebook Groups — Wait First
+Don't post into Downtown Anniston or other local groups yourself. If the subject shares it there organically, it carries more weight. Give it a day or two. If they don't share it themselves, then consider posting — but let them go first.
 
 ---
 
@@ -674,3 +821,37 @@ The habit isn't "publish a post every week." It's staying close enough to the ma
 Current strategy: free-to-fee via Southern Legends → warm outreach → Headley Web clients. Bottleneck is behavioral (initiating outreach), not strategic. One morning per week, rotate walk-ins through different towns in Northeast Alabama. Journal and Star writing builds regional authority passively alongside active outreach.
 
 Southern Legends grows into the go-to community resource for Northeast Alabama small businesses. Matt Headley is known as the guy who built it. Every business owner in the directory is a potential web design and SEO client. The community spotlight becomes a sustainable, compounding lead generation engine that no competitor can easily replicate.
+
+
+---
+
+## Session Decisions — May 12, 2026
+
+### Profile Priority & Conflict of Interest
+
+- **Ciara Smith (Mayor of Anniston) — profile first, coaching never (while employed by city)**
+  - Profile her as a Southern Legends longform piece after farmers market role is established (~1 month in)
+  - Angle toward national syndication: Bitter Southerner first, then AL.com, Politico Magazine, WaPo essay section
+  - No Blueprint coaching or testimonial asks while Matt is a city employee — conflict of interest
+  - Foreword candidate once full manuscript is complete
+
+- **Shannon Jenkins (CEO, United Way of Central Alabama)**
+  - Foreword or "In Praise Of" once full manuscript is drafted
+  - SL profile candidate — strong community credibility, cross-promotional value
+  - No conflict of interest concerns
+
+- **Jackson Hodges (PR Director, City of Anniston)**
+  - Strong SL profile candidate, good local credibility anchor
+  - Sequence after Ciara profile as follow-up city leadership piece
+  - No conflict of interest concerns
+
+### SL ↔ Plainspoken Blueprint Connection
+
+Every SL profile is a Wounded Healer story in miniature — the subject has a wound, a cleverness, a trial, a return. Writing the profiles IS writing the book. Full framework: `../plainspokenblueprint/FRAMEWORKS.md`
+
+### Farmers Market Role
+
+- Start date: summer 2026 (possibly within 1–2 weeks of May 12)
+- Duties: organizing the market, vendor coordination, grant applications
+- Keep city role cleanly separated from Blueprint business development
+- Use the role to deepen equity with Ciara and other city stakeholders before any Blueprint or book asks

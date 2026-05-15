@@ -1,0 +1,2053 @@
+{
+  "audio": "/Volumes/Samsung_T5/Christmas Eve (Pre-recorded)-010.mp3",
+  "transcribed_at": "2026-04-22T12:51:10.871903",
+  "raw": {
+    "language": "en",
+    "metrics": {},
+    "num_speakers": 4,
+    "segments": [
+      {
+        "avg_logprob": -0.23117316062333154,
+        "duration": 41.910000000000004,
+        "end": 44.17,
+        "speaker": "SPEAKER_00",
+        "start": 2.26,
+        "text": "Advent hope moves us. Advent love leads us. Advent joy stirs us. Advent peace stills us. That we might affirm our King Jesus. It's time that we set flame to this Advent affirmation by lighting the Christ candle. I invite you to read",
+        "words": [
+          {
+            "end": 2.84,
+            "probability": 0.405517578125,
+            "speaker": "SPEAKER_00",
+            "start": 2.26,
+            "word": " Advent"
+          },
+          {
+            "end": 3.36,
+            "probability": 0.7607421875,
+            "speaker": "SPEAKER_00",
+            "start": 2.84,
+            "word": " hope"
+          },
+          {
+            "end": 4.38,
+            "probability": 0.77685546875,
+            "speaker": "SPEAKER_00",
+            "start": 3.36,
+            "word": " moves"
+          },
+          {
+            "end": 4.78,
+            "probability": 0.91650390625,
+            "speaker": "SPEAKER_00",
+            "start": 4.38,
+            "word": " us."
+          },
+          {
+            "end": 6.14,
+            "probability": 0.771484375,
+            "speaker": "SPEAKER_00",
+            "start": 5.98,
+            "word": " Advent"
+          },
+          {
+            "end": 6.74,
+            "probability": 0.87255859375,
+            "speaker": "SPEAKER_00",
+            "start": 6.14,
+            "word": " love"
+          },
+          {
+            "end": 7.52,
+            "probability": 0.72119140625,
+            "speaker": "SPEAKER_00",
+            "start": 6.74,
+            "word": " leads"
+          },
+          {
+            "end": 8.02,
+            "probability": 0.9189453125,
+            "speaker": "SPEAKER_00",
+            "start": 7.52,
+            "word": " us."
+          },
+          {
+            "end": 8.52,
+            "probability": 0.7783203125,
+            "speaker": "SPEAKER_00",
+            "start": 8.32,
+            "word": " Advent"
+          },
+          {
+            "end": 8.96,
+            "probability": 0.89990234375,
+            "speaker": "SPEAKER_00",
+            "start": 8.52,
+            "word": " joy"
+          },
+          {
+            "end": 9.64,
+            "probability": 0.8935546875,
+            "speaker": "SPEAKER_00",
+            "start": 8.96,
+            "word": " stirs"
+          },
+          {
+            "end": 10.08,
+            "probability": 0.90869140625,
+            "speaker": "SPEAKER_00",
+            "start": 9.64,
+            "word": " us."
+          },
+          {
+            "end": 11.04,
+            "probability": 0.7841796875,
+            "speaker": "SPEAKER_00",
+            "start": 10.86,
+            "word": " Advent"
+          },
+          {
+            "end": 11.74,
+            "probability": 0.8359375,
+            "speaker": "SPEAKER_00",
+            "start": 11.04,
+            "word": " peace"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.23342225864166166,
+        "duration": 35.72,
+        "end": 79.89,
+        "speaker": "SPEAKER_00",
+        "start": 44.17,
+        "text": "these words with me as they're in the description or simply listen. This affirmation for Christmas. We believe that Jesus is the Son of God. He was born of the Virgin Mary in Bethlehem of Judea. He was the long-awaited Messiah whose coming was prophesied. The same Jesus lives today in our hearts. He deserves our highest loyalty and total commitment. In Jesus Christ, our hope is fulfilled.",
+        "words": [
+          {
+            "end": 44.35,
+            "probability": 0.45751953125,
+            "speaker": "SPEAKER_00",
+            "start": 44.17,
+            "word": " these"
+          },
+          {
+            "end": 44.75,
+            "probability": 0.7470703125,
+            "speaker": "SPEAKER_00",
+            "start": 44.35,
+            "word": " words"
+          },
+          {
+            "end": 46.51,
+            "probability": 0.70361328125,
+            "speaker": "SPEAKER_00",
+            "start": 44.75,
+            "word": " with"
+          },
+          {
+            "end": 46.87,
+            "probability": 0.90673828125,
+            "speaker": "SPEAKER_00",
+            "start": 46.51,
+            "word": " me"
+          },
+          {
+            "end": 47.69,
+            "probability": 0.69775390625,
+            "speaker": "SPEAKER_00",
+            "start": 46.87,
+            "word": " as"
+          },
+          {
+            "end": 47.97,
+            "probability": 0.75634765625,
+            "speaker": "SPEAKER_00",
+            "start": 47.69,
+            "word": " they're"
+          },
+          {
+            "end": 48.73,
+            "probability": 0.87451171875,
+            "speaker": "SPEAKER_00",
+            "start": 47.97,
+            "word": " in"
+          },
+          {
+            "end": 48.85,
+            "probability": 0.8173828125,
+            "speaker": "SPEAKER_00",
+            "start": 48.73,
+            "word": " the"
+          },
+          {
+            "end": 49.27,
+            "probability": 0.7880859375,
+            "speaker": "SPEAKER_00",
+            "start": 48.85,
+            "word": " description"
+          },
+          {
+            "end": 50.21,
+            "probability": 0.51220703125,
+            "speaker": "SPEAKER_00",
+            "start": 49.27,
+            "word": " or"
+          },
+          {
+            "end": 50.49,
+            "probability": 0.82763671875,
+            "speaker": "SPEAKER_00",
+            "start": 50.21,
+            "word": " simply"
+          },
+          {
+            "end": 50.93,
+            "probability": 0.7939453125,
+            "speaker": "SPEAKER_00",
+            "start": 50.49,
+            "word": " listen."
+          },
+          {
+            "end": 51.65,
+            "probability": 0.763671875,
+            "speaker": "SPEAKER_00",
+            "start": 51.41,
+            "word": " This"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.25909515903956853,
+        "duration": 8.879999999999995,
+        "end": 89.35,
+        "speaker": "SPEAKER_00",
+        "start": 80.47,
+        "text": "Our love is consummated. Our joy is complete and our peace is sealed. Rejoice.",
+        "words": [
+          {
+            "end": 80.95,
+            "probability": 0.91455078125,
+            "speaker": "SPEAKER_00",
+            "start": 80.47,
+            "word": " Our"
+          },
+          {
+            "end": 81.57,
+            "probability": 0.8671875,
+            "speaker": "SPEAKER_00",
+            "start": 80.95,
+            "word": " love"
+          },
+          {
+            "end": 82.05,
+            "probability": 0.89990234375,
+            "speaker": "SPEAKER_00",
+            "start": 81.57,
+            "word": " is"
+          },
+          {
+            "end": 82.79,
+            "probability": 0.8763020833333334,
+            "speaker": "SPEAKER_00",
+            "start": 82.05,
+            "word": " consummated."
+          },
+          {
+            "end": 83.09,
+            "probability": 0.91064453125,
+            "speaker": "SPEAKER_00",
+            "start": 82.95,
+            "word": " Our"
+          },
+          {
+            "end": 83.61,
+            "probability": 0.89453125,
+            "speaker": "SPEAKER_00",
+            "start": 83.09,
+            "word": " joy"
+          },
+          {
+            "end": 84.19,
+            "probability": 0.90869140625,
+            "speaker": "SPEAKER_00",
+            "start": 83.61,
+            "word": " is"
+          },
+          {
+            "end": 84.75,
+            "probability": 0.6240234375,
+            "speaker": "SPEAKER_00",
+            "start": 84.19,
+            "word": " complete"
+          },
+          {
+            "end": 85.53,
+            "probability": 0.59326171875,
+            "speaker": "SPEAKER_00",
+            "start": 84.75,
+            "word": " and"
+          },
+          {
+            "end": 85.85,
+            "probability": 0.8212890625,
+            "speaker": "SPEAKER_00",
+            "start": 85.53,
+            "word": " our"
+          },
+          {
+            "end": 86.35,
+            "probability": 0.8349609375,
+            "speaker": "SPEAKER_00",
+            "start": 85.85,
+            "word": " peace"
+          },
+          {
+            "end": 87.11,
+            "probability": 0.9072265625,
+            "speaker": "SPEAKER_00",
+            "start": 86.35,
+            "word": " is"
+          },
+          {
+            "end": 87.59,
+            "probability": 0.841796875,
+            "speaker": "SPEAKER_00",
+            "start": 87.11,
+            "word": " sealed."
+          },
+          {
+            "end": 89.35,
+            "probability": 0.9308268229166666,
+            "speaker": "SPEAKER_00",
+            "start": 88.71,
+            "word": " Rejoice."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.25909515903956853,
+        "duration": 31.810000000000002,
+        "end": 121.88,
+        "speaker": "SPEAKER_00",
+        "start": 90.07,
+        "text": "A Savior is born. A Savior is born indeed. Joy to the world. Welcome. My name is Matt and I'm the pastor with this Weaver First United Methodist Church and Merry Christmas to you all. If you're a guest with us, I hope that you feel God's presence as you participate in this online worship experience for Christmas",
+        "words": [
+          {
+            "end": 90.37,
+            "probability": 0.98974609375,
+            "speaker": "SPEAKER_00",
+            "start": 90.07,
+            "word": " A"
+          },
+          {
+            "end": 90.65,
+            "probability": 0.64208984375,
+            "speaker": "SPEAKER_00",
+            "start": 90.37,
+            "word": " Savior"
+          },
+          {
+            "end": 90.95,
+            "probability": 0.90283203125,
+            "speaker": "SPEAKER_00",
+            "start": 90.65,
+            "word": " is"
+          },
+          {
+            "end": 91.29,
+            "probability": 0.80810546875,
+            "speaker": "SPEAKER_00",
+            "start": 90.95,
+            "word": " born."
+          },
+          {
+            "end": 92.35,
+            "probability": 0.98876953125,
+            "speaker": "SPEAKER_00",
+            "start": 91.93,
+            "word": " A"
+          },
+          {
+            "end": 92.69,
+            "probability": 0.857421875,
+            "speaker": "SPEAKER_00",
+            "start": 92.35,
+            "word": " Savior"
+          },
+          {
+            "end": 93.05,
+            "probability": 0.90380859375,
+            "speaker": "SPEAKER_00",
+            "start": 92.69,
+            "word": " is"
+          },
+          {
+            "end": 93.43,
+            "probability": 0.8203125,
+            "speaker": "SPEAKER_00",
+            "start": 93.05,
+            "word": " born"
+          },
+          {
+            "end": 94.07,
+            "probability": 0.59375,
+            "speaker": "SPEAKER_00",
+            "start": 93.43,
+            "word": " indeed."
+          },
+          {
+            "end": 95.23,
+            "probability": 0.84130859375,
+            "speaker": "SPEAKER_00",
+            "start": 94.77,
+            "word": " Joy"
+          },
+          {
+            "end": 95.55,
+            "probability": 0.9052734375,
+            "speaker": "SPEAKER_00",
+            "start": 95.23,
+            "word": " to"
+          },
+          {
+            "end": 95.67,
+            "probability": 0.81298828125,
+            "speaker": "SPEAKER_00",
+            "start": 95.55,
+            "word": " the"
+          },
+          {
+            "end": 95.99,
+            "probability": 0.857421875,
+            "speaker": "SPEAKER_00",
+            "start": 95.67,
+            "word": " world."
+          },
+          {
+            "end": 105.48,
+            "probability": 0.8251953125,
+            "speaker": "SPEAKER_00",
+            "start": 105.2,
+            "word": " Welcome."
+          },
+          {
+            "end": 108.18,
+            "probability": 0.900390625,
+            "speaker": "SPEAKER_00",
+            "start": 107.94,
+            "word": " My"
+          },
+          {
+            "end": 108.32,
+            "probability": 0.80712890625,
+            "speaker": "SPEAKER_00",
+            "start": 108.18,
+            "word": " name"
+          },
+          {
+            "end": 108.46,
+            "probability": 0.90625,
+            "speaker": "SPEAKER_00",
+            "start": 108.32,
+            "word": " is"
+          },
+          {
+            "end": 108.68,
+            "probability": 0.90625,
+            "speaker": "SPEAKER_00",
+            "start": 108.46,
+            "word": " Matt"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.22628837836938992,
+        "duration": 30.22,
+        "end": 152.1,
+        "speaker": "SPEAKER_00",
+        "start": 121.88,
+        "text": "Eve. And feel free to drop us a comment. Let us know who you are and how we might be praying with you or for you on this Christmas Eve, this Christmas season. And so come and join us tonight to welcome this company that we have been waiting for, this company that has come. Christ the Lord, born on this holy night in Bethlehem. This celebration is about the interruption to end all interruptions.",
+        "words": [
+          {
+            "end": 122.26,
+            "probability": 0.89453125,
+            "speaker": "SPEAKER_00",
+            "start": 121.88,
+            "word": " Eve."
+          },
+          {
+            "end": 123.58,
+            "probability": 0.8017578125,
+            "speaker": "SPEAKER_00",
+            "start": 123.36,
+            "word": " And"
+          },
+          {
+            "end": 123.78,
+            "probability": 0.91259765625,
+            "speaker": "SPEAKER_00",
+            "start": 123.58,
+            "word": " feel"
+          },
+          {
+            "end": 124.06,
+            "probability": 0.88134765625,
+            "speaker": "SPEAKER_00",
+            "start": 123.78,
+            "word": " free"
+          },
+          {
+            "end": 124.44,
+            "probability": 0.9013671875,
+            "speaker": "SPEAKER_00",
+            "start": 124.06,
+            "word": " to"
+          },
+          {
+            "end": 124.64,
+            "probability": 0.81591796875,
+            "speaker": "SPEAKER_00",
+            "start": 124.44,
+            "word": " drop"
+          },
+          {
+            "end": 124.78,
+            "probability": 0.89453125,
+            "speaker": "SPEAKER_00",
+            "start": 124.64,
+            "word": " us"
+          },
+          {
+            "end": 124.92,
+            "probability": 0.99853515625,
+            "speaker": "SPEAKER_00",
+            "start": 124.78,
+            "word": " a"
+          },
+          {
+            "end": 125.18,
+            "probability": 0.861328125,
+            "speaker": "SPEAKER_00",
+            "start": 124.92,
+            "word": " comment."
+          },
+          {
+            "end": 125.78,
+            "probability": 0.88134765625,
+            "speaker": "SPEAKER_00",
+            "start": 125.54,
+            "word": " Let"
+          },
+          {
+            "end": 125.94,
+            "probability": 0.9013671875,
+            "speaker": "SPEAKER_00",
+            "start": 125.78,
+            "word": " us"
+          },
+          {
+            "end": 126.24,
+            "probability": 0.8251953125,
+            "speaker": "SPEAKER_00",
+            "start": 125.94,
+            "word": " know"
+          },
+          {
+            "end": 127,
+            "probability": 0.79541015625,
+            "speaker": "SPEAKER_00",
+            "start": 126.24,
+            "word": " who"
+          },
+          {
+            "end": 127.18,
+            "probability": 0.890625,
+            "speaker": "SPEAKER_00",
+            "start": 127,
+            "word": " you"
+          },
+          {
+            "end": 127.44,
+            "probability": 0.89404296875,
+            "speaker": "SPEAKER_00",
+            "start": 127.18,
+            "word": " are"
+          },
+          {
+            "end": 127.6,
+            "probability": 0.8662109375,
+            "speaker": "SPEAKER_00",
+            "start": 127.44,
+            "word": " and"
+          },
+          {
+            "end": 127.8,
+            "probability": 0.90185546875,
+            "speaker": "SPEAKER_00",
+            "start": 127.6,
+            "word": " how"
+          },
+          {
+            "end": 128.02,
+            "probability": 0.9072265625,
+            "speaker": "SPEAKER_00",
+            "start": 127.8,
+            "word": " we"
+          },
+          {
+            "end": 128.48,
+            "probability": 0.810546875,
+            "speaker": "SPEAKER_00",
+            "start": 128.02,
+            "word": " might"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.29520088611614137,
+        "duration": 16.05000000000001,
+        "end": 168.53,
+        "speaker": "SPEAKER_00",
+        "start": 152.48,
+        "text": "God tearing open the heavens to reside among us in the body of a child, not just a child, an infant. Vulnerable, loud, and human. Would you pray with me?",
+        "words": [
+          {
+            "end": 152.82,
+            "probability": 0.90771484375,
+            "speaker": "SPEAKER_00",
+            "start": 152.48,
+            "word": " God"
+          },
+          {
+            "end": 153.5,
+            "probability": 0.74658203125,
+            "speaker": "SPEAKER_00",
+            "start": 152.82,
+            "word": " tearing"
+          },
+          {
+            "end": 153.76,
+            "probability": 0.8076171875,
+            "speaker": "SPEAKER_00",
+            "start": 153.5,
+            "word": " open"
+          },
+          {
+            "end": 153.98,
+            "probability": 0.814453125,
+            "speaker": "SPEAKER_00",
+            "start": 153.76,
+            "word": " the"
+          },
+          {
+            "end": 154.26,
+            "probability": 0.7197265625,
+            "speaker": "SPEAKER_00",
+            "start": 153.98,
+            "word": " heavens"
+          },
+          {
+            "end": 155.3,
+            "probability": 0.87744140625,
+            "speaker": "SPEAKER_00",
+            "start": 154.26,
+            "word": " to"
+          },
+          {
+            "end": 155.82,
+            "probability": 0.830078125,
+            "speaker": "SPEAKER_00",
+            "start": 155.3,
+            "word": " reside"
+          },
+          {
+            "end": 156.28,
+            "probability": 0.90576171875,
+            "speaker": "SPEAKER_00",
+            "start": 155.82,
+            "word": " among"
+          },
+          {
+            "end": 156.72,
+            "probability": 0.89501953125,
+            "speaker": "SPEAKER_00",
+            "start": 156.28,
+            "word": " us"
+          },
+          {
+            "end": 157.2,
+            "probability": 0.7763671875,
+            "speaker": "SPEAKER_00",
+            "start": 156.72,
+            "word": " in"
+          },
+          {
+            "end": 157.34,
+            "probability": 0.81005859375,
+            "speaker": "SPEAKER_00",
+            "start": 157.2,
+            "word": " the"
+          },
+          {
+            "end": 157.6,
+            "probability": 0.80224609375,
+            "speaker": "SPEAKER_00",
+            "start": 157.34,
+            "word": " body"
+          },
+          {
+            "end": 157.74,
+            "probability": 0.9091796875,
+            "speaker": "SPEAKER_00",
+            "start": 157.6,
+            "word": " of"
+          },
+          {
+            "end": 157.86,
+            "probability": 0.99462890625,
+            "speaker": "SPEAKER_00",
+            "start": 157.74,
+            "word": " a"
+          },
+          {
+            "end": 158.28,
+            "probability": 0.75390625,
+            "speaker": "SPEAKER_00",
+            "start": 157.86,
+            "word": " child,"
+          },
+          {
+            "end": 158.6,
+            "probability": 0.8876953125,
+            "speaker": "SPEAKER_00",
+            "start": 158.42,
+            "word": " not"
+          },
+          {
+            "end": 159.58,
+            "probability": 0.88916015625,
+            "speaker": "SPEAKER_00",
+            "start": 158.6,
+            "word": " just"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.2689338137121762,
+        "duration": 33.72,
+        "end": 204.18,
+        "speaker": "SPEAKER_00",
+        "start": 170.46,
+        "text": "Welcome, Lord God. Father, Son, and Holy Spirit, we welcome you as our company. In our more cynical or despairing moments, we wrestle with faith and with the idea of you coming to us, O God. But somewhere in our hearts, we know that we do not need you to come because you have already been here with us, among us, and within us. And so now as we welcome you once again, we acknowledge that you need",
+        "words": [
+          {
+            "end": 171.46,
+            "probability": 0.266845703125,
+            "speaker": "SPEAKER_00",
+            "start": 170.46,
+            "word": " Welcome,"
+          },
+          {
+            "end": 171.78,
+            "probability": 0.84423828125,
+            "speaker": "SPEAKER_00",
+            "start": 171.66,
+            "word": " Lord"
+          },
+          {
+            "end": 172.16,
+            "probability": 0.74169921875,
+            "speaker": "SPEAKER_00",
+            "start": 171.78,
+            "word": " God."
+          },
+          {
+            "end": 173.84,
+            "probability": 0.72802734375,
+            "speaker": "SPEAKER_00",
+            "start": 173.24,
+            "word": " Father,"
+          },
+          {
+            "end": 174.66,
+            "probability": 0.83740234375,
+            "speaker": "SPEAKER_00",
+            "start": 174.32,
+            "word": " Son,"
+          },
+          {
+            "end": 175.4,
+            "probability": 0.8837890625,
+            "speaker": "SPEAKER_00",
+            "start": 175.28,
+            "word": " and"
+          },
+          {
+            "end": 175.66,
+            "probability": 0.81494140625,
+            "speaker": "SPEAKER_00",
+            "start": 175.4,
+            "word": " Holy"
+          },
+          {
+            "end": 176.08,
+            "probability": 0.90869140625,
+            "speaker": "SPEAKER_00",
+            "start": 175.66,
+            "word": " Spirit,"
+          },
+          {
+            "end": 177,
+            "probability": 0.89990234375,
+            "speaker": "SPEAKER_00",
+            "start": 176.66,
+            "word": " we"
+          },
+          {
+            "end": 177.36,
+            "probability": 0.74658203125,
+            "speaker": "SPEAKER_00",
+            "start": 177,
+            "word": " welcome"
+          },
+          {
+            "end": 177.66,
+            "probability": 0.806640625,
+            "speaker": "SPEAKER_00",
+            "start": 177.36,
+            "word": " you"
+          },
+          {
+            "end": 179.26,
+            "probability": 0.87255859375,
+            "speaker": "SPEAKER_00",
+            "start": 177.66,
+            "word": " as"
+          },
+          {
+            "end": 179.42,
+            "probability": 0.8193359375,
+            "speaker": "SPEAKER_00",
+            "start": 179.26,
+            "word": " our"
+          },
+          {
+            "end": 179.82,
+            "probability": 0.75927734375,
+            "speaker": "SPEAKER_00",
+            "start": 179.42,
+            "word": " company."
+          },
+          {
+            "end": 181.28,
+            "probability": 0.8916015625,
+            "speaker": "SPEAKER_00",
+            "start": 181.1,
+            "word": " In"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.23647103731225178,
+        "duration": 25.109999999999985,
+        "end": 229.29,
+        "speaker": "SPEAKER_00",
+        "start": 204.18,
+        "text": "no welcome. It is we who need to remember, who need to see again your presence, who need to allow your with us-ness to flood our hearts and lives. Welcome to our world, Jesus. But more importantly, we thank you for welcoming us into your ever-coming and always-present world. And may all God's children say, Amen.",
+        "words": [
+          {
+            "end": 204.38,
+            "probability": 0.89501953125,
+            "speaker": "SPEAKER_00",
+            "start": 204.18,
+            "word": " no"
+          },
+          {
+            "end": 204.78,
+            "probability": 0.7177734375,
+            "speaker": "SPEAKER_00",
+            "start": 204.38,
+            "word": " welcome."
+          },
+          {
+            "end": 205.04,
+            "probability": 0.89794921875,
+            "speaker": "SPEAKER_00",
+            "start": 204.98,
+            "word": " It"
+          },
+          {
+            "end": 205.2,
+            "probability": 0.91015625,
+            "speaker": "SPEAKER_00",
+            "start": 205.04,
+            "word": " is"
+          },
+          {
+            "end": 205.5,
+            "probability": 0.8583984375,
+            "speaker": "SPEAKER_00",
+            "start": 205.2,
+            "word": " we"
+          },
+          {
+            "end": 205.76,
+            "probability": 0.81640625,
+            "speaker": "SPEAKER_00",
+            "start": 205.5,
+            "word": " who"
+          },
+          {
+            "end": 206.06,
+            "probability": 0.802734375,
+            "speaker": "SPEAKER_00",
+            "start": 205.76,
+            "word": " need"
+          },
+          {
+            "end": 206.24,
+            "probability": 0.90625,
+            "speaker": "SPEAKER_00",
+            "start": 206.06,
+            "word": " to"
+          },
+          {
+            "end": 206.64,
+            "probability": 0.7900390625,
+            "speaker": "SPEAKER_00",
+            "start": 206.24,
+            "word": " remember,"
+          },
+          {
+            "end": 207.76,
+            "probability": 0.8115234375,
+            "speaker": "SPEAKER_00",
+            "start": 207,
+            "word": " who"
+          },
+          {
+            "end": 208.06,
+            "probability": 0.8134765625,
+            "speaker": "SPEAKER_00",
+            "start": 207.76,
+            "word": " need"
+          },
+          {
+            "end": 208.24,
+            "probability": 0.90380859375,
+            "speaker": "SPEAKER_00",
+            "start": 208.06,
+            "word": " to"
+          },
+          {
+            "end": 208.48,
+            "probability": 0.81103515625,
+            "speaker": "SPEAKER_00",
+            "start": 208.24,
+            "word": " see"
+          },
+          {
+            "end": 208.9,
+            "probability": 0.89111328125,
+            "speaker": "SPEAKER_00",
+            "start": 208.48,
+            "word": " again"
+          },
+          {
+            "end": 209.28,
+            "probability": 0.5078125,
+            "speaker": "SPEAKER_00",
+            "start": 208.9,
+            "word": " your"
+          },
+          {
+            "end": 209.82,
+            "probability": 0.92236328125,
+            "speaker": "SPEAKER_00",
+            "start": 209.28,
+            "word": " presence,"
+          },
+          {
+            "end": 210.08,
+            "probability": 0.8134765625,
+            "speaker": "SPEAKER_00",
+            "start": 209.96,
+            "word": " who"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.34575892175946915,
+        "duration": 143.72000000000003,
+        "end": 759.52,
+        "speaker": "SPEAKER_02",
+        "start": 615.8,
+        "text": "A reading from the Prophet Isaiah in the ninth chapter, beginning in the",
+        "words": [
+          {
+            "end": 616.64,
+            "probability": 0.333984375,
+            "speaker": "SPEAKER_02",
+            "start": 615.8,
+            "word": " A"
+          },
+          {
+            "end": 755.18,
+            "probability": 0.75927734375,
+            "speaker": "SPEAKER_00",
+            "start": 754.34,
+            "word": " reading"
+          },
+          {
+            "end": 755.76,
+            "probability": 0.81640625,
+            "speaker": "SPEAKER_00",
+            "start": 755.18,
+            "word": " from"
+          },
+          {
+            "end": 755.96,
+            "probability": 0.8115234375,
+            "speaker": "SPEAKER_00",
+            "start": 755.76,
+            "word": " the"
+          },
+          {
+            "end": 756.3,
+            "probability": 0.274169921875,
+            "speaker": "SPEAKER_00",
+            "start": 755.96,
+            "word": " Prophet"
+          },
+          {
+            "end": 757.2,
+            "probability": 0.8408203125,
+            "speaker": "SPEAKER_00",
+            "start": 756.3,
+            "word": " Isaiah"
+          },
+          {
+            "end": 757.98,
+            "probability": 0.454833984375,
+            "speaker": "SPEAKER_00",
+            "start": 757.2,
+            "word": " in"
+          },
+          {
+            "end": 758.08,
+            "probability": 0.80908203125,
+            "speaker": "SPEAKER_00",
+            "start": 757.98,
+            "word": " the"
+          },
+          {
+            "end": 758.3,
+            "probability": 0.56982421875,
+            "speaker": "SPEAKER_00",
+            "start": 758.08,
+            "word": " ninth"
+          },
+          {
+            "end": 758.76,
+            "probability": 0.7431640625,
+            "speaker": "SPEAKER_00",
+            "start": 758.3,
+            "word": " chapter,"
+          },
+          {
+            "end": 759.22,
+            "probability": 0.8115234375,
+            "speaker": "SPEAKER_00",
+            "start": 759.04,
+            "word": " beginning"
+          },
+          {
+            "end": 759.4,
+            "probability": 0.89208984375,
+            "speaker": "SPEAKER_00",
+            "start": 759.22,
+            "word": " in"
+          },
+          {
+            "end": 759.52,
+            "probability": 0.82177734375,
+            "speaker": "SPEAKER_00",
+            "start": 759.4,
+            "word": " the"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.34575892175946915,
+        "duration": 32.89999999999998,
+        "end": 792.42,
+        "speaker": "SPEAKER_00",
+        "start": 759.52,
+        "text": "second verse. The people walking in darkness have seen a great light. On those living in a pitch-dark land, light has dawned. You have made the nation great. You have increased its joy. They rejoiced before you as with joy at the harvest, as those who divide plunder rejoice. As on the day of Midian, you shattered the yoke that burdened them, the staff on their shoulders and the rod",
+        "words": [
+          {
+            "end": 759.72,
+            "probability": 0.8046875,
+            "speaker": "SPEAKER_00",
+            "start": 759.52,
+            "word": " second"
+          },
+          {
+            "end": 760.06,
+            "probability": 0.68017578125,
+            "speaker": "SPEAKER_00",
+            "start": 759.72,
+            "word": " verse."
+          },
+          {
+            "end": 761.92,
+            "probability": 0.281982421875,
+            "speaker": "SPEAKER_00",
+            "start": 761.78,
+            "word": " The"
+          },
+          {
+            "end": 762.2,
+            "probability": 0.9140625,
+            "speaker": "SPEAKER_00",
+            "start": 761.92,
+            "word": " people"
+          },
+          {
+            "end": 762.6,
+            "probability": 0.77587890625,
+            "speaker": "SPEAKER_00",
+            "start": 762.2,
+            "word": " walking"
+          },
+          {
+            "end": 763.08,
+            "probability": 0.90673828125,
+            "speaker": "SPEAKER_00",
+            "start": 762.6,
+            "word": " in"
+          },
+          {
+            "end": 763.6,
+            "probability": 0.88916015625,
+            "speaker": "SPEAKER_00",
+            "start": 763.08,
+            "word": " darkness"
+          },
+          {
+            "end": 764.6,
+            "probability": 0.81298828125,
+            "speaker": "SPEAKER_00",
+            "start": 763.6,
+            "word": " have"
+          },
+          {
+            "end": 765.12,
+            "probability": 0.8583984375,
+            "speaker": "SPEAKER_00",
+            "start": 764.6,
+            "word": " seen"
+          },
+          {
+            "end": 765.9,
+            "probability": 0.994140625,
+            "speaker": "SPEAKER_00",
+            "start": 765.12,
+            "word": " a"
+          },
+          {
+            "end": 766.28,
+            "probability": 0.85888671875,
+            "speaker": "SPEAKER_00",
+            "start": 765.9,
+            "word": " great"
+          },
+          {
+            "end": 767.1,
+            "probability": 0.82470703125,
+            "speaker": "SPEAKER_00",
+            "start": 766.28,
+            "word": " light."
+          },
+          {
+            "end": 769.68,
+            "probability": 0.84716796875,
+            "speaker": "SPEAKER_00",
+            "start": 769.26,
+            "word": " On"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.21476716109934976,
+        "duration": 30.520000000000095,
+        "end": 822.94,
+        "speaker": "SPEAKER_00",
+        "start": 792.42,
+        "text": "of their oppressor. Because every boot of the thundering warriors and every garment rolled in blood will be burned, fuel for the fire. A child is born to us, a son is given to us, and authority will be on his shoulders. He will be named Wonderful Counselor, Mighty God, Eternal Father, Prince of Peace. There will be",
+        "words": [
+          {
+            "end": 792.96,
+            "probability": 0.90625,
+            "speaker": "SPEAKER_00",
+            "start": 792.42,
+            "word": " of"
+          },
+          {
+            "end": 793.28,
+            "probability": 0.8984375,
+            "speaker": "SPEAKER_00",
+            "start": 792.96,
+            "word": " their"
+          },
+          {
+            "end": 793.88,
+            "probability": 0.927978515625,
+            "speaker": "SPEAKER_00",
+            "start": 793.28,
+            "word": " oppressor."
+          },
+          {
+            "end": 794.99,
+            "probability": 0.87353515625,
+            "speaker": "SPEAKER_00",
+            "start": 794.39,
+            "word": " Because"
+          },
+          {
+            "end": 795.35,
+            "probability": 0.73193359375,
+            "speaker": "SPEAKER_00",
+            "start": 794.99,
+            "word": " every"
+          },
+          {
+            "end": 795.73,
+            "probability": 0.88916015625,
+            "speaker": "SPEAKER_00",
+            "start": 795.35,
+            "word": " boot"
+          },
+          {
+            "end": 796.11,
+            "probability": 0.90283203125,
+            "speaker": "SPEAKER_00",
+            "start": 795.73,
+            "word": " of"
+          },
+          {
+            "end": 796.27,
+            "probability": 0.814453125,
+            "speaker": "SPEAKER_00",
+            "start": 796.11,
+            "word": " the"
+          },
+          {
+            "end": 796.77,
+            "probability": 0.931640625,
+            "speaker": "SPEAKER_00",
+            "start": 796.27,
+            "word": " thundering"
+          },
+          {
+            "end": 797.35,
+            "probability": 0.8583984375,
+            "speaker": "SPEAKER_00",
+            "start": 796.77,
+            "word": " warriors"
+          },
+          {
+            "end": 797.61,
+            "probability": 0.81494140625,
+            "speaker": "SPEAKER_00",
+            "start": 797.35,
+            "word": " and"
+          },
+          {
+            "end": 797.91,
+            "probability": 0.74951171875,
+            "speaker": "SPEAKER_00",
+            "start": 797.61,
+            "word": " every"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.2615017265909248,
+        "duration": 13.339999999999918,
+        "end": 836.28,
+        "speaker": "SPEAKER_00",
+        "start": 822.94,
+        "text": "vast authority and endless peace for David's throne and for his kingdom, establishing and sustaining it with justice and righteousness, both now and",
+        "words": [
+          {
+            "end": 823.36,
+            "probability": 0.2091064453125,
+            "speaker": "SPEAKER_00",
+            "start": 822.94,
+            "word": " vast"
+          },
+          {
+            "end": 823.92,
+            "probability": 0.7587890625,
+            "speaker": "SPEAKER_00",
+            "start": 823.36,
+            "word": " authority"
+          },
+          {
+            "end": 824.18,
+            "probability": 0.66796875,
+            "speaker": "SPEAKER_00",
+            "start": 823.92,
+            "word": " and"
+          },
+          {
+            "end": 824.74,
+            "probability": 0.73486328125,
+            "speaker": "SPEAKER_00",
+            "start": 824.18,
+            "word": " endless"
+          },
+          {
+            "end": 825.5,
+            "probability": 0.80712890625,
+            "speaker": "SPEAKER_00",
+            "start": 824.74,
+            "word": " peace"
+          },
+          {
+            "end": 825.86,
+            "probability": 0.88134765625,
+            "speaker": "SPEAKER_00",
+            "start": 825.5,
+            "word": " for"
+          },
+          {
+            "end": 826.32,
+            "probability": 0.9169921875,
+            "speaker": "SPEAKER_00",
+            "start": 825.86,
+            "word": " David's"
+          },
+          {
+            "end": 826.76,
+            "probability": 0.76708984375,
+            "speaker": "SPEAKER_00",
+            "start": 826.32,
+            "word": " throne"
+          },
+          {
+            "end": 828.08,
+            "probability": 0.79638671875,
+            "speaker": "SPEAKER_00",
+            "start": 826.76,
+            "word": " and"
+          },
+          {
+            "end": 828.36,
+            "probability": 0.87451171875,
+            "speaker": "SPEAKER_00",
+            "start": 828.08,
+            "word": " for"
+          },
+          {
+            "end": 828.58,
+            "probability": 0.888671875,
+            "speaker": "SPEAKER_00",
+            "start": 828.36,
+            "word": " his"
+          },
+          {
+            "end": 828.98,
+            "probability": 0.86328125,
+            "speaker": "SPEAKER_00",
+            "start": 828.58,
+            "word": " kingdom,"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.2615017265909248,
+        "duration": 313.26999999999987,
+        "end": 1150.09,
+        "speaker": "SPEAKER_02",
+        "start": 836.82,
+        "text": "forever. The zeal of the Lord of heavenly forces will do this. Thank you for",
+        "words": [
+          {
+            "end": 837.26,
+            "probability": 0.82177734375,
+            "speaker": "SPEAKER_00",
+            "start": 836.82,
+            "word": " forever."
+          },
+          {
+            "end": 838.96,
+            "probability": 0.79296875,
+            "speaker": "SPEAKER_00",
+            "start": 838.46,
+            "word": " The"
+          },
+          {
+            "end": 839.26,
+            "probability": 0.96240234375,
+            "speaker": "SPEAKER_00",
+            "start": 838.96,
+            "word": " zeal"
+          },
+          {
+            "end": 839.4,
+            "probability": 0.90380859375,
+            "speaker": "SPEAKER_00",
+            "start": 839.26,
+            "word": " of"
+          },
+          {
+            "end": 839.56,
+            "probability": 0.818359375,
+            "speaker": "SPEAKER_00",
+            "start": 839.4,
+            "word": " the"
+          },
+          {
+            "end": 839.96,
+            "probability": 0.84130859375,
+            "speaker": "SPEAKER_00",
+            "start": 839.56,
+            "word": " Lord"
+          },
+          {
+            "end": 840.5,
+            "probability": 0.82421875,
+            "speaker": "SPEAKER_00",
+            "start": 839.96,
+            "word": " of"
+          },
+          {
+            "end": 840.82,
+            "probability": 0.63134765625,
+            "speaker": "SPEAKER_00",
+            "start": 840.5,
+            "word": " heavenly"
+          },
+          {
+            "end": 841.48,
+            "probability": 0.865234375,
+            "speaker": "SPEAKER_00",
+            "start": 840.82,
+            "word": " forces"
+          },
+          {
+            "end": 842.64,
+            "probability": 0.79541015625,
+            "speaker": "SPEAKER_00",
+            "start": 841.48,
+            "word": " will"
+          },
+          {
+            "end": 843.3,
+            "probability": 0.90673828125,
+            "speaker": "SPEAKER_00",
+            "start": 842.64,
+            "word": " do"
+          },
+          {
+            "end": 843.7,
+            "probability": 0.8798828125,
+            "speaker": "SPEAKER_00",
+            "start": 843.3,
+            "word": " this."
+          },
+          {
+            "end": 1149.79,
+            "probability": 0.845703125,
+            "speaker": "SPEAKER_00",
+            "start": 1149.47,
+            "word": " Thank"
+          },
+          {
+            "end": 1149.91,
+            "probability": 0.892578125,
+            "speaker": "SPEAKER_00",
+            "start": 1149.79,
+            "word": " you"
+          },
+          {
+            "end": 1150.09,
+            "probability": 0.90185546875,
+            "speaker": "SPEAKER_00",
+            "start": 1149.91,
+            "word": " for"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.2615017265909248,
+        "duration": 23.940000000000055,
+        "end": 1174.03,
+        "speaker": "SPEAKER_00",
+        "start": 1150.09,
+        "text": "joining us to celebrate the birth of Christ. As you are sent tonight, I want to encourage you to share with others this invitation to come and worship Christ the Lord, both during this Christmas season as we're going to celebrate the birth of Christ, not just tonight but for the next two Sundays, to really celebrate his arrival. The company is here and we can enjoy God's company that has come.",
+        "words": [
+          {
+            "end": 1150.41,
+            "probability": 0.87158203125,
+            "speaker": "SPEAKER_00",
+            "start": 1150.09,
+            "word": " joining"
+          },
+          {
+            "end": 1150.61,
+            "probability": 0.90380859375,
+            "speaker": "SPEAKER_00",
+            "start": 1150.41,
+            "word": " us"
+          },
+          {
+            "end": 1150.79,
+            "probability": 0.90087890625,
+            "speaker": "SPEAKER_00",
+            "start": 1150.61,
+            "word": " to"
+          },
+          {
+            "end": 1151.15,
+            "probability": 0.79541015625,
+            "speaker": "SPEAKER_00",
+            "start": 1150.79,
+            "word": " celebrate"
+          },
+          {
+            "end": 1151.45,
+            "probability": 0.8203125,
+            "speaker": "SPEAKER_00",
+            "start": 1151.15,
+            "word": " the"
+          },
+          {
+            "end": 1151.77,
+            "probability": 0.8994140625,
+            "speaker": "SPEAKER_00",
+            "start": 1151.45,
+            "word": " birth"
+          },
+          {
+            "end": 1152.29,
+            "probability": 0.90625,
+            "speaker": "SPEAKER_00",
+            "start": 1151.77,
+            "word": " of"
+          },
+          {
+            "end": 1152.79,
+            "probability": 0.732421875,
+            "speaker": "SPEAKER_00",
+            "start": 1152.29,
+            "word": " Christ."
+          },
+          {
+            "end": 1153.73,
+            "probability": 0.89013671875,
+            "speaker": "SPEAKER_00",
+            "start": 1153.29,
+            "word": " As"
+          },
+          {
+            "end": 1153.87,
+            "probability": 0.86474609375,
+            "speaker": "SPEAKER_00",
+            "start": 1153.73,
+            "word": " you"
+          },
+          {
+            "end": 1153.97,
+            "probability": 0.59130859375,
+            "speaker": "SPEAKER_00",
+            "start": 1153.87,
+            "word": " are"
+          },
+          {
+            "end": 1154.37,
+            "probability": 0.76611328125,
+            "speaker": "SPEAKER_00",
+            "start": 1153.97,
+            "word": " sent"
+          },
+          {
+            "end": 1155.35,
+            "probability": 0.74169921875,
+            "speaker": "SPEAKER_00",
+            "start": 1154.37,
+            "word": " tonight,"
+          },
+          {
+            "end": 1155.75,
+            "probability": 0.994140625,
+            "speaker": "SPEAKER_00",
+            "start": 1155.45,
+            "word": " I"
+          },
+          {
+            "end": 1156.07,
+            "probability": 0.8125,
+            "speaker": "SPEAKER_00",
+            "start": 1155.75,
+            "word": " want"
+          },
+          {
+            "end": 1156.23,
+            "probability": 0.9033203125,
+            "speaker": "SPEAKER_00",
+            "start": 1156.07,
+            "word": " to"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.24559294311409322,
+        "duration": 32.43999999999983,
+        "end": 1207.57,
+        "speaker": "SPEAKER_00",
+        "start": 1175.13,
+        "text": "And then beginning on January 10th, we're going to begin a new series with the new year and the season of Epiphany, a season that we recognize God's with us. We have this striking revelation that God is present and among us, and so we hear the invitation to follow. And so we will have a series beginning on January 10th, over the next few weeks, to follow Jesus. And maybe that means for you the first time to really make a decision to follow Christ and to walk with him and learn to live like him, along with brothers and sisters that are in that journey with",
+        "words": [
+          {
+            "end": 1175.19,
+            "probability": 0.82080078125,
+            "speaker": "SPEAKER_00",
+            "start": 1175.13,
+            "word": " And"
+          },
+          {
+            "end": 1175.33,
+            "probability": 0.7216796875,
+            "speaker": "SPEAKER_00",
+            "start": 1175.19,
+            "word": " then"
+          },
+          {
+            "end": 1175.59,
+            "probability": 0.70263671875,
+            "speaker": "SPEAKER_00",
+            "start": 1175.33,
+            "word": " beginning"
+          },
+          {
+            "end": 1175.83,
+            "probability": 0.89599609375,
+            "speaker": "SPEAKER_00",
+            "start": 1175.59,
+            "word": " on"
+          },
+          {
+            "end": 1176.15,
+            "probability": 0.9013671875,
+            "speaker": "SPEAKER_00",
+            "start": 1175.83,
+            "word": " January"
+          },
+          {
+            "end": 1176.57,
+            "probability": 0.884521484375,
+            "speaker": "SPEAKER_00",
+            "start": 1176.15,
+            "word": " 10th,"
+          },
+          {
+            "end": 1176.73,
+            "probability": 0.9208984375,
+            "speaker": "SPEAKER_00",
+            "start": 1176.57,
+            "word": " we're"
+          },
+          {
+            "end": 1176.81,
+            "probability": 0.82421875,
+            "speaker": "SPEAKER_00",
+            "start": 1176.73,
+            "word": " going"
+          },
+          {
+            "end": 1176.85,
+            "probability": 0.9033203125,
+            "speaker": "SPEAKER_00",
+            "start": 1176.81,
+            "word": " to"
+          },
+          {
+            "end": 1177.11,
+            "probability": 0.73876953125,
+            "speaker": "SPEAKER_00",
+            "start": 1176.85,
+            "word": " begin"
+          },
+          {
+            "end": 1177.31,
+            "probability": 0.99658203125,
+            "speaker": "SPEAKER_00",
+            "start": 1177.11,
+            "word": " a"
+          },
+          {
+            "end": 1177.51,
+            "probability": 0.822265625,
+            "speaker": "SPEAKER_00",
+            "start": 1177.31,
+            "word": " new"
+          },
+          {
+            "end": 1177.83,
+            "probability": 0.8076171875,
+            "speaker": "SPEAKER_00",
+            "start": 1177.51,
+            "word": " series"
+          },
+          {
+            "end": 1178.05,
+            "probability": 0.806640625,
+            "speaker": "SPEAKER_00",
+            "start": 1177.83,
+            "word": " with"
+          },
+          {
+            "end": 1178.17,
+            "probability": 0.77587890625,
+            "speaker": "SPEAKER_00",
+            "start": 1178.05,
+            "word": " the"
+          },
+          {
+            "end": 1178.31,
+            "probability": 0.5517578125,
+            "speaker": "SPEAKER_00",
+            "start": 1178.17,
+            "word": " new"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.22190241162714205,
+        "duration": 30.440000000000055,
+        "end": 1238.01,
+        "speaker": "SPEAKER_00",
+        "start": 1207.57,
+        "text": "you. Or perhaps it might be a deepening of your already ongoing discipleship of the Lord Jesus. So would you join us as we continue to worship Christ on Sundays at 10 a.m. both here in the sanctuary, the space that we've made to a sanctuary, and also online we'll continue to be worshipping. And so as we go tonight with this good news that Christ has come for us, he is here and he is our Emmanuel. Hear these words and receive this benediction for our Christmas",
+        "words": [
+          {
+            "end": 1207.75,
+            "probability": 0.89892578125,
+            "speaker": "SPEAKER_00",
+            "start": 1207.57,
+            "word": " you."
+          },
+          {
+            "end": 1208.27,
+            "probability": 0.900390625,
+            "speaker": "SPEAKER_00",
+            "start": 1208.07,
+            "word": " Or"
+          },
+          {
+            "end": 1208.63,
+            "probability": 0.82080078125,
+            "speaker": "SPEAKER_00",
+            "start": 1208.27,
+            "word": " perhaps"
+          },
+          {
+            "end": 1208.99,
+            "probability": 0.77490234375,
+            "speaker": "SPEAKER_00",
+            "start": 1208.63,
+            "word": " it"
+          },
+          {
+            "end": 1209.15,
+            "probability": 0.81982421875,
+            "speaker": "SPEAKER_00",
+            "start": 1208.99,
+            "word": " might"
+          },
+          {
+            "end": 1209.27,
+            "probability": 0.90380859375,
+            "speaker": "SPEAKER_00",
+            "start": 1209.15,
+            "word": " be"
+          },
+          {
+            "end": 1209.41,
+            "probability": 0.9970703125,
+            "speaker": "SPEAKER_00",
+            "start": 1209.27,
+            "word": " a"
+          },
+          {
+            "end": 1209.81,
+            "probability": 0.946533203125,
+            "speaker": "SPEAKER_00",
+            "start": 1209.41,
+            "word": " deepening"
+          },
+          {
+            "end": 1210.33,
+            "probability": 0.9052734375,
+            "speaker": "SPEAKER_00",
+            "start": 1209.81,
+            "word": " of"
+          },
+          {
+            "end": 1210.53,
+            "probability": 0.794921875,
+            "speaker": "SPEAKER_00",
+            "start": 1210.33,
+            "word": " your"
+          },
+          {
+            "end": 1211.01,
+            "probability": 0.833984375,
+            "speaker": "SPEAKER_00",
+            "start": 1210.53,
+            "word": " already"
+          },
+          {
+            "end": 1211.47,
+            "probability": 0.71923828125,
+            "speaker": "SPEAKER_00",
+            "start": 1211.01,
+            "word": " ongoing"
+          },
+          {
+            "end": 1212.23,
+            "probability": 0.9150390625,
+            "speaker": "SPEAKER_00",
+            "start": 1211.47,
+            "word": " discipleship"
+          },
+          {
+            "end": 1212.39,
+            "probability": 0.89794921875,
+            "speaker": "SPEAKER_00",
+            "start": 1212.23,
+            "word": " of"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.2352528130070547,
+        "duration": 7.900000000000091,
+        "end": 1245.91,
+        "speaker": "SPEAKER_00",
+        "start": 1238.01,
+        "text": "blessing. Behold, the Lord proclaims to all the earth, your salvation is here.",
+        "words": [
+          {
+            "end": 1238.75,
+            "probability": 0.1265869140625,
+            "speaker": "SPEAKER_00",
+            "start": 1238.01,
+            "word": " blessing."
+          },
+          {
+            "end": 1240.67,
+            "probability": 0.741943359375,
+            "speaker": "SPEAKER_00",
+            "start": 1240.03,
+            "word": " Behold,"
+          },
+          {
+            "end": 1241.69,
+            "probability": 0.79296875,
+            "speaker": "SPEAKER_00",
+            "start": 1241.23,
+            "word": " the"
+          },
+          {
+            "end": 1242.19,
+            "probability": 0.8447265625,
+            "speaker": "SPEAKER_00",
+            "start": 1241.69,
+            "word": " Lord"
+          },
+          {
+            "end": 1242.95,
+            "probability": 0.853759765625,
+            "speaker": "SPEAKER_00",
+            "start": 1242.19,
+            "word": " proclaims"
+          },
+          {
+            "end": 1243.05,
+            "probability": 0.896484375,
+            "speaker": "SPEAKER_00",
+            "start": 1242.95,
+            "word": " to"
+          },
+          {
+            "end": 1243.29,
+            "probability": 0.90087890625,
+            "speaker": "SPEAKER_00",
+            "start": 1243.05,
+            "word": " all"
+          },
+          {
+            "end": 1243.47,
+            "probability": 0.814453125,
+            "speaker": "SPEAKER_00",
+            "start": 1243.29,
+            "word": " the"
+          },
+          {
+            "end": 1243.81,
+            "probability": 0.728515625,
+            "speaker": "SPEAKER_00",
+            "start": 1243.47,
+            "word": " earth,"
+          },
+          {
+            "end": 1244.67,
+            "probability": 0.36572265625,
+            "speaker": "SPEAKER_00",
+            "start": 1244.55,
+            "word": " your"
+          },
+          {
+            "end": 1245.27,
+            "probability": 0.8544921875,
+            "speaker": "SPEAKER_00",
+            "start": 1244.67,
+            "word": " salvation"
+          },
+          {
+            "end": 1245.59,
+            "probability": 0.90478515625,
+            "speaker": "SPEAKER_00",
+            "start": 1245.27,
+            "word": " is"
+          },
+          {
+            "end": 1245.91,
+            "probability": 0.8203125,
+            "speaker": "SPEAKER_00",
+            "start": 1245.59,
+            "word": " here."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.2352528130070547,
+        "duration": 25.100000000000136,
+        "end": 1271.93,
+        "speaker": "SPEAKER_00",
+        "start": 1246.83,
+        "text": "Your salvation has come. You are my holy people, the redeemed, whom I have sought out never to be forsaken. And so as God delights and rejoices over you, go in peace, rejoicing in the Lord. And may the grace of our Lord Jesus Christ, the love of God, and the communion of the Holy Spirit be with you now and always. Amen.",
+        "words": [
+          {
+            "end": 1247.19,
+            "probability": 0.81005859375,
+            "speaker": "SPEAKER_00",
+            "start": 1246.83,
+            "word": " Your"
+          },
+          {
+            "end": 1247.69,
+            "probability": 0.859375,
+            "speaker": "SPEAKER_00",
+            "start": 1247.19,
+            "word": " salvation"
+          },
+          {
+            "end": 1248.47,
+            "probability": 0.8935546875,
+            "speaker": "SPEAKER_00",
+            "start": 1247.69,
+            "word": " has"
+          },
+          {
+            "end": 1248.91,
+            "probability": 0.814453125,
+            "speaker": "SPEAKER_00",
+            "start": 1248.47,
+            "word": " come."
+          },
+          {
+            "end": 1249.75,
+            "probability": 0.87890625,
+            "speaker": "SPEAKER_00",
+            "start": 1249.67,
+            "word": " You"
+          },
+          {
+            "end": 1249.89,
+            "probability": 0.86083984375,
+            "speaker": "SPEAKER_00",
+            "start": 1249.75,
+            "word": " are"
+          },
+          {
+            "end": 1250.09,
+            "probability": 0.89404296875,
+            "speaker": "SPEAKER_00",
+            "start": 1249.89,
+            "word": " my"
+          },
+          {
+            "end": 1250.43,
+            "probability": 0.69775390625,
+            "speaker": "SPEAKER_00",
+            "start": 1250.09,
+            "word": " holy"
+          },
+          {
+            "end": 1250.97,
+            "probability": 0.912109375,
+            "speaker": "SPEAKER_00",
+            "start": 1250.43,
+            "word": " people,"
+          },
+          {
+            "end": 1251.63,
+            "probability": 0.8095703125,
+            "speaker": "SPEAKER_00",
+            "start": 1251.45,
+            "word": " the"
+          },
+          {
+            "end": 1252.25,
+            "probability": 0.879638671875,
+            "speaker": "SPEAKER_00",
+            "start": 1251.63,
+            "word": " redeemed,"
+          },
+          {
+            "end": 1252.69,
+            "probability": 0.908203125,
+            "speaker": "SPEAKER_00",
+            "start": 1252.51,
+            "word": " whom"
+          },
+          {
+            "end": 1253.01,
+            "probability": 0.994140625,
+            "speaker": "SPEAKER_00",
+            "start": 1252.69,
+            "word": " I"
+          },
+          {
+            "end": 1253.17,
+            "probability": 0.88037109375,
+            "speaker": "SPEAKER_00",
+            "start": 1253.01,
+            "word": " have"
+          },
+          {
+            "end": 1253.45,
+            "probability": 0.8603515625,
+            "speaker": "SPEAKER_00",
+            "start": 1253.17,
+            "word": " sought"
+          }
+        ]
+      }
+    ]
+  }
+}

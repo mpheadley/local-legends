@@ -16,3 +16,4 @@ I was walking in circles, dragging my feet through going through our stuff to se
 - Walking in circles. Frozen. That's the image.
 - The fear of damaging the kids — not written into yet, but it's there
 - This is about what it meant to lose the farm *that way* — not in a clean ending but in a yard sale while you stood inside
+- **Source artifact:** `matt-headley-sources/heather-and-me-notion.md` — early manic era voice reflection on a conversation with Heather. Both of them changing at the same time, in ways that surprised each other. Background on the relationship dynamic running under the farm collapse.

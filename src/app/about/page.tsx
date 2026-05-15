@@ -1,7 +1,10 @@
+export const revalidate = 300
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import SubscribeCTA from "@/app/components/SubscribeCTA";
 
 export const metadata: Metadata = {
   title: "About",
@@ -68,7 +71,7 @@ export default function AboutPage() {
             here, and write it with enough room to actually tell the story.
           </p>
 
-          <h2>Who&apos;s Behind This?</h2>
+          <h2 id="farm">Who&apos;s Behind This?</h2>
 
           <div className="not-prose my-6">
             <Image
@@ -81,10 +84,10 @@ export default function AboutPage() {
             <p className="text-ll-text leading-relaxed mb-6">
               My name is Matt Headley. I live in Jacksonville. I spent nineteen
               years in music and pastoral ministry. Somewhere in the middle of
-              that, my wife and I built a
+              that, my wife Heather and I built a
               flower farm. Cut flowers, farmers markets, a little retail kiosk
               on the Chief Ladiga Trail. We built that thing from the ground up,
-              with our kids underfoot. And then we lost it.
+              with our kids underfoot. And then we had to sell it.
             </p>
             <p className="text-ll-text leading-relaxed mb-6">
               I still drive past farms and gardens on my way to work. Some days
@@ -111,29 +114,33 @@ export default function AboutPage() {
 
           <div>
             <p className="text-ll-text leading-relaxed mb-6">
-              What I do now is build websites and run search campaigns for local businesses. That&apos;s{" "}
+              What I do now is help small business owners find and say the true
+              thing about what they do. I run{" "}
               <a
-                href="https://headleyweb.com"
+                href="https://plainspokenblueprint.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
-                Headley Web &amp; SEO
+                Plainspoken Blueprint
               </a>
-              . Southern Legends started because the work kept putting me across
+              {" "}— a messaging clarity practice built from fifteen years in the pulpit, a flower farm, and thirty pieces of software for
+              florists, farmers market managers, pastors, and wedding vendors. One 90-minute session. One page. A message that works before you walk in the room.
+            </p>
+            <p className="text-ll-text leading-relaxed mb-6">
+              Southern Legends started because the work kept putting me across
               the table from people, and I needed that more than I expected.
-              Turns out sitting
-              with someone and asking them to tell you their story is one of the
+              Turns out sitting with someone and asking them to tell you their story is one of the
               ways back. I wrote more about{" "}
               <Link
-                href="/journal/the-same-domain"
+                href="/essays/the-same-domain"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
                 why this site exists
               </Link>
               {" "}in the journal. My writing has appeared in the{" "}
               <Link
-                href="/journal/hope-in-the-wilderness"
+                href="/essays/hope-in-the-wilderness"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
                 Anniston Star
@@ -147,6 +154,44 @@ export default function AboutPage() {
             </p>
           </div>
 
+          {/* PB section — navy hero treatment */}
+          <div className="not-prose my-8 rounded-lg overflow-hidden" style={{ position: "relative", background: "#0c1632" }}>
+            {/* Blueprint grid */}
+            <div aria-hidden="true" style={{
+              position: "absolute", inset: 0,
+              backgroundImage: "linear-gradient(rgba(100,140,200,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(100,140,200,0.10) 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
+            }} />
+            {/* Acorn watermark */}
+            <div aria-hidden="true" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-end", pointerEvents: "none", overflow: "hidden" }}>
+              <Image src="/images/acorn-mark-pb.png" alt="" width={480} height={480} style={{ opacity: 0.07, marginRight: "-60px" }} />
+            </div>
+            {/* Content */}
+            <div style={{ position: "relative", zIndex: 1, padding: "2rem 1.75rem" }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b9f78", marginBottom: "1rem" }}>
+                Plainspoken Blueprint
+              </p>
+              <p style={{ fontFamily: "var(--font-heading)", fontSize: "2.25rem", lineHeight: 1.1, marginBottom: "1.25rem" }}>
+                <span style={{ display: "block", color: "rgba(255,255,255,0.28)", fontStyle: "italic" }}>Clever confuses.</span>
+                <span style={{ display: "block", color: "#fff", fontWeight: 900 }}>Clarity sells.</span>
+              </p>
+              <div style={{ width: "2.5rem", height: "2px", background: "#6b9f78", marginBottom: "1.25rem" }} />
+              <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "rgba(255,255,255,0.68)", marginBottom: "1.5rem" }}>
+                I built{" "}
+                <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6b9f78", textDecoration: "underline" }}>Plainspoken Blueprint</a>{" "}
+                for small business owners who do good work but struggle to explain it clearly. One 90-minute session. One page: who your customer is, how you help them, exactly how to say it. That page becomes your homepage, your elevator pitch. I also build websites.
+              </p>
+              <a
+                href="https://plainspokenblueprint.com/audit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pb-audit-btn"
+              >
+                Score your message free →
+              </a>
+            </div>
+          </div>
+
           <h2>Know Someone Worth Writing About?</h2>
 
           <p>
@@ -155,7 +200,7 @@ export default function AboutPage() {
 
           <p>
             Reach out at{" "}
-            <a href="mailto:matt@headleyweb.com">matt@headleyweb.com</a>.
+            <a href="mailto:matt@plainspokenblueprint.com">matt@plainspokenblueprint.com</a>.
           </p>
 
           <hr className="my-10 border-ll-dark/10" />
@@ -168,7 +213,7 @@ export default function AboutPage() {
               Support this work →
             </Link>
             <Link
-              href="/journal"
+              href="/essays"
               className="btn-journal inline-block px-5 py-2 border-2 border-ll-accent font-bold text-sm rounded-md hover:bg-ll-accent transition-colors text-center"
             >
               Matt also writes about his own story →
@@ -177,19 +222,88 @@ export default function AboutPage() {
 
           <hr className="my-10 border-ll-dark/10" />
 
+          {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
+            <div className="not-prose text-center my-10">
+              <p
+                className="text-xs uppercase tracking-widest text-ll-dark mb-1"
+                style={{ opacity: 0.32, letterSpacing: "0.22em" }}
+              >
+                Walt Whitman
+              </p>
+              <p
+                className="text-3xl text-ll-dark leading-snug mb-4"
+                style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300 }}
+              >
+                I contain<br />multitudes.
+              </p>
+              <div className="flex gap-6 justify-center flex-wrap mb-5">
+                <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.dev/IMNy3eu4RC0MEIbGmpUUg-5yMjSRyFtKLGn1Mjh5S84/w:1920/sm:1/enc/ZedkaYftBaqinaIZ/Jr40_xy3Eb4tySwk/rScelYdmKxyZS6jZ/NJHeSvZlktqX-xYh/WSHRJ-RhgMHeSlMQ/27Iq7L_pckKRXOOp/v5oIB6B1Vnyt8g_D/jmvq7ZBuLrTpLBdn/gKhmeo_IvtrJEkf4/Yfl8j3qjiOOsC3F3/Z2VGxXEwJGMrAnzQ/2Xzk5fe0iRKeZTw2/UCV0r3RWKam0aN3r/8xpuJ8LPfqX3Axj4/fUq1cLuAVw8.jpg"
+                    alt="I Contain Multitudes tee"
+                    width={160}
+                    height={160}
+                    className="mx-auto rounded mb-1"
+                  />
+                  <span className="text-xs text-ll-text-light">I Contain Multitudes</span>
+                </a>
+                <a href="https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.dev/ZF3dCHiMwN_oLeMILCG_ZyO-yLWVBfdGdJMTSYB-VXY/w:1920/sm:1/enc/xbK5_Zj8qaLU0EP3/UfOi6qpauX8X4zZD/AWPss1Zx9hhOgARc/CZqplVE_aYujz1uM/epI7dRMx0-wU71TK/3ma_163k4tMHBodv/YrGnTZCy-6dzW-bm/mAPjyxMJSQCG5oDM/9dFf4zGHoj51RgVo/E53wJphu1Azmz6CY/uVVj-1cu4Ost7nHt/mSLxEtUbNZifhAY-/Jc8wVoo-eZhrCxWg/lW9fJ68l0YPLbqD5/8B9AixuIqDc.jpg"
+                    alt="Chief Ladiga Trail tee"
+                    width={160}
+                    height={160}
+                    className="mx-auto rounded mb-1"
+                  />
+                  <span className="text-xs text-ll-text-light">Chief Ladiga Trail</span>
+                </a>
+                <a href="https://matt-headley-shop.fourthwall.com/products/the-model-city-anniston-alabama" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <Image
+                    src="https://imgproxy.fourthwall.dev/bCKGvDFomR4x6_Zlk-RenE-MeR-Zb6uKO6B8jy1nJ6A/w:1920/sm:1/enc/8Tc1-v11kCUQnxAj/xbkOwN2Vmv1CmS5b/iH46ky6mYZkr7k1T/sj-wL9p2g_mBO1xo/11U6ggMM2EaOCyuu/ZKr9z6B4zHOG8DIq/zuwI3c9jJmiOwIiV/VVBN7X34q-o7BDHm/mSLvFXaNgCicXSW1/oVoxxnVrSMwkzOC5/pb5-h4tqgXuvRrep/XjTo_ygy8ePtMBxI/mrLLJArS604vJop5/0ZWri4eShE8mN6Mk/R8CBRTe6q5c.jpg"
+                    alt="The Model City tee"
+                    width={160}
+                    height={160}
+                    className="mx-auto rounded mb-1"
+                  />
+                  <span className="text-xs text-ll-text-light">The Model City</span>
+                </a>
+              </div>
+              <a
+                href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+              >
+                The store →
+              </a>
+            </div>
+          )}
+
+          <hr className="my-10 border-ll-dark/10" />
+
           <p className="text-sm text-ll-text-light">
             Southern Legends is built and maintained by{" "}
             <a
-              href="https://headleyweb.com"
+              href="https://matthewheadley.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Headley Web &amp; SEO
+              Matt Headley
+            </a>
+            {" "}·{" "}
+            <a
+              href="https://plainspokenblueprint.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Plainspoken Blueprint
             </a>
             .
           </p>
         </div>
       </section>
+
+      <SubscribeCTA variant="section" />
     </main>
   );
 }

@@ -1,0 +1,6 @@
+**Speakers detected:** 1
+**Total turns:** 1
+
+---
+
+**[00:00] SPEAKER_00:** Yeah, I'm testing the transcript record feature for this voice memo.

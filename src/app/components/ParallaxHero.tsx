@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import type React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,7 +18,10 @@ interface ParallaxHeroProps {
   heroAlt: string;
   heroPosition?: string;
   heroTextBottom?: boolean;
+  heroFontSize?: string;
+  displayTitle?: boolean;
   slug?: string;
+  cardFont?: "serif" | "serif-bold" | "serif-italic" | "serif-caps" | "condensed";
 }
 
 export default function ParallaxHero({
@@ -29,8 +33,13 @@ export default function ParallaxHero({
   heroAlt,
   heroPosition,
   heroTextBottom = false,
+  heroFontSize,
+  displayTitle = false,
   slug,
+  cardFont,
 }: ParallaxHeroProps) {
+  const heroFontStyle: React.CSSProperties["fontStyle"] = cardFont === "serif-italic" ? "italic" : "normal";
+  const heroFontWeight = cardFont === "serif-bold" ? 700 : undefined;
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -85,14 +94,8 @@ export default function ParallaxHero({
           />
           <div
             aria-hidden="true"
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: heroTextBottom
-                ? "linear-gradient(to top, rgba(20,16,14,0.85) 0%, rgba(20,16,14,0.4) 35%, transparent 60%)"
-                : "linear-gradient(to right, rgba(20,16,14,0.75) 0%, rgba(20,16,14,0.3) 30%, transparent 50%)",
-              zIndex: 1,
-            }}
+            className={heroTextBottom ? "ph-overlay ph-overlay--bottom" : "ph-overlay ph-overlay--side"}
+            style={{ position: "absolute", inset: 0, zIndex: 1 }}
           />
         </div>
         {heroTextBottom ? (
@@ -116,7 +119,7 @@ export default function ParallaxHero({
               </p>
             )}
             <h1
-              className="ph-title st-hero-title"
+              className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
               style={{ margin: 0, opacity: 1, transform: "none", fontSize: "clamp(1.5rem, 3.5vw, 2.75rem)" }}
             >
               {title}
@@ -130,15 +133,19 @@ export default function ParallaxHero({
             {eyebrow && <p className="ph-eyebrow st-hero-eyebrow">{eyebrow}</p>}
             {titleHtml ? (
               <h1
-                className="ph-title st-hero-title"
+                className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
+                style={{ ...(heroFontSize ? { fontSize: heroFontSize } : {}), fontStyle: heroFontStyle, ...(heroFontWeight ? { fontWeight: heroFontWeight } : {}) }}
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
               />
             ) : (
-              <h1 className="ph-title st-hero-title">{title}</h1>
+              <h1
+                className={`ph-title st-hero-title${displayTitle ? " profile-title-display" : ""}`}
+                style={{ ...(heroFontSize ? { fontSize: heroFontSize } : {}), fontStyle: heroFontStyle, ...(heroFontWeight ? { fontWeight: heroFontWeight } : {}) }}
+              >{title}</h1>
             )}
             {subtitle && (
               <div
-                className="ph-subtitle st-hero-subtitle"
+                className="ph-subtitle ph-subtitle-card st-hero-subtitle"
                 style={{
                   display: "inline-block",
                   background: "rgba(20, 16, 14, 0.25)",

@@ -1,9 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.fourthwall.com" },
+      { protocol: "https", hostname: "imgproxy.fourthwall.com" },
+      { protocol: "https", hostname: "imgproxy.fourthwall.dev" },
+    ],
+  },
   async redirects() {
     return [
       { source: "/featured", destination: "/", permanent: true },
+      { source: "/journal", destination: "/essays", permanent: true },
+      { source: "/journal/:slug", destination: "/essays/:slug", permanent: true },
     ];
   },
   async headers() {
