@@ -34,6 +34,8 @@
       font-size="220" fill="#9A3412" font-style="italic" letter-spacing="3">1832 — 2032</text>
 
 
+<g transform="translate(0, -400)">
+
 <!-- ── TRAIL ─────────────────────────────────────────────── -->
 <g>
   <use href="#trailPath" stroke="#292524" stroke-width="60" stroke-linecap="round" stroke-linejoin="round" opacity="0.20"/>
@@ -75,121 +77,9 @@
 <text x="2100" y="3200" text-anchor="middle" font-size="220" fill="#9A3412" font-style="italic" font-weight="bold">1832</text>
 <text x="2100" y="3360" text-anchor="middle" font-size="120" fill="#9A3412" letter-spacing="5" font-weight="bold">TREATY OF CUSSETA</text>
 
-
-<!-- ════════════════════════════════════════════════════════
-     LANDMARK CALLOUTS — connecting lines first, then boxes
-     ════════════════════════════════════════════════════════ -->
-
-<!-- Connecting lines — thin, low opacity -->
-<!-- Anniston depot line: dot (300,3708) → box left edge (1380,3800) -->
-<line x1="356" y1="3708" x2="1380" y2="3800" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
-<!-- Weaver tree tunnel: dot (484,2912) → box left edge (1320,2680) -->
-<line x1="484" y1="2912" x2="1320" y2="2740" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
-<!-- JSU tower: dot (761,2364) → box left edge (1620,2180) -->
-<line x1="761" y1="2364" x2="1620" y2="2260" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
-<!-- Piedmont: dot (1900,1526) → box left edge (2500,1700) -->
-<line x1="1900" y1="1526" x2="2500" y2="1760" stroke="#292524" stroke-width="10" opacity="0.25" stroke-dasharray="20,20"/>
-
-
-<!-- ── CALLOUT 1: ANNISTON DEPOT ─────────────────────────
-     1925 Southern Railway, classical revival
-     Pediment over 3 round-arched windows, two side wings
-     Box: 1380,3720 → 2280,4080 (900w × 360h) -->
-<rect x="1380" y="3720" width="900" height="360" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
-
-<g transform="translate(1440, 3740)">
-  <!-- Side wings -->
-  <rect x="0" y="140" width="140" height="110" fill="#292524" opacity="0.85"/>
-  <rect x="640" y="140" width="140" height="110" fill="#292524" opacity="0.85"/>
-  <!-- Main body -->
-  <rect x="100" y="150" width="580" height="100" fill="#292524" opacity="0.85"/>
-  <!-- Central pediment -->
-  <polygon points="200,150 390,55 580,150" fill="#292524" opacity="0.85"/>
-  <!-- Three arched windows (light cutouts) -->
-  <ellipse cx="285" cy="148" rx="28" ry="36" fill="#fafaf7" opacity="0.7"/>
-  <ellipse cx="390" cy="148" rx="28" ry="36" fill="#fafaf7" opacity="0.7"/>
-  <ellipse cx="495" cy="148" rx="28" ry="36" fill="#fafaf7" opacity="0.7"/>
-  <!-- Platform -->
-  <rect x="-10" y="248" width="800" height="14" fill="#292524" opacity="0.6"/>
-  <!-- Label -->
-  <text x="390" y="295" text-anchor="middle" font-size="44" fill="#292524" opacity="0.70" font-style="italic">Anniston Depot · 1925</text>
 </g>
 
 
-<!-- ── CALLOUT 2: WEAVER TREE TUNNEL ─────────────────────
-     Arching canopy over the trail corridor
-     Box: 1320,2620 → 2160,2900 (840w × 280h) -->
-<rect x="1320" y="2620" width="840" height="280" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
-
-<g transform="translate(1360, 2630)">
-  <!-- Left trunk -->
-  <rect x="20" y="165" width="28" height="80" fill="#292524" opacity="0.80"/>
-  <!-- Right trunk -->
-  <rect x="712" y="165" width="28" height="80" fill="#292524" opacity="0.80"/>
-  <!-- Left canopy arc -->
-  <path d="M 0,165 Q 80,40 380,20" stroke="#292524" stroke-width="55" fill="none" stroke-linecap="round" opacity="0.80"/>
-  <!-- Right canopy arc -->
-  <path d="M 760,165 Q 680,40 380,20" stroke="#292524" stroke-width="55" fill="none" stroke-linecap="round" opacity="0.80"/>
-  <!-- Trail path through tunnel (gap at bottom) -->
-  <rect x="340" y="220" width="80" height="10" fill="#fafaf7" opacity="0.5"/>
-  <!-- Label -->
-  <text x="380" y="245" text-anchor="middle" font-size="44" fill="#292524" opacity="0.70" font-style="italic">The Tree Tunnel · Weaver</text>
-</g>
-
-
-<!-- ── CALLOUT 3: JSU HOUSTON COLE LIBRARY ───────────────
-     13-story tower, tallest academic building in Alabama
-     Box: 1620,2080 → 2160,2580 (540w × 500h) -->
-<rect x="1620" y="2080" width="540" height="500" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
-
-<g transform="translate(1660, 2100)">
-  <!-- Tower body — narrow, 13-story -->
-  <rect x="155" y="0" width="150" height="390" fill="#292524" opacity="0.85"/>
-  <!-- Penthouse / mechanical top -->
-  <rect x="165" y="-22" width="130" height="26" fill="#292524" opacity="0.85"/>
-  <!-- Base plaza — wider -->
-  <rect x="80" y="385" width="300" height="28" fill="#292524" opacity="0.75"/>
-  <!-- Window grid — horizontal floor lines -->
-  <line x1="155" y1="30"  x2="305" y2="30"  stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="60"  x2="305" y2="60"  stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="90"  x2="305" y2="90"  stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="120" x2="305" y2="120" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="150" x2="305" y2="150" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="180" x2="305" y2="180" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="210" x2="305" y2="210" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="240" x2="305" y2="240" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="270" x2="305" y2="270" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="300" x2="305" y2="300" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="330" x2="305" y2="330" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <line x1="155" y1="360" x2="305" y2="360" stroke="#fafaf7" stroke-width="5" opacity="0.5"/>
-  <!-- Vertical center divide -->
-  <line x1="230" y1="0" x2="230" y2="385" stroke="#fafaf7" stroke-width="4" opacity="0.4"/>
-  <!-- Label -->
-  <text x="230" y="440" text-anchor="middle" font-size="40" fill="#292524" opacity="0.70" font-style="italic">Houston Cole Library</text>
-  <text x="230" y="483" text-anchor="middle" font-size="36" fill="#292524" opacity="0.55" font-style="italic">Jacksonville State · 1972</text>
-</g>
-
-
-<!-- ── CALLOUT 4: PIEDMONT TRAIL END ─────────────────────
-     Trail terminus marker post
-     Box: 2500,1700 → 3300,1960 (800w × 260h) -->
-<rect x="2500" y="1700" width="800" height="260" fill="none" stroke="#292524" stroke-width="8" opacity="0.35"/>
-
-<g transform="translate(2540, 1715)">
-  <!-- Post -->
-  <rect x="320" y="20" width="22" height="180" fill="#292524" opacity="0.85"/>
-  <!-- Sign board — main -->
-  <rect x="200" y="20" width="260" height="75" rx="4" fill="#292524" opacity="0.85"/>
-  <!-- Sign text (white) -->
-  <text x="330" y="67" text-anchor="middle" font-size="38" fill="#fafaf7" opacity="0.90" font-weight="bold" letter-spacing="3">END OF TRAIL</text>
-  <!-- Secondary sign below -->
-  <rect x="230" y="108" width="200" height="52" rx="3" fill="#292524" opacity="0.70"/>
-  <text x="330" y="140" text-anchor="middle" font-size="30" fill="#fafaf7" opacity="0.80">39.5 mi</text>
-  <!-- Ground line -->
-  <line x1="260" y1="200" x2="400" y2="200" stroke="#292524" stroke-width="8" opacity="0.50"/>
-  <!-- Label -->
-  <text x="330" y="230" text-anchor="middle" font-size="40" fill="#292524" opacity="0.70" font-style="italic">Piedmont Terminus</text>
-</g>
 
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->

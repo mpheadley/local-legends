@@ -210,12 +210,14 @@ All components registered in `src/app/essays/[slug]/page.tsx` under `mdxComponen
 
 ## Writing Coach & Audit Triggers
 
-When the user says any of the phrases below, **immediately invoke the corresponding slash command** — no confirmation needed.
+**The writing coach for SL lives in BookCoach** (`gather/apps/bookcoach`), not as a Claude Code skill. `/coach-sl` was never built as a skill file — do not attempt to invoke it.
 
-| User says | Invoke |
+When Matt asks for coaching (any of the phrases below), apply the coaching methodology directly from `content/AUTHENTIC-VOICE-GUIDE.md` and the `southern-legends` config in `gather/apps/bookcoach/lib/coaching-configs.ts`:
+
+| User says | What to do |
 |---|---|
-| "writing guide", "writing coach", "coach me", "socratic coach", "voice guide", "authentic voice guide" | `/coach-sl` |
-| "audit this", "voice check", "check this draft", "run the audit" | `/coach-sl` (voice check mode — bring draft, run audit-satire.py as baseline then layer SL checks) |
+| "writing guide", "writing coach", "coach me", "socratic coach", "voice guide" | Apply SL coaching methodology inline: gap audit → underneath question → telling detail → ending. One question at a time. |
+| "audit this", "voice check", "check this draft", "run the audit" | Read the draft, run kill list check, flag one thing. Wait for response before flagging the next. |
 
 Matt writes first. Always. Do not generate content before coaching is complete.
 

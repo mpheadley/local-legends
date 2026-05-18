@@ -399,6 +399,104 @@ The trail corridor before the extension was unmanaged — a place people lived. 
 
 ---
 
+---
+
+## The Logo Controversy — Session Notes (2026-05-16)
+
+### What We Know
+The Anniston extension of the Chief Ladiga Trail has an official logo showing a Native American figure. Compared to the logo that had been used for thirty years, the redesign made two changes:
+- The feather **changed direction** — from coming up out of the top of the turban to going down and out the back
+- The count changed — from **two feathers** to **one**
+
+The city's stated justification (from Jackson Hodges or via him): the design was done carefully to reflect what an actual Creek Nation person would look like.
+
+### People Involved
+- **Jackson Hodges** — City of Anniston PR Director. Has been evasive about who actually designed the logo. As PR director, his job is to protect city image — an admission that the redesign happened without Creek Nation consultation would be a liability.
+- **Toby Bennington** — Former Economic Developer, City of Anniston (or Jacksonville/Calhoun County — confirm title). Was already looped into the logo conversation April 24, 2026 when Matt called about shirt design. Confirmed the logo wasn't trademarked and mentioned the city was considering redesigning it to be more historically accurate to LaDiga's actual appearance.
+- **Matt Caballero** — City contact who mentioned the city engineer (Branton Cole) is on maternity leave and might know the design origin.
+- **Branton Cole** — City of Anniston Engineer. On maternity leave as of 2026-05-16. Was involved in CLT project and the Trail Porch conversations. Secondary source for logo design history.
+
+### Why No One Is Answering
+Jackson's evasiveness is structural, not personal. A PR director is not going to give a clean answer about a design decision that could read as "the city changed a 30-year-old Native American symbol without consulting anyone." The city engineer might know the actual history, but that information has to pass through PR before it becomes a statement.
+
+### Research Gap
+Who actually designed the Anniston extension logo? Was the Muscogee Creek Nation or any Native authority consulted before the feather was changed?
+
+---
+
+## Outreach Strategy — Session Notes (2026-05-16)
+
+### Decision: Reach Out Now, Don't Wait
+Matt asked whether to contact the JSU professor first or go directly to the Muscogee Creek Nation. The answer: both, in parallel, same week. Don't let sequencing become a reason not to start either.
+
+### Contact 1 — JSU Longleaf Studios (Highest Priority)
+JSU's Longleaf Studios produced the Emmy-winning documentary **"The Forgotten Creeks"** with Alabama Public Television. The film covered Creek history from Spanish contact through Indian Removal Act and featured **Poarch Creek Tribal Elder Clarence Rolin** on camera. That means the production team already has working relationships with Creek community members — they did the hard work of earning trust.
+
+- **Official trailer:** https://www.youtube.com/watch?v=OzjxrKRJPNg
+- **Full documentary:** https://www.youtube.com/watch?v=fmK3ZpnqiCI (7,948 views, published Feb 26, 2024)
+- **JSU press release:** https://www.jsu.edu/news/articles/202...
+
+**WARM CONTACT — Pete Conroy (lead with this, not cold email):**
+- Director of JSU's Center for Environmental Studies and Longleaf Studios — the person who built the infrastructure that produced this documentary
+- **Personal relationship:** His wife Roxanna was a weekly flower customer at Headley Flower Farm. Pete came to the farm himself to pick up flowers. They were regulars and were genuinely fascinated by Heather's growing operation.
+- **Don't email a professor — text Pete.** This is not a cold outreach. This is a follow-up to an existing relationship.
+- **Matt has Pete's cell.** Heather has Roxanna's number.
+- **Watch before texting Pete — in this order:**
+  1. *The Forgotten Creeks* (full): https://www.youtube.com/watch?v=fmK3ZpnqiCI
+  2. *BLAZE: The Trails of Alabama* (full): https://www.youtube.com/watch?v=Aco_2xkSh_Q — also Longleaf Studios, published ~May 2026 during the official Year of Alabama Trails. **Chief LaDiga Trail is in it — confirmed.** 751 views, 3 weeks old. Pete's studio has now covered both Creek history and the CLT itself.
+
+**Content experts (JSU professors — secondary if Pete doesn't have a direct line):**
+- **Prof. Tamara Levi** — JSU, content expert on the film.
+- **Prof. Harry Holstein** — JSU, content expert on the film.
+
+**Production partners:**
+- **Illuminate Films** — Nashville-based film company, co-produced with Longleaf Studios. Provided professional crew alongside JSU film students.
+
+**Film crew (JSU students — secondary, for completeness):**
+- Peyton Beckwith, Jonah Lancaster, Ethan Wright, Tucker Barnett (film crew)
+- Shankar Dayal Dayalan, Jacob Anderson, Kayla Bigbee, Kayla Harris, Alba Conjero I Gutierrez, Adela Johnson, Zachery Stanley (motion design/graphic design)
+
+**Documentary scope:** Poarch Band of Creek Indians specifically — their survival after Trail of Tears, 40-year legal battle for federal recognition, and ultimate sovereignty. The Poarch Band is Alabama's only federally recognized Native American tribe (1 of 574 federally recognized sovereign nations in the US).
+
+- Who to contact: **Prof. Tamara Levi or Prof. Harry Holstein** — they're the historians who built the content, not just crew. They almost certainly have direct relationships with Poarch Band leadership.
+- Ask: "I'm writing a Southern Legends piece about Chief LaDiga and the trail that bears his name. I watched The Forgotten Creeks — can we talk?"
+- Why this works: they already navigated exactly the relationship Matt wants to build. They know the right people.
+
+### Contact 2 — Muscogee (Creek) Nation Cultural Preservation (Direct)
+The Creek Nation is a sovereign government. They don't need an academic intermediary, and going through one first could signal a lack of confidence in Matt's own standing to approach them. The Southern Legends essay is the credential.
+
+- Target: Muscogee (Creek) Nation Historic Preservation Program or Cultural Preservation office (Oklahoma)
+- Lead with: the Southern Legends project and the essay about LaDiga
+- Don't open with: the logo controversy. Let the relationship establish before raising it.
+- Framing: "we want to remember Chief LaDiga *with you*, not just about you"
+
+### Contact 3 — Poarch Band of Creek Indians (Parallel)
+Alabama-based, federally recognized, never left Alabama. They're in Atmore (south AL) but have the most direct ongoing presence in the state. The JSU documentary partnership was specifically with them. May be more accessible for an Alabama-based initiative.
+
+### What Not to Do
+- Don't make the logo the first ask — it's a symptom of a larger problem (no consultation) that the Creek people will surface themselves once they understand the context
+- Don't wait for the city engineer to come back from maternity leave
+- Don't mention Jackson or the PR situation in first-contact outreach
+- Don't position as a city critic or activist — come as someone who did the research and wants to do right by the history
+
+### The 2032 Opportunity
+The bicentennial of the Treaty of Cusseta / LaDiga's land sale is **2032** — six years out. Still viable as a long-horizon campaign goal: City of Anniston + Muskogee Creek Nation + Rails to Trails + Southern Legends, building toward that anniversary. Write the piece first, use it as the launchpad.
+
+---
+
+## NPS Source Filed (2026-05-16)
+Full text + editorial notes saved to: `content/research/sources/chief-ladiga-muscogee-creek-nps-little-river-canyon-2021.md`
+
+Key facts from this source relevant to the essay:
+- LaDiga was **Upper Creek** — Coosa River territory, explicitly named
+- Upper Creek maintained more traditional ways; were majority Red Stick fighters
+- Both sides of the Red Stick War (1813–1814) lost their land — punished for fighting and for not stopping each other
+- 1832 Treaty of Cusseta, 1833 Jacksonville founded on LaDiga's land, 1834 Trail of Tears majority removal — a three-year sequence
+- "Creek" was an English nickname for the rivers; the people are Muscogee
+- Some Upper Creek fled to Florida and became Seminole rather than be removed
+
+---
+
 ## Draft Status
 - Published: false
 - heroImage: empty

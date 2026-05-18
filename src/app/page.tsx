@@ -214,6 +214,104 @@ export default function HomePage() {
         </section>
       )}
 
+      {/* Vol. 1 Magazine Band */}
+      <section style={{ background: "#1C1917", position: "relative", overflow: "hidden" }}>
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/topo-7.png')",
+            backgroundSize: "cover",
+            opacity: 0.15,
+            mixBlendMode: "soft-light",
+          }}
+        />
+        <div
+          className="mx-auto max-w-4xl px-6"
+          style={{
+            position: "relative",
+            zIndex: 1,
+            padding: "3.5rem 1.5rem",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "2.5rem",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "0.58rem",
+                fontWeight: 700,
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "#CA8A04",
+                marginBottom: "0.75rem",
+                fontFamily: "var(--font-body)",
+              }}
+            >
+              Now Available · Vol. 1
+            </p>
+            <h2
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+                fontWeight: 300,
+                color: "#FAFAF7",
+                lineHeight: 1.05,
+                marginBottom: "0.75rem",
+              }}
+            >
+              Southern Legends<br />in print.
+            </h2>
+            <p
+              style={{
+                fontSize: "0.9rem",
+                color: "rgba(250,250,247,0.55)",
+                lineHeight: 1.75,
+                marginBottom: "0",
+                fontFamily: "var(--font-body)",
+              }}
+            >
+              Five profiles. 200 copies. $15.<br />
+              10% benefits UWECA Imagination Library — doubled by Alabama.
+            </p>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
+            <Link
+              href="/vol-1"
+              style={{
+                display: "inline-block",
+                background: "#9A3412",
+                color: "#FAFAF7",
+                padding: "0.85rem 1.75rem",
+                fontSize: "0.7rem",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                fontFamily: "var(--font-body)",
+                textAlign: "center",
+              }}
+            >
+              Reserve your copy — $15
+            </Link>
+            <p
+              style={{
+                fontSize: "0.72rem",
+                color: "rgba(250,250,247,0.3)",
+                textAlign: "center",
+                fontFamily: "var(--font-body)",
+                margin: 0,
+              }}
+            >
+              Available Oct 18 at The Aisle Expo · select local spots
+            </p>
+          </div>
+        </div>
+      </section>
+
       <SubscribeCTA variant="section" source="homepage" />
     </main>
   );

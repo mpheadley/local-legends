@@ -67,6 +67,35 @@ Note: `the-hospital.md` draft has a banner pointing to the MDX as canonical. Edi
 
 Supporting drafts for the-same-domain: `content/journal-drafts/archive-the-same-domain-source.md` (700), `content/journal-drafts/archive-the-same-domain-cuts.md` (730), `content/journal-drafts/the-same-domain-chat-transcript.md` (2,460). Archive docs are reference only — do not reopen unless specifically digging for a cut image.
 
+### The Bloom Bar — Act Four anchor object
+
+**File:** `content/journal-drafts/bloom-bar-story.md`
+
+The physical object that carries the full arc of Act Four. Bought for $7,000, drove to Orlando with son. Farm closed. Sat as grief object. Heather turned away at Oak Meadow ("not yet"). Sold the Tacoma. Kept the Bloom Bar. On October 18, 2026 — the centerpiece of The Aisle. Oak Meadow is now a vendor being invited in.
+
+Key lines (verbatim, use these):
+- *"The Bloom Bar didn't sit there doing nothing. It was waiting."*
+- *"The people who said no are being invited into a room Matt and Heather are building."*
+- *"We kept it anyway. We didn't know why."*
+- *"I've never been more proud of something that once made me so sad."*
+- *"This feels like the easiest thing I've ever done. But it's really taken me twenty years of hardship to get here."*
+
+Connected: Brody (Called Coffee farmer's market vendor, wrote Heather a poem with fountain pen May 14 2026). Brody's poem not yet transcribed — insert when available. Also connected to Called Coffee / Jared (SL profile candidate, already crosslinked in shannon-jenkins.mdx).
+
+**PB Book angle:** "The Waiting Asset" — the grief object that becomes the proof. See bloom-bar-story.md for the framework version.
+
+### Session Insights — May 17, 2026
+
+**File:** `content/journal-drafts/may17-session-insights.md`
+
+Raw verbatim capture. Three load-bearing insights from this session:
+
+1. **Social capital / The Aisle as reclamation** — "I felt like when I was depressed after my manic episode that I had lost all my social capital or had no way to utilize it or leverage it or reclaim it. I wonder now if the aisle is the way that I reclaim it." The more precise version: capital wasn't lost, just dormant. The Aisle is the new vehicle to call it toward. Potential thesis for Act Four.
+
+2. **Ministry without a pulpit** — "the aisle feels like my new ministry, alongside southern legends, plainspoken and the farmers market director... all of it feels like ministry." Connects to Lucy's line at coffee: "you don't have to be working at a church to do ministry." May be the unifying thesis of the memoir.
+
+3. **CLT book clarification** — "the clt book is about loss of ladiga and his people, displacement, and reclaiming identity of the poarch band creeks and muskogee creek nations." Matt's personal displacement (farm, pulpit, bipolar) as parallel to historical displacement. Chief Ladiga bicentennial = 2032 (Treaty of Cusseta). Separate from America's 250th (2026).
+
 ### Closing
 
 | Chapter | File | ~Words | Status | Notes |
@@ -108,6 +137,16 @@ From `BOOK.md`:
 - A subject whose first business failed — after the-farm-sale
 - Someone who came back to Anniston after leaving — after the-same-domain
 - A pastor or former pastor — placement undecided
+
+---
+
+## Pre-expo SL essay (scaffold — write before Oct 18)
+
+**File:** `content/journal-drafts/sl-essay-you-dont-have-to-be-in-a-church.md`
+
+"You Don't Have to Be in a Church" — the ministry-without-a-pulpit piece. Thesis: the pulpit was one form. The Aisle, SL, PB, MarketDay, Bloom Bar — same call, different vessels. Pre-expo version ends at the threshold ("Oct 18, we find out"). Full memoir version (Bitter Southerner pitch) written after the expo with the complete arc. Scaffold created 2026-05-17. Gap 1 filled: coffee scene at Called Coffee, Easter week — already written in `no-shade.mdx`, consent confirmed.
+
+**Timing:** publish on SL late August / early September. Pitch Anniston Star + WBHM same week.
 
 ---
 

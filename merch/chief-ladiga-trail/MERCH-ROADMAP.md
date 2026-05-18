@@ -9,13 +9,12 @@
 
 ## Current Product: T-Shirt (Comfort Colors, Ivory)
 
-### One Fix Before Next Print Run
-- **"EST 2025" is inaccurate** — but it's in *our* badge design, not the official city logo.
-  - The city's official mark is just the portrait + "Chief Ladiga Trail" wordmark (no EST date).
-  - The circular badge with "EST 2025 · ANNISTON, AL" is the badge we built (`chief-ladiga-badge-vector.svg`). Fully editable.
-  - The trail was established in 1990 (Piedmont received the Land and Water Conservation Grant). 2025 was the Anniston extension only.
-  - Options: drop it entirely (cleanest) · change to "EST 1990" · change to "ANNISTON EXTENSION · 2025" (accurate + tells the story)
-- **Add `chiefladiga.org` to the back** — small, below the trail map. Front is already doing its job; the URL belongs contextually on the back where the history is shown.
+### Print-Ready Files (v3 — May 2026)
+- **Back:** `clt-tshirt-back-v3-print-300dpi.png` — includes chiefladiga.org footer, Silver Comet extension, landmark callouts, Jacksonville + Piedmont historical notes
+- **Front:** `clt-sl-shirt-print-v2.png` — SL badge front
+
+### Notes on Badge
+- **"EST 2025" on the badge** — this is the official city/trail badge design (not ours to edit). Leave as-is.
 
 ### What's Working
 - Front badge + "1832 · 2032" + "SOUTHERN LEGENDS" — good hierarchy, conversation starter

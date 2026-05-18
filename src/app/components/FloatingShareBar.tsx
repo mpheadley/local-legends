@@ -16,26 +16,25 @@ export default function FloatingShareBar({ slug, title, description, basePath = 
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    // Show only after hero has scrolled past; hide when closing section is reached
+    // Show only after user has actively scrolled past the hero.
+    // Use scroll position: show when hero-end-sentinel is above the viewport top.
     const heroSentinel = document.getElementById("hero-end-sentinel");
     const endSentinel = document.getElementById("share-bar-sentinel");
 
-    const heroObserver = new IntersectionObserver(
-      ([e]) => setVisible(!e.isIntersecting),
-      { threshold: 0 }
-    );
-    const endObserver = new IntersectionObserver(
-      ([e]) => setAtEnd(e.isIntersecting || e.boundingClientRect.top < 0),
-      { threshold: 0 }
-    );
+    function update() {
+      if (heroSentinel) {
+        setVisible(heroSentinel.getBoundingClientRect().top < 0);
+      }
+      if (endSentinel) {
+        const r = endSentinel.getBoundingClientRect();
+        setAtEnd(r.top < window.innerHeight);
+      }
+    }
 
-    if (heroSentinel) heroObserver.observe(heroSentinel);
-    if (endSentinel) endObserver.observe(endSentinel);
+    window.addEventListener("scroll", update, { passive: true });
+    update(); // run once on mount — will correctly return false if not yet scrolled
 
-    return () => {
-      heroObserver.disconnect();
-      endObserver.disconnect();
-    };
+    return () => window.removeEventListener("scroll", update);
   }, []);
 
   const full = `${siteConfig.url}${basePath}/${slug}`;
