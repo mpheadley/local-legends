@@ -32,6 +32,7 @@ import { scrollytellingConfigs } from "@/lib/scrollytelling-configs";
 import FloatingShareBar from "@/app/components/FloatingShareBar";
 import PrevNextEdgeArrows from "@/app/components/PrevNextEdgeArrows";
 import NextUpPopup from "@/app/components/NextUpPopup";
+import VideoEmbed from "@/app/components/VideoEmbed";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -97,6 +98,7 @@ const mdxComponents = {
   PhotoCarousel: PhotoCarouselLoader,
   PullQuote,
   VideoLoop,
+  VideoEmbed,
 };
 
 type Params = Promise<{ slug: string }>;
