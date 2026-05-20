@@ -2332,3 +2332,6 @@ h1.profile-title-display {
   background: #5a7a60;
   transform: translateY(-2px);
 }
+
+/* Prevent horizontal scroll on mobile */
+html { overflow-x: hidden; }
