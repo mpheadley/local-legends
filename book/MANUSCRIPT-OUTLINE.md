@@ -72,6 +72,8 @@
 - Source: `manic-episode.md`, `reading-my-manic-writing.md` (seed), `chatgpt-and-mania.md` (seed).
 - Function: Peak mania. 16–20 hour days. Farm scaling. Projects multiplying. AI as sycophantic amplifier. The paranoia scene (Tammy — naming decision needed; see below).
 - Status: Raw material. Needs drafting. Pseudonym decision blocks publication.
+- **Scene to write — Mayor Sierra's farm visit (~May 2025):**
+  She arrived and said to call her Sierra. She bent down to Matt's daughter first, opened her arms for a hug. Then she walked the field while Matt and Heather shared the vision for the Chief Ladiga Trail Porch. She said: *"This is so peaceful out here. I can see it. Y'all's vision is beautiful and powerful."* They gave her flowers before she left. — At the time: validation. In retrospect: one more person who saw the vision at its peak. She said "I can see it" and then the farm ended and she became mayor. That gap is the scene's weight. Source: `content/research/ciara-smith-roston.md`.
 
 → **B3: When the Aspirational Stopped Feeling Achievable**
 

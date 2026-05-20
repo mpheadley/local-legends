@@ -7,13 +7,20 @@ interface VideoEmbedProps {
   caption?: string;
 }
 
-function parseVideoUrl(url: string): { embedUrl: string; platform: "youtube" | "vimeo" } | null {
+interface YtStats {
+  viewCount: string;
+  likeCount: string;
+  publishedAt: string;
+}
+
+function parseVideoUrl(url: string): { embedUrl: string; videoId: string | null; platform: "youtube" | "vimeo" } | null {
   const ytMatch = url.match(
     /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
   );
   if (ytMatch) {
     return {
       embedUrl: `https://www.youtube-nocookie.com/embed/${ytMatch[1]}?rel=0`,
+      videoId: ytMatch[1],
       platform: "youtube",
     };
   }
@@ -22,6 +29,7 @@ function parseVideoUrl(url: string): { embedUrl: string; platform: "youtube" | "
   if (vimeoMatch) {
     return {
       embedUrl: `https://player.vimeo.com/video/${vimeoMatch[1]}?dnt=1`,
+      videoId: null,
       platform: "vimeo",
     };
   }
@@ -29,9 +37,18 @@ function parseVideoUrl(url: string): { embedUrl: string; platform: "youtube" | "
   return null;
 }
 
+function formatCount(n: string): string {
+  const num = parseInt(n, 10);
+  if (isNaN(num)) return n;
+  if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1)}M`;
+  if (num >= 1_000) return `${(num / 1_000).toFixed(1)}K`;
+  return num.toLocaleString();
+}
+
 export default function VideoEmbed({ url, caption }: VideoEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [stats, setStats] = useState<YtStats | null>(null);
   const parsed = parseVideoUrl(url);
 
   useEffect(() => {
@@ -49,6 +66,15 @@ export default function VideoEmbed({ url, caption }: VideoEmbedProps) {
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (parsed?.platform !== "youtube" || !parsed.videoId) return;
+    fetch(`/api/youtube-stats?videoId=${parsed.videoId}`)
+      .then(r => r.ok ? r.json() : null)
+      .then((d: YtStats | null) => { if (d) setStats(d) })
+      .catch(() => {});
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [url]);
 
   if (!parsed) {
     return (
@@ -74,9 +100,18 @@ export default function VideoEmbed({ url, caption }: VideoEmbedProps) {
           <div className="absolute inset-0 bg-ll-border animate-pulse" />
         )}
       </div>
-      {caption && (
-        <figcaption className="px-5 py-3 text-xs italic text-ll-text-light text-center">
-          {caption}
+      {(caption || stats) && (
+        <figcaption className="px-5 py-3 flex flex-col gap-0.5">
+          {caption && (
+            <span className="text-xs italic text-ll-text-light text-center block">{caption}</span>
+          )}
+          {stats && (
+            <span className="text-[11px] text-ll-text-light/60 text-center block">
+              ▶ {formatCount(stats.viewCount)} views
+              {parseInt(stats.likeCount, 10) > 0 && ` · ${formatCount(stats.likeCount)} likes`}
+              {stats.publishedAt && ` · ${new Date(stats.publishedAt).getFullYear()}`}
+            </span>
+          )}
         </figcaption>
       )}
     </figure>

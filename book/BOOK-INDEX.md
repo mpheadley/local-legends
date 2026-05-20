@@ -6,6 +6,19 @@
 
 ---
 
+## In Praise Of — Advance Endorsements
+
+> "Lyrical and informative and just right."
+> — Lisa Davis, Editor, Foothills Magazine (May 2026, on the Aquality Farms piece)
+
+**Placement:** Front matter of the book / CLT book / memoir. Also usable on Plainspoken Blueprint as a writing credential.
+
+**Status:** Informal (text message). **Ask Lisa for formal permission to quote publicly.** Raise at next meeting — one sentence: "Can I use that quote on the site and in the book?"
+
+**Also pursue:** Ask Lisa for a formal written blurb when manuscript is far enough along. She's already said yes to your writing twice. She'll do it.
+
+---
+
 ## How to use this
 
 - **Start every book session by loading `BOOK.md` + this file.** That is the minimum context for working on structure.
