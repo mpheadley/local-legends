@@ -6,6 +6,16 @@ Newest first.
 
 ---
 
+## 2026-05-20 — Sierra Smith-Roston: research doc completed
+
+Corrected the husband identity in both research docs after Matt clarified: **Jay** is Sierra's husband (former detective; legal name Jamel Roston, confirmed via LinkedIn as Anniston Police Officer). **Jay Jenkins** is the former Ward 1 councilman — a separate person who was both a council colleague to Sierra and a flower customer of Heather's. Earlier seed and handoff docs conflated the two; now corrected throughout.
+
+Ran deep web research (Claude Opus + WebSearch) against the corrected prompt. Compiled `content/research/ciara-smith-roston.md` with: verified biography (born Feb 1999; grandmother Gertrude Nettles raised her; mother Christina Wolff; Anniston High 2017; Spelman; JSU MPA in Emergency Management Dec 2023; Forbes 30 Under 30 2018; Hank Johnson intern at 19; CBCI nominee 2019); full political timeline (Ward 3 runoff vs Ben Little Oct 2020, sworn in Nov 2 2020 at age 21, immediately Vice Mayor; mayor May 6 2025 after Draper's May 1 resignation; 57.31% August 2025 win); the **17th Street Baptist Church formation** (SCLC meetings from age 5 — same church where Rev. Nimrod Q. Reynolds was beaten the day of the 16th Street bombing); the **Ben Little subplot** (beat him twice — 2020 runoff and 2025 mayoral); the **Joseph Giri / Monsanto exchange** at her swearing-in; concrete record (RMC/Orlando Health, police/fire raises, Barber Terrace, CDBG); 15+ verified quotes from Smith, her mother, Gloria Floyd, Debra Foster; 14 cited sources.
+
+Updated through-line: not "outsider conquers institution" but "the child raised in the church where they planned the marches has come back to run the city the marches were against." Six open questions flagged for the interview. Outreach blocker: still need Jay Jenkins to make the introduction.
+
+---
+
 ## 2026-05-10 — Byline and JSON-LD author URL swept to Plainspoken Blueprint
 
 Finished the headleyweb.com → plainspokenblueprint.com reference sweep. Prior session caught Footer, ClosingSection, and profile CTAs. This session caught the remaining four files.
