@@ -6,6 +6,24 @@ Newest first.
 
 ---
 
+## 2026-05-21 — Merge Claude mobile branches
+
+Merged two Claude mobile branches (`claude/curate-reading-list-bw7oP` and `claude/update-ladoga-hero-image-A6y1i`) into main. The `curate-reading-list` branch added 4 files: BRAND-ARCHITECTURE.md, SOCIAL-RESPONSES.md, an expanded SOCIAL-SHARE-PLAN.md, and `content/research/michelle-hornsby-red-bird-willow.md`. The ladoga branch was already fully on main — nothing to merge. Pushed all 13 pending local commits and deleted both remote Claude branches.
+
+---
+
+## 2026-05-20 — Ciara Smith-Roston: ghost draft + Anniston Star URLs
+
+After the research doc was complete, ran Ghost Mode for the SL profile and produced `content/drafts/ciara-smith-roston-draft.mdx` (~1,650 words). Title: "She Started at Sixteen." Frontmatter set `published: false`, `aiWritten: true`. Two `{/* [OPENING — Matt writes] */}` and `{/* [CLOSING — Matt writes] */}` blocks reserve the farm-visit scene and the grief-inventory return as Matt's vulnerable passages. Body sections: 17th Street Baptist formation, City Hall at sixteen, Ward 3 race, Jay Jenkins resignation room, Draper resigns + Joseph Giri exchange, August victory + mother's "mayor and president" line, the record so far. Three PullQuote accents.
+
+Pulled the Aug 26, 2025 Anniston Star victory piece by Bill Wilson (full quotes now in research doc), then hit rate limits on subsequent fetches. Saved nine Star article URLs into the research doc under "Articles to Pull" with file-naming convention. Discrepancies surfaced: Star says age 28 in Aug 2025 (vs JSU's 26 in May); Star says mayor "May 5" (vs JSU's May 6). Both flagged for interview verification.
+
+Spelling note: name is **Ciara** (not Cierra/Sierra). The Jay Jenkins profile has "Cierra Smith" in the photo caption — needs a typo fix on next revision pass.
+
+Strategy decision (coaching): when reaching out to Ciara, interview first, do not send the draft beforehand. Drafts sent before interviews transfer editorial control. Optional fact-check on specific items after the draft is revised.
+
+---
+
 ## 2026-05-20 — Sierra Smith-Roston: research doc completed
 
 Corrected the husband identity in both research docs after Matt clarified: **Jay** is Sierra's husband (former detective; legal name Jamel Roston, confirmed via LinkedIn as Anniston Police Officer). **Jay Jenkins** is the former Ward 1 councilman — a separate person who was both a council colleague to Sierra and a flower customer of Heather's. Earlier seed and handoff docs conflated the two; now corrected throughout.
