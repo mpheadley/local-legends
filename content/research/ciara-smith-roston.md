@@ -268,6 +268,86 @@ What does she carry from each of those rooms?
 
 ---
 
+## Anniston Star — Articles to Pull (Matt has subscription access)
+
+Bill Wilson is the Star's primary Anniston City Hall reporter — he wrote the August 2025 victory piece, the Jenkins resignation piece, and likely most of the council coverage. Build the file by pulling these in order:
+
+### Confirmed Star articles
+1. **Bill Wilson — August 26, 2025 — "Ciara Smith is the first Black person, youngest elected to be Anniston's mayor"** ✓ already extracted
+   <https://www.annistonstar.com/news/anniston/ciara-smith-is-the-first-black-person-youngest-elected-to-be-anniston-s-mayor/article_9852094f-01e9-49d9-9c31-04b7d23715d4.html>
+
+2. **November 2020 — "Anniston mayor Draper defeats Reddick to win second term; Smith ousts Little in Ward 3"** — Star's coverage of her first race
+   <https://www.annistonstar.com/news/election/anniston-mayor-draper-defeats-reddick-to-win-second-term-smith-ousts-little-in-ward-3/article_36923840-0847-11eb-8f72-937e8f49528a.html>
+
+3. **"Ciara Smith announces mayoral candidacy"** — her candidacy announcement (rate-limited; date inferred from Calhoun Journal coverage)
+   <https://www.annistonstar.com/news/election/ciara-smith-announces-mayoral-candidacy/article_cda5dbfc-a6da-11ef-b25a-ff8a9029a771.html>
+
+4. **"New era begins in Anniston as mayor, council members take oath of office"** — the swearing-in coverage (likely the same May 6, 2025 meeting where Joseph Giri raised Monsanto)
+   <https://www.annistonstar.com/news/new-era-begins-in-anniston-as-mayor-council-members-take-oath-of-office/article_bb6e07b2-70d8-4af2-affb-7e858090afcb.html>
+
+5. **"Sood, Smith attend grants administration summit"** — governance detail
+   <https://www.annistonstar.com/the_daily_home/dh_news/sood-smith-attend-grants-administration-summit/article_bc16c436-561d-11ef-9ba3-57f88e0015d2.html>
+
+6. **"Anniston mayor addresses students at Talladega College"** — speech material, could be quotable
+   <https://www.annistonstar.com/the_daily_home/dh_news/anniston-mayor-addresses-students-at-talladega-college/article_2edab463-4be5-4e48-bdee-5296e37d6ba2.html>
+
+7. **"Candidates step up as qualifying for city elections begins"** — 2020 election context
+   <https://www.annistonstar.com/news/local/candidates-step-up-as-qualifying-for-city-elections-begins/article_cf880ec2-c0a2-11ea-af82-bb724dd92482.html>
+
+8. **Photo gallery — Candidate forum 2025** (Calhoun County Chamber & Visitors Center)
+   <https://www.annistonstar.com/slideshows/photo-gallery-candidate-forum-thursday-night-organized-by-the-calhoun-county-area-chamber-visitors-center/collection_3189d16e-bd7f-4076-a62e-fede05b8d8e3.html>
+
+9. **Photo gallery — New Anniston city council and city manager**
+   <https://www.annistonstar.com/slideshows/photo-gallery-meet-the-new-anniston-city-council-and-city-manager/collection_6946619c-a399-4a07-83a0-f4643e2a09fd.html>
+
+10. **Already on file:** Jay Jenkins resignation Oct 16, 2024 (Bill Wilson) — `content/research/sources/jay-jenkins-resignation-annistonstar-2024.pdf`
+11. **Already on file:** Jay Jenkins ethics guilty plea March 2021 — <https://www.annistonstar.com/news/anniston/anniston-councilman-jay-jenkins-enters-guilty-plea-in-ethics-case/article_59db52c2-9655-11eb-847f-9bee438b3a9c.html>
+
+### Star searches still to run (Matt — keywords for the Star's site search)
+- "Freedom Riders" + Smith — for her May 2021 MC role at the 60th anniversary
+- "Jack Draper resignation" — May 2025 Star coverage of Draper stepping down
+- "Joseph Giri" — Monsanto / PCB activist who spoke at the May 6 inauguration meeting
+- "Regional Medical Center" + Smith — April 2026 Orlando Health acquisition Star coverage
+- "Gloria Floyd" — context on the woman who administered the oath
+- "Debra Foster" + Anniston council — Foster was the first Black woman elected to Anniston council (1990); the Star will have archive material on her
+- "Phillip Tutor" — the Star's columnist; he's covered Anniston politics for years and almost certainly has multiple Smith columns
+
+### File-naming convention when saving
+Per `southern-legends/CLAUDE.md` filing rules:
+- PDFs → `content/research/sources/ciara-smith-roston-annistonstar-[topic]-[year].pdf`
+  - Example: `ciara-smith-roston-annistonstar-victory-2025.pdf`
+  - Example: `ciara-smith-roston-annistonstar-ward3-2020.pdf`
+
+---
+
+## Verified Quotes from the Aug 26, 2025 Victory Speech (Bill Wilson / Anniston Star)
+
+The full block of Smith's election night remarks at the Anniston City Meeting Center:
+
+> "Before announcing, I just want to say something, because I think it's so important. I started this when I was 20 years old. I don't think at 20 that I knew at 28 that I would be in this position, and I had faced a lot of trials and a lot of tribulations, but I can't explain how it feels to be in this position, not because I know how much I've had to sacrifice, but I know Anniston will be better because of it."
+
+> "I hope, through all this, that everybody's reminded that there's nothing that can stop you. If God is for you, nobody, nobody can be against you."
+
+> "I know that our community will grow, and I hope that my leadership will show people that there are people who truly care and who desire to be in a place of leadership, because we truly want better for our people. And that's ultimately my goal."
+
+**Christina Wolff (mother), full quote:**
+> "I never doubted her. She's been amazing since she was a child. I always said she was going to be the mayor of Anniston and the president of the United States. Ciara has never had anything handed to her. She's worked for everything she's ever had. She wanted this. Anniston is where she's been born and raised her entire life, and she's built for it."
+
+**Debra Foster (former councilwoman, first Black woman elected to Anniston council in 1990), full quote:**
+> "Well, one thing I can say about her is that, number one, she loves this city. Her heart is in this city. And it has been a goal of hers, from a small child, to be mayor of this city. And so she left, got her education, came back and she wanted to make a difference in this community. So her heart is here. She's eager to do something different. She's looking forward to moving this city forward in a way that we haven't seen in many, many years."
+
+---
+
+## Discrepancies to Resolve
+
+- **Age:** Bill Wilson's Star piece says she was **28** on August 26, 2025; JSU and Calhoun Journal both say **26** at appointment in May 2025. The bio brief Matt assembled at the top of this thread said born **February 1999** (which would make her 26 in Aug 2025). Smith's own words in the victory speech: "I started this when I was 20... I knew at 28 that I would be in this position." If she was 20 when she ran for Ward 3 in late 2020, she'd have been born late 1999/early 2000, making her 25–26 in Aug 2025, not 28. Most likely: she misspoke, or the Star transcribed. **Treat the bio brief's 1999 birth year as primary until verified in interview.**
+
+- **Mayor appointment date:** Star says **May 5** ("first became mayor on May 5"); JSU and Calhoun Journal say **May 6**. Possibly: May 5 was the council vote, May 6 was the public swearing-in.
+
+- **Debra Foster's history:** She was the first Black woman elected to Anniston city council, 1990. Worth its own profile thread. The line of succession to Smith goes through Foster.
+
+---
+
 ## Sources
 
 - [Jax State Alumna Ciara Smith Appointed as Anniston's First African American and Youngest Mayor — JSU News, June 2025](https://www.jsu.edu/news/articles/2025/06/jax-state-alumna-ciara-smith-appointed-as-annistons-first-african-american-and-youngest-mayor.html)

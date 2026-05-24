@@ -412,3 +412,40 @@ Death of a mother written by family members. Strong model for reporting grief wi
 
 **["Old Parents"](https://bittersoutherner.com/old-parents)**
 Coming-of-age embarrassment rendered through concrete detail. The Reebok Pumps image: *"...my backward hat and last year's Reebok Pumps, tromping like a buffalo through the clay."* The embarrassment is in the Pumps. Not in a sentence explaining he was embarrassed.
+
+---
+
+## Pastoral Memoir & Homiletics Voices
+
+*Added 2026-05-22 — comp titles for the memoir/sermon work. These are the writers Matt is in conversation with, whether they know it or not. Read for disposition, not imitation.*
+
+**Eugene Peterson — *The Pastor: A Memoir* (2011)**
+29 years in one church in Bel Air, Maryland. Peterson writes about the slow, unglamorous work of ministry against the tide of consumerism and the megachurch model. The antidote to platform-chasing. Disposition: pastoral attention is a form of resistance. Every SL profile is downstream of this instinct — paying attention to one person, in one place, for long enough that something real appears.
+
+**Will Willimon — *Accidental Preacher* (2019)**
+Bishop, theologian, former Duke Divinity dean. Candid memoir with signature wit. Grew up in the segregated South, served rural congregations and university students. Model for how a preacher's biography becomes the sermon — not as illustration but as the primary material. Comparable to what Matt is doing with the Jacksonville FUMC sermon.
+
+**Reinhold Niebuhr — *Leaves from the Notebook of a Tamed Cynic* (1929)**
+Raw journal notes from Niebuhr's early years as a pastor in urban Detroit, 1915–1928. The doubts, the boredom, the small failures. An honest document of what ministry actually feels like from the inside, written before Niebuhr was famous and had reason to protect his image. The gold standard for pastoral honesty.
+
+**Austin Carty — *Some of the Words Are Theirs: The Art of Writing and Living a Sermon***
+The most direct comp for Matt's sermon work. Carty argues that sermon writing is an exercise in self-discovery — the preacher must make sense of their own past to minister to others. Positioned alongside Anne Lamott's *Bird by Bird* and Annie Dillard's *The Writing Life*. Read this before the Jacksonville sermon. The overlap with the PB book's methodology is not incidental.
+
+**Kate Bowler — *Everything Happens for a Reason (And Other Lies I've Loved)* (2018) and *No Cure for Being Human* (2021)**
+Bowler: Duke Divinity professor, historian of the prosperity gospel, diagnosed with Stage IV cancer at 35. Writes about suffering without forced resolution, about the toxicity of "everything happens for a reason," with dark humor and precision. The voice model for how to hold faith and grief simultaneously without cheap comfort or cynicism. *No Cure for Being Human* is the closer comp to the PB memoir — searching for a way forward when life is indefinitely on hold.
+
+**Barbara Brown Taylor — *Leaving Church: A Memoir of Faith* (2006) and *Learning to Walk in the Dark* (2014)**
+Episcopal priest who left the clergy and found God outside the church building. *Leaving Church* is the vocational crisis memoir — the collar becoming a barrier to being human. *Learning to Walk in the Dark* reclaims suffering, mystery, and the unknown as spiritual terrain. Lyrical prose, profound honesty about doubt. The literary standard for what a pastor-turned-writer sounds like when they stop protecting the institution.
+
+---
+
+### Blurb / Endorsement Strategy
+
+When the PB book or memoir is ready for advance readers, these are the realistic targets:
+
+- **Kate Bowler** (Duke Divinity) — faith + suffering + dark humor lane; her audience overlaps directly
+- **Barbara Brown Taylor** — pastoral memoir lane; accessible, responds to genuine letters
+- **Will Willimon** — Methodist lane; preacher-to-preacher ask; the Anniston/Alabama connection is an angle
+- **Austin Carty** — homiletics + memoir lane; smaller platform, more likely to respond
+
+Approach: genuine reader first. Read the book, quote a specific line in the ask, explain why the overlap matters. Do not cold-pitch without reading. The ask should sound like a letter, not a form.

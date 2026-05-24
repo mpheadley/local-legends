@@ -28,3 +28,29 @@ Thank you for your prayers, Tammy. I was in the psychiatric center at UAB for de
 **What Matt remembered vs. what the texts show:** Matt recalled telling Tammy he'd been diagnosed bipolar and was manic when he resigned. These screenshots don't show that exchange — either it happened in a later text not captured here, or memory has compressed events. Worth checking if there are more texts.
 
 **Do not publish** — involves Tammy directly, complicated relationship still in process.
+
+---
+
+## Additional scene — August 2025 baptism flowers (added 2026-05-22)
+
+**Per Matt's note 2026-05-22:** Tammy was the **last person** to buy flowers from the Headley Flower Farm before it was sold. Approximately August 2025. The order was for her **first granddaughter's baptism**.
+
+**Why this matters:**
+- The senior pastor who bait-and-switched the hire, denied the raise, handled the resignation badly, and sent the termination letter is the one who shows up at the end of the farm to buy flowers for a sacrament for her own grandchild.
+- It is the quietest possible reversal of the arc.
+- It is the *last* sale before the farm went under — a closing of the loop nobody asked for.
+- Timeline: ~August 2025 (farm sale closing September–October, hospitalization October–November 2025, the texts above happened in November after the hospital).
+
+**Placement in the memoir:** End of Tammy's arc. Either:
+- In the Anniston First / resignation chapter as the final beat after the resignation aftermath
+- Or as a quiet coda in the farm-sale chapter — the last flowers, the unexpected buyer
+- Or both, depending on chapter structure
+
+**Editorial caution:**
+- Heather may have additional context — Tammy ordered through Heather directly, not Matt.
+- Verify the baptism date and the granddaughter's name (do not publish the name).
+- Tammy's grandchild does not need to be identifiable.
+
+**Do not publish without:** Matt deciding which chapter holds it, Heather confirming the order details, Tammy's awareness that it appears in the book (if she is named).
+
+**Status:** Memoir material. NOT for the Plainspoken Blueprint book — too emotionally specific, pulls focus from messaging-clarity into memoir territory.

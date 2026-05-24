@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southern Legends — Vol. 1, Fall 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Rock+Salt&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+
+/* ─── PRINT SETUP ─── */
+@page { size: 5.5in 8.5in; margin: 0; }
+
+/* ─── DESIGN TOKENS ─── */
+:root {
+  --primary:    #9A3412;
+  --accent:     #CA8A04;
+  --dark:       #1C1917;
+  --mid:        #292524;
+  --light:      #FAFAF7;
+  --warm:       #F0EDE6;
+  --text:       #3F3B36;
+  --text-light: #6B6560;
+  --pine:       #3D6B4F;
+  --border:     #D6D0C4;
+  --ff-head:    'Fraunces', Georgia, serif;
+  --ff-body:    'Source Sans 3', system-ui, sans-serif;
+  --ff-rock:    'Rock Salt', cursive;
+}
+
+/* ─── RESET ─── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── SCREEN VIEW ─── */
+body {
+  background: #C8C2B6;
+  font-family: var(--ff-body);
+  color: var(--text);
+}
+@media screen {
+  body { display: flex; flex-direction: column; align-items: center; padding: 2rem 1rem; gap: 6px; }
+}
+
+/* ─── PAGE BASE ─── */
+.page {
+  width: 5.5in;
+  height: 8.5in;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+  position: relative;
+  background: var(--light);
+}
+@media screen {
+  .page { box-shadow: 0 2px 18px rgba(0,0,0,0.28); }
+}
+
+/* ─── PAPER GRAIN TEXTURE (light pages) ─── */
+.page-light::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23grain)' opacity='1'/%3E%3C/svg%3E");
+}
+
+/* ─── TOPO TEXTURE (dark pages) ─── */
+.topo-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('../public/topo-7.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ─── DARK OPENER BASE ─── */
+.page-dark {
+  background: linear-gradient(135deg, #1C1917 0%, #2A4A36 50%, #3D1A0A 100%);
+  color: var(--light);
+}
+
+/* ─── PAGE INNER ─── */
+.page-inner {
+  position: relative;
+  z-index: 5;
+  padding: 0.45in 0.5in 0.6in;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── RUNNING HEADER ─── */
+.running-header {
+  border-top: 1.5pt solid var(--accent);
+  padding-top: 0.12in;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.2in;
+  font-family: var(--ff-body);
+  font-size: 7pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.running-header.light { color: rgba(250,250,247,0.65); border-color: var(--accent); }
+
+/* ─── BODY TEXT ─── */
+.body-text {
+  font-family: var(--ff-body);
+  font-size: 9.75pt;
+  line-height: 1.47;
+  text-align: justify;
+  hyphens: auto;
+  color: var(--text);
+}
+.body-text p + p { margin-top: 0.5em; }
+.body-text.light { color: rgba(250,250,247,0.92); }
+
+/* ─── DROP CAP ─── */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--ff-head);
+  font-weight: 700;
+  font-size: 5.5em;
+  line-height: 0.78;
+  color: var(--primary);
+  border-bottom: 2.5pt solid var(--accent);
+  margin-right: 0.08em;
+  margin-top: 0.05em;
+  padding-bottom: 0.02em;
+}
+
+/* ─── PULL QUOTE ─── */
+.pull-quote {
+  font-family: var(--ff-rock);
+  font-size: 9pt;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--accent);
+  border-top: 1.5pt solid var(--accent);
+  border-bottom: 1.5pt solid var(--accent);
+  padding: 0.15in 0.1in;
+  margin: 0.2in 0;
+}
+.pull-quote.light { color: var(--accent); }
+
+/* ─── SECTION NUMBER ─── */
+.section-num {
+  font-family: var(--ff-rock);
+  font-size: 8pt;
+  color: var(--accent);
+  margin-bottom: 0.06in;
+  display: block;
+}
+.section-title {
+  font-family: var(--ff-body);
+  font-size: 9.5pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.1in;
+}
+.section-title.light { color: rgba(250,250,247,0.85); }
+
+/* ─── INSET IMAGE ─── */
+.inset-right {
+  float: right;
+  width: 1.75in;
+  margin: 0 0 0.12in 0.16in;
+}
+.inset-right img { width: 100%; display: block; }
+.inset-right .caption,
+.img-caption {
+  font-family: var(--ff-body);
+  font-size: 7pt;
+  color: var(--text-light);
+  line-height: 1.3;
+  margin-top: 0.05in;
+  font-style: italic;
+}
+.inset-right.light .caption { color: rgba(250,250,247,0.55); }
+
+/* ─── THREE DOTS CLOSE ─── */
+.three-dots {
+  text-align: center;
+  color: var(--accent);
+  font-size: 12pt;
+  margin: 0.15in 0 0.08in;
+  letter-spacing: 0.3em;
+}
+
+/* ─── SOURCE NOTE ─── */
+.source-note {
+  font-family: var(--ff-body);
+  font-size: 7.5pt;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.06in;
+}
+.source-note.light { color: rgba(250,250,247,0.5); }
+
+/* ─── PAGE NUMBER ─── */
+.page-number {
+  position: absolute;
+  bottom: 0.22in;
+  font-family: var(--ff-body);
+  font-size: 7.5pt;
+  color: var(--text-light);
+}
+.page-number.left  { left: 0.5in; }
+.page-number.right { right: 0.5in; }
+.page-number.light { color: rgba(250,250,247,0.5); }
+
+/* ─── GOLD RULE ─── */
+.gold-rule { border: none; border-top: 1pt solid var(--accent); margin: 0.12in 0; }
+
+/* ─── CATEGORY PILL ─── */
+.category-pill {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 7pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 0.75pt solid var(--accent);
+  padding: 2pt 6pt;
+  margin-bottom: 0.12in;
+}
+
+/* ─── PROFILE OPENER ─── */
+.profile-photo-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.dark-overlay-bottom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(28,25,23,0.95) 0%, rgba(28,25,23,0.55) 45%, rgba(28,25,23,0.1) 100%);
+  z-index: 1;
+}
+.opener-content {
+  position: absolute;
+  bottom: 0.55in;
+  left: 0.5in;
+  right: 0.5in;
+  z-index: 5;
+}
+.opener-title {
+  font-family: var(--ff-head);
+  font-size: 36pt;
+  font-weight: 300;
+  color: var(--light);
+  line-height: 1.05;
+  margin-bottom: 0.1in;
+}
+.opener-subtitle {
+  font-family: var(--ff-body);
+  font-size: 9.5pt;
+  color: rgba(250,250,247,0.82);
+  line-height: 1.4;
+  margin-bottom: 0.12in;
+  font-style: italic;
+}
+.opener-location {
+  font-family: var(--ff-body);
+  font-size: 8pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(202,138,4,0.9);
+}
+.opener-url {
+  position: absolute;
+  top: 0.22in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--ff-rock);
+  font-size: 6.5pt;
+  color: var(--accent);
+  z-index: 5;
+}
+
+/* ─── FULL BLEED PHOTO PAGE ─── */
+.full-bleed-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.full-bleed-caption {
+  position: absolute;
+  bottom: 0.28in;
+  left: 0.5in;
+  right: 0.5in;
+  font-family: var(--ff-body);
+  font-size: 8pt;
+  color: rgba(250,250,247,0.75);
+  font-style: italic;
+  z-index: 5;
+  text-align: center;
+}
+
+/* ─── SCAFFOLD PROMPT ─── */
+.scaffold {
+  background: rgba(202,138,4,0.08);
+  border-left: 2pt solid var(--accent);
+  padding: 0.1in 0.12in;
+  margin: 0.1in 0;
+  font-family: var(--ff-body);
+  font-size: 8.5pt;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.5;
+}
+.scaffold strong { color: var(--primary); font-style: normal; }
+.scaffold.dark-mode { background: rgba(202,138,4,0.08); border-left-color: var(--accent); color: rgba(250,250,247,0.65); }
+
+/* ─── TOC ─── */
+.toc-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.065in 0;
+  border-bottom: 0.5pt dotted var(--border);
+  font-family: var(--ff-body);
+  font-size: 9pt;
+}
+.toc-label { color: var(--text); font-weight: 500; }
+.toc-sub { font-size: 8pt; color: var(--text-light); display: block; font-weight: 400; }
+.toc-page { color: var(--accent); font-weight: 600; font-size: 9pt; flex-shrink: 0; margin-left: 0.1in; }
+.toc-section {
+  font-family: var(--ff-body);
+  font-size: 7.5pt;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0.12in 0 0.06in;
+  font-weight: 700;
+}
+
+/* ─── POEM PLACEHOLDER ─── */
+.poem-box {
+  border: 1pt solid var(--accent);
+  padding: 0.2in;
+  margin: 0.15in 0;
+  min-height: 1.5in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.poem-box-label {
+  font-family: var(--ff-rock);
+  font-size: 8pt;
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+/* ─── AD PAGES ─── */
+.ad-page-dark { background: var(--dark); color: var(--light); }
+.ad-page-warm { background: var(--warm); color: var(--text); }
+.ad-brand {
+  font-family: var(--ff-head);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.ad-subhead {
+  font-family: var(--ff-body);
+  font-size: 13pt;
+  letter-spacing: 0.03em;
+}
+.ad-body {
+  font-family: var(--ff-body);
+  font-size: 10pt;
+  line-height: 1.55;
+  max-width: 4.2in;
+}
+.ad-url {
+  font-family: var(--ff-body);
+  font-size: 11pt;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.ad-fine {
+  font-family: var(--ff-body);
+  font-size: 7pt;
+  color: var(--text-light);
+  margin-top: 0.08in;
+}
+.ad-gratitude {
+  font-family: var(--ff-body);
+  font-size: 7pt;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.12in;
+}
+
+/* ─── CONTRIBUTORS ─── */
+.contributor-block { display: flex; gap: 0.15in; margin-bottom: 0.2in; }
+.contributor-photo { width: 1in; height: 1in; object-fit: cover; flex-shrink: 0; }
+.contributor-bio { font-family: var(--ff-body); font-size: 8.5pt; line-height: 1.45; color: var(--text); }
+.contributor-name { font-family: var(--ff-head); font-size: 11pt; font-weight: 600; color: var(--dark); margin-bottom: 0.04in; }
+
+/* ─── BACK MATTER ─── */
+.back-section-head {
+  font-family: var(--ff-head);
+  font-size: 13pt;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.08in;
+}
+.back-body { font-family: var(--ff-body); font-size: 9pt; line-height: 1.5; color: var(--text); margin-bottom: 0.15in; }
+
+/* ─── COVER ─── */
+.cover-top-url {
+  position: absolute;
+  top: 0.28in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--ff-rock);
+  font-size: 6.5pt;
+  color: var(--accent);
+  z-index: 5;
+  letter-spacing: 0.04em;
+}
+.cover-bottom {
+  position: absolute;
+  bottom: 0.4in;
+  left: 0.5in;
+  right: 0.5in;
+  z-index: 5;
+}
+.cover-title {
+  font-family: var(--ff-head);
+  font-size: 50pt;
+  font-weight: 300;
+  color: var(--light);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+.cover-meta {
+  font-family: var(--ff-body);
+  font-size: 8pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(250,250,247,0.75);
+  margin-top: 0.14in;
+}
+
+/* ─── CLT EXCERPT ─── */
+.clt-bg { background: #292524; }
+.clt-eyebrow {
+  font-family: var(--ff-body);
+  font-size: 7.5pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.1in;
+}
+.clt-title {
+  font-family: var(--ff-head);
+  font-size: 26pt;
+  font-weight: 400;
+  color: var(--light);
+  line-height: 1.05;
+  margin-bottom: 0.06in;
+}
+.clt-subtitle {
+  font-family: var(--ff-body);
+  font-size: 9pt;
+  color: rgba(250,250,247,0.7);
+  font-style: italic;
+  line-height: 1.45;
+  margin-bottom: 0.15in;
+}
+.excerpt-close {
+  font-family: var(--ff-body);
+  font-size: 8.5pt;
+  color: rgba(250,250,247,0.55);
+  font-style: italic;
+  margin-top: 0.12in;
+  border-top: 0.5pt solid rgba(202,138,4,0.4);
+  padding-top: 0.08in;
+}
+
+/* ─── VOL 2 TEASERS ─── */
+.vol2-teaser {
+  font-family: var(--ff-body);
+  font-size: 9pt;
+  line-height: 1.45;
+  color: var(--text);
+  padding: 0.07in 0;
+  border-bottom: 0.5pt dotted var(--border);
+}
+.vol2-teaser strong { color: var(--dark); }
+.vol2-tease-sub { font-size: 8pt; color: var(--text-light); }
+
+/* ─── INTERFAITH SPLIT AD ─── */
+.split-half {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.25in 0.1in;
+}
+.split-divider { border: none; border-top: 1pt solid var(--accent); margin: 0; }
+
+/* ─── BLOOM BAR ESSAY OPENER ─── */
+.essay-title-stacked {
+  font-family: var(--ff-head);
+  font-size: 44pt;
+  font-weight: 400;
+  line-height: 1.0;
+  color: var(--dark);
+}
+.essay-byline {
+  font-family: var(--ff-body);
+  font-size: 8pt;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 0.1in;
+}
+
+/* ─── INSET PHOTO (editor's note) ─── */
+.inset-photo-right {
+  float: right;
+  width: 1.8in;
+  margin: 0 0 0.1in 0.15in;
+}
+.inset-photo-right img { width: 100%; display: block; }
+.inset-photo-right .caption { font-size: 7pt; color: var(--text-light); font-style: italic; margin-top: 0.05in; line-height: 1.3; }
+
+/* ─── SECTION BREAK ─── */
+.section-break-inner {
+  position: relative; z-index: 5; height: 100%;
+  display: flex; flex-direction: column; justify-content: center;
+  align-items: flex-start; padding: 0.5in 0.55in;
+}
+.section-break-title {
+  font-family: var(--ff-head); font-size: 54pt; font-weight: 300;
+  color: var(--light); line-height: 0.95; letter-spacing: -0.01em; margin-bottom: 0.16in;
+}
+.section-break-deck {
+  font-family: var(--ff-body); font-size: 10pt; color: rgba(250,250,247,0.7);
+  line-height: 1.5; max-width: 3.8in; font-style: italic;
+}
+
+/* ─── QR / SCAN BOX ─── */
+.scan-box {
+  border: 0.75pt solid var(--accent); padding: 0.08in 0.1in; margin: 0.12in 0;
+  display: flex; gap: 0.1in; align-items: center;
+}
+.scan-label { font-family: var(--ff-body); font-size: 7.5pt; color: var(--text-light); font-style: italic; line-height: 1.4; }
+.qr-img { width: 0.65in; height: 0.65in; flex-shrink: 0; }
+
+/* ─── MERCH ─── */
+.merch-item { display: flex; gap: 0.15in; align-items: flex-start; margin-bottom: 0.18in; padding-bottom: 0.14in; border-bottom: 0.5pt dotted var(--border); }
+.merch-img { width: 1.1in; flex-shrink: 0; border: 0.5pt solid var(--border); }
+.merch-img img { width: 100%; display: block; }
+.merch-name { font-family: var(--ff-head); font-size: 11pt; font-weight: 600; color: var(--dark); margin-bottom: 0.04in; }
+.merch-detail { font-family: var(--ff-body); font-size: 8.5pt; line-height: 1.45; color: var(--text); }
+.merch-price { color: var(--accent); font-weight: 600; }
+
+/* ─── PUBLISHER ─── */
+.publisher-photo { width: 1.25in; height: 1.25in; object-fit: cover; float: right; margin: 0 0 0.12in 0.16in; }
+
+/* ─── VENTURE GRID ─── */
+.venture-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1in; margin-top: 0.12in; }
+.venture-tile { border: 0.75pt solid var(--border); padding: 0.08in 0.1in; }
+.venture-name { font-family: var(--ff-head); font-size: 9pt; font-weight: 600; color: var(--dark); }
+.venture-url { font-family: var(--ff-body); font-size: 7.5pt; color: var(--accent); }
+.venture-desc { font-family: var(--ff-body); font-size: 7pt; color: var(--text-light); margin-top: 2pt; line-height: 1.3; }
+
+</style>
+</head>
+<body>
+
+<!-- ═══ P1 — COVER ═══ -->
+<div class="page" id="p1">
+  <div class="profile-photo-bg" style="background-image: url('photos-review/daughter-john-deere-cab.jpg');"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,25,23,0.95) 0%, rgba(28,25,23,0.6) 40%, rgba(28,25,23,0.08) 100%);z-index:1;"></div>
+  <div class="cover-top-url">southernlegends.us</div>
+  <div class="cover-bottom">
+    <div class="cover-title">Southern<br>Legends</div>
+    <hr class="gold-rule" style="margin:0.16in 0 0.12in;opacity:0.7;">
+    <div class="cover-meta">Vol. 1 &nbsp;·&nbsp; Fall 2026 &nbsp;·&nbsp; Northeast Alabama</div>
+  </div>
+</div>
+
+<!-- ═══ P2 — FROM THE PUBLISHER ═══ -->
+<div class="page page-light" id="p2" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>From the Publisher</span><span>2</span></div>
+    <img src="photos-review/matt-portrait-muddy-blue-eyes.jpg" alt="Matt Headley" class="publisher-photo">
+    <div style="font-family:var(--ff-head);font-size:14pt;font-weight:500;color:var(--dark);margin-bottom:0.06in;">From the Publisher</div>
+    <hr class="gold-rule">
+    <div class="body-text" style="margin-top:0.1in;">
+      <p>I lost a farm. I was hospitalized. We rebuilt in my in-laws' yard with a converted horse trailer that used to be a hat bar in Florida. Southern Legends is what came out of the other side of that — a magazine about people in Northeast Alabama who are still building something, made by someone who knows what it costs not to.</p>
+      <p style="margin-top:0.5em;">I am also the founder and creative director of The Aisle, a curated bridal expo at the Anniston Museums and Gardens on October 18. The Bloom Bar — that horse trailer — is the centerpiece.</p>
+      <p style="margin-top:0.5em;">I build websites and software for local businesses. I direct the Anniston Farmers Market. I am a pastor who doesn't work at a church. All of this is connected. I'm still figuring out how.</p>
+      <p style="margin-top:0.5em;">If something in these pages sent you looking for more, here's where to find it.</p>
+    </div>
+    <div class="venture-grid" style="margin-top:0.16in;">
+      <div class="venture-tile">
+        <div class="venture-name">Southern Legends</div>
+        <div class="venture-url">southernlegends.us</div>
+        <div class="venture-desc">Literary journalism from Northeast Alabama. This magazine.</div>
+      </div>
+      <div class="venture-tile">
+        <div class="venture-name">The Aisle</div>
+        <div class="venture-url">theaisle.app</div>
+        <div class="venture-desc">Wedding vendors + bridal expo. Oct 18, 2026.</div>
+      </div>
+      <div class="venture-tile">
+        <div class="venture-name">Plainspoken Blueprint</div>
+        <div class="venture-url">plainspokenblueprint.com</div>
+        <div class="venture-desc">Brand strategy for people who mean what they say.</div>
+      </div>
+      <div class="venture-tile">
+        <div class="venture-name">Headley Web &amp; Software</div>
+        <div class="venture-url">matthewheadley.com</div>
+        <div class="venture-desc">Websites + software for local businesses.</div>
+      </div>
+    </div>
+    <div style="margin-top:0.14in;font-family:var(--ff-body);font-size:8pt;color:var(--text-light);">
+      Matt Headley &nbsp;·&nbsp; Anniston, Alabama &nbsp;·&nbsp; Anniston Farmers Market Director
+    </div>
+  </div>
+  <span class="page-number right">2</span>
+</div>
+
+<!-- ═══ P3 — TABLE OF CONTENTS p.1 ═══ -->
+<div class="page page-light" id="p3" style="background:var(--warm);">
+  <div class="page-inner">
+    <div style="font-family:var(--ff-head);font-size:11pt;font-weight:500;color:var(--dark);margin-bottom:0.06in;">In This Edition</div>
+    <hr class="gold-rule">
+    <div class="toc-section">Opening</div>
+    <div class="toc-entry"><span class="toc-label">From the Publisher</span><span class="toc-page">2</span></div>
+    <div class="toc-entry"><span class="toc-label">Editor's Note <span class="toc-sub">Why This Exists</span></span><span class="toc-page">5</span></div>
+    <div class="toc-entry"><span class="toc-label">The Same Domain <span class="toc-sub">Essay</span></span><span class="toc-page">7</span></div>
+    <div class="toc-section">Profiles</div>
+    <div class="toc-entry"><span class="toc-label">The Burning Bus <span class="toc-sub">Freedom Riders National Monument · Anniston</span></span><span class="toc-page">8</span></div>
+    <div class="toc-entry"><span class="toc-label">The View from the Boat <span class="toc-sub">Jean Ellison · Mom-To-Go</span></span><span class="toc-page">13</span></div>
+    <div class="toc-entry"><span class="toc-label">A New Way of Growing <span class="toc-sub">Samuel &amp; John Mark Sawyer · Aquality Farms</span></span><span class="toc-page">18</span></div>
+    <div class="toc-entry"><span class="toc-label">1030 Gurnee <span class="toc-sub">Lewis Downing · Downing and Sons</span></span><span class="toc-page">23</span></div>
+    <div class="toc-entry"><span class="toc-label">When the Churches Stopped Competing <span class="toc-sub">Interfaith Ministries of Calhoun County</span></span><span class="toc-page">29</span></div>
+  </div>
+  <span class="page-number right">3</span>
+</div>
+
+<!-- ═══ P4 — TABLE OF CONTENTS p.2 ═══ -->
+<div class="page page-light" id="p4" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="toc-section">Essays</div>
+    <div class="toc-entry"><span class="toc-label">Attempt 73</span><span class="toc-page">35</span></div>
+    <div class="toc-entry"><span class="toc-label">The Hospital</span><span class="toc-page">36</span></div>
+    <div class="toc-entry"><span class="toc-label">No Shade</span><span class="toc-page">41</span></div>
+    <div class="toc-entry"><span class="toc-label">The Bloom Bar <span class="toc-sub">Essay</span></span><span class="toc-page">47</span></div>
+    <div class="toc-entry"><span class="toc-label">Chief Ladiga, 1832 <span class="toc-sub">Excerpt</span></span><span class="toc-page">52</span></div>
+    <div class="toc-section">Advertisements</div>
+    <div class="toc-entry"><span class="toc-label">Foothills Magazine</span><span class="toc-page">55</span></div>
+    <div class="toc-entry"><span class="toc-label">The Anniston Star</span><span class="toc-page">56</span></div>
+    <div class="toc-entry"><span class="toc-label">Noble Bank</span><span class="toc-page">57</span></div>
+    <div class="toc-entry"><span class="toc-label">UWECA &amp; Imagination Library</span><span class="toc-page">58</span></div>
+    <div class="toc-section">Back Matter</div>
+    <div class="toc-entry"><span class="toc-label">The Green Tomato</span><span class="toc-page">60</span></div>
+    <div class="toc-entry"><span class="toc-label">The Pulpit Truth</span><span class="toc-page">61</span></div>
+    <div class="toc-entry"><span class="toc-label">Merch</span><span class="toc-page">62</span></div>
+    <div class="toc-entry"><span class="toc-label">Support This Work</span><span class="toc-page">63</span></div>
+    <div class="toc-entry"><span class="toc-label">Coming in Vol. 2</span><span class="toc-page">64</span></div>
+    <div class="toc-entry"><span class="toc-label">Contributors</span><span class="toc-page">65</span></div>
+    <div class="toc-entry"><span class="toc-label">About</span><span class="toc-page">66</span></div>
+    <div style="flex:1;"></div>
+    <div style="font-family:var(--ff-body);font-size:7.5pt;color:var(--text-light);border-top:0.5pt solid var(--border);padding-top:0.08in;">
+      Vol. 1, Fall 2026 &nbsp;·&nbsp; 200 copies &nbsp;·&nbsp; Printed by Mixam
+    </div>
+  </div>
+  <span class="page-number right">4</span>
+</div>
+
+<!-- ═══ P5 — EDITOR'S NOTE p.1 ═══ -->
+<div class="page page-light" id="p5">
+  <div class="page-inner">
+    <div class="running-header"><span>Editor's Note</span><span>5</span></div>
+    <div style="font-family:var(--ff-head);font-size:18pt;font-weight:600;color:var(--dark);margin-bottom:0.08in;">Why This Exists</div>
+    <hr class="gold-rule">
+
+    <div class="scaffold">
+      <strong>Scaffold — ~140 words for p.5 (continue on p.6 for remaining ~140).</strong><br><br>
+      Open with where you are right now — the farmers market, a table at Called Coffee, wherever feels true. You don't have to explain the whole project in the first line. Start with a moment.<br><br>
+      Then: the farm. Name it. Don't call it "a difficult season" or "a setback." You lost a farm. Say that.<br><br>
+      Then: the bipolar diagnosis and the hospitalization. The audience knows. Name it directly.<br><br>
+      Then the line you've already written — use it verbatim:<br>
+      <strong>"I lost a farm. I was hospitalized. We rebuilt in my in-laws' yard with a converted horse trailer that used to be a hat bar."</strong><br><br>
+      Let that land. Don't explain it. The next sentence is about these people — Jean, Samuel, Lewis, the Freedom Riders monument two blocks from the hardware store — and why you kept ending up across the table from them.
+    </div>
+
+    <div class="scaffold" style="margin-top:0.1in;">
+      <strong>Question to answer before writing:</strong> What is the single thing you notice in all of these people that you couldn't see in yourself when you were losing the farm? That's the connective tissue. Find it. Write toward it, not around it.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P6 — EDITOR'S NOTE p.2 ═══ -->
+<div class="page page-light" id="p6">
+  <div class="page-inner">
+    <div class="running-header"><span>Editor's Note</span><span>6</span></div>
+
+    <div class="inset-photo-right">
+      <img src="photos-review/matt-noah-orlando-trip.jpg" alt="Matt and Noah, Orlando road trip">
+      <div class="caption">Matt and Noah, en route to pick up the Bloom Bar. May 2025.</div>
+    </div>
+
+    <div class="scaffold">
+      <strong>Continuing — ~140 words to close the editor's note.</strong><br><br>
+      This is where you name the project itself. Not what it is ("a magazine about small business owners") but why you made it. Something about the act of noticing. How you notice them differently because of what happened. That the question underneath every profile isn't "what does this person do?" — it's "what kept them going?" And you're asking that question because you know what it costs not to keep going.<br><br>
+      End with something that opens the door to the profiles. Not a tour guide sentence. More like: here's where we're going, and why I think it matters.<br><br>
+      <strong>Gap to fill:</strong> Do you want to name any of the specific subjects here — Jean, Lewis, Samuel? Or keep the note universal and let the profiles speak?
+    </div>
+
+    <div style="margin-top:0.2in;font-family:var(--ff-body);font-size:9pt;color:var(--text);">
+      <em>Matt Headley</em><br>
+      Anniston, Alabama<br>
+      Fall 2026
+    </div>
+  </div>
+  <span class="page-number right">6</span>
+</div>
+
+<!-- ═══ P7 — THE SAME DOMAIN ═══ -->
+<div class="page page-light" id="p7">
+  <div class="page-inner">
+    <div class="running-header"><span>Essay</span><span>7</span></div>
+    <div style="font-family:var(--ff-body);font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:0.08in;">Essay</div>
+    <div style="font-family:var(--ff-head);font-size:22pt;font-weight:600;color:var(--dark);margin-bottom:0.06in;">The Same Domain</div>
+    <hr class="gold-rule">
+    <div class="body-text" style="margin-top:0.1in;">
+      <p class="drop-cap">I've been silent for six months. No Facebook posts. No calls or texts. Just withdrew. And missed people the whole time. I wanted to reconnect. I had a community, a network. I didn't want to lose that, but I felt like I had.</p>
+      <p>I walk up and down Littlejohn Road in Pleasant Valley a few times a day. I walk past farms and gardens and fences and houses. Things people have that I had, that I built, or that I was planning to build. There's still hard feelings about that. Heather and I talk about it when we walk.</p>
+      <p>I still hesitate before looking at the farms and gardens. I look at them anyway.</p>
+    </div>
+    <hr class="gold-rule" style="margin:0.15in 0;">
+    <div class="body-text">
+      <p>Southern Legends was conceived as a top-of-the-funnel strategy for finding web design clients. Something was blocking me. Writing about business owners that were succeeding where I had failed. The comparison was too hard. So I pocketed the idea and did cold calling instead.</p>
+      <p>Getting hung up on sucks.</p>
+      <p>After basking in rejection, I started asking for referrals. Texted fifty friends: "Hey, it's Matt, hope you're doing well. I'm stable now and doing web design. You know anybody?" It pulled me out.</p>
+      <p>After the texts, I finally started to feel ready to write. I reached out to Samuel and Jean. After writing and sharing them, people read and commented. I needed some wins. This was a way to win before I had any clients.</p>
+      <p>I don't have a pulpit anymore. But I still need a place to process publicly.</p>
+    </div>
+    <hr class="gold-rule" style="margin:0.15in 0;">
+    <div class="body-text">
+      <p>Some clients could be turned off by my history. Bipolar. Hospitalization. Business failure. Maybe those aren't the best clients anyway.</p>
+      <p>Maybe being broken is what makes the profiles work.</p>
+      <p>Both the journal and the profiles, on the same domain.</p>
+    </div>
+    <div style="margin-top:0.12in;font-family:var(--ff-body);font-size:8pt;color:var(--text-light);font-style:italic;">Published at southernlegends.us, April 2026.</div>
+  </div>
+  <span class="page-number right">7</span>
+</div>
+
+<!-- ═══ P8 — FREEDOM RIDERS OPENER ═══ -->
+<div class="page page-dark" id="p8">
+  <div class="profile-photo-bg" style="background-image: url('../public/images/profiles/freedom-riders-national-monument/gurnee-mural.webp');"></div>
+  <div class="dark-overlay-bottom"></div>
+  <div class="opener-content">
+    <div class="category-pill">Places</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.08in 0;">
+    <div class="opener-title">The Burning Bus</div>
+    <div class="opener-subtitle">On May 14, 1961, a Greyhound bus was firebombed outside Anniston, Alabama. The photograph that ran in papers around the world was taken right here. Sixty years later, the place is a national monument two blocks from a hardware store that has been in the same family since 1963.</div>
+    <div class="opener-location">Freedom Riders National Monument &nbsp;·&nbsp; Anniston, Alabama</div>
+  </div>
+  <div class="cover-top-url">southernlegends.us</div>
+</div>
+
+<!-- ═══ P9 — FREEDOM RIDERS text 1 ═══ -->
+<div class="page page-light" id="p9">
+  <div class="page-inner">
+    <div class="running-header"><span>The Burning Bus</span><span>9</span></div>
+    <div class="body-text">
+      <p class="drop-cap">The first thing most people know about the Freedom Rides is the photograph. A Greyhound bus on the shoulder of a two-lane road, smoke pouring from the windows, a crowd standing at a distance. It was taken outside Anniston, Alabama, on May 14, 1961 — Mother's Day. The photograph ran on front pages in forty countries. It became one of the defining images of the American civil rights movement. The place where it was taken is now a national monument, two blocks from a hardware store.</p>
+      <p>The Freedom Riders were a group of Black and white activists who boarded interstate buses in Washington, D.C., on May 4, 1961, testing the Supreme Court's rulings desegregating interstate travel facilities. They expected resistance. They got it at every stop. But nothing prepared them for Anniston.</p>
+    </div>
+
+    <span class="section-num">I.</span>
+    <div class="section-title">May 14, 1961</div>
+    <div class="body-text">
+      <p>The Greyhound bus arrived in Anniston that Sunday afternoon and was immediately surrounded by a mob of two hundred people. Some were armed with clubs and iron pipes. The bus driver tried to leave. The mob slashed the tires. The driver managed to pull onto the highway heading east, toward Bynum, the crowd following in cars.</p>
+      <p>Six miles outside of town, the tires gave out. The bus limped to a stop on Highway 202. The mob caught up. Someone threw an incendiary device through a window. The bus filled with smoke. Riders were trapped.</p>
+      <p>When the doors finally opened, passengers stumbled out into a crowd that beat them as they fell. The Anniston police were nowhere to be seen. The local fire department arrived and stood by while the bus burned. An Alabama state investigator was present — undercover, sent to protect the riders. He fired his pistol into the air to scatter the crowd long enough for people to get clear of the bus before the fuel tank exploded.</p>
+    </div>
+  </div>
+  <span class="page-number right">9</span>
+</div>
+
+<!-- ═══ P10 — FREEDOM RIDERS text 2 ═══ -->
+<div class="page page-light" id="p10">
+  <div class="page-inner">
+    <div class="running-header"><span>The Burning Bus</span><span>10</span></div>
+
+    <div class="pull-quote">"The local police had advance notice the bus was coming. They chose not to be there."</div>
+
+    <span class="section-num">II.</span>
+    <div class="section-title">The Burning</div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/freedom-riders-national-monument/bus-burning-1961.webp" alt="Bus burning on Highway 202">
+      <div class="caption">Highway 202, May 14, 1961. NPS</div>
+    </div>
+
+    <div class="body-text">
+      <p>Janie Miller, a Black woman who lived near the roadside where the bus stopped, opened her home to the riders who had stumbled out. She gave them water. She called for help. Some of the riders were hospitalized at Anniston Memorial Hospital — now Regional Medical Center, where my children were born — after staff initially refused to treat them.</p>
+      <p>A second bus — a Trailways — had also traveled through Anniston that day. On that bus, a group of white men boarded in Atlanta and beat the Freedom Riders before the bus even reached Alabama. When the Trailways arrived in Anniston, riders were forced off and attacked. Walter Bergman, a retired professor, was beaten so severely that he suffered a stroke. He never fully recovered.</p>
+      <p>The Anniston police had advance notice the bus was coming. They had been in contact with the Ku Klux Klan. They chose not to be there when the mob was waiting.</p>
+    </div>
+  </div>
+  <span class="page-number right">10</span>
+</div>
+
+<!-- ═══ P11 — FREEDOM RIDERS text 3 ═══ -->
+<div class="page page-light" id="p11">
+  <div class="page-inner">
+    <div class="running-header"><span>The Burning Bus</span><span>11</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">What It Changed</div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/freedom-riders-national-monument/freedom-riders-mugshots.webp" alt="Freedom Riders arrested in Mississippi, 1961">
+      <div class="caption">Freedom Riders arrested in Mississippi, 1961. NPS</div>
+    </div>
+
+    <div class="body-text">
+      <p>The photograph of the burning Greyhound ran worldwide the following morning. The Kennedy administration, already trying to manage the optics of the Cold War, could not ignore it. Attorney General Robert Kennedy called for a "cooling off period." The Freedom Riders refused.</p>
+      <p>Over the following months, more than four hundred people participated in Freedom Rides across the South. They were beaten in Birmingham. They were jailed in Mississippi. The rides continued until November 1961, when the Interstate Commerce Commission issued regulations desegregating interstate travel facilities — the ruling the original Rides had set out to enforce.</p>
+    </div>
+
+    <div class="pull-quote">"This wasn't a failure of the system. This was the system working exactly as it had been designed to work. The Freedom Riders didn't ask the system to fix itself. They made the cost of maintaining it too high to ignore."</div>
+
+    <div class="body-text">
+      <p>The ICC regulations didn't end segregation in the South. But they marked a turning point in the strategy of the civil rights movement: nonviolent direct action, staged for maximum visibility, designed to force federal intervention. Anniston was that strategy's most photographed moment.</p>
+    </div>
+  </div>
+  <span class="page-number right">11</span>
+</div>
+
+<!-- ═══ P12 — FREEDOM RIDERS close ═══ -->
+<div class="page page-light" id="p12">
+  <div class="page-inner">
+    <div class="running-header"><span>The Burning Bus</span><span>12</span></div>
+
+    <span class="section-num">IV.</span>
+    <div class="section-title">The Monument</div>
+
+    <div class="body-text">
+      <p>In January 2017, President Obama designated the Freedom Riders National Monument in Anniston, Alabama — one of his final acts before leaving office. The monument encompasses two sites: the Greyhound bus station on Gurnee Avenue, where the Anniston attacks began, and the roadside site on Highway 202 where the bus burned.</p>
+      <p>I walked past the Gurnee Avenue station for four years without knowing what it was. It was just part of downtown — a boarded-up storefront, brick front, a marker I never stopped to read. My kids were born two blocks away at Regional Medical Center, in the same hospital where the riders were initially refused treatment in 1961.</p>
+      <p>Next door at 1030 Gurnee, Downing and Sons has been in the same family since 1963 — the same year the store opened, two years after the attack. Lewis Downing has run his family's business in that shadow his whole adult life. His profile begins on page 23.</p>
+    </div>
+
+    <span class="section-num" style="margin-top:0.12in;">V.</span>
+    <div class="section-title">Why It Matters Now</div>
+
+    <div class="body-text">
+      <p>The national monument designation doesn't change what happened. It doesn't undo the silence of the police, the beaten bodies, the burned bus. What it does is mark the place as a site of consequence — a place where the cost of the system became impossible to look away from. That seems worth remembering, especially in a town still reckoning with what it has been and what it is trying to become.</p>
+    </div>
+
+    <div class="three-dots">· · ·</div>
+    <div class="source-note">Sources: National Park Service; Anniston-Calhoun County Freedom Riders National Monument documentation; "The Wrong Side of Murder Creek" by Bob Zellner; Birmingham News archives.</div>
+  </div>
+  <span class="page-number right">12</span>
+</div>
+
+<!-- ═══ P13 — MOM-TO-GO OPENER ═══ -->
+<div class="page page-dark" id="p13">
+  <div class="profile-photo-bg" style="background-image: url('../public/images/profiles/jean-ellison/jean-ellison-brand-fistpump-upscaled.webp');"></div>
+  <div class="dark-overlay-bottom"></div>
+  <div class="opener-content">
+    <div class="category-pill">Food &amp; Music</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.08in 0;">
+    <div class="opener-title">The View from the Boat</div>
+    <div class="opener-subtitle">Jean Ellison spent twenty years at JSU. Then her second child was born, her car was repossessed, a friend sat with her on the floor, and she built a restaurant on Noble Street. The Music Box has been open ever since.</div>
+    <div class="opener-location">Jean Ellison &nbsp;·&nbsp; Mom-To-Go &amp; The Music Box &nbsp;·&nbsp; Anniston, Alabama</div>
+  </div>
+  <div class="cover-top-url">southernlegends.us</div>
+</div>
+
+<!-- ═══ P14 — MOM-TO-GO text 1 ═══ -->
+<div class="page page-light" id="p14">
+  <div class="page-inner">
+    <div class="running-header"><span>The View from the Boat</span><span>14</span></div>
+    <div class="body-text">
+      <p class="drop-cap">Jean Ellison had a plan. She'd spent twenty years at Jacksonville State University — teaching, performing, building a life in the community. She knew the music scene. She knew the food scene. She'd watched the Noble Street corridor come back slowly, awkwardly, the way downtowns do. She had a vision for what a restaurant could be in a space like that. She had the timeline worked out.</p>
+      <p>Then her second child was born, and she learned something she says she should have known twenty years earlier: when you plan, God laughs.</p>
+      <p>The joke Jean tells about herself is that she used to give advice about postpartum anxiety before she'd ever experienced it herself. She was the person in the room who would say, gently, <em>have you considered that this might be more than fatigue?</em> She'd taken the training. She knew the clinical language. She was, she says, "completely full of it."</p>
+    </div>
+
+    <span class="section-num" style="margin-top:0.12in;">I.</span>
+    <div class="section-title">Welcome to the Club</div>
+
+    <div class="body-text">
+      <p>After her second child — Maverick — was born, Jean didn't recognize herself. The training she'd had didn't prepare her for what it actually felt like to be inside it. She describes the exhaustion as something distinct from tiredness: a kind of static that sat behind her eyes and made every ordinary thing feel like a second language.</p>
+      <p>She kept teaching. She kept performing. She kept showing up. She told herself it was just hard for everyone and that she was no different and that she just needed to push through.</p>
+    </div>
+  </div>
+  <span class="page-number right">14</span>
+</div>
+
+<!-- ═══ P15 — MOM-TO-GO text 2 ═══ -->
+<div class="page page-light" id="p15">
+  <div class="page-inner">
+    <div class="running-header"><span>The View from the Boat</span><span>15</span></div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/jean-ellison/jean-ellison-music-box-sign.webp" alt="Jean outside The Music Box">
+      <div class="caption">Jean outside The Music Box, Noble Street.</div>
+    </div>
+
+    <div class="body-text">
+      <p>I told her about my own year — the diagnosis, the farm, rebuilding from the ground up after a manic episode that cost more than money. She nodded. "Welcome to the club," she said. "Nobody wants to be in it. Everybody in it understands everybody else."</p>
+      <p>Jean had been teaching at Weaver High School by then — a school where, she says, a significant number of students came in hungry. Not hungry like they'd skipped breakfast. Hungry like they weren't sure what dinner was going to be.</p>
+    </div>
+
+    <div class="pull-quote">"Steven looked at me one night and said, 'You know you don't have to be okay, right?' I didn't know that. I genuinely did not know that."</div>
+
+    <div class="body-text">
+      <p>"The walls started moving," is how she describes the period after Maverick was born. She means it metaphorically, mostly. The structure she'd built — JSU, the teaching, the music — was still technically standing. But something underneath it had shifted, and she didn't have language for what it was or how to talk about it, even though she'd spent years developing exactly that kind of language for other people.</p>
+    </div>
+  </div>
+  <span class="page-number right">15</span>
+</div>
+
+<!-- ═══ P16 — MOM-TO-GO text 3 ═══ -->
+<div class="page page-light" id="p16">
+  <div class="page-inner">
+    <div class="running-header"><span>The View from the Boat</span><span>16</span></div>
+
+    <span class="section-num">II.</span>
+    <div class="section-title">The Floor</div>
+
+    <div class="body-text">
+      <p>She kept denying the exhaustion. Sleep deprivation felt like a badge people wore proudly in early parenthood and she was wearing it too, only she couldn't figure out why the badge felt like it was made of lead. The car payment fell behind. Then the Altima was repossessed. She came out one morning and it was gone. That was the morning she stopped pretending.</p>
+      <p>"There were days in the nursery," she says, "where I would just sit in the chair and think, I do not know how to do this." The chair is specific to her — a particular rocking chair in a particular nursery — and the specificity of it is the thing that made her tell me about it. Not the feelings in the abstract. The chair. The window. The time of day.</p>
+      <p>A friend came over — Jean describes her as a "friend-therapist," by which she means a friend who happened to have the training and who sat down on the floor with her, not across from her in a professional chair, not with a clipboard, but on the floor. They stayed there for a while. Jean says that was the thing that mattered: not the words, but the floor.</p>
+      <p>"From that floor, The Music Box was born." She says it without drama. It took several years and a lot of work and Steven building most of it himself. But the decision — the one that said <em>I am going to make something instead of disappear into this</em> — got made on that floor.</p>
+      <p>The Music Box opened on Noble Street in downtown Anniston. The space has the feel of somewhere that has been cared for by someone who knows what it is like to need a place to land.</p>
+    </div>
+  </div>
+  <span class="page-number right">16</span>
+</div>
+
+<!-- ═══ P17 — MOM-TO-GO close ═══ -->
+<div class="page page-light" id="p17">
+  <div class="page-inner">
+    <div class="running-header"><span>The View from the Boat</span><span>17</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">What She's Building</div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/jean-ellison/jean-ellison-kitchen-cutting-hires.webp" alt="Jean in the kitchen">
+      <div class="caption">Jean Ellison in her kitchen.</div>
+    </div>
+
+    <div class="body-text">
+      <p>Jean is explicit that she does not want to be a resilience symbol. She finds the frame limiting. "People want to know how I survived it so they can extract the formula," she says. "But it wasn't a formula. It was a floor and a friend and a lot of time."</p>
+      <p>When I ask about the future, she is direct: "I want to be a millionaire." She says it plainly, without apology. Not because money is the point, but because she understands that financial stability is what makes all the other things possible — the restaurant, the cookbook, the work with students, the ability to build something her kids can run with someday.</p>
+    </div>
+
+    <div class="pull-quote">"I want to be a millionaire. I'm not embarrassed to say that. I know what it felt like to have the car repossessed. I don't want to feel that again."</div>
+
+    <div class="body-text">
+      <p>Maverick was born at 8 in the morning. By 2 that afternoon, Jean was asking the nurse about her regimen for getting back in shape. The nurse laughed. Jean didn't. "I had things to do," she says. The cookbook is in progress. The Music Box is on Noble Street. The walls have stopped moving.</p>
+    </div>
+
+    <div class="three-dots">· · ·</div>
+    <div class="source-note">Jean Ellison operates Mom-To-Go and The Music Box in Anniston, Alabama. momt2go.com</div>
+  </div>
+  <span class="page-number right">17</span>
+</div>
+
+<!-- ═══ P18 — AQUALITY FARMS OPENER ═══ -->
+<div class="page page-dark" id="p18">
+  <div class="profile-photo-bg" style="background-image: url('../public/images/profiles/aquality-farms/sam-farmers-market-cropped.webp');"></div>
+  <div class="dark-overlay-bottom"></div>
+  <div class="opener-content">
+    <div class="category-pill">Agriculture</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.08in 0;">
+    <div class="opener-title">A New Way of Growing</div>
+    <div class="opener-subtitle">Samuel and John Mark Sawyer are growing 24,000 heads of lettuce and 300 pounds of mushrooms in a former pharmacy warehouse in downtown Anniston. They have no soil and no pesticides. They have a five-year plan and a mission statement. They are very serious about both.</div>
+    <div class="opener-location">Samuel &amp; John Mark Sawyer &nbsp;·&nbsp; Aquality Farms &nbsp;·&nbsp; Anniston, Alabama</div>
+  </div>
+  <div class="cover-top-url">southernlegends.us</div>
+</div>
+
+<!-- ═══ P19 — AQUALITY FARMS text 1 ═══ -->
+<div class="page page-light" id="p19">
+  <div class="page-inner">
+    <div class="running-header"><span>A New Way of Growing</span><span>19</span></div>
+    <div class="body-text">
+      <p class="drop-cap">The first time I saw Samuel Sawyer at the farmers market, he had two white coolers and no booth representative. He was pouring samples of something green and drinkable from a pitcher, explaining the nutritional content to whoever would stop long enough to listen. A couple of kids took cups. He told them what was in it. They drank it anyway.</p>
+      <p>This was before I knew what Aquality Farms was. I knew Samuel as a customer — he and his father John Mark had bought flowers from Heather for their Harvest Box CSA subscription, and I knew they were doing something with mushroom compost that Heather found interesting. I didn't know I was watching the beginning of something.</p>
+      <p>Later, Samuel showed me a napkin. It had five years of research on it — yield projections, nutrient density comparisons, market analysis. The handwriting was small and deliberate. This was not a hobby that had gotten out of hand. This was a plan.</p>
+    </div>
+
+    <span class="section-num">I.</span>
+    <div class="section-title">The Numbers</div>
+
+    <div class="body-text">
+      <p>Aquality Farms currently grows 24,000 heads of lettuce per growing cycle, 300 pounds of mushrooms per month, across 6,000 square feet of vertical hydroponic towers in a repurposed warehouse in downtown Anniston. There is no soil. There are no pesticides. The water is recirculated. The lights are calibrated to specific spectrums for different growth phases.</p>
+      <p>None of this happened quickly. Samuel spent six years studying hydroponics before breaking ground. "I didn't want to start before I knew what I was doing," he says. "I wanted to build something that actually worked."</p>
+    </div>
+  </div>
+  <span class="page-number right">19</span>
+</div>
+
+<!-- ═══ P20 — AQUALITY FARMS text 2 ═══ -->
+<div class="page page-light" id="p20">
+  <div class="page-inner">
+    <div class="running-header"><span>A New Way of Growing</span><span>20</span></div>
+
+    <span class="section-num">II.</span>
+    <div class="section-title">The Warehouse</div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/aquality-farms/lettuce-under-lights.webp" alt="Lettuce under grow lights">
+      <div class="caption">No soil, no pesticides.</div>
+    </div>
+
+    <div class="body-text">
+      <p>The Sawyer family has been in Anniston for thirty years. The building they now farm in operated as a pharmacy from 1969 to 1999. After the pharmacy closed, it sat. Downtown Anniston has a lot of buildings that sat.</p>
+      <p>Samuel and John Mark took the space and built up, not out. The hydroponic towers rise in rows under blue-spectrum grow lights that hum at a frequency that takes a few minutes to stop noticing. The mushroom lab is in a separate room — temperature controlled, humidity controlled, dark except for the blue-spectrum lights aimed at the pinning boards where the chestnut mushrooms begin to form.</p>
+      <p>John Mark handles most of the mechanical engineering. Samuel handles the growing science and the outreach. The division of labor was natural, they say — they've always thought in different registers. "He sees structures," Samuel says of his father. "I see systems."</p>
+      <p>The vertical towers allow them to stack growing cycles and control nutrient delivery with a precision that field farming can't match. A head of butterhead lettuce from Aquality Farms takes about three weeks from seed to harvest. A comparable head from a conventional operation might travel 1,500 miles to reach the same shelf.</p>
+    </div>
+  </div>
+  <span class="page-number right">20</span>
+</div>
+
+<!-- ═══ P21 — AQUALITY FARMS close ═══ -->
+<div class="page page-light" id="p21">
+  <div class="page-inner">
+    <div class="running-header"><span>A New Way of Growing</span><span>21</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">The Mission</div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/aquality-farms/chestnut-mushrooms-pinning.webp" alt="Chestnut mushrooms pinning">
+      <div class="caption">Chestnut mushrooms pinning under blue-spectrum lights.</div>
+    </div>
+
+    <div class="body-text">
+      <p>When I ask Samuel why he's doing this, his answer centers on health — specifically, on the 35,000 students in the Anniston City and Calhoun County school systems who eat lunch in buildings where the produce options are what budget and supply chain allow.</p>
+      <p>The Harvest Box CSA program delivers fresh produce — much of it from Aquality — directly to subscribers. The School Sponsorship Program allows individuals and businesses to fund produce delivery to a specific school. "The kids who are eating what we grow are eating things they wouldn't have access to otherwise," Samuel says. "That matters to me more than the margin."</p>
+    </div>
+
+    <div class="pull-quote">"The fear of failure is real. But the fear of not trying — of looking back and knowing I had a chance to do something that mattered and I didn't take it — that's worse."</div>
+
+    <div class="body-text">
+      <p>"Chaha Outdoors" is the Creek word for what they're building beyond the warehouse — a vision that includes trail partnerships with NAWA, the Native American Wellness Alliance, and outdoor programming connected to the Chaha Trail network. Samuel is Creek. The name is intentional.</p>
+      <p>Every new business that opens downtown Anniston is a bet on a city that has been told, in various ways, for a long time, that it is not worth betting on. The Sawyers are placing their bet in a former pharmacy. They are growing lettuce under blue lights. They are very serious about it.</p>
+    </div>
+
+    <div class="three-dots">· · ·</div>
+    <div class="source-note">Aquality Farms, Anniston, Alabama. aqualityfarms.com</div>
+  </div>
+  <span class="page-number right">21</span>
+</div>
+
+<!-- ═══ P22 — PHOTO BREAK (farmhouse) ═══ -->
+<div class="page" id="p22" style="background:#1C1917;">
+  <div class="full-bleed-photo" style="background-image:url('photos-review/farmhouse-1832-ridgewood-ave.jpg');"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,25,23,0.85) 0%, rgba(28,25,23,0.15) 55%, rgba(28,25,23,0) 100%);z-index:1;"></div>
+  <div class="full-bleed-caption">Headley Flower Farm, Pleasant Valley, Alabama.</div>
+</div>
+
+<!-- ═══ P23 — LEWIS DOWNING OPENER ═══ -->
+<div class="page page-dark" id="p23">
+  <div class="profile-photo-bg" style="background-image: url('../public/images/profiles/lewis-downing/lewis-at-counter.webp');"></div>
+  <div class="dark-overlay-bottom"></div>
+  <div class="opener-content">
+    <div class="category-pill">People · Community</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.08in 0;">
+    <div class="opener-title">1030 Gurnee</div>
+    <div class="opener-subtitle">Lewis Downing runs Downing and Sons on Gurnee Avenue. His grandfather bought the building for $600 in 1963. The Freedom Riders National Monument is next door.</div>
+    <div class="opener-location">Lewis Downing &nbsp;·&nbsp; Anniston, Alabama</div>
+  </div>
+  <div class="cover-top-url">southernlegends.us</div>
+</div>
+
+<!-- ═══ P24 — LEWIS DOWNING text 1 ═══ -->
+<div class="page page-light" id="p24">
+  <div class="page-inner">
+    <div class="running-header"><span>1030 Gurnee</span><span>24</span></div>
+    <div class="body-text">
+      <p class="drop-cap">The music director was roaming the neighborhood again. That's how I first encountered him — a figure moving through the block with the unhurried confidence of someone who had been walking these streets longer than I had been alive. He wore a straw hat. He paused outside a brick-front building. Plants sat in the windows. He went inside.</p>
+      <p>That was R.D. — Robert Downing. And the building was 1030 Gurnee Avenue, which has belonged to the Downing family since 1963, which is when R.D.'s father walked across the street and bought it for six hundred dollars.</p>
+      <p>"That was Johnny Bullock's place," Lewis tells me, explaining what Gurnee looked like when his grandfather was navigating it. The tools visible just inside the door include a stirrup hoe and a selection of seed packets. Lewis Downing is the third generation to stand behind that counter.</p>
+    </div>
+
+    <span class="section-num">I.</span>
+    <div class="section-title">The $600 Store</div>
+
+    <div class="body-text">
+      <p>1030 Gurnee has been a Downing family operation since 1963 — the year Lewis's grandfather walked across the street, met the owner, and bought the building outright for $600. The anchor tenant at the time was Mary Carter Paint. When Mary Carter went bankrupt, the Downings had a building, a customer base, and a decision to make about what came next.</p>
+      <p>What came next was: everything that would fit. Lewis's grandmother added sewing notions and fabric. The store began carrying organic fertilizer. It acquired upholstery supplies. "Seed packets and upholstery fabric in the same building," Lewis says. The combination sounds improbable. It also made them, he observes, essentially impossible to replace. There is no chain store that carries what they carry. There is no Amazon algorithm that recreates the experience of asking Lewis Downing a question about polyurethane foam.</p>
+    </div>
+  </div>
+  <span class="page-number right">24</span>
+</div>
+
+<!-- ═══ P25 — LEWIS DOWNING text 2 ═══ -->
+<div class="page page-light" id="p25">
+  <div class="page-inner">
+    <div class="running-header"><span>1030 Gurnee</span><span>25</span></div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/lewis-downing/lewis-downing-hedcut.webp" alt="Lewis Downing">
+      <div class="caption">Lewis Downing. Illustration by Matt Headley.</div>
+    </div>
+
+    <div class="body-text">
+      <p>Lewis took full ownership of Downing and Sons in 2017. In the years since, he has doubled the store's growth. The inventory now includes European upholstery fabrics and leather hides alongside the organic fertilizer and the seed packets. He cuts polyurethane foam forms to specification in the back. He sets the plants out at a quarter of eight every morning, the same time his grandfather did.</p>
+      <p>He started at the University of Alabama. He transferred to Jacksonville State. Both times, the store pulled him back. "I wasn't ready to leave it," he says. Whether he means the store or the city is unclear, and I don't think the distinction matters much to him.</p>
+    </div>
+
+    <span class="section-num">II.</span>
+    <div class="section-title">The Alley</div>
+
+    <div class="body-text">
+      <p>The address is 1030 Gurnee Avenue. Next door, across an alley, is 1031 — the Greyhound bus station where the Freedom Riders were attacked on May 14, 1961. That alley is now part of the Freedom Riders National Monument.</p>
+      <p>I walked past that alley every week for four years while living and working in downtown Anniston. It was just part of the block — a gap between buildings, unremarkable until you stop. Lewis Downing has run his family's business in that shadow his entire adult life.</p>
+      <p>He supports the historic district designation that would formalize protection for the corridor. "It matters what this block is recognized as," he says. He doesn't elaborate. He doesn't need to.</p>
+    </div>
+  </div>
+  <span class="page-number right">25</span>
+</div>
+
+<!-- ═══ P26 — LEWIS DOWNING text 3 ═══ -->
+<div class="page page-light" id="p26">
+  <div class="page-inner">
+    <div class="running-header"><span>1030 Gurnee</span><span>26</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">R.D.</div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/lewis-downing/yellow-mums-sign-blue-sky.webp" alt="Yellow mums outside Downing and Sons">
+      <div class="caption">Fall mums outside Downing and Sons.</div>
+    </div>
+
+    <div class="body-text">
+      <p>Robert Downing — R.D. — served sixteen years as a Calhoun County Commissioner from 1994 to 2010. He was known as the commission's resident environmentalist, in the way that a person becomes known for caring about something others consider optional. He pushed energy efficiency programs that saved the county an estimated $50,000 per year. He worked on the McClellan Joint Powers Authority as the former Army base was being converted. He walked into Downing and Sons on most days, the way family does.</p>
+      <p>When Heather and I were selling flowers at the farmers market, R.D. and Lewis would come by. R.D. would walk the booths without particular urgency, just perusing. "He'd already been a county commissioner by then," Lewis says. "But he'd make his way over and walk the booths." He bought plants. They were regular customers.</p>
+    </div>
+
+    <span class="section-num">IV.</span>
+    <div class="section-title">The Farm Years</div>
+
+    <div class="body-text">
+      <p>One year, the farmers market was held in R.D.'s alleyway. He hosted it. Both of them — R.D. and Lewis — would come on market days and buy flowers and eggs and whatever else the vendors had. We patronized them; they patronized us. That is the economy of a small market, and it works because everybody in it understands that.</p>
+      <p>Lewis gave us a brown envelope of Purple Hull pea seeds that spring. He told us when to plant them. We did. They came up. "Farming is hard," he said once, standing at our booth, which was not an observation directed at us so much as at the general situation.</p>
+    </div>
+  </div>
+  <span class="page-number right">26</span>
+</div>
+
+<!-- ═══ P27 — LEWIS DOWNING close ═══ -->
+<div class="page page-light" id="p27">
+  <div class="page-inner">
+    <div class="running-header"><span>1030 Gurnee</span><span>27</span></div>
+
+    <span class="section-num">V.</span>
+    <div class="section-title">The Bible</div>
+
+    <div class="body-text">
+      <p>In December 2024, Lewis Downing was appointed unanimously to the Anniston City Council representing Ward 1. He was sworn in on his grandmother's Bible — an early 1920s edition, the same Bible his father used when he was sworn into the county commission. R.D. was in the room.</p>
+      <p>His first official act as a council member was to move to adjourn the meeting. He ran for the full term in August 2025 and won in a landslide.</p>
+      <p>He now serves as Vice Mayor alongside Mayor Ciara Smith-Roston, who is both the city's first Black female mayor and its youngest ever. Ward 1 includes downtown Anniston and 18,000 acres of the former Fort McClellan installation. Lewis chairs Main Street Anniston.</p>
+      <p>He has said he ran because of a milestone birthday — because he reached a point where he wanted to be an asset and not a liability. He did not say it as a slogan. He said it the way a person says something they have actually thought about.</p>
+      <p>Every morning at a quarter of eight, he sets the plants out in front of 1030 Gurnee Avenue, next door to a national monument, in a building his grandfather bought for $600.</p>
+    </div>
+
+    <div class="three-dots">· · ·</div>
+    <div class="source-note">Downing and Sons, 1030 Gurnee Avenue, Anniston, AL. Open Monday–Saturday.</div>
+  </div>
+  <span class="page-number right">27</span>
+</div>
+
+<!-- ═══ P28 — PHOTO BREAK (Downing storefront) ═══ -->
+<div class="page" id="p28" style="background:#1C1917;">
+  <div class="full-bleed-photo" style="background-image:url('../public/images/profiles/lewis-downing/downing-and-sons-storefront.webp');"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,25,23,0.85) 0%, rgba(28,25,23,0.1) 60%, rgba(28,25,23,0) 100%);z-index:1;"></div>
+  <div class="full-bleed-caption">Downing and Sons, 1030 Gurnee Avenue, Anniston.</div>
+</div>
+
+<!-- ═══ P29 — INTERFAITH OPENER ═══ -->
+<div class="page page-dark" id="p29">
+  <div class="profile-photo-bg" style="background-image: url('../public/images/profiles/interfaith-ministries/shepherds-table-jan-2025.webp');"></div>
+  <div class="dark-overlay-bottom"></div>
+  <div class="opener-content">
+    <div class="category-pill">Community · Faith</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.08in 0;">
+    <div class="opener-title" style="font-size:28pt;">When the Churches Stopped Competing</div>
+    <div class="opener-subtitle">Since 1975, local congregations in Calhoun County have pooled what they have to serve people in crisis. No single church could do it alone. Together, they do.</div>
+    <div class="opener-location">Interfaith Ministries of Calhoun County &nbsp;·&nbsp; Anniston, Alabama</div>
+  </div>
+  <div class="cover-top-url">southernlegends.us</div>
+</div>
+
+<!-- ═══ P30 — INTERFAITH text 1 ═══ -->
+<div class="page page-light" id="p30">
+  <div class="page-inner">
+    <div class="running-header"><span>When the Churches Stopped Competing</span><span>30</span></div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/interfaith-ministries/wheelchair-linocut.webp" alt="Illustration">
+      <div class="caption">Illustration by Matt Headley.</div>
+    </div>
+
+    <div class="body-text">
+      <p class="drop-cap">I spent four years as associate pastor at First United Methodist Church in Anniston. The office I worked in was on the second floor, overlooking Gurnee Avenue and the parking lot and, if you stood at the right window, the alleyway next door that would eventually become part of the Freedom Riders National Monument. Interfaith Ministries operated out of a building on the same campus. Some mornings, I would hear the people waiting for Interfaith's doors to open before I saw them — voices in the parking lot, the sound of paper cups, the particular early-morning quiet of people who have learned to wait.</p>
+      <p>In 1975, a group of Protestant pastors, Catholic priests, and members of Temple Beth El sat down together. The question on the table was simple: "Why are we all trying to do the same thing separately?" Each congregation had some version of an emergency assistance fund. Each had some version of a food pantry. Each had some version of a list of people in crisis who needed help they didn't have the capacity to provide alone.</p>
+    </div>
+
+    <div class="pull-quote">"Why are we all trying to do the same thing separately?"</div>
+
+    <div class="body-text">
+      <p>By 1978, Interfaith Ministries of Calhoun County was incorporated. Baptist and Catholic, Black and white, downtown and rural, Christian and Jewish — sitting at the same table, pooling what they had. The model still works.</p>
+    </div>
+  </div>
+  <span class="page-number right">30</span>
+</div>
+
+<!-- ═══ P31 — INTERFAITH text 2 ═══ -->
+<div class="page page-light" id="p31">
+  <div class="page-inner">
+    <div class="running-header"><span>When the Churches Stopped Competing</span><span>31</span></div>
+
+    <span class="section-num">I.</span>
+    <div class="section-title">The Man in the Wheelchair</div>
+
+    <div class="inset-right">
+      <img src="../public/images/profiles/interfaith-ministries/bench-woman-linocut.webp" alt="Illustration">
+      <div class="caption">Illustration by Matt Headley.</div>
+    </div>
+
+    <div class="body-text">
+      <p>There was a man who came through the corridor outside the church several times a week. Long hair, gentle manner, soft-spoken. He had been a hair stylist. He was in a wheelchair. We had several conversations — on 14th Street, on Noble Street, in the parking lot. He was the kind of person who made conversation easy, which is not something you can say about everyone you meet in a parking lot at 7 in the morning.</p>
+      <p>Then I stopped seeing him. Months passed. One day, Kyle — one of the Interfaith staff — sent me a text: "I thought you would want to know, because I knew you developed a relationship with him."</p>
+    </div>
+
+    <div class="pull-quote">"I thought you would want to know, because I knew you developed a relationship with him."</div>
+
+    <div class="body-text">
+      <p>Shepherd's Table is Interfaith's weekly community breakfast — a legacy of Dale Clem, a former First UMC pastor who started it decades ago. I led it for four years. We served sausage and pancakes and muffins. My own children came and helped on Saturday mornings. There was a man who wrote poetry in pencil on notebook paper and tore off copies to give away. There was a woman named Kaffie who said "blessed rising" when she arrived and who would clap along if you played guitar.</p>
+    </div>
+  </div>
+  <span class="page-number right">31</span>
+</div>
+
+<!-- ═══ P32 — INTERFAITH text 3 ═══ -->
+<div class="page page-light" id="p32">
+  <div class="page-inner">
+    <div class="running-header"><span>When the Churches Stopped Competing</span><span>32</span></div>
+
+    <span class="section-num">II.</span>
+    <div class="section-title">Eight Programs</div>
+
+    <div class="body-text">
+      <p>Interfaith runs eight programs: Emergency Assistance, Shepherd's Table, Adult Dental, Meals on Wheels, The Open Door, SenioRx, Christmas Clearing House, Durable Medical Equipment, and Integrative Health Coaching. The Emergency Assistance program is the one most people think of when they think of crisis intervention — a family facing eviction, a utility about to be cut off, a gap between paychecks and rent.</p>
+    </div>
+
+    <div class="pull-quote">"That's not a situation where spiritual counsel helps. It's a situation where money helps."</div>
+
+    <div class="body-text">
+      <p>The executive director says this without apology. The churches that fund Interfaith have learned, over five decades, that the most effective form of pastoral care is sometimes a check that covers the difference between someone staying housed and someone losing everything. Theology can wait. The utility shutoff cannot.</p>
+      <p>There was a man named Taz. I saw him on the bench in the courtyard garden most mornings I was at the church — he was drunk every time I saw him, which was not a judgment, just an observation. One morning I ran into April, who coordinates some of Interfaith's case management work, at a coffee shop. She told me Taz was living with a family member now. No longer homeless. "That's the kind of news you don't expect," she said. I asked what had changed. She shrugged. "People are complicated. Sometimes things shift."</p>
+    </div>
+  </div>
+  <span class="page-number right">32</span>
+</div>
+
+<!-- ═══ P33 — INTERFAITH close ═══ -->
+<div class="page page-light" id="p33">
+  <div class="page-inner">
+    <div class="running-header"><span>When the Churches Stopped Competing</span><span>33</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">The Coalition</div>
+
+    <div class="body-text">
+      <p>The coalition that Interfaith represents has held for fifty years because the people involved have been willing to set aside the things that make congregations competitive — membership numbers, brand identity, the particular theology of who gets to help whom — and keep focus on the thing they all agreed on in 1975: that no single church could do it alone.</p>
+      <p>Government programs have eligibility requirements. Nonprofits have funding cycles. Grant-funded initiatives have sunset dates. Interfaith has been open four days a week for half a century. "This is the work that doesn't make the news," the director says. "There's no ribbon-cutting when a family avoids eviction."</p>
+      <p>During my first bipolar depression I was afraid I'd become one of these people with mental health disorders.</p>
+      <p>I mean that sentence in the flat, clinical way it sounds, not as a confession of stigma I've since resolved. I was afraid. The fear was specific and real. And the people I was afraid of becoming were people I then spent four years sitting across from at a breakfast table on Saturday mornings, and what I learned — slowly, incompletely — is that the thing I was afraid of was not what I thought it was.</p>
+      <p>Interfaith Ministries holds a four-star rating from Charity Navigator — 95th percentile. The doors are open Monday through Thursday, 8 a.m. "The need doesn't take a day off."</p>
+    </div>
+
+    <div class="three-dots">· · ·</div>
+    <div class="source-note">Interfaith Ministries of Calhoun County, 1431 Gurnee Ave, Suite A, Anniston. interfaithcalhoun.org</div>
+  </div>
+  <span class="page-number right">33</span>
+</div>
+
+<!-- ═══ P34 — SECTION BREAK: ESSAYS ═══ -->
+<div class="page page-dark page-section-break" id="p34">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg, #1C1917 0%, #2A4A36 50%, #3D1A0A 100%);"></div>
+  <div class="topo-overlay"></div>
+  <div class="section-break-inner">
+    <div style="font-family:var(--ff-rock);font-size:7.5pt;color:var(--accent);letter-spacing:0.12em;margin-bottom:0.16in;">Part Two</div>
+    <div class="section-break-title">Essays</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.1in 0 0.16in;width:2.5in;">
+    <div class="section-break-deck">Four pieces of personal writing. The same person who made the profiles. The same domain.</div>
+  </div>
+</div>
+
+<!-- ═══ P35 — ATTEMPT 73 ═══ -->
+<div class="page page-light" id="p35" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>Essay</span><span>35</span></div>
+    <div style="font-family:var(--ff-body);font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:0.08in;">Essay</div>
+    <div style="font-family:var(--ff-head);font-size:26pt;font-weight:600;color:var(--dark);margin-bottom:0.04in;">Attempt 73</div>
+    <hr class="gold-rule">
+
+    <div class="inset-photo-right" style="margin-top:0.1in;">
+      <img src="photos-review/matt-shearing-sheep-2025.webp" alt="Matt shearing a babydoll sheep">
+      <div class="caption">Headley Flower Farm, July 2025.</div>
+    </div>
+
+    <div class="body-text" style="margin-top:0.1in;">
+      <p class="drop-cap">Last week I sheared our two babydoll sheep. Boy, what a wrestling match for the ages. A year ago we were able to get someone from Tennessee to shear them, but this year we couldn't find anyone. So I bought some shears, watched some YouTube videos and dove in. I'd read that after you've done it about 72 times, you're starting to get the hang of it.</p>
+      <p>It reminds me of the past year.</p>
+    </div>
+
+    <hr class="gold-rule" style="margin:0.12in 0;">
+
+    <div class="body-text">
+      <p>"Continues to be." I had a sinking suspicion when I wrote that. Reading it now, in 2026, I can see it. My worst fears were going to be realized in ways more severe than I was able to imagine.</p>
+      <p>The diagnosis came. The farm was ending. I spent weeks trying to figure out how to undo what I'd done. Quitting the church. The money. Sinking the farm.</p>
+      <p>We sold it. We had to.</p>
+      <p>Then came lots and lots of therapy. Starting over felt out of reach. I was sure I could never start anything again. After starting the ministry and losing it. Starting the farm and losing it. Starting the recovery from depression. Then losing it.</p>
+      <p>Around January I started to find it within me. That may be the attempt 73 moment.</p>
+      <p>The sheep are rehomed now. I'm still living with what pushing through looks like.</p>
+      <p>I'm starting over now. Wondering where it's all leading.</p>
+    </div>
+
+    <div style="margin-top:0.1in;font-family:var(--ff-body);font-size:8pt;color:var(--text-light);font-style:italic;">Published at southernlegends.us, April 2026.</div>
+  </div>
+  <span class="page-number right">35</span>
+</div>
+
+<!-- ═══ P36 — THE HOSPITAL OPENER ═══ -->
+<div class="page page-dark" id="p36">
+  <div class="profile-photo-bg" style="background-image:url('../public/images/journal/the-hospital-woodcut.webp');background-size:cover;background-position:center;opacity:0.35;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,25,23,0.98) 0%, rgba(28,25,23,0.8) 45%, rgba(28,25,23,0.5) 100%);z-index:1;"></div>
+  <div class="opener-content">
+    <div class="category-pill">Essay</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.08in 0;">
+    <div class="opener-title">The Hospital</div>
+    <div class="opener-subtitle">"I left the ER with a spring in my step. The next day, I called Dad to take me back."</div>
+    <div class="opener-location">UAB Psychiatric Center &nbsp;·&nbsp; October 2025</div>
+  </div>
+  <div class="cover-top-url">southernlegends.us</div>
+</div>
+
+<!-- ═══ P37 — THE HOSPITAL text 1 ═══ -->
+<div class="page page-light" id="p37">
+  <div class="page-inner">
+    <div class="running-header"><span>The Hospital</span><span>37</span></div>
+    <div class="body-text">
+      <p class="drop-cap">I was inside pacing, peering out our kitchen window. Shoppers were picking through our stuff. Kids were moping that they had to be out there all morning. Heather and my in-laws were talking to shoppers and neighbors. I couldn't go out.</p>
+      <p>Days before, we were clearing out the farm. Heather dragged me outside to help. Farm supplies. Tools. Tangles of drip irrigation and electric fence netting. A half-finished perimeter fence. Piles of farm trash.</p>
+      <p>The mania had ended. The depression that followed had been building for months.</p>
+      <p>Riding shotgun in Dad's Silverado, on our second trip to the dump, he said it. "Buddy, it's time for you to go to the hospital. I know you don't want to. But I don't want my grandkids to lose their dad."</p>
+      <p>Heather called Kyle. I sat on the porch with him, looking over our flower field. He'd preached recently about his own hospital stay. He called it his "grippy socks vacation." I agreed to let them drive me to Birmingham.</p>
+      <p>We parked, walked to UAB. They waited with me in the ER for six hours. The psychiatrist asked if I wanted to be admitted to the residential program. "I do not." I left with a spring in my step.</p>
+      <p>The next day, I called Dad to take me back.</p>
+    </div>
+
+    <span class="section-num" style="margin-top:0.12in;">I.</span>
+    <div class="section-title">Ten Days</div>
+
+    <div class="body-text">
+      <p>I was in the psych center for ten days. I told people, and myself, that it had been three weeks. I was sure, until I checked the journal.</p>
+      <p>I found it in my bedside drawer. A cheap brown notebook with lined paper. I wrote with the golf pencil they gave me — less dangerous than a full-length one.</p>
+    </div>
+  </div>
+  <span class="page-number right">37</span>
+</div>
+
+<!-- ═══ P38 — THE HOSPITAL text 2 ═══ -->
+<div class="page page-light" id="p38">
+  <div class="page-inner">
+    <div class="running-header"><span>The Hospital</span><span>38</span></div>
+
+    <div class="inset-right">
+      <img src="photos-review/hospital-notebook-uab.webp" alt="The journal from UAB">
+      <div class="caption">The notebook. UAB, October 2025.</div>
+    </div>
+
+    <div class="body-text">
+      <p>Sterile hospital air. The Indian girl who was kind, also bipolar. Stellar carrot cake. I learned from the others that you had to write it on the meal card, though they occasionally got the meals wrong.</p>
+      <p>The ones desperate to leave, yelling and crying on the phone. The schizophrenic guy talking to imaginary people. The ones alone in their rooms down the hall, laughing and carrying on conversations. I remember all of them.</p>
+      <p>I journaled: "I used to run, strength train, bike to work and write sermons." Feeling trapped, walking in circles. The shower dribbling water, huddling in the corner to get wet. The yoga mat calling me. Snack time: pb crackers, Oreos. Stepping out at 1 a.m. for sleep meds and pb crackers.</p>
+    </div>
+
+    <span class="section-num">II.</span>
+    <div class="section-title">Dr. Bhatia</div>
+
+    <div class="body-text">
+      <p>A couple of mornings a week they brought us individually into Dr. Bhatia's office. She sat in the center of the room, the large window to the hospital courtyard behind her, surrounded by three training psychiatrists and the social worker, big table in a small room. Looking in her eyes across the table. "It sounds like you've tried a lot of different medications. That's bad practice — cycling through them before reaching maximum therapeutic effect." She was talking about my psychiatrist. I didn't know who was right.</p>
+      <p>I read a book someone left behind — <em>The Butlerian Jihad</em>, a late prequel in the <em>Dune</em> series. Talked about it with one of the attending psychiatrists and with my roommate Pete, who had read some of the series too. I couldn't read it when I got home, even though I'd had Mom bring it to me while still inside after I finished the <em>Jihad</em>.</p>
+    </div>
+  </div>
+  <span class="page-number right">38</span>
+</div>
+
+<!-- ═══ P39 — THE HOSPITAL text 3 ═══ -->
+<div class="page page-light" id="p39">
+  <div class="page-inner">
+    <div class="running-header"><span>The Hospital</span><span>39</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">The Visits</div>
+
+    <div class="body-text">
+      <p>Heather took all my calls while I was in there. She started her new job at the museum, while packing boxes, selling furniture on Marketplace, homeschooling the kids. She visited me three times during my ten days. Once to see me. Once for the notary, house closure papers, my signature. Walking out of the ward with Heather and the social worker to meet the notary felt like freedom. A third time because the notary had taken the day off, so we had to reschedule and hire a mobile one. We quietly signed papers and stamped our thumbs.</p>
+      <p>On the visits, we sat in eyeshot of the staff, in the main room where we spent all our time eating, playing cards, dominoes, watching TV. We talked quietly. Time limit was thirty minutes.</p>
+    </div>
+
+    <div class="pull-quote">"You had to move as a child because of choices your dad made. Now the same thing you've worked so hard to avoid is happening to you and your family."</div>
+
+    <div class="body-text">
+      <p>Sam, a woman with a hijab, took me to a quiet room. She asked questions. "You had to move as a child because of choices your dad made. Now the same thing you've worked so hard to avoid is happening to you and your family. This is a major trigger for you — the thought of losing the farm is triggering your depression."</p>
+      <p>That had never occurred to me. That connection. Not sure it helped, but something in it rang truer than anything else I'd heard that week.</p>
+    </div>
+
+    <span class="section-num">IV.</span>
+    <div class="section-title">The Fall Festival</div>
+
+    <div class="body-text">
+      <p>A few days in, the staff hosted a fall festival for the residents — dressed as farmers, aliens, superheroes. Residents walked around to make crafts, play games, collect candy. I sat in a corner doodling. Curvy lines, each one outlining the last, infinitely. Someone leaned over and said it was cool.</p>
+    </div>
+  </div>
+  <span class="page-number right">39</span>
+</div>
+
+<!-- ═══ P40 — THE HOSPITAL close ═══ -->
+<div class="page page-light" id="p40">
+  <div class="page-inner">
+    <div class="running-header"><span>The Hospital</span><span>40</span></div>
+
+    <span class="section-num">V.</span>
+    <div class="section-title">Pete</div>
+
+    <div class="inset-right">
+      <img src="photos-review/matt-sweetgum-tree-littlejohn.webp" alt="Matt under the sweetgum tree">
+      <div class="caption">Littlejohn Road, winter 2025.</div>
+    </div>
+
+    <div class="body-text">
+      <p>Pete said, "You've been a great roommate. The best one I've had." I thought I was rather a bummer. He had been there weeks before me, multiple times. Still waiting on his family to sort out where he would stay when he got out. He said, "We're not supposed to do this. But I can give you my number if you want." He jotted it on a scrap of paper. I crammed it in my pocket in a hurry, then lost it a few days later.</p>
+      <p>When I got out, I lived in my parents' camper for a month. Heather and the kids lived with her parents.</p>
+      <p>A few weeks later, Dad parked the camper at Michael Tucker Park so I could help drive the kids back and forth to tech week rehearsals — CAST Kidz was doing <em>Annie</em>. We had a microwave Thanksgiving dinner. Chicken nuggets with Chick-fil-A sauce and veggies. We played foxtail toss. I taught the kids Texas Hold'em Poker, the game I'd learned in the hospital.</p>
+      <p>It was good to be together.</p>
+    </div>
+
+    <div class="pull-quote">"I needed you to be gone. I couldn't take anymore. You were fighting me at every turn."</div>
+
+    <div class="body-text">
+      <p>This week, I met Kyle for coffee. I told him I'd been angry with him in there. He laughed. I reminded him, "You called it a grippy sock vacation. That was not my experience." He asked, "Did you have the guy that ate oatmeal with his hands?" No. My best story was the badminton one.</p>
+      <p>Heather asked me that evening if I thought it was good for me, in hindsight. I said it was — it was and it wasn't. "I needed you to be gone. I couldn't take anymore. You were fighting me at every turn. I couldn't do it."</p>
+      <p>We sat quietly for a while at the table under the sweetgum tree. The shadows were leaning across the yard.</p>
+    </div>
+
+    <div class="three-dots">· · ·</div>
+    <div class="source-note">Published at southernlegends.us, April 2026.</div>
+  </div>
+  <span class="page-number right">40</span>
+</div>
+
+<!-- ═══ P41 — NO SHADE OPENER ═══ -->
+<div class="page page-dark" id="p41">
+  <div class="profile-photo-bg" style="background-image:url('../public/images/journal/no-shade-woodcut.webp');background-size:cover;background-position:center;opacity:0.3;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,25,23,0.98) 0%, rgba(28,25,23,0.75) 45%, rgba(28,25,23,0.45) 100%);z-index:1;"></div>
+  <div class="opener-content">
+    <div class="category-pill">Essay</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.5);margin:0.08in 0;">
+    <div class="opener-title">No Shade</div>
+    <div class="opener-subtitle">"Last Easter I was manic. This Easter someone handed me a cup."</div>
+    <div class="opener-location">Anniston · Jacksonville · Spring 2026</div>
+  </div>
+  <div class="cover-top-url">southernlegends.us</div>
+</div>
+
+<!-- ═══ P42 — NO SHADE text 1 ═══ -->
+<div class="page page-light" id="p42">
+  <div class="page-inner">
+    <div class="running-header"><span>No Shade</span><span>42</span></div>
+    <div class="body-text">
+      <p class="drop-cap">Last Easter I was manic. We went to Anniston First, where I used to be associate pastor. Sporting purple pants and a pink tie. Early in the service I slipped out to the narthex for snacks, coffee, and handshakes with latecomers. A strange freedom, not leading from the front. I joined Heather in the pews near the back. The choir robed, leading hymns. The bells rang. At the end, the Hallelujah chorus. I videoed the service, all the music parts, from the pews. Shared on Facebook.</p>
+    </div>
+
+    <div class="inset-right">
+      <img src="photos-review/anniston-first-umc-interior.jpg" alt="Anniston First UMC interior">
+      <div class="caption">Anniston First United Methodist Church. The screen said what it said.</div>
+    </div>
+
+    <div class="body-text">
+      <p>I had resigned the first week of Lent. That morning we sat the kids down in our living room. The kids cried. <em>Are we leaving the church?</em> We said no. Then I FaceTimed Jason. He was busy teaching but he answered. "I know you're doing this because you feel like you have to," he said. "I'm happy for you, and I'll be praying for you." Took the kids to IHOP.</p>
+      <p>Before and after the Easter service, everyone was glad to see us. Jason found me and pulled me into a hug. "It's so good to see you, my friend. Happy Easter! I love those pants!"</p>
+      <p>I thought I was fine. Better than fine. Better than ever.</p>
+    </div>
+
+    <span class="section-num">I.</span>
+    <div class="section-title">The Weight Returns</div>
+
+    <div class="body-text">
+      <p>We became too busy for church after that. Sabbath gave in to the farm hustle. The farm sales dried up mid-summer. Farmers markets slow in the heat. Heather's health was declining. The surgery was finally scheduled after a year of waiting. Credit card bills piling up. Letting go of staff we'd taken on a month or two earlier. Then the weight of depression started to return.</p>
+    </div>
+  </div>
+  <span class="page-number right">42</span>
+</div>
+
+<!-- ═══ P43 — NO SHADE text 2 ═══ -->
+<div class="page page-light" id="p43">
+  <div class="page-inner">
+    <div class="running-header"><span>No Shade</span><span>43</span></div>
+
+    <div class="inset-right">
+      <img src="photos-review/matt-jason-easter-2025.webp" alt="Matt and Jason Wright, Easter 2025">
+      <div class="caption">Matt and Jason Wright, Easter 2025. The smile can cost something.</div>
+    </div>
+
+    <div class="body-text">
+      <p>I made a few feeble attempts to return to church. Folks were kind. "It's good to see you." I told them I had been diagnosed bipolar. That the resignation was done in a manic episode, and the reason we might lose the farm. They hugged me. "I'm sorry, I understand."</p>
+      <p>I couldn't sing. Played on my phone during the sermon. Deflated. Slipping out the side door just before the service ended to sit in my car while Heather and the kids caught up with friends. Hating myself for resigning while manic. Two decades gone. Everyone cruising along.</p>
+      <p>In the hospital, I jabbed at God in a notebook.</p>
+    </div>
+
+    <span class="section-num">II.</span>
+    <div class="section-title">Muscle Memory</div>
+
+    <div class="body-text">
+      <p>After we moved into the trailer, it was too hard for Heather too. We took the longest break I've ever taken from church.</p>
+      <p>Then muscle memory kicked in. I started listening again to the <em>Pray As You Go</em> Jesuit podcast on mornings as I walked. The stories didn't land. They still don't always.</p>
+      <p>The only thing throughout was bedtime prayer with the kids. Lighting a candle, singing "walk in the light, the beautiful light."</p>
+    </div>
+
+    <div class="pull-quote">"After months of not attending church at all. After feeling like maybe I had lost my faith. After wondering if resurrection was even possible, let alone beginning."</div>
+  </div>
+  <span class="page-number right">43</span>
+</div>
+
+<!-- ═══ P44 — NO SHADE text 3 ═══ -->
+<div class="page page-light" id="p44">
+  <div class="page-inner">
+    <div class="running-header"><span>No Shade</span><span>44</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">Andy Named Me</div>
+
+    <div class="body-text">
+      <p>This Easter was our second Sunday visiting Jacksonville First Methodist. I knew this room. I'd led worship here once a week for a year and a half. We sat in the back row. Andy, the pastor, an old friend from my Weaver days. During the service, he asked if anyone had been invited to help serve communion. No one had. He looked me square in the eye and invited me by name. "I'm going to ask my friend Matt Headley to help me serve communion."</p>
+      <p>I was holding the bulletin. I felt like Mary, shocked to be named. I set it in the pew and walked to the front of the room, next to the communion table.</p>
+      <p>After months of not attending church at all. After feeling like maybe I had lost my faith. After wondering if resurrection was even possible, let alone beginning.</p>
+      <p>The cup in my hands, the bread in his. Looking in the eyes of the people who came forward. The words came the way they always had. "The blood of Jesus, shed for you."</p>
+    </div>
+
+    <div class="inset-right">
+      <img src="photos-review/matt-heather-easter-2026.webp" alt="Matt and Heather, Easter 2026">
+      <div class="caption">Matt and Heather, Easter 2026.</div>
+    </div>
+
+    <div class="body-text">
+      <p>After the service Andy walked up to me. Said: "Thank you. Sorry I sprung that on you. You're a talented musician and a great pastor." We agreed to get coffee soon.</p>
+      <p>A friend met me for coffee on Easter week. She has bipolar too. We sat by the window, my request, late morning light in her eyes. "Your ministry will be stronger because of what you've been through. Sharing your story can help others. It helped me."</p>
+      <p>"You can be in ministry without working at a church." I knew that. But it was different hearing it from a former parishioner.</p>
+    </div>
+  </div>
+  <span class="page-number right">44</span>
+</div>
+
+<!-- ═══ P45 — NO SHADE close ═══ -->
+<div class="page page-light" id="p45">
+  <div class="page-inner">
+    <div class="running-header"><span>No Shade</span><span>45</span></div>
+
+    <div class="body-text">
+      <p>This week we started reading Harry Potter with the kids again, like we used to years ago. Starting from <em>The Sorcerer's Stone</em>. Soren reads it aloud for us now. Then we light the candle and sing.</p>
+    </div>
+
+    <div class="scan-box">
+      <div>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=65x65&data=https://southernlegends.us/essays/no-shade" alt="QR" class="qr-img">
+      </div>
+      <div class="scan-label">Scan to hear "Walk in the Light" — the bedtime recording referenced in this essay. southernlegends.us/essays/no-shade</div>
+    </div>
+
+    <div class="inset-photo-right" style="margin-top:0.14in;">
+      <img src="photos-review/bedtime-candle.webp" alt="The bedtime candle">
+      <div class="caption">The candle.</div>
+    </div>
+
+    <div class="body-text" style="margin-top:0.1in;">
+      <p>She told me my experience would make me more effective in ministry. "You don't have to be working at a church to do ministry." I'm starting to believe her.</p>
+    </div>
+
+    <div class="three-dots">· · ·</div>
+    <div class="source-note">Published at southernlegends.us, April 2026.</div>
+  </div>
+  <span class="page-number right">45</span>
+</div>
+
+<!-- ═══ P46 — PHOTO BREAK: Bloom Bar full bleed ═══ -->
+<div class="page" id="p46" style="background:#1C1917;">
+  <div class="full-bleed-photo" style="background-image:url('photos-review/bloom-bar-heather-church-lot.jpg');"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,25,23,0.85) 0%, rgba(28,25,23,0.1) 55%, rgba(28,25,23,0) 100%);z-index:1;"></div>
+  <div class="full-bleed-caption">Heather Headley in the Bloom Bar. Spring 2025.</div>
+</div>
+
+<!-- ═══ P47 — BLOOM BAR ESSAY OPENER ═══ -->
+<div class="page page-light" id="p47" style="background:var(--warm);">
+  <div class="page-inner" style="justify-content:center;">
+    <div style="margin-bottom:0.15in;">
+      <div style="font-family:var(--ff-body);font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:0.1in;">Essay</div>
+      <div class="essay-title-stacked">The<br>Bloom<br>Bar</div>
+      <hr class="gold-rule" style="margin:0.18in 0 0.14in;">
+      <div style="font-family:var(--ff-head);font-size:11pt;font-style:italic;color:var(--text);line-height:1.5;margin-bottom:0.08in;">"We kept it anyway. We didn't know why."</div>
+      <div class="essay-byline">By Matt Headley — Essay</div>
+    </div>
+    <div style="flex:1;"></div>
+    <div style="font-family:var(--ff-body);font-size:8pt;color:var(--text-light);line-height:1.5;max-width:3.8in;">
+      This essay is a scaffold. The structure is here. The key lines are placed. The gaps are marked. Matt fills them before the print deadline.
+    </div>
+  </div>
+  <span class="page-number right">47</span>
+</div>
+
+<!-- ═══ P48 — BLOOM BAR essay: The Object + The Trip ═══ -->
+<div class="page page-light" id="p48" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>The Bloom Bar</span><span>48</span></div>
+
+    <span class="section-num">I.</span>
+    <div class="section-title">The Object</div>
+
+    <div class="scaffold">
+      <strong>Scaffold — Section I: The Object.</strong> Describe the Bloom Bar physically. It started life as a horse trailer. Someone in Florida converted it into a hat bar — a retail display unit, elegant, white, high-end. You drove it back to Alabama. It became a mobile flower bar. Describe what it looks like: the exterior, the way flowers sit in it, what it looks like parked at the farmers market versus what it looks like sitting in your father-in-law's yard.<br><br>
+      The question underneath this section: what does beauty look like when it's parked somewhere it doesn't belong?<br><br>
+      <strong>Key line — place this at the end of the section:</strong><br>
+      "My father-in-law moved the Bloom Bar to the yard while I was in the hospital."<br><br>
+      <strong>Gap questions:</strong> What does the Bloom Bar look like in the morning light in the yard? What did your father-in-law say when he moved it, if anything? What did you feel when you came home and it was there?
+    </div>
+
+    <span class="section-num" style="margin-top:0.15in;">II.</span>
+    <div class="section-title">The Trip</div>
+
+    <div class="scaffold">
+      <strong>Scaffold — Section II: The Trip.</strong> The drive to Florida to get it. You were manic. You didn't know you were manic — you thought you were having one of the best ideas you'd ever had. Your son Noah was with you. You were sunburned and proud by the time you got back.<br><br>
+      Write the scene of the drive, or one moment in it. You don't have to name the mania directly. Let the reader feel the certainty — the particular confidence of a manic episode, the sense that this is obviously the right thing and anyone who doesn't see it isn't paying attention.<br><br>
+      <strong>Key line — place this near the end of the section:</strong><br>
+      "We drove to Orlando to get it — my son and I, sunburned and proud."<br><br>
+      <strong>Gap questions:</strong> What did Noah say on the drive? Was there a moment where you knew something was off? What did the trailer look like when you first saw it?
+    </div>
+
+    <div class="inset-photo-right">
+      <img src="photos-review/bloom-bar-tacoma-hitched.jpg" alt="The Tacoma and the Bloom Bar">
+      <div class="caption">The Tacoma and the Bloom Bar. May 2025.</div>
+    </div>
+  </div>
+  <span class="page-number right">48</span>
+</div>
+
+<!-- ═══ P49 — BLOOM BAR essay: What We Sold + What Heather Did ═══ -->
+<div class="page page-light" id="p49" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>The Bloom Bar</span><span>49</span></div>
+
+    <span class="section-num">III.</span>
+    <div class="section-title">What We Sold</div>
+
+    <div class="scaffold">
+      <strong>Scaffold — Section III: What We Sold.</strong> The truck. The 2018 Tacoma. You had used it to pull the Bloom Bar trailer. You sold it to survive the period after the hospitalization — the debt, the rebuilding, the months where income was not coming in and expenses were.<br><br>
+      This section should be short. Let it be short. The brevity is the point.<br><br>
+      <strong>Key line — use verbatim:</strong><br>
+      "I sold my truck. A 2018 Toyota Tacoma — my dream truck, the one I'd pulled the Bloom Bar trailer with."<br><br>
+      <strong>Gap questions:</strong> Who did you sell it to? Was it a private sale or did you take it somewhere? What did it feel like to drive away from it the last time?
+    </div>
+
+    <span class="section-num" style="margin-top:0.15in;">IV.</span>
+    <div class="section-title">What Heather Did</div>
+
+    <div class="scaffold">
+      <strong>Scaffold — Section IV: What Heather Did.</strong> The pitch to Oak Meadow Event Center in Ohatchee. Heather made arrangements from flowers they'd grown together — or flowers she'd grown after the farm chapter ended, it depends on the timeline, check this — and brought them to the venue as a portfolio. A tour. They were polite. They did not give her a referral. Venues don't give referrals to florists they haven't worked with, and she hadn't worked with them.<br><br>
+      <strong>Key lines — use verbatim:</strong><br>
+      "Heather drove home deflated."<br>
+      "We kept it anyway. We didn't know why."<br><br>
+      <strong>Gap questions:</strong> What was in the arrangements she brought? What exactly did they say? How long ago was this, relative to now? What was the Bloom Bar doing during this period — still in the yard?
+    </div>
+  </div>
+  <span class="page-number right">49</span>
+</div>
+
+<!-- ═══ P50 — BLOOM BAR essay: The Turn + The Poem ═══ -->
+<div class="page page-light" id="p50" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>The Bloom Bar</span><span>50</span></div>
+
+    <span class="section-num">V.</span>
+    <div class="section-title">The Turn</div>
+
+    <div class="scaffold">
+      <strong>Scaffold — Section V: The Turn.</strong> October 18, 2026. The Aisle — Northeast Alabama's bridal expo at the Anniston Museums and Gardens. The Bloom Bar is the centerpiece. Oak Meadow is listed as a vendor. The venue that said no is now being invited into a room that Matt and Heather are building.<br><br>
+      This is not a revenge narrative. This is something quieter. Find the word for it.<br><br>
+      <strong>Key line options — use one or earn the right not to:</strong><br>
+      "The people who said no are being invited into a room Matt and Heather are building."<br>
+      "The Bloom Bar didn't sit there doing nothing. It was waiting."<br>
+      "The bipolar episode, as brutal as it was, may have stripped away enough of the old identity to make room for this one."<br><br>
+      <strong>Gap questions:</strong> When did you first know this was going to work — not the expo, but the arc? Was there a single moment? Did you call Heather? What did she say?
+    </div>
+
+    <span class="section-num" style="margin-top:0.12in;">VI.</span>
+    <div class="section-title">The Poem</div>
+
+    <div class="scaffold" style="margin-bottom:0.1in;">
+      <strong>Scaffold — Section VI: The Poem.</strong> May 14, 2026 — the farmers market. A man named Brody had a table with a fountain pen, a red tablecloth, a wax seal, and a sign: Free Poetry. You told him the story of the Bloom Bar. He wrote Heather a poem on the spot. Write this scene. Then include the poem verbatim.
+    </div>
+
+    <div class="poem-box">
+      <div class="poem-box-label">
+        INSERT BRODY'S POEM VERBATIM<br>
+        <span style="font-family:var(--ff-body);font-size:7.5pt;color:var(--text-light);font-style:italic;">Get from Brody before print deadline — May 14, 2026 farmers market.</span>
+      </div>
+    </div>
+  </div>
+  <span class="page-number right">50</span>
+</div>
+
+<!-- ═══ P51 — BLOOM BAR essay: What It Means (close) ═══ -->
+<div class="page page-light" id="p51" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>The Bloom Bar</span><span>51</span></div>
+
+    <span class="section-num">VII.</span>
+    <div class="section-title">What It Means</div>
+
+    <div class="scaffold">
+      <strong>Scaffold — Section VII: What It Means.</strong> This is the close. End with an image, not an argument. The essay has been building toward something — name it obliquely, or don't name it at all, but let the reader feel it in the final image you choose.<br><br>
+      <strong>Key lines to use or earn the right to leave out:</strong><br>
+      "I've never been more proud of something that once made me so sad."<br>
+      "This feels like the easiest thing I've ever done. But it's really taken me twenty years of hardship to get here."<br><br>
+      <strong>Note:</strong> Don't end tidy. The essay should end on the edge of something, not across it. The reader should feel like they're standing at the door, not inside the room.
+    </div>
+
+    <div style="margin-top:0.18in;border-top:0.5pt solid var(--border);padding-top:0.12in;">
+      <div style="font-family:var(--ff-body);font-size:7.5pt;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:0.08in;">Gap questions to answer before writing</div>
+      <div style="font-family:var(--ff-body);font-size:7.5pt;color:var(--text-light);line-height:1.6;">
+        1. What does the Bloom Bar look like in the morning light in your father-in-law's yard?<br>
+        2. Did your father-in-law say anything when he moved it?<br>
+        3. What did Noah say on the drive to Orlando?<br>
+        4. What was in Heather's arrangements when she pitched Oak Meadow?<br>
+        5. What exactly did Oak Meadow say when they passed?<br>
+        6. When did you first know the arc was going somewhere — not the expo, the arc?<br>
+        7. What did you feel when you learned Oak Meadow signed on to The Aisle?<br>
+        8. How did you describe the Bloom Bar story to Brody at the market?<br>
+        9. Do you have the poem? Can you get it from Brody before the print deadline?<br>
+        10. What image do you want the reader to carry out of the essay?
+      </div>
+    </div>
+  </div>
+  <span class="page-number right">51</span>
+</div>
+
+<!-- ═══ P52 — CLT ESSAY EXCERPT p.1 ═══ -->
+<div class="page clt-bg" id="p52" style="background:#292524;">
+  <div class="page-inner">
+    <div class="running-header light"><span>Excerpt — Essay</span><span>52</span></div>
+    <div class="topo-overlay"></div>
+    <div class="clt-eyebrow">Excerpt — Essay</div>
+    <div class="clt-title">Chief Ladiga, 1832</div>
+    <div class="clt-subtitle">"I used to call it 'la-dee-ga.' I didn't know how else to say it. I also didn't know whose land I was running on."</div>
+    <hr class="gold-rule" style="border-color:rgba(202,138,4,0.4);margin:0.1in 0;">
+
+    <div style="float:right;width:1.5in;margin:0 0 0.1in 0.14in;">
+      <img src="../public/images/profiles/chief-ladiga-trail/chief-ladiga-hedcut.webp" alt="Chief Ladiga" style="width:100%;display:block;">
+      <div style="font-family:var(--ff-body);font-size:7pt;color:rgba(250,250,247,0.5);font-style:italic;margin-top:0.05in;line-height:1.3;">Chief Ladiga, Muscogee Creek leader, c. 1832.</div>
+    </div>
+
+    <div class="body-text light">
+      <p class="drop-cap" style="color:rgba(250,250,247,0.92);">There are trails you run to get fit, and trails you run to get away, and occasionally there is a trail that becomes the shape of a decade. The Chief Ladiga Trail is 33 miles of rail corridor between Anniston and Piedmont, Alabama, along Cedar Springs Creek. I've been on it in every season, in every kind of light, and it has been the background of more of my interior life than I can fully account for.</p>
+      <p>I used to call it "la-dee-ga." I heard it that way, or I made it up because I didn't know. It wasn't until I started writing this that I learned it's "lah-DEE-gah" — the name of a Muscogee Creek chief who was removed from this land under the Indian Removal Act of 1832. He signed the Treaty of Cusseta. The land I was running on was his. I didn't know that. For years I didn't know that.</p>
+      <p>I was at JSU when I first found the trail. I had an apartment that backed up to the corridor before it was fully paved. Heather and I were dating. We ran it. Then I was at the Weaver parsonage for seven years — a house that sits practically on top of the trail, close enough that I could hear the creek from the back steps. I wrote sermons in that house. I ran the trail between drafts. I cried a lot on that trail, as I remember.</p>
+    </div>
+  </div>
+  <span class="page-number right light">52</span>
+</div>
+
+<!-- ═══ P53 — CLT ESSAY EXCERPT p.2 ═══ -->
+<div class="page clt-bg" id="p53" style="background:#292524;">
+  <div class="page-inner">
+    <div class="running-header light"><span>Excerpt — Essay</span><span>53</span></div>
+    <div class="topo-overlay"></div>
+
+    <div class="body-text light">
+      <p>Noah was maybe four. We were on the trail near the Weaver section on a morning in April — pink mimosa blooms, morning dew still on the gravel, the particular hush of early spring. He pointed at a plastic bag caught in the fence at the trail edge. "Why do people leave trash?" he asked. I said I didn't know. He thought about it. "Because they're broken," he said.</p>
+    </div>
+
+    <div class="pull-quote" style="color:var(--accent);">"Because they're broken."</div>
+
+    <div class="body-text light">
+      <p>I did not have a better answer. I still don't.</p>
+      <p>We moved to the farm — a property in Pleasant Valley that sits on the Choccolocco Creek watershed, right there on the trail corridor. For years there had been talk of extending the trail south through that section, behind the Walmart distribution center, along the creek. I watched the clearing from our property. I technically trespassed on the right-of-way before it was paved, walking the gravel bed of what would eventually become a finished trail.</p>
+      <p>The grand opening was on a rainy Saturday. Ciara Smith was vice mayor then. She gave a speech. Someone cut a ribbon. "Four million dollars," somebody near me said, reading the signage. I stood in the rain thinking about the number of times I had already walked this section illegally and whether that made me an early adopter or a trespasser.</p>
+      <p>Later — after the farm, after the hospitalization, after the rebuilding — I was on the trail near the trailhead and Mayor Ciara Smith and Patrick rode up on bikes and stopped. "Hey Matt!" They asked what I was doing. I had a post-hole digger. It's a long story. She laughed. Some things don't need explanation if you've lived in a place long enough.</p>
+    </div>
+
+    <div class="excerpt-close">
+      Chief Ladiga, 1832 is published in full at southernlegends.us. A book about the trail is in progress.<br>
+      <span style="color:rgba(250,250,247,0.4);">The Chief Ladiga Trail connects Anniston to Piedmont, Alabama, along 33 miles of rail-to-trail corridor.</span>
+    </div>
+  </div>
+  <span class="page-number right light">53</span>
+</div>
+
+<!-- ═══ P54 — CLT TRAIL MAP ═══ -->
+<div class="page" id="p54" style="background:#1C1917;">
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0.3in;">
+    <img src="../merch/chief-ladiga-trail/clt-tshirt-back-v3.svg" alt="Chief Ladiga Trail map" style="width:100%;max-height:7.2in;object-fit:contain;">
+  </div>
+  <div style="position:absolute;bottom:0.25in;left:0;right:0;text-align:center;font-family:'Source Sans 3',sans-serif;font-size:7pt;color:rgba(250,250,247,0.45);letter-spacing:0.08em;">
+    Chief Ladiga Trail · 33 miles · Anniston to Piedmont, Alabama · chiefladiga.org
+  </div>
+</div>
+
+<!-- ═══ P55 — AD: Foothills Magazine ═══ -->
+<div class="page ad-page-dark" id="p55">
+  <div class="page-inner" style="justify-content:center;align-items:flex-start;gap:0;">
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.14in;">
+      <div class="ad-brand" style="font-size:40pt;color:var(--light);line-height:1;letter-spacing:0.12em;">FOOTHILLS</div>
+      <div class="ad-subhead" style="color:rgba(250,250,247,0.7);letter-spacing:0.06em;">Northeast Alabama's Magazine</div>
+      <hr class="gold-rule" style="margin:0.06in 0;border-color:rgba(202,138,4,0.6);">
+      <div class="ad-body" style="color:rgba(250,250,247,0.82);">
+        Foothills Magazine covers the culture, people, and places of Northeast Alabama. Published in Anniston, it has been the region's editorial record for the stories that don't make the daily news — the makers, the landscapes, the seasons, the slow-moving changes that only become visible over years. Find it at selected retailers across the region, or subscribe online.
+      </div>
+      <div style="margin-top:0.18in;">
+        <div class="ad-url">foothillsmagazine.com</div>
+      </div>
+    </div>
+    <div style="margin-top:0.2in;">
+      <div class="ad-gratitude" style="color:rgba(250,250,247,0.4);">Advertisement — with gratitude</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P56 — AD: Anniston Star ═══ -->
+<div class="page ad-page-warm" id="p56">
+  <div class="page-inner" style="justify-content:center;align-items:flex-start;">
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.14in;">
+      <div style="font-family:var(--ff-body);font-size:7.5pt;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-light);">Est. 1883</div>
+      <div class="ad-brand" style="font-size:32pt;color:var(--dark);line-height:1.1;letter-spacing:0.06em;">The Anniston Star</div>
+      <div class="ad-subhead" style="font-size:11pt;color:var(--text-light);letter-spacing:0.02em;">Covering Calhoun County since 1883</div>
+      <hr class="gold-rule" style="margin:0.06in 0;">
+      <div class="ad-body" style="color:var(--text);">
+        Local journalism is the connective tissue of a community. The Anniston Star has reported on this city through every chapter of its history — including the hard ones. The burning bus. The courthouse steps. The base closures. The comebacks. The stories no national outlet has room for.<br><br>
+        The paper of record for Northeast Alabama is still here. Subscribe and support the journalism that keeps a community accountable to itself.
+      </div>
+      <div style="margin-top:0.18in;">
+        <div class="ad-url" style="color:var(--accent);">annistonstar.com</div>
+      </div>
+    </div>
+    <div style="margin-top:0.16in;">
+      <div class="ad-gratitude">Advertisement — with gratitude</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P57 — AD: Noble Bank ═══ -->
+<div class="page ad-page-dark" id="p57">
+  <div class="page-inner" style="justify-content:center;align-items:flex-start;">
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.14in;">
+      <div class="ad-brand" style="font-size:38pt;color:var(--light);line-height:1;letter-spacing:0.08em;">NOBLE BANK</div>
+      <div class="ad-subhead" style="color:rgba(250,250,247,0.7);letter-spacing:0.04em;font-size:12pt;">Community Banking for Northeast Alabama</div>
+      <hr class="gold-rule" style="margin:0.06in 0;border-color:rgba(202,138,4,0.6);">
+      <div class="ad-body" style="color:rgba(250,250,247,0.82);">
+        Noble Bank believes in the people building this community. We're proud to support <em>Southern Legends</em> and The Aisle — Northeast Alabama's bridal expo, October 18, 2026, at the Anniston Museums and Gardens.<br><br>
+        When you bank locally, you invest in the community you live in. Noble Bank has been doing that for Northeast Alabama for generations.
+      </div>
+      <div style="margin-top:0.18in;">
+        <div class="ad-url">noblebank.com</div>
+      </div>
+      <div style="margin-top:0.08in;">
+        <div class="ad-fine" style="color:rgba(250,250,247,0.35);">Noble Bank. Member FDIC.</div>
+      </div>
+    </div>
+    <div style="margin-top:0.1in;">
+      <div class="ad-gratitude" style="color:rgba(250,250,247,0.35);">Advertisement — with gratitude</div>
+      <div style="font-family:var(--ff-body);font-size:6.5pt;color:rgba(250,250,247,0.22);margin-top:0.06in;font-style:italic;">[Pending final confirmation from April Phillips — remove this line before print]</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P58 — AD: UWECA + Imagination Library ═══ -->
+<div class="page ad-page-warm" id="p58">
+  <div class="page-inner" style="padding-top:0.35in;padding-bottom:0.35in;">
+    <div class="split-half" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.1in;">
+      <div style="font-family:var(--ff-body);font-size:7pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);">Community Partner</div>
+      <div class="ad-brand" style="font-size:16pt;color:var(--dark);line-height:1.2;letter-spacing:0.03em;">United Way of East Central Alabama</div>
+      <div style="font-family:var(--ff-body);font-size:9pt;color:var(--text-light);">Calhoun County · Serving those who serve others</div>
+      <hr class="gold-rule" style="margin:0.06in 0;width:2in;">
+      <div style="font-family:var(--ff-body);font-size:9pt;color:var(--text);line-height:1.5;">UWECA connects community resources with local needs — funding programs that address education, health, and financial stability across Calhoun County.</div>
+      <div style="font-family:var(--ff-body);font-size:9.5pt;color:var(--accent);margin-top:0.08in;">uweca.org</div>
+    </div>
+
+    <hr class="split-divider" style="margin:0.1in 0;">
+
+    <div class="split-half" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.1in;">
+      <div style="font-family:var(--ff-body);font-size:7pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);">Community Partner</div>
+      <div class="ad-brand" style="font-size:14pt;color:var(--dark);line-height:1.2;letter-spacing:0.02em;">Dolly Parton's Imagination Library</div>
+      <div style="font-family:var(--ff-body);font-size:9pt;color:var(--text-light);">A book a month, from birth to kindergarten, for every child in Alabama</div>
+      <hr class="gold-rule" style="margin:0.06in 0;width:2in;">
+      <div style="font-family:var(--ff-body);font-size:9pt;color:var(--text);line-height:1.5;">Every child enrolled receives a new, age-appropriate book by mail each month — free, from birth through the month they begin kindergarten.</div>
+      <div style="font-family:var(--ff-body);font-size:9.5pt;color:var(--accent);margin-top:0.08in;">imaginationlibrary.com</div>
+    </div>
+
+    <div style="margin-top:0.1in;border-top:0.5pt solid var(--border);padding-top:0.08in;">
+      <div style="font-family:var(--ff-body);font-size:7.5pt;color:var(--text-light);font-style:italic;line-height:1.5;">10% of Southern Legends proceeds support the Imagination Library and United Way programs in Calhoun County.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P59 — PHOTO BREAK: kids + Bloom Bar ═══ -->
+<div class="page" id="p59" style="background:#1C1917;">
+  <div class="full-bleed-photo" style="background-image:url('photos-review/daughters-farmers-market-bloom-bar.jpg');"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,25,23,0.85) 0%, rgba(28,25,23,0.1) 55%, rgba(28,25,23,0) 100%);z-index:1;"></div>
+  <div class="full-bleed-caption">The Bloom Bar at the Anniston Farmers Market. 2025.</div>
+</div>
+
+<!-- ═══ P60 — GREEN TOMATO ═══ -->
+<div class="page page-light" id="p60">
+  <div class="page-inner">
+    <div class="running-header"><span>The Green Tomato</span><span>60</span></div>
+
+    <div style="display:flex;align-items:baseline;gap:0.1in;margin-bottom:0.06in;">
+      <div style="font-family:var(--ff-head);font-size:11pt;font-weight:700;color:var(--dark);letter-spacing:0.04em;">THE GREEN TOMATO</div>
+      <div style="font-family:var(--ff-body);font-size:7pt;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);">Calhoun County's Paper of Record</div>
+    </div>
+    <hr class="gold-rule">
+
+    <div style="font-family:var(--ff-head);font-size:14pt;font-weight:600;color:var(--dark);line-height:1.2;margin:0.1in 0 0.04in;">Vendor Dispute at Downtown Farmers Market Escalates Into Amateur Wrestling Match; Three Folding Chairs Damaged</div>
+    <div style="font-family:var(--ff-body);font-size:7.5pt;color:var(--text-light);margin-bottom:0.1in;font-style:italic;">Buford Tatum, Bureau Chief &nbsp;·&nbsp; The Green Tomato</div>
+
+    <div class="body-text">
+      <p>ANNISTON — Saturday's Downtown Anniston Farmers Market concluded with what market officials are characterizing as "a spirited exchange" between two vendors after an unresolved disagreement over the sourcing of heirloom tomatoes resulted in approximately eleven minutes of unscripted amateur wrestling near the kettle corn tent.</p>
+      <p>The incident, which began as what witnesses described as "a regular conversation about labeling," escalated when one vendor allegedly questioned whether the other's product was, in fact, grown locally. By the time market staff arrived, both individuals had relocated to the open paved area between the produce row and the soap-and-candle row and were, according to multiple shoppers, "going for it."</p>
+      <p>Three folding chairs sustained damage. A spokesperson for the City Parks and Recreation Department confirmed Tuesday that the cost of replacement would be approximately $84.</p>
+      <p>"We support our vendors," said market manager Cindy Pruitt in a statement Sunday. "Saturdays at the Downtown Anniston Farmers Market are about community, fresh local produce, and the kind of energetic exchanges that make a market vibrant. We are evaluating whether the events of yesterday fall within that vision." Pruitt confirmed that both vendors remain in good standing.</p>
+      <p>The kettle corn vendor, whose tent was located approximately six feet from the action, declined to comment but confirmed sales were unaffected.</p>
+      <p>Sources at the scene reported that both vendors at one point used a folding chair as what one witness identified as "a foreign object." Neither vendor has been suspended from the market.</p>
+      <p>Mayor Lyle Henley, who arrived approximately thirty minutes after the incident concluded, told reporters that "Saturday's events demonstrate the deep passion our community has for locally sourced agriculture." When asked whether wrestling would become a regular feature of the market, Henley said the City of Anniston was "open to feedback."</p>
+      <p>Market officials confirmed that all heirloom tomatoes sold Saturday were, to the best of their knowledge, locally grown.</p>
+    </div>
+
+    <div style="margin-top:0.1in;border-top:0.5pt solid var(--border);padding-top:0.08in;font-family:var(--ff-body);font-size:7pt;color:var(--text-light);font-style:italic;">
+      <em>The Green Tomato</em> will continue to monitor this developing story. Find more at thegreentomato.us
+    </div>
+  </div>
+  <span class="page-number right">60</span>
+</div>
+
+<!-- ═══ P61 — THE PULPIT TRUTH TEASER AD ═══ -->
+<div class="page ad-page-dark" id="p61">
+  <div class="topo-overlay"></div>
+  <div class="page-inner" style="justify-content:center;align-items:flex-start;gap:0;position:relative;z-index:5;">
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.14in;">
+      <div style="font-family:var(--ff-body);font-size:7pt;letter-spacing:0.16em;text-transform:uppercase;color:rgba(250,250,247,0.4);margin-bottom:0.06in;">Coming Soon</div>
+      <div class="ad-brand" style="font-size:28pt;color:var(--light);line-height:1.1;letter-spacing:0.06em;">The Pulpit Truth</div>
+      <hr class="gold-rule" style="margin:0.08in 0;border-color:rgba(202,138,4,0.6);">
+      <div style="font-family:var(--ff-head);font-size:14pt;font-style:italic;font-weight:300;color:rgba(250,250,247,0.75);line-height:1.4;max-width:3.5in;">
+        "When the church finally hears about itself."
+      </div>
+      <div class="ad-body" style="color:rgba(250,250,247,0.7);margin-top:0.1in;">
+        Christian institutional satire covering the evangelical church with the gravity it deserves. Dispatches from Zion Community Church. The annual report. The capital campaign. The sermon series that runs a few weeks too long.
+      </div>
+      <div style="margin-top:0.18in;">
+        <div class="ad-url">thepulpittruth.com</div>
+      </div>
+    </div>
+    <div style="margin-top:0.2in;">
+      <div class="ad-gratitude" style="color:rgba(250,250,247,0.3);">A companion publication to The Green Tomato</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P62 — MERCH ═══ -->
+<div class="page page-light" id="p62" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>Merch</span><span>62</span></div>
+    <div style="font-family:var(--ff-head);font-size:15pt;font-weight:500;color:var(--dark);margin-bottom:0.06in;">From the Headley Shop</div>
+    <hr class="gold-rule">
+
+    <div class="merch-item" style="margin-top:0.12in;">
+      <div class="merch-img" style="background:var(--dark);height:1.1in;display:flex;align-items:center;justify-content:center;">
+        <div style="font-family:var(--ff-rock);font-size:7pt;color:var(--accent);text-align:center;padding:0.05in;">BLOOM BAR<br>SHIRT</div>
+      </div>
+      <div class="merch-detail">
+        <div class="merch-name">Bloom Bar Staff Shirt</div>
+        The shirt Heather and the Bloom Bar team wear at The Aisle expo on October 18. Navy, Bloom Bar logo, limited run. Available at the expo booth.<br>
+        <span class="merch-price">$30</span>
+      </div>
+    </div>
+
+    <div class="merch-item">
+      <div class="merch-img" style="background:var(--dark);height:1.1in;display:flex;align-items:center;justify-content:center;">
+        <div style="font-family:var(--ff-rock);font-size:7pt;color:var(--accent);text-align:center;padding:0.05in;">WEDDING<br>VENDOR<br>LIFE</div>
+      </div>
+      <div class="merch-detail">
+        <div class="merch-name">Wedding Vendor Life</div>
+        For the people who set up at 7 a.m. and tear down at 10 p.m. with a smile on. The Aisle's vendor community shirt. Available at theaisle.app/merch and at the expo.<br>
+        <span class="merch-price">$28</span>
+      </div>
+    </div>
+
+    <div class="merch-item" style="border-bottom:none;">
+      <div class="merch-img" style="background:#3D6B4F;height:1.1in;display:flex;align-items:center;justify-content:center;">
+        <div style="font-family:var(--ff-rock);font-size:7pt;color:rgba(250,250,247,0.8);text-align:center;padding:0.05in;">CLT<br>TRAIL<br>SHIRT</div>
+      </div>
+      <div class="merch-detail">
+        <div class="merch-name">Chief Ladiga Trail Shirt</div>
+        33 miles of Northeast Alabama. Trail map on the back. For the runners, the walkers, the people who've cried on the Weaver section at 6 a.m. Available at southernlegends.us/merch.<br>
+        <span class="merch-price">$28</span>
+      </div>
+    </div>
+
+    <div style="margin-top:0.1in;display:flex;align-items:center;gap:0.12in;">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=60x60&data=https://theaisle.app/merch" alt="QR theaisle.app/merch" style="width:0.6in;height:0.6in;flex-shrink:0;">
+      <div style="font-family:var(--ff-body);font-size:8pt;color:var(--text-light);">theaisle.app/merch &nbsp;·&nbsp; southernlegends.us/merch</div>
+    </div>
+  </div>
+  <span class="page-number right">62</span>
+</div>
+
+<!-- ═══ P63 — SUPPORT THIS WORK ═══ -->
+<div class="page page-dark" id="p63">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg, #1C1917 0%, #2A4A36 50%, #3D1A0A 100%);"></div>
+  <div class="topo-overlay"></div>
+  <div style="position:relative;z-index:5;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0.5in 0.55in;">
+    <div style="font-family:var(--ff-rock);font-size:7.5pt;color:var(--accent);letter-spacing:0.12em;margin-bottom:0.12in;">Support This Work</div>
+    <div style="font-family:var(--ff-head);font-size:26pt;font-weight:300;color:var(--light);line-height:1.1;margin-bottom:0.16in;">Southern Legends<br>is reader-supported.</div>
+    <hr style="border:none;border-top:1pt solid rgba(202,138,4,0.5);margin:0 0 0.16in;width:3in;">
+    <div style="font-family:var(--ff-body);font-size:9.5pt;color:rgba(250,250,247,0.8);line-height:1.6;max-width:3.8in;margin-bottom:0.22in;">
+      No algorithms. No sponsors who decide what we cover. No paywall between these stories and the people they're about. Southern Legends is funded directly by readers who think independent literary journalism about Northeast Alabama is worth something.
+    </div>
+    <div style="font-family:var(--ff-body);font-size:9.5pt;color:rgba(250,250,247,0.8);line-height:1.6;max-width:3.8in;margin-bottom:0.22in;">
+      If something in this magazine stayed with you, that's the ask. Whatever feels right.
+    </div>
+    <div style="display:flex;align-items:center;gap:0.16in;margin-top:0.04in;">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=https://southernlegends.us/support" alt="QR southernlegends.us/support" style="width:0.7in;height:0.7in;flex-shrink:0;">
+      <div>
+        <div style="font-family:var(--ff-body);font-size:10pt;color:var(--accent);letter-spacing:0.04em;">southernlegends.us/support</div>
+        <div style="font-family:var(--ff-body);font-size:8pt;color:rgba(250,250,247,0.5);margin-top:0.04in;">Scan to support directly.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P64 — COMING IN VOL. 2 ═══ -->
+<div class="page page-light" id="p64" style="background:var(--warm);">
+  <div class="page-inner">
+    <div class="running-header"><span>Coming in Vol. 2</span><span>64</span></div>
+    <div style="font-family:var(--ff-head);font-size:18pt;font-weight:500;color:var(--dark);margin-bottom:0.06in;">Coming in Vol. 2</div>
+    <div style="font-family:var(--ff-body);font-size:8pt;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:0.08in;">Spring 2027</div>
+    <hr class="gold-rule">
+
+    <div class="vol2-teaser"><strong>Called Coffee</strong> — Jared Snider built a coffee shop on Noble Street that became something else: a gathering place. The story of what that means in a downtown that is still deciding what it wants to be. <span class="vol2-tease-sub">In progress.</span></div>
+    <div class="vol2-teaser"><strong>The Mayor</strong> — Mayor Ciara Smith-Roston is Anniston's first Black female mayor and its youngest ever. A profile and conversation about what that means, what she's building, and what the city looks like from inside the office. <span class="vol2-tease-sub">Interview in progress.</span></div>
+    <div class="vol2-teaser"><strong>Indigo Ridge Farms</strong> — A farm in the foothills with something to say about how food gets grown and who gets to grow it. <span class="vol2-tease-sub">Coming.</span></div>
+    <div class="vol2-teaser"><strong>Old Noble</strong> — Justin Hall and what he's doing with the old bank building on Noble Street. <span class="vol2-tease-sub">Coming.</span></div>
+    <div class="vol2-teaser"><strong>Will Clay</strong> — A profile in progress. <span class="vol2-tease-sub">Interview prep files on file.</span></div>
+
+    <div style="margin-top:0.2in;padding:0.12in;border:0.75pt solid var(--border);background:rgba(202,138,4,0.05);">
+      <div style="font-family:var(--ff-body);font-size:8.5pt;color:var(--text);line-height:1.55;">
+        Know someone who should be in Vol. 2?<br>
+        <span style="color:var(--accent);font-weight:600;">southernlegends.us/nominate</span>
+      </div>
+    </div>
+  </div>
+  <span class="page-number right">64</span>
+</div>
+
+<!-- ═══ P65 — CONTRIBUTORS ═══ -->
+<div class="page page-light" id="p65">
+  <div class="page-inner">
+    <div class="running-header"><span>Contributors</span><span>65</span></div>
+    <div class="back-section-head">Contributors</div>
+    <hr class="gold-rule">
+
+    <div class="contributor-block">
+      <img src="photos-review/matt-portrait-muddy-blue-eyes.jpg" alt="Matt Headley" class="contributor-photo">
+      <div>
+        <div class="contributor-name">Matt Headley</div>
+        <div class="contributor-bio">Matt Headley is the founder of Southern Legends and The Aisle. He lost a farm in Pleasant Valley, Alabama, spent time in a psychiatric hospital, and rebuilt in his in-laws' yard with a converted horse trailer that used to be a hat bar. He builds websites and software for local businesses, directs the Anniston Farmers Market, and writes about people who are still building something. He lives in Anniston with his wife Heather and their children.<br><br>
+        southernlegends.us &nbsp;·&nbsp; theaisle.app</div>
+      </div>
+    </div>
+
+    <hr class="gold-rule" style="margin:0.1in 0;">
+
+    <div class="back-body">
+      <strong>Photography</strong><br>
+      Personal photographs by Matt Headley, 2025–2026. Profile photographs courtesy of subjects. Jean Ellison photographs courtesy of Emil Loeken. Freedom Riders historical photographs courtesy of the National Park Service. Farmhouse and Bloom Bar photographs by Matt Headley.
+    </div>
+
+    <div class="back-body">
+      <strong>Illustration</strong><br>
+      Linocut and hedcut illustrations by Matt Headley, generated with AI assistance. Chief Ladiga hedcut, Lewis Downing hedcut, Interfaith linocuts.
+    </div>
+
+    <div class="back-body">
+      <strong>Production</strong><br>
+      Typeset in Fraunces, Source Sans 3, and Rock Salt. Printed by Mixam. 200 copies. First edition, Fall 2026.
+    </div>
+  </div>
+  <span class="page-number right">65</span>
+</div>
+
+<!-- ═══ P66 — ABOUT ═══ -->
+<div class="page page-light" id="p66">
+  <div class="page-inner">
+    <div class="running-header"><span>About</span><span>66</span></div>
+
+    <div class="back-section-head">About Southern Legends</div>
+    <hr class="gold-rule">
+    <div class="back-body">
+      Southern Legends is an independent literary journalism publication from Anniston, Alabama. Each edition profiles the people, places, and institutions of Northeast Alabama — not as inspiration pieces, but as honest attention paid to people who are still building something in a place that gets overlooked.<br><br>
+      The editorial lens: Matt Headley lost a farm and now builds websites for local businesses. The work keeps putting him across the table from people who are still going, and he notices them because of what it cost him not to. The question underneath every profile isn't "what does this person do?" It's "what kept them going?" — asked by someone who wanted to keep going and couldn't, for a while.<br><br>
+      Southern Legends publishes annually. Stories appear first at southernlegends.us before appearing in print.
+    </div>
+    <div style="font-family:var(--ff-body);font-size:9pt;color:var(--accent);margin-bottom:0.2in;">southernlegends.us</div>
+
+    <div class="back-section-head">About The Aisle</div>
+    <hr class="gold-rule">
+    <div class="back-body">
+      The Aisle is the wedding vendor platform and bridal expo for Eastern Alabama and West Georgia. The inaugural expo takes place October 18, 2026, at the Anniston Museums and Gardens. The Bloom Bar is the centerpiece.<br><br>
+      The Aisle connects couples planning their weddings with the photographers, florists, caterers, officiants, and venues in their own backyard. Booth registration is open.
+    </div>
+    <div style="font-family:var(--ff-body);font-size:9pt;color:var(--accent);">theaisle.app</div>
+  </div>
+  <span class="page-number right">66</span>
+</div>
+
+<!-- ═══ P67 — INSIDE BACK COVER ═══ -->
+<div class="page page-light" id="p67" style="background:var(--warm);">
+  <div class="page-inner" style="justify-content:center;align-items:center;text-align:center;">
+    <div style="max-width:3.5in;">
+      <div style="font-family:var(--ff-head);font-size:22pt;font-weight:400;color:var(--dark);line-height:1.15;margin-bottom:0.18in;">Get the next edition.</div>
+      <hr class="gold-rule" style="margin:0 auto 0.18in;width:2in;">
+      <div style="font-family:var(--ff-body);font-size:9.5pt;color:var(--text);line-height:1.6;margin-bottom:0.22in;">
+        Subscribe at <strong style="color:var(--accent);">southernlegends.us</strong><br>
+        Vol. 2 · Spring 2027
+      </div>
+      <div style="font-family:var(--ff-body);font-size:9pt;color:var(--text-light);line-height:1.6;margin-bottom:0.22in;">
+        Know someone whose story belongs in these pages?<br>
+        <span style="color:var(--accent);">southernlegends.us/nominate</span>
+      </div>
+      <hr class="gold-rule" style="margin:0 auto 0.2in;width:2in;">
+      <div style="font-family:var(--ff-body);font-size:9pt;color:var(--text);line-height:1.6;">
+        <strong>The Aisle</strong><br>
+        Northeast Alabama's Bridal Expo<br>
+        <span style="color:var(--accent);">October 18, 2026</span><br>
+        Anniston Museums and Gardens<br>
+        <span style="font-size:8pt;color:var(--text-light);">theaisle.app</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ P68 — BACK COVER ═══ -->
+<div class="page page-dark" id="p68">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg, #1C1917 0%, #2A4A36 50%, #3D1A0A 100%);"></div>
+  <div class="topo-overlay"></div>
+  <div style="position:relative;z-index:5;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0.5in;">
+    <div style="font-family:var(--ff-head);font-size:42pt;font-weight:300;color:var(--light);line-height:1;letter-spacing:0.01em;margin-bottom:0.1in;">Southern<br>Legends</div>
+    <hr style="border:none;border-top:1pt solid var(--accent);width:2.5in;margin:0.14in auto;">
+    <div style="font-family:var(--ff-body);font-size:8pt;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,250,247,0.65);margin-bottom:0.2in;">Vol. 1 &nbsp;·&nbsp; Fall 2026</div>
+    <div style="font-family:var(--ff-head);font-size:11pt;font-style:italic;font-weight:300;color:rgba(250,250,247,0.8);line-height:1.5;max-width:3.5in;margin-bottom:0.25in;">Stories from the people still building something in Northeast Alabama.</div>
+    <div style="font-family:var(--ff-body);font-size:9pt;color:var(--accent);letter-spacing:0.04em;margin-bottom:0.06in;">southernlegends.us</div>
+    <div style="font-family:var(--ff-body);font-size:8pt;color:rgba(250,250,247,0.45);letter-spacing:0.04em;margin-bottom:0.2in;">theaisle.app</div>
+    <div style="font-family:var(--ff-body);font-size:8pt;color:rgba(250,250,247,0.55);font-weight:600;letter-spacing:0.06em;">$15</div>
+    <div style="margin-top:0.2in;font-family:var(--ff-body);font-size:7pt;color:rgba(250,250,247,0.3);letter-spacing:0.05em;line-height:1.7;">
+      Printed in the United States &nbsp;·&nbsp; 200 copies &nbsp;·&nbsp; Mixam
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

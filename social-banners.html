@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Southern Legends — Social Banners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Source+Sans+3:wght@400;600;700&family=Rock+Salt&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1512; padding: 0; }
+
+  .label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #CA8A04; padding: 28px 0 10px 24px;
+  }
+  .dim {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px; color: rgba(255,255,255,0.2);
+    padding: 0 0 12px 24px; letter-spacing: 0.1em;
+  }
+
+  .banner {
+    position: relative;
+    overflow: hidden;
+    background-color: #1c1612;
+  }
+  /* Aged paper texture via subtle noise gradient */
+  .banner::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(154,52,18,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 50%, rgba(202,138,4,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at center, transparent 30%, rgba(10,8,6,0.75) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hedcut {
+    position: absolute;
+    top: 50%; right: -5%;
+    transform: translateY(-50%);
+    width: 65%; opacity: 0.14; z-index: 0;
+    pointer-events: none;
+    filter: sepia(30%) contrast(1.1);
+  }
+  /* Horizontal rule accent */
+  .rule {
+    width: 80px; height: 2px;
+    background: linear-gradient(90deg, #CA8A04, rgba(202,138,4,0));
+  }
+  .content {
+    position: absolute; inset: 0; z-index: 2;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: space-between;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<!-- YouTube 2560×1440 -->
+<p class="label">YouTube Channel Art</p>
+<p class="dim">2560 × 1440 — safe zone 1546 × 423 centered — screenshot at 100% zoom</p>
+<div class="banner" style="width:2560px;height:1440px;">
+  <img class="hedcut" src="public/images/profiles/freedom-riders-national-monument/burning-bus-hedcut.webp" alt="">
+  <!-- Safe zone guide -->
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1546px;height:423px;border:1px dashed rgba(255,255,255,0.08);z-index:3;pointer-events:none;"></div>
+  <div class="content" style="padding:480px 0 480px;">
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:26px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Stories from Northeast Alabama</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+      <h1 style="font-family:'Fraunces',serif;font-size:148px;line-height:0.88;color:#fff;font-weight:900;font-style:italic;">
+        Southern Legends
+      </h1>
+      <div class="rule"></div>
+    </div>
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:30px;letter-spacing:0.14em;color:#CA8A04;font-weight:600;text-transform:uppercase;">southernlegends.com</p>
+  </div>
+</div>
+
+<!-- Facebook 1640×624 -->
+<p class="label">Facebook Cover</p>
+<p class="dim">1640 × 624 — screenshot at 100% zoom</p>
+<div class="banner" style="width:1640px;height:624px;">
+  <img class="hedcut" src="public/images/profiles/freedom-riders-national-monument/burning-bus-hedcut.webp" alt="">
+  <div class="content" style="padding:52px 0 48px;">
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:22px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Stories from Northeast Alabama</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <h1 style="font-family:'Fraunces',serif;font-size:124px;line-height:0.88;color:#fff;font-weight:900;font-style:italic;">
+        Southern Legends
+      </h1>
+      <div class="rule"></div>
+    </div>
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:26px;letter-spacing:0.14em;color:#CA8A04;font-weight:600;text-transform:uppercase;">southernlegends.com</p>
+  </div>
+</div>
+
+<!-- LinkedIn 1584×396 -->
+<p class="label">LinkedIn Banner</p>
+<p class="dim">1584 × 396 — screenshot at 100% zoom</p>
+<div class="banner" style="width:1584px;height:396px;">
+  <img class="hedcut" src="public/images/profiles/freedom-riders-national-monument/burning-bus-hedcut.webp" alt="">
+  <div class="content" style="padding:32px 0 28px;">
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:15px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Stories from Northeast Alabama</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <h1 style="font-family:'Fraunces',serif;font-size:86px;line-height:0.88;color:#fff;font-weight:900;font-style:italic;">
+        Southern Legends
+      </h1>
+      <div class="rule"></div>
+    </div>
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:18px;letter-spacing:0.14em;color:#CA8A04;font-weight:600;text-transform:uppercase;">southernlegends.com</p>
+  </div>
+</div>
+
+<!-- X / Twitter 1500×500 -->
+<p class="label">X / Twitter Header</p>
+<p class="dim">1500 × 500 — screenshot at 100% zoom</p>
+<div class="banner" style="width:1500px;height:500px;">
+  <img class="hedcut" src="public/images/profiles/freedom-riders-national-monument/burning-bus-hedcut.webp" alt="">
+  <div class="content" style="padding:40px 0 36px;">
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:18px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Stories from Northeast Alabama</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <h1 style="font-family:'Fraunces',serif;font-size:104px;line-height:0.88;color:#fff;font-weight:900;font-style:italic;">
+        Southern Legends
+      </h1>
+      <div class="rule"></div>
+    </div>
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:22px;letter-spacing:0.14em;color:#CA8A04;font-weight:600;text-transform:uppercase;">southernlegends.com</p>
+  </div>
+</div>
+
+</body>
+</html>

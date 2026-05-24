@@ -18,6 +18,16 @@ He also caught a factual error — said he attended JSU but didn't graduate ther
 
 ---
 
+## May 2026 — Lisa Davis, Foothills Magazine (text, on the Aquality rewrite)
+
+> "Hi Matt, I got your rewrite, and it's lyrical and informative and just right. Thank you!"
+
+She added: she'd pass the word to the Anniston Star folks to help get publicity for the wedding venue, and she wants to talk about ideas for the magazine — specifically weddings, with advertising attached. She initiated the coffee meeting.
+
+**Why it matters:** "Lyrical and informative and just right" is an editor's sentence. She didn't say "I love it" — she diagnosed it. That's a professional judgment from someone who edits for a living. She's not a friend being kind. She's a regional editor telling you the work is ready.
+
+---
+
 ## April 23, 2026 — Lisa Davis, Foothills Magazine
 
 Lisa Davis is the editor of Foothills Magazine — regional print, Anniston Star affiliated, celebrating Northeast Alabama. She called Matt directly today. She'd read the blog. She loved it.

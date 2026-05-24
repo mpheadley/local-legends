@@ -6,6 +6,48 @@ Newest first.
 
 ---
 
+## 2026-05-22 — Transcripts integration + publication pipeline locked
+
+**Scope:** Integrated 6 context transcripts spanning business priorities, profiles, personal essays, and AI psychosis framing.
+
+**Profiles ready to publish (3):**
+- **Shannon Jenkins** — live on site, published (editorial decision: keep Tammy & Kyle names for hierarchy specificity + Tammy callback at Called Coffee)
+- **Lewis Downing** — raw interview transcript filed; structure: Ending (recent town hall revelation) → RD opening (storefront discovery) → Handoff (pruning shears, Sacred Heart connection) → Farm years (weekly farmers market support)
+- **Jared/Called Coffee** — drafted, awaiting subject confirmation
+
+**Journal & Merch:**
+- **"No Shade"** — ready to publish this weekend (Easter piece, written + locked)
+- **"I Contain Multitudes" t-shirt** — design 1–2 hours, queue for print-on-demand, launch alongside journal post
+
+**Essays in flight (4):**
+1. **Chief Ladiga Trail** (SL personal essay) — ready to write-as-you-walk; transcript with coaching prompts filed
+2. **Manic Writing** (personal essays section) — first draft complete; next: sit 2–3 days, then pull verbatim Patreon/text/FB artifacts to ground dissonance
+3. **Matthew Wilson & Psilocybin** (memoir/personal essay) — raw transcript; framing questions deferred (placement: Substack, not SL); sensitive material flagged
+4. **AI Psychosis** (primary book angle) — framework locked (non-linear, open in present, rewind to crisis); needs psychiatrist check-in before drafting scene work; Defying Gravity/music threads ready to weave
+
+**Business decisions (locked):**
+- SL + web design = primary revenue streams; speaking/books/merch deferred until platform proven
+- Syndication: honor Calhoun Journal commitment; text Donna (Anniston Star) with explicit tiering proposal (SL → Star → Calhoun)
+- 3 profiles ready to close out publication gaps (2-week quiet after last post)
+
+**Transcripts filed to project:**
+- `/southern-legends/transcripts/2026-04-17-business-priorities-and-assets-session.md` (created this session)
+- `/southern-legends/transcripts/2026-05-22-lewis-downing-profile-interview.md` (existing)
+- `/southern-legends/transcripts/2026-05-22-book-questions-shannon-profile.md` (existing)
+- `/southern-legends/transcripts/2026-05-22-defying-gravity-connection.md` (existing)
+- `/southern-legends/transcripts/2026-05-22-ai-psychosis-essay-session.md` (existing)
+- `/southern-legends/content/memoir/matthew-wilson-session-transcript.md` (existing)
+
+**Next immediate (this week):** t-shirt design, post "No Shade," confirm Lewis + Jared with subjects.
+
+---
+
+## 2026-05-22 — Voice memo audit + editorial tension memo
+
+Reviewed Feb 15–April 30 voice memo transcripts (39 total, 36 successful). Identified 5 valuable memos worth archiving. Filed the editorial meta-thinking memo (April 15, ~4 min) as a research doc: `content/research/20260415-editorial-journaling-tension-memo.md`. Captures core tension about publishing journals on SL—origin as lead gen, comparison/jealousy block, key realization ("rawness is a filter, not a flaw"), unresolved public vs. private question. Remaining 4 memos prepared for filing: Jacob Craig nonprofit discovery call (CRM), Giovanna Between Worlds meeting (project docs), and two food bank operational discussions (CRM research notes). Text-only analysis provided; await next session for tool-enabled filing.
+
+---
+
 ## 2026-05-21 — Merge Claude mobile branches
 
 Merged two Claude mobile branches (`claude/curate-reading-list-bw7oP` and `claude/update-ladoga-hero-image-A6y1i`) into main. The `curate-reading-list` branch added 4 files: BRAND-ARCHITECTURE.md, SOCIAL-RESPONSES.md, an expanded SOCIAL-SHARE-PLAN.md, and `content/research/michelle-hornsby-red-bird-willow.md`. The ladoga branch was already fully on main — nothing to merge. Pushed all 13 pending local commits and deleted both remote Claude branches.

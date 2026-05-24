@@ -1,0 +1,448 @@
+
+[00:00] SPEAKER_00:
+  I'm demoing Petal Studio again and I just imported an invoice and I was going to save 16 flowers to inventory.
+  It says one flower has no cost for stem and won't be priced in recipes or events.
+  Save anyway.
+  But it doesn't highlight which one is the problem, which field is the problem.
+  So that should be, it actually happens to be the last one but I couldn't even tell because it's not highlighted.
+  So the amber warning should be also included or highlighted on the whole card.
+  I think that would be optimal user experience, UX.
+  Okay, so I'm saving 16 flowers.
+  All the photos look good.
+  The color indicators look good.
+  So that's great.
+  It's saving.
+  It's not really showing that it's making any progress though.
+  I need some sort of progress indicator when I save my upload.
+  16 added, redirecting, loading your inventory, all very quick.
+  Now I've got an inventory.
+  So what's my next step?
+  Looks like I can build a recipe.
+  Build a recipe to start making arrangements.
+  No recipes yet.
+  Build your first recipe.
+  Recipe name, bridal bouquet, bridal bouquet, dark gothic quirky.
+  Suggest stems.
+  It's going to suggest some.
+  All right.
+  Is it only going to suggest stems from my inventory or is it going to suggest stems that are outside of my inventory?
+  I don't know.
+  Once it's this old, no price yet, import an invoice to set cost per stem.
+  Add materials.
+  I can add materials.
+  Ribbon.
+  Ribbon.
+  Make that $2.
+  $1.75.
+  $1.75 for three and a half of them.
+  Hmm.
+  Let's save recipe.
+  I thought there was going to be a feature on here where I could create an image of the recipe.
+  Generate image.
+  There it is.
+  That button probably needs to be bigger because it's easy to miss.
+  And it created one.
+  It doesn't look very much like what I described, gothic quirky.
+  The image needs to be bigger and I'm not really sure it was even aligned with the gothic quirky
+  aesthetic that I chose.
+  What happens if I click suggest stems again when I've already got a recipe made?
+  Maybe it'll suggest more.
+  Layer deep jewel tones with silvery greeny for moody gothic appeal.
+  This is add quirky texture, asymmetrical spiral that creates edgy bridal look.
+  That's cool.
+  All right.
+  So we'll add some wire.
+  Wire.
+  Make it three.
+  The dollar sign is overlapping the number in the materials and hardware field where you enter the price.
+  So that's a bug.
+  We can check the market price.
+  That button probably needs to be bigger.
+  Says market is $180 to $280 retail.
+  So I'm in range.
+  That's cool.
+  Save changes.
+  I don't know.
+  Maybe the check price doesn't need to be too big because I don't want to overwhelm.
+  Regenerate.
+  I'm going to regenerate the image for the recipe.
+  It's regenerating and it says Petal Studio image generation failed.
+  Replicate error.
+  First cell blob.
+  This blob already exists.
+  Use allow overwrite true if you want to overwrite it or add random suffix true.
+  Okay.
+  So hopefully the assistant logged that error on the recipes page.
+  But it won't let me regenerate the image.
+  I can open the image in a new tab and I get a nice large image that doesn't necessarily reflect the gothic quirky aesthetic that I described.
+  So the image generation needs to either reflect the stems and or the description for the aesthetic or vibe.
+  Alright.
+  I'm going to build one more recipe.
+  We'll do a centerpiece.
+  We'll make this one dark, moody, gothic, and quirky.
+  And we're going to suggest stems.
+  Fun.
+  Layer thistles and scabiosa for quirky texture.
+  Keep it deep, burgundy, red, purple.
+  Fun.
+  Okay.
+  And that's all good.
+  I'll check the market price.
+  So we are high.
+  That's fine.
+  And we'll save the recipe.
+  I wonder if we should be able to generate the image of the recipe here on the page.
+  We'll wait until we save it.
+  But yeah, definitely generate image for the recipe should be a bigger button, I think.
+  Because that's a fun feature.
+  Maybe put it right underneath the title and or the description or the vibe description of the recipe.
+  Also, when you save a new recipe, it needs to put it at the top instead of adding it to the bottom.
+  Because I have to scroll down to see it.
+  Also, when I generate an image, it says inspiration images.
+  Maybe the image should be shown down there, too.
+  Alongside the inspiration image option to upload.
+  I see.
+  I'm going to open image in new tab to see it bigger.
+  This also does not have any thistle in the image.
+  So something is off with the image generator.
+  But it's cool that it's working anyway.
+  I'm going to grab a quick image of a centerpiece.
+  I think that the image for inspiration should be on the recipe building page.
+  Instead of the recipe inventory or the list of recipes page.
+  I'm going to grab a centerpiece flower arrangement image.
+  Save image.
+  And upload it to the studio.
+  Inspiration images.
+  One more recipe.
+  It doesn't look like I can actually use an image to create a recipe or inspire a recipe.
+  It's only a text input right now.
+  So I'm going to cancel that.
+  See what happens when I create a really bare recipe.
+  For a centerpiece.
+  Save recipe.
+  Let me save it with nothing in it.
+  Yep, nothing in it.
+  So I'll drag my image upload over there.
+  Open it.
+  And it shows a black box.
+  It doesn't show the image that I uploaded.
+  There's a button or a link to click what to order.
+  All stems covered by current inventory.
+  I don't understand that.
+  Estimates based on current branches.
+  Bunches on hand.
+  Import and invoice after ordering to update inventory.
+  I would think when I upload an image.
+  It should tell me what kind of stems need to be ordered.
+  I don't know.
+  Maybe I'm not understanding that right.
+  But that's a weird, weird user experience there.
+  Okay, so yeah.
+  Definitely dropping images here to click or upload should be when we're in the edit window of the recipe.
+  I'm going to cancel that.
+  And now the next action should be clear.
+  Right now it's at the top.
+  I think it probably needs to be at the bottom.
+  Or it says price and event.
+  There's a price event pill button.
+  Probably needs to be at the bottom and the top.
+  Price your first event.
+  Let's say Johnson Wedding.
+  Johnson Wedding.
+  We'll make it today.
+  All right.
+  And create event.
+
+[09:09] UNKNOWN:
+  And...
+
+[09:10] SPEAKER_00:
+  See, I'll change the date to not 2022.
+  That's crazy.
+  I'll put it like 200 years in the future.
+  I'm going to move it to...
+  I wonder if we should not be able to add it that far out.
+  Maybe there should be...
+  I don't know.
+  Probably not.
+  I was going to say maybe there should be a limit on how far out you can schedule it.
+  But that's probably not necessary.
+  We'll make it 2028.
+
+[09:38] UNKNOWN:
+  January 1st.
+
+[09:39] SPEAKER_00:
+  Flower markup.
+  We'll mark it at 4.
+  Extra buffers, 10.
+  Add an arrangement.
+  Import a recipe.
+  I'm confused by this.
+  Shouldn't I be able to add a recipe to the event?
+  Add arrangement.
+  I see I can add arrangements here.
+  For nation.
+  Add some flowers.
+  But I want to be able to add recipes to an event, don't I?
+  I would think so.
+  I like that I can edit the arrangements right in the field.
+  I don't know if I need to save this.
+  There's a save button.
+  Maybe it automatically saves on the event builder page.
+  Okay.
+  Order list.
+  Zero stems to order.
+  Wait, I just...
+  I just created an event.
+  I said build a...
+  Business.
+  Events.
+  Build a full wedding.
+  Flowers as rows.
+  Arrangements as columns.
+  Okay.
+  Open.
+  Got my arrangements.
+  Total sale is $29.19.
+  Flower cost is $7.12.
+  That's a huge wedding, right?
+  No, it's not a huge wedding.
+  $29.19 for the whole wedding.
+  Maybe I'll just make it more realistic.
+  I'll say we're going to order 1,000 ala Maria.
+  There we go.
+  Now we got a $2,900 wedding.
+  Order list.
+  Proposal.
+  Which one should I do?
+  Quick copy.
+  Print sheets.
+  Try print sheets.
+  Save as PDF doesn't include everything.
+  It's got a funky page break.
+  It only has like...
+  I'll save it.
+  And I can upload it to show you.
+  But it's like...
+  Flower order list is on one page.
+  And then the arrangements are under other on the second page.
+  So there's a goofy page break.
+  Whatever.
+  Maybe that's intuitive.
+  Maybe that's the way it should be.
+  Okay.
+  Looks good.
+  The page looks good.
+  Print.
+  But then once I'm done with this page, the production sheets print page, I don't have any button to help me get out of here.
+  I have to go back to the dashboard.
+  Or the flowers drop down menu.
+  And the business menu is gone.
+  I don't know where it went.
+  There it is.
+  I went back to the dashboard.
+  Now I have the business menu back.
+  I'm going to go back to events.
+  Open.
+  I still don't understand why I can't add...
+  Recipes to the flower matrix or the event.
+  But whatever.
+  We'll keep going.
+  I guess I'll move on to the proposal.
+  Creating.
+  Proposal created.
+  Redirecting.
+  That pop-up showed behind the chat agent.
+  It probably needs to show in the middle of the page.
+  That green pop-up.
+  Proposal not found.
+  Okay.
+  So that didn't work.
+  Back to proposals.
+  Proposal.
+
+[13:04] UNKNOWN:
+  Back.
+
+[13:04] SPEAKER_00:
+  Proposal not found.
+  So when I click on proposals, there's no proposal found.
+  So that's not working.
+  Go back to the dashboard.
+  Yeah.
+  Again, the business drop-down menu was gone.
+  It was disappeared.
+  I'm going to proposals.
+  Import from event.
+  Import from event.
+  Select an event to import all arrangements and pricing into a new proposal.
+  Alright.
+  I click import and create proposal and nothing happens.
+  So that's a bug.
+  Again, my business menu is gone on the events and proposals pages.
+  Maybe some other pages.
+  I'll go to pre-orders page.
+  Pre-orders.
+  Seasonal sales.
+  Mother's Day.
+  Dancer silos.
+  Holidays.
+  Customers.
+  Pay via Stripe.
+  You collect a pickup.
+  Setup shop.
+  Renew listing.
+  Pinterest AI portal setup.
+  Create a custom-branded portal for customers to get AI-powered wedding flower budgets from their Pinterest inspiration boards.
+  This is kind of odd.
+  I don't know if this belonged here on the pre-orders page.
+  Pre-orders.
+  I've got two calls to action.
+  Setup shop and new listing.
+  I feel like the setup shop ought to belong somewhere else.
+  I'm not going to really fool with that right now.
+  I'll come back to it.
+  I'm going to go back to proposals.
+  No.
+  Yeah, when I click on the proposal, it doesn't show anything.
+  So, I'll go back to pre-orders.
+  New listing.
+  Mother's Day bouquet.
+  Mother's Day bouquet.
+  Fresh cut bouquet featuring seasonal blooms.
+  Price.
+  We'll say $65.
+  Sounds good.
+  Quantity limit.
+  3-2.
+  Pickup date is 2-2-20-27.
+  Pickup location is...
+  Anniston.
+  Anniston Farmer's Market.
+  Farmer's Market.
+  Look for heather florals near the main entrance.
+  Create listing.
+  Creating stripe link.
+  And, again, I would like to see some sort of progress indicator, but it worked.
+  Listing created.
+  Payment link is ready to share.
+  That notification showed at the top right in the black box.
+  Maybe we need to kind of...
+  take a more consistent approach to the notifications.
+  One popped up in the bottom right as a green bar.
+  One popped up in the top right as a black bar.
+  But I'll close that out.
+  Now, it took me to the pre-orders page, and I see my Mother's Day bouquet is active for Mother's Day.
+  I can copy link.
+  That's great.
+  Let's see what happens when I paste it.
+  Oh, it goes to a stripe link.
+  That's great.
+  View orders.
+  Loading.
+  Again, I'd like a progress indicator on that page.
+  Mother's Day bouquet.
+  65 per order.
+  Pick up Tuesday, February 2nd.
+  Anniston Farmer's Market.
+  Status is active.
+  Zero orders out of 232.
+  Copy payment link.
+  All right, that's great.
+  So, now, back to pre-orders.
+  And set up shop.
+  All right.
+  There's no, like, next step here.
+  There's the nav, which is missing the business part of the nav.
+  But I'm going to go to availability.
+  Mark dates as booked, on hold, or blocked.
+  Events you create are auto-populated.
+  All right.
+  So, I'm going to say Saturday, May 9th.
+  We're going to say we're booked.
+  And the label is going to be Anniston Farmer's Market.
+  Anniston Farmer's Market.
+  Save.
+  What would be neat is if I could sync this with my Google Calendar, my Google Business Calendar,
+  and create maybe recurring Events in here.
+  And maybe this just ought to be a Google Calendar, like, embed, or iframe, or something like that.
+  I don't know.
+  Maybe the custom calendar.
+  It looks great.
+  Maybe it's good.
+  Create one more for June.
+  Saturday in June.
+
+[17:44] UNKNOWN:
+  Booked.
+
+[17:45] SPEAKER_00:
+  Anniston Farmer's Market.
+  Anniston Farmer's Market.
+  Also, it'd be nice to have, like, a kind of list of all the Events that are on the calendar below the calendar, like, calendar grid view.
+  Maybe a listing of the calendar Events that are saved.
+  And I don't know where these are being saved.
+  All right.
+  I'm going to go back to the Business and Availability.
+  I just did that.
+  Last page.
+  Portal.
+  Pinterest AI Portal Setup.
+  I think this is where I found myself earlier.
+  In the Pre-Orders Setup Shop.
+  Pinterest AI Portal Setup.
+  Maybe it needs a picture or something.
+  I don't know.
+  The portal.
+  It's a little abstract.
+  Pinterest AI Portal Setup.
+  Create a custom-branded portal for customers to get AI-powered wedding flower budgets from their Pinterest Inspiration Boards.
+  Maybe even just the Pinterest logo would be helpful here.
+  Business Name.
+  Portal Configuration.
+  Okay, so this is for me to create for my customers.
+  I see.
+  Interesting.
+  Heather Florals.
+  I feel like this is something that could have been auto-populated.
+  I don't know.
+  Portal Subdomain.
+  Heather Florals.
+  I'm going to say Matthew Florals.
+  I'm starting my own business, Heather.
+  Matthew Florals.
+  Are you enjoying listening to me talking to myself?
+  Sure.
+  Upload Logo.
+  Got me a logo.
+  Uploading.
+  Yay, it shows.
+  Brand Color.
+  I'm not really sure that picked up on the logo.
+  It says auto-filled from logo.
+  I'm not sure that actually happened.
+  Cool.
+  Save Portal Configuration.
+  Portal Preview.
+  Matthew Florals.
+  That's nice.
+  Save this link with potential customers.
+  There should be a place.
+  Oh, it says failed to save portal configuration.
+  Sqlite.
+  Underscore.
+  Unknown.
+  Okay, I hope that error was logged.
+  So it failed.
+  There should be a button to copy your portal URL instead of just going to it.
+  Yeah, portal not found.
+  So it doesn't work right now.
+  But yeah, there should be a copy button.
+  Or a share button.
+  And I think I've gone through all the pages now.
+  So I'm going to upload this to Claude.
+  And see what we can do.
+  And make sure, Claude, that you check the error log from this session.
+  Today on May 5th, 630.
+  Roughly 6 to 630, 6pm.

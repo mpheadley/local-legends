@@ -2,9 +2,19 @@
 
 **Purpose:** The same material can become different books. This doc lays out the real options so the choice is deliberate, not accidental. MANUSCRIPT-OUTLINE.md currently assumes Option 1 (the full memoir); this doc exists to pressure-test that assumption.
 
-**Last updated:** April 2026.
+**Last updated:** April 2026 (gap-flag appended 2026-05-22).
 
 **Matt's current lean:** "I think the strongest one was the AI psychosis direction" (Option 2 below).
+
+---
+
+## SOURCE GAP BLOCKING COMPLETION (added 2026-05-22)
+
+**ChatGPT transcripts, June 2025 – March 2026 — the dark-days window before and after the October 2025 hospital stay — are not yet in the source corpus.** The existing extraction at `content/matt-headley-sources/chatgpt-full-export/` goes quiet after April 2025 (substantive conversations during the descent, hospital, and post-hospital silence were on a different ChatGPT account). Export requested 2026-05-22; drop the zip at `content/matt-headley-sources/chatgpt-export-personal-2026-05-22/` when it arrives.
+
+**Blocks both manuscripts:** this SL memoir (any Option) AND the Plainspoken Blueprint book (Ch 3 closing, Ch 4 Scar opening + middle, Ch 5 Light). Same primary source serves both. See [`plainspoken-blueprint-book/BRIEF.md`](../../plainspoken-blueprint-book/BRIEF.md) "Source gap blocking completion" section for the workflow.
+
+**Treat as a hard blocker for first complete draft of either book.**
 
 ---
 
