@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { UserPlus, BookOpen, PenLine, Instagram } from "lucide-react";
+import { UserPlus, BookOpen, PenLine } from "lucide-react";
+// Instagram removed from lucide-react — using SVG inline instead
 
 export const metadata: Metadata = {
   title: "Matt Headley — Southern Legends",
@@ -211,7 +212,7 @@ export default function SLCardPage() {
                 border: "1px solid rgba(202,138,4,0.2)",
               }}
             >
-              <Instagram size={18} strokeWidth={1.5} color="#FAFAF7" />
+              <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#FAFAF7" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </span>
             <span style={{ minWidth: 0 }}>
               <span
