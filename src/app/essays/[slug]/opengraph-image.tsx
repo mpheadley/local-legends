@@ -11,6 +11,7 @@ const sourceSans = readFileSync(
 );
 
 export const runtime = "nodejs";
+export const revalidate = 0;
 export const alt = "Southern Legends journal";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
