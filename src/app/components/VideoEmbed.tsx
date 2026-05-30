@@ -13,7 +13,17 @@ interface YtStats {
   publishedAt: string;
 }
 
-function parseVideoUrl(url: string): { embedUrl: string; videoId: string | null; platform: "youtube" | "vimeo" } | null {
+function parseVideoUrl(url: string): { embedUrl: string; videoId: string | null; platform: "youtube" | "vimeo"; isShort?: boolean } | null {
+  const shortsMatch = url.match(/youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/);
+  if (shortsMatch) {
+    return {
+      embedUrl: `https://www.youtube-nocookie.com/embed/${shortsMatch[1]}?rel=0`,
+      videoId: shortsMatch[1],
+      platform: "youtube",
+      isShort: true,
+    };
+  }
+
   const ytMatch = url.match(
     /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
   );
@@ -85,8 +95,8 @@ export default function VideoEmbed({ url, caption }: VideoEmbedProps) {
   }
 
   return (
-    <figure className="not-prose my-8 bg-ll-warm border border-ll-border rounded-lg overflow-hidden">
-      <div ref={containerRef} className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+    <figure className={`not-prose my-8 bg-ll-warm border border-ll-border rounded-lg overflow-hidden ${parsed.isShort ? "max-w-xs mx-auto" : ""}`}>
+      <div ref={containerRef} className="relative w-full" style={{ paddingBottom: parsed.isShort ? "177.78%" : "56.25%" }}>
         {visible ? (
           <iframe
             src={parsed.embedUrl}

@@ -497,6 +497,23 @@ Key facts from this source relevant to the essay:
 
 ---
 
+## Historical Portrait Filed (2026-05-30)
+
+**Source:** JSU Historical Image Collection — https://digitalcommons.jsu.edu/lib-ac-histimg/43608/
+**Title:** "Indian Chief Ladiga"
+**Date:** ca. 1825 (original painting); digitized October 2, 2020
+**Artist:** Unknown; possibly Charles Bird King (1825)
+**Subject:** Chief Ladiga and his family, inhabitants of present-day Jacksonville, Alabama in the 1830s
+**Fate of original:** Destroyed in the 1865 Smithsonian fire — this digital scan is one of the few surviving records
+**Physical original:** 2" × 3" photograph on celluloid film stock; 300 dpi TIFF scan
+**Rights:** Non-commercial, fair-use; alterations prohibited; acknowledge Jacksonville State University
+**Location on disk:** `public/images/profiles/chief-ladiga-trail/chief-ladiga-portrait-1825.webp`
+**Integrated into:** `content/profiles/chief-ladiga-trail.mdx` — replaced AI hedcut illustration at the "I think the trail's name both honors Chief Ladiga and uses him" passage
+
+**Editorial note:** The portrait shows a young man in a fur/feathered headdress and European-style jacket with metal wristbands — the visual record of a leader caught between two worlds in the years just before removal. Using the actual historical image (even filtered through a photograph of a painting) is more honest than an AI-generated illustration.
+
+---
+
 ## Draft Status
 - Published: false
 - heroImage: empty
