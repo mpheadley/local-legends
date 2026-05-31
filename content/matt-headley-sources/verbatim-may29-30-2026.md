@@ -157,3 +157,43 @@ Three passages that form a complete theology of losing, all discovered May 30 20
 - SermonCoach theology — Contemplative tradition as the liturgical form of the Lowry Loop
 - Tend series — Welcoming Prayer as a couples practice (welcome the felt sense, don't resist it)
 - CAC/Rohr connection — Center for Action and Contemplation directly connected to SEED/Lowry/Enneagram synthesis
+
+---
+
+## Self-Talk Before the Sermon — May 31, 2026
+*Verbatim — 2:15-3am, 4:15-7:17am, before preaching*
+
+> "Go preach good stuff, you vile one. You got this."
+
+> "You are large. You contain multitudes."
+
+**Sleep schedule:** 2:15-3am. 4:15-7:17am. Sermon at Jacksonville First UMC, May 31, 2026.
+
+---
+
+## John Wesley: "Submitted to Be More Vile"
+
+John Wesley's Journal, May 29, 1739:
+
+*"I submitted to be more vile, and proclaimed in the highways the glad tidings of salvation."*
+
+**Context:** Wesley began field preaching — preaching outdoors to coal miners and working people. The church establishment considered it undignified and improper for an ordained clergyman. Church doors were closed to him. He went outside. He was willing to be seen as vile for the sake of the gospel.
+
+**The connection to Matt:**
+- Preached to UMC clergy in a Facebook thread where two-thirds called him a heretic
+- Returned to the pulpit after a year away, after a breakdown
+- Built SermonCoach while "spreading heresy" at Annual Conference
+- Preached about AI to Methodist clergy who said "Ewww"
+- Same move. Different century.
+
+**Where this belongs:**
+- Pleasant Valley memoir — the Wesley quote as the epigraph or chapter header for the return
+- SermonCoach bio / about page — "Wesley submitted to be more vile. So did I."
+- Five Fifteen essay — the vile one going to Annual Conference
+- The AI Psychosis essay — building tools the establishment finds improper
+- Sermon ideas — the "vile" sermon: Wesley's field preaching + Jelly Roll + church as gathering of losers
+
+**The self-talk IS the theology:**
+*"You vile one."* — submitted to be more vile
+*"You are large. You contain multitudes."* — the triskelion, the plurality/unity
+Together: the contemplative and the vile, the Whitman and the Wesley, the poet and the preacher.
