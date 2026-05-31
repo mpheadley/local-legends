@@ -4,6 +4,25 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## May 31, 2026 — Andy Curtis + Bruce Cunningham (iMessage group, after the sermon)
+
+After Matt preached "A Seed Must Die" at Jacksonville First UMC — his first pulpit appearance in about a year:
+
+**Bruce Cunningham (dentist, Jacksonville):**
+> "Matt's testimony was one of the most powerful articulations I have ever heard of the saving grace offered to us by Jesus' life, death, and resurrection! To God be the glory!"
+
+**Andy Curtis (Lead Pastor, Jacksonville First UMC):**
+> "I'm so glad to see resurrection happening in Matt's life and ministry. Inspiring!"
+
+And from Andy directly earlier that day, in the text where he sent the order of service:
+> "Bravo 👏🏻! Well done, Matt. Thank you for your vulnerability."
+
+**Why it matters:** Andy invited Matt back to the pulpit after a year away. Bruce is a layperson in the pew — not a peer, not a supporter, not someone doing Matt a favor. Two different people from two different vantage points, saying the same thing: the testimony landed.
+
+"Resurrection happening in Matt's life and ministry" is Andy's language. He's a pastor. He chose that word on purpose. On the day Matt preached John 12:24 — a seed must die before it bears fruit — the pastor who invited him said he was watching resurrection. That's not a coincidence.
+
+---
+
 ## April 24, 2026 — Shannon Jenkins (text)
 
 After Matt sent him the finished profile:
