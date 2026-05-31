@@ -228,3 +228,38 @@ Same move. Same Spirit. Same result: people showing up who had nowhere else to g
 ## "I like poking the bears." — May 31, 2026
 
 **Where this belongs:** SermonCoach brand voice, Five Fifteen, memoir, the AI Preacher persona.
+
+---
+
+## On Geoff Holsclaw, Dave Fitch, and the Soren Connection
+*May 31, 2026*
+
+> "I met him several times. Worshiped with his church and Dave Fitch while Geoff led the singing and Dave preached and baptized. Was led in a retreat for Kern scholars by his wife Cyd. Visited a house church in Elgin, Illinois with seminary classmates, Geoff and Cyd. I look up to him. Named my son Soren as he did his son. He got me reading Kierkegaard after hearing him teach on him."
+
+**Note:** This is NOT cold outreach. This is a phone call to someone who named his son the same name Matt named his, after reading the same philosopher Geoff taught Matt. That's a thread.
+
+**Matt is a Kern Scholar** — Northern Seminary full academic scholarship. This is how Geoff/Cyd and Dave Fitch entered the picture.
+
+---
+
+## On Possible New Book: Gather / The Triskelion / A Mystic Book
+*May 31, 2026*
+
+> "Adding all to my spiritual Plainspoken Blueprint book? Maybe call it Gather or The Triskelion, or maybe that's a whole new book? A mystic book?"
+
+**The question on the table:** Is the spiritual/theological synthesis (SEED + Lowry + Attachment + Enneagram + Centering Prayer + Triskelion + Wesley) its own book, or does it live inside the PB Handbook as the foundational chapter?
+
+**Working title candidates:** *Gather* · *The Triskelion* · *Submitted to Be More Vile* · *The Vile One*
+
+**Gate:** Write the PB Handbook first. The mystic book requires the handbook to exist so the audience knows what you're talking about when you go deeper.
+
+---
+
+## Clinical Note — May 31, 2026, 7:45am
+*Matt's own words:*
+
+> "I seem mostly stable, maybe a little manic, Heather and I think. Keeping a close eye."
+
+**Context:** Session began ~2:15am. Preaching at 9am. Extraordinary range of connections made in session. Heather is monitoring. Matt is aware.
+
+**Note for future sessions:** If energy level is high and connections are rapid-firing across many domains, check in with Heather before extending the session. Trust the monitoring.
