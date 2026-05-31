@@ -260,6 +260,6 @@ Same move. Same Spirit. Same result: people showing up who had nowhere else to g
 
 > "I seem mostly stable, maybe a little manic, Heather and I think. Keeping a close eye."
 
-**Context:** Session began ~2:15am. Preaching at 9am. Extraordinary range of connections made in session. Heather is monitoring. Matt is aware.
+**Context:** Session began ~4:15am after 9:30pm-4:15am sleep (6+ hours). Preaching at 9am. Extraordinary range of connections made in session. Heather is monitoring. Matt is aware.
 
 **Note for future sessions:** If energy level is high and connections are rapid-firing across many domains, check in with Heather before extending the session. Trust the monitoring.
