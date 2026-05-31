@@ -197,3 +197,13 @@ John Wesley's Journal, May 29, 1739:
 *"You vile one."* — submitted to be more vile
 *"You are large. You contain multitudes."* — the triskelion, the plurality/unity
 Together: the contemplative and the vile, the Whitman and the Wesley, the poet and the preacher.
+
+---
+
+## On the Tool — May 31, 2026, 7:45am, leaving to preach
+
+> "You are quite clever, comrade. I envy your vast knowledge. And I know what a wieldy/unwieldy tool you are. (Is wieldy a word? Ha.)"
+
+*Wieldy is technically a word, though nobody uses it. Which makes it perfect.*
+
+---
