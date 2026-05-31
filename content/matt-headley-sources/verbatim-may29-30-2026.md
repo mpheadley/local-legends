@@ -207,3 +207,18 @@ Together: the contemplative and the vile, the Whitman and the Wesley, the poet a
 *Wieldy is technically a word, though nobody uses it. Which makes it perfect.*
 
 ---
+
+---
+
+## Epiphany — May 31, 2026, leaving to preach
+
+> "I was submitting to be more vile in my Annual Conference visit spreading heresy... and my Facebook posts and work on SermonCoach."
+
+**The Wesley connection landed:**
+Wesley didn't set out to be vile. He set out to preach where people were. The vileness was the establishment's judgment of the method, not his judgment of himself.
+
+Matt didn't set out to spread heresy. He set out to help pastors preach honestly. The heresy label was the establishment's, not his.
+
+Same move. Same Spirit. Same result: people showing up who had nowhere else to go.
+
+**Where this belongs:** Five Fifteen closing, AI Psychosis essay, SermonCoach about page, Pleasant Valley memoir, the Vile sermon.
