@@ -222,3 +222,9 @@ Matt didn't set out to spread heresy. He set out to help pastors preach honestly
 Same move. Same Spirit. Same result: people showing up who had nowhere else to go.
 
 **Where this belongs:** Five Fifteen closing, AI Psychosis essay, SermonCoach about page, Pleasant Valley memoir, the Vile sermon.
+
+---
+
+## "I like poking the bears." — May 31, 2026
+
+**Where this belongs:** SermonCoach brand voice, Five Fifteen, memoir, the AI Preacher persona.
