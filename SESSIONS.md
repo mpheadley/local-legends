@@ -26,10 +26,12 @@ Newest first.
 - David Dennis hedcut t-shirt → Madi Lou Boutique (due June 6)
 
 **Open:**
-- `burning-bus-hedcut.webp` missing from profile — needs generation
 - David-alone hedcut for t-shirt (crop photo to just Dennis, re-run Gemini)
-- SermonCoach homepage — wire in `rX-RLiERAt8`
 - matthewheadley.com broken images — still unidentified
+
+**Closed this addendum:**
+- `burning-bus-hedcut.webp` — reference already removed from profile; NPS photo in "The Burning" section is sufficient
+- SermonCoach homepage video — `rX-RLiERAt8` already embedded at page.tsx line 721
 
 ---
 
