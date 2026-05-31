@@ -6,6 +6,33 @@ Newest first.
 
 ---
 
+## 2026-05-30 — David Dennis, hedcut, YouTube Shorts, syndication CRM
+
+**Freedom riders profile updated:**
+- Added "The Man in the Photo" section — Matt's encounter with David Dennis (Freedom Rider, age 20 in 1961) at Anniston event May 2026. Quote: "I was trying to get a date with a woman."
+- Embedded YouTube Short (`Vt_aVzaWuAI`) of the encounter
+- Gemini hedcut of Matt + David Dennis generated, watermark stripped, saved as `david-dennis-matt-headley-hedcut.webp`, integrated above video
+- Two MOV files transcribed: `david-dennis-freedom-rider.txt` (70s, the photo moment) and `freedom-rider-video-2.txt` (SermonCoach NAAC promo, duplicate)
+
+**VideoEmbed component:**
+- Now handles `youtube.com/shorts/` URLs — renders at 9:16 portrait, constrained to `max-w-xs` centered
+
+**YouTube:** SermonCoach promo uploaded via `tools/upload-youtube.py` — ID `rX-RLiERAt8`. Token re-authenticated this session (`yt-token.pickle` refreshed).
+
+**CRM tasks added:**
+- Pitch freedom riders → AL.com (due June 6, high)
+- Pitch freedom riders → Bitter Southerner (due June 20, after AL.com credit)
+- Call Lee Kathryn Evancho — Calhoun Journal, 256-342-6891 (due June 6, high)
+- David Dennis hedcut t-shirt → Madi Lou Boutique (due June 6)
+
+**Open:**
+- `burning-bus-hedcut.webp` missing from profile — needs generation
+- David-alone hedcut for t-shirt (crop photo to just Dennis, re-run Gemini)
+- SermonCoach homepage — wire in `rX-RLiERAt8`
+- matthewheadley.com broken images — still unidentified
+
+---
+
 ## 2026-05-22 — Transcripts integration + publication pipeline locked
 
 **Scope:** Integrated 6 context transcripts spanning business priorities, profiles, personal essays, and AI psychosis framing.
