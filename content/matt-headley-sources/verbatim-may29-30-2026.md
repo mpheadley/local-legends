@@ -135,3 +135,25 @@ Three passages that form a complete theology of losing, all discovered May 30 20
 - The AI Psychosis essay (empowered to see both sides)
 - The Aisle/Marketday positioning (community-rooted marketplace, not big box)
 - SermonCoach theology (pneumatological preaching, Methodist connectional tradition)
+
+---
+
+## On Centering Prayer, Davis Johnson, and the Return to Contemplation
+*Verbatim — May 31, 2026*
+
+> "My experience with the Center for Action and Contemplation and the Meditation Chapel Centering Prayer groups via Zoom and teaching on Centering Prayer for the North Alabama Conference credentials me."
+
+> "I have given up Centering Prayer for this past year, but as my Claude.ai transcript told the story, I was invited into the Welcoming Prayer and Centering Resting Prayer after noticing my excited anxiety while reconnecting with colleagues and friends at NAC Annual Conference last Friday."
+
+> "I had lunch with Stephen and Megan Barber and Davis Johnson and his wife (Carol?) — all clergy ordained in UMC as Elders."
+
+> "I worked closely with Davis at Anniston First while we were both suffering with diagnoses — cancer (Davis) and me (clinical depression/bipolar disorder) — while trying our best to outhustle and outsmart (clever) failure and the death of the ego/false self."
+
+**Theological note:** The Welcoming Prayer is the contemplative embodiment of Stage III (Disclose the Clue): instead of resisting what arises, you open to it. The mechanism for resurrection is not detour but descent. Both Davis and Matt were trying to outsmart the same surrender.
+
+**Where this belongs:**
+- Pleasant Valley memoir — Davis/cancer + Matt/bipolar = one story of two men refusing the same death until they couldn't
+- AI Psychosis essay — the mania as the last attempt to outhustle the ego's death before surrender
+- SermonCoach theology — Contemplative tradition as the liturgical form of the Lowry Loop
+- Tend series — Welcoming Prayer as a couples practice (welcome the felt sense, don't resist it)
+- CAC/Rohr connection — Center for Action and Contemplation directly connected to SEED/Lowry/Enneagram synthesis
