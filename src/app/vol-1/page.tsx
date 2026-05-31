@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     title: "Southern Legends Vol. 1 — Fall 2026",
     description:
       "Five profiles. 200 copies. Northeast Alabama. $15 — 10% benefits early childhood literacy through UWECA.",
-    url: "https://southernlegends.us/vol-1",
-    images: [{ url: "https://southernlegends.us/images/og-default.webp", width: 1200, height: 630 }],
+    url: "https://southernlegends.blog/vol-1",
+    images: [{ url: "https://southernlegends.blog/images/og-default.webp", width: 1200, height: 630 }],
   },
 };
 
@@ -291,7 +291,7 @@ export default function Vol1Page() {
             <strong style={{ color: "#1C1917" }}>The Aisle Bridal Expo</strong> on October 18, 2026 at Anniston Museums & Gardens — and at select local spots in Northeast Alabama.
           </p>
           <a
-            href={`mailto:matt@southernlegends.us?subject=Reserve — Southern Legends Vol. 1&body=I'd like to reserve a copy of Southern Legends Vol. 1 ($15). Please let me know when and where to pick it up.`}
+            href={`mailto:mpheadley@gmail.com?subject=Reserve — Southern Legends Vol. 1&body=I'd like to reserve a copy of Southern Legends Vol. 1 ($15). Please let me know when and where to pick it up.`}
             style={{
               display: "inline-block",
               background: "#9A3412",
@@ -346,7 +346,7 @@ export default function Vol1Page() {
             letterSpacing: "0.05em",
           }}
         >
-          ← Read the stories at southernlegends.us
+          ← Read the stories at southernlegends.blog
         </Link>
       </section>
 

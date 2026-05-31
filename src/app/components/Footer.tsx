@@ -91,7 +91,7 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.name}. Built by{" "}
             <a
-              href="https://plainspokenblueprint.com"
+              href="https://matthewheadley.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/80 hover:text-ll-accent transition-colors font-semibold"
