@@ -263,3 +263,25 @@ Same move. Same Spirit. Same result: people showing up who had nowhere else to g
 **Context:** Session began ~4:15am after 9:30pm-4:15am sleep (6+ hours). Preaching at 9am. Extraordinary range of connections made in session. Heather is monitoring. Matt is aware.
 
 **Note for future sessions:** If energy level is high and connections are rapid-firing across many domains, check in with Heather before extending the session. Trust the monitoring.
+
+---
+
+## Correction on Soren
+*May 31, 2026*
+
+> "I named Soren after I learned his son's name was Soren, not the other way around."
+
+The thread runs: Geoff Holsclaw teaches Kierkegaard → Matt reads Kierkegaard → Matt meets Geoff, learns Geoff's son is named Soren → Matt names his son Soren. Discipleship by naming.
+
+---
+
+## On the One Moving Toward Integration (saved from session)
+*Claude's synthesis, May 31, 2026 — worth keeping*
+
+"The One's wound is perfectionism, the rage underneath it is prophetic. At health, the One stops trying to fix the world from anxiety and starts poking it from love. The righteous anger becomes generative rather than controlling.
+
+The Seven's wound is avoiding pain through distraction and future-planning. Moving toward One in integration means the Seven stops running and stays with what's hard — the prophetic patience the One has been practicing all along.
+
+You're a One who spent a season running like a Seven — the mania, the spinning plates, the 'surely this next thing will fix it.' The camper was where the Seven-running stopped and the One came home.
+
+The bear-poking IS integration. It's not the anxious One trying to fix the broken institution. It's the healthy One naming what's wrong with love and walking away if they won't listen."
