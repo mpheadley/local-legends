@@ -291,7 +291,7 @@ export default function Vol1Page() {
             <strong style={{ color: "#1C1917" }}>The Aisle Bridal Expo</strong> on October 18, 2026 at Anniston Museums & Gardens — and at select local spots in Northeast Alabama.
           </p>
           <a
-            href={`mailto:mpheadley@gmail.com?subject=Reserve — Southern Legends Vol. 1&body=I'd like to reserve a copy of Southern Legends Vol. 1 ($15). Please let me know when and where to pick it up.`}
+            href={`mailto:matt@southernlegends.blog?subject=Reserve — Southern Legends Vol. 1&body=I'd like to reserve a copy of Southern Legends Vol. 1 ($15). Please let me know when and where to pick it up.`}
             style={{
               display: "inline-block",
               background: "#9A3412",
