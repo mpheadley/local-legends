@@ -4,6 +4,25 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## June 1, 2026 — Dzago Chatsama + Karin Squires (Facebook, on the SermonCoach post)
+
+After Matt shared SermonCoach in a UMC clergy group and on his personal Facebook page:
+
+**Dzago Chatsama (Following):**
+> "This is an amazing app. I would recommend this app. So thought provoking. When you using it to prepare the sermon, it acts as if it is also preaching to you in that moment. I love it. Will try to subscribe to it."
+
+**Karin Squires:**
+> "The reflections are mine... the ideas and research is mine... I might ask a question or two and gain help with order and flow... but the sermon drafts are mine."
+
+**Matt's reply to Karin:**
+> "Great example of doing the thinking and using AI to refine/clarify. It's great for that. The tech is neutral, the way we use it determines the result."
+
+**Why Dzago's line matters:** "It acts as if it is also preaching to you in that moment" is the best outside description of the Socratic coaching experience anyone has produced. He didn't have a word for what the tool was doing — he just described what it felt like. That's more credible than any line Matt could write about his own product.
+
+**Why Karin's framing matters:** She arrived at the exact claim SermonCoach makes — the work is yours — without being told to say it. Her testimony validates the product's core promise from someone who had been skeptical about AI in ministry.
+
+---
+
 ## May 31, 2026 — Andy Curtis + Bruce Cunningham (iMessage group, after the sermon)
 
 After Matt preached "A Seed Must Die" at Jacksonville First UMC — his first pulpit appearance in about a year:
