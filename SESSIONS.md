@@ -6,6 +6,16 @@ Newest first.
 
 ---
 
+## 2026-06-02 — Open items resolved: Digital Gym published, social posts drafted, HF auto-deploy confirmed
+
+- Digital Gym essay confirmed live at `/journal/the-digital-gym-somatic-practice` (published: true, audio wired)
+- VideoPlayer component + videoUrl frontmatter support added to journal pages (ea99f6a)
+- HF GitHub auto-deploy confirmed already wired — use `git push` only, never `vercel --prod`
+- Dennis shirt Facebook posts drafted (personal + SL page) — ready to post
+- Mandi Hackett outreach email drafted (mhackett@publictheater.org, We Shall Someday Project)
+- Noccalula Falls shirt CRM task created (#2386, due 2026-07-01, linocut concept)
+- Market sig still pending Matt's Downtown Market email address
+
 ## 2026-06-02 — Interfaith post, podcast launch, OG system, profile update from transcript
 
 **Southern Legends:**
