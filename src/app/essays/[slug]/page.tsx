@@ -279,6 +279,11 @@ export default async function JournalPostPage({ params }: { params: Params }) {
               )}
             </div>
           )}
+          {frontmatter.audioUrl && (
+            <div className="not-prose mb-10">
+              <AudioPlayer src={frontmatter.audioUrl} title="Listen to this essay" />
+            </div>
+          )}
           <MDXRemote source={content} components={mdxComponents} />
         </div>
       </article>
