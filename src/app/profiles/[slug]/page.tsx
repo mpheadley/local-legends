@@ -33,6 +33,7 @@ import FloatingShareBar from "@/app/components/FloatingShareBar";
 import PrevNextEdgeArrows from "@/app/components/PrevNextEdgeArrows";
 import NextUpPopup from "@/app/components/NextUpPopup";
 import VideoEmbed from "@/app/components/VideoEmbed";
+import MerchBlock from "@/app/components/MerchBlock";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -99,6 +100,7 @@ const mdxComponents = {
   PullQuote,
   VideoLoop,
   VideoEmbed,
+  MerchBlock,
 };
 
 type Params = Promise<{ slug: string }>;

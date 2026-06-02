@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dave Dennis — Shirt Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 60px 40px;
+    min-height: 100dvh;
+  }
+
+  .variant-label {
+    color: #444;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .pair { display: flex; gap: 24px; align-items: flex-start; }
+
+  .side-label {
+    color: #333;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .shirt {
+    width: 300px;
+    height: 380px;
+    clip-path: polygon(
+      15% 0%, 85% 0%,
+      100% 10%, 95% 16%, 88% 10%,
+      88% 100%, 12% 100%,
+      12% 10%, 5% 16%, 0% 10%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 20px 20px;
+    gap: 0;
+  }
+
+  .black { background: #111; outline: 1px solid #222; }
+  .natural { background: #e8e0d0; }
+  .white { background: #f9f9f9; outline: 1px solid #ddd; }
+
+  .hedcut { width: 175px; height: auto; object-fit: contain; }
+  .bus { width: 248px; height: auto; object-fit: contain; }
+
+  .rule { width: 36px; height: 1px; opacity: 0.2; margin: 6px 0; }
+  .black .rule { background: #e8e0d0; }
+  .natural .rule, .white .rule { background: #1c1917; }
+
+  /* All text elements use PNG files */
+  .txt { display: block; object-fit: contain; }
+
+  .txt-name    { width: 160px; margin-bottom: 2px; }
+  .txt-role    { width: 140px; opacity: 0.65; }
+  .txt-quote   { width: 185px; opacity: 0.75; }
+  .txt-loc     { width: 200px; opacity: 0.5; margin-top: 6px; }
+  .txt-booking { width: 180px; opacity: 0.5; margin-top: 6px; }
+  .txt-sl      { width: 110px; opacity: 0.35; margin-top: 4px; }
+
+  .note {
+    color: #383838;
+    font-family: monospace;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- A: Black — full text front / bus + location back -->
+  <div>
+    <div class="variant-label">A — Black · name + quote front · bus back</div>
+    <div class="pair">
+      <div>
+        <div class="side-label">Front</div>
+        <div class="shirt black">
+          <img class="hedcut" src="dennis-hedcut-faded.png" alt="Dennis hedcut">
+          <div class="rule"></div>
+          <img class="txt txt-name" src="text-white-name-small.png" alt="David Dennis">
+          <img class="txt txt-role" src="text-white-role.png" alt="Freedom Rider · 1961">
+          <div class="rule"></div>
+          <img class="txt txt-quote" src="text-white-quote.png" alt="quote">
+          <img class="txt txt-sl" src="text-white-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+      <div>
+        <div class="side-label">Back</div>
+        <div class="shirt black">
+          <img class="bus" src="bus-woodcut.png" alt="Burning bus">
+          <img class="txt txt-loc" src="text-white-location.png" alt="Anniston, Alabama · May 14, 1961">
+          <img class="txt txt-sl" src="text-white-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+    </div>
+    <div class="note">Full text. Front = the man + quote. Back = what happened.</div>
+  </div>
+
+  <!-- B: Black — hedcut + name only / bus + location -->
+  <div>
+    <div class="variant-label">B — Black · name only · bus back</div>
+    <div class="pair">
+      <div>
+        <div class="side-label">Front</div>
+        <div class="shirt black">
+          <img class="hedcut" src="dennis-hedcut-faded.png" alt="Dennis hedcut">
+          <div class="rule"></div>
+          <img class="txt txt-name" src="text-white-name-small.png" alt="David Dennis">
+          <img class="txt txt-role" src="text-white-role.png" alt="Freedom Rider · 1961">
+          <img class="txt txt-sl" src="text-white-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+      <div>
+        <div class="side-label">Back</div>
+        <div class="shirt black">
+          <img class="bus" src="bus-woodcut.png" alt="Burning bus">
+          <img class="txt txt-loc" src="text-white-location.png" alt="Anniston, Alabama · May 14, 1961">
+          <img class="txt txt-sl" src="text-white-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+    </div>
+    <div class="note">Quieter front. Let the portrait carry it.</div>
+  </div>
+
+  <!-- C: Natural — full text -->
+  <div>
+    <div class="variant-label">C — Natural · name + quote front · bus back</div>
+    <div class="pair">
+      <div>
+        <div class="side-label">Front</div>
+        <div class="shirt natural">
+          <img class="hedcut" src="dennis-hedcut-faded.png" alt="Dennis hedcut">
+          <div class="rule"></div>
+          <img class="txt txt-name" src="text-name-small.png" alt="David Dennis">
+          <img class="txt txt-role" src="text-role.png" alt="Freedom Rider · 1961">
+          <div class="rule"></div>
+          <img class="txt txt-quote" src="text-quote.png" alt="quote">
+          <img class="txt txt-sl" src="text-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+      <div>
+        <div class="side-label">Back</div>
+        <div class="shirt natural">
+          <img class="bus" src="bus-woodcut.png" alt="Burning bus">
+          <img class="txt txt-loc" src="text-location.png" alt="Anniston, Alabama · May 14, 1961">
+          <img class="txt txt-sl" src="text-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+    </div>
+    <div class="note">Natural colorway — dark text on cream.</div>
+  </div>
+
+  <!-- D: White — full text, dark ink -->
+  <div>
+    <div class="variant-label">D — White · name + quote front · bus back</div>
+    <div class="pair">
+      <div>
+        <div class="side-label">Front</div>
+        <div class="shirt white">
+          <img class="hedcut" src="dennis-hedcut-faded.png" alt="Dennis hedcut">
+          <div class="rule"></div>
+          <img class="txt txt-name" src="text-name-small.png" alt="David Dennis">
+          <img class="txt txt-role" src="text-role.png" alt="Freedom Rider · 1961">
+          <div class="rule"></div>
+          <img class="txt txt-quote" src="text-quote.png" alt="quote">
+          <img class="txt txt-sl" src="text-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+      <div>
+        <div class="side-label">Back</div>
+        <div class="shirt white">
+          <img class="bus" src="bus-woodcut.png" alt="Burning bus">
+          <img class="txt txt-loc" src="text-location.png" alt="Anniston, Alabama · May 14, 1961">
+          <img class="txt txt-sl" src="text-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+    </div>
+    <div class="note">White tee — dark ink throughout.</div>
+  </div>
+
+</body>
+</html>

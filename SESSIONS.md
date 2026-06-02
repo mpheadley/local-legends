@@ -6,6 +6,43 @@ Newest first.
 
 ---
 
+## 2026-06-02 — Dave Dennis shirt — assets, text PNGs, vignette, mockup
+
+**Assets produced (`merch/freedom-riders/`):**
+- `dennis-hedcut.png` — Gemini hedcut from Jackson mugshot
+- `dennis-hedcut-vignette.png` — hedcut with soft edge fade (use this for mockups)
+- `bus-woodcut.png` — Gemini woodcut of burning bus, rural setting, no text
+- `text-*.png` / `text-white-*.png` — 7 text elements × 2 colorways (dark + white), transparent bg
+- `dennis-fourthwall.md` — Fourthwall product copy + HTML description
+- `dennis-preview.html` — 4-variant mockup (A/B black, C natural, D white)
+
+**SL merch font standard (confirmed):**
+- `Southern Legends` credit = **IM Fell English, italic, uppercase, letter-spacing: 1px, opacity: 0.35–0.55**
+- All headline/body text = IM Fell English regular or italic
+- Current text PNGs use Georgia as stand-in — re-export with IM Fell English TTF when available
+
+**IM Fell English TTF:** download from Google Fonts, save to `merch/fonts/IMFellEnglish-Regular.ttf` and `IMFellEnglish-Italic.ttf`, then re-run `merch/freedom-riders/export-text.py`
+
+**Open:**
+- Confirm copyright clearance with Dennis (or publisher) before listing
+- Re-export text PNGs with IM Fell English once TTF is downloaded
+- Wire Fourthwall product listing
+
+## 2026-05-31 — Dave Dennis shirt mockup — photo vs. hedcut, design variants
+
+**Shirt concept developed for Freedom Riders profile:**
+- Confirmed Mississippi Dept. of Archives and History credit on both mugshot photos — public domain, clear for commercial use
+- Source photos: `dave-dennis-768x990.webp` (front only) and `David-Dennis.webp` (diptych front+profile)
+- Six variants mocked up at `merch/freedom-riders/dennis-preview.html`: photo only, booking number, quote, diptych, natural colorway, left chest
+- Best candidate: **V4 diptych** (front) + burning bus photo on back — but bus photos (AP wire) need copyright clearance before commercial use
+- Quote locked: *"I was trying to get a date with a woman."* — Dennis's own words about how he ended up on the Freedom Ride
+- Dennis has a 2022 book (*The Movement Made Us* with Dave Dennis Jr.) — collab/clearance conversation worth having given Matt met him in person
+
+**Open:**
+- Confirm copyright on bus burning photos before using on merch
+- Reach out to Dennis (or his publisher) about shirt collab
+- Choose winning variant and send to Madi Lou Boutique
+
 ## 2026-05-30 — David Dennis, hedcut, YouTube Shorts, syndication CRM
 
 **Freedom riders profile updated:**
