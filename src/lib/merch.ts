@@ -37,16 +37,16 @@ type Product = (typeof PRODUCTS)[keyof typeof PRODUCTS];
 
 // Explicit per-slug assignments. Add a slug here when a new profile goes live.
 // Profiles not listed get MC as the default (safe for any Anniston subject).
-const PROFILE_MERCH: Record<string, Product> = {
-  "chief-ladiga-trail": PRODUCTS.CLT,
-  "noccalula-falls": PRODUCTS.CLT,
-  "anniston-museums-gardens": PRODUCTS.MC,
-  "aquality-farms": PRODUCTS.MC,
-  "freedom-riders-national-monument": PRODUCTS.DD,
-  "interfaith-ministries-calhoun-county": PRODUCTS.MC,
-  "lewis-downing": PRODUCTS.MC,
-  "mom-to-go": PRODUCTS.MC,
-  "shannon-jenkins": PRODUCTS.MC,
+const PROFILE_MERCH: Record<string, [Product, Product, Product?]> = {
+  "chief-ladiga-trail": [PRODUCTS.CLT, PRODUCTS.ICM],
+  "noccalula-falls": [PRODUCTS.CLT, PRODUCTS.MC],
+  "anniston-museums-gardens": [PRODUCTS.MC, PRODUCTS.ICM],
+  "aquality-farms": [PRODUCTS.MC, PRODUCTS.ICM],
+  "freedom-riders-national-monument": [PRODUCTS.DD, PRODUCTS.MC, PRODUCTS.ICM],
+  "interfaith-ministries-calhoun-county": [PRODUCTS.DD, PRODUCTS.MC, PRODUCTS.ICM],
+  "lewis-downing": [PRODUCTS.MC, PRODUCTS.ICM],
+  "mom-to-go": [PRODUCTS.MC, PRODUCTS.ICM],
+  "shannon-jenkins": [PRODUCTS.MC, PRODUCTS.ICM],
 };
 
 // Explicit per-slug assignments for essays.
@@ -63,10 +63,10 @@ const ESSAY_MERCH: Record<string, Product> = {
   "no-shade": PRODUCTS.ICM,
 };
 
-export function getProfileMerch(slug: string): { primary: Product; secondary: Product } {
-  const primary = PROFILE_MERCH[slug] ?? PRODUCTS.MC;
-  const secondary = primary === PRODUCTS.ICM ? PRODUCTS.SH : PRODUCTS.ICM;
-  return { primary, secondary };
+export function getProfileMerch(slug: string): { primary: Product; secondary: Product; tertiary?: Product } {
+  const entry = PROFILE_MERCH[slug] ?? [PRODUCTS.MC, PRODUCTS.ICM];
+  const [primary, secondary, tertiary] = entry;
+  return { primary, secondary, tertiary };
 }
 
 export function getEssayMerch(slug: string): { primary: Product; secondary: Product } {

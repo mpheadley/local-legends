@@ -14,9 +14,10 @@ interface ClosingSectionProps {
   excerpt?: string;
   primary: Product;
   secondary: Product;
+  tertiary?: Product;
 }
 
-export default function ClosingSection({ shareUrl, title, excerpt, primary, secondary }: ClosingSectionProps) {
+export default function ClosingSection({ shareUrl, title, excerpt, primary, secondary, tertiary }: ClosingSectionProps) {
   return (
     <section className="profile-closing">
       {/* Author credit */}
@@ -106,6 +107,28 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
               Get the shirt →
             </a>
           </div>
+          {tertiary && (
+            <div className="flex flex-col items-center gap-3">
+              <a href={tertiary.url} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={tertiary.image}
+                  alt={tertiary.name}
+                  width={140}
+                  height={140}
+                  className="rounded hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <span className="text-xs text-white/60">{tertiary.name}</span>
+              <a
+                href={tertiary.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
+              >
+                Get the shirt →
+              </a>
+            </div>
+          )}
         </div>
 
         <Link

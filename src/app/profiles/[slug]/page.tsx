@@ -449,7 +449,7 @@ export default async function ProfilePage({
 
       {/* Closing */}
       {(() => {
-        const { primary, secondary } = getProfileMerch(slug);
+        const { primary, secondary, tertiary } = getProfileMerch(slug);
         return (
           <ClosingSection
             shareUrl={`/profiles/${slug}`}
@@ -457,6 +457,7 @@ export default async function ProfilePage({
             excerpt={frontmatter.excerpt}
             primary={primary}
             secondary={secondary}
+            tertiary={tertiary}
           />
         );
       })()}
