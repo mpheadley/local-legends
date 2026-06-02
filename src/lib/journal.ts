@@ -22,6 +22,8 @@ export interface JournalFrontmatter {
   related?: string[];
   merchImage?: string;
   merchUrl?: string;
+  audioUrl?: string;
+  audioDuration?: string;
   originalPublication?: {
     name: string;
     url: string;
