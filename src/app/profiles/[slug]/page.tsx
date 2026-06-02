@@ -34,6 +34,8 @@ import PrevNextEdgeArrows from "@/app/components/PrevNextEdgeArrows";
 import NextUpPopup from "@/app/components/NextUpPopup";
 import VideoEmbed from "@/app/components/VideoEmbed";
 import MerchBlock from "@/app/components/MerchBlock";
+import ArtCredit from "@/app/components/ArtCredit";
+import Callout from "@/app/components/Callout";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -101,6 +103,8 @@ const mdxComponents = {
   VideoLoop,
   VideoEmbed,
   MerchBlock,
+  ArtCredit,
+  Callout,
 };
 
 type Params = Promise<{ slug: string }>;
