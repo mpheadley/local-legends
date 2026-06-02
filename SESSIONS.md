@@ -6,6 +6,43 @@ Newest first.
 
 ---
 
+## 2026-06-02 — Dennis shirt, merch slots, email sigs, HF updates
+
+**Southern Legends:**
+- Dave Dennis shirt launched on Fourthwall ($40) — wired into Freedom Riders profile via MerchBlock
+- Tertiary merch slot added to ClosingSection — Freedom Riders + Interfaith now show DD + MC + ICM
+- Digital Gym essay draft produced (workflow) — pending save to repo
+- merch/freedom-riders/ folder: hedcut, bus woodcut, text PNGs, mockup HTML, Fourthwall copy
+
+**matthewheadley.com email sigs:**
+- 8 sigs total at matthewheadley.com/email-signature.html
+- Matt: Aisle (hedcut), SermonCoach (hedcut + logo right), SL (flat 2x WebP), Personal (green gradient + topo + venture tiles)
+- Heather: Aisle (studio headshot), Florals (studio headshot + sprig logo)
+- Iris: The Aisle Concierge (navy, dark)
+- Market: placeholder (email TBD)
+- All have Gmail image URLs
+
+**Heather Florals site:**
+- Nav logo → sprig botanical (deployed via vercel --prod, GitHub auto-deploy NOT wired)
+- About + blog headshot → studio photo (heather-headshot.webp)
+
+**Open:**
+- Market sig email address TBD
+- Digital Gym essay → save to SL repo and publish
+- Dennis shirt social post (drafted — personal FB first, SL page second)
+- Mandi Hackett outreach (We Shall Someday Project, mhackett@publictheater.org)
+- HF GitHub auto-deploy needs wiring
+- Noccalula Falls linocut shirt (CRM task: 2026-07-01)
+
+## 2026-06-02 — Dave Dennis shirt launched to Fourthwall + profile
+
+**Shirt live:** https://matt-headley-shop.fourthwall.com/products/dave-dennis-freedom-rider-1961 · $40
+**Profile updated:** MerchBlock component wired into Freedom Riders profile with front/back mockup images + FW link
+**Deployed:** pushed to main, Vercel auto-deploy triggered
+
+**Social strategy:** post personal first (you met Dennis, lived near the depot), share to SL page second
+**Mandi Hackett note:** We Shall Someday Project — she wanted to share the SL profile. Shirt launch is a reason to reach out. Email: mhackett@publictheater.org
+
 ## 2026-06-02 — Dave Dennis shirt — assets, text PNGs, vignette, mockup
 
 **Assets produced (`merch/freedom-riders/`):**
