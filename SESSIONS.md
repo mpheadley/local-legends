@@ -6,6 +6,30 @@ Newest first.
 
 ---
 
+## 2026-06-02 — Interfaith post, podcast launch, OG system, profile update from transcript
+
+**Southern Legends:**
+- Interfaith Ministries profile posted to SL Facebook Page (SouthernLegendsAL) via Meta API
+- Profile updated from April LaFollette voice memo transcript: added DME & Recycling section, Integrative Health Coaching section (Linda White, 100-lb story, diabetic story, sleep-first coaching), dental clinic made evergreen
+- OG image built (Jean Ellison format: hedcut on white + pine→gold gradient + topo) — auto-wired via `interfaith-ministries-calhoun-county-og.png` slug detection
+- FB post reposted with OG image attached; personal share copy drafted (with April tag)
+- Podcast RSS feed live at `southernlegends.blog/podcast.xml` — auto-generates from `audioUrl` frontmatter
+- Podcast cover art built (triskelion + topo gradient, 3000×3000) saved to `public/images/podcast-cover.jpg`
+- `logo.webp` rebuilt without drop shadow
+- Transcripts added: Little Caesars.txt + Little Caesars 2.txt (April LaFollette interview + Matt website review memo)
+
+**plainspoken-coach:**
+- Southern Legends Facebook Page wired to social-accounts.ts (`FB_SL_PAGE_ID` + `FB_SL_PAGE_TOKEN` in Vercel)
+- Correct SL page ID confirmed: `1073679299157824` (not 1657310668645051)
+
+**Next:**
+- Spotify for Creators: finish show setup (on basics form), submit RSS
+- Apple Podcasts: podcasters.apple.com → add RSS feed
+- Generate Brian audio for Interfaith profile → add `audioUrl` to frontmatter
+- Record own voice for future episodes
+
+---
+
 ## 2026-06-02 — Dennis shirt, merch slots, email sigs, HF updates
 
 **Southern Legends:**
