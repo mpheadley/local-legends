@@ -26,6 +26,11 @@ export const PRODUCTS = {
     image: "https://imgproxy.fourthwall.dev/bCKGvDFomR4x6_Zlk-RenE-MeR-Zb6uKO6B8jy1nJ6A/w:1920/sm:1/enc/8Tc1-v11kCUQnxAj/xbkOwN2Vmv1CmS5b/iH46ky6mYZkr7k1T/sj-wL9p2g_mBO1xo/11U6ggMM2EaOCyuu/ZKr9z6B4zHOG8DIq/zuwI3c9jJmiOwIiV/VVBN7X34q-o7BDHm/mSLvFXaNgCicXSW1/oVoxxnVrSMwkzOC5/pb5-h4tqgXuvRrep/XjTo_ygy8ePtMBxI/mrLLJArS604vJop5/0ZWri4eShE8mN6Mk/R8CBRTe6q5c.jpg",
     name: "The Model City",
   },
+  DD: {
+    url: `${FW}/dave-dennis-freedom-rider-1961`,
+    image: "https://imgproxy.fourthwall.dev/YvdCQQM4m34BsiGM6jH_ZWtLkpB-86lBsT-JJkH5ywk/w:1920/sm:1/enc/KJmEURE1ZEHH7lz8/KbhMAztnGROBOrZB/o1KrQlLfPkYCWGsu/3VL6M0apn3-yNoot/gJPOll2UlrMbcT8Z/vVZ1y11cowVyD17R/sbEPfskKjsV9d8Vp/AqT_Q1F4px2_tfwr/k-RstG64c2orIMYh/HMEZQoFMr8fRPgDc/gsaRG0QfuoURMYhQ/-zr4w5ogA_ILJAWL/_a8TnRJ1oT5Y8hM8/nlJuDiLEe-ixnKlh/brcnBF06Xtk.jpg",
+    name: "Dave Dennis — Freedom Rider, 1961",
+  },
 } as const;
 
 type Product = (typeof PRODUCTS)[keyof typeof PRODUCTS];
@@ -37,7 +42,7 @@ const PROFILE_MERCH: Record<string, Product> = {
   "noccalula-falls": PRODUCTS.CLT,
   "anniston-museums-gardens": PRODUCTS.MC,
   "aquality-farms": PRODUCTS.MC,
-  "freedom-riders-national-monument": PRODUCTS.MC,
+  "freedom-riders-national-monument": PRODUCTS.DD,
   "interfaith-ministries-calhoun-county": PRODUCTS.MC,
   "lewis-downing": PRODUCTS.MC,
   "mom-to-go": PRODUCTS.MC,
