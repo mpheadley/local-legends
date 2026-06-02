@@ -27,6 +27,7 @@ import ProfileCardHero from "@/app/components/ProfileCardHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 import { getEssayMerch } from "@/lib/merch";
 import ClosingSection from "@/app/components/ClosingSection";
+import Callout from "@/app/components/Callout";
 
 function Dateline({ children }: { children: React.ReactNode }) {
   return (
@@ -126,6 +127,7 @@ const mdxComponents = {
   FeaturedImage,
   InlineImage,
   Dateline,
+  Callout,
 };
 
 type Params = Promise<{ slug: string }>;
