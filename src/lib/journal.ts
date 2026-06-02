@@ -24,6 +24,7 @@ export interface JournalFrontmatter {
   merchUrl?: string;
   audioUrl?: string;
   audioDuration?: string;
+  videoUrl?: string;
   originalPublication?: {
     name: string;
     url: string;

@@ -57,3 +57,4 @@ content/research/sources/*.MOV
 content/matt-headley-sources/
 content/journal-drafts/
 print/sl-print-vol1.pdf
+.env*.local

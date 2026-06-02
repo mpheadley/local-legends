@@ -14,6 +14,7 @@ import ArticleImage from "@/app/components/ArticleImage";
 import InlineImage from "@/app/components/InlineImage";
 import AudioPlayer from "@/app/components/AudioPlayer";
 import VideoEmbed from "@/app/components/VideoEmbed";
+import VideoPlayer from "@/app/components/VideoPlayer";
 import VideoLoop from "@/app/components/VideoLoop";
 import MusicEmbed from "@/app/components/MusicEmbed";
 import SongCard from "@/app/components/SongCard";
@@ -117,6 +118,7 @@ const mdxComponents = {
   ArticleImage,
   AudioPlayer,
   VideoEmbed,
+  VideoPlayer,
   VideoLoop,
   MusicEmbed,
   SongCard,
@@ -277,6 +279,11 @@ export default async function JournalPostPage({ params }: { params: Params }) {
               {frontmatter.imageCaption && (
                 <p className="mt-2 text-xs text-center italic text-ll-text-light">{frontmatter.imageCaption}</p>
               )}
+            </div>
+          )}
+          {frontmatter.videoUrl && (
+            <div className="not-prose mb-6">
+              <VideoPlayer src={frontmatter.videoUrl} caption="Watch this essay" />
             </div>
           )}
           {frontmatter.audioUrl && (
