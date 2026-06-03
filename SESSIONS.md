@@ -6,6 +6,15 @@ Newest first.
 
 ---
 
+## 2026-06-03 — Interfaith photo subjects documented, session close
+
+- Identified people in Shepherd's Table Jan 2025 photo: Stephen LaFollette (April's husband), Caroline LaFollette (April's daughter, Amada Home Services), Cheyenne Mattox (Matt's daughter), Pati Tiller (Arc of Calhoun and Cleburne Counties)
+- 4 contacts added to CRM
+- Memory saved: `project_interfaith_connections.md`
+- Post live on SouthernLegendsAL with OG image; personal share with April tag posted
+
+---
+
 ## 2026-06-02 — Open items resolved: Digital Gym published, social posts drafted, HF auto-deploy confirmed
 
 - Digital Gym essay confirmed live at `/journal/the-digital-gym-somatic-practice` (published: true, audio wired)
