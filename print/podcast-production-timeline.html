@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southern Legends — Podcast & Video Production Timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,300;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --pine:    #1E3A2F;
+    --gold:    #CA8A04;
+    --dark:    #292524;
+    --cream:   #F7F3EC;
+    --muted:   #6B5E4E;
+    --border:  #E5D9C8;
+    --orange:  #C4621A;
+    --sage:    #3D6B4F;
+    --red:     #9A3412;
+    --white:   #FAFAF7;
+  }
+
+  body {
+    background: var(--cream);
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--dark);
+    padding: 48px 60px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .doc-header {
+    border-bottom: 2px solid var(--pine);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .doc-header h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--pine);
+    line-height: 1;
+  }
+  .doc-header .meta {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  /* Progress bar */
+  .progress-bar-wrap {
+    margin-bottom: 40px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 24px;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .progress-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .progress-pct {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--pine);
+  }
+  .progress-track {
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--sage);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+  }
+  .progress-sub {
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* Section */
+  .section { margin-bottom: 48px; }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--pine);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  /* Goals grid */
+  .goals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .goal-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+  .goal-card .label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .goal-card .value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .goal-card .note {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+
+  .phase {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 0;
+    border-left: 3px solid var(--border);
+    padding-left: 24px;
+    padding-bottom: 32px;
+    position: relative;
+  }
+  .phase::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--pine);
+    border: 2px solid var(--cream);
+    transition: background 0.2s;
+  }
+  .phase.complete::before  { background: var(--sage); }
+  .phase.in-progress::before { background: var(--gold); }
+  .phase.pending::before   { background: var(--border); }
+
+  .phase-date {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    padding-top: 2px;
+    line-height: 1.4;
+  }
+
+  .phase-content h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+
+  .phase-content p {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  /* Interactive task rows */
+  .task {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.84rem;
+    color: var(--dark);
+    line-height: 1.4;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.12s;
+    user-select: none;
+  }
+  .task:hover { background: rgba(0,0,0,0.04); }
+  .task.done { color: var(--muted); text-decoration: line-through; }
+  .task.blocked { color: var(--red); }
+
+  .task-check {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1.5px solid var(--border);
+    background: white;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: var(--sage);
+    transition: all 0.15s;
+  }
+  .task.done .task-check {
+    background: var(--sage);
+    border-color: var(--sage);
+    color: white;
+  }
+  .task.blocked .task-check { border-color: var(--red); }
+
+  .badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+  .badge-brian  { background: #EDE9FE; color: #5B21B6; }
+  .badge-voice  { background: #DCFCE7; color: #166534; }
+  .badge-video  { background: #FEF3C7; color: #92400E; }
+  .badge-done   { background: #D1FAE5; color: #065F46; }
+  .badge-blocked { background: #FEE2E2; color: #991B1B; }
+
+  /* Episode table */
+  .episode-table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+  th {
+    text-align: left;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--border);
+    background: white;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--dark);
+    vertical-align: middle;
+    line-height: 1.4;
+  }
+  tr:nth-child(even) td { background: white; }
+  tr:hover td { background: rgba(202,138,4,0.04); }
+
+  /* Status select */
+  .status-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 3px 6px;
+    background: white;
+    cursor: pointer;
+    color: var(--dark);
+    transition: border-color 0.15s;
+  }
+  .status-select:focus { outline: none; border-color: var(--pine); }
+  .status-select.live    { color: var(--sage);   border-color: #bbf7d0; background: #f0fdf4; }
+  .status-select.ready   { color: var(--gold);   border-color: #fde68a; background: #fffbeb; }
+  .status-select.queued  { color: var(--muted); }
+  .status-select.record  { color: var(--orange); border-color: #fed7aa; background: #fff7ed; }
+  .status-select.blocked { color: var(--red);    border-color: #fecaca; background: #fff1f2; }
+
+  /* CRM sync banner */
+  .sync-banner {
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .sync-banner strong { color: var(--dark); }
+  .sync-btn {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--pine);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: opacity 0.15s;
+  }
+  .sync-btn:hover { opacity: 0.85; }
+
+  /* Profile pipeline */
+  .pipeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .pipeline-col {}
+  .pipeline-col-title {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    padding: 6px 10px;
+    border-bottom: 2px solid;
+    margin-bottom: 8px;
+  }
+  .pipeline-col-title.published { border-color: var(--sage); color: var(--sage); }
+  .pipeline-col-title.pending   { border-color: var(--gold); }
+  .pipeline-col-title.candidate { border-color: var(--border); }
+  .pipeline-col-title.blocked   { border-color: var(--red); }
+
+  .pipeline-item {
+    font-size: 0.8rem;
+    color: var(--dark);
+    padding: 6px 10px;
+    border-radius: 3px;
+    background: white;
+    border: 1px solid var(--border);
+    margin-bottom: 6px;
+    line-height: 1.3;
+    cursor: default;
+  }
+  .pipeline-item .ep-num {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Footer */
+  .doc-footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<div class="doc-header">
+  <div>
+    <p style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:6px;">Southern Legends</p>
+    <h1>Podcast & Video<br>Production Timeline</h1>
+  </div>
+  <div class="meta" id="header-meta">
+    Updated: June 2026<br>
+    Platforms: Spotify · Apple Podcasts · YouTube<br>
+    RSS: southernlegends.blog/podcast.xml<br>
+    CRM sync: <span id="sync-ts">—</span>
+  </div>
+</div>
+
+<!-- Progress bar -->
+<div class="progress-bar-wrap">
+  <div class="progress-header">
+    <span class="progress-label">Overall Progress</span>
+    <span class="progress-pct" id="progress-pct">—</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+  </div>
+  <div class="progress-sub" id="progress-sub">Loading…</div>
+</div>
+
+<!-- CRM sync banner -->
+<div class="sync-banner">
+  <div>
+    <strong>CRM sync:</strong> Published profiles auto-marked done below.
+    <span id="crm-summary">4 published · 2 pending review · 9 candidates</span>
+  </div>
+  <button class="sync-btn" onclick="alert('Run: python3 tools/regen-podcast-timeline.py\nto re-pull from CRM.')">Refresh from CRM</button>
+</div>
+
+<!-- Goals -->
+<div class="section">
+  <div class="section-title">Production Goals</div>
+  <div class="goals-grid">
+    <div class="goal-card">
+      <div class="label">Cadence</div>
+      <div class="value">1 episode<br>every 2 weeks</div>
+      <div class="note">Matches SL profile writing pace. One profile = one episode.</div>
+    </div>
+    <div class="goal-card">
+      <div class="label">Voice</div>
+      <div class="value">Brian (ElevenLabs)<br>→ Your voice</div>
+      <div class="note">Brian TTS for backlog. Record your own voice starting with new episodes.</div>
+    </div>
+    <div class="goal-card">
+      <div class="label">YouTube</div>
+      <div class="value">Audio + static<br>card per episode</div>
+      <div class="note">Same MP3, branded still frame. YouTube channel wired after Episode 3.</div>
+    </div>
+    <div class="goal-card">
+      <div class="label">Episode 1</div>
+      <div class="value">The Digital Gym</div>
+      <div class="note">Live on Spotify. Brian voice. Audio + video player on site.</div>
+    </div>
+    <div class="goal-card">
+      <div class="label">Episode 2</div>
+      <div class="value">Interfaith<br>Ministries</div>
+      <div class="note">Profile live. Audio pending. Record Brian or your voice.</div>
+    </div>
+    <div class="goal-card">
+      <div class="label">Backlog</div>
+      <div class="value" id="backlog-count">—</div>
+      <div class="note" id="backlog-note">Loading from CRM…</div>
+    </div>
+  </div>
+</div>
+
+<!-- Timeline -->
+<div class="section">
+  <div class="section-title">Timeline</div>
+  <div class="timeline">
+
+    <div class="phase complete">
+      <div class="phase-date">Done<br>Jun 2</div>
+      <div class="phase-content">
+        <h3>Podcast Infrastructure</h3>
+        <p>RSS feed, cover art, platform accounts, Episode 1 live.</p>
+        <div class="tasks" data-phase="infra">
+          <div class="task done" data-id="infra-rss" onclick="toggleTask(this)"><div class="task-check">✓</div> /podcast.xml live at southernlegends.blog <span class="badge badge-done">live</span></div>
+          <div class="task done" data-id="infra-cover" onclick="toggleTask(this)"><div class="task-check">✓</div> Triskelion cover art (3000×3000)</div>
+          <div class="task done" data-id="infra-ep1" onclick="toggleTask(this)"><div class="task-check">✓</div> Episode 1 — The Digital Gym (Brian audio + video) <span class="badge badge-done">live</span></div>
+          <div class="task done" data-id="infra-spotify-acct" onclick="toggleTask(this)"><div class="task-check">✓</div> Spotify for Creators account started</div>
+          <div class="task done" data-id="infra-logo" onclick="toggleTask(this)"><div class="task-check">✓</div> SL wordmark locked in — Southern-Legends-logo-final.png <span class="badge badge-done">locked</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase in-progress">
+      <div class="phase-date">This week<br>Jun 3–7</div>
+      <div class="phase-content">
+        <h3>Platform Launch</h3>
+        <p>Get on Spotify and Apple. Upload full episode video. Ep 2 audio.</p>
+        <div class="tasks" data-phase="launch">
+          <div class="task" data-id="launch-spotify" onclick="toggleTask(this)"><div class="task-check"></div> Upload sl-ep1-full-v3.mp4 to Spotify (replace audio-only) <span class="badge badge-blocked">pending</span></div>
+          <div class="task" data-id="launch-apple" onclick="toggleTask(this)"><div class="task-check"></div> Submit RSS to Apple Podcasts Connect (24–48hr)</div>
+          <div class="task" data-id="launch-ep2-brian" onclick="toggleTask(this)"><div class="task-check"></div> Episode 2 — Interfaith: generate Brian audio <span class="badge badge-brian">Brian</span></div>
+          <div class="task" data-id="launch-ep2-frontmatter" onclick="toggleTask(this)"><div class="task-check"></div> Add audioUrl to interfaith frontmatter → auto-adds to feed</div>
+          <div class="task" data-id="launch-fb-reel" onclick="toggleTask(this)"><div class="task-check"></div> Post portrait reel to SouthernLegendsAL FB (needs fresh token)</div>
+          <div class="task" data-id="launch-drafts" onclick="toggleTask(this)"><div class="task-check"></div> Send 7 Gmail drafts — subscribe invites + profile outreach</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase pending">
+      <div class="phase-date">Jun 9–21</div>
+      <div class="phase-content">
+        <h3>Backlog Sprint — Brian voice</h3>
+        <p>Generate audio for the 5 strongest existing profiles. Ship 1 every 2–3 days.</p>
+        <div class="tasks" data-phase="backlog">
+          <div class="task" data-id="backlog-lewis" onclick="toggleTask(this)"><div class="task-check"></div> Episode 3 — Lewis Downing <span class="badge badge-brian">Brian</span></div>
+          <div class="task" data-id="backlog-shannon" onclick="toggleTask(this)"><div class="task-check"></div> Episode 4 — Shannon Jenkins <span class="badge badge-brian">Brian</span></div>
+          <div class="task" data-id="backlog-jean" onclick="toggleTask(this)"><div class="task-check"></div> Episode 5 — Mom-to-Go (Jean Ellison) <span class="badge badge-brian">Brian</span></div>
+          <div class="task" data-id="backlog-freedom" onclick="toggleTask(this)"><div class="task-check"></div> Episode 6 — Freedom Riders / David Dennis <span class="badge badge-brian">Brian</span></div>
+          <div class="task" data-id="backlog-youtube" onclick="toggleTask(this)"><div class="task-check"></div> Wire YouTube channel — upload audio + static card for each</div>
+          <div class="task" data-id="backlog-mike-email" onclick="toggleTask(this)"><div class="task-check"></div> Send Mike Hindman email — SL profile conversation</div>
+          <div class="task" data-id="backlog-aubrey" onclick="toggleTask(this)"><div class="task-check"></div> Follow up: Aubrey Fullbright (Romarin et Corbeaux) — profile ask</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase pending">
+      <div class="phase-date">Jul 2026</div>
+      <div class="phase-content">
+        <h3>Switch to Your Voice</h3>
+        <p>Record Episode 7+ yourself. Brian stays for any backlog you haven't gotten to.</p>
+        <div class="tasks" data-phase="voice">
+          <div class="task" data-id="voice-ep7" onclick="toggleTask(this)"><div class="task-check"></div> Record Episode 7 (next new profile) in your voice <span class="badge badge-voice">Your voice</span></div>
+          <div class="task" data-id="voice-setup" onclick="toggleTask(this)"><div class="task-check"></div> Setup: iPhone + Rode VideoMicro or USB mic, quiet room</div>
+          <div class="task" data-id="voice-edit" onclick="toggleTask(this)"><div class="task-check"></div> Edit in GarageBand → export MP3 → upload to Vercel Blob</div>
+          <div class="task" data-id="voice-frontmatter" onclick="toggleTask(this)"><div class="task-check"></div> Add audioUrl to frontmatter → feeds Spotify + Apple automatically</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase pending">
+      <div class="phase-date">Aug–Sep<br>2026</div>
+      <div class="phase-content">
+        <h3>Video Push (Pre-Expo)</h3>
+        <p>Build YouTube audience before October 18. Short-form clips + behind-the-scenes.</p>
+        <div class="tasks" data-phase="video">
+          <div class="task" data-id="video-shorts" onclick="toggleTask(this)"><div class="task-check"></div> YouTube Shorts: 60s clips from strongest moments <span class="badge badge-video">video</span></div>
+          <div class="task" data-id="video-bts" onclick="toggleTask(this)"><div class="task-check"></div> Behind-the-scenes: vendor setup, venue walk, Bloom Bar story</div>
+          <div class="task" data-id="video-oncam" onclick="toggleTask(this)"><div class="task-check"></div> Record yourself on camera for one full profile episode</div>
+          <div class="task" data-id="video-crosslink" onclick="toggleTask(this)"><div class="task-check"></div> Crosslink: every SL episode links to YouTube, every video links to site</div>
+          <div class="task" data-id="video-magazine" onclick="toggleTask(this)"><div class="task-check"></div> Magazine Issue 1 — ad slots sold (8 min), Figma layout done</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase pending">
+      <div class="phase-date">Oct 18<br>Expo</div>
+      <div class="phase-content">
+        <h3>Expo Launch + Magazine Distribution</h3>
+        <p>500 attendees. Every vendor and couple gets a copy of Issue 1.</p>
+        <div class="tasks" data-phase="expo">
+          <div class="task" data-id="expo-mag-print" onclick="toggleTask(this)"><div class="task-check"></div> Print 500 copies of Issue 1 (submit Aug 1, deliver Aug 20)</div>
+          <div class="task" data-id="expo-bar" onclick="toggleTask(this)"><div class="task-check"></div> Confirm Josh Sterns (Apothecary) as bar vendor</div>
+          <div class="task" data-id="expo-mag-dist" onclick="toggleTask(this)"><div class="task-check"></div> Distribute magazine at expo check-in</div>
+          <div class="task" data-id="expo-podcast" onclick="toggleTask(this)"><div class="task-check"></div> Live podcast recording at expo booth</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase pending">
+      <div class="phase-date">Nov 2026+</div>
+      <div class="phase-content">
+        <h3>Full Creator Rhythm</h3>
+        <p>1 profile every 2 weeks = 1 podcast + 1 YouTube + 1 FB post + 1 magazine feature. One piece of work, four surfaces.</p>
+        <div class="tasks" data-phase="rhythm">
+          <div class="task" data-id="rhythm-pipeline" onclick="toggleTask(this)"><div class="task-check"></div> Profile → audio → MP3 to Blob → audioUrl in frontmatter</div>
+          <div class="task" data-id="rhythm-rss" onclick="toggleTask(this)"><div class="task-check"></div> Auto-feeds to RSS → Spotify + Apple pick up within hours</div>
+          <div class="task" data-id="rhythm-yt" onclick="toggleTask(this)"><div class="task-check"></div> Upload to YouTube with static card image</div>
+          <div class="task" data-id="rhythm-fb" onclick="toggleTask(this)"><div class="task-check"></div> Post to SouthernLegendsAL FB via API</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Episode tracker -->
+<div class="section">
+  <div class="section-title">Episode Tracker</div>
+  <div class="episode-table-wrap">
+  <table id="episode-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Audio</th>
+        <th>Video</th>
+        <th>FB Posted</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="episode-tbody">
+      <!-- Populated by JS from CRM_DATA -->
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- Profile pipeline from CRM -->
+<div class="section">
+  <div class="section-title">Profile Pipeline (from CRM)</div>
+  <div class="pipeline-grid">
+    <div class="pipeline-col">
+      <div class="pipeline-col-title published">Published</div>
+      <div id="pipeline-published"></div>
+    </div>
+    <div class="pipeline-col">
+      <div class="pipeline-col-title pending">Pending Review</div>
+      <div id="pipeline-pending"></div>
+    </div>
+    <div class="pipeline-col">
+      <div class="pipeline-col-title candidate">Candidate</div>
+      <div id="pipeline-candidate"></div>
+    </div>
+    <div class="pipeline-col">
+      <div class="pipeline-col-title blocked">Needs Outreach</div>
+      <div id="pipeline-outreach"></div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-footer">
+  <span>southernlegends.blog/podcast.xml · matt@headleyweb.com</span>
+  <span id="footer-ts">Updated June 2026 — Southern Legends</span>
+</div>
+
+<script>
+// ── CRM DATA (last synced 2026-06-05) ──────────────────────────────────────
+const CRM_DATA = {
+  syncDate: '2026-06-05',
+  published: [
+    { name: 'Samuel Sawyer (Aquality Farms)', slug: 'aquality-farms' },
+    { name: 'Jean Ellison (Mom-to-Go)',        slug: 'mom-to-go' },
+    { name: 'Lewis Downing',                   slug: 'lewis-downing' },
+    { name: 'Shannon Jenkins',                 slug: 'shannon-jenkins' },
+    { name: 'April LaFollette (Interfaith)',   slug: 'interfaith-ministries-calhoun-county' },
+    { name: 'Jay Jenkins',                     slug: 'jay-jenkins' },
+  ],
+  pending: [
+    { name: 'Sarah Woolmaker' },
+    { name: 'April LaFollette (Interfaith)' },
+  ],
+  candidate: [
+    { name: 'Aubrey Fullbright (Romarin et Corbeaux)' },
+    { name: 'Toby Bennington (Chief Ladiga Trail)' },
+    { name: 'Mike Hindman (Jacksonville CDA)' },
+    { name: 'Josh Sterns (Apothecary)' },
+    { name: 'Michelle Hornsby (Red Bird Willow Farm)' },
+    { name: 'Indigo Ridge Farms' },
+    { name: 'Karla Eden' },
+    { name: 'Thomas Briskey' },
+  ],
+  outreach: [
+    { name: 'Aubrey Fullbright — draft sent' },
+    { name: 'Sarah Woolmaker — draft sent' },
+    { name: 'Mike Hindman — draft in Gmail' },
+    { name: 'Toby Bennington — text needed' },
+  ],
+};
+
+const EPISODES = [
+  { num:1, title:'The Digital Gym: A Somatic Practice', type:'Essay',   audio:'Brian ✓', video:'MP4 ✓ YT live', fb:'—',        status:'live'    },
+  { num:2, title:'When the Churches Stopped Competing', type:'Profile',  audio:'Pending', video:'—',            fb:'✓ Jun 2',   status:'ready'   },
+  { num:3, title:'Lewis Downing — 1030 Gurnee',         type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'queued'  },
+  { num:4, title:'Shannon Jenkins — Connective Tissue',  type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'queued'  },
+  { num:5, title:'Mom-to-Go — Jean Ellison',             type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'queued'  },
+  { num:6, title:'Freedom Riders — David Dennis',        type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'queued'  },
+  { num:7, title:'Aquality Farms — Samuel Sawyer',       type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'queued'  },
+  { num:8, title:'Chief Ladiga Trail',                   type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'queued'  },
+  { num:9, title:'Mike Hindman — Three Brothers',        type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'record'  },
+  { num:10,title:'[Next new profile — Your voice]',      type:'Profile',  audio:'—',       video:'—',            fb:'—',         status:'record'  },
+];
+
+const STATUS_OPTS = [
+  { val:'live',    label:'Live',           cls:'live'    },
+  { val:'ready',   label:'Ready for audio', cls:'ready'  },
+  { val:'queued',  label:'Queued',          cls:'queued' },
+  { val:'record',  label:'Record yourself', cls:'record' },
+  { val:'blocked', label:'Blocked',         cls:'blocked'},
+];
+
+const STORAGE_KEY = 'sl-podcast-timeline-v2';
+
+// ── Load / Save ────────────────────────────────────────────────────────────
+function loadState() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch { return {}; }
+}
+function saveState(state) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+// ── Task toggle ────────────────────────────────────────────────────────────
+function toggleTask(el) {
+  const state = loadState();
+  const id = el.dataset.id;
+  const isDone = el.classList.toggle('done');
+  el.querySelector('.task-check').textContent = isDone ? '✓' : '';
+  state.tasks = state.tasks || {};
+  state.tasks[id] = isDone;
+  saveState(state);
+  updateProgress();
+}
+
+// ── Progress bar ───────────────────────────────────────────────────────────
+function updateProgress() {
+  const all = document.querySelectorAll('.task[data-id]');
+  const done = document.querySelectorAll('.task.done[data-id]');
+  const pct = all.length ? Math.round(done.length / all.length * 100) : 0;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-pct').textContent = pct + '%';
+  document.getElementById('progress-sub').textContent =
+    `${done.length} of ${all.length} tasks complete`;
+}
+
+// ── Episode table ──────────────────────────────────────────────────────────
+function renderEpisodes() {
+  const state = loadState();
+  const epStatus = state.episodes || {};
+  const tbody = document.getElementById('episode-tbody');
+  tbody.innerHTML = EPISODES.map(ep => {
+    const savedStatus = epStatus[ep.num] || ep.status;
+    const opts = STATUS_OPTS.map(o =>
+      `<option value="${o.val}" ${savedStatus===o.val?'selected':''}>${o.label}</option>`
+    ).join('');
+    return `<tr>
+      <td>${ep.num}</td>
+      <td>${ep.title}</td>
+      <td>${ep.type}</td>
+      <td>${ep.audio}</td>
+      <td>${ep.video}</td>
+      <td>${ep.fb}</td>
+      <td><select class="status-select ${savedStatus}" onchange="updateEpStatus(this,${ep.num})">${opts}</select></td>
+    </tr>`;
+  }).join('');
+}
+
+function updateEpStatus(sel, num) {
+  const state = loadState();
+  state.episodes = state.episodes || {};
+  state.episodes[num] = sel.value;
+  sel.className = 'status-select ' + sel.value;
+  saveState(state);
+}
+
+// ── Pipeline ───────────────────────────────────────────────────────────────
+function renderPipeline() {
+  const render = (id, items) => {
+    const el = document.getElementById(id);
+    el.innerHTML = items.map(c =>
+      `<div class="pipeline-item">${c.name}</div>`
+    ).join('') || '<div class="pipeline-item" style="color:var(--muted)">None</div>';
+  };
+  render('pipeline-published', CRM_DATA.published);
+  render('pipeline-pending',   CRM_DATA.pending);
+  render('pipeline-candidate', CRM_DATA.candidate);
+  render('pipeline-outreach',  CRM_DATA.outreach);
+
+  document.getElementById('backlog-count').textContent =
+    CRM_DATA.published.length + ' profiles published';
+  document.getElementById('backlog-note').textContent =
+    CRM_DATA.candidate.map(c => c.name.split(' (')[0].split(' ').slice(0,2).join(' ')).slice(0,4).join(', ') + '…';
+  document.getElementById('crm-summary').textContent =
+    `${CRM_DATA.published.length} published · ${CRM_DATA.pending.length} pending review · ${CRM_DATA.candidate.length} candidates`;
+}
+
+// ── Restore task state ─────────────────────────────────────────────────────
+function restoreState() {
+  const state = loadState();
+  if (state.tasks) {
+    Object.entries(state.tasks).forEach(([id, done]) => {
+      const el = document.querySelector(`.task[data-id="${id}"]`);
+      if (!el) return;
+      if (done) {
+        el.classList.add('done');
+        el.querySelector('.task-check').textContent = '✓';
+      }
+    });
+  }
+  document.getElementById('sync-ts').textContent = CRM_DATA.syncDate;
+  document.getElementById('footer-ts').textContent =
+    `CRM synced ${CRM_DATA.syncDate} — Southern Legends`;
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+renderEpisodes();
+renderPipeline();
+restoreState();
+updateProgress();
+</script>
+</body>
+</html>

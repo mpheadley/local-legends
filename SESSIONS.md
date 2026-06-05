@@ -267,3 +267,15 @@ All Southern Legends references to "Headley Web & SEO" or "matthewheadley.com" r
 **Next session:**
 - Commit all changes and push to trigger Vercel auto-deploy
 - Matt fills the PB stub paragraph on the about page
+
+## 2026-06-05 — Video rebuild, logo lockdown, SL outreach drafts, Jacksonville play
+
+**Video:** Rebuilt `sl-ep1-full-v3.mp4` (2:21, 1080x1920) with final SL wordmark burned throughout. Structure: 15s highlights reel (Suno banjo) → 2min talking head (audio preserved) → 7s podcast logo outro. In `/private/tmp/sl-ep1-full-v3.mp4` — pending Spotify upload.
+
+**Logo:** `Southern-Legends-logo-final.png` locked in as canonical SL wordmark. Created in Figma (jDNMVKMeXQVDmGoRW2YuWD). Copied to `matthewheadley-com/public/logos/sl-wordmark-trans.png` and `southern-legends/public/images/sl-wordmark-preview.png`.
+
+**SL outreach:** 7 Gmail drafts created — subscribe invites to Anne Kerr, Robin Arnold, Amber Simpson, Jason Wright (unsubscribed commenters); profile outreach to April LaFollette (profile live link), Aubrey Fullbright, Sarah Woolmaker.
+
+**CRM:** Samuel/Aquality marked done + cleared from briefing. Mike Hindman elevated to HIGH SL candidate (Scotland → Chief Ladiga → divided Civil War family → Nebraska Territory → Jacksonville CDA). Bruce Edminston added (Jacksonville square storefronts). Kevin/Pinhotti Pizza added (Habitat board). Josh Sterns updated (former florist building + cooler + team-up angle). Preston + Kathryn added.
+
+**Jacksonville play:** Financial model built (`/private/tmp/jacksonville-financials.md`) covering bar expo, cooler/event space, and full venue package across all ventures. Mid-case: $6,700/mo net. One call to Josh Sterns unlocks everything.
