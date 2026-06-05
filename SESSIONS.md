@@ -6,6 +6,21 @@ Newest first.
 
 ---
 
+## 2026-06-05 — Video podcast + digital gym essay updates
+
+- Named Wade Allen in the digital gym essay (both SL and homiletics-coach versions)
+- Rotated jacksonville-first-umc-pulpit.webp hero photo 90° clockwise (was sideways)
+- Created Vercel Blob store (southern-legends-blob, public, IAD1); uploaded both walk video takes
+- Added VideoPlayer component for direct MP4 embeds on essay pages
+- Wired videoUrl frontmatter field → essay page renders video above audio player
+- Updated podcast.xml to use video/mp4 enclosure when videoUrl present (video podcast support)
+- Added take2 walk video to digital gym essay frontmatter
+- Fixed pre-existing MDX HTML comment bug in interfaith-ministries profile
+- Drafted email to Wade Allen sharing the essay (not sent — no email in CRM)
+- Next: submit southernlegends.blog/podcast.xml to Spotify and Apple Podcasts
+
+---
+
 ## 2026-06-03 — Interfaith photo subjects documented, session close
 
 - Identified people in Shepherd's Table Jan 2025 photo: Stephen LaFollette (April's husband), Caroline LaFollette (April's daughter, Amada Home Services), Cheyenne Mattox (Matt's daughter), Pati Tiller (Arc of Calhoun and Cleburne Counties)

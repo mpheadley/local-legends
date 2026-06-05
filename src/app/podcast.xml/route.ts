@@ -26,37 +26,52 @@ function rfcDate(dateStr: string): string {
 }
 
 export async function GET() {
-  const journals = getAllJournalPosts().filter((p) => p.frontmatter.audioUrl);
+  const journals = getAllJournalPosts().filter(
+    (p) => p.frontmatter.audioUrl || p.frontmatter.videoUrl
+  );
   const profiles = getAllProfiles().filter(
-    (p) => (p.frontmatter as unknown as { audioUrl?: string }).audioUrl
+    (p) => (p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string }).audioUrl ||
+           (p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string }).videoUrl
   );
 
   type Episode = {
     title: string;
     description: string;
     url: string;
-    audioUrl: string;
+    mediaUrl: string;
+    mediaType: "audio/mpeg" | "video/mp4";
     date: string;
     duration?: string;
   };
 
   const episodes: Episode[] = [
-    ...journals.map((p) => ({
-      title: p.frontmatter.title,
-      description: p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
-      url: `${SITE_URL}/essays/${p.slug}`,
-      audioUrl: p.frontmatter.audioUrl!,
-      date: p.frontmatter.date,
-      duration: p.frontmatter.audioDuration,
-    })),
-    ...profiles.map((p) => ({
-      title: p.frontmatter.title,
-      description: p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
-      url: `${SITE_URL}/profiles/${p.slug}`,
-      audioUrl: (p.frontmatter as unknown as { audioUrl: string }).audioUrl,
-      date: p.frontmatter.date,
-      duration: (p.frontmatter as unknown as { audioDuration?: string }).audioDuration,
-    })),
+    ...journals.map((p) => {
+      const videoUrl = p.frontmatter.videoUrl;
+      const audioUrl = p.frontmatter.audioUrl;
+      return {
+        title: p.frontmatter.title,
+        description: p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
+        url: `${SITE_URL}/essays/${p.slug}`,
+        mediaUrl: videoUrl ?? audioUrl!,
+        mediaType: (videoUrl ? "video/mp4" : "audio/mpeg") as "audio/mpeg" | "video/mp4",
+        date: p.frontmatter.date,
+        duration: p.frontmatter.audioDuration,
+      };
+    }),
+    ...profiles.map((p) => {
+      const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string };
+      const videoUrl = fm.videoUrl;
+      const audioUrl = fm.audioUrl;
+      return {
+        title: p.frontmatter.title,
+        description: p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
+        url: `${SITE_URL}/profiles/${p.slug}`,
+        mediaUrl: videoUrl ?? audioUrl!,
+        mediaType: (videoUrl ? "video/mp4" : "audio/mpeg") as "audio/mpeg" | "video/mp4",
+        date: p.frontmatter.date,
+        duration: fm.audioDuration,
+      };
+    }),
   ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const items = episodes
@@ -68,7 +83,7 @@ export async function GET() {
       <link>${ep.url}</link>
       <guid isPermaLink="true">${ep.url}</guid>
       <pubDate>${rfcDate(ep.date)}</pubDate>
-      <enclosure url="${ep.audioUrl}" type="audio/mpeg" length="0" />
+      <enclosure url="${ep.mediaUrl}" type="${ep.mediaType}" length="0" />
       <itunes:title>${escapeXml(ep.title)}</itunes:title>
       <itunes:summary>${escapeXml(ep.description)}</itunes:summary>
       <itunes:author>${PODCAST_AUTHOR}</itunes:author>
