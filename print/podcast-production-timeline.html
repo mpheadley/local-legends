@@ -25,9 +25,129 @@
     background: var(--cream);
     font-family: 'Source Sans 3', sans-serif;
     color: var(--dark);
-    padding: 48px 60px 80px;
+    padding: 0 0 80px;
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  /* ── Sticky top bar ── */
+  .top-bar {
+    background: var(--pine);
+    color: white;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .top-bar-title {
+    font-family: 'Fraunces', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    padding: 14px 0;
+    margin-right: 24px;
+    white-space: nowrap;
+  }
+  .top-bar-tabs {
+    display: flex;
+    gap: 0;
+    flex: 1;
+  }
+  .top-tab {
+    padding: 14px 18px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+    user-select: none;
+  }
+  .top-tab:hover { color: rgba(255,255,255,0.75); }
+  .top-tab.active { color: white; border-bottom-color: var(--gold); }
+  .top-bar-progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    padding-left: 20px;
+  }
+  .top-bar-pct {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .mini-track {
+    width: 80px;
+    height: 4px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .mini-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: width 0.4s;
+  }
+
+  /* ── Tab panes ── */
+  .tab-pane { display: none; padding: 32px 40px 40px; }
+  .tab-pane.active { display: block; }
+
+  /* ── Collapsible sections ── */
+  .collapsible-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0;
+    user-select: none;
+  }
+  .collapsible-header:hover .section-title { color: var(--sage); }
+  .collapse-arrow {
+    font-size: 0.75rem;
+    color: var(--muted);
+    transition: transform 0.2s;
+  }
+  .collapsed .collapse-arrow { transform: rotate(-90deg); }
+  .collapsible-body {
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.2s;
+    max-height: 2000px;
+    opacity: 1;
+  }
+  .collapsed .collapsible-body { max-height: 0; opacity: 0; }
+
+  /* Goals — compact summary row instead of full grid */
+  .goals-summary {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 12px 0 4px;
+  }
+  .goal-pill {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .goal-pill .label {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .goal-pill .value {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
   }
 
   /* Header */
@@ -739,80 +859,45 @@
 </head>
 <body>
 
-<div class="doc-header">
-  <div>
-    <p style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:6px;">Southern Legends</p>
-    <h1>Podcast & Video<br>Production Timeline</h1>
+<!-- Sticky top bar with tabs -->
+<div class="top-bar">
+  <div class="top-bar-title">🎙 SL Podcast</div>
+  <div class="top-bar-tabs">
+    <div class="top-tab active" onclick="switchTab('timeline',this)">Timeline</div>
+    <div class="top-tab" onclick="switchTab('episodes',this)">Episodes</div>
+    <div class="top-tab" onclick="switchTab('reel',this)">Reel Builder</div>
+    <div class="top-tab" onclick="switchTab('pipeline',this)">Pipeline</div>
   </div>
-  <div class="meta" id="header-meta">
-    Updated: June 2026<br>
-    Platforms: Spotify · Apple Podcasts · YouTube<br>
-    RSS: southernlegends.blog/podcast.xml<br>
-    CRM sync: <span id="sync-ts">—</span>
+  <div class="top-bar-progress">
+    <span class="top-bar-pct" id="progress-pct">—</span>
+    <div class="mini-track"><div class="mini-fill" id="progress-fill" style="width:0%"></div></div>
   </div>
 </div>
 
-<!-- Progress bar -->
-<div class="progress-bar-wrap">
-  <div class="progress-header">
-    <span class="progress-label">Overall Progress</span>
-    <span class="progress-pct" id="progress-pct">—</span>
+<!-- ── TAB: Timeline ── -->
+<div class="tab-pane active" id="pane-timeline">
+
+<!-- Goals summary (compact) -->
+<div class="section" style="margin-bottom:24px;">
+  <div class="goals-summary">
+    <div class="goal-pill"><div class="label">Cadence</div><div class="value">1 ep / 2 weeks</div></div>
+    <div class="goal-pill"><div class="label">Voice</div><div class="value">Brian → Yours</div></div>
+    <div class="goal-pill"><div class="label">Published</div><div class="value" id="backlog-count">—</div></div>
+    <div class="goal-pill"><div class="label">Platforms</div><div class="value">Spotify · Apple · YT</div></div>
+    <div class="goal-pill"><div class="label">Progress</div><div class="value" id="progress-sub">—</div></div>
+    <div style="margin-left:auto;display:flex;align-items:center;">
+      <button class="sync-btn" style="font-size:0.65rem;padding:5px 10px;" onclick="alert('Run: python3 tools/regen-podcast-timeline.py')">Sync CRM</button>
+    </div>
   </div>
-  <div class="progress-track">
-    <div class="progress-fill" id="progress-fill" style="width:0%"></div>
-  </div>
-  <div class="progress-sub" id="progress-sub">Loading…</div>
 </div>
 
-<!-- CRM sync banner -->
-<div class="sync-banner">
-  <div>
-    <strong>CRM sync:</strong> Published profiles auto-marked done below.
-    <span id="crm-summary">4 published · 2 pending review · 9 candidates</span>
-  </div>
-  <button class="sync-btn" onclick="alert('Run: python3 tools/regen-podcast-timeline.py\nto re-pull from CRM.')">Refresh from CRM</button>
-</div>
-
-<!-- Goals -->
+<!-- Timeline (collapsible phases) -->
 <div class="section">
-  <div class="section-title">Production Goals</div>
-  <div class="goals-grid">
-    <div class="goal-card">
-      <div class="label">Cadence</div>
-      <div class="value">1 episode<br>every 2 weeks</div>
-      <div class="note">Matches SL profile writing pace. One profile = one episode.</div>
-    </div>
-    <div class="goal-card">
-      <div class="label">Voice</div>
-      <div class="value">Brian (ElevenLabs)<br>→ Your voice</div>
-      <div class="note">Brian TTS for backlog. Record your own voice starting with new episodes.</div>
-    </div>
-    <div class="goal-card">
-      <div class="label">YouTube</div>
-      <div class="value">Audio + static<br>card per episode</div>
-      <div class="note">Same MP3, branded still frame. YouTube channel wired after Episode 3.</div>
-    </div>
-    <div class="goal-card">
-      <div class="label">Episode 1</div>
-      <div class="value">The Digital Gym</div>
-      <div class="note">Live on Spotify. Brian voice. Audio + video player on site.</div>
-    </div>
-    <div class="goal-card">
-      <div class="label">Episode 2</div>
-      <div class="value">Interfaith<br>Ministries</div>
-      <div class="note">Profile live. Audio pending. Record Brian or your voice.</div>
-    </div>
-    <div class="goal-card">
-      <div class="label">Backlog</div>
-      <div class="value" id="backlog-count">—</div>
-      <div class="note" id="backlog-note">Loading from CRM…</div>
-    </div>
+  <div class="collapsible-header" onclick="toggleCollapse('timeline-body')">
+    <div class="section-title" style="margin-bottom:0">Timeline</div>
+    <span class="collapse-arrow">▾</span>
   </div>
-</div>
-
-<!-- Timeline -->
-<div class="section">
-  <div class="section-title">Timeline</div>
+  <div class="collapsible-body" id="timeline-body">
   <div class="timeline">
 
     <div class="phase complete">
@@ -920,20 +1005,23 @@
       </div>
     </div>
 
+  </div><!-- /collapsible-body -->
+</div><!-- /section -->
+
+</div><!-- /pane-timeline -->
+
+<!-- ── TAB: Episodes ── -->
+<div class="tab-pane" id="pane-episodes">
+  <div class="section">
+    <div class="section-title" style="margin-bottom:20px;">Episodes — click to work on · hover for video preview</div>
+    <div class="episode-grid" id="episode-grid"></div>
   </div>
 </div>
 
-<!-- Episode tracker — visual cards -->
-<div class="section">
-  <div class="section-title">Episode Tracker — click to select what to work on</div>
-  <div class="episode-grid" id="episode-grid">
-    <!-- Populated by JS -->
-  </div>
-</div>
-
-<!-- Footage browser -->
-<div class="section">
-  <div class="section-title">Footage Library</div>
+<!-- ── TAB: Reel Builder ── -->
+<div class="tab-pane" id="pane-reel">
+  <div class="section">
+    <div class="section-title">Footage Library</div>
   <div class="footage-toolbar">
     <div class="footage-count"><strong id="sel-count">0</strong> clips selected for reel</div>
     <button class="build-reel-btn" id="build-reel-btn" disabled onclick="buildReelList()">Build Reel from Selected</button>
@@ -976,30 +1064,21 @@
   </div>
 </div>
 <canvas id="confetti-canvas"></canvas>
-</div>
+</div><!-- /pane-reel -->
 
-<!-- Profile pipeline from CRM -->
-<div class="section">
-  <div class="section-title">Profile Pipeline (from CRM)</div>
-  <div class="pipeline-grid">
-    <div class="pipeline-col">
-      <div class="pipeline-col-title published">Published</div>
-      <div id="pipeline-published"></div>
-    </div>
-    <div class="pipeline-col">
-      <div class="pipeline-col-title pending">Pending Review</div>
-      <div id="pipeline-pending"></div>
-    </div>
-    <div class="pipeline-col">
-      <div class="pipeline-col-title candidate">Candidate</div>
-      <div id="pipeline-candidate"></div>
-    </div>
-    <div class="pipeline-col">
-      <div class="pipeline-col-title blocked">Needs Outreach</div>
-      <div id="pipeline-outreach"></div>
+<!-- ── TAB: Pipeline ── -->
+<div class="tab-pane" id="pane-pipeline">
+  <div class="section">
+    <div class="section-title" style="margin-bottom:20px;">Profile Pipeline (from CRM — synced <span id="sync-ts">—</span>)</div>
+    <div class="pipeline-grid">
+      <div class="pipeline-col"><div class="pipeline-col-title published">Published</div><div id="pipeline-published"></div></div>
+      <div class="pipeline-col"><div class="pipeline-col-title pending">Pending Review</div><div id="pipeline-pending"></div></div>
+      <div class="pipeline-col"><div class="pipeline-col-title candidate">Candidate</div><div id="pipeline-candidate"></div></div>
+      <div class="pipeline-col"><div class="pipeline-col-title blocked">Needs Outreach</div><div id="pipeline-outreach"></div></div>
     </div>
   </div>
 </div>
+
 
 <div class="doc-footer">
   <span>southernlegends.blog/podcast.xml · matt@headleyweb.com</span>
@@ -1492,6 +1571,25 @@ function restoreState() {
     `CRM synced ${CRM_DATA.syncDate} — Southern Legends`;
 }
 
+// ── Tab switching ──────────────────────────────────────────────────────────
+function switchTab(name, el) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.top-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('pane-' + name).classList.add('active');
+  el.classList.add('active');
+  const state = loadState();
+  state.activeTab = name;
+  saveState(state);
+}
+
+// ── Collapsible sections ───────────────────────────────────────────────────
+function toggleCollapse(id) {
+  const body = document.getElementById(id);
+  const header = body.previousElementSibling;
+  const section = header.closest('.section') || header.parentElement;
+  section.classList.toggle('collapsed');
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────
 const state0 = loadState();
 if (state0.reelClips) reelClips = state0.reelClips;
@@ -1501,6 +1599,12 @@ renderFootage();
 renderReel();
 restoreState();
 updateProgress();
+// Restore active tab
+if (state0.activeTab) {
+  const tabEl = [...document.querySelectorAll('.top-tab')]
+    .find(t => t.textContent.toLowerCase().includes(state0.activeTab));
+  if (tabEl) switchTab(state0.activeTab, tabEl);
+}
 </script>
 </body>
 </html>
