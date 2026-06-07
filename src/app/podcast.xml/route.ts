@@ -40,34 +40,38 @@ export async function GET() {
     url: string;
     mediaUrl: string;
     mediaType: "audio/mpeg" | "video/mp4";
+    mediaSize: number;
     date: string;
     duration?: string;
   };
 
   const episodes: Episode[] = [
     ...journals.map((p) => {
-      const videoUrl = p.frontmatter.videoUrl;
-      const audioUrl = p.frontmatter.audioUrl;
-      return {
-        title: p.frontmatter.title,
-        description: p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
-        url: `${SITE_URL}/essays/${p.slug}`,
-        mediaUrl: videoUrl ?? audioUrl!,
-        mediaType: (videoUrl ? "video/mp4" : "audio/mpeg") as "audio/mpeg" | "video/mp4",
-        date: p.frontmatter.date,
-        duration: p.frontmatter.audioDuration,
-      };
-    }),
-    ...profiles.map((p) => {
-      const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string };
+      const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
       const videoUrl = fm.videoUrl;
       const audioUrl = fm.audioUrl;
       return {
         title: p.frontmatter.title,
-        description: p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
+        description: fm.description ?? p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
+        url: `${SITE_URL}/essays/${p.slug}`,
+        mediaUrl: videoUrl ?? audioUrl!,
+        mediaType: (videoUrl ? "video/mp4" : "audio/mpeg") as "audio/mpeg" | "video/mp4",
+        mediaSize: fm.mediaSize ?? 0,
+        date: p.frontmatter.date,
+        duration: fm.audioDuration,
+      };
+    }),
+    ...profiles.map((p) => {
+      const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
+      const videoUrl = fm.videoUrl;
+      const audioUrl = fm.audioUrl;
+      return {
+        title: p.frontmatter.title,
+        description: fm.description ?? p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
         url: `${SITE_URL}/profiles/${p.slug}`,
         mediaUrl: videoUrl ?? audioUrl!,
         mediaType: (videoUrl ? "video/mp4" : "audio/mpeg") as "audio/mpeg" | "video/mp4",
+        mediaSize: fm.mediaSize ?? 0,
         date: p.frontmatter.date,
         duration: fm.audioDuration,
       };
@@ -83,7 +87,7 @@ export async function GET() {
       <link>${ep.url}</link>
       <guid isPermaLink="true">${ep.url}</guid>
       <pubDate>${rfcDate(ep.date)}</pubDate>
-      <enclosure url="${ep.mediaUrl}" type="${ep.mediaType}" length="0" />
+      <enclosure url="${ep.mediaUrl}" type="${ep.mediaType}" length="${ep.mediaSize}" />
       <itunes:title>${escapeXml(ep.title)}</itunes:title>
       <itunes:summary>${escapeXml(ep.description)}</itunes:summary>
       <itunes:author>${PODCAST_AUTHOR}</itunes:author>
