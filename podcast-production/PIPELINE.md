@@ -35,11 +35,22 @@ The script does:
 - [ ] Ping Spotify RSS refresh endpoint
 - [ ] Print YouTube upload reminder
 
-### Step 4 — Social
-- Post Option A (short) to SL Facebook page via Meta API
+### Step 4 — Clip (required every episode)
+Run the clip script to extract the best 45–60s moment as a vertical 9:16 MP4:
+```bash
+ffmpeg -y -i ep[N].mp4 -ss HH:MM:SS -to HH:MM:SS \
+  -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920" \
+  -c:v libx264 -crf 20 -preset fast -c:a aac -b:a 192k \
+  ep[N]-clip.mp4
+```
+- Use timestamped transcript to find the thesis moment (usually last 60s of content, before outro)
+- Upload to Spotify Clips tab (100 char max description)
+- Post as FB Reel to SL page with episode link
+- Keep clip under 60s for FB Stories compatibility
+
+### Step 5 — Social
+- Post FB feed post with YouTube link + essay URL
 - Post Option B (building in public) to personal Facebook manually
-- Create 2–3 Reels clips in CapCut from episode
-- Upload Reels to Instagram + YouTube Shorts
 
 ### Step 5 — Submit (first episode only)
 - Spotify: podcasters.spotify.com → already submitted ✓
