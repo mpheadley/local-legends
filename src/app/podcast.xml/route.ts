@@ -48,13 +48,16 @@ export async function GET() {
   const episodes: Episode[] = [
     ...journals.map((p) => {
       const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
+      const videoUrl = fm.videoUrl;
       const audioUrl = fm.audioUrl;
+      const mediaUrl = videoUrl ?? audioUrl!;
+      const mediaType = videoUrl ? "video/mp4" : "audio/mpeg";
       return {
         title: p.frontmatter.title,
         description: fm.description ?? p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
         url: `${SITE_URL}/essays/${p.slug}`,
-        mediaUrl: audioUrl!,
-        mediaType: "audio/mpeg" as "audio/mpeg" | "video/mp4",
+        mediaUrl,
+        mediaType: mediaType as "audio/mpeg" | "video/mp4",
         mediaSize: fm.mediaSize ?? 0,
         date: p.frontmatter.date,
         duration: fm.audioDuration,
@@ -62,13 +65,16 @@ export async function GET() {
     }),
     ...profiles.map((p) => {
       const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
+      const videoUrl = fm.videoUrl;
       const audioUrl = fm.audioUrl;
+      const mediaUrl = videoUrl ?? audioUrl!;
+      const mediaType = videoUrl ? "video/mp4" : "audio/mpeg";
       return {
         title: p.frontmatter.title,
         description: fm.description ?? p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
         url: `${SITE_URL}/profiles/${p.slug}`,
-        mediaUrl: audioUrl!,
-        mediaType: "audio/mpeg" as "audio/mpeg" | "video/mp4",
+        mediaUrl,
+        mediaType: mediaType as "audio/mpeg" | "video/mp4",
         mediaSize: fm.mediaSize ?? 0,
         date: p.frontmatter.date,
         duration: fm.audioDuration,
