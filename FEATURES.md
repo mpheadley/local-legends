@@ -1,12 +1,12 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-06-05. Source of truth for what's built.*
+*Last updated: 2026-06-08. Source of truth for what's built.*
 
 ---
 
 ## Content
 
-- **Essays / Journal** — MDX-driven at `/essays/[slug]`. Frontmatter: `title`, `date`, `image`, `imageCaption`, `audioUrl`, `videoUrl`, `audioDuration`, `excerpt`, `published`, `featured`, `unlisted`, `related`, `cardImage`, `merchImage`, `merchUrl`
+- **Broken Ground (Essays)** — MDX-driven at `/essays/[slug]`. Nav label "Broken Ground", URL stays `/essays/`. Frontmatter: `title`, `date`, `image`, `imageCaption`, `audioUrl`, `videoUrl`, `youtubeUrl`, `audioDuration`, `excerpt`, `published`, `featured`, `unlisted`, `related`, `cardImage`, `merchImage`, `merchUrl`
 - **Profiles** — MDX-driven at `/profiles/[slug]`. Frontmatter: `title`, `slug`, `published`, `listed`, `aiWritten`, `date`, `excerpt`, `image`. `listed:false` = live URL but excluded from index, sitemap, and search. `aiWritten` flag for editorial tracking.
 - **Unlisted profile support** — `getServableProfiles()` returns all published profiles (routable); `getAllProfiles()` returns only `listed:true` (shown in index/search/sitemap)
 - **Search** — full-text search across essays + profiles
@@ -15,7 +15,8 @@
 ## Media
 
 - **AudioPlayer** — custom scrubber player; auto-renders when `audioUrl` in frontmatter
-- **VideoPlayer** — native `<video>` embed; auto-renders when `videoUrl` in frontmatter (above audio player)
+- **VideoPlayer** — native `<video>` embed; fallback when `videoUrl` present but no `youtubeUrl`
+- **YouTube-first video** — essay page prefers `youtubeUrl` frontmatter for the video slot (renders VideoEmbed); falls back to VideoPlayer for blob URLs
 - **VideoEmbed** — YouTube / Vimeo iframe embed (lazy-loaded via IntersectionObserver)
 - **VideoLoop** — looping silent background video
 - **PhotoStrip** — horizontal photo strip component
@@ -23,7 +24,8 @@
 ## Podcast
 
 - **RSS feed** at `/podcast.xml` — itunes-compatible; pulls all essays + profiles with `audioUrl` or `videoUrl`
-- **Video podcast support** — `videoUrl` frontmatter → `video/mp4` enclosure type; `audioUrl` → `audio/mpeg`
+- **Video podcast support** — `videoUrl` frontmatter → `video/mp4` enclosure (Spotify video); `audioUrl` only → `audio/mpeg`. Episode links in RSS point to `/essays/[slug]`.
+- **JournalCard photo layout** — when `image` or `heroImage` present in frontmatter, renders 16:9 photo card; text-only fallback otherwise
 - **Blob store** — `southern-legends-blob` (Vercel Blob, public, IAD1) for audio and video assets
 
 ## Storage

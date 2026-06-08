@@ -344,3 +344,27 @@ All Southern Legends references to "Headley Web & SEO" or "matthewheadley.com" r
 **CRM:** Samuel/Aquality marked done + cleared from briefing. Mike Hindman elevated to HIGH SL candidate (Scotland → Chief Ladiga → divided Civil War family → Nebraska Territory → Jacksonville CDA). Bruce Edminston added (Jacksonville square storefronts). Kevin/Pinhotti Pizza added (Habitat board). Josh Sterns updated (former florist building + cooler + team-up angle). Preston + Kathryn added.
 
 **Jacksonville play:** Financial model built (`/private/tmp/jacksonville-financials.md`) covering bar expo, cooler/event space, and full venue package across all ventures. Mid-case: $6,700/mo net. One call to Josh Sterns unlocks everything.
+
+---
+
+## 2026-06-08 — Ep1 fixes, Broken Ground rename, social launch
+
+**What shipped:**
+- Replaced double-intro YouTube video (`v241VZj0lkQ` deleted → `upVG97BpaFw` uploaded, correct single intro with SL badge)
+- Fixed RSS enclosure: serves `video/mp4` when `videoUrl` present (for Spotify video), `audio/mpeg` fallback
+- Fixed audio blob URL to `ep1-digital-gym-matt-voice.mp3` (full 3:43 with intro)
+- Episode page deduped: YouTube embed at top from `youtubeUrl` frontmatter, blob VideoPlayer removed, duplicate MDX VideoEmbed removed
+- Collapsible transcript added to ep1 post
+- Transcript generated (Whisper) and saved to `/Volumes/Samsung_T5/webdev/transcripts/2026-06-02 - The Digital Gym.txt`
+- **Nav rename:** "Essays" → "Broken Ground" (URL `/essays/` unchanged)
+- **JournalCard:** photo card layout when `image`/`heroImage` frontmatter present; text fallback
+- Episode link in RSS corrected to `/essays/[slug]` (was `/journal/[slug]`)
+- FB Reels posted: intro reel (show brand) + workout clip (ep1 thesis, 2:48–3:37)
+- FB feed post with YouTube link + essay URL
+- Deleted 2 stale YouTube videos (`VUKL5eCXxL4`, `5V7sb0cgRUE`)
+- CRM: Apothecary Draft House tasks cleaned (3 closed, June 11 call task active)
+
+**What's deferred:**
+- Pirates of Penzance transcription (72 min, timed out — needs chunked approach)
+- Spotify show name still shows "Untitled Show" — fix in Spotify for Podcasters Settings tab manually
+- Spotify RSS refresh to pick up video enclosure change
