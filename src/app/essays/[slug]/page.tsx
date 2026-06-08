@@ -191,7 +191,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-      { "@type": "ListItem", position: 2, name: "Essays", item: `${siteConfig.url}/journal` },
+      { "@type": "ListItem", position: 2, name: "Broken Ground", item: `${siteConfig.url}/journal` },
       { "@type": "ListItem", position: 3, name: frontmatter.title, item: `${siteConfig.url}/essays/${slug}` },
     ],
   };
@@ -301,6 +301,12 @@ export default async function JournalPostPage({ params }: { params: Params }) {
       {/* Closing */}
       {(() => {
         const { primary, secondary } = getEssayMerch(slug);
+        const fm = frontmatter as unknown as { audioUrl?: string; youtubeUrl?: string };
+        const podcastUrls = fm.audioUrl ? {
+          spotify: "https://open.spotify.com/show/033rE2IJkbyZuLXZwEjtgo",
+          apple: "https://podcasts.apple.com/podcast/id1896892029",
+          youtube: fm.youtubeUrl,
+        } : undefined;
         return (
           <ClosingSection
             shareUrl={`/essays/${slug}`}
@@ -308,6 +314,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             excerpt={frontmatter.excerpt}
             primary={primary}
             secondary={secondary}
+            podcastUrls={podcastUrls}
           />
         );
       })()}
