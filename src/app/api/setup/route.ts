@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
   )
 
   const { error } = await supabase.rpc('exec_sql_raw', { sql: MIGRATION_SQL }).single()
-    .catch(() => ({ error: null }))
+    .then((res) => res, () => ({ error: null, data: null, count: null, status: 200, statusText: 'OK' }))
 
   // Try direct table creation via supabase-js
   // The table might already be set up or we need DDL access
