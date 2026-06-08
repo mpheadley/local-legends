@@ -281,9 +281,12 @@ export default async function JournalPostPage({ params }: { params: Params }) {
               )}
             </div>
           )}
-          {frontmatter.videoUrl && (
+          {(frontmatter.youtubeUrl || frontmatter.videoUrl) && (
             <div className="not-prose mb-6">
-              <VideoPlayer src={frontmatter.videoUrl} caption="Watch this essay" />
+              {frontmatter.youtubeUrl
+                ? <VideoEmbed url={frontmatter.youtubeUrl} />
+                : <VideoPlayer src={frontmatter.videoUrl!} caption="Watch this essay" />
+              }
             </div>
           )}
           {frontmatter.audioUrl && (
