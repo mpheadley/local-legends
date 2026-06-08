@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "next-view-transitions";
 import type { JournalPost } from "@/lib/journal";
 
@@ -11,6 +12,50 @@ function formatDate(dateStr: string): string {
 
 export default function JournalCard({ post }: { post: JournalPost }) {
   const { slug, frontmatter, readingTime } = post;
+  const heroImage = frontmatter.heroImage ?? frontmatter.image;
+  const heroAlt = frontmatter.heroAlt ?? frontmatter.imageAlt ?? frontmatter.title;
+
+  if (heroImage) {
+    return (
+      <Link href={`/essays/${slug}`} className="group block overflow-hidden rounded-sm">
+        <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
+          <Image
+            src={heroImage}
+            alt={heroAlt}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        <div style={{ paddingTop: "0.875rem" }}>
+          <h3
+            className="group-hover:text-ll-primary transition-colors"
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "1.25rem",
+              fontWeight: 400,
+              lineHeight: 1.15,
+              color: "var(--color-ll-dark)",
+              marginBottom: "0.625rem",
+              fontVariationSettings: '"opsz" 36',
+            }}
+          >
+            {frontmatter.title}
+          </h3>
+          <p style={{
+            fontFamily: "var(--font-source-sans)",
+            fontSize: "0.6875rem",
+            fontWeight: 600,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "#9C8E84",
+          }}>
+            {formatDate(frontmatter.date)} &middot; {readingTime}
+          </p>
+        </div>
+      </Link>
+    );
+  }
 
   return (
     <Link href={`/essays/${slug}`} className="group block">

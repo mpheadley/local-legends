@@ -24,7 +24,7 @@ export default function Nav() {
 
   const navLinks = [
     { label: "Stories", href: "/profiles" },
-    { label: "Essays", href: "/essays" },
+    { label: "Broken Ground", href: "/essays" },
     { label: "About", href: "/about" },
   ];
   const supportLink = { label: "Support", href: "/support" };

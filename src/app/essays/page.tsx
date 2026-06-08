@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 
 export const metadata: Metadata = {
-  title: "Essays",
+  title: "Broken Ground",
   description: `Matt Headley writes about what's behind the profiles — and what's behind him.`,
   alternates: { canonical: "/essays" },
   openGraph: { url: "/essays" },
@@ -30,7 +30,7 @@ export default function JournalPage() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-      { "@type": "ListItem", position: 2, name: "Essays", item: `${siteConfig.url}/essays` },
+      { "@type": "ListItem", position: 2, name: "Broken Ground", item: `${siteConfig.url}/essays` },
     ],
   };
 
@@ -62,7 +62,7 @@ export default function JournalPage() {
           color: "var(--color-ll-dark)",
           fontVariationSettings: '"opsz" 72',
         }}>
-          Journal
+          Broken Ground
         </h1>
         <p style={{
           marginTop: "1.25rem",
