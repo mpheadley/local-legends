@@ -6,6 +6,43 @@ Newest first.
 
 ---
 
+## 2026-06-08 — Podcast Episode 1 published (full pipeline shipped)
+
+**Episode 1: The Digital Gym** is live across all platforms with Matt's voice.
+
+**What shipped:**
+- Full assembled episode: intro reel (19s) + Digital Workout content (3:43) + outro (12s) = 4:17 total, 128MB
+- YouTube: https://www.youtube.com/watch?v=v241VZj0lkQ (replaced earlier no-intro version)
+- Vercel Blob: `audio/ep1-digital-gym-v2-matt-voice.mp3` + `video/ep1-digital-gym-v2-matt-voice.mp4`
+- Apple Podcasts: show ID 1896892029, "Southern Legends" title, RSS auto-pulls
+- Spotify show: 033rE2IJkbyZuLXZwEjtgo, title updated to "Southern Legends"
+- RSS feed live at southernlegends.blog/podcast.xml
+- All ElevenLabs files purged from blob storage (theaisle + SL stores)
+
+**Pipeline built:**
+- `tools/publish-episode.py` — automates audio extraction, blob upload, MDX update, push
+- `podcast-production/PIPELINE.md` — full workflow documentation
+- `audio/suno-prompts.md` — Suno prompts for hymn-based intro/outro music
+- Global rule added to CLAUDE.md: never use ElevenLabs/AI voice for Matt's content
+- Credentials inventory created at `~/Developer/webdev/CREDENTIALS.md`
+
+**Assets organized:**
+- All footage flattened into `assets/footage/all/` (119 files)
+- B-roll in `assets/footage/b-roll/` (70+ named clips)
+- A-roll in `assets/footage/a-roll/`
+- Teleprompter scripts collected in `content/teleprompter-scripts/`
+- New b-roll from zip 12: family tilling, church band rehearsal, zinnia field, sheep rescue, more
+- Intro reel: `assets/footage/sl-intro-reel-v2.mp4` (13 clips, Porchline Drive music bed, voiceover ducked, podcast cover title card)
+
+**Open:**
+- Verify Spotify now serving 4:17 version (Matt may need to delete manually-uploaded duplicate)
+- Social launch posts (drafts in chat — Option A for SL page, Option B for personal)
+- Record next episode (Freedom Riders script ready)
+- Migrate to Cloudflare R2 when blob bandwidth hits $5/mo
+
+---
+
+
 ## 2026-06-08 — Matt Headley profile live + Supabase build fix
 
 Fixed pre-existing build error: `PostgrestBuilder` doesn't expose `.catch()` — converted to `.then(res => res, () => ...)` in `src/app/api/setup/route.ts`. This was blocking every deploy since before yesterday's session. Profile `content/profiles/matt-headley.mdx` is now live at `southernlegends.blog/profiles/matt-headley` — `listed:false` (unlisted preview, off all indexes and sitemap). Editorial pass still needed before flipping `listed:true`.
