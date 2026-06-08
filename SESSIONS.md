@@ -6,6 +6,34 @@ Newest first.
 
 ---
 
+## 2026-06-08 — Matt Headley profile live + Supabase build fix
+
+Fixed pre-existing build error: `PostgrestBuilder` doesn't expose `.catch()` — converted to `.then(res => res, () => ...)` in `src/app/api/setup/route.ts`. This was blocking every deploy since before yesterday's session. Profile `content/profiles/matt-headley.mdx` is now live at `southernlegends.blog/profiles/matt-headley` — `listed:false` (unlisted preview, off all indexes and sitemap). Editorial pass still needed before flipping `listed:true`.
+
+---
+
+## 2026-06-07 — Matt Headley profile draft + listed flag
+
+Added `listed?: boolean` to `ProfileFrontmatter` and split `getAllProfiles()` into `getServableProfiles()` (has route) + `getAllProfiles()` (shown in index). Unlisted profiles get a live URL but stay off all listings, feeds, and sitemap. Built `content/profiles/matt-headley.mdx` — AI-assisted draft, `published:true, aiWritten:false, listed:false`. Opens on JSU audition ("Move over, Jason"), covers choir directing arc (Red Hill, Hokes Bluff, JSU Men's Chorale co-founder, FBC Muncie, Anniston First), farm era, crisis using published sources only. Editorial pass needed before indexing. Deploy pending — manual `vercel --prod` triggered but production URL not yet updated (still showing 3-day-old deploy).
+
+---
+
+## 2026-06-06 — Matt Headley profile raw material documented
+
+- Sermon quotes for Matt's own SL profile saved to `content/matt-headley-sources/sermon-quotes-for-profile.md`
+- 13 original lines in his own voice, scene details, anchor voices (Rohr, Merton, Berry, Finley), core paradox, empty chairs passage, walk-and-talk self-description
+- Source: `sermons/`, `transcripts/sermon-ideas.md`, `transcripts/2026-05-28-jacksonville-sermon-seed-must-die-manuscript.md`
+
+---
+
+## 2026-06-06 — Podcast timeline image fallback fix (recovery session)
+
+- Previous session hit 1M context limit mid-edit on `print/podcast-production-timeline.html`
+- Confirmed both edits landed: (1) re-render episodes on tab switch, (2) CSS gradient placeholder on image error
+- No new features — session was continuity recovery only
+
+---
+
 ## 2026-06-05 — Video podcast + digital gym essay updates
 
 - Named Wade Allen in the digital gym essay (both SL and homiletics-coach versions)

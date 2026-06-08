@@ -7,7 +7,8 @@
 ## Content
 
 - **Essays / Journal** — MDX-driven at `/essays/[slug]`. Frontmatter: `title`, `date`, `image`, `imageCaption`, `audioUrl`, `videoUrl`, `audioDuration`, `excerpt`, `published`, `featured`, `unlisted`, `related`, `cardImage`, `merchImage`, `merchUrl`
-- **Profiles** — MDX-driven at `/profiles/[slug]`
+- **Profiles** — MDX-driven at `/profiles/[slug]`. Frontmatter: `title`, `slug`, `published`, `listed`, `aiWritten`, `date`, `excerpt`, `image`. `listed:false` = live URL but excluded from index, sitemap, and search. `aiWritten` flag for editorial tracking.
+- **Unlisted profile support** — `getServableProfiles()` returns all published profiles (routable); `getAllProfiles()` returns only `listed:true` (shown in index/search/sitemap)
 - **Search** — full-text search across essays + profiles
 - **Sitemap + robots.txt** — auto-generated
 
