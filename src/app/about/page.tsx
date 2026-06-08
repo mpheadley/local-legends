@@ -82,7 +82,7 @@ export default function AboutPage() {
               className="rounded-lg float-left mr-6 mb-2"
             />
             <p className="text-ll-text leading-relaxed mb-6">
-              My name is Matt Headley. I live in Jacksonville. I spent nineteen
+              My name is Matt Headley. I live in Jacksonville. I spent twenty
               years in music and pastoral ministry. Somewhere in the middle of
               that, my wife Heather and I built a
               flower farm. Cut flowers, farmers markets, a little retail kiosk
@@ -92,6 +92,9 @@ export default function AboutPage() {
             <p className="text-ll-text leading-relaxed mb-6">
               I still drive past farms and gardens on my way to work. Some days
               it&apos;s fine. Some days it isn&apos;t.
+            </p>
+            <p className="text-ll-text leading-relaxed mb-6">
+              I was diagnosed with bipolar disorder at 41. I&apos;m in recovery. I was born in California and have lived in Northeast Alabama for twenty-eight years.
             </p>
           </div>
 
