@@ -3,7 +3,7 @@ import { getAllProfiles } from "@/lib/profiles";
 import { siteConfig } from "@/lib/site-config";
 
 const SITE_URL = siteConfig.url;
-const PODCAST_TITLE = "Matt Headley";
+const PODCAST_TITLE = "Southern Legends";
 const PODCAST_DESCRIPTION =
   "Stories, essays, and dispatches from Northeast Alabama — on faith, community, small business, and what it means to build a life in a place people overlook.";
 const PODCAST_AUTHOR = "Matt Headley";
@@ -53,7 +53,7 @@ export async function GET() {
       return {
         title: p.frontmatter.title,
         description: fm.description ?? p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
-        url: `${SITE_URL}/essays/${p.slug}`,
+        url: `${SITE_URL}/journal/${p.slug}`,
         mediaUrl: videoUrl ?? audioUrl!,
         mediaType: (videoUrl ? "video/mp4" : "audio/mpeg") as "audio/mpeg" | "video/mp4",
         mediaSize: fm.mediaSize ?? 0,
