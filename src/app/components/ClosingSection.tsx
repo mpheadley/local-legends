@@ -15,9 +15,10 @@ interface ClosingSectionProps {
   primary: Product;
   secondary: Product;
   tertiary?: Product;
+  podcastUrls?: { spotify?: string; apple?: string; youtube?: string };
 }
 
-export default function ClosingSection({ shareUrl, title, excerpt, primary, secondary, tertiary }: ClosingSectionProps) {
+export default function ClosingSection({ shareUrl, title, excerpt, primary, secondary, tertiary, podcastUrls }: ClosingSectionProps) {
   return (
     <section className="profile-closing">
       {/* Author credit */}
@@ -61,7 +62,7 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
 
       {/* Share + Merch + Support */}
       <div className="profile-closing-share">
-        <ShareButtons url={shareUrl} title={title} description={excerpt ?? ""} />
+        <ShareButtons url={shareUrl} title={title} description={excerpt ?? ""} podcastUrls={podcastUrls} />
 
         <p className="text-xs text-ll-accent text-center mt-8 mb-2" style={{ letterSpacing: "0.05em" }}>
           Purchases support Southern Legends.
