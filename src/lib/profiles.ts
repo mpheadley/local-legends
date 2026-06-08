@@ -21,6 +21,7 @@ export interface ProfileFrontmatter {
   featured?: boolean;
   titleHtml?: string;
   aiWritten?: boolean;
+  listed?: boolean;
   photoCredit?: string;
   byline?: string;
   metaDescription?: string;
@@ -61,9 +62,9 @@ export function getProfileSlugs(): string[] {
     .map((file) => file.replace(/\.mdx$/, ""));
 }
 
-/** Slugs that are safe to serve — filtered by `published` and `!aiWritten`. Use this for route generation (generateStaticParams, sitemap) instead of getProfileSlugs. */
+/** Slugs that are safe to serve — filtered by `published` and `!aiWritten`. Includes unlisted. */
 export function getPublishedSlugs(): string[] {
-  return getAllProfiles().map((p) => p.slug);
+  return getServableProfiles().map((p) => p.slug);
 }
 
 export function getProfileBySlug(slug: string): Profile | null {
@@ -81,12 +82,22 @@ export function getProfileBySlug(slug: string): Profile | null {
   };
 }
 
-export function getAllProfiles(): Profile[] {
+/** All profiles with a live route — published + !aiWritten. Includes listed:false. */
+export function getServableProfiles(): Profile[] {
   const slugs = getProfileSlugs();
   return slugs
     .map(getProfileBySlug)
     .filter((p): p is Profile => p !== null && p.frontmatter.published && !p.frontmatter.aiWritten)
     .sort(
+      (a, b) =>
+        new Date(b.frontmatter.date).getTime() -
+        new Date(a.frontmatter.date).getTime()
+    );
+}
+
+/** Listed profiles — shown in index, sitemap, feeds. Excludes listed:false. */
+export function getAllProfiles(): Profile[] {
+  return getServableProfiles().filter((p) => p.frontmatter.listed !== false).sort(
       (a, b) =>
         new Date(b.frontmatter.date).getTime() -
         new Date(a.frontmatter.date).getTime()
