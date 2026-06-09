@@ -33,24 +33,24 @@ export default function AdminPage() {
   const [sendResult, setSendResult] = useState<string|null>(null);
 
   // Calendar state
-  type CalItem = { id: string; date: string; platform: string; type: string; status: "live"|"ready"|"draft"|"planned"; copy: string };
+  type CalItem = { id: string; date: string; platform: string; type: string; status: "live"|"ready"|"draft"|"planned"; copy: string; link?: string };
   const SEED: CalItem[] = [
     { id:"1", date:"2026-06-08", platform:"FB - SL Page", type:"Reel", status:"live", copy:"Intro reel (19s). From the Appalachian foothills..." },
     { id:"2", date:"2026-06-08", platform:"FB - SL Page", type:"Reel", status:"live", copy:"Workout clip (49s). What if every angry comment was a workout?" },
-    { id:"3", date:"2026-06-08", platform:"FB - SL Page", type:"Feed post", status:"live", copy:"Ep1 announcement with OG card -> /essays/the-digital-gym-somatic-practice" },
-    { id:"4", date:"2026-06-08", platform:"YouTube", type:"Video", status:"live", copy:"Full ep1 (3:43). youtube.com/watch?v=upVG97BpaFw" },
+    { id:"3", date:"2026-06-08", platform:"FB - SL Page", type:"Feed post", status:"live", copy:"Ep1 announcement with OG card.", link:"https://southernlegends.blog/essays/the-digital-gym-somatic-practice" },
+    { id:"4", date:"2026-06-08", platform:"YouTube", type:"Video", status:"live", copy:"Full ep1 (3:43).", link:"https://www.youtube.com/watch?v=upVG97BpaFw" },
     { id:"5", date:"2026-06-08", platform:"Spotify", type:"Clip", status:"live", copy:"What if every angry comment was a workout? From Ep. 1 of Southern Legends." },
     { id:"6", date:"2026-06-09", platform:"FB — Personal", type:"Share / Reel", status:"ready", copy:"Share SL intro Reel + workout clip to timeline." },
     { id:"7", date:"2026-06-09", platform:"YouTube / TikTok", type:"Intro Reel v3", status:"ready", copy:"New intro reel (diff music) via CapCut. Asset: pending export." },
     { id:"8", date:"TBD", platform:"FB — SL Page", type:"Reel", status:"planned", copy:"Swap intro Reel to v3 once exported." },
-    { id:"9", date:"TBD", platform:"All", type:"Ep2 launch", status:"planned", copy:"Freedom Riders — teleprompter script ready. Record next." },
-    { id:"10", date:"TBD", platform:"All", type:"Ep3 launch", status:"planned", copy:"Chief Ladiga Trail — teleprompter script ready." },
+    { id:"9", date:"TBD", platform:"All", type:"Ep2 launch", status:"planned", copy:"Freedom Riders episode out now.", link:"https://southernlegends.blog/podcast" },
+    { id:"10", date:"TBD", platform:"All", type:"Ep3 launch", status:"planned", copy:"Chief Ladiga Trail episode out now.", link:"https://southernlegends.blog/podcast" },
   ];
   const [calItems, setCalItems] = useState<CalItem[]>(() => {
     if (typeof window === "undefined") return SEED;
     try { const s = localStorage.getItem("sl_calendar"); return s ? JSON.parse(s) : SEED; } catch { return SEED; }
   });
-  const [newItem, setNewItem] = useState<Partial<CalItem>>({ date:"", platform:"FB — SL Page", type:"Feed post", status:"planned", copy:"" });
+  const [newItem, setNewItem] = useState<Partial<CalItem>>({ date:"", platform:"FB — SL Page", type:"Feed post", status:"planned", copy:"", link:"" });
   const [adding, setAdding] = useState(false);
   const [editId, setEditId] = useState<string|null>(null);
   const [editCopy, setEditCopy] = useState("");
@@ -210,6 +210,8 @@ export default function AdminPage() {
                   </div>
                   <textarea value={newItem.copy||""} onChange={e => setNewItem(p=>({...p,copy:e.target.value}))} placeholder="Copy / notes"
                     style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:13, lineHeight:1.5, minHeight:60, resize:"vertical" as const, fontFamily:"Georgia,serif", width:"100%", boxSizing:"border-box" as const }} />
+                  <input value={newItem.link||""} onChange={e => setNewItem(p=>({...p,link:e.target.value}))} placeholder="Link (optional)"
+                    style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:12, width:"100%", boxSizing:"border-box" as const }} />
                   <button onClick={addItem} style={{ background:AMBER, color:"#fff", border:"none", borderRadius:7, padding:"8px 0", fontWeight:700, fontSize:13, cursor:"pointer" }}>Add to Calendar</button>
                 </div>
               )}
@@ -238,7 +240,7 @@ export default function AdminPage() {
                     )}
                   </div>
                   <div style={{ display:"flex", flexDirection:"column", gap:4, flexShrink:0 }}>
-                    <button onClick={() => { setMessage(item.copy); setLink(""); setTab("post"); }} title="Use in Post tab" style={{ background:AMBER_BG, border:`1px solid ${AMBER}`, color:AMBER, borderRadius:5, padding:"3px 7px", fontSize:10, fontWeight:700, cursor:"pointer" }}>Post →</button>
+                    <button onClick={() => { setMessage(item.copy); setLink(item.link||""); setTab("post"); }} title="Use in Post tab" style={{ background:AMBER_BG, border:`1px solid ${AMBER}`, color:AMBER, borderRadius:5, padding:"3px 7px", fontSize:10, fontWeight:700, cursor:"pointer" }}>Post →</button>
                     <button onClick={() => deleteItem(item.id)} style={{ background:"#fff", border:"1px solid #fee2e2", color:"#dc2626", borderRadius:5, padding:"3px 7px", fontSize:10, cursor:"pointer" }}>✕</button>
                   </div>
                 </div>
