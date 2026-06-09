@@ -380,3 +380,27 @@ All Southern Legends references to "Headley Web & SEO" or "matthewheadley.com" r
 - Pirates of Penzance transcription (72 min, timed out — needs chunked approach)
 - Spotify show name still shows "Untitled Show" — fix in Spotify for Podcasters Settings tab manually
 - Spotify RSS refresh to pick up video enclosure change
+
+---
+
+## 2026-06-09 — Admin, scripts, opera archive, speaker inquiry
+
+**What shipped:**
+- SL admin `/admin` — fixed all TS build errors (curly quotes, missing types, @anthropic-ai/sdk)
+- Scripts tab added to admin — 5 teleprompter scripts + 12 published essays, opens on phone
+- Calendar tab auto-links fixed — Post → now populates link field
+- Footer "Broken Ground" label fixed in site-config.ts
+- Podcast share strip — Spotify/Apple/YouTube icons on essay pages with audioUrl
+- `/podcast` landing page — platform links + episode list
+- Pirates of Penzance (JSU 2007) — downloaded, audio normalized, transcribed (72 min, 4 chunks), progressive SRT + full-show SRT generated, both uploaded to YouTube (cut: ckhKCCrPNcs, full: GrYTQNjjd8g)
+- Out of the Shadows Summit — speaker inquiry email sent to jnix@jsu.edu, CRM task set June 16
+- Opera archive CRM task created — Mikado, Hansel & Gretel, Gondoliers, Sweeney Todd queued
+- Script links emailed to mpheadley@gmail.com for walk recording
+
+**What's deferred:**
+- Spotify show name "Untitled Show" — fix manually in Settings
+- Interfaith episode — Matt recording on walk today
+- Freedom Riders — needs on-location shoot at monument (1031 Gurnee Ave)
+- mh.com admin audit — not started
+- YouTube captions for Pirates cut — upload pirate-king-full-cut-progressive.srt manually in Studio
+- YouTube captions for full show — upload pirate-king-jsu-2007-full-show.srt manually in Studio
