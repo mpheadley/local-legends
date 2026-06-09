@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const PIN_KEY = "sl_admin_pin";
-const ls = { get: (k: string) => typeof window !== "undefined" ? localStorage.getItem(k) : null, set: (k: string, v: string) => typeof window !== "undefined" && localStorage.setItem(k, v) };
+const ls = { getItem: (k: string) => typeof window !== "undefined" ? localStorage.getItem(k) : null, setItem: (k: string, v: string) => typeof window !== "undefined" && localStorage.setItem(k, v) };
 const BROWN = "#292524";
 const AMBER = "#D97706";
 const AMBER_BG = "#FEF3C7";
