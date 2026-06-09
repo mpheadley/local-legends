@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 
 const PIN_KEY = "sl_admin_pin";
+const store = typeof window !== "undefined" ? localStorage : null;
 const BROWN = "#292524";
 const AMBER = "#D97706";
 const AMBER_BG = "#FEF3C7";
@@ -37,11 +38,11 @@ export default function AdminPage() {
   const [ghostPost, setGhostPost] = useState("");
 
   useEffect(() => {
-    const saved = sessionStorage.getItem(PIN_KEY);
+    const saved = store.getItem(PIN_KEY);
     if (saved) { setPin(saved); setAuthed(true); }
   }, []);
 
-  function submitPin() { sessionStorage.setItem(PIN_KEY, pinInput); setPin(pinInput); setAuthed(true); }
+  function submitPin() { store.setItem(PIN_KEY, pinInput); setPin(pinInput); setAuthed(true); }
   function headers() { return { "Content-Type": "application/json", "x-admin-pin": pin }; }
 
   async function loadQueue() {
