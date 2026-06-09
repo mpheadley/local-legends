@@ -1,6 +1,6 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-06-08. Source of truth for what's built.*
+*Last updated: 2026-06-09. Source of truth for what's built.*
 
 ---
 
