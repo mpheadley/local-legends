@@ -35,11 +35,11 @@ export default function AdminPage() {
   // Calendar state
   type CalItem = { id: string; date: string; platform: string; type: string; status: "live"|"ready"|"draft"|"planned"; copy: string };
   const SEED: CalItem[] = [
-    { id:"1", date:"2026-06-08", platform:"FB — SL Page", type:"Reel", status:"live", copy:"Intro reel (19s). "From the Appalachian foothills…"" },
-    { id:"2", date:"2026-06-08", platform:"FB — SL Page", type:"Reel", status:"live", copy:"Workout clip (49s). "What if every angry comment was a workout?"" },
-    { id:"3", date:"2026-06-08", platform:"FB — SL Page", type:"Feed post", status:"live", copy:"Ep1 announcement with OG card → /essays/the-digital-gym-somatic-practice" },
+    { id:"1", date:"2026-06-08", platform:"FB - SL Page", type:"Reel", status:"live", copy:"Intro reel (19s). From the Appalachian foothills..." },
+    { id:"2", date:"2026-06-08", platform:"FB - SL Page", type:"Reel", status:"live", copy:"Workout clip (49s). What if every angry comment was a workout?" },
+    { id:"3", date:"2026-06-08", platform:"FB - SL Page", type:"Feed post", status:"live", copy:"Ep1 announcement with OG card -> /essays/the-digital-gym-somatic-practice" },
     { id:"4", date:"2026-06-08", platform:"YouTube", type:"Video", status:"live", copy:"Full ep1 (3:43). youtube.com/watch?v=upVG97BpaFw" },
-    { id:"5", date:"2026-06-08", platform:"Spotify", type:"Clip", status:"live", copy:""What if every angry comment was a workout? From Ep. 1 of Southern Legends."" },
+    { id:"5", date:"2026-06-08", platform:"Spotify", type:"Clip", status:"live", copy:"What if every angry comment was a workout? From Ep. 1 of Southern Legends." },
     { id:"6", date:"2026-06-09", platform:"FB — Personal", type:"Share / Reel", status:"ready", copy:"Share SL intro Reel + workout clip to timeline." },
     { id:"7", date:"2026-06-09", platform:"YouTube / TikTok", type:"Intro Reel v3", status:"ready", copy:"New intro reel (diff music) via CapCut. Asset: pending export." },
     { id:"8", date:"TBD", platform:"FB — SL Page", type:"Reel", status:"planned", copy:"Swap intro Reel to v3 once exported." },
