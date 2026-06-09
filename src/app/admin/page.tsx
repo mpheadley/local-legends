@@ -167,6 +167,71 @@ export default function AdminPage() {
 
       <div style={{ maxWidth: 680, margin: "0 auto", padding: 20 }}>
 
+        {/* Calendar */}
+        {tab === "calendar" && (() => {
+          const statusColor: Record<CalItem["status"], string> = { live:"#16a34a", ready:"#2563eb", draft:"#d97706", planned:"#7c3aed" };
+          const statusBg: Record<CalItem["status"], string> = { live:"#f0fdf4", ready:"#eff6ff", draft:"#fffbeb", planned:"#f5f3ff" };
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+              <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:4 }}>
+                <div style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:1, color:"#a8a29e" }}>Social Calendar</div>
+                <button onClick={() => setAdding(a => !a)} style={{ background:adding?"#e5e0d8":AMBER, color:adding?"#78716c":"#fff", border:"none", borderRadius:6, padding:"4px 12px", fontSize:12, fontWeight:700, cursor:"pointer" }}>
+                  {adding ? "Cancel" : "+ Add"}
+                </button>
+              </div>
+              {adding && (
+                <div style={{ background:"#fff", border:`1px solid ${AMBER}`, borderRadius:10, padding:14, display:"flex", flexDirection:"column", gap:8 }}>
+                  <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8 }}>
+                    <input value={newItem.date||""} onChange={e => setNewItem(p=>({...p,date:e.target.value}))} placeholder="Date (e.g. 2026-06-10)"
+                      style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:12, width:"100%", boxSizing:"border-box" as const }} />
+                    <input value={newItem.platform||""} onChange={e => setNewItem(p=>({...p,platform:e.target.value}))} placeholder="Platform"
+                      style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:12, width:"100%", boxSizing:"border-box" as const }} />
+                    <input value={newItem.type||""} onChange={e => setNewItem(p=>({...p,type:e.target.value}))} placeholder="Type (Reel, Post…)"
+                      style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:12, width:"100%", boxSizing:"border-box" as const }} />
+                    <select value={newItem.status||"planned"} onChange={e => setNewItem(p=>({...p,status:e.target.value as CalItem["status"]}))}
+                      style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:12, width:"100%", boxSizing:"border-box" as const }}>
+                      {(["planned","draft","ready","live"] as const).map(s => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                  </div>
+                  <textarea value={newItem.copy||""} onChange={e => setNewItem(p=>({...p,copy:e.target.value}))} placeholder="Copy / notes"
+                    style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:13, lineHeight:1.5, minHeight:60, resize:"vertical" as const, fontFamily:"Georgia,serif", width:"100%", boxSizing:"border-box" as const }} />
+                  <button onClick={addItem} style={{ background:AMBER, color:"#fff", border:"none", borderRadius:7, padding:"8px 0", fontWeight:700, fontSize:13, cursor:"pointer" }}>Add to Calendar</button>
+                </div>
+              )}
+              {calItems.map(item => (
+                <div key={item.id} style={{ background:"#fff", border:"1px solid #e5e0d8", borderRadius:8, padding:"10px 13px", display:"flex", gap:10, alignItems:"flex-start" }}>
+                  <div style={{ flex:1, minWidth:0 }}>
+                    <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4, flexWrap:"wrap" as const }}>
+                      <span style={{ fontSize:11, color:"#a8a29e" }}>{item.date}</span>
+                      <span style={{ fontSize:11, color:"#78716c", fontWeight:600 }}>{item.platform}</span>
+                      <span style={{ fontSize:11, color:"#a8a29e" }}>{item.type}</span>
+                      <button onClick={() => cycleStatus(item.id)} style={{ background:statusBg[item.status], color:statusColor[item.status], border:`1px solid ${statusColor[item.status]}33`, borderRadius:99, padding:"1px 8px", fontSize:10, fontWeight:700, cursor:"pointer", textTransform:"uppercase" as const, letterSpacing:"0.05em" }}>
+                        {item.status}
+                      </button>
+                    </div>
+                    {editId === item.id ? (
+                      <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                        <textarea value={editCopy} onChange={e => setEditCopy(e.target.value)}
+                          style={{ background:"#fafaf7", border:"1px solid #e5e0d8", borderRadius:6, color:BROWN, padding:"7px 10px", fontSize:13, lineHeight:1.5, minHeight:60, resize:"vertical" as const, fontFamily:"Georgia,serif", width:"100%", boxSizing:"border-box" as const }} />
+                        <div style={{ display:"flex", gap:6 }}>
+                          <button onClick={() => saveEdit(item.id)} style={{ background:AMBER, color:"#fff", border:"none", borderRadius:5, padding:"5px 12px", fontSize:11, fontWeight:700, cursor:"pointer" }}>Save</button>
+                          <button onClick={() => setEditId(null)} style={{ background:"#fff", border:"1px solid #e5e0d8", color:"#78716c", borderRadius:5, padding:"5px 10px", fontSize:11, cursor:"pointer" }}>Cancel</button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div style={{ fontSize:13, color:"#57534e", lineHeight:1.5, cursor:"pointer" }} onClick={() => startEdit(item)}>{item.copy}</div>
+                    )}
+                  </div>
+                  <div style={{ display:"flex", flexDirection:"column", gap:4, flexShrink:0 }}>
+                    <button onClick={() => { setMessage(item.copy); setLink(""); setTab("post"); }} title="Use in Post tab" style={{ background:AMBER_BG, border:`1px solid ${AMBER}`, color:AMBER, borderRadius:5, padding:"3px 7px", fontSize:10, fontWeight:700, cursor:"pointer" }}>Post →</button>
+                    <button onClick={() => deleteItem(item.id)} style={{ background:"#fff", border:"1px solid #fee2e2", color:"#dc2626", borderRadius:5, padding:"3px 7px", fontSize:10, cursor:"pointer" }}>✕</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          );
+        })()}
+
         {/* Queue */}
         {tab === "queue" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
