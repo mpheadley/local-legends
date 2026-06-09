@@ -80,6 +80,10 @@ export default function AdminPage() {
   const [ghostPost, setGhostPost] = useState("");
 
   useEffect(() => {
+    const migrated = sessionStorage.getItem(PIN_KEY);
+    if (migrated) { ls.setItem(PIN_KEY, migrated); sessionStorage.removeItem(PIN_KEY); }
+    const p = new URLSearchParams(window.location.search).get("p");
+    if (p) { ls.setItem(PIN_KEY, p); setPin(p); setAuthed(true); return; }
     const saved = ls.getItem(PIN_KEY);
     if (saved) { setPin(saved); setAuthed(true); }
   }, []);
