@@ -12,7 +12,7 @@ export default function AdminPage() {
   const [pin, setPin] = useState("");
   const [authed, setAuthed] = useState(false);
   const [pinInput, setPinInput] = useState("");
-  const [tab, setTab] = useState<"calendar"|"queue"|"post"|"email"|"ghostwrite">("calendar");
+  const [tab, setTab] = useState<"scripts"|"calendar"|"queue"|"post"|"email"|"ghostwrite">("scripts");
 
   // Queue state
   type Profile = { slug: string; title: string; date: string; published: boolean };
@@ -154,7 +154,16 @@ export default function AdminPage() {
     </div>
   );
 
+  const SCRIPTS = [
+    { label: "Interfaith Ministries", url: "https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/scripts/interfaith-teleprompter.txt", note: "Walk-and-talk ready" },
+    { label: "Chief Ladiga Trail", url: "https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/scripts/chief-ladiga-teleprompter.txt", note: "On trail" },
+    { label: "Freedom Riders", url: "https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/scripts/freedom-riders-teleprompter.txt", note: "Needs monument location" },
+    { label: "Jay Jenkins", url: "https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/scripts/jay-jenkins-teleprompter.txt", note: "Interview" },
+    { label: "Shannon Jenkins", url: "https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/scripts/shannon-jenkins-teleprompter.txt", note: "Interview" },
+  ];
+
   const tabs = [
+    { key: "scripts" as const, label: "📜 Scripts" },
     { key: "calendar" as const, label: "📅 Calendar" },
     { key: "queue" as const, label: "📋 Queue" },
     { key: "post" as const, label: "📘 Post" },
@@ -181,6 +190,23 @@ export default function AdminPage() {
       </div>
 
       <div style={{ maxWidth: 680, margin: "0 auto", padding: 20 }}>
+
+        {/* Scripts */}
+        {tab === "scripts" && (
+          <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+            <div style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:1, color:"#a8a29e", marginBottom:4 }}>Episode Scripts</div>
+            {SCRIPTS.map(s => (
+              <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
+                style={{ background:"#fff", border:"1px solid #e5e0d8", borderRadius:8, padding:"12px 14px", display:"flex", alignItems:"center", justifyContent:"space-between", textDecoration:"none", gap:12 }}>
+                <div>
+                  <div style={{ fontSize:14, fontWeight:600, color:BROWN }}>{s.label}</div>
+                  <div style={{ fontSize:11, color:"#a8a29e", marginTop:2 }}>{s.note}</div>
+                </div>
+                <span style={{ background:AMBER_BG, color:AMBER, border:`1px solid ${AMBER}`, borderRadius:6, padding:"3px 10px", fontSize:11, fontWeight:700, flexShrink:0 }}>Open →</span>
+              </a>
+            ))}
+          </div>
+        )}
 
         {/* Calendar */}
         {tab === "calendar" && (() => {
