@@ -6,6 +6,18 @@ Newest first.
 
 ---
 
+## 2026-06-09 — Vercel build fix (function size)
+
+`api/admin/genpost` was deploying at 609MB — over Vercel's 300MB limit. Root cause: `queue/route.ts` uses `process.cwd()` which causes Vercel's bundler to trace and include the entire project root (merch PNGs, audio, footage, etc.). Fixed by adding `outputFileTracingExcludes` to `next.config.ts` excluding all binary/media directories. Build is now green. Pirates video work (full cut, karaoke captions) deferred to separate session.
+
+## 2026-06-09 — Literary reflection on SL writing
+
+Read all published profiles + Renee Rice draft. Reflection filed at `content/writing-reflection-2026-06-09.md`. Key findings: objects-as-character and negative space are the strongest consistent moves. Aquality Farms flattens due to premature specs. Renee Rice draft is the most literary piece in the collection — needs more Renee's voice but bones are right. The pulled-quote-without-integration tendency is the main craft problem to watch.
+
+## 2026-06-08 — Admin dashboard built
+
+New /admin page with 4 tabs: Queue (profiles list with one-click FB compose), Post (FB post composer using FB_SL_PAGE_TOKEN), Email (newsletter broadcast via /api/newsletter/send), Ghostwriter (Claude Haiku in SL warm narrative voice). Three new API routes: /api/admin/queue, /api/admin/fb-post, /api/admin/ghostwrite. ADMIN_PIN + FB_SL_PAGE_TOKEN + FB_SL_PAGE_ID wired to Vercel. Deployed via git push → GitHub auto-deploy.
+
 ## 2026-06-08 — Podcast Episode 1 published (full pipeline shipped)
 
 **Episode 1: The Digital Gym** is live across all platforms with Matt's voice.
