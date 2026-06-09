@@ -74,6 +74,8 @@ export default function AdminPage() {
   function startEdit(item: CalItem) { setEditId(item.id); setEditCopy(item.copy); }
   function saveEdit(id: string) { saveCalendar(calItems.map(i => i.id===id ? {...i, copy: editCopy} : i)); setEditId(null); }
 
+  const [genningPost, setGenningPost] = useState(false);
+
   // Ghostwriter state
   const [angle, setAngle] = useState("");
   const [writing, setWriting] = useState(false);
@@ -116,6 +118,15 @@ export default function AdminPage() {
     const d = await r.json();
     setSending(false);
     setSendResult(d.ok ? "✓ Broadcast sent." : "Error: " + (d.error ?? "Unknown"));
+  }
+
+  async function genPost() {
+    if (!message.trim() && !link.trim()) return;
+    setGenningPost(true);
+    const r = await fetch("/api/admin/genpost", { method: "POST", headers: headers(), body: JSON.stringify({ message, link: link || undefined }) });
+    const d = await r.json();
+    setGenningPost(false);
+    if (d.ok) setMessage(d.post);
   }
 
   async function ghostwrite() {
@@ -276,7 +287,12 @@ export default function AdminPage() {
             <textarea value={message} onChange={e => setMessage(e.target.value)} placeholder="Write your post…"
               style={{ background: "#fff", border: "1px solid #e5e0d8", borderRadius: 8, color: BROWN, padding: "10px 12px", fontSize: 14, lineHeight: 1.6, minHeight: 140, resize: "vertical", fontFamily: "Georgia, serif", width: "100%", boxSizing: "border-box" }}
             />
-            <div style={{ fontSize: 11, color: "#a8a29e", textAlign: "right" }}>{message.length} chars</div>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div style={{ fontSize: 11, color: "#a8a29e" }}>{message.length} chars</div>
+              <button onClick={genPost} disabled={genningPost || (!message.trim() && !link.trim())} style={{ background: "none", border: `1px solid ${AMBER}`, borderRadius: 6, color: genningPost ? "#a8a29e" : AMBER, padding: "3px 10px", fontSize: 11, fontWeight: 700, cursor: genningPost ? "default" : "pointer" }}>
+                {genningPost ? "⏳ Generating…" : "✨ Gen Post"}
+              </button>
+            </div>
             <input value={link} onChange={e => setLink(e.target.value)} placeholder="Link (optional)"
               style={{ background: "#fff", border: "1px solid #e5e0d8", borderRadius: 8, color: BROWN, padding: "9px 12px", fontSize: 13, width: "100%", boxSizing: "border-box" }}
             />
