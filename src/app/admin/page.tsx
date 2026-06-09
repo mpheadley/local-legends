@@ -154,6 +154,21 @@ export default function AdminPage() {
     </div>
   );
 
+  const ESSAYS = [
+    { label: "The Hospital", slug: "the-hospital" },
+    { label: "The Digital Gym", slug: "the-digital-gym-somatic-practice" },
+    { label: "A Seed Must Die", slug: "a-seed-must-die" },
+    { label: "Five Fifteen", slug: "five-fifteen" },
+    { label: "The Same Domain", slug: "the-same-domain" },
+    { label: "No Shade", slug: "no-shade" },
+    { label: "I'm Not Going to Disappear", slug: "im-not-going-to-disappear" },
+    { label: "Chief Ladiga, 1832", slug: "chief-ladiga-trail" },
+    { label: "Hope in the Wilderness", slug: "hope-in-the-wilderness" },
+    { label: "Attempt 73", slug: "attempt-73" },
+    { label: "A Letter Never Sent", slug: "a-letter-never-sent" },
+    { label: "My Writing Has a New Home", slug: "my-writing-has-a-new-home" },
+  ];
+
   const SCRIPTS = [
     { label: "Interfaith Ministries", url: "https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/scripts/interfaith-teleprompter.txt", note: "Walk-and-talk ready" },
     { label: "Chief Ladiga Trail", url: "https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/scripts/chief-ladiga-teleprompter.txt", note: "On trail" },
@@ -203,6 +218,14 @@ export default function AdminPage() {
                   <div style={{ fontSize:11, color:"#a8a29e", marginTop:2 }}>{s.note}</div>
                 </div>
                 <span style={{ background:AMBER_BG, color:AMBER, border:`1px solid ${AMBER}`, borderRadius:6, padding:"3px 10px", fontSize:11, fontWeight:700, flexShrink:0 }}>Open →</span>
+              </a>
+            ))}
+            <div style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:1, color:"#a8a29e", marginTop:8, marginBottom:4 }}>Published Essays</div>
+            {ESSAYS.map(e => (
+              <a key={e.slug} href={`https://southernlegends.blog/essays/${e.slug}`} target="_blank" rel="noopener noreferrer"
+                style={{ background:"#fff", border:"1px solid #e5e0d8", borderRadius:8, padding:"10px 14px", display:"flex", alignItems:"center", justifyContent:"space-between", textDecoration:"none", gap:12 }}>
+                <div style={{ fontSize:13, fontWeight:600, color:BROWN }}>{e.label}</div>
+                <span style={{ background:"#f5f3ff", color:"#7c3aed", border:"1px solid #c4b5fd", borderRadius:6, padding:"3px 10px", fontSize:11, fontWeight:700, flexShrink:0 }}>Read →</span>
               </a>
             ))}
           </div>
