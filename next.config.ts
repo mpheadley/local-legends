@@ -1,31 +1,29 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    outputFileTracingExcludes: {
-      '*': [
-        'merch/**',
-        'images/**',
-        'audio/**',
-        'assets/**',
-        'print/**',
-        'interviews/**',
-        'sessions/**',
-        'podcast-production/**',
-        'book/**',
-        'bipolar-brand/**',
-        'public/audio/**',
-        'public/images/**',
-        '**/*.png',
-        '**/*.jpg',
-        '**/*.jpeg',
-        '**/*.webp',
-        '**/*.mp4',
-        '**/*.mp3',
-        '**/*.m4a',
-        '**/*.wav',
-      ],
-    },
+  outputFileTracingExcludes: {
+    '*': [
+      'merch/**',
+      'images/**',
+      'audio/**',
+      'assets/**',
+      'print/**',
+      'interviews/**',
+      'sessions/**',
+      'podcast-production/**',
+      'book/**',
+      'bipolar-brand/**',
+      'public/audio/**',
+      'public/images/**',
+      '**/*.png',
+      '**/*.jpg',
+      '**/*.jpeg',
+      '**/*.webp',
+      '**/*.mp4',
+      '**/*.mp3',
+      '**/*.m4a',
+      '**/*.wav',
+    ],
   },
   images: {
     remotePatterns: [
