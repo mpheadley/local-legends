@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const PIN_KEY = "sl_admin_pin";
-const store = typeof window !== "undefined" ? localStorage : null;
+const ls = { get: (k: string) => typeof window !== "undefined" ? localStorage.getItem(k) : null, set: (k: string, v: string) => typeof window !== "undefined" && localStorage.setItem(k, v) };
 const BROWN = "#292524";
 const AMBER = "#D97706";
 const AMBER_BG = "#FEF3C7";
@@ -12,7 +12,7 @@ export default function AdminPage() {
   const [pin, setPin] = useState("");
   const [authed, setAuthed] = useState(false);
   const [pinInput, setPinInput] = useState("");
-  const [tab, setTab] = useState<"queue"|"post"|"email"|"ghostwrite">("queue");
+  const [tab, setTab] = useState<"calendar"|"queue"|"post"|"email"|"ghostwrite">("calendar");
 
   // Queue state
   type Profile = { slug: string; title: string; date: string; published: boolean };
@@ -32,17 +32,59 @@ export default function AdminPage() {
   const [sending, setSending] = useState(false);
   const [sendResult, setSendResult] = useState<string|null>(null);
 
+  // Calendar state
+  type CalItem = { id: string; date: string; platform: string; type: string; status: "live"|"ready"|"draft"|"planned"; copy: string };
+  const SEED: CalItem[] = [
+    { id:"1", date:"2026-06-08", platform:"FB — SL Page", type:"Reel", status:"live", copy:"Intro reel (19s). "From the Appalachian foothills…"" },
+    { id:"2", date:"2026-06-08", platform:"FB — SL Page", type:"Reel", status:"live", copy:"Workout clip (49s). "What if every angry comment was a workout?"" },
+    { id:"3", date:"2026-06-08", platform:"FB — SL Page", type:"Feed post", status:"live", copy:"Ep1 announcement with OG card → /essays/the-digital-gym-somatic-practice" },
+    { id:"4", date:"2026-06-08", platform:"YouTube", type:"Video", status:"live", copy:"Full ep1 (3:43). youtube.com/watch?v=upVG97BpaFw" },
+    { id:"5", date:"2026-06-08", platform:"Spotify", type:"Clip", status:"live", copy:""What if every angry comment was a workout? From Ep. 1 of Southern Legends."" },
+    { id:"6", date:"2026-06-09", platform:"FB — Personal", type:"Share / Reel", status:"ready", copy:"Share SL intro Reel + workout clip to timeline." },
+    { id:"7", date:"2026-06-09", platform:"YouTube / TikTok", type:"Intro Reel v3", status:"ready", copy:"New intro reel (diff music) via CapCut. Asset: pending export." },
+    { id:"8", date:"TBD", platform:"FB — SL Page", type:"Reel", status:"planned", copy:"Swap intro Reel to v3 once exported." },
+    { id:"9", date:"TBD", platform:"All", type:"Ep2 launch", status:"planned", copy:"Freedom Riders — teleprompter script ready. Record next." },
+    { id:"10", date:"TBD", platform:"All", type:"Ep3 launch", status:"planned", copy:"Chief Ladiga Trail — teleprompter script ready." },
+  ];
+  const [calItems, setCalItems] = useState<CalItem[]>(() => {
+    if (typeof window === "undefined") return SEED;
+    try { const s = localStorage.getItem("sl_calendar"); return s ? JSON.parse(s) : SEED; } catch { return SEED; }
+  });
+  const [newItem, setNewItem] = useState<Partial<CalItem>>({ date:"", platform:"FB — SL Page", type:"Feed post", status:"planned", copy:"" });
+  const [adding, setAdding] = useState(false);
+  const [editId, setEditId] = useState<string|null>(null);
+  const [editCopy, setEditCopy] = useState("");
+
+  function saveCalendar(items: CalItem[]) {
+    setCalItems(items);
+    if (typeof window !== "undefined") localStorage.setItem("sl_calendar", JSON.stringify(items));
+  }
+  function cycleStatus(id: string) {
+    const order: CalItem["status"][] = ["planned","draft","ready","live"];
+    saveCalendar(calItems.map(i => i.id === id ? { ...i, status: order[(order.indexOf(i.status)+1)%4] } : i));
+  }
+  function deleteItem(id: string) { saveCalendar(calItems.filter(i => i.id !== id)); }
+  function addItem() {
+    if (!newItem.copy?.trim()) return;
+    const item: CalItem = { id: Date.now().toString(), date: newItem.date||"TBD", platform: newItem.platform||"", type: newItem.type||"", status: newItem.status||"planned", copy: newItem.copy||"" };
+    saveCalendar([...calItems, item]);
+    setNewItem({ date:"", platform:"FB — SL Page", type:"Feed post", status:"planned", copy:"" });
+    setAdding(false);
+  }
+  function startEdit(item: CalItem) { setEditId(item.id); setEditCopy(item.copy); }
+  function saveEdit(id: string) { saveCalendar(calItems.map(i => i.id===id ? {...i, copy: editCopy} : i)); setEditId(null); }
+
   // Ghostwriter state
   const [angle, setAngle] = useState("");
   const [writing, setWriting] = useState(false);
   const [ghostPost, setGhostPost] = useState("");
 
   useEffect(() => {
-    const saved = store.getItem(PIN_KEY);
+    const saved = ls.getItem(PIN_KEY);
     if (saved) { setPin(saved); setAuthed(true); }
   }, []);
 
-  function submitPin() { store.setItem(PIN_KEY, pinInput); setPin(pinInput); setAuthed(true); }
+  function submitPin() { ls.setItem(PIN_KEY, pinInput); setPin(pinInput); setAuthed(true); }
   function headers() { return { "Content-Type": "application/json", "x-admin-pin": pin }; }
 
   async function loadQueue() {
@@ -98,6 +140,7 @@ export default function AdminPage() {
   );
 
   const tabs = [
+    { key: "calendar" as const, label: "📅 Calendar" },
     { key: "queue" as const, label: "📋 Queue" },
     { key: "post" as const, label: "📘 Post" },
     { key: "email" as const, label: "✉ Email" },
@@ -205,7 +248,7 @@ export default function AdminPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: "#a8a29e" }}>Caption Ghostwriter</div>
             <div style={{ fontSize: 12, color: "#78716c", lineHeight: 1.5 }}>Describe the story angle. Returns a warm, narrative Facebook caption in the Southern Legends voice.</div>
-            <textarea value={angle} onChange={e => setAngle(e.target.value)} placeholder="e.g. 'Jay Jenkins has run the same hardware store in Anniston for 38 years and still keeps the key to every house he's ever sold'"
+            <textarea value={angle} onChange={e => setAngle(e.target.value)} placeholder="e.g. 'Jay Jenkins has run the same hardware ls in Anniston for 38 years and still keeps the key to every house he's ever sold'"
               style={{ background: "#fff", border: "1px solid #e5e0d8", borderRadius: 8, color: BROWN, padding: "10px 12px", fontSize: 13, lineHeight: 1.6, minHeight: 80, resize: "vertical", fontFamily: "Georgia, serif", width: "100%", boxSizing: "border-box" }}
             />
             <button onClick={ghostwrite} disabled={writing || !angle.trim()} style={{ background: writing ? "#e5e0d8" : AMBER_BG, border: `1px solid ${AMBER}`, color: writing ? "#a8a29e" : AMBER, borderRadius: 8, padding: "10px 0", fontWeight: 700, fontSize: 13, cursor: writing ? "default" : "pointer" }}>
