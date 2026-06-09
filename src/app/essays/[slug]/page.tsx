@@ -281,10 +281,10 @@ export default async function JournalPostPage({ params }: { params: Params }) {
               )}
             </div>
           )}
-          {(frontmatter.youtubeUrl || frontmatter.videoUrl) && (
+          {((frontmatter as unknown as {youtubeUrl?:string}).youtubeUrl || frontmatter.videoUrl) && (
             <div className="not-prose mb-6">
-              {frontmatter.youtubeUrl
-                ? <VideoEmbed url={frontmatter.youtubeUrl} />
+              {(frontmatter as unknown as {youtubeUrl?:string}).youtubeUrl
+                ? <VideoEmbed url={(frontmatter as unknown as {youtubeUrl:string}).youtubeUrl} />
                 : <VideoPlayer src={frontmatter.videoUrl!} caption="Watch this essay" />
               }
             </div>

@@ -12,8 +12,9 @@ function formatDate(dateStr: string): string {
 
 export default function JournalCard({ post }: { post: JournalPost }) {
   const { slug, frontmatter, readingTime } = post;
-  const heroImage = frontmatter.heroImage ?? frontmatter.image;
-  const heroAlt = frontmatter.heroAlt ?? frontmatter.imageAlt ?? frontmatter.title;
+  const fm = frontmatter as unknown as { heroImage?: string; heroAlt?: string; image?: string; imageAlt?: string };
+  const heroImage = fm.heroImage ?? fm.image;
+  const heroAlt = fm.heroAlt ?? fm.imageAlt ?? frontmatter.title;
 
   if (heroImage) {
     return (

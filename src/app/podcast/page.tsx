@@ -119,7 +119,7 @@ export default function PodcastPage() {
                     {ep.frontmatter.title}
                   </h3>
                   <p className="text-ll-text leading-relaxed text-sm">
-                    {ep.frontmatter.description ?? ep.frontmatter.excerpt ?? ep.frontmatter.subtitle}
+                    {(ep.frontmatter as unknown as {description?:string}).description ?? ep.frontmatter.excerpt ?? ep.frontmatter.subtitle}
                   </p>
                   <span className="inline-block mt-3 text-sm font-medium text-ll-primary group-hover:underline">
                     Listen →
