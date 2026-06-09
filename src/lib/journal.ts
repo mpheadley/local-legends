@@ -14,6 +14,8 @@ export interface JournalFrontmatter {
   published: boolean;
   image?: string;
   imageAlt?: string;
+  heroImage?: string;
+  heroAlt?: string;
   imageCaption?: string;
   cardImage?: string;
   cardImageAlt?: string;
