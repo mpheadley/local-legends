@@ -22,7 +22,7 @@ import VideoLoop from "@/app/components/VideoLoop";
 import ShareButtons from "@/app/components/ShareButtons";
 import ScrollytellingProfile from "@/app/components/ScrollytellingProfile";
 import ParallaxHero from "@/app/components/ParallaxHero";
-import SubscribeCTA from "@/app/components/SubscribeCTA";
+import NewsletterCapture from "@/app/components/NewsletterCapture";
 import Comments from "@/app/components/Comments";
 import { getProfileMerch } from "@/lib/merch";
 import ClosingSection from "@/app/components/ClosingSection";
@@ -496,7 +496,7 @@ export default async function ProfilePage({
       )}
 
       {/* Subscribe */}
-      <SubscribeCTA />
+      <NewsletterCapture source="profile" />
 
     </main>
   );

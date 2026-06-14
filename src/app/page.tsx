@@ -8,7 +8,7 @@ import HeroCarousel from "./components/HeroCarousel";
 import { siteConfig } from "@/lib/site-config";
 import Link from "next/link";
 import Image from "next/image";
-import SubscribeCTA from "./components/SubscribeCTA";
+import NewsletterCapture from "./components/NewsletterCapture";
 
 export default function HomePage() {
   const allProfiles = getAllProfiles();
@@ -312,7 +312,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SubscribeCTA variant="section" source="homepage" />
+      <NewsletterCapture source="homepage" />
     </main>
   );
 }

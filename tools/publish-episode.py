@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """
 Southern Legends — Episode Publish Script
+
+Audio → Vercel Blob (RSS enclosure, ~30MB, one-time ingestion pull)
+Video → YouTube (free, embedded on SL site via youtubeUrl frontmatter)
+No video Blob upload.
+
 Usage:
   python3 tools/publish-episode.py \
-    --video /path/to/ep1.mp4 \
-    --slug the-digital-gym-somatic-practice \
-    --title "The Digital Gym: A Somatic Practice" \
-    --date 2026-06-02
+    --video /path/to/ep3-final.mp4 \
+    --slug the-hospital \
+    --title "The Hospital" \
+    --date 2026-06-09 \
+    [--youtube https://youtu.be/xxxxx]
 """
 import argparse
 import os
@@ -60,7 +66,8 @@ const fs = require('fs');
 async function main() {{
   const blob = await put('{blob_name}', fs.readFileSync('{file_path}'), {{
     access: 'public',
-    token: process.env.BLOB_READ_WRITE_TOKEN
+    token: process.env.BLOB_READ_WRITE_TOKEN,
+    allowOverwrite: true
   }});
   console.log(blob.url);
 }}
@@ -71,8 +78,8 @@ main().catch(e => {{ console.error(e.message); process.exit(1); }});
     return result
 
 
-def update_frontmatter(slug: str, audio_url: str, video_url: str, media_size: int, duration: str):
-    mdx = CONTENT_DIR / f"{slug}.mdx"
+def update_frontmatter(slug: str, audio_url: str, youtube_url: str, media_size: int, duration: str, content_dir: Path = CONTENT_DIR):
+    mdx = content_dir / f"{slug}.mdx"
     if not mdx.exists():
         print(f"  ERROR: {mdx} not found")
         sys.exit(1)
@@ -89,8 +96,8 @@ def update_frontmatter(slug: str, audio_url: str, video_url: str, media_size: in
 
     if audio_url:
         content = replace_or_add(content, 'audioUrl', audio_url)
-    if video_url:
-        content = replace_or_add(content, 'videoUrl', video_url)
+    if youtube_url:
+        content = replace_or_add(content, 'youtubeUrl', youtube_url)
     if media_size:
         pattern = r'^mediaSize:.*$'
         replacement = f'mediaSize: {media_size}'
@@ -112,11 +119,14 @@ def main():
     parser.add_argument('--title', required=True, help='Episode title')
     parser.add_argument('--date', required=True, help='Publish date YYYY-MM-DD')
     parser.add_argument('--ep', default='', help='Episode number e.g. ep1')
+    parser.add_argument('--youtube', default='', help='YouTube URL after manual upload (sets youtubeUrl in MDX)')
+    parser.add_argument('--content-type', default='journal', choices=['journal', 'profiles'], help='Content directory: journal or profiles')
     args = parser.parse_args()
 
     video_path = args.video
     slug = args.slug
     ep = args.ep or f"ep{slug[:3]}"
+    content_dir = REPO / "content" / args.content_type
 
     if not os.path.exists(video_path):
         print(f"ERROR: Video file not found: {video_path}")
@@ -132,21 +142,17 @@ def main():
     video_size = os.path.getsize(video_path)
     print(f"  Duration: {duration}")
 
-    # 2. Upload audio
+    # 2. Upload audio only (video goes to YouTube, not Blob)
     audio_blob_name = f"audio/{ep}-{slug}.mp3"
     audio_url = upload_to_blob(audio_path, audio_blob_name)
 
-    # 3. Upload video
-    video_blob_name = f"video/{ep}-{slug}.mp4"
-    video_url = upload_to_blob(video_path, video_blob_name)
-
-    # 4. Update frontmatter
+    # 3. Update frontmatter
     print("→ Updating MDX frontmatter...")
-    update_frontmatter(slug, audio_url, video_url, video_size, duration)
+    update_frontmatter(slug, audio_url, args.youtube, audio_size, duration, content_dir)
 
     # 5. Git commit + push
     print("→ Committing and pushing...")
-    run(f'cd "{REPO}" && git add content/journal/{slug}.mdx && git commit -m "publish: {args.title} ({args.date})" && git push')
+    run(f'cd "{REPO}" && git add content/{args.content_type}/{slug}.mdx && git commit -m "publish: {args.title} ({args.date})" && git push')
 
     print(f"\n✓ Done. RSS will update within 60 seconds.")
     print(f"  Apple Podcasts: auto-polls every few hours")

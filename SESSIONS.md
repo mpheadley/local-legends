@@ -6,6 +6,20 @@ Newest first.
 
 ---
 
+## 2026-06-11 — Ep3 (Hospital) stitched, wrong intro music
+
+Processed hospital footage (`hospital_2026-06-09T07:44:08 2.MP4` from Downloads): re-encoded HEVC→H264, Whisper transcription, SRT generated (evenly-distributed word blocks — no word-level timestamps from diarize model), subtitle track embedded. Stitched intro + episode + outro → `ep3-hospital-final.mp4` (12:52). Wrong intro music — needs to be re-stitched with correct track before publish. Audio options: `sl-intro-episode.mp3`, `Banjo Turnaround.mp3`, `Porchline Drive.mp3`. Matt to confirm which.
+
+**Ep2 (Freedom Riders) also unpublished** — `ep2-freedom-riders-final.mp4` is stitched but publish-episode.py was never run. Needs companion journal MDX at `content/journal/freedom-riders-national-monument.mdx` (or direct profile frontmatter update) before publish script can wire audioUrl/videoUrl. Matt writes first.
+
+**Next:**
+1. Matt confirms correct intro music for ep3
+2. Re-stitch ep3 with correct intro → re-run publish-episode.py
+3. Ep2 journal MDX — Matt writes framing, then publish
+4. Ep2 publish-episode.py: `--video ep2-freedom-riders-final.mp4 --slug freedom-riders-national-monument --title "The Burning Bus: Freedom Riders National Monument" --date 2026-06-09`
+
+---
+
 ## 2026-06-09 — Vercel build fix (function size)
 
 `api/admin/genpost` was deploying at 609MB — over Vercel's 300MB limit. Root cause: `queue/route.ts` uses `process.cwd()` which causes Vercel's bundler to trace and include the entire project root (merch PNGs, audio, footage, etc.). Fixed by adding `outputFileTracingExcludes` to `next.config.ts` excluding all binary/media directories. Build is now green. Pirates video work (full cut, karaoke captions) deferred to separate session.

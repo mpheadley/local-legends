@@ -1,6 +1,6 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-06-09. Source of truth for what's built.*
+*Last updated: 2026-06-14. Source of truth for what's built.*
 
 ---
 
@@ -33,6 +33,13 @@
 - **Vercel Blob** — store ID `store_F46wkKj98GIsW4TA`; public bucket; `BLOB_READ_WRITE_TOKEN` in project env
 - **Upload script** — `scripts/upload-blob.mjs` — `BLOB_READ_WRITE_TOKEN=xxx node scripts/upload-blob.mjs <file> <pathname>`
 
+## Newsletter Capture — added 2026-06-14
+- **Component:** `src/app/components/NewsletterCapture.tsx` — email-only, dark bg (#1C1917), rust accent (#C4622D)
+- **Route:** `POST /api/newsletter/subscribe` — adds to Resend audience `bc84e16a-40ed-4e6b-bc6e-1396bcb83a92`; sends welcome email + Matt notification
+- **Magazine waitlist flag:** `magazine_waitlist: true` in POST body → notification email tagged "magazine waitlist ✓"
+- **Placement:** Homepage (replaces SubscribeCTA) + bottom of every profile page
+- **Copy:** "Subscribe and get SL Magazine Issue 1 free when it drops this fall."
+
 ## Other Routes
 
 - `/profiles/feed.xml` — profiles RSS
@@ -40,6 +47,7 @@
 - `/api/youtube-stats` — YouTube view/like counts for VideoEmbed
 - `/podcast.xml` — podcast RSS (essays + profiles, audio + video)
 - `/subscribe` — email signup (Supabase)
+- `/api/newsletter/subscribe` — newsletter subscribe → Resend audience bc84e16a
 - `/support`, `/colophon`, `/about`, `/search`
 
 ## Deploy

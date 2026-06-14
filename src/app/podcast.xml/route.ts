@@ -27,11 +27,10 @@ function rfcDate(dateStr: string): string {
 
 export async function GET() {
   const journals = getAllJournalPosts().filter(
-    (p) => p.frontmatter.audioUrl || p.frontmatter.videoUrl
+    (p) => p.frontmatter.audioUrl
   );
   const profiles = getAllProfiles().filter(
-    (p) => (p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string }).audioUrl ||
-           (p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string }).videoUrl
+    (p) => (p.frontmatter as unknown as { audioUrl?: string }).audioUrl
   );
 
   type Episode = {
@@ -39,7 +38,7 @@ export async function GET() {
     description: string;
     url: string;
     mediaUrl: string;
-    mediaType: "audio/mpeg" | "video/mp4";
+    mediaType: "audio/mpeg";
     mediaSize: number;
     date: string;
     duration?: string;
@@ -47,34 +46,26 @@ export async function GET() {
 
   const episodes: Episode[] = [
     ...journals.map((p) => {
-      const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
-      const videoUrl = fm.videoUrl;
-      const audioUrl = fm.audioUrl;
-      const mediaUrl = videoUrl ?? audioUrl!;
-      const mediaType = videoUrl ? "video/mp4" : "audio/mpeg";
+      const fm = p.frontmatter as unknown as { audioUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
       return {
         title: p.frontmatter.title,
         description: fm.description ?? p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
         url: `${SITE_URL}/essays/${p.slug}`,
-        mediaUrl,
-        mediaType: mediaType as "audio/mpeg" | "video/mp4",
+        mediaUrl: fm.audioUrl!,
+        mediaType: "audio/mpeg" as const,
         mediaSize: fm.mediaSize ?? 0,
         date: p.frontmatter.date,
         duration: fm.audioDuration,
       };
     }),
     ...profiles.map((p) => {
-      const fm = p.frontmatter as unknown as { audioUrl?: string; videoUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
-      const videoUrl = fm.videoUrl;
-      const audioUrl = fm.audioUrl;
-      const mediaUrl = videoUrl ?? audioUrl!;
-      const mediaType = videoUrl ? "video/mp4" : "audio/mpeg";
+      const fm = p.frontmatter as unknown as { audioUrl?: string; audioDuration?: string; description?: string; mediaSize?: number };
       return {
         title: p.frontmatter.title,
         description: fm.description ?? p.frontmatter.excerpt ?? p.frontmatter.subtitle ?? "",
         url: `${SITE_URL}/profiles/${p.slug}`,
-        mediaUrl,
-        mediaType: mediaType as "audio/mpeg" | "video/mp4",
+        mediaUrl: fm.audioUrl!,
+        mediaType: "audio/mpeg" as const,
         mediaSize: fm.mediaSize ?? 0,
         date: p.frontmatter.date,
         duration: fm.audioDuration,
