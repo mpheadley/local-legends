@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dave Dennis — Shirt Preview</title>
+<title>Freedom Riders — Shirt Variants</title>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -75,6 +75,47 @@
   .txt-loc     { width: 200px; opacity: 0.5; margin-top: 6px; }
   .txt-booking { width: 180px; opacity: 0.5; margin-top: 6px; }
   .txt-sl      { width: 110px; opacity: 0.35; margin-top: 4px; }
+
+  .bus-large { width: 260px; height: auto; object-fit: contain; }
+
+  .txt-year {
+    font-family: 'IM Fell English', serif;
+    font-size: 52px;
+    color: #e8e0d0;
+    letter-spacing: 4px;
+    opacity: 0.85;
+    text-align: center;
+    line-height: 1;
+  }
+  .txt-year-dark {
+    font-family: 'IM Fell English', serif;
+    font-size: 52px;
+    color: #1c1917;
+    letter-spacing: 4px;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 1;
+  }
+  .txt-event {
+    font-family: 'IM Fell English', serif;
+    font-size: 13px;
+    color: #e8e0d0;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    opacity: 0.55;
+    text-align: center;
+    margin-top: 4px;
+  }
+  .txt-event-dark {
+    font-family: 'IM Fell English', serif;
+    font-size: 13px;
+    color: #1c1917;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 4px;
+  }
 
   .note {
     color: #383838;
@@ -195,6 +236,86 @@
       </div>
     </div>
     <div class="note">White tee — dark ink throughout.</div>
+  </div>
+
+
+  <!-- E: Black — Bus front / text-only back (no portrait) -->
+  <div>
+    <div class="variant-label">E — Black · bus front · text-only back · no portrait</div>
+    <div class="pair">
+      <div>
+        <div class="side-label">Front</div>
+        <div class="shirt black">
+          <img class="bus-large" src="bus-woodcut.png" alt="Burning bus">
+          <img class="txt txt-loc" src="text-white-location.png" alt="Anniston, Alabama · May 14, 1961">
+        </div>
+      </div>
+      <div>
+        <div class="side-label">Back</div>
+        <div class="shirt black">
+          <p class="txt-year">1961</p>
+          <img class="txt txt-role" src="text-white-role.png" alt="Freedom Rider">
+          <div class="rule" style="margin: 12px 0;"></div>
+          <img class="txt txt-name" src="text-white-name-small.png" alt="David Dennis">
+          <img class="txt txt-booking" src="text-white-booking.png" alt="Jackson #20883">
+          <img class="txt txt-sl" src="text-white-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+    </div>
+    <div class="note">No portrait. The bus does the work. Dennis named on back.</div>
+  </div>
+
+  <!-- F: Black — text-only front, bus back (pure typography) -->
+  <div>
+    <div class="variant-label">F — Black · type-only front · bus back · no portrait</div>
+    <div class="pair">
+      <div>
+        <div class="side-label">Front</div>
+        <div class="shirt black">
+          <img class="txt txt-role" src="text-white-role.png" alt="Freedom Rider">
+          <div class="rule" style="margin: 10px 0;"></div>
+          <p class="txt-year">1961</p>
+          <p class="txt-event">Anniston, Alabama</p>
+          <div class="rule" style="margin: 14px 0;"></div>
+          <img class="txt txt-quote" src="text-white-quote.png" alt="quote">
+          <img class="txt txt-sl" src="text-white-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+      <div>
+        <div class="side-label">Back</div>
+        <div class="shirt black">
+          <img class="bus-large" src="bus-woodcut.png" alt="Burning bus">
+          <img class="txt txt-name" src="text-white-name-small.png" alt="David Dennis">
+          <img class="txt txt-booking" src="text-white-booking.png" alt="Jackson #20883">
+        </div>
+      </div>
+    </div>
+    <div class="note">All text front, all image back. Minimalist, no portrait.</div>
+  </div>
+
+  <!-- G: Natural — bus front, text back (no portrait) -->
+  <div>
+    <div class="variant-label">G — Natural · bus front · text back · no portrait</div>
+    <div class="pair">
+      <div>
+        <div class="side-label">Front</div>
+        <div class="shirt natural">
+          <img class="bus-large" src="bus-woodcut-transparent.png" alt="Burning bus">
+          <img class="txt txt-loc" src="text-location.png" alt="Anniston, Alabama · May 14, 1961">
+        </div>
+      </div>
+      <div>
+        <div class="side-label">Back</div>
+        <div class="shirt natural">
+          <p class="txt-year-dark">1961</p>
+          <img class="txt txt-role" src="text-role.png" alt="Freedom Rider">
+          <div class="rule" style="margin: 12px 0; background: #1c1917;"></div>
+          <img class="txt txt-name" src="text-name-small.png" alt="David Dennis">
+          <img class="txt txt-sl" src="text-sl-credit.png" alt="Southern Legends">
+        </div>
+      </div>
+    </div>
+    <div class="note">Natural cream. Warmer, less stark. No portrait version.</div>
   </div>
 
 </body>
