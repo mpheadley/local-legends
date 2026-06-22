@@ -303,9 +303,9 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         const { primary, secondary } = getEssayMerch(slug);
         const fm = frontmatter as unknown as { audioUrl?: string; youtubeUrl?: string };
         const podcastUrls = fm.audioUrl ? {
-          spotify: "https://open.spotify.com/show/033rE2IJkbyZuLXZwEjtgo",
-          apple: "https://podcasts.apple.com/podcast/id1896892029",
-          youtube: fm.youtubeUrl,
+          spotify: siteConfig.podcast.spotify,
+          apple: siteConfig.podcast.apple,
+          youtube: fm.youtubeUrl ?? siteConfig.podcast.youtube,
         } : undefined;
         return (
           <ClosingSection

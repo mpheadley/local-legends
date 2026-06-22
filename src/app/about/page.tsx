@@ -6,6 +6,12 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 
+const PODCAST_PLATFORMS = [
+  { name: "Spotify", href: siteConfig.podcast.spotify, color: "#1DB954" },
+  { name: "Apple Podcasts", href: siteConfig.podcast.apple, color: "#9c27b0" },
+  { name: "YouTube", href: siteConfig.podcast.youtube, color: "#FF0000" },
+];
+
 export const metadata: Metadata = {
   title: "About",
   description: `About ${siteConfig.name} — why we tell these stories and who's behind the project.`,
@@ -207,6 +213,32 @@ export default function AboutPage() {
           </p>
 
           <hr className="my-10 border-ll-dark/10" />
+
+          <h2>The Podcast</h2>
+
+          <p>
+            Some of these profiles are also available as audio essays. Listen anywhere you get podcasts.
+          </p>
+
+          <div className="not-prose flex flex-wrap gap-3 my-6">
+            {PODCAST_PLATFORMS.map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-ll-border text-sm font-medium text-ll-text hover:text-ll-dark hover:border-ll-dark transition-colors"
+              >
+                {p.name}
+              </a>
+            ))}
+            <Link
+              href="/podcast"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-ll-border text-sm font-medium text-ll-text hover:text-ll-dark hover:border-ll-dark transition-colors"
+            >
+              All episodes →
+            </Link>
+          </div>
 
           <div className="not-prose flex flex-col sm:flex-row gap-4 my-10">
             <Link

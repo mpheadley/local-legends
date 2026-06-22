@@ -10,4 +10,10 @@ export const siteConfig = {
     { label: "Broken Ground", href: "/essays" },
     { label: "About", href: "/about" },
   ],
+  podcast: {
+    rssUrl: "https://southernlegends.blog/podcast/feed.xml",
+    spotify: "https://open.spotify.com/show/033rE2IJkbyZuLXZwEjtgo",
+    apple: "https://podcasts.apple.com/podcast/id1896892029",
+    youtube: "https://www.youtube.com/@mpheadley",
+  },
 };

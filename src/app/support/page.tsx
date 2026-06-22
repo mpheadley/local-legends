@@ -2,6 +2,7 @@ export const revalidate = 300
 
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import StripePricingTable from "@/app/components/StripePricingTable";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
@@ -161,13 +162,52 @@ export default function SupportPage() {
 
           <hr className="my-10 border-ll-dark/10" />
 
+          <h2 className="text-lg font-bold text-ll-dark mb-3" style={{ fontFamily: "var(--font-heading)" }}>Listen for free</h2>
+          <p className="text-sm text-ll-text mb-5">
+            The podcast is always free. Some profiles are available as audio essays.
+          </p>
+          <div className="not-prose flex flex-wrap gap-3 mb-10">
+            <a
+              href={siteConfig.podcast.spotify}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-ll-border text-sm font-medium text-ll-text hover:text-ll-dark hover:border-ll-dark transition-colors"
+            >
+              Spotify
+            </a>
+            <a
+              href={siteConfig.podcast.apple}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-ll-border text-sm font-medium text-ll-text hover:text-ll-dark hover:border-ll-dark transition-colors"
+            >
+              Apple Podcasts
+            </a>
+            <a
+              href={siteConfig.podcast.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-ll-border text-sm font-medium text-ll-text hover:text-ll-dark hover:border-ll-dark transition-colors"
+            >
+              YouTube
+            </a>
+            <Link
+              href="/podcast"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-ll-border text-sm font-medium text-ll-text hover:text-ll-dark hover:border-ll-dark transition-colors"
+            >
+              All episodes →
+            </Link>
+          </div>
+
+          <hr className="my-10 border-ll-dark/10" />
+
           <p className="text-sm text-ll-text-light">
             Questions?{" "}
             <a
-              href="mailto:matt@headleyweb.com"
+              href="mailto:matt@southernlegends.blog"
               className="text-ll-primary underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
             >
-              matt@headleyweb.com
+              matt@southernlegends.blog
             </a>
           </p>
         </div>

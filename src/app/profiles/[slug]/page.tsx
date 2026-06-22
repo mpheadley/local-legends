@@ -454,6 +454,12 @@ export default async function ProfilePage({
       {/* Closing */}
       {(() => {
         const { primary, secondary, tertiary } = getProfileMerch(slug);
+        const fm = frontmatter as unknown as { audioUrl?: string; youtubeUrl?: string };
+        const podcastUrls = fm.audioUrl ? {
+          spotify: "https://open.spotify.com/show/033rE2IJkbyZuLXZwEjtgo",
+          apple: "https://podcasts.apple.com/podcast/id1896892029",
+          youtube: fm.youtubeUrl ?? "https://www.youtube.com/@mpheadley",
+        } : undefined;
         return (
           <ClosingSection
             shareUrl={`/profiles/${slug}`}
@@ -462,6 +468,7 @@ export default async function ProfilePage({
             primary={primary}
             secondary={secondary}
             tertiary={tertiary}
+            podcastUrls={podcastUrls}
           />
         );
       })()}
