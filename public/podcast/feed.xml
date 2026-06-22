@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:podcast="https://podcastindex.org/namespace/1.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Southern Legends</title>
+    <link>https://southernlegends.blog</link>
+    <description>Profiles of the people still building in Northeast Alabama. From Anniston to Jacksonville to Heflin — makers, farmers, monument stewards, and small business owners who kept going. Hosted by Matt Headley.</description>
+    <language>en-us</language>
+    <managingEditor>matt@southernlegends.blog (Matt Headley)</managingEditor>
+    <webMaster>matt@southernlegends.blog (Matt Headley)</webMaster>
+    <lastBuildDate>Mon, 09 Jun 2026 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://southernlegends.blog/podcast/feed.xml" rel="self" type="application/rss+xml"/>
+    <itunes:author>Matt Headley</itunes:author>
+    <itunes:summary>Profiles of the people still building in Northeast Alabama. From Anniston to Jacksonville to Heflin — makers, farmers, monument stewards, and small business owners who kept going.</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Matt Headley</itunes:name>
+      <itunes:email>matt@southernlegends.blog</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Society &amp; Culture">
+      <itunes:category text="Documentary"/>
+    </itunes:category>
+    <itunes:image href="https://southernlegends.blog/podcast/podcast-cover.jpg"/>
+    <image>
+      <url>https://southernlegends.blog/podcast/podcast-cover.jpg</url>
+      <title>Southern Legends</title>
+      <link>https://southernlegends.blog</link>
+    </image>
+
+    <!-- Ep3 — The Hospital -->
+    <item>
+      <title>The Hospital</title>
+      <description>I left the ER with a spring in my step. The next day, I called Dad to take me back. An essay about a psychiatric hospitalization, the people who drove me there, and what I found on the other side.</description>
+      <content:encoded><![CDATA[<p>I left the ER with a spring in my step. The next day, I called Dad to take me back. An essay about a psychiatric hospitalization, the people who drove me there, and what I found on the other side.</p><p><a href="https://southernlegends.blog/essays/the-hospital">Read the full essay</a></p>]]></content:encoded>
+      <enclosure url="https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/audio/ep3-the-hospital.mp3" length="18679251" type="audio/mpeg"/>
+      <guid isPermaLink="false">sl-ep3-the-hospital-2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 06:00:00 +0000</pubDate>
+      <link>https://southernlegends.blog/essays/the-hospital</link>
+      <itunes:title>The Hospital</itunes:title>
+      <itunes:episode>3</itunes:episode>
+      <itunes:season>1</itunes:season>
+      <itunes:duration>12:58</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://southernlegends.blog/podcast/podcast-cover.jpg"/>
+    </item>
+
+    <!-- Ep2 — The Burning Bus (Freedom Riders) -->
+    <item>
+      <title>The Burning Bus</title>
+      <description>On Mother's Day 1961, a mob firebombed a Greyhound bus full of Freedom Riders outside Anniston. The Freedom Riders National Monument preserves both sites where it happened — and forces a city to reckon with the hardest chapter in its history.</description>
+      <content:encoded><![CDATA[<p>On Mother's Day 1961, a mob firebombed a Greyhound bus full of Freedom Riders outside Anniston. The Freedom Riders National Monument preserves both sites where it happened — and forces a city to reckon with the hardest chapter in its history.</p><p><a href="https://southernlegends.blog/profiles/freedom-riders-national-monument">Read the full profile</a></p>]]></content:encoded>
+      <enclosure url="https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/audio/ep2-freedom-riders-national-monument.mp3" length="16222035" type="audio/mpeg"/>
+      <guid isPermaLink="false">sl-ep2-freedom-riders-2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 06:05:00 +0000</pubDate>
+      <link>https://southernlegends.blog/profiles/freedom-riders-national-monument</link>
+      <itunes:title>The Burning Bus</itunes:title>
+      <itunes:episode>2</itunes:episode>
+      <itunes:season>1</itunes:season>
+      <itunes:duration>11:15</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://southernlegends.blog/podcast/podcast-cover.jpg"/>
+    </item>
+
+    <!-- Ep1 — The Digital Gym -->
+    <item>
+      <title>The Digital Gym</title>
+      <description>The Sunday after my first sermon in twelve months, I pulled over on the side of the road — not because something was wrong with the car, but because the comments were coming in too fast to ignore. Then Wade called. I'm calling it the Digital Gym.</description>
+      <content:encoded><![CDATA[<p>The Sunday after my first sermon in twelve months, I pulled over on the side of the road — not because something was wrong with the car, but because the comments were coming in too fast to ignore. Then Wade called. I'm calling it the Digital Gym.</p><p><a href="https://southernlegends.blog/essays/the-digital-gym-somatic-practice">Read the full essay</a></p>]]></content:encoded>
+      <enclosure url="https://f46wkkj98gisw4ta.public.blob.vercel-storage.com/audio/ep1-digital-gym-matt-voice.mp3" length="5370181" type="audio/mpeg"/>
+      <guid isPermaLink="false">sl-ep1-digital-gym-2026-06-02</guid>
+      <pubDate>Tue, 02 Jun 2026 06:00:00 +0000</pubDate>
+      <link>https://southernlegends.blog/essays/the-digital-gym-somatic-practice</link>
+      <itunes:title>The Digital Gym</itunes:title>
+      <itunes:episode>1</itunes:episode>
+      <itunes:season>1</itunes:season>
+      <itunes:duration>3:43</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://southernlegends.blog/podcast/podcast-cover.jpg"/>
+    </item>
+
+  </channel>
+</rss>
