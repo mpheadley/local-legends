@@ -6,6 +6,14 @@ Newest first.
 
 ---
 
+## 2026-06-22 — CJ pipeline + Lee Kathryn follow-up
+
+Confirmed Jean Ellison profile ran in Calhoun Journal (Matt spotted it — Lee Kathryn never replied). Built `tools/cj-submit.py` — full submission pipeline: reads .mdx, strips frontmatter + MDX components, adds bio block, drafts email, sends via Gmail API. Sent follow-up to Lee Kathryn (contact@calhounjournal.com) pitching Shannon Jenkins profile. CRM contact #112 updated: last_contacted 2026-06-22, follow_up_date 2026-07-06.
+
+**Next:** If Lee Kathryn replies, send Shannon Jenkins via `cj-submit.py --slug shannon-jenkins --send`.
+
+---
+
 ## 2026-06-11 — Ep3 (Hospital) stitched, wrong intro music
 
 Processed hospital footage (`hospital_2026-06-09T07:44:08 2.MP4` from Downloads): re-encoded HEVC→H264, Whisper transcription, SRT generated (evenly-distributed word blocks — no word-level timestamps from diarize model), subtitle track embedded. Stitched intro + episode + outro → `ep3-hospital-final.mp4` (12:52). Wrong intro music — needs to be re-stitched with correct track before publish. Audio options: `sl-intro-episode.mp3`, `Banjo Turnaround.mp3`, `Porchline Drive.mp3`. Matt to confirm which.

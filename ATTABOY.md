@@ -4,6 +4,16 @@ For the days the writing feels like it's going nowhere. Return here.
 
 ---
 
+## June 1, 2026 — Rebecca Fearon (handwritten letter, after the JFUMC sermon)
+
+> "Thank you for your gut-wrenching, heart-warming sermon yesterday at JFUMC! It brought me to tears. Your testimony is a true example of God's love and power to save. You are brave and determined. No doubt God is using you to further His Kingdom. May God continue to hold you and heal you — for He surely loves you as you journey on."
+
+She also enclosed a check.
+
+**Why it matters:** She sat in the pew, went home, pulled out stationery with her name on it, and wrote by hand. Then she wrote a check. That's not a Facebook comment — that's someone who needed to say it on paper AND back it with something real. "Gut-wrenching, heart-warming" in the same sentence — she didn't flatten it into one feeling. She held both. And "as you journey on" — she's not describing a moment, she's speaking into the road ahead.
+
+---
+
 ## June 1, 2026 — Dzago Chatsama + Karin Squires (Facebook, on the SermonCoach post)
 
 After Matt shared SermonCoach in a UMC clergy group and on his personal Facebook page:
