@@ -4,6 +4,10 @@
 
 ---
 
+## CMS
+
+- **`/api/revalidate`** — POST endpoint for on-demand ISR cache purge. Called by gatherstudio.app CMS admin after every content save. Requires `x-revalidate-secret: <CMS_ADMIN_TOKEN>` header. Returns `{revalidated: true}` on success.
+
 ## Content
 
 - **Broken Ground (Essays)** — MDX-driven at `/essays/[slug]`. Nav label "Broken Ground", URL stays `/essays/`. Frontmatter: `title`, `date`, `image`, `imageCaption`, `audioUrl`, `videoUrl`, `youtubeUrl`, `audioDuration`, `excerpt`, `published`, `featured`, `unlisted`, `related`, `cardImage`, `merchImage`, `merchUrl`
