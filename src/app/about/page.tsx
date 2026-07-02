@@ -120,6 +120,16 @@ export default function AboutPage() {
               className="w-full rounded-lg object-cover aspect-square"
             />
           </div>
+          <div className="not-prose my-8">
+            <Image
+              src="/images/about/patreon-heather-matt-farm.webp"
+              alt="Matt and Heather at the farm — near the end"
+              width={2498}
+              height={1338}
+              className="w-full rounded-lg object-cover"
+              style={{ maxHeight: 320, objectPosition: "center 30%" }}
+            />
+          </div>
 
           <div>
             <p className="text-ll-text leading-relaxed mb-6">
