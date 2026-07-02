@@ -104,20 +104,14 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="not-prose my-8 grid grid-cols-2 gap-4">
-            <Image
-              src="/images/about/matt-and-heather-flower-farm.webp"
-              alt="Matt and Heather Headley at the flower farm"
-              width={720}
-              height={720}
-              className="w-full rounded-lg object-cover aspect-square"
-            />
+          <div className="not-prose my-8">
             <Image
               src="/images/about/headley-flower-farm-field.webp"
               alt="Rows of zinnias and echinacea at Headley Flower Farm"
               width={800}
               height={600}
-              className="w-full rounded-lg object-cover aspect-square"
+              className="w-full rounded-lg object-cover"
+              style={{ maxHeight: 280, objectPosition: "center" }}
             />
           </div>
           <div className="not-prose my-8">
