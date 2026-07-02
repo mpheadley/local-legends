@@ -36,6 +36,8 @@ import VideoEmbed from "@/app/components/VideoEmbed";
 import MerchBlock from "@/app/components/MerchBlock";
 import ArtCredit from "@/app/components/ArtCredit";
 import Callout from "@/app/components/Callout";
+import NextProfileCard from "@/app/components/NextProfileCard";
+import BookTeaser from "@/app/components/BookTeaser";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -146,17 +148,21 @@ export async function generateMetadata({
         modifiedTime: profile.frontmatter.lastModified,
       }),
       tags,
-      ...(existsSync(join(process.cwd(), `public/images/social/${slug}-og.png`)) && {
-        images: [`/images/social/${slug}-og.png`],
-      }),
+      images: existsSync(join(process.cwd(), `public/images/social/${slug}-og.png`))
+        ? [{ url: `/images/social/${slug}-og.png`, width: 1200, height: 630, alt: name }]
+        : profile.frontmatter.heroImage
+        ? [{ url: profile.frontmatter.heroImage, width: 1200, height: 630, alt: name }]
+        : [{ url: "/og-default.jpg", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: seoDescription,
-      ...(existsSync(join(process.cwd(), `public/images/social/${slug}-og.png`)) && {
-        images: [`/images/social/${slug}-og.png`],
-      }),
+      images: existsSync(join(process.cwd(), `public/images/social/${slug}-og.png`))
+        ? [`/images/social/${slug}-og.png`]
+        : profile.frontmatter.heroImage
+        ? [profile.frontmatter.heroImage]
+        : ["/og-default.jpg"],
     },
   };
 }
@@ -448,6 +454,7 @@ export default async function ProfilePage({
       </article>
       <div id="share-bar-sentinel" aria-hidden="true" />
 
+      <BookTeaser />
 
       <Comments slug={slug} />
 
@@ -500,6 +507,16 @@ export default async function ProfilePage({
             </div>
           </div>
         </section>
+      )}
+
+      {/* Next Profile */}
+      {next && (
+        <NextProfileCard
+          slug={next.slug}
+          name={next.frontmatter.name}
+          teaser={next.frontmatter.excerpt ?? next.frontmatter.subtitle ?? ""}
+          image={next.frontmatter.heroImage}
+        />
       )}
 
       {/* Subscribe */}

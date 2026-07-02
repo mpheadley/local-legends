@@ -29,6 +29,8 @@ import SubscribeCTA from "@/app/components/SubscribeCTA";
 import { getEssayMerch } from "@/lib/merch";
 import ClosingSection from "@/app/components/ClosingSection";
 import Callout from "@/app/components/Callout";
+import ReadingProgressBar from "@/app/components/ReadingProgressBar";
+import BookTeaser from "@/app/components/BookTeaser";
 
 function Dateline({ children }: { children: React.ReactNode }) {
   return (
@@ -153,17 +155,17 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       description: post.frontmatter.excerpt,
       type: "article",
       publishedTime: post.frontmatter.date,
-      ...((post.frontmatter.image || post.frontmatter.cardImage) && {
-        images: [{ url: (post.frontmatter.image || post.frontmatter.cardImage)!, alt: post.frontmatter.imageAlt ?? post.frontmatter.title }],
-      }),
+      images: (post.frontmatter.image || post.frontmatter.cardImage)
+        ? [{ url: (post.frontmatter.image || post.frontmatter.cardImage)!, width: 1200, height: 630, alt: post.frontmatter.imageAlt ?? post.frontmatter.title }]
+        : [{ url: "/og-default.jpg", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.frontmatter.title,
       description: post.frontmatter.excerpt,
-      ...((post.frontmatter.image || post.frontmatter.cardImage) && {
-        images: [(post.frontmatter.image || post.frontmatter.cardImage)!],
-      }),
+      images: (post.frontmatter.image || post.frontmatter.cardImage)
+        ? [(post.frontmatter.image || post.frontmatter.cardImage)!]
+        : ["/og-default.jpg"],
     },
   };
 }
@@ -217,6 +219,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
   return (
     <main id="main-content">
+      <ReadingProgressBar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbSchema, articleSchema]) }}
@@ -297,6 +300,8 @@ export default async function JournalPostPage({ params }: { params: Params }) {
           <MDXRemote source={content} components={mdxComponents} />
         </div>
       </article>
+
+      <BookTeaser />
 
       {/* Closing */}
       {(() => {
