@@ -1,9 +1,9 @@
----
-title: "I Called Every Number. Here Is What I Found."
-slug: steady-i-called-every-number
-date: "2026-08-01"
-excerpt: "I was standing in the field behind the farmhouse when I called 988. After the hospital, I went looking for what was actually available in Calhoun County. This is what I found."
-published: false
+# I Called Every Number. Here Is What I Found.
+*Southern Legends · southernlegends.blog*
+*By Matt Headley*
+*Category: Mental Health + NE Alabama*
+*Status: DRAFT — voice check required before publish*
+
 ---
 
 I was standing in the field behind the farmhouse when I called 988.
@@ -52,7 +52,7 @@ But it exists now, and I am keeping it current.
 
 ---
 
-If you are in Calhoun County and you need help, the list is at [gatherstudio.app/steady](https://gatherstudio.app/steady).
+If you are in Calhoun County and you need help, the list is at gatherstudio.app/steady.
 
 If you know of a resource in NE Alabama that should be on it, I want to hear from you.
 

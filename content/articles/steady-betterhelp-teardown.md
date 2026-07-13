@@ -1,0 +1,58 @@
+# What BetterHelp Did With Your Therapy Data
+*Southern Legends · southernlegends.blog*
+*By Matt Headley*
+*Category: Mental Health + NE Alabama*
+*Status: DRAFT — voice check required before publish*
+*Part of the Steady build-in-public series*
+
+---
+
+The Federal Trade Commission fined BetterHelp $7.8 million in 2023.
+
+If you used BetterHelp between 2017 and 2020, you may have received a check. The FTC called it a refund. What it refunded was the fact that BetterHelp had taken your intake answers, your email address, and the information that you had sought mental health care — and given it to Facebook, Snapchat, Pinterest, and a company called Criteo, which is in the business of targeting ads.
+
+BetterHelp told you it would keep that information private. The FTC found it did not.
+
+---
+
+I want to be careful here, because I am not a lawyer and I am not the FTC, and I want to tell you what happened in plain language, not legal language.
+
+You went to BetterHelp. You answered questions about what you were going through. You gave them your email address. You paid for therapy. And they took the fact that you were in therapy — the most vulnerable fact about you, the one you had not told your boss or your mother or your neighbor — and they used it to help other companies target you with ads.
+
+The FTC called it deceptive. They also called it a violation of a commitment BetterHelp had made to its users. The settlement banned BetterHelp from sharing health data for advertising going forward and required them to delete what they had shared with third parties.
+
+BetterHelp is still operating. It is still the biggest name in online therapy. Its $7.8 million settlement is roughly one week of revenue at its reported scale.
+
+---
+
+I thought about this when I was building the Steady directory.
+
+Steady is a list of mental health resources in Calhoun County and NE Alabama. It is free. It does not have a login. It does not ask you your name. It does not know if you are looking at the crisis lines or the faith-based counseling programs or the peer support group that meets on Tuesday nights.
+
+It knows your email address if you give it to me. That is all.
+
+I am one person. I do not have a data team. I do not have a deal with Facebook. If you give me your email address, I use it to tell you when the list is updated or when a number you called rang wrong.
+
+That is the whole arrangement.
+
+---
+
+Here is what I think about when I think about the BetterHelp data question.
+
+The person who sought therapy between 2017 and 2020 was already doing something hard. They had decided that what they were going through was serious enough to ask for help. They had spent $60 to $100 a week on that help. And they had trusted a company that presented itself as a private, confidential space for that work.
+
+In a small town, where your pastor knows your neighbor and your neighbor knows your employer and your employer knows your deacon — the stakes of that kind of exposure are not abstract. The stigma of mental health care in rural communities is real. The cost of being known to be struggling, if you are in the wrong community with the wrong disclosure, is real. What BetterHelp sold was not just data. It was the cover story people needed to get help without being seen.
+
+---
+
+I am not telling you not to use BetterHelp. I am not a therapist and I do not make referrals and I do not have any standing to tell you what kind of care to get.
+
+I am telling you that the list I built does not do this. The resources on it are local, public-facing providers who are listed with their own consent. The phone numbers are real. The crisis lines are staffed.
+
+If you are in Calhoun County and you need help, the list is at [gatherstudio.app/steady](https://gatherstudio.app/steady).
+
+If you know of a resource that should be on it, I want to hear from you.
+
+---
+
+*Matt Headley is a former pastor and the founder of Gather Studio in Anniston, Alabama. He was diagnosed with bipolar disorder in 2025 and hospitalized at UAB's psychiatric center that October. He uses AI tools in his work and says so. This piece was written by him and edited with AI assistance.*

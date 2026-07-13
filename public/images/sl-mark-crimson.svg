@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <!-- SL crimson mark — watermark version -->
+  <!-- Transparent bg, sienna SL on dark circle -->
+  <circle cx="48" cy="48" r="44" fill="#292524" opacity="0.85"/>
+  <text x="48" y="63" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700" font-size="40" fill="#9A3412" letter-spacing="-1">SL</text>
+  <!-- gold underline -->
+  <line x1="20" y1="70" x2="76" y2="70" stroke="#CA8A04" stroke-width="1.5"/>
+</svg>
