@@ -127,32 +127,6 @@ export default function Footer() {
 
         <hr className="border-white/20 my-10" />
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4 p-4 border border-white/20 rounded">
-          <p className="text-sm text-white/70 m-0">
-            Alabama&apos;s most trusted local news source. Since recently.
-          </p>
-          <a
-            href="https://thegreentomato.news"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-white hover:text-ll-accent transition-colors whitespace-nowrap"
-          >
-            Read The Green Tomato →
-          </a>
-        </div>
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 p-4 border border-white/20 rounded">
-          <p className="text-sm text-white/70 m-0">
-            All the news that&apos;s fit to preach.
-          </p>
-          <a
-            href="https://thepulpittruth.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-white hover:text-ll-accent transition-colors whitespace-nowrap"
-          >
-            Read The Pulpit Truth →
-          </a>
-        </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <p>
