@@ -1,0 +1,75 @@
+---
+title: "Trust the One Who Walks With a Limp"
+date: "2026-07-14"
+slug: trust-the-one-who-walks-with-a-limp
+status: published
+tags: ["spiritual direction", "leadership", "wound", "formation", "companion"]
+image: "<!-- TODO: Ladiga Trail photo or illustrated walking figure -->"
+description: "Never trust a leader who doesn't walk with a limp. The wound is the credential. Not despite. Because."
+---
+
+I was walking the Ladiga Trail on my lunch break from Weaver First United Methodist Church when I heard a line I couldn't put down.
+
+*Never trust a leader who doesn't walk with a limp.*
+
+I walked back to the office and got on with the day. I didn't write it down. I didn't think of it as a thesis. It just lodged.
+
+Years later I was building a framework for how a business tells its story — an eight-moment arc from customer to success — and I got to the step where the guide appears. Every business story needs one. I had read the books. I knew the archetype. The guide is the Yoda. The mentor. The one who has been somewhere and knows the way.
+
+I started writing the description.
+
+It didn't sound like Yoda. It sounded like the Ladiga Trail.
+
+Donald Miller's framework gives the guide a flaw. Gandalf falls in Moria. Haymitch drinks. Yoda lives in a swamp in exile. The framework is generous about this — it doesn't pretend great guides are without damage. But in the StoryBrand model, the flaw is background texture. The guide's competence is the credential. The wound is what makes them human, not what makes them qualified. The framework says: trust this guide despite the limp, not because of it.
+
+I think there's a different kind of guide. Not a better one. A different category.
+
+Miller's guide is Yoda. Mine is the neighbor who lost the same thing you lost two years ago and came back.
+
+Yoda is a guide of expertise — he has mastered what you need to master. His wound makes him relatable. Your neighbor is a guide of wound — she survived what's trying to kill you. Her survival is the credential, not the backdrop. Those are not the same thing. One is a category of competence. The other is a category of specific, lived, non-transferable experience.
+
+You see this in every story that gets it right. Benny Rodriguez in *The Sandlot* doesn't have a coaching credential — he has the credential of the kid who played in that field every day. He knows where the ball goes in the weeds. Trudy Chacon in *Avatar* sides with the Na'vi not because she studied the culture but because she's seen what the corporation does and she can't unknow it. Her credential is her eyes and the willingness to act on what she witnessed. In *Good Will Hunting*, Robin Williams' character earns access to Will not with his Harvard doctorate but with the grief of losing his wife — the specific, named knowledge that only comes from that kind of loss. The wound is what opens the door.
+
+You can't buy it, fake it, or study your way into it. You have to survive it.
+
+You can't fake that specificity. You can study grief all you want. You cannot describe what it felt like to paint someone else's fence in Jacksonville, Alabama in the summer while you were praying your farm didn't fail. That detail either lives in you or it doesn't. And the person who needs to hear it will know the difference between a person who has it and a person who has studied it.
+
+The wound is the credential. Not despite. Because.
+
+---
+
+I first heard the distinction between a spiritual director and a spiritual companion at a retreat held by Dale Clem and Steve West at Camp Lee. The Academy for Spiritual Formation. A day in a circle of chairs, nothing on the schedule but listening.
+
+A director stands above the work and points. A companion walks alongside.
+
+It sounds like a semantic difference. It isn't. The architecture is completely different. A director holds authority by position — by training, by role, by the structure that designated them. A companion holds authority by presence — by having been in the water, by staying in it, by not pretending to be dry.
+
+The church has mostly built the director model. One voice at the front of the room with a pointer. The title "senior pastor" has always chafed at me — the implicit hierarchy in that word *senior*, as if authority accumulates the further you get from the congregation. I spent years in seminary trying to find my way onto a polycentric pastoral team. Turn-taking. No senior. Every arm moving. A few classmates found it. They planted a house church, took turns preaching and leading worship, all of them part-time. It looked chaotic from the outside. From the inside it looked like perichoresis — the theological word for what the Trinity does: mutual indwelling, a dance, three distinct persons fully present to each other, together fully one.
+
+The triskelion — the three-armed spiral I use as a mark — is that argument made visible. Three centers. Not one center with two satellites, not a center with two followers. Three. Each fully present, each turning, together one movement.
+
+That's also what the companion relationship is. Not hierarchy. Not orbit. Presence.
+
+---
+
+At the whitewater park last month I was floating the lazy river and I stopped fighting the water. This sounds small. It wasn't. I had been treating the river like a problem to solve — route to navigate, current to manage, direction to maintain. The moment I stopped, I noticed what the water was actually doing. Where it slowed, where it curved, what it wanted.
+
+The contemplative tradition calls this attention. Most people call it doing nothing and feel guilty about it. They are wrong.
+
+The path isn't escape. It never was. Escape is just a faster way of ending up in the same place, now exhausted from the trying. Attention is different. Attention is the willingness to stay with what's actually here before you decide what to do about it. It's the move that makes everything else possible — the message that clears, the marriage that stabilizes, the vocation that finally names itself.
+
+The guide who walks with a limp has learned this. Not because they were trained in it. Because they were in the water when the current changed and they had to learn to read it in real time or drown.
+
+---
+
+The Ladiga Trail line lodged because I was already becoming someone who needed it. I didn't know yet what the limp would look like. I didn't know I would paint someone else's fence in Jacksonville, Alabama while praying my own farm could be saved. I didn't know the framework I would eventually build from that season, or that the Ladiga Trail scene would be waiting inside it when I got there.
+
+But the line was right. *Never trust a leader who doesn't walk with a limp.*
+
+Not because flaws are charming. Because the wound is the way in. Because the guide who descended and came back knows something about the bottom that the guide who never went there cannot know. Because the neighbor who lost what you're losing has a specificity of presence that training cannot produce and study cannot replicate.
+
+The credential is the wreckage, not the podium.
+
+The river's still running. The trail is still there.
+
+And the limp is the qualification, not the apology.
