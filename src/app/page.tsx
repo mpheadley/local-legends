@@ -312,6 +312,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Business owner bridge */}
+      <div style={{ borderTop: "1px solid rgba(154,108,47,0.12)", padding: "1.5rem 0", textAlign: "center" }}>
+        <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#6b5040" }}>
+          Business in Alabama?{" "}
+          <Link href="/places" style={{ color: "#9a6c2f", fontWeight: 600, textDecoration: "none" }}>
+            Find your listing →
+          </Link>
+        </p>
+      </div>
+
       <NewsletterCapture source="homepage" />
     </main>
   );

@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { MapPin } from "lucide-react"
+import { MapPin, Flower2, Flower, Music, Megaphone, Printer, Building2, Camera, Heart, Star, Utensils, ShoppingBag, Scissors, Dumbbell, GraduationCap, Wrench, Truck } from "lucide-react"
+import type { ElementType } from "react"
 import { readFileSync } from "fs"
 import { join } from "path"
 import { CITIES, localBusinesses, cityToSlug as dbCityToSlug } from "@/lib/city-businesses"
@@ -58,6 +59,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/places/${citySlug}`,
     },
   }
+}
+
+const FEAT_ICONS: Record<string, ElementType> = {
+  "Florist": Flower2,
+  "Floral Studio": Flower,
+  "Music Studio": Music,
+  "Recording Studio": Music,
+  "Marketing & Web Design": Megaphone,
+  "3D Printing": Printer,
+  "Wedding Venue": Building2,
+  "Venue": Building2,
+  "Photo Booth": Camera,
+  "Photography": Camera,
+  "Marriage Coaching": Heart,
+  "Food": Utensils,
+  "Restaurant": Utensils,
+  "Retail": ShoppingBag,
+  "Salon": Scissors,
+  "Beauty": Scissors,
+  "Fitness": Dumbbell,
+  "Education": GraduationCap,
+  "Construction": Wrench,
+  "Delivery": Truck,
+}
+function getFeatIcon(category: string): ElementType {
+  return FEAT_ICONS[category] ?? Star
 }
 
 const BIZ_COLORS: Record<string, string> = {
@@ -253,43 +280,66 @@ export default async function CityPage({ params }: Props) {
         </section>
       )}
 
-      {/* FEATURED — Matt's ventures + confirmed Aisle vendors + partners */}
+      {/* FEATURED — bento grid with Lucide icons */}
       {featuredBizzes.length > 0 && (
         <div className="mx-auto max-w-4xl px-6 py-10">
-          <p style={{ ...LABEL, marginBottom: "1rem" }}>Featured in {cityName}</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1rem", marginBottom: "0.5rem" }}>
-            {featuredBizzes.map((biz) => (
-              <div key={biz.name} style={{ background: "#fff", borderRadius: "8px", padding: "1.25rem 1.5rem", border: "1px solid rgba(154,108,47,0.18)", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                  <span style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F0EDE6", background: TAG_COLORS[biz.tag], padding: "0.2rem 0.5rem", borderRadius: "3px" }}>
-                    {TAG_LABELS[biz.tag]}
-                  </span>
-                  <span style={{ ...BODY, fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 600 }}>
-                    {biz.category}
-                  </span>
-                </div>
-                <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.0625rem", fontWeight: 400, color: "#1a1208", lineHeight: 1.2 }}>
-                  {biz.storySlug ? (
-                    <Link href={`/places/${citySlug}/${biz.storySlug}`} style={{ color: "#1a1208", textDecoration: "none" }}>
-                      {biz.name}
-                    </Link>
-                  ) : biz.name}
-                </p>
-                <p style={{ ...BODY, fontSize: "0.8125rem", lineHeight: 1.55, flex: 1 }}>{biz.description}</p>
-                <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.25rem", flexWrap: "wrap" }}>
-                  {biz.website && (
-                    <a href={biz.website} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9a6c2f", fontWeight: 600, textDecoration: "none" }}>
-                      Visit ↗
-                    </a>
+          <p style={{ ...LABEL, marginBottom: "1.25rem" }}>Featured in {cityName}</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.875rem" }}>
+            {featuredBizzes.map((biz, i) => {
+              const Icon = getFeatIcon(biz.category)
+              const isHero = i === 0
+              const href = biz.storySlug
+                ? `/places/${citySlug}/${biz.storySlug}`
+                : biz.website ?? undefined
+              const isExternal = !biz.storySlug && !!biz.website
+              const bg = biz.tag === "own" ? "#1a1208" : biz.tag === "aisle" ? "#231808" : "#1c1812"
+              return (
+                <div
+                  key={biz.name}
+                  style={{
+                    gridColumn: isHero ? "span 2" : undefined,
+                    background: bg,
+                    borderRadius: "10px",
+                    padding: isHero ? "1.625rem" : "1.125rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    minHeight: isHero ? "176px" : "130px",
+                  }}
+                >
+                  <div>
+                    <Icon size={isHero ? 26 : 18} style={{ color: "#c4974a", marginBottom: "0.625rem" }} />
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(240,237,230,0.45)", marginBottom: "0.3rem" }}>
+                      {TAG_LABELS[biz.tag]} · {biz.category}
+                    </p>
+                    {href ? (
+                      <Link
+                        href={href}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        style={{ fontFamily: "var(--font-heading)", fontSize: isHero ? "1.1875rem" : "0.9375rem", fontWeight: 400, color: "#F0EDE6", lineHeight: 1.2, textDecoration: "none", display: "block" }}
+                      >
+                        {biz.name}
+                      </Link>
+                    ) : (
+                      <p style={{ fontFamily: "var(--font-heading)", fontSize: isHero ? "1.1875rem" : "0.9375rem", fontWeight: 400, color: "#F0EDE6", lineHeight: 1.2 }}>
+                        {biz.name}
+                      </p>
+                    )}
+                    {isHero && biz.description && (
+                      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "rgba(240,237,230,0.55)", lineHeight: 1.6, marginTop: "0.5rem" }}>
+                        {biz.description}
+                      </p>
+                    )}
+                  </div>
+                  {href && (
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.68rem", color: "#c4974a", fontWeight: 600, marginTop: "0.75rem" }}>
+                      {biz.storySlug ? "Read more →" : "Visit ↗"}
+                    </p>
                   )}
-                  {biz.phone && (
-                    <a href={`tel:${biz.phone}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#6b5040", textDecoration: "none" }}>
-                      {biz.phone}
-                    </a>
-                  )}
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       )}
@@ -328,19 +378,15 @@ export default async function CityPage({ params }: Props) {
                         </p>
                       </div>
                       <div style={{ display: "flex", flexDirection: "column", gap: "0.35rem" }}>
-                        {biz.website && (
-                          <a href={biz.website} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#c4974a", fontWeight: 600, textDecoration: "none" }}>
-                            Visit ↗
-                          </a>
-                        )}
+                        <Link
+                          href={`/places/${citySlug}/${biz.slug}`}
+                          style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#c4974a", fontWeight: 600, textDecoration: "none" }}
+                        >
+                          View listing →
+                        </Link>
                         {biz.phone && (
                           <a href={`tel:${biz.phone}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "rgba(240,237,230,0.55)", textDecoration: "none" }}>
                             {biz.phone}
-                          </a>
-                        )}
-                        {!biz.website && !biz.phone && (
-                          <a href={`https://gatherstudio.app/api/wiki-claim?id=${biz.id}&name=${encodeURIComponent(biz.name)}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "#c4974a", textDecoration: "none" }}>
-                            Add your info →
                           </a>
                         )}
                       </div>
