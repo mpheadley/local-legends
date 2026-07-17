@@ -6,6 +6,7 @@ import { readFileSync } from "fs"
 import { join } from "path"
 import { CITIES, localBusinesses, cityToSlug as dbCityToSlug } from "@/lib/city-businesses"
 import { SL_PLACES, cityToSlug as slCityToSlug } from "@/lib/places"
+import { getFeaturedForCity, TAG_LABELS, TAG_COLORS } from "@/lib/featured-businesses"
 import CityNewsletterSignup from "@/app/components/CityNewsletterSignup"
 
 type Props = { params: Promise<{ city: string }> }
@@ -78,8 +79,13 @@ export default async function CityPage({ params }: Props) {
   const cityName = CITIES.find((c) => dbCityToSlug(c) === citySlug)
   if (!cityName) notFound()
 
-  const cityBizzes = localBusinesses.filter((b) => dbCityToSlug(b.city) === citySlug)
+  const cityBizzes = localBusinesses.filter((b) =>
+    dbCityToSlug(b.city) === citySlug &&
+    !b.website?.includes("eventbrite.com") &&
+    !b.name.match(/^\d{4}\s/) // filter year-prefixed event names
+  )
   const slPlaces = SL_PLACES.filter((p) => slCityToSlug(p.city) === citySlug)
+  const featuredBizzes = getFeaturedForCity(citySlug)
   const news = getNewsForCity(cityName)
   const isAnniston = citySlug === "anniston"
 
@@ -159,6 +165,47 @@ export default async function CityPage({ params }: Props) {
         </section>
       )}
 
+      {/* FEATURED — Matt's ventures + confirmed Aisle vendors + partners */}
+      {featuredBizzes.length > 0 && (
+        <div className="mx-auto max-w-4xl px-6 py-10">
+          <p style={{ ...LABEL, marginBottom: "1rem" }}>Featured in {cityName}</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1rem", marginBottom: "0.5rem" }}>
+            {featuredBizzes.map((biz) => (
+              <div key={biz.name} style={{ background: "#fff", borderRadius: "8px", padding: "1.25rem 1.5rem", border: "1px solid rgba(154,108,47,0.18)", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F0EDE6", background: TAG_COLORS[biz.tag], padding: "0.2rem 0.5rem", borderRadius: "3px" }}>
+                    {TAG_LABELS[biz.tag]}
+                  </span>
+                  <span style={{ ...BODY, fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 600 }}>
+                    {biz.category}
+                  </span>
+                </div>
+                <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.0625rem", fontWeight: 400, color: "#1a1208", lineHeight: 1.2 }}>
+                  {biz.storySlug ? (
+                    <Link href={`/places/${citySlug}/${biz.storySlug}`} style={{ color: "#1a1208", textDecoration: "none" }}>
+                      {biz.name}
+                    </Link>
+                  ) : biz.name}
+                </p>
+                <p style={{ ...BODY, fontSize: "0.8125rem", lineHeight: 1.55, flex: 1 }}>{biz.description}</p>
+                <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.25rem", flexWrap: "wrap" }}>
+                  {biz.website && (
+                    <a href={biz.website} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9a6c2f", fontWeight: 600, textDecoration: "none" }}>
+                      Visit ↗
+                    </a>
+                  )}
+                  {biz.phone && (
+                    <a href={`tel:${biz.phone}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#6b5040", textDecoration: "none" }}>
+                      {biz.phone}
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* CIRCLE — 6,818-business directory */}
       {cityBizzes.length > 0 && (
         <div className="mx-auto max-w-4xl px-6 py-10">
@@ -194,12 +241,14 @@ export default async function CityPage({ params }: Props) {
                       Visit ↗
                     </a>
                   )}
-                  <a
-                    href={`https://gatherstudio.app/api/wiki-claim?id=${biz.id}&name=${encodeURIComponent(biz.name)}`}
-                    style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", fontWeight: 700, background: "#9a6c2f", color: "#F0EDE6", padding: "0.3rem 0.75rem", borderRadius: "4px", textDecoration: "none", whiteSpace: "nowrap" }}
-                  >
-                    Claim — $4.99
-                  </a>
+                  {!biz.website && (
+                    <a
+                      href={`https://gatherstudio.app/api/wiki-claim?id=${biz.id}&name=${encodeURIComponent(biz.name)}`}
+                      style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "#9a6c2f", textDecoration: "underline", whiteSpace: "nowrap" }}
+                    >
+                      Claim listing
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -320,7 +369,7 @@ export default async function CityPage({ params }: Props) {
           href="/places/nominate"
           style={{ ...BODY, fontSize: "0.875rem", color: "#9a6c2f", fontWeight: 600, textDecoration: "underline" }}
         >
-          Know a {cityName} business that belongs here? Nominate them →
+          Know a business in {cityName} that belongs here? Nominate them →
         </Link>
       </div>
     </main>
