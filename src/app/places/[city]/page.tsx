@@ -7,7 +7,10 @@ import { join } from "path"
 import { CITIES, localBusinesses, cityToSlug as dbCityToSlug } from "@/lib/city-businesses"
 import { SL_PLACES, cityToSlug as slCityToSlug } from "@/lib/places"
 import { getFeaturedForCity, TAG_LABELS, TAG_COLORS } from "@/lib/featured-businesses"
+import { getCityMeta } from "@/lib/city-meta"
 import CityNewsletterSignup from "@/app/components/CityNewsletterSignup"
+
+export const revalidate = 86400 // revalidate daily
 
 type Props = { params: Promise<{ city: string }> }
 
@@ -86,6 +89,19 @@ export default async function CityPage({ params }: Props) {
   )
   const slPlaces = SL_PLACES.filter((p) => slCityToSlug(p.city) === citySlug)
   const featuredBizzes = getFeaturedForCity(citySlug)
+  const cityMeta = getCityMeta(citySlug)
+
+  // Category counts for stats line
+  const categoryCounts: Record<string, number> = {}
+  for (const b of cityBizzes) {
+    const cat = b.category || "Other"
+    categoryCounts[cat] = (categoryCounts[cat] || 0) + 1
+  }
+  const topCategories = Object.entries(categoryCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 4)
+    .map(([cat, n]) => `${n} ${cat.toLowerCase()}`)
+    .join(" · ")
   const news = getNewsForCity(cityName)
   const isAnniston = citySlug === "anniston"
 
@@ -131,9 +147,25 @@ export default async function CityPage({ params }: Props) {
         <h1 style={{ ...HEADING, fontSize: "clamp(2.5rem, 7vw, 4rem)", marginBottom: "0.5rem" }}>
           {cityName}
         </h1>
-        <p style={{ ...BODY, fontSize: "1rem", marginBottom: "2rem" }}>
+        <p style={{ ...BODY, fontSize: "1rem", marginBottom: "1rem" }}>
           The people, places, and stories of {cityName}, Alabama.
+          {cityMeta?.tagline && ` ${cityMeta.tagline}.`}
         </p>
+        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
+          {cityMeta?.facebook && (
+            <a
+              href={cityMeta.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#9a6c2f", fontWeight: 600, textDecoration: "none" }}
+            >
+              {cityName} on Facebook ↗
+            </a>
+          )}
+          {topCategories && (
+            <p style={{ ...BODY, fontSize: "0.75rem", margin: 0 }}>{topCategories}</p>
+          )}
+        </div>
       </div>
 
       {/* DISPATCH — local news */}
@@ -362,6 +394,27 @@ export default async function CityPage({ params }: Props) {
           <CityNewsletterSignup city={cityName} />
         </div>
       </div>
+
+      {/* NEARBY CITIES */}
+      {cityMeta?.nearbySlug && cityMeta.nearbySlug.length > 0 && (
+        <div className="mx-auto max-w-4xl px-6 pb-4">
+          <p style={{ ...LABEL, marginBottom: "0.5rem" }}>Also in NE Alabama</p>
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+            {cityMeta.nearbySlug.map((slug) => {
+              const name = CITIES.find((c) => dbCityToSlug(c) === slug) || slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())
+              return (
+                <Link
+                  key={slug}
+                  href={`/places/${slug}`}
+                  style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#9a6c2f", fontWeight: 600, textDecoration: "none", padding: "0.3rem 0.75rem", border: "1px solid rgba(154,108,47,0.25)", borderRadius: "4px" }}
+                >
+                  {name}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      )}
 
       {/* NOMINATE */}
       <div className="mx-auto max-w-4xl px-6 py-8" style={{ textAlign: "center" }}>
