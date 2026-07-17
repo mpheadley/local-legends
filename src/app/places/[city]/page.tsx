@@ -60,6 +60,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+const BIZ_COLORS: Record<string, string> = {
+  "Music":            "#2A3A5A",
+  "Beauty & Wellness":"#5A3A48",
+  "Market & Food":    "#6B3D1E",
+  "Food & Catering":  "#6B3D1E",
+  "Venue & Events":   "#2A4A3A",
+  "Florals":          "#3A5430",
+  "Wedding":          "#4A3A2A",
+  "Photography":      "#3A4A5A",
+  "Local Business":   "#3D3028",
+  default:            "#3D3028",
+}
+
 const LABEL: React.CSSProperties = {
   fontFamily: "var(--font-body)",
   fontSize: "0.7rem",
@@ -134,6 +147,16 @@ export default async function CityPage({ params }: Props) {
   return (
     <main id="main-content" style={{ backgroundColor: "#F0EDE6", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <style>{`
+        .biz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.875rem}
+        @media(max-width:640px){.biz-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:380px){.biz-grid{grid-template-columns:1fr}}
+        .flip-card{perspective:1000px;height:128px;cursor:default}
+        .flip-card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 0.4s cubic-bezier(0.4,0.2,0.2,1)}
+        .flip-card:hover .flip-card-inner{transform:rotateY(180deg)}
+        .flip-card-front,.flip-card-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:8px;padding:1rem 1.125rem;overflow:hidden}
+        .flip-card-back{transform:rotateY(180deg);background:#1a1208!important;display:flex;flex-direction:column;justify-content:space-between}
+      `}</style>
 
       {/* HERO */}
       <div className="mx-auto max-w-4xl px-6 pt-28 pb-8 md:pt-36">
@@ -172,9 +195,12 @@ export default async function CityPage({ params }: Props) {
       </div>
 
       {/* HERO PHOTO */}
-      {cityMeta?.heroImage && (
-        <div className="mx-auto max-w-4xl px-6 pb-8">
-          <div style={{ position: "relative", width: "100%", height: "320px", borderRadius: "8px", overflow: "hidden" }}>
+      <div className="mx-auto max-w-4xl px-6 pb-8">
+        <div style={{
+          position: "relative", width: "100%", height: "320px", borderRadius: "8px", overflow: "hidden",
+          background: cityMeta?.heroImage ? undefined : "linear-gradient(135deg, #1a1208 0%, #2e1e0a 45%, #4a2e12 100%)",
+        }}>
+          {cityMeta?.heroImage && (
             <Image
               src={cityMeta.heroImage}
               alt={`${cityName}, Alabama`}
@@ -183,13 +209,20 @@ export default async function CityPage({ params }: Props) {
               priority
               sizes="(max-width: 768px) 100vw, 896px"
             />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,18,8,0.4) 0%, transparent 60%)" }} />
-            <div style={{ position: "absolute", bottom: "1rem", left: "1.25rem" }}>
-              <p style={{ ...LABEL, color: "#F0EDE6", fontSize: "0.65rem", margin: 0 }}>{cityName}, Alabama</p>
+          )}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,18,8,0.5) 0%, transparent 65%)" }} />
+          {!cityMeta?.heroImage && (
+            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <p style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2rem, 8vw, 3.5rem)", color: "rgba(240,237,230,0.18)", fontWeight: 400, letterSpacing: "0.04em" }}>
+                Alabama
+              </p>
             </div>
+          )}
+          <div style={{ position: "absolute", bottom: "1rem", left: "1.25rem" }}>
+            <p style={{ ...LABEL, color: "#F0EDE6", fontSize: "0.65rem", margin: 0 }}>{cityName}, Alabama</p>
           </div>
         </div>
-      )}
+      </div>
 
       {/* DISPATCH — local news */}
       {news.length > 0 && (
@@ -261,7 +294,7 @@ export default async function CityPage({ params }: Props) {
         </div>
       )}
 
-      {/* CIRCLE — 6,818-business directory */}
+      {/* CIRCLE — 6,818-business directory as flip cards */}
       {cityBizzes.length > 0 && (
         <div className="mx-auto max-w-4xl px-6 py-10">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
@@ -269,48 +302,57 @@ export default async function CityPage({ params }: Props) {
             <p style={{ ...BODY, fontSize: "0.75rem" }}>{cityBizzes.length} businesses</p>
           </div>
           <p style={{ ...BODY, fontSize: "0.875rem", marginBottom: "1.5rem" }}>
-            Every business in {cityName} in the Gather Circle directory. Claim yours to add hours, photos, and your story.
+            Every business in {cityName} in the directory. Hover a card for details.
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1.5rem" }}>
-            {cityBizzes.slice(0, 20).map((biz) => (
-              <div
-                key={biz.id}
-                style={{ background: "#fff", borderRadius: "6px", padding: "0.875rem 1.25rem", border: "1px solid rgba(154,108,47,0.1)", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}
-              >
-                <div style={{ minWidth: 0 }}>
-                  <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.9375rem", fontWeight: 400, color: "#1a1208", marginBottom: "0.15rem", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                    {biz.name}
-                  </p>
-                  {biz.category && (
-                    <p style={{ ...BODY, fontSize: "0.75rem" }}>{biz.category}</p>
-                  )}
+          <div className="biz-grid" style={{ marginBottom: "1.5rem" }}>
+            {cityBizzes.slice(0, 21).map((biz) => {
+              const bgColor = BIZ_COLORS[biz.vertical] ?? BIZ_COLORS.default
+              return (
+                <div key={biz.id} className="flip-card">
+                  <div className="flip-card-inner">
+                    <div className="flip-card-front" style={{ background: bgColor }}>
+                      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(240,237,230,0.55)", marginBottom: "0.5rem" }}>
+                        {biz.category}
+                      </p>
+                      <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.9375rem", fontWeight: 400, color: "#F0EDE6", lineHeight: 1.25, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical" }}>
+                        {biz.name}
+                      </p>
+                    </div>
+                    <div className="flip-card-back">
+                      <div>
+                        <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.875rem", fontWeight: 400, color: "#F0EDE6", marginBottom: "0.2rem", lineHeight: 1.2 }}>
+                          {biz.name}
+                        </p>
+                        <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", color: "rgba(240,237,230,0.5)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                          {biz.category}
+                        </p>
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.35rem" }}>
+                        {biz.website && (
+                          <a href={biz.website} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#c4974a", fontWeight: 600, textDecoration: "none" }}>
+                            Visit ↗
+                          </a>
+                        )}
+                        {biz.phone && (
+                          <a href={`tel:${biz.phone}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "rgba(240,237,230,0.55)", textDecoration: "none" }}>
+                            {biz.phone}
+                          </a>
+                        )}
+                        {!biz.website && !biz.phone && (
+                          <a href={`https://gatherstudio.app/api/wiki-claim?id=${biz.id}&name=${encodeURIComponent(biz.name)}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "#c4974a", textDecoration: "none" }}>
+                            Add your info →
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", flexShrink: 0 }}>
-                  {biz.website && (
-                    <a
-                      href={biz.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9a6c2f", textDecoration: "none", fontWeight: 600 }}
-                    >
-                      Visit ↗
-                    </a>
-                  )}
-                  {!biz.website && (
-                    <a
-                      href={`https://gatherstudio.app/api/wiki-claim?id=${biz.id}&name=${encodeURIComponent(biz.name)}`}
-                      style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "#9a6c2f", textDecoration: "underline", whiteSpace: "nowrap" }}
-                    >
-                      Claim listing
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
-          {cityBizzes.length > 20 && (
+          {cityBizzes.length > 21 && (
             <p style={{ ...BODY, fontSize: "0.8125rem", textAlign: "center" }}>
-              + {cityBizzes.length - 20} more businesses in {cityName} in the full directory
+              + {cityBizzes.length - 21} more in {cityName}
             </p>
           )}
         </div>
@@ -355,13 +397,13 @@ export default async function CityPage({ params }: Props) {
             Is your business listed in {cityName}?
           </p>
           <p style={{ ...BODY, color: "rgba(240,237,230,0.65)", fontSize: "0.9375rem", maxWidth: "36rem", lineHeight: 1.65 }}>
-            Claim your free listing, add your hours and story, and get found by people already looking for what you do.
+            Add your hours, photos, and story. Get found by people already looking for what you do.
           </p>
           <a
             href={`https://gatherstudio.app/api/wiki-claim?city=${citySlug}`}
             style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: "0.875rem", background: "#9a6c2f", color: "#F0EDE6", padding: "0.625rem 1.5rem", borderRadius: "4px", textDecoration: "none" }}
           >
-            Claim your free listing — $4.99
+            Add your listing — $4.99
           </a>
         </div>
       </div>
