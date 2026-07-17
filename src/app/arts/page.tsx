@@ -54,20 +54,14 @@ export default function ArtsPage() {
       {/* Sections */}
       <div className="grid gap-8 sm:grid-cols-3 mb-12">
         {[
-          { label: "Poetry", tag: "poetry", description: "Poems from NE Alabama and the foothills." },
-          { label: "Music", tag: "music", description: "Songs, lyrics, and musicians from the region." },
-          { label: "Theater", tag: "theater", description: "Stage work, scripts, and performance notes." },
-        ].map(({ label, tag, description }) => (
-          <div key={tag} className="border border-stone-200 dark:border-stone-700 rounded-lg p-5">
-            <h3 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">{label}</h3>
-            <p className="text-sm text-stone-500 dark:text-stone-400 mb-3">{description}</p>
-            <Link
-              href={`/profiles?tag=${tag}`}
-              className="text-sm text-amber-700 dark:text-amber-400 hover:underline"
-            >
-              Browse {label.toLowerCase()} →
-            </Link>
-          </div>
+          { label: "Poetry", href: "/arts/poetry", description: "Poems from NE Alabama and the foothills." },
+          { label: "Music", href: "/arts/music", description: "Songs, lyrics, and musicians from the region." },
+          { label: "Theater", href: "/arts/theater", description: "Stage work, scripts, and performance notes." },
+        ].map(({ label, href, description }) => (
+          <Link key={href} href={href} className="group border border-stone-200 dark:border-stone-700 rounded-lg p-5 hover:border-amber-500 dark:hover:border-amber-500 transition">
+            <h3 className="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 mb-1">{label} →</h3>
+            <p className="text-sm text-stone-500 dark:text-stone-400">{description}</p>
+          </Link>
         ))}
       </div>
 
