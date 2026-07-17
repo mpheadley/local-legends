@@ -403,7 +403,7 @@ export default async function CityPage({ params }: Props) {
             href={`https://gatherstudio.app/api/wiki-claim?city=${citySlug}`}
             style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: "0.875rem", background: "#9a6c2f", color: "#F0EDE6", padding: "0.625rem 1.5rem", borderRadius: "4px", textDecoration: "none" }}
           >
-            Add your listing — $4.99
+            Add your listing →
           </a>
         </div>
       </div>
