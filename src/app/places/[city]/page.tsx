@@ -6,6 +6,7 @@ import { readFileSync } from "fs"
 import { join } from "path"
 import { CITIES, localBusinesses, cityToSlug as dbCityToSlug } from "@/lib/city-businesses"
 import { SL_PLACES, cityToSlug as slCityToSlug } from "@/lib/places"
+import CityNewsletterSignup from "@/app/components/CityNewsletterSignup"
 
 type Props = { params: Promise<{ city: string }> }
 
@@ -303,6 +304,13 @@ export default async function CityPage({ params }: Props) {
           >
             Book a Blueprint Session
           </a>
+        </div>
+      </div>
+
+      {/* NEWSLETTER */}
+      <div style={{ borderTop: "1px solid rgba(154,108,47,0.1)" }}>
+        <div className="mx-auto max-w-4xl px-6 py-10">
+          <CityNewsletterSignup city={cityName} />
         </div>
       </div>
 
