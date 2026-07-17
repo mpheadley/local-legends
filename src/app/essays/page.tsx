@@ -9,7 +9,7 @@ import SectionLinks from "@/app/components/SectionLinks";
 import ShareRow from "@/app/components/ShareRow";
 
 export const metadata: Metadata = {
-  title: "Broken Ground",
+  title: "Essays — Southern Legends",
   description: `Matt Headley writes about what's behind the profiles — and what's behind him.`,
   alternates: { canonical: "/essays" },
   openGraph: { url: "/essays" },

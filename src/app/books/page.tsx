@@ -48,27 +48,27 @@ export default function BooksPage() {
         <div className="space-y-4">
           {[
             {
-              slug: "plainspoken-blueprint-book",
+              slug: "forthcoming-plainspoken-blueprint",
               title: "Plainspoken Blueprint",
-              tagline: "Clever confuses. Clarity sells.",
+              tagline: "Message first. Brand second. Website last.",
               tags: ["business", "messaging"],
             },
             {
-              slug: "tend-book",
+              slug: "forthcoming-tend-before-the-wedding",
               title: "Tend: Before the Wedding",
-              tagline: "What the year before the wedding is actually for.",
+              tagline: "Five conversations before you say I do.",
               tags: ["marriage", "formation", "faith"],
             },
             {
-              slug: "god-and-the-algorithm-book",
+              slug: "forthcoming-god-and-the-algorithm",
               title: "God and the Algorithm",
-              tagline: "The Hebrew Bible has opinions about artificial intelligence.",
+              tagline: "How I became more rested and less productive.",
               tags: ["faith", "technology", "AI"],
             },
             {
-              slug: "broken-ground-book",
+              slug: "forthcoming-broken-ground",
               title: "Broken Ground",
-              tagline: "A memoir of Pleasant Valley, Alabama.",
+              tagline: "Losing a flower farm, leaving ministry, rebuilding.",
               tags: ["memoir", "Alabama"],
             },
           ].map(book => (
