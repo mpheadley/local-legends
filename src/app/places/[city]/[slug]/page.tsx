@@ -1,0 +1,189 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { SL_CITIES, SL_PLACES, getPlace, cityToSlug } from "@/lib/places"
+import { siteConfig } from "@/lib/site-config"
+
+type Props = { params: Promise<{ city: string; slug: string }> }
+
+export async function generateStaticParams() {
+  return SL_PLACES.map(b => ({
+    city: cityToSlug(b.city),
+    slug: b.slug,
+  }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { city, slug } = await params
+  const biz = getPlace(city, slug)
+  if (!biz) return {}
+  return {
+    title: `${biz.name} — SL Places`,
+    description: biz.description,
+    alternates: { canonical: `/places/${city}/${slug}` },
+    openGraph: {
+      title: `${biz.name} | ${biz.city}, AL`,
+      description: biz.description,
+      url: `/places/${city}/${slug}`,
+    },
+  }
+}
+
+export default async function PlaceDetailPage({ params }: Props) {
+  const { city: citySlug, slug } = await params
+  const biz = getPlace(citySlug, slug)
+  if (!biz) notFound()
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: biz.name,
+    description: biz.description,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: biz.city,
+      addressRegion: biz.state,
+      addressCountry: "US",
+    },
+    ...(biz.phone && { telephone: biz.phone }),
+    ...(biz.website && { url: biz.website }),
+  }
+
+  return (
+    <main id="main-content" style={{ backgroundColor: "#F0EDE6", minHeight: "100vh" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+
+      <div className="mx-auto max-w-2xl px-6 pt-28 pb-20 md:pt-36">
+
+        {/* Breadcrumb */}
+        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "2rem" }}>
+          <Link href="/places" style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#9a6c2f", textDecoration: "none", fontWeight: 600 }}>
+            Places
+          </Link>
+          <span style={{ color: "#9a6c2f" }}>›</span>
+          <Link href={`/places/${citySlug}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#9a6c2f", textDecoration: "none", fontWeight: 600 }}>
+            {biz.city}
+          </Link>
+        </div>
+
+        {/* Category badge */}
+        <p style={{
+          fontFamily: "var(--font-body)",
+          fontSize: "0.7rem",
+          fontWeight: 700,
+          letterSpacing: "0.18em",
+          textTransform: "uppercase",
+          color: "#9a6c2f",
+          marginBottom: "0.75rem",
+        }}>
+          {biz.category}
+        </p>
+
+        <h1 style={{
+          fontFamily: "var(--font-heading)",
+          fontSize: "clamp(2rem, 6vw, 3.5rem)",
+          fontWeight: 400,
+          color: "#1a1208",
+          marginBottom: "1rem",
+          lineHeight: 1.1,
+        }}>
+          {biz.name}
+        </h1>
+
+        <p style={{
+          fontFamily: "var(--font-body)",
+          fontSize: "1.0625rem",
+          color: "#4a3728",
+          lineHeight: 1.7,
+          marginBottom: "2rem",
+        }}>
+          {biz.curatedNote ?? biz.description}
+        </p>
+
+        {/* SL story link */}
+        {biz.story && (
+          <div style={{
+            background: "#1a1208",
+            borderRadius: "6px",
+            padding: "1.25rem 1.5rem",
+            marginBottom: "2rem",
+          }}>
+            <p style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.75rem",
+              fontWeight: 700,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "#9a6c2f",
+              marginBottom: "0.5rem",
+            }}>
+              Southern Legends Story
+            </p>
+            <Link
+              href={`/profiles/${biz.story}`}
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "1.1rem",
+                color: "#F0EDE6",
+                textDecoration: "none",
+              }}
+            >
+              Read the story →
+            </Link>
+          </div>
+        )}
+
+        {/* Contact */}
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.5rem",
+          marginBottom: "2.5rem",
+        }}>
+          {biz.address && (
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#6b5040" }}>
+              📍 {biz.address}
+            </p>
+          )}
+          {biz.phone && (
+            <a href={`tel:${biz.phone}`} style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#9a6c2f", textDecoration: "none" }}>
+              {biz.phone}
+            </a>
+          )}
+          {biz.website && (
+            <a href={biz.website} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#9a6c2f", textDecoration: "none" }}>
+              {biz.website.replace(/^https?:\/\//, '')} ↗
+            </a>
+          )}
+        </div>
+
+        {/* Nominate CTA */}
+        <div style={{
+          borderTop: "1px solid rgba(154,108,47,0.2)",
+          paddingTop: "2rem",
+        }}>
+          <p style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.875rem",
+            color: "#6b5040",
+            marginBottom: "0.75rem",
+          }}>
+            Know a business in {biz.city} worth featuring?
+          </p>
+          <Link
+            href="/places/nominate"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.875rem",
+              color: "#9a6c2f",
+              fontWeight: 600,
+              textDecoration: "underline",
+            }}
+          >
+            Nominate them →
+          </Link>
+        </div>
+      </div>
+    </main>
+  )
+}

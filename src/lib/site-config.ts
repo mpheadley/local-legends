@@ -8,6 +8,7 @@ export const siteConfig = {
   nav: [
     { label: "Stories", href: "/profiles" },
     { label: "Broken Ground", href: "/essays" },
+    { label: "Places", href: "/places" },
     { label: "About", href: "/about" },
   ],
   podcast: {

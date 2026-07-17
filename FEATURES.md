@@ -4,6 +4,15 @@
 
 ---
 
+## SL Places (Local Business Directory)
+
+- **`/places`** — Curated directory index. Shows featured + story-linked businesses. Nomination CTA.
+- **`/places/[city]`** — City-level listing page. Static params from `SL_CITIES`.
+- **`/places/[city]/[slug]`** — Business detail. Shows SL story link if `story` slug set. JSON-LD LocalBusiness schema.
+- **`/places/nominate`** — Nomination form (POST to `/api/places/nominate`). Sends Resend notification to matt@gatherstudio.app.
+- **`src/lib/places.ts`** — Curated data layer. `SL_PLACES` array, `getFeatured()`, `getPlace()`, `getPlacesByCity()`. Add entries here as SL essays name real businesses.
+- **Nav** — "Places" added to site nav between "Broken Ground" and "About".
+
 ## CMS
 
 - **`/api/revalidate`** — POST endpoint for on-demand ISR cache purge. Called by gatherstudio.app CMS admin after every content save. Requires `x-revalidate-secret: <CMS_ADMIN_TOKEN>` header. Returns `{revalidated: true}` on success.
