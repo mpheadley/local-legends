@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getFeatured, SL_PLACES, cityToSlug, bizToSlug } from "@/lib/places"
+import { CITIES, cityToSlug as dbCityToSlug } from "@/lib/city-businesses"
 import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
@@ -187,6 +188,45 @@ export default function PlacesPage() {
             </div>
           </>
         )}
+
+        {/* All 244 Alabama Cities A–Z */}
+        <div style={{ marginBottom: "3rem" }}>
+          <p style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.7rem",
+            fontWeight: 600,
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "#9a6c2f",
+            marginBottom: "1.25rem",
+          }}>
+            All Cities
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+            gap: "0.375rem",
+          }}>
+            {CITIES.map((city) => (
+              <Link
+                key={city}
+                href={`/places/${dbCityToSlug(city)}`}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.875rem",
+                  color: "#4a3728",
+                  textDecoration: "none",
+                  padding: "0.35rem 0",
+                  borderBottom: "1px solid rgba(154,108,47,0.08)",
+                  display: "block",
+                  transition: "color 0.1s",
+                }}
+              >
+                {city}
+              </Link>
+            ))}
+          </div>
+        </div>
 
         {/* Nominate CTA */}
         <div style={{

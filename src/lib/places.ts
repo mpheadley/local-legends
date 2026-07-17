@@ -79,3 +79,67 @@ export function getPlace(citySlug: string, bizSlug: string) {
 export function getFeatured() {
   return SL_PLACES.filter(b => b.featured || b.story)
 }
+
+export function isBridalCategory(category: string): boolean {
+  return ["Wedding Venue", "Wedding", "Florist", "Bridal", "Photographer", "Caterer", "Cake"].includes(category)
+}
+
+// City page sponsorships
+export type SLSponsor = {
+  city: string
+  businessName: string
+  tagline: string
+  url?: string
+  tier: "city" | "regional"
+  monthlyRate: number
+  startDate: string
+  endDate?: string
+}
+
+// Gather Legacy — people who built something in this town
+export type SLLegacyPerson = {
+  name: string
+  city: string
+  years: string
+  what: string
+  description: string
+  slug?: string
+}
+
+// City events — pulled from The Aisle, MarketDay, local govt
+export type SLEvent = {
+  city: string
+  title: string
+  date: string
+  time?: string
+  venue?: string
+  url?: string
+  source: "the-aisle" | "marketday" | "gather-ground" | "local-govt" | "other"
+}
+
+export const SL_SPONSORS: SLSponsor[] = []
+export const SL_LEGACY: SLLegacyPerson[] = []
+export const SL_EVENTS: SLEvent[] = []
+
+export function getCitySponsor(citySlug: string): SLSponsor | null {
+  const today = new Date().toISOString().split("T")[0]
+  const city = SL_SPONSORS.find(
+    (s) => cityToSlug(s.city) === citySlug && s.tier === "city" && (!s.endDate || s.endDate >= today)
+  )
+  const regional = SL_SPONSORS.find(
+    (s) => s.tier === "regional" && (!s.endDate || s.endDate >= today)
+  )
+  return city ?? regional ?? null
+}
+
+export function getCityEvents(citySlug: string): SLEvent[] {
+  const today = new Date().toISOString().split("T")[0]
+  return SL_EVENTS
+    .filter((e) => cityToSlug(e.city) === citySlug && e.date >= today)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(0, 5)
+}
+
+export function getCityLegacy(citySlug: string): SLLegacyPerson[] {
+  return SL_LEGACY.filter((p) => cityToSlug(p.city) === citySlug)
+}

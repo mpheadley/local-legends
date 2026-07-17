@@ -480,6 +480,27 @@ export default async function ProfilePage({
       </article>
       <div id="share-bar-sentinel" aria-hidden="true" />
 
+      {/* Blueprint pitch — best content is best sales page */}
+      <div style={{ background: "#f5f0e8", borderTop: "1px solid rgba(154,108,47,0.12)", padding: "2.5rem 1.5rem" }}>
+        <div className="max-w-2xl mx-auto" style={{ textAlign: "center" }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "0.75rem" }}>
+            Gather Studio
+          </p>
+          <p style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(1.25rem, 3vw, 1.75rem)", color: "#1a1208", marginBottom: "0.75rem", fontWeight: 400 }}>
+            Does your business have a clear message?
+          </p>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9375rem", color: "#4a3728", lineHeight: 1.65, marginBottom: "1.5rem", maxWidth: "36rem", margin: "0 auto 1.5rem" }}>
+            Every story here starts with someone who knew what they were building and why. A Blueprint Session gets you there in 90 minutes.
+          </p>
+          <a
+            href="https://gatherstudio.app/book"
+            style={{ display: "inline-block", background: "#9a6c2f", color: "#F0EDE6", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: "0.875rem", padding: "0.625rem 1.5rem", borderRadius: "4px", textDecoration: "none" }}
+          >
+            Book a Blueprint Session
+          </a>
+        </div>
+      </div>
+
       <BookTeaser />
 
       <Comments slug={slug} />

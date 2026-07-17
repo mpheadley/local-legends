@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { SL_CITIES, SL_PLACES, getPlace, cityToSlug } from "@/lib/places"
+import { SL_CITIES, SL_PLACES, getPlace, cityToSlug, isBridalCategory } from "@/lib/places"
 import { siteConfig } from "@/lib/site-config"
 
 type Props = { params: Promise<{ city: string; slug: string }> }
@@ -156,6 +156,53 @@ export default async function PlaceDetailPage({ params }: Props) {
             </a>
           )}
         </div>
+
+        {/* ReelStudio pitch */}
+        <div style={{
+          background: "#1a1208",
+          borderRadius: "6px",
+          padding: "1.25rem 1.5rem",
+          marginBottom: "1.5rem",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "1rem",
+          flexWrap: "wrap",
+        }}>
+          <div>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "0.35rem" }}>
+              ReelStudio
+            </p>
+            <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.9375rem", color: "#F0EDE6", fontWeight: 400 }}>
+              Add a 30-second video to this listing. Free to record.
+            </p>
+          </div>
+          <a
+            href="https://gatherstudio.app/reelstudio/record"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", fontWeight: 700, background: "#9a6c2f", color: "#F0EDE6", padding: "0.5rem 1rem", borderRadius: "4px", textDecoration: "none", flexShrink: 0 }}
+          >
+            Record now →
+          </a>
+        </div>
+
+        {/* BridalShowReviews — wedding/florist businesses only */}
+        {isBridalCategory(biz.category) && (
+          <div style={{ marginBottom: "1.5rem" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#6b5040", lineHeight: 1.6 }}>
+              Planning a wedding in {biz.city}?{" "}
+              <a
+                href="https://bridalshowreviews.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#9a6c2f", fontWeight: 600, textDecoration: "underline" }}
+              >
+                See every NE Alabama bridal show rated by couples who went →
+              </a>
+            </p>
+          </div>
+        )}
 
         {/* Nominate CTA */}
         <div style={{

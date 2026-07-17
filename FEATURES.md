@@ -1,17 +1,22 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-06-14. Source of truth for what's built.*
+*Last updated: 2026-07-17. Source of truth for what's built.*
 
 ---
 
-## SL Places (Local Business Directory)
+## SL Places — City Targeting Engine (2026-07-17)
 
-- **`/places`** — Curated directory index. Shows featured + story-linked businesses. Nomination CTA.
-- **`/places/[city]`** — City-level listing page. Static params from `SL_CITIES`.
-- **`/places/[city]/[slug]`** — Business detail. Shows SL story link if `story` slug set. JSON-LD LocalBusiness schema.
-- **`/places/nominate`** — Nomination form (POST to `/api/places/nominate`). Sends Resend notification to matt@gatherstudio.app.
-- **`src/lib/places.ts`** — Curated data layer. `SL_PLACES` array, `getFeatured()`, `getPlace()`, `getPlacesByCity()`. Add entries here as SL essays name real businesses.
-- **Nav** — "Places" added to site nav between "Broken Ground" and "About".
+- **`src/lib/city-businesses.ts`** — 244 AL cities / 6,818 businesses from Gather Circle DB. Exports `CITIES`, `localBusinesses`, `cityToSlug`, `businessToSlug`, `LocalBusiness` type.
+- **`/places`** — Curated index + A-Z grid of all 244 cities.
+- **`/places/[city]`** — Full city page: Hero, Dispatch (news feed), Circle (business directory + claim CTAs → gatherstudio.app/api/wiki-claim), SL Places, Claim Band, Blueprint pitch, Faith section (Anniston only). JSON-LD ItemList schema.
+- **`/places/[city]/[slug]`** — Business detail. ReelStudio video pitch. BridalShowReviews link for wedding/florist categories. JSON-LD LocalBusiness schema.
+- **`/places/nominate`** — Nomination form (POST to `/api/places/nominate`).
+- **`src/lib/places.ts`** — `SLSponsor`, `SLLegacyPerson`, `SLEvent` types + `getCitySponsor`, `getCityEvents`, `getCityLegacy`, `isBridalCategory` helpers. Seed `SL_SPONSORS`/`SL_LEGACY`/`SL_EVENTS` as data grows.
+- **`/api/city-newsletter/subscribe`** — POST `{email, city}` → Resend subscribe + city-tagged welcome email.
+- **`/api/sponsorship/apply`** — POST sponsorship inquiry → notify matt@gatherstudio.app.
+- **City components:** `CityHouseAd` (dominant-category→venture ad), `CitySponsor` (sponsor banner), `CityLegacy` (Gather Legacy), `CityEvents` (coming up in [City]), `CityNewsletterSignup` (The [City] Letter).
+- **profiles/[slug]** — Blueprint Session pitch block injected after article content.
+- **Nav** — "Places" in site nav.
 
 ## CMS
 
