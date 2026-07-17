@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { MapPin } from "lucide-react"
@@ -9,6 +10,8 @@ import { SL_PLACES, cityToSlug as slCityToSlug } from "@/lib/places"
 import { getFeaturedForCity, TAG_LABELS, TAG_COLORS } from "@/lib/featured-businesses"
 import { getCityMeta } from "@/lib/city-meta"
 import CityNewsletterSignup from "@/app/components/CityNewsletterSignup"
+import SectionLinks from "@/app/components/SectionLinks"
+import ShareRow from "@/app/components/ShareRow"
 
 export const revalidate = 86400 // revalidate daily
 
@@ -167,6 +170,26 @@ export default async function CityPage({ params }: Props) {
           )}
         </div>
       </div>
+
+      {/* HERO PHOTO */}
+      {cityMeta?.heroImage && (
+        <div className="mx-auto max-w-4xl px-6 pb-8">
+          <div style={{ position: "relative", width: "100%", height: "320px", borderRadius: "8px", overflow: "hidden" }}>
+            <Image
+              src={cityMeta.heroImage}
+              alt={`${cityName}, Alabama`}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              priority
+              sizes="(max-width: 768px) 100vw, 896px"
+            />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,18,8,0.4) 0%, transparent 60%)" }} />
+            <div style={{ position: "absolute", bottom: "1rem", left: "1.25rem" }}>
+              <p style={{ ...LABEL, color: "#F0EDE6", fontSize: "0.65rem", margin: 0 }}>{cityName}, Alabama</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* DISPATCH — local news */}
       {news.length > 0 && (
@@ -424,6 +447,16 @@ export default async function CityPage({ params }: Props) {
         >
           Know a business in {cityName} that belongs here? Nominate them →
         </Link>
+      </div>
+
+      {/* SHARE + SECTION CROSSLINKS */}
+      <div className="mx-auto max-w-4xl px-6 pb-16">
+        <ShareRow
+          url={`/places/${citySlug}`}
+          title={`${cityName}, Alabama — Southern Legends`}
+          description={`The people, places, and stories of ${cityName}, Alabama.`}
+        />
+        <SectionLinks current="/places" />
       </div>
     </main>
   )

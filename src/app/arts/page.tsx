@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllProfiles } from "@/lib/profiles";
 import { getAllJournalPosts } from "@/lib/journal";
+import SectionLinks from "@/app/components/SectionLinks";
+import ShareRow from "@/app/components/ShareRow";
 
 export const metadata: Metadata = {
   title: "Arts — Southern Legends",
@@ -107,6 +109,14 @@ export default function ArtsPage() {
           First arts pieces coming soon. Submit your work above.
         </p>
       )}
+
+      <ShareRow
+        url="/arts"
+        title="Arts — Southern Legends"
+        description="Poetry, music, and theater from the Appalachian foothills of Northeast Alabama."
+      />
+
+      <SectionLinks current="/arts" />
     </main>
   );
 }

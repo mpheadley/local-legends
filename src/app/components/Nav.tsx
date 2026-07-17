@@ -24,7 +24,11 @@ export default function Nav() {
 
   const navLinks = [
     { label: "Stories", href: "/profiles" },
-    { label: "Broken Ground", href: "/essays" },
+    { label: "Places", href: "/places" },
+    { label: "Arts", href: "/arts" },
+    { label: "Books", href: "/books" },
+    { label: "Land", href: "/land" },
+    { label: "Essays", href: "/essays" },
     { label: "About", href: "/about" },
   ];
   const supportLink = { label: "Support", href: "/support" };
@@ -48,7 +52,7 @@ export default function Nav() {
           </Link>
 
           {/* Nav links — left-aligned after wordmark */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-4">
             {navLinks.map((item) => {
               const isActive = pathname.startsWith(item.href);
               return (

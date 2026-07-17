@@ -10,6 +10,7 @@ export type CityMeta = {
   nearbySlug?: string[]    // adjacent cities for internal SEO links
   population?: number
   tagline?: string         // one-line for meta/display
+  heroImage?: string       // path under /public, e.g. /images/locations/anniston-hero.webp
 }
 
 export const CITY_META: CityMeta[] = [
@@ -20,6 +21,7 @@ export const CITY_META: CityMeta[] = [
     nearbySlug: ["oxford", "jacksonville", "gadsden", "talladega"],
     population: 22000,
     tagline: "The Model City of the New South",
+    heroImage: "/images/locations/anniston-hero.webp",
   },
   {
     slug: "oxford",
@@ -28,6 +30,7 @@ export const CITY_META: CityMeta[] = [
     nearbySlug: ["anniston", "jacksonville", "talladega"],
     population: 22000,
     tagline: "Oxford, Alabama",
+    heroImage: "/images/locations/oxford-hero.webp",
   },
   {
     slug: "jacksonville",
@@ -36,6 +39,7 @@ export const CITY_META: CityMeta[] = [
     nearbySlug: ["anniston", "oxford", "gadsden", "piedmont"],
     population: 12000,
     tagline: "Home of Jacksonville State University",
+    heroImage: "/images/locations/jacksonville-hero.webp",
   },
   {
     slug: "gadsden",
@@ -44,6 +48,7 @@ export const CITY_META: CityMeta[] = [
     nearbySlug: ["anniston", "jacksonville", "attalla", "albertville"],
     population: 33000,
     tagline: "The Cultural Hub of NE Alabama",
+    heroImage: "/images/locations/gadsden-hero.webp",
   },
   {
     slug: "talladega",
@@ -52,6 +57,13 @@ export const CITY_META: CityMeta[] = [
     nearbySlug: ["anniston", "oxford", "sylacauga"],
     population: 15000,
     tagline: "Home of Talladega Superspeedway",
+    heroImage: "/images/locations/talladega-hero.webp",
+  },
+  {
+    slug: "centre",
+    region: "NE Alabama",
+    nearbySlug: ["gadsden", "attalla"],
+    heroImage: "/images/locations/centre-hero.webp",
   },
   {
     slug: "piedmont",

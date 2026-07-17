@@ -3,6 +3,8 @@ import Link from "next/link"
 import { getFeatured, SL_PLACES, cityToSlug, bizToSlug } from "@/lib/places"
 import { CITIES, cityToSlug as dbCityToSlug } from "@/lib/city-businesses"
 import { siteConfig } from "@/lib/site-config"
+import SectionLinks from "@/app/components/SectionLinks"
+import ShareRow from "@/app/components/ShareRow"
 
 export const metadata: Metadata = {
   title: "SL Places — Southern Legends",
@@ -269,6 +271,15 @@ export default function PlacesPage() {
             Nominate a business
           </Link>
         </div>
+      </div>
+
+      <div style={{ maxWidth: "64rem", margin: "0 auto", padding: "0 1.5rem 4rem" }}>
+        <ShareRow
+          url="/places"
+          title="SL Places — Southern Legends"
+          description="Businesses with a story behind them. A curated directory of local businesses in Northeast Alabama."
+        />
+        <SectionLinks current="/places" />
       </div>
     </main>
   )

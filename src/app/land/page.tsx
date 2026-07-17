@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllProfiles } from "@/lib/profiles";
 import { getAllJournalPosts } from "@/lib/journal";
+import SectionLinks from "@/app/components/SectionLinks";
+import ShareRow from "@/app/components/ShareRow";
 
 export const metadata: Metadata = {
   title: "The Land — Southern Legends",
@@ -98,6 +100,14 @@ export default function LandPage() {
           </Link>
         </div>
       )}
+
+      <ShareRow
+        url="/land"
+        title="The Land — Southern Legends"
+        description="Farming, gardening, and homesteading stories from Northeast Alabama."
+      />
+
+      <SectionLinks current="/land" />
     </main>
   );
 }

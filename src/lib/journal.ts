@@ -22,6 +22,7 @@ export interface JournalFrontmatter {
   featured?: boolean;
   unlisted?: boolean;
   related?: string[];
+  tags?: string[];
   merchImage?: string;
   merchUrl?: string;
   audioUrl?: string;

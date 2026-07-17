@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllJournalPosts } from "@/lib/journal";
+import SectionLinks from "@/app/components/SectionLinks";
+import ShareRow from "@/app/components/ShareRow";
 
 export const metadata: Metadata = {
   title: "Books & Literature — Southern Legends",
@@ -136,6 +138,14 @@ export default function BooksPage() {
           Submit a Review
         </Link>
       </div>
+
+      <ShareRow
+        url="/books"
+        title="Books & Literature — Southern Legends"
+        description="Books, literature, and magazines from and about the American South."
+      />
+
+      <SectionLinks current="/books" />
     </main>
   );
 }

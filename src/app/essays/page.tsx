@@ -5,6 +5,8 @@ import Link from "next/link";
 import { getAllJournalPosts, getFeaturedJournalPost } from "@/lib/journal";
 import { siteConfig } from "@/lib/site-config";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
+import SectionLinks from "@/app/components/SectionLinks";
+import ShareRow from "@/app/components/ShareRow";
 
 export const metadata: Metadata = {
   title: "Broken Ground",
@@ -220,6 +222,15 @@ export default function JournalPage() {
       </div>
 
       <SubscribeCTA />
+
+      <div className="mx-auto max-w-2xl px-6 pb-16">
+        <ShareRow
+          url="/essays"
+          title="Broken Ground — Essays by Matt Headley"
+          description="Writing about what's behind the profiles. And what's behind me."
+        />
+        <SectionLinks current="/essays" />
+      </div>
     </main>
   );
 }
