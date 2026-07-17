@@ -9,6 +9,9 @@ export const siteConfig = {
     { label: "Stories", href: "/profiles" },
     { label: "Broken Ground", href: "/essays" },
     { label: "Places", href: "/places" },
+    { label: "Arts", href: "/arts" },
+    { label: "The Land", href: "/land" },
+    { label: "Books", href: "/books" },
     { label: "About", href: "/about" },
   ],
   podcast: {
