@@ -78,6 +78,7 @@ export const CITY_META: CityMeta[] = [
     region: "NE Alabama",
     nearbySlug: ["gadsden", "albertville"],
     population: 5500,
+    heroImage: "/images/locations/attalla-hero.webp",
   },
   {
     slug: "albertville",
@@ -176,6 +177,36 @@ export const CITY_META: CityMeta[] = [
     region: "Alabama",
     tagline: "Autaugaville, Alabama",
     heroImage: "/images/locations/autaugaville-hero.webp",
+  },
+  {
+    slug: "alexandria",
+    region: "Alabama",
+    tagline: "Alexandria, Alabama",
+    heroImage: "/images/locations/alexandria-hero.webp",
+  },
+  {
+    slug: "altoona",
+    region: "Alabama",
+    tagline: "Altoona, Alabama",
+    heroImage: "/images/locations/altoona-hero.webp",
+  },
+  {
+    slug: "arab",
+    region: "Alabama",
+    tagline: "Arab, Alabama",
+    heroImage: "/images/locations/arab-hero.webp",
+  },
+  {
+    slug: "axis",
+    region: "Alabama",
+    tagline: "Axis, Alabama",
+    heroImage: "/images/locations/axis-hero.webp",
+  },
+  {
+    slug: "belle-mina",
+    region: "Alabama",
+    tagline: "Belle Mina, Alabama",
+    heroImage: "/images/locations/belle-mina-hero.webp",
   },
 ]
 
