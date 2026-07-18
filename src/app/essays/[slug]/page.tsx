@@ -31,6 +31,7 @@ import ClosingSection from "@/app/components/ClosingSection";
 import Callout from "@/app/components/Callout";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
 import BookTeaser from "@/app/components/BookTeaser";
+import ArticleGate from "@/app/components/ArticleGate";
 
 function Dateline({ children }: { children: React.ReactNode }) {
   return (
@@ -268,7 +269,8 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
       {/* Article */}
       <article className="bg-ll-light">
-        <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 prose-journal">
+        <div className="relative max-w-3xl mx-auto px-6 py-12 md:py-16 prose-journal">
+          <ArticleGate slug={slug} />
           {frontmatter.image && (
             <div className="not-prose mb-10">
               <Image
