@@ -312,6 +312,91 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* The Book */}
+      <section
+        style={{
+          background: "#110b08",
+          position: "relative",
+          overflow: "hidden",
+          padding: "4rem 1.5rem",
+        }}
+      >
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/topo-7.png')",
+            backgroundSize: "cover",
+            opacity: 0.1,
+          }}
+        />
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            maxWidth: "38rem",
+            margin: "0 auto",
+            textAlign: "center",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.58rem",
+              fontWeight: 700,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "#CA8A04",
+              marginBottom: "0.75rem",
+            }}
+          >
+            The Collected Book
+          </p>
+          <h2
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(1.75rem, 5vw, 2.75rem)",
+              fontWeight: 300,
+              color: "#FAFAF7",
+              lineHeight: 1.1,
+              marginBottom: "1rem",
+            }}
+          >
+            Southern Legends:<br />the profiles, the places, the history.
+          </h2>
+          <p
+            style={{
+              fontSize: "0.9rem",
+              color: "rgba(250,250,247,0.55)",
+              lineHeight: 1.75,
+              marginBottom: "1.75rem",
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            Every profile is a chapter. Every essay is a source. When there are enough of them, we&rsquo;re compiling them into the book Northeast Alabama has never had.
+            The mythology is what the chamber prints. This is the reality.
+          </p>
+          <Link
+            href="/essays"
+            style={{
+              display: "inline-block",
+              border: "1px solid rgba(250,250,247,0.3)",
+              color: "#FAFAF7",
+              padding: "0.85rem 1.75rem",
+              fontSize: "0.7rem",
+              fontWeight: 700,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            Read the essays →
+          </Link>
+        </div>
+      </section>
+
       {/* Business owner bridge */}
       <div style={{ borderTop: "1px solid rgba(154,108,47,0.12)", padding: "1.5rem 0", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#6b5040" }}>
