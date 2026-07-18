@@ -94,6 +94,7 @@ export const CITY_META: CityMeta[] = [
     nearbySlug: ["hoover", "vestavia-hills", "trussville", "gardendale"],
     population: 212000,
     tagline: "The Magic City",
+    heroImage: "/images/locations/birmingham-hero.webp",
   },
   {
     slug: "huntsville",
@@ -207,6 +208,84 @@ export const CITY_META: CityMeta[] = [
     region: "Alabama",
     tagline: "Belle Mina, Alabama",
     heroImage: "/images/locations/belle-mina-hero.webp",
+  },
+  {
+    slug: "ashford",
+    region: "Alabama",
+    tagline: "Ashford, Alabama",
+    heroImage: "/images/locations/ashford-hero.webp",
+  },
+  {
+    slug: "ashville",
+    region: "Alabama",
+    tagline: "Ashville, Alabama",
+    heroImage: "/images/locations/ashville-hero.webp",
+  },
+  {
+    slug: "auburn",
+    region: "Alabama",
+    tagline: "Auburn, Alabama",
+    heroImage: "/images/locations/auburn-hero.webp",
+  },
+  {
+    slug: "bay-minette",
+    region: "Alabama",
+    tagline: "Bay Minette, Alabama",
+    heroImage: "/images/locations/bay-minette-hero.webp",
+  },
+  {
+    slug: "bayou-la-batre",
+    region: "Alabama",
+    tagline: "Bayou La Batre, Alabama",
+    heroImage: "/images/locations/bayou-la-batre-hero.webp",
+  },
+  {
+    slug: "berry",
+    region: "Alabama",
+    tagline: "Berry, Alabama",
+    heroImage: "/images/locations/berry-hero.webp",
+  },
+  {
+    slug: "boaz",
+    region: "Alabama",
+    tagline: "Boaz, Alabama",
+    heroImage: "/images/locations/boaz-hero.webp",
+  },
+  {
+    slug: "brighton",
+    region: "Alabama",
+    tagline: "Brighton, Alabama",
+    heroImage: "/images/locations/brighton-hero.webp",
+  },
+  {
+    slug: "brookwood",
+    region: "Alabama",
+    tagline: "Brookwood, Alabama",
+    heroImage: "/images/locations/brookwood-hero.webp",
+  },
+  {
+    slug: "brownsboro",
+    region: "Alabama",
+    tagline: "Brownsboro, Alabama",
+    heroImage: "/images/locations/brownsboro-hero.webp",
+  },
+  {
+    slug: "burkville",
+    region: "Alabama",
+    tagline: "Burkville, Alabama",
+    heroImage: "/images/locations/burkville-hero.webp",
+  },
+  {
+    slug: "calera",
+    region: "Alabama",
+    tagline: "Calera, Alabama",
+    heroImage: "/images/locations/calera-hero.webp",
+  },
+  {
+    slug: "camp-hill",
+    region: "Alabama",
+    tagline: "Camp Hill, Alabama",
+    heroImage: "/images/locations/camp-hill-hero.webp",
   },
 ]
 
