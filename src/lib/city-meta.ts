@@ -141,6 +141,42 @@ export const CITY_META: CityMeta[] = [
     population: 42000,
     tagline: "The Shoals",
   },
+  {
+    slug: "adamsville",
+    region: "Alabama",
+    tagline: "Adamsville, Alabama",
+    heroImage: "/images/locations/adamsville-hero.webp",
+  },
+  {
+    slug: "alabaster",
+    region: "Alabama",
+    tagline: "Alabaster, Alabama",
+    heroImage: "/images/locations/alabaster-hero.webp",
+  },
+  {
+    slug: "ardmore",
+    region: "Alabama",
+    tagline: "Ardmore, Alabama",
+    heroImage: "/images/locations/ardmore-hero.webp",
+  },
+  {
+    slug: "athens",
+    region: "Alabama",
+    tagline: "Athens, Alabama",
+    heroImage: "/images/locations/athens-hero.webp",
+  },
+  {
+    slug: "atlanta",
+    region: "Alabama",
+    tagline: "Atlanta, Alabama",
+    heroImage: "/images/locations/atlanta-hero.webp",
+  },
+  {
+    slug: "autaugaville",
+    region: "Alabama",
+    tagline: "Autaugaville, Alabama",
+    heroImage: "/images/locations/autaugaville-hero.webp",
+  },
 ]
 
 export function getCityMeta(slug: string): CityMeta | undefined {
