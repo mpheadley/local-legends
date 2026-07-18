@@ -73,3 +73,4 @@
 - GitHub → Vercel auto-deploy (push = deploy)
 - Project: `southern-legends` (`prj_o78QHj3ziy62Rgg1yZnGFt202VQd`)
 - Live: southernlegends.blog
+- Email from address updated to noreply@gatherstudio.app (was noreply@plainspokenblueprint.com)

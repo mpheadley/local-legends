@@ -70,7 +70,7 @@ Matt Headley
 southernlegends.blog`;
 
     await resend.emails.send({
-      from: "Matt Headley <noreply@plainspokenblueprint.com>",
+      from: "Matt Headley <noreply@gatherstudio.app>",
       to: email,
       subject: "You're in",
       html: welcomeHtml,
@@ -79,7 +79,7 @@ southernlegends.blog`;
 
     // Notify Matt of new subscriber + source
     await resend.emails.send({
-      from: "Southern Legends <noreply@plainspokenblueprint.com>",
+      from: "Southern Legends <noreply@gatherstudio.app>",
       to: "matt@headleyweb.com",
       subject: `New SL subscriber — ${source}`,
       text: `New subscriber on Southern Legends.\n\nEmail: ${email}\nName: ${firstName || "not provided"}\nSource: ${source}`,

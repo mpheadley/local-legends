@@ -481,7 +481,7 @@ export default function ScrollytellingProfile({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Plainspoken Blueprint
+              Gather Studio
             </a>
           </p>
         </div>

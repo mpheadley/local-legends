@@ -135,7 +135,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="text-ll-primary font-medium underline underline-offset-3 hover:text-ll-primary-dark transition-colors"
               >
-                Plainspoken Blueprint
+                Gather Studio
               </a>
               {" "}— a messaging clarity practice built from fifteen years in the pulpit, a flower farm, and thirty pieces of software for
               florists, farmers market managers, pastors, and wedding vendors. One 90-minute session. One page. A message that works before you walk in the room.
@@ -182,7 +182,7 @@ export default function AboutPage() {
             {/* Content */}
             <div style={{ position: "relative", zIndex: 1, padding: "2rem 1.75rem" }}>
               <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b9f78", marginBottom: "1rem" }}>
-                Plainspoken Blueprint
+                Gather Studio
               </p>
               <p style={{ fontFamily: "var(--font-heading)", fontSize: "2.25rem", lineHeight: 1.1, marginBottom: "1.25rem" }}>
                 <span style={{ display: "block", color: "rgba(255,255,255,0.28)", fontStyle: "italic" }}>Clever confuses.</span>
@@ -191,7 +191,7 @@ export default function AboutPage() {
               <div style={{ width: "2.5rem", height: "2px", background: "#6b9f78", marginBottom: "1.25rem" }} />
               <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "rgba(255,255,255,0.68)", marginBottom: "1.5rem" }}>
                 I built{" "}
-                <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6b9f78", textDecoration: "underline" }}>Plainspoken Blueprint</a>{" "}
+                <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6b9f78", textDecoration: "underline" }}>Gather Studio</a>{" "}
                 for small business owners who do good work but struggle to explain it clearly. One 90-minute session. One page: who your customer is, how you help them, exactly how to say it. That page becomes your homepage, your elevator pitch. I also build websites.
               </p>
               <a
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
           <p>
             Reach out at{" "}
-            <a href="mailto:matt@plainspokenblueprint.com">matt@plainspokenblueprint.com</a>.
+            <a href="mailto:matt@gatherstudio.app">matt@gatherstudio.app</a>.
           </p>
 
           <hr className="my-10 border-ll-dark/10" />
@@ -335,7 +335,7 @@ export default function AboutPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Plainspoken Blueprint
+              Gather Studio
             </a>
             .
           </p>

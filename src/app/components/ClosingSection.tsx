@@ -38,7 +38,7 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
             </Link>
             {" "}is a former pastor and flower farmer from Northeast Alabama. He is the founder and editor of Southern Legends, the founder of{" "}
             <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" className="profile-closing-link">
-              Plainspoken Blueprint
+              Gather Studio
             </a>
             , a messaging coaching practice for small businesses, and the founder of{" "}
             <a href="https://theaisle.app" target="_blank" rel="noopener noreferrer" className="profile-closing-link">

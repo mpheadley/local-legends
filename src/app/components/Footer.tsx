@@ -146,7 +146,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-white/60 hover:text-ll-accent transition-colors"
             >
-              Plainspoken Blueprint
+              Gather Studio
             </a>
           </p>
           <div className="flex gap-6">
