@@ -1,6 +1,6 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-07-17. Source of truth for what's built.*
+*Last updated: 2026-07-18. Source of truth for what's built.*
 
 ---
 
@@ -57,6 +57,28 @@
 - **Magazine waitlist flag:** `magazine_waitlist: true` in POST body → notification email tagged "magazine waitlist ✓"
 - **Placement:** Homepage (replaces SubscribeCTA) + bottom of every profile page
 - **Copy:** "Subscribe and get SL Magazine Issue 1 free when it drops this fall."
+
+## Email Drip Sequences (added 2026-07-18)
+
+- **Day 0:** Welcome email fires on subscribe (existing)
+- **Day 3:** Noble Street series intro — `api/drip/day-3/route.ts`. Scheduled via Resend `scheduledAt` from subscribe route.
+- **Day 7:** $4.99 Reader pitch — `api/drip/day-7/route.ts`. Scheduled via Resend `scheduledAt` from subscribe route.
+- No separate cron needed — Resend handles delivery timing.
+
+## Business Blurbs (added 2026-07-18)
+
+- `content/businesses/[slug].mdx` — 80-word Haiku-generated blurbs for AL businesses from `gather_circle_members`
+- Auto-generated nightly at 2am via `tools/sl-business-blurbs.py` (`com.headley.sl-business-blurbs`)
+- Batch: 20/night. Auto-deploys every 500 files. 5 initial blurbs seeded.
+- `published: true, unlisted: false` — appear in site but not featured
+
+## Business Directory
+
+- `/businesses` — Alabama business directory index (6,818 businesses)
+- `/businesses/anniston` — 210 Anniston businesses from Circle DB + profiled stories + LocalBusiness JSON-LD
+- `/businesses/calhoun-county` — 457 businesses across 11 Calhoun County cities + ItemList JSON-LD
+- `/businesses/[city]` — dynamic city route using content/businesses/*.mdx
+- `/contributors` — profiles grid + Person JSON-LD + nominate CTA
 
 ## Other Routes
 

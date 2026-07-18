@@ -80,10 +80,33 @@ southernlegends.blog`;
     // Notify Matt of new subscriber + source
     await resend.emails.send({
       from: "Southern Legends <noreply@gatherstudio.app>",
-      to: "matt@headleyweb.com",
+      to: "matt@gatherstudio.app",
       subject: `New SL subscriber — ${source}`,
       text: `New subscriber on Southern Legends.\n\nEmail: ${email}\nName: ${firstName || "not provided"}\nSource: ${source}`,
     }).catch((err) => console.error("Subscriber notify error:", err));
+
+    // Schedule Day 3 + Day 7 drip — fire-and-forget via Resend scheduled sends
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL?.trim() || 'https://southernlegends.blog'
+    const dripPayload = JSON.stringify({ email, firstName })
+    // Day 3: 3 days = 259200s delay — we use Resend's scheduledAt for reliable delivery
+    resend.emails.send({
+      from: "Matt Headley <noreply@gatherstudio.app>",
+      to: email,
+      subject: "One block in Anniston",
+      scheduledAt: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString(),
+      html: `<p>${firstName ? `${firstName},` : 'Hey,'}</p><p>A few days ago you signed up. Thought I'd point you somewhere specific.</p><p>The Noble Street project is the one I keep coming back to — stories from one block in Anniston, Alabama. A florist. A pastor who preached about hospital socks. A market that became something else.</p><p><a href="https://southernlegends.blog/journal/noble-street-anniston">Start with Noble Street →</a></p><p>There are also city pages if you want to find what's been written about a place you know:</p><p><a href="https://southernlegends.blog/places">Browse by city →</a></p><p>Matt</p>`,
+      text: `${firstName ? `${firstName},` : 'Hey,'}\n\nA few days ago you signed up. Thought I'd point you somewhere specific.\n\nThe Noble Street project is the one I keep coming back to — stories from one block in Anniston, Alabama. A florist. A pastor who preached about hospital socks. A market that became something else.\n\nhttps://southernlegends.blog/journal/noble-street-anniston\n\nThere are also city pages:\nhttps://southernlegends.blog/places\n\nMatt`,
+    }).catch((err) => console.error('[drip/day-3] schedule error:', err))
+
+    // Day 7: $4.99 Reader pitch
+    resend.emails.send({
+      from: "Matt Headley <noreply@gatherstudio.app>",
+      to: email,
+      subject: "If you want to help keep this going",
+      scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
+      html: `<p>${firstName ? `${firstName},` : 'Hey,'}</p><p>Southern Legends is free to read. It's always going to be free to read.</p><p>But if you've found something here worth keeping, there's a Reader tier for $4.99/month that helps me keep doing this.</p><p>What it is: you help cover the time it takes to write this. That's the whole pitch.</p><p><a href="https://southernlegends.blog/subscribe">Become a Reader ($4.99/mo) →</a></p><p>If not, no change. The free feed keeps going. I'm glad you're here either way.</p><p>Matt</p>`,
+      text: `${firstName ? `${firstName},` : 'Hey,'}\n\nSouthern Legends is free to read. It's always going to be free to read.\n\nBut if you've found something here worth keeping, there's a Reader tier for $4.99/month that helps me keep doing this.\n\nWhat it is: you help cover the time it takes to write this. That's the whole pitch.\n\nBecome a Reader ($4.99/mo): https://southernlegends.blog/subscribe\n\nIf not, no change. The free feed keeps going. I'm glad you're here either way.\n\nMatt`,
+    }).catch((err) => console.error('[drip/day-7] schedule error:', err))
 
     return NextResponse.json({ success: true });
   } catch (err) {

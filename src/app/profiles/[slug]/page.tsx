@@ -241,7 +241,7 @@ export default async function ProfilePage({
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "NewsArticle",
     headline: frontmatter.title,
     description: frontmatter.excerpt,
     datePublished: frontmatter.date,
@@ -251,7 +251,7 @@ export default async function ProfilePage({
     author: {
       "@type": "Person",
       name: siteConfig.author,
-      url: "https://headleyweb.com",
+      url: "https://matthewheadley.com",
     },
     publisher: {
       "@type": "Organization",

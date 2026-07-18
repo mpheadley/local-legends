@@ -201,19 +201,23 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "NewsArticle",
     headline: frontmatter.title,
     description: frontmatter.excerpt,
     datePublished: frontmatter.date,
     author: {
       "@type": "Person",
       name: siteConfig.author,
-      url: "https://plainspokenblueprint.com",
+      url: "https://matthewheadley.com",
     },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/images/logo.webp`,
+      },
     },
     mainEntityOfPage: `${siteConfig.url}/essays/${slug}`,
   };
