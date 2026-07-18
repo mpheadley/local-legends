@@ -527,6 +527,16 @@ export default async function CityPage({ params }: Props) {
         </div>
       )}
 
+      {/* BUSINESSES DIRECTORY LINK */}
+      <div className="mx-auto max-w-4xl px-6 py-6">
+        <Link
+          href={`/businesses/${dbCityToSlug(cityName)}`}
+          style={{ ...BODY, fontSize: "0.875rem", color: "#9a6c2f", fontWeight: 600, textDecoration: "underline" }}
+        >
+          Browse all {cityName} businesses →
+        </Link>
+      </div>
+
       {/* NOMINATE */}
       <div className="mx-auto max-w-4xl px-6 py-8" style={{ textAlign: "center" }}>
         <Link
