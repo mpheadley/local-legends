@@ -68,7 +68,7 @@ export default function BooksPage() {
             {
               slug: "forthcoming-broken-ground",
               title: "Broken Ground",
-              tagline: "Losing a flower farm, leaving ministry, rebuilding.",
+              tagline: "Losing a flower farm in Anniston. Resigning from a church I loved. A manic episode I didn't recognize until the damage was done. And what it looked like to rebuild.",
               tags: ["memoir", "Alabama"],
             },
           ].map(book => (
