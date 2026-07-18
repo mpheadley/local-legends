@@ -6,6 +6,72 @@ Newest first.
 
 ---
 
+## 2026-07-17B — City page UX overhaul + PSBP/SL FB group launch kits
+
+**Shipped:**
+
+- **City pages** — bento featured grid (Lucide icons, TAG treatment), CSS flip card grid for 21 Circle businesses, internal links from flip backs to `/places/[city]/[slug]`, default hero gradient for cities without photos, $4.99 removed from all city page CTAs (price at click-through only)
+- **Circle stub profiles** — `[slug]/page.tsx` expanded with `dynamicParams = true` + ISR; 6,818 Circle businesses get real `/places/[city]/[slug]` URLs on first visit, no pre-build; stub layout with "Claim this listing →" CTA
+- **Homepage business bridge** — "Business in Alabama? Find your listing →" added above newsletter capture
+- **TypeScript:** clean before commit; pushed as `0087978`
+- **PSBP FB Group content** — 15 posts written (reality checks, prompts, framework teaches, build-in-public, one-liners); 15 social cards generated via `cadence-card-gen.py` (plainspoken-blueprint venture config); 15 drafts seeded into Cadence (`gatherstudio-social` Turso DB); all 15 injected into `cadence-card-review.html` (count 293→308)
+- **SL FB Group content** — 12 posts written + 12 cards generated; 4-week launch sequence documented
+- **Launch kit HTML** — `/Volumes/Samsung_T5/webdev/sl-group-launch.html` — both PSBP (15) + SL (12) posts; copy buttons + download buttons per card
+- **FB token** — refreshed in `iris-social-bridge/.env`; groups API returned empty (PSBP group not yet created on Facebook)
+- **Revenue model** — PSBP FB group: $2,400 one-time + $198/mo at 90 days conservative; $5,500/mo ceiling at 6 months (5 Blueprint Sessions + 2 OS runs + 10 Cadence subscribers/month)
+
+**Deferred / Matt's moves:**
+- Create PSBP Facebook Group (facebook.com/groups/create) → share group ID so Iris can post automatically
+- Create SL Facebook Group → same
+- Refresh FB token monthly (expires ~48h); token now in `iris-social-bridge/.env`
+- 238 other city pages still have no hero photos
+- Arts sub-pages (poetry/music/theater) need real contributors
+- 4 book essays need voice-check before promoting
+- Iris autopost veto-listener: loaded, not tested end-to-end
+- Oxford Lumber ACE call → $150/mo Anniston sponsorship (15/15 unlock)
+
+**Cards location:** `/Volumes/Samsung_T5/webdev/gather/assets/social/sl-group-*.png` + `psbp-*.png`
+
+---
+
+## 2026-07-17 — SL section expansion: nav, crosslinks, social shares, city hero photos, arts sub-pages, scrapers
+
+**Shipped (all committed + pushed):**
+
+- **Nav** — added Places, Arts, Books, Land; renamed Broken Ground → Essays; gap-6 → gap-4
+- **SectionLinks component** — crosslinks all 6 sections, excludes current, 4-up grid (`src/app/components/SectionLinks.tsx`)
+- **ShareRow component** — X, Facebook, email, copy-link; prepends southernlegends.blog if relative URL (`src/app/components/ShareRow.tsx`)
+- **SectionLinks + ShareRow** wired into: arts, books, essays, land, places index, all city pages
+- **City hero photos** — added `heroImage?: string` to CityMeta type; wired 6 cities (anniston, oxford, jacksonville, gadsden, talladega, centre) to existing images at `/public/images/locations/`; hero renders with overlay gradient on `places/[city]` pages
+- **Arts sub-pages** — `/arts/poetry`, `/arts/music`, `/arts/theater` created with contributor CTAs, regional venues/companies (Theatre of Gadsden, Anniston Community Theater, JSU Theater)
+- **Books page** — fixed broken slugs (`plainspoken-blueprint-book` → `forthcoming-plainspoken-blueprint` etc.); SectionLinks + ShareRow added
+- **Essays page** — metadata title updated "Broken Ground" → "Essays — Southern Legends"; keeps "Broken Ground" as H1 (correct — nav label vs section name)
+- **4 book announcement essays** (MDX in `content/journal/`):
+  - `forthcoming-plainspoken-blueprint.mdx`
+  - `forthcoming-tend-before-the-wedding.mdx`
+  - `forthcoming-god-and-the-algorithm.mdx`
+  - `forthcoming-broken-ground.mdx`
+- **JournalFrontmatter** — added `tags?: string[]` field (was missing, blocked arts/books/land tag filters)
+- **music-scraper.py** — 12 SE/national RSS sources; seeds `music-briefing.json`; initial run: 42 stories
+- **satire-news-scrape.py** — expanded from ~15 → 35+ sources (SE state outlets + national); full anonymity, no Matt-identity links
+- **satire-feed-bridge.py** — reads briefing JSONs, scores against GT/TPT keyword lists, appends to idea banks; initial run: 44 stories → 2 GT ideas, 0 TPT
+- **contributors-scraper.py** — 9+ sources with RSS/byline scraping; adds to CRM (pipeline_stage=lead, tags=contributor,southern-legends); saves to `.instar/contributors/contributors.json`
+- **LaunchAgents loaded:** `com.headley.iris-autopost`, `com.headley.iris-veto-listener`
+
+**TypeScript:** clean (`./node_modules/.bin/tsc --noEmit` returned 0).
+
+**Deferred / still needs Matt:**
+- 4 book announcement essays = drafts; need Matt voice-check before promoting
+- Arts sub-pages (poetry/music/theater) = live but empty; need real contributors
+- 238 other city pages have no hero photos — need photos or placeholder strategy
+- Iris autopost + veto-listener: loaded but not tested end-to-end
+- Ep3 hospital video: wrong intro music (deferred from prior session)
+- Ep2 freedom riders: journal MDX + publish (deferred from prior session)
+
+**Commits:** d6e04f7 · eac54df · 2eb8899 · 6734d1c · 1b30eff
+
+---
+
 ## 2026-06-22 — CJ pipeline + Lee Kathryn follow-up
 
 Confirmed Jean Ellison profile ran in Calhoun Journal (Matt spotted it — Lee Kathryn never replied). Built `tools/cj-submit.py` — full submission pipeline: reads .mdx, strips frontmatter + MDX components, adds bio block, drafts email, sends via Gmail API. Sent follow-up to Lee Kathryn (contact@calhounjournal.com) pitching Shannon Jenkins profile. CRM contact #112 updated: last_contacted 2026-06-22, follow_up_date 2026-07-06.
