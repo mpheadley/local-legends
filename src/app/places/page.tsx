@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { getFeatured, SL_PLACES, cityToSlug, bizToSlug } from "@/lib/places"
 import { CITIES, cityToSlug as dbCityToSlug } from "@/lib/city-businesses"
+import { ANCHOR_CITIES, regionCities } from "@/lib/region"
+import { getAllListicles } from "@/lib/listicles"
 import { siteConfig } from "@/lib/site-config"
 import SectionLinks from "@/app/components/SectionLinks"
 import ShareRow from "@/app/components/ShareRow"
@@ -29,6 +31,7 @@ function categoryColor(cat: string) {
 export default function PlacesPage() {
   const featured = getFeatured()
   const all = SL_PLACES
+  const guides = getAllListicles().slice(0, 8)
 
   const schema = {
     "@context": "https://schema.org",
@@ -191,7 +194,51 @@ export default function PlacesPage() {
           </>
         )}
 
-        {/* All 244 Alabama Cities A–Z */}
+        {/* Anchor cities — where SL has real stories */}
+        <div style={{ marginBottom: "2.5rem" }}>
+          <p style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.7rem",
+            fontWeight: 600,
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "#9a6c2f",
+            marginBottom: "1.25rem",
+          }}>
+            Where we spend our time
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+            gap: "0.75rem",
+          }}>
+            {ANCHOR_CITIES.map((city) => (
+              <Link
+                key={city}
+                href={`/places/${dbCityToSlug(city)}`}
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  fontSize: "1.25rem",
+                  fontWeight: 400,
+                  color: "#1a1208",
+                  textDecoration: "none",
+                  padding: "1rem 1.25rem",
+                  background: "#fff",
+                  border: "1px solid rgba(154,108,47,0.15)",
+                  borderRadius: "6px",
+                  display: "block",
+                }}
+              >
+                {city}
+                <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9a6c2f", fontWeight: 600, marginTop: "0.25rem" }}>
+                  Northeast Alabama
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Rest of the region — Northeast Alabama */}
         <div style={{ marginBottom: "3rem" }}>
           <p style={{
             fontFamily: "var(--font-body)",
@@ -202,14 +249,14 @@ export default function PlacesPage() {
             color: "#9a6c2f",
             marginBottom: "1.25rem",
           }}>
-            All Cities
+            More across Northeast Alabama
           </p>
           <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
             gap: "0.375rem",
           }}>
-            {CITIES.map((city) => (
+            {regionCities(CITIES).map((city) => (
               <Link
                 key={city}
                 href={`/places/${dbCityToSlug(city)}`}
@@ -229,6 +276,39 @@ export default function PlacesPage() {
             ))}
           </div>
         </div>
+
+        {/* Local Guides — data-driven listicles */}
+        {guides.length > 0 && (
+          <div style={{ marginBottom: "3rem" }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: "1.25rem" }}>
+              <p style={{
+                fontFamily: "var(--font-body)", fontSize: "0.7rem", fontWeight: 600,
+                letterSpacing: "0.18em", textTransform: "uppercase", color: "#9a6c2f",
+              }}>
+                Local Guides
+              </p>
+              <Link href="/listicles" style={{
+                fontFamily: "var(--font-body)", fontSize: "0.8rem", fontWeight: 600,
+                color: "#9a6c2f", textDecoration: "none",
+              }}>
+                See all →
+              </Link>
+            </div>
+            <div style={{
+              display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "0.75rem",
+            }}>
+              {guides.map((g) => (
+                <Link key={g.slug} href={`/listicles/${g.slug}`} style={{
+                  display: "block", background: "#fff", border: "1px solid rgba(154,108,47,0.15)",
+                  borderRadius: "6px", padding: "0.9rem 1.1rem", textDecoration: "none",
+                  fontFamily: "var(--font-heading)", fontSize: "1.05rem", color: "#1a1208", lineHeight: 1.25,
+                }}>
+                  {g.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Nominate CTA */}
         <div style={{

@@ -25,12 +25,16 @@ export default function Nav() {
   const navLinks = [
     { label: "Stories", href: "/profiles" },
     { label: "Places", href: "/places" },
-    { label: "Arts", href: "/arts" },
-    { label: "Books", href: "/books" },
-    { label: "Land", href: "/land" },
     { label: "Essays", href: "/essays" },
+    { label: "Books", href: "/books" },
     { label: "About", href: "/about" },
   ];
+  const moreLinks = [
+    { label: "Guides", href: "/listicles" },
+    { label: "Arts", href: "/arts" },
+    { label: "The Land", href: "/land" },
+  ];
+  const allLinks = [...navLinks, ...moreLinks];
   const supportLink = { label: "Support", href: "/support" };
 
   return (
@@ -69,6 +73,29 @@ export default function Nav() {
                 </Link>
               );
             })}
+            {/* More — groups the secondary sections */}
+            <div className="relative group">
+              <button
+                className="text-xs font-semibold uppercase tracking-[0.15em] text-white/60 group-hover:text-white transition-colors duration-200 flex items-center gap-1"
+                aria-haspopup="true"
+              >
+                More
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><polyline points="6 9 12 15 18 9" /></svg>
+              </button>
+              <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+                <div className="bg-ll-dark border border-white/10 rounded shadow-lg py-2 min-w-[9rem]">
+                  {moreLinks.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-white/60 hover:text-white hover:bg-white/5 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* Spacer */}
@@ -159,7 +186,7 @@ export default function Nav() {
           </svg>
         </button>
         <nav className="flex flex-col items-center gap-8">
-          {navLinks.map((item) => {
+          {allLinks.map((item) => {
             const isActive = pathname.startsWith(item.href);
             return (
               <Link
