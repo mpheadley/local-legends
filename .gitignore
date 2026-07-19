@@ -66,3 +66,6 @@ podcast-production/
 *.mov
 # Untracked scraped business stubs — thin content, never auto-commit/deploy
 content/businesses/
+
+# National guides — staged for review, not for SL
+content/listicles-national-staging/

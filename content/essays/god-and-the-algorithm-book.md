@@ -21,7 +21,7 @@ I've been reading that chapter differently lately.
 
 The algorithm is the new king. Not a metaphor. A structural argument. The same dynamics Samuel describes — extraction, surveillance, the concentration of decision-making power into a single opaque center — are the operating logic of the platforms that now shape how we find information, how we form opinions, how we meet people, how we grieve. We didn't vote for this. We clicked through a terms-of-service agreement we didn't read, and here we are.
 
-I'm writing a book about it. It's called God and the Algorithm.
+I'm writing a book about it. It's called God & the Algorithm.
 
 The central argument is about disclosure. An AI that tells you it's an AI is doing something the tradition would recognize as honest. It's maintaining the distinction between creature and creator, between tool and person, between what is and what merely appears to be. An AI that pretends to be human is doing what Babel did — collapsing a distinction that was meant to hold, in the service of a power that benefits from the confusion.
 

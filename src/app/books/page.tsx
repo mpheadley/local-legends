@@ -61,7 +61,7 @@ export default function BooksPage() {
             },
             {
               slug: "forthcoming-god-and-the-algorithm",
-              title: "God and the Algorithm",
+              title: "God & the Algorithm",
               tagline: "How I became more rested and less productive.",
               tags: ["faith", "technology", "AI"],
             },
