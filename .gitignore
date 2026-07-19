@@ -59,3 +59,10 @@ content/journal-drafts/
 print/sl-print-vol1.pdf
 .env*.local
 assets/footage/
+
+# Large media — belongs on T5, never in git history (blocked all pushes for 67 commits)
+podcast-production/
+*.mp4
+*.mov
+# Untracked scraped business stubs — thin content, never auto-commit/deploy
+content/businesses/
