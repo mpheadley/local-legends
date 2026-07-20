@@ -468,7 +468,7 @@ export default async function ProfilePage({
             <div style={{ fontSize: 14, color: '#555', marginBottom: 16, lineHeight: 1.6 }}>
               Gather Collective is the community for makers, creatives, and small business owners in Northeast Alabama. Workshops, membership, and the people who show up.
             </div>
-            <a href="https://gatherstudio.app/collective" style={{
+            <a href="https://app.gatherstudio.app/collective" style={{
               display: 'inline-block', padding: '10px 20px',
               background: '#2C5F2E', color: '#fff',
               borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600,
