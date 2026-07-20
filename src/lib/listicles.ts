@@ -4,6 +4,14 @@ import matter from "gray-matter";
 
 const dir = path.join(process.cwd(), "content/listicles");
 
+export interface GuideBusiness {
+  name: string;
+  city: string;
+  zip?: string;
+  tel?: string;
+  web?: string;
+}
+
 export interface Listicle {
   slug: string;
   title: string;
@@ -11,7 +19,12 @@ export interface Listicle {
   excerpt: string;
   tags: string[];
   city: string;
-  content: string; // import statements stripped (MDXRemote can't process them)
+  category?: string;
+  image?: string;
+  intro?: string;
+  businesses: GuideBusiness[];
+  itemlist?: string; // JSON-LD ItemList string
+  content: string; // legacy MDX body (empty for card-format guides)
 }
 
 function titleCase(s: string): string {
@@ -41,7 +54,12 @@ export function getListicle(slug: string): Listicle | null {
     date: (data.date as string) ?? "",
     excerpt: (data.excerpt as string) ?? "",
     tags: (data.tags as string[]) ?? [],
-    city: deriveCity(slug),
+    city: (data.place as string) || deriveCity(slug),
+    category: data.category as string | undefined,
+    image: data.image as string | undefined,
+    intro: data.intro as string | undefined,
+    businesses: (data.businesses as GuideBusiness[]) ?? [],
+    itemlist: data.itemlist as string | undefined,
     content: content.replace(/^\s*import .*$/gm, "").trim(),
   };
 }
