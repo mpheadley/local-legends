@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   openGraph: { url: "/back-forty" },
 };
 
+const columns = [
+  {
+    slug: "/journal/back-forty-ep1-chickens",
+    title: "I Watched a Man Explain Chickens to Me for Twenty-Two Minutes",
+    date: "July 21, 2026",
+    excerpt:
+      "The man used the word 'sovereignty' four times. About chickens. My grandmother never named her chickens.",
+  },
+];
+
 export default function BackFortyPage() {
   return (
     <main style={{ backgroundColor: "var(--color-ll-warm)", minHeight: "100vh" }}>
@@ -52,7 +62,7 @@ export default function BackFortyPage() {
           }}
         >
           Southern Gothic agrarian satire. Written by a flower farmer who used to be a pastor
-          and still isn't sure which job was harder on the knees.
+          and still isn&apos;t sure which job was harder on the knees.
         </p>
         <p
           style={{
@@ -60,7 +70,7 @@ export default function BackFortyPage() {
             fontSize: "1.05rem",
             color: "var(--color-ll-text)",
             lineHeight: 1.75,
-            marginBottom: "2.5rem",
+            marginBottom: "3rem",
           }}
         >
           Joel Salatin is not my guru. Neither is Wendell Berry. But I read them both, and I
@@ -69,12 +79,62 @@ export default function BackFortyPage() {
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+          {columns.map((col) => (
+            <Link
+              key={col.slug}
+              href={col.slug}
+              style={{
+                display: "block",
+                padding: "1.25rem 1.5rem",
+                backgroundColor: "#FFFFFF",
+                border: "1px solid var(--color-ll-border)",
+                borderRadius: "6px",
+                textDecoration: "none",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.72rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "var(--color-ll-text-light)",
+                  marginBottom: "0.35rem",
+                }}
+              >
+                {col.date}
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  fontSize: "1.05rem",
+                  fontWeight: 700,
+                  color: "var(--color-ll-dark)",
+                  marginBottom: "0.4rem",
+                  lineHeight: 1.3,
+                }}
+              >
+                {col.title} &rarr;
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.88rem",
+                  color: "var(--color-ll-text-light)",
+                  lineHeight: 1.55,
+                }}
+              >
+                {col.excerpt}
+              </p>
+            </Link>
+          ))}
+
           <Link
             href="/back-forty/resources"
             style={{
               display: "block",
               padding: "1.25rem 1.5rem",
-              backgroundColor: "#FFFFFF",
+              backgroundColor: "transparent",
               border: "1px solid var(--color-ll-border)",
               borderRadius: "6px",
               textDecoration: "none",
@@ -89,7 +149,7 @@ export default function BackFortyPage() {
                 marginBottom: "0.25rem",
               }}
             >
-              Resources →
+              Resources &rarr;
             </p>
             <p
               style={{
