@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
 import CookieBanner from "./components/CookieBanner";
 import LenisProvider from "./components/LenisProvider";
+import SubscribePopup from "./components/SubscribePopup";
+import SupportPopup from "./components/SupportPopup";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -128,6 +130,8 @@ export default function RootLayout({
           <Footer />
           <ScrollReveal />
           <CookieBanner />
+          <SubscribePopup />
+          <SupportPopup />
         </LenisProvider>
       </body>
     </html>

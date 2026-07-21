@@ -1,8 +1,15 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-07-18. Source of truth for what's built.*
+*Last updated: 2026-07-21. Source of truth for what's built.*
 
 ---
+
+## Email Growth System (2026-07-21)
+
+- **`SubscribePopup`** — fires at 45% scroll depth, localStorage-gated (14-day cooldown), dark SL aesthetic, email + firstName → `/api/subscribe`. Wired in root `layout.tsx`.
+- **`SupportPopup`** — fires at 88% scroll after subscribe popup has shown, bottom-right corner, $4.99/mo Reader pitch → `/support`. 30-day cooldown.
+- **`/api/newsletter/send-post`** — POST `{title, excerpt, postUrl, section}` → branded SL post-announcement broadcast via Resend. Auth-gated (`ADMIN_SEND_SECRET`).
+- **`/admin/send`** — Tabbed admin UI: "Announce a Post" (structured form → send-post route) + "Write a Newsletter" (freeform → send route). Section dropdown (Profile/Essay/The Back Forty/Places/Books/Arts).
 
 ## SL Places — City Targeting Engine (2026-07-17)
 
