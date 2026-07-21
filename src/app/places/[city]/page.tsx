@@ -13,6 +13,9 @@ import { getCityMeta } from "@/lib/city-meta"
 import CityNewsletterSignup from "@/app/components/CityNewsletterSignup"
 import SectionLinks from "@/app/components/SectionLinks"
 import ShareRow from "@/app/components/ShareRow"
+import SpotifyEmbed from "@/app/components/SpotifyEmbed"
+import CityThemePlayer from "@/app/components/CityThemePlayer"
+import { getPlaylistId } from "@/lib/spotify-config"
 
 export const revalidate = 86400 // revalidate daily
 
@@ -219,6 +222,16 @@ export default async function CityPage({ params }: Props) {
             <p style={{ ...BODY, fontSize: "0.75rem", margin: 0 }}>{topCategories}</p>
           )}
         </div>
+      </div>
+
+      {/* CITY THEME AUDIO + SPOTIFY */}
+      <div className="mx-auto max-w-4xl px-6 pb-2">
+        <CityThemePlayer citySlug={citySlug} />
+        <SpotifyEmbed
+          playlistId={getPlaylistId(citySlug)}
+          title="Listening — Southern Legends"
+          compact
+        />
       </div>
 
       {/* HERO PHOTO */}

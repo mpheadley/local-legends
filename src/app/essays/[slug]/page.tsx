@@ -27,7 +27,9 @@ import JournalCard from "@/app/components/JournalCard";
 import ProfileCardHero from "@/app/components/ProfileCardHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
 import { getEssayMerch } from "@/lib/merch";
-import ClosingSection from "@/app/components/ClosingSection";
+import ClosingSection from "@/app/components/ClosingSection"
+import SpotifyEmbed from "@/app/components/SpotifyEmbed"
+import { getPlaylistId } from "@/lib/spotify-config";
 import Callout from "@/app/components/Callout";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
 import BookTeaser from "@/app/components/BookTeaser";
@@ -138,7 +140,10 @@ const mdxComponents = {
 type Params = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
-  return getJournalSlugs().map((slug) => ({ slug }));
+  return getJournalSlugs()
+    .map(getJournalPostBySlug)
+    .filter((p): p is NonNullable<typeof p> => p !== null && p.frontmatter.published)
+    .map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
@@ -182,7 +187,7 @@ function formatDate(dateStr: string): string {
 export default async function JournalPostPage({ params }: { params: Params }) {
   const { slug } = await params;
   const post = getJournalPostBySlug(slug);
-  if (!post) notFound();
+  if (!post || !post.frontmatter.published) notFound();
 
   const moreJournal = getOtherJournalPosts(slug, 2);
   const profiles = getAllProfiles().slice(0, 2);
@@ -222,6 +227,8 @@ export default async function JournalPostPage({ params }: { params: Params }) {
     mainEntityOfPage: `${siteConfig.url}/essays/${slug}`,
   };
 
+  const heroSrc = frontmatter.heroImage || frontmatter.image;
+
   return (
     <main id="main-content">
       <ReadingProgressBar />
@@ -232,10 +239,24 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
       {/* Hero */}
       <section
-        className="relative text-white overflow-hidden gradient-hero"
-        style={{ viewTransitionName: `journal-hero-${slug}` } as React.CSSProperties}
+        className={`relative text-white overflow-hidden ${heroSrc ? "" : "gradient-hero"}`}
+        style={{ ...(heroSrc ? { background: "var(--color-ll-dark)" } : {}), viewTransitionName: `journal-hero-${slug}` } as React.CSSProperties}
       >
-        <div className="absolute inset-0 bg-black/50 z-[1]" aria-hidden="true" />
+        {heroSrc ? (
+          <>
+            <Image
+              src={heroSrc}
+              alt={frontmatter.imageAlt ?? frontmatter.title}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ll-dark/95 via-ll-dark/60 to-ll-dark/30 z-[1]" aria-hidden="true" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-black/50 z-[1]" aria-hidden="true" />
+        )}
         <div className="relative z-10 max-w-3xl mx-auto px-6 pt-28 pb-14 md:pt-32 md:pb-18">
           <Link
             href="/essays"
@@ -261,8 +282,16 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             </p>
           )}
 
+          {/* Byline — guest posts always run under the guest's byline;
+              Matt is credited as Founder & Editor. Site pieces run as Matt. */}
           <div className="flex flex-wrap items-center gap-4 mt-6 text-sm text-white/60">
-            <span>By {siteConfig.author}</span>
+            <span>By {frontmatter.author ?? siteConfig.author}</span>
+            {frontmatter.author && frontmatter.author !== siteConfig.author && (
+              <>
+                <span aria-hidden="true">&middot;</span>
+                <span>Edited by {siteConfig.author}, Founder &amp; Editor</span>
+              </>
+            )}
             <span aria-hidden="true">&middot;</span>
             <span>{formatDate(frontmatter.date)}</span>
             <span aria-hidden="true">&middot;</span>
@@ -275,7 +304,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
       <article className="bg-ll-light">
         <div className="relative max-w-3xl mx-auto px-6 py-12 md:py-16 prose-journal">
           <ArticleGate slug={slug} />
-          {frontmatter.image && (
+          {frontmatter.image && frontmatter.image !== heroSrc && (
             <div className="not-prose mb-10">
               <Image
                 src={frontmatter.image}
@@ -329,6 +358,15 @@ export default async function JournalPostPage({ params }: { params: Params }) {
           />
         );
       })()}
+
+      {/* Spotify — Southern Legends playlist */}
+      <div className="max-w-3xl mx-auto px-6 mt-2">
+        <SpotifyEmbed
+          playlistId={getPlaylistId("southern-legends")}
+          title="Listening — Southern Legends"
+          compact
+        />
+      </div>
 
       <Comments slug={slug} />
 
