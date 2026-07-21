@@ -364,18 +364,6 @@ export default function BackFortyResourcesPage() {
                       border: "1px solid var(--color-ll-border)",
                       borderRadius: "6px",
                       padding: "1.25rem 1.5rem",
-                      transition: "border-color 0.15s, box-shadow 0.15s",
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.borderColor =
-                        "var(--color-ll-accent)";
-                      (e.currentTarget as HTMLDivElement).style.boxShadow =
-                        "0 2px 8px rgba(0,0,0,0.07)";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.borderColor =
-                        "var(--color-ll-border)";
-                      (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
                     }}
                   >
                     <div
