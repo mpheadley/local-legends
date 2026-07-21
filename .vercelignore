@@ -2,6 +2,9 @@ content/research/
 content/matt-headley-sources/
 content/journal-drafts/
 content/voice-samples/
+content/listicles-national-staging/
+content/drafts/
+content/businesses/
 print/
 assets/
 podcast-production/
@@ -9,3 +12,4 @@ interviews/
 audio/
 merch/
 node_modules/
+public/images/locations/
