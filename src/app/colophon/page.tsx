@@ -122,8 +122,8 @@ export default function ColophonPage() {
               Southern Legends is written and produced by{" "}
               <a href="/about" className="text-ll-primary hover:underline">
                 Matt Headley
-              </a>{" "}
-              in Jacksonville, Alabama.
+              </a>
+              {" "}— Pastor of Ecclesia Community, flower farmer, and editor of Southern Legends. He lives with his family in Pleasant Valley, Alabama.
             </p>
           </footer>
 
