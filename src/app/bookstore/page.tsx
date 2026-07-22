@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   openGraph: { url: "/bookstore" },
 };
 
+const AFFILIATE_ID = "southernlegends"; // bookshop.org/shop/southernlegends
+
+function bookshopLink(isbn: string): string {
+  return `https://bookshop.org/a/${AFFILIATE_ID}/${isbn}`;
+}
+
 const SECTIONS = [
   {
     title: "The Land",
@@ -18,31 +24,31 @@ const SECTIONS = [
         title: "The Unsettling of America",
         author: "Wendell Berry",
         note: "The original argument. Still unanswered.",
-        url: "https://bookshop.org/search?q=the+unsettling+of+america+wendell+berry",
+        url: bookshopLink("9781619020498"),
       },
       {
         title: "Ecology of a Cracker Childhood",
         author: "Janisse Ray",
         note: "Georgia longleaf pine as memoir. The best nature writing in the South.",
-        url: "https://bookshop.org/search?q=ecology+of+a+cracker+childhood",
+        url: bookshopLink("9781571312778"),
       },
       {
         title: "Animal, Vegetable, Miracle",
         author: "Barbara Kingsolver",
         note: "The honest version of what YouTube homesteading promises.",
-        url: "https://bookshop.org/search?q=animal+vegetable+miracle+kingsolver",
+        url: bookshopLink("9780060852559"),
       },
       {
         title: "Everything I Want to Do Is Illegal",
         author: "Joel Salatin",
         note: "The foil. Read it to understand what you're up against — or what people think they're reclaiming.",
-        url: "https://bookshop.org/search?q=everything+i+want+to+do+is+illegal+salatin",
+        url: bookshopLink("9780963810946"),
       },
       {
         title: "A Childhood: The Biography of a Place",
         author: "Harry Crews",
         note: "South Georgia dirt and what grows in it. Not romantic. That's why it's great.",
-        url: "https://bookshop.org/search?q=a+childhood+biography+of+a+place+harry+crews",
+        url: bookshopLink("9780820313177"),
       },
     ],
   },
@@ -54,25 +60,25 @@ const SECTIONS = [
         title: "A Good Man Is Hard to Find",
         author: "Flannery O'Connor",
         note: "Grace arrives sideways. Always. O'Connor is the patron saint of this column.",
-        url: "https://bookshop.org/search?q=a+good+man+is+hard+to+find+flannery+o'connor",
+        url: bookshopLink("9780374504649"),
       },
       {
         title: "Brother to a Dragonfly",
         author: "Will Campbell",
         note: "A Mississippi Baptist preacher who figures out the gospel is bigger than his church. His brother dies. He keeps going.",
-        url: "https://bookshop.org/search?q=brother+to+a+dragonfly+will+campbell",
+        url: bookshopLink("9780826413987"),
       },
       {
         title: "Telling the Truth",
         author: "Frederick Buechner",
         note: "The gospel as tragedy, comedy, and fairy tale. The only theological book I recommend to people who hate theological books.",
-        url: "https://bookshop.org/search?q=telling+the+truth+buechner",
+        url: bookshopLink("9780060611880"),
       },
       {
         title: "The Contemplative Pastor",
         author: "Eugene Peterson",
         note: "What the job actually is, versus what everyone thinks it is.",
-        url: "https://bookshop.org/search?q=the+contemplative+pastor+eugene+peterson",
+        url: bookshopLink("9780802804129"),
       },
     ],
   },
@@ -84,25 +90,25 @@ const SECTIONS = [
         title: "All Over But the Shoutin'",
         author: "Rick Bragg",
         note: "Alabama memoir. His mother. The thing she gave him and what it cost her.",
-        url: "https://bookshop.org/search?q=all+over+but+the+shoutin+rick+bragg",
+        url: bookshopLink("9780679774020"),
       },
       {
         title: "Clay's Quilt",
         author: "Silas House",
         note: "Appalachian Kentucky fiction. The real thing.",
-        url: "https://bookshop.org/search?q=clay%27s+quilt+silas+house",
+        url: bookshopLink("9781565123793"),
       },
       {
         title: "Serena",
         author: "Ron Rash",
         note: "Appalachian noir. Biblical in structure. Devastating.",
-        url: "https://bookshop.org/search?q=serena+ron+rash",
+        url: bookshopLink("9780061470851"),
       },
       {
         title: "Native Guard",
         author: "Natasha Trethewey",
         note: "Mississippi. The Civil War. Her mother. Poetry that reads like history that reads like grief.",
-        url: "https://bookshop.org/search?q=native+guard+natasha+trethewey",
+        url: bookshopLink("9780618872657"),
       },
       {
         title: "The Oxford American",
@@ -120,25 +126,25 @@ const SECTIONS = [
         title: "Fences",
         author: "August Wilson",
         note: "The Pittsburgh Cycle. Troy Maxson. A man who fails his son and loves him and can't close the gap. The best American play.",
-        url: "https://bookshop.org/search?q=fences+august+wilson",
+        url: bookshopLink("9780452264014"),
       },
       {
         title: "The Trip to Bountiful",
         author: "Horton Foote",
         note: "Texas. An old woman trying to go home one more time. Foote is the Wendell Berry of American drama.",
-        url: "https://bookshop.org/search?q=the+trip+to+bountiful+horton+foote",
+        url: bookshopLink("9780743482912"),
       },
       {
         title: "A Streetcar Named Desire",
         author: "Tennessee Williams",
         note: "The definitive Southern Gothic stage work. Read it if you haven't. Read it again if you have.",
-        url: "https://bookshop.org/search?q=a+streetcar+named+desire+tennessee+williams",
+        url: bookshopLink("9780811216029"),
       },
       {
         title: "The Member of the Wedding",
         author: "Carson McCullers",
         note: "A novel and a play. Frankie Addams at 12 years old in a Georgia kitchen. One of the best things ever written about loneliness.",
-        url: "https://bookshop.org/search?q=the+member+of+the+wedding+carson+mccullers",
+        url: bookshopLink("9780618492398"),
       },
     ],
   },
