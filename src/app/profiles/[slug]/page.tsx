@@ -37,7 +37,6 @@ import MerchBlock from "@/app/components/MerchBlock";
 import ArtCredit from "@/app/components/ArtCredit";
 import Callout from "@/app/components/Callout";
 import NextProfileCard from "@/app/components/NextProfileCard";
-import BookTeaser from "@/app/components/BookTeaser";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -450,32 +449,6 @@ export default async function ProfilePage({
       <article className="bg-ll-light">
         <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 prose-profile">
           <MDXRemote source={content} components={mdxComponents} />
-
-          {/* Gather Collective CTA */}
-          <div style={{
-            margin: '48px 0 0',
-            padding: '28px 32px',
-            background: '#f5f0e8',
-            borderRadius: 12,
-            borderLeft: '4px solid #2C5F2E',
-          }}>
-            <div style={{ fontSize: 13, fontWeight: 700, color: '#2C5F2E', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 8 }}>
-              Gather Collective
-            </div>
-            <div style={{ fontSize: 16, fontWeight: 600, color: '#1a1a1a', marginBottom: 8 }}>
-              The people in these stories are building something — and you might be too.
-            </div>
-            <div style={{ fontSize: 14, color: '#555', marginBottom: 16, lineHeight: 1.6 }}>
-              Gather Collective is the community for makers, creatives, and small business owners in Northeast Alabama. Workshops, membership, and the people who show up.
-            </div>
-            <a href="https://app.gatherstudio.app/collective" style={{
-              display: 'inline-block', padding: '10px 20px',
-              background: '#2C5F2E', color: '#fff',
-              borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600,
-            }}>
-              Join the Collective
-            </a>
-          </div>
         </div>
       </article>
       <div id="share-bar-sentinel" aria-hidden="true" />
@@ -500,8 +473,6 @@ export default async function ProfilePage({
           </a>
         </div>
       </div>
-
-      <BookTeaser />
 
       <Comments slug={slug} />
 
@@ -541,16 +512,6 @@ export default async function ProfilePage({
               {related.map((p) => (
                 <ProfileCardHero key={p.slug} profile={p} />
               ))}
-            </div>
-            {/* Journal aside */}
-            <div className="mt-10 pt-6 border-t border-ll-border text-center">
-              <Link
-                href="/essays/no-shade"
-                className="text-sm hover:text-ll-primary transition-colors"
-                style={{ fontFamily: "var(--font-heading)", color: "var(--color-ll-text-light)" }}
-              >
-                Meanwhile in the journal: <em>No Shade</em> →
-              </Link>
             </div>
           </div>
         </section>
