@@ -103,3 +103,12 @@
 - Project: `southern-legends` (`prj_o78QHj3ziy62Rgg1yZnGFt202VQd`)
 - Live: southernlegends.blog
 - Email from address updated to noreply@gatherstudio.app (was noreply@plainspokenblueprint.com)
+
+## /merch (2026-07-26)
+- 6 shirts: PV Raiders XC, Survived Woodstock, Anniston 45yr, SL Run, Raider Road Runners, CLT Trail
+- 4 stickers: SL, Raiders, Woodstock, CLT — $4 each
+- Cart checkout with Stripe inline price_data
+- Bundle deal: 3+ shirts = 20% off
+- Team pricing: $25/shirt via checkbox
+- Pre-order: ships 2–3 weeks after Woodstock 5K (Aug 2)
+- 25% of PV Raiders XC sales donated to XC program

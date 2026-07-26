@@ -10,6 +10,6 @@ assets/
 podcast-production/
 interviews/
 audio/
-merch/
+/merch/
 node_modules/
 public/images/locations/
