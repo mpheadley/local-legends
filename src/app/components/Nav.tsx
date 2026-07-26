@@ -33,6 +33,8 @@ export default function Nav() {
     { label: "Guides", href: "/listicles" },
     { label: "Arts", href: "/arts" },
     { label: "The Land", href: "/land" },
+    { label: "Theology", href: "/theology" },
+    { label: "Merch", href: "/merch" },
   ];
   const allLinks = [...navLinks, ...moreLinks];
   const supportLink = { label: "Support", href: "/support" };

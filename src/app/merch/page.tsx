@@ -75,7 +75,7 @@ const BUNDLE_DISCOUNT = 0.20
 type CartItem = { id: string; name: string; size?: string; price: number; qty: number }
 
 const s = {
-  page: { background: '#0d0d0d', minHeight: '100vh', padding: '60px 24px', color: '#f5f0e8', fontFamily: 'sans-serif' } as React.CSSProperties,
+  page: { background: '#0d0d0d', minHeight: '100vh', padding: '96px 24px 60px', color: '#f5f0e8', fontFamily: 'sans-serif' } as React.CSSProperties,
   wrap: { maxWidth: 1060, margin: '0 auto' } as React.CSSProperties,
   preorderBanner: { background: 'rgba(204,32,32,.08)', border: '1px solid rgba(204,32,32,.25)', borderRadius: 10, padding: '14px 20px', marginBottom: 36, fontSize: 13, color: 'rgba(245,240,232,.6)', lineHeight: 1.7 } as React.CSSProperties,
   bundleBanner: { background: 'rgba(202,138,4,.1)', border: '1px solid rgba(202,138,4,.35)', borderRadius: 10, padding: '14px 20px', marginBottom: 24, fontSize: 13, color: 'rgba(245,240,232,.7)', lineHeight: 1.7 } as React.CSSProperties,
@@ -317,6 +317,12 @@ export default function MerchPage() {
           <div><p style={s.footerLabel}>Bundle deal</p><p style={s.footerVal}>3+ shirts = 20% off all shirts</p></div>
           <div><p style={s.footerLabel}>Team pricing</p><p style={s.footerVal}>$25 for athletes & coaches</p></div>
           <div><p style={s.footerLabel}>Custom orders</p><p style={s.footerVal}>matt@southernlegends.blog</p></div>
+        </div>
+
+        <div style={{ marginTop: 40, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,.06)', textAlign: 'center' }}>
+          <a href="/support" style={{ fontSize: 13, color: 'rgba(245,240,232,.35)', textDecoration: 'none' }}>
+            Want to support the publication directly? →
+          </a>
         </div>
 
       </div>

@@ -69,6 +69,14 @@ export default function SupportPage() {
             It costs time, miles, and a lot of cold coffee. If you want to help keep it going, here&apos;s how.
           </p>
 
+          <div className="not-prose mt-8 mb-10 p-5 rounded-lg border border-ll-border bg-ll-light-2">
+            <p className="text-xs uppercase tracking-widest text-ll-text-light mb-2 font-semibold">Event &amp; Trail Merch</p>
+            <p className="text-sm text-ll-text mb-3">Race tees, trail stickers, and NE Alabama gear — available for pre-order or at the booth.</p>
+            <a href="/merch" className="inline-block text-sm font-semibold text-ll-primary border border-ll-primary px-4 py-2 hover:bg-ll-primary hover:text-white transition-colors rounded">
+              Shop event merch →
+            </a>
+          </div>
+
           <div className="not-prose mt-10">
               <div className="flex gap-4 justify-center flex-wrap mb-6">
                 <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
