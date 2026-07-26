@@ -5,6 +5,8 @@ slug: god-and-the-algorithm-book
 status: published
 tags: ["faith", "technology", "AI", "books", "theology"]
 description: "The Hebrew Bible from Genesis through Judges is one long argument against concentrated power. The algorithm is the new king."
+image: "/images/essays/god-and-the-algorithm-book-hero.webp"
+imageAlt: "A wilderness horizon at dusk beneath a luminous geometric network in the sky"
 ---
 
 I've been sitting with a question for about two years now, and I finally think I have enough to say something about it.

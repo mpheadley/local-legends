@@ -5,6 +5,8 @@ slug: tend-book
 status: published
 tags: ["marriage", "formation", "faith", "books", "tend"]
 description: "Most of the couples sitting across from me in premarital counseling are thinking about the ceremony. Not many of them are thinking about what they're bringing in."
+image: "/images/essays/tend-book-hero.webp"
+imageAlt: "Two wooden chairs on a farmhouse porch overlooking a golden field"
 ---
 
 I've been officiating weddings for a long time. Long enough to know that most of the couples sitting across from me in premarital counseling are thinking about the ceremony. The flowers. Who's sitting where. Whether the caterer confirmed.

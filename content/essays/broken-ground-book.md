@@ -5,6 +5,8 @@ slug: broken-ground-book
 status: published
 tags: ["memoir", "Alabama", "faith", "books", "broken-ground", "mental-health"]
 description: "For the past year, the Southern Legends profiles have been doing double work. On the surface, they're portraits of people in Calhoun County. Underneath, they've been something else."
+image: "/images/essays/broken-ground-book-hero.webp"
+imageAlt: "A misty northeast Alabama valley at dawn with a small country church"
 ---
 
 I've been working on something I want to tell you about.

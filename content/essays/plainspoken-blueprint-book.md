@@ -5,6 +5,8 @@ slug: plainspoken-blueprint-book
 status: published
 tags: ["business", "messaging", "plainspoken", "books", "writing"]
 description: "I've been working on something for a while now, and I want to tell you about it before it's finished."
+image: "/images/essays/plainspoken-blueprint-book-hero.webp"
+imageAlt: "An old drafting table with a hand-drawn plan in clay-gold ink on cream paper"
 ---
 
 I've been working on something for a while now, and I want to tell you about it before it's finished.
