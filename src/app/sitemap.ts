@@ -120,6 +120,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.4,
     },
+    {
+      url: `${siteConfig.url}/merch`,
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
     // Content entries
     ...profileEntries,
     ...journalEntries,
