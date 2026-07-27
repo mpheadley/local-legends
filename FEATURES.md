@@ -131,3 +131,8 @@
 - `src/lib/trails.ts` — typed trail data, helper fns
 - Trails added to SectionLinks nav
 - Daily trail scraper: `tools/trail-scraper.py` runs at 7:15am, SMS summary
+- `/api/trails/news` — serves trail news from scraper JSON, filterable by slug
+- Trail news section on detail pages (shows when scraper finds items)
+- `/admin/trail-reviews` — approve/reject/delete reviews, PIN-gated
+- `/api/admin/trail-reviews` — GET/PATCH/DELETE for review moderation
+- Stripe webhook updated: logs trail_support donations to Supabase on checkout.session.completed

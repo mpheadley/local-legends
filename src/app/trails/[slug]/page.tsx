@@ -56,6 +56,9 @@ export default function TrailPage() {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [supportAmount, setSupportAmount] = useState(25)
+  const [news, setNews] = useState<Array<{title:string;url:string;source:string;date?:string}>>([])
+
+
 
   const [form, setForm] = useState({
     name: "", rating: 0, title: "", body: "",
@@ -70,6 +73,9 @@ export default function TrailPage() {
         setReviews(d.reviews ?? [])
         setAvgRating(d.average ?? null)
       })
+    fetch(`/api/trails/news?slug=${slug}`)
+      .then(r => r.json())
+      .then(d => setNews(d.items ?? []))
   }, [slug])
 
   if (!trail) {
@@ -343,6 +349,22 @@ export default function TrailPage() {
             </div>
           )}
         </section>
+
+        {/* Trail news */}
+        {news.length > 0 && (
+          <section style={{ marginBottom: "3rem" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9A3412", marginBottom: "1rem" }}>Trail News</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              {news.map((item, i) => (
+                <a key={i} href={item.url} target="_blank" rel="noopener noreferrer"
+                  style={{ display: "block", background: "#FFFFFF", border: "1px solid var(--color-ll-border)", borderRadius: "6px", padding: "0.875rem 1rem", textDecoration: "none" }}>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", fontWeight: 600, color: "#1C1917", marginBottom: "0.25rem" }}>{item.title}</p>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#6B6560" }}>{item.source}{item.date ? ` · ${item.date}` : ""}</p>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Related trails */}
         <section style={{ marginBottom: "3rem" }}>
