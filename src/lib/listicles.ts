@@ -10,6 +10,7 @@ export interface GuideBusiness {
   zip?: string;
   tel?: string;
   web?: string;
+  image?: string;
 }
 
 export interface Listicle {

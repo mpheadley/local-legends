@@ -84,25 +84,39 @@ export default async function ListiclePage({
         {isCard ? (
           <div style={{ display: "grid", gap: "0.85rem" }}>
             {l.businesses.map((b, i) => (
-              <div key={b.name + i} style={{ display: "flex", gap: "1rem", alignItems: "center", background: "#fff", border: "1px solid rgba(154,108,47,0.15)", borderRadius: "10px", padding: "1.1rem 1.25rem" }}>
-                <div style={{ flexShrink: 0, width: "2.25rem", height: "2.25rem", borderRadius: "50%", background: "#F0EDE6", color: "#9a6c2f", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-heading)", fontSize: "1.05rem" }}>
-                  {i + 1}
-                </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "1.3rem", fontWeight: 400, color: "#1a1208", lineHeight: 1.2 }}>
+              <div key={b.name + i} style={{ display: "flex", gap: "0", alignItems: "stretch", background: "#fff", border: "1px solid rgba(154,108,47,0.15)", borderRadius: "10px", overflow: "hidden" }}>
+                {/* Photo */}
+                {b.image && (
+                  <div style={{ flexShrink: 0, width: "120px", position: "relative" }}>
+                    <Image src={b.image} alt={b.name} fill style={{ objectFit: "cover" }} sizes="120px" />
+                  </div>
+                )}
+                {/* Number badge when no photo */}
+                {!b.image && (
+                  <div style={{ flexShrink: 0, width: "3rem", background: "#F0EDE6", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <span style={{ fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#9a6c2f" }}>{i + 1}</span>
+                  </div>
+                )}
+                <div style={{ flex: 1, minWidth: 0, padding: "1rem 1.25rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                  {b.image && (
+                    <span style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "0.2rem" }}>
+                      #{i + 1}
+                    </span>
+                  )}
+                  <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "1.25rem", fontWeight: 400, color: "#1a1208", lineHeight: 1.2, margin: 0 }}>
                     {b.web ? <a href={b.web} target="_blank" rel="noopener" style={{ color: "#1a1208", textDecoration: "none" }}>{b.name}</a> : b.name}
                   </h2>
-                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "#6b5040", marginTop: "0.15rem" }}>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#6b5040", marginTop: "0.15rem", marginBottom: 0 }}>
                     {b.city}{b.zip ? ` · ${b.zip}` : ""}
                   </p>
-                  <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.6rem", flexWrap: "wrap" }}>
+                  <div style={{ display: "flex", gap: "0.6rem", marginTop: "0.65rem", flexWrap: "wrap" }}>
                     {b.tel && (
-                      <a href={telHref(b.tel)} style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", fontWeight: 600, color: "#9a6c2f", background: "#F0EDE6", padding: "0.35rem 0.75rem", borderRadius: "5px", textDecoration: "none" }}>
+                      <a href={telHref(b.tel)} style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", fontWeight: 600, color: "#9a6c2f", background: "#F0EDE6", padding: "0.3rem 0.7rem", borderRadius: "5px", textDecoration: "none" }}>
                         {b.tel}
                       </a>
                     )}
                     {b.web && (
-                      <a href={b.web} target="_blank" rel="noopener" style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", fontWeight: 600, color: "#F0EDE6", background: "#9a6c2f", padding: "0.35rem 0.85rem", borderRadius: "5px", textDecoration: "none" }}>
+                      <a href={b.web} target="_blank" rel="noopener" style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", fontWeight: 600, color: "#F0EDE6", background: "#9a6c2f", padding: "0.3rem 0.8rem", borderRadius: "5px", textDecoration: "none" }}>
                         Visit site →
                       </a>
                     )}
