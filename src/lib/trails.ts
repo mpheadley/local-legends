@@ -56,7 +56,7 @@ export const TRAILS: Trail[] = [
     alltrailsUrl: "https://www.alltrails.com/trail/us/alabama/chief-ladiga-trail",
     dogs: true,
     fee: false,
-    image: "/images/trails/chief-ladiga-trail.jpg",
+    image: "/images/journal/chief-ladiga-trail-snow-2017.webp",
     tags: ["rail-trail", "paved", "family-friendly", "cleburne-county", "clt"],
   },
   {
@@ -86,7 +86,7 @@ export const TRAILS: Trail[] = [
     alltrailsUrl: "https://www.alltrails.com/trail/us/georgia/silver-comet-trail",
     dogs: true,
     fee: false,
-    image: "/images/trails/silver-comet-trail.jpg",
+    image: "/images/journal/chief-ladiga-trail-heather-bike.webp",
     tags: ["rail-trail", "paved", "family-friendly", "georgia", "silver-comet"],
   },
   {
@@ -116,7 +116,7 @@ export const TRAILS: Trail[] = [
     alltrailsUrl: "https://www.alltrails.com/trail/us/alabama/coldwater-mountain-bike-trail",
     dogs: true,
     fee: false,
-    image: "/images/trails/coldwater-mountain.jpg",
+    image: "/images/guides/trail-race-hero.webp",
     tags: ["mountain-bike", "singletrack", "imba-epic", "oxford-al", "technical"],
   },
   {
@@ -146,7 +146,7 @@ export const TRAILS: Trail[] = [
     alltrailsUrl: "https://www.alltrails.com/trail/us/alabama/pinhoti-trail",
     dogs: true,
     fee: false,
-    image: "/images/trails/pinhoti-trail.jpg",
+    image: "/images/journal/matt-headley-hiking.webp",
     tags: ["long-distance", "backpacking", "thru-hiking", "talladega", "cheaha"],
   },
   {
@@ -177,7 +177,7 @@ export const TRAILS: Trail[] = [
     dogs: true,
     fee: true,
     feeNote: "$5/vehicle day use",
-    image: "/images/trails/cheaha-state-park.jpg",
+    image: "/images/journal/the-trail-at-night.webp",
     tags: ["state-park", "summit", "views", "cleburne-county", "pinhoti-access"],
   },
   {
@@ -205,7 +205,7 @@ export const TRAILS: Trail[] = [
     website: "https://www.oxfordal.gov",
     dogs: true,
     fee: false,
-    image: "/images/trails/oxford-lake-trail.jpg",
+    image: "/images/journal/chief-ladiga-trail-peugeot-park.webp",
     tags: ["paved", "lake", "family-friendly", "oxford-al", "flat"],
   },
   {
@@ -233,7 +233,7 @@ export const TRAILS: Trail[] = [
     elevationGain: 60,
     dogs: true,
     fee: false,
-    image: "/images/trails/choccolocco-greenway.jpg",
+    image: "/images/profiles/anniston-museums-gardens/bird-of-prey-trail.webp",
     tags: ["greenway", "urban", "developing", "anniston", "oxford-al"],
   },
 ]
