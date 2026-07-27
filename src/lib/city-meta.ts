@@ -38,7 +38,7 @@ export const CITY_META: CityMeta[] = [
     region: "NE Alabama",
     nearbySlug: ["anniston", "oxford", "gadsden", "piedmont"],
     population: 12000,
-    tagline: "Home of Jacksonville State University",
+    tagline: "The town that taught people to sing — and kept some of them",
     heroImage: "/images/locations/jacksonville-hero.webp",
   },
   {
@@ -47,7 +47,7 @@ export const CITY_META: CityMeta[] = [
     region: "NE Alabama",
     nearbySlug: ["anniston", "jacksonville", "attalla", "albertville"],
     population: 33000,
-    tagline: "The Cultural Hub of NE Alabama",
+    tagline: "The city on the Coosa — where the falls were falling before anyone named them",
     heroImage: "/images/locations/gadsden-hero.webp",
   },
   {
@@ -56,13 +56,15 @@ export const CITY_META: CityMeta[] = [
     region: "NE Alabama",
     nearbySlug: ["anniston", "oxford", "sylacauga"],
     population: 15000,
-    tagline: "Home of Talladega Superspeedway",
+    tagline: "The Amistad Murals are here. So is the track. Both matter.",
     heroImage: "/images/locations/talladega-hero.webp",
   },
   {
     slug: "centre",
     region: "NE Alabama",
     nearbySlug: ["gadsden", "attalla"],
+    population: 3500,
+    tagline: "Cherokee County seat — named for a people, sitting on their river",
     heroImage: "/images/locations/centre-hero.webp",
   },
   {
@@ -71,6 +73,7 @@ export const CITY_META: CityMeta[] = [
     region: "NE Alabama",
     nearbySlug: ["jacksonville", "anniston", "cedartown"],
     population: 5000,
+    tagline: "At the foot of Cheaha — where seventh graders take the stage and teach you something",
     heroImage: "/images/locations/piedmont-hero.webp",
   },
   {
@@ -79,6 +82,7 @@ export const CITY_META: CityMeta[] = [
     region: "NE Alabama",
     nearbySlug: ["gadsden", "albertville"],
     population: 5500,
+    tagline: "Where the Coosa Valley meets the sand mountain ridge",
     heroImage: "/images/locations/attalla-hero.webp",
   },
   {

@@ -4,10 +4,22 @@ import { useEffect, useState } from "react";
 
 const FREE_LIMIT = 3;
 const READS_KEY = "sl_reads";
+const MONTH_KEY = "sl_reads_month";
 const UNLOCKED_KEY = "sl_unlocked";
+
+function currentMonth(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth() + 1}`;
+}
 
 function getReads(): string[] {
   try {
+    // Reset the meter at the start of each calendar month so "this month" is honest.
+    if (localStorage.getItem(MONTH_KEY) !== currentMonth()) {
+      localStorage.setItem(MONTH_KEY, currentMonth());
+      localStorage.setItem(READS_KEY, "[]");
+      return [];
+    }
     return JSON.parse(localStorage.getItem(READS_KEY) ?? "[]");
   } catch {
     return [];
@@ -19,13 +31,20 @@ function isUnlocked(): boolean {
 }
 
 export default function ArticleGate({ slug }: { slug: string }) {
+  const [ready, setReady] = useState(false);
+  const [unlocked, setUnlocked] = useState(false);
+  const [count, setCount] = useState(0);
   const [gated, setGated] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   useEffect(() => {
-    if (isUnlocked()) return;
+    if (isUnlocked()) {
+      setUnlocked(true);
+      setReady(true);
+      return;
+    }
 
     const reads = getReads();
     if (!reads.includes(slug)) {
@@ -33,9 +52,9 @@ export default function ArticleGate({ slug }: { slug: string }) {
       localStorage.setItem(READS_KEY, JSON.stringify(reads));
     }
 
-    if (reads.length >= FREE_LIMIT) {
-      setGated(true);
-    }
+    setCount(reads.length);
+    if (reads.length >= FREE_LIMIT) setGated(true);
+    setReady(true);
   }, [slug]);
 
   async function handleSubmit(e: React.FormEvent) {
@@ -55,7 +74,10 @@ export default function ArticleGate({ slug }: { slug: string }) {
       if (res.ok) {
         localStorage.setItem(UNLOCKED_KEY, "true");
         setStatus("success");
-        setTimeout(() => setGated(false), 800);
+        setTimeout(() => {
+          setGated(false);
+          setUnlocked(true);
+        }, 800);
       } else {
         setStatus("error");
       }
@@ -64,8 +86,29 @@ export default function ArticleGate({ slug }: { slug: string }) {
     }
   }
 
-  if (!gated) return null;
+  if (!ready || unlocked) return null;
 
+  // Running heads-up meter — shown before the reader hits the wall.
+  if (!gated) {
+    const left = FREE_LIMIT - count;
+    return (
+      <div className="not-prose mb-8 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 rounded border border-ll-border bg-white px-4 py-3">
+        <p className="text-sm text-ll-text">
+          Free story <strong className="text-ll-dark">{count}</strong> of {FREE_LIMIT} this month
+          {" · "}
+          <strong className="text-ll-dark">{left}</strong> left
+        </p>
+        <a
+          href="/subscribe"
+          className="whitespace-nowrap text-sm font-semibold text-ll-primary hover:underline"
+        >
+          Subscribe free for unlimited →
+        </a>
+      </div>
+    );
+  }
+
+  // The wall — reader has used all free stories this month.
   return (
     <div className="absolute bottom-0 left-0 right-0 z-20" style={{ top: "45%" }}>
       {/* Gradient fade */}
@@ -79,7 +122,7 @@ export default function ArticleGate({ slug }: { slug: string }) {
       <div className="absolute top-32 left-0 right-0 bottom-0 bg-ll-light flex items-start justify-center px-6 pt-8">
         <div className="max-w-md w-full text-center">
           <p className="text-xs font-semibold tracking-widest uppercase text-ll-text-light mb-3">
-            3 of 3 free stories this month
+            {FREE_LIMIT} of {FREE_LIMIT} free stories this month
           </p>
           <h2
             className="text-2xl md:text-3xl font-bold text-ll-dark mb-3"

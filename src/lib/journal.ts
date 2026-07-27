@@ -12,6 +12,12 @@ export interface JournalFrontmatter {
   date: string;
   excerpt: string;
   published: boolean;
+  author?: string;
+  authorBio?: string;
+  authorUrl?: string;
+  authorImage?: string;
+  category?: string;
+  crosspost?: string;
   image?: string;
   imageAlt?: string;
   heroImage?: string;

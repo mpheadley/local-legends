@@ -205,6 +205,50 @@ export default function AboutPage() {
             </div>
           </div>
 
+          <h2 id="jsu-opera">JSU Opera</h2>
+
+          <p>
+            Before the flower farm, before the software, there was opera. I sang
+            at Jacksonville State for several years under Nathan Wight.
+            We did full productions in the Ernest Stone Performing Arts Center —
+            <em> Pirates of Penzance</em>, <em>Hansel and Gretel</em>,
+            <em> The Mercato</em>. Real costumes, real pit orchestra, real
+            opening nights.
+          </p>
+
+          <p>
+            I was a baritone. I also sang with the choir and show band at Gadsden State on a full scholarship. I auditioned for Sweeney Todd this month and turned down the role of Judge Turpin. Some things you say no to on purpose.
+          </p>
+
+          <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
+            <figure>
+              <Image
+                src="/images/about/jsu-opera-pirates.webp"
+                alt="Jacksonville Opera Theatre — The Pirates of Penzance (2007), Ernest Stone Performing Arts Center and Pell City Center"
+                width={960}
+                height={1280}
+                className="w-full rounded-lg object-cover"
+                style={{ maxHeight: 360, objectFit: "cover", objectPosition: "top" }}
+              />
+              <figcaption className="text-xs text-ll-text-light mt-2 text-center">
+                <em>The Pirates of Penzance</em> · Jacksonville Opera Theatre · 2007
+              </figcaption>
+            </figure>
+            <figure>
+              <Image
+                src="/images/about/jsu-opera-hansel.webp"
+                alt="Jacksonville Opera Theatre — Hansel and Gretel, JSU Dept. of Music 2007, cast-signed poster"
+                width={960}
+                height={1280}
+                className="w-full rounded-lg object-cover"
+                style={{ maxHeight: 360, objectFit: "cover", objectPosition: "top" }}
+              />
+              <figcaption className="text-xs text-ll-text-light mt-2 text-center">
+                <em>Hansel and Gretel</em> · JSU Dept. of Music · 2007 · signed by the cast
+              </figcaption>
+            </figure>
+          </div>
+
           <h2>Know Someone Worth Writing About?</h2>
 
           <p>

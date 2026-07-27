@@ -43,12 +43,16 @@ export default function PhotoCarousel({ slides, title }: PhotoCarouselProps) {
     return (wrap.offsetWidth - slideEl.offsetWidth) / 2 - sum;
   }, [idx]);
 
-  // Apply transform
-  useEffect(() => {
+  // Apply transform (centers the active slide)
+  const applyTransform = useCallback(() => {
     const track = trackRef.current;
     if (!track) return;
     track.style.transform = `translateX(${getOffset()}px)`;
-  }, [idx, getOffset]);
+  }, [getOffset]);
+
+  useEffect(() => {
+    applyTransform();
+  }, [idx, applyTransform]);
 
   // Recalculate on resize
   useEffect(() => {
@@ -156,7 +160,13 @@ export default function PhotoCarousel({ slides, title }: PhotoCarouselProps) {
               <img
                 src={slide.src}
                 alt={slide.alt}
-                loading="lazy"
+                loading={i === idx ? "eager" : "lazy"}
+                fetchPriority={i === idx ? "high" : "auto"}
+                decoding="async"
+                onLoad={() => {
+                  // Re-center once real dimensions are known (fixes first-paint mis-center)
+                  if (i === idx) applyTransform();
+                }}
                 className="carousel-slide-img"
               />
               {slide.caption && (

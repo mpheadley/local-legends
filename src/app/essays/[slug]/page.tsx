@@ -34,6 +34,7 @@ import Callout from "@/app/components/Callout";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
 import BookTeaser from "@/app/components/BookTeaser";
 import ArticleGate from "@/app/components/ArticleGate";
+import PhotoCarouselLoader from "@/app/components/PhotoCarouselLoader";
 
 function Dateline({ children }: { children: React.ReactNode }) {
   return (
@@ -135,6 +136,7 @@ const mdxComponents = {
   InlineImage,
   Dateline,
   Callout,
+  PhotoCarouselLoader,
 };
 
 type Params = Promise<{ slug: string }>;
