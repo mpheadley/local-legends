@@ -49,6 +49,11 @@ content/matt-headley-sources/chatgpt-export-annistonfirst-2/
 *.tsbuildinfo
 next-env.d.ts
 
+# Raw source photos — HEIC and large originals stay on T5, never in git
+*.HEIC
+assets/redbird-willow-farm/*.jpg
+assets/redbird-willow-farm/*.JPG
+
 # Large source videos — keep on disk, never commit
 content/research/sources/*.mp4
 content/research/sources/*.mov
