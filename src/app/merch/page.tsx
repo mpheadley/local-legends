@@ -5,10 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MERCH, type MerchItem } from '@/lib/merch'
 
-const SHIRTS   = MERCH.filter(m => m.category === 'shirt')
-const TOTES    = MERCH.filter(m => m.category === 'tote')
-const STICKERS = MERCH.filter(m => m.category === 'sticker')
-const PRINTS   = MERCH.filter(m => m.category === 'print')
+const SHIRTS   = MERCH.filter(m => m.category === 'shirt' && m.available)
+const TOTES    = MERCH.filter(m => m.category === 'tote' && m.available)
+const STICKERS = MERCH.filter(m => m.category === 'sticker' && m.available)
+const PRINTS   = MERCH.filter(m => m.category === 'print' && m.available)
 
 export default function MerchPage() {
   const [notifyEmail, setNotifyEmail] = useState('')
@@ -68,9 +68,9 @@ export default function MerchPage() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-5xl px-6 pb-24">
+      <div className="relative mx-auto max-w-5xl px-6 pb-24 pt-2">
 
-        <SectionHead label="Shirts" sub="Order online · Ships after Aug 2 · Sizes S–2XL" />
+        <SectionHead label="Shirts" sub="Order online · Ships after Aug 2 · Sizes S–2XL" first />
         <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))' }}>
           {SHIRTS.map(item => <ProductCard key={item.id} item={item} />)}
         </div>
@@ -188,9 +188,9 @@ function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
   )
 }
 
-function SectionHead({ label, sub }: { label: string; sub: string }) {
+function SectionHead({ label, sub, first }: { label: string; sub: string; first?: boolean }) {
   return (
-    <div className="mt-14 mb-6">
+    <div className={`${first ? 'mt-4' : 'mt-14'} mb-6`}>
       <div className="flex items-center gap-4 mb-1">
         <div className="h-px flex-1" style={{ background: 'linear-gradient(to right, rgba(154,52,18,0.6), transparent)' }} />
         <p className="text-xs tracking-[0.35em] uppercase font-bold" style={{ color: 'var(--color-ll-primary-light)' }}>{label}</p>
