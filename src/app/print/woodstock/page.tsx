@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 }
 
 const SHIRTS = [
-  { id: '01', label: 'Cheaha Tower', note: 'Cream on black', img: '/merch/woodstock/01-cheaha-on-black.png', bg: '#111' },
-  { id: '02', label: 'Jacksonville Gamecock', note: 'Black on cream', img: '/merch/woodstock/02-gamecock-on-cream.png', bg: '#f5f0e8' },
-  { id: '03', label: 'CLT Hike + Explore', note: 'Badge on cream', img: '/merch/woodstock/03-clt-on-cream.png', bg: '#f5f0e8' },
-  { id: '04', label: 'Blossom & Decay', note: 'Mocha on black', img: '/merch/woodstock/04a-blossom-on-black.png', bg: '#111' },
-  { id: '05', label: 'Lickskillet Circle', note: 'Natural', img: '/merch/woodstock/05-lickskillet-on-olive.png', bg: '#5a6147' },
-  { id: '06', label: 'Pinhoti Trail', note: 'Cream on black', img: '/merch/woodstock/06-pinhoti-on-cream.png', bg: '#f5f0e8' },
-  { id: '07', label: 'Coldwater Mountain', note: 'Forest green', img: '/merch/woodstock/07-coldwater-on-forest.png', bg: '#2d4a2d' },
-  { id: '08', label: 'Fort McClellan', note: 'Cream on black', img: '/merch/woodstock/08-fort-on-cream.png', bg: '#f5f0e8' },
-  { id: '09', label: 'PV Raiders XC', note: 'Pirate · black shirt · 25% → Raiders program', img: '/merch/pvxc/pirate-front-nobg.png', bg: '#8B0000' },
-  { id: '10', label: 'Survived Woodstock', note: 'Event-specific design', img: '/merch/woodstock/survived-woodstock-mockup.webp', bg: '#111' },
+  { id: '01', label: 'Cheaha Tower', note: 'Cream on black', img: '/merch/woodstock/cheaha-tower-mockup.png', bg: '#111' },
+  { id: '02', label: 'Jacksonville Gamecock', note: 'Black on cream', img: '/merch/woodstock/jacksonville-gamecock-mockup.png', bg: '#f0ebe0' },
+  { id: '03', label: 'CLT Hike + Explore', note: 'Badge on cream', img: '/merch/woodstock/clt-hike-explore-mockup.png', bg: '#f0ebe0' },
+  { id: '04', label: 'Blossom & Decay', note: 'Mocha on black', img: '/merch/woodstock/blossom-decay-mockup.png', bg: '#140e0a' },
+  { id: '05', label: 'Lickskillet Circle', note: 'Natural', img: '/merch/woodstock/lickskillet-circle-mockup.png', bg: '#565f40' },
+  { id: '06', label: 'Pinhoti Trail', note: 'Cream on black', img: '/merch/woodstock/pinhoti-trail-mockup.png', bg: '#f0ebe0' },
+  { id: '07', label: 'Coldwater Mountain', note: 'Forest green', img: '/merch/woodstock/coldwater-mountain-mockup.png', bg: '#2c4a2c' },
+  { id: '08', label: 'Fort McClellan', note: 'Cream on black', img: '/merch/woodstock/fort-mcclellan-mockup.png', bg: '#f0ebe0' },
+  { id: '09', label: 'PV Raiders XC', note: 'Pirate · black shirt · 25% → Raiders program', img: '/merch/woodstock/pv-raiders-xc-mockup.png', bg: '#0c0c0c' },
+  { id: '10', label: 'Survived Woodstock', note: 'Event-specific design', img: '/merch/woodstock/survived-woodstock-mockup.png', bg: '#0c0c0c' },
 ]
 
 const STICKERS = [
