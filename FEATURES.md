@@ -123,7 +123,7 @@
 - `/trails/[slug]` — individual trail page: full profile, highlights, difficulty stats, AllTrails link
 - Star ratings with avg + review count in hero
 - Review submission form: rating, conditions, difficulty felt, date hiked → Supabase (approved=false)
-- CLT support widget: Stripe checkout passthrough, $10/$25/$50/$100 tiers, 3% SL fee
+- CLT support widget: Stripe checkout passthrough, $10/$25/$50/$100 tiers, 15% SL platform fee (85% to CLT), disclosed to donor
 - Sponsor slot on every trail page: $75/mo
 - `/api/trails/review` — GET (approved reviews by slug) + POST (submit review)
 - `/api/trails/support` — Stripe checkout for CLT donations

@@ -6,7 +6,7 @@ const stripe = process.env.STRIPE_SECRET_KEY
   : null
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://southernlegends.blog"
-const SL_FEE_PERCENT = 3
+const SL_FEE_PERCENT = 15
 
 export async function POST(req: NextRequest) {
   if (!stripe) return NextResponse.json({ error: "Stripe not configured" }, { status: 500 })
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
         unit_amount: amountCents,
         product_data: {
           name: `Support ${trail_name}`,
-          description: `Trail maintenance, repairs, and improvements. Southern Legends collects a ${SL_FEE_PERCENT}% platform fee.`,
+          description: `Trail maintenance, repairs, and improvements. Southern Legends keeps a ${SL_FEE_PERCENT}% platform fee; the remainder goes directly to the trail organization.`,
         },
       },
       quantity: 1,

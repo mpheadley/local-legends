@@ -183,7 +183,7 @@ export default function TrailPage() {
             <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#CA8A04", marginBottom: "0.5rem" }}>Support Chief Ladiga Trail</p>
             <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#FAFAF7", fontWeight: 400, marginBottom: "0.75rem" }}>Keep the trail open.</h2>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", color: "rgba(250,250,247,0.7)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-              CLT is volunteer-maintained and community-funded. Your contribution goes directly to trail repairs, trailhead improvements, and new connections. Southern Legends collects a 3% platform fee.
+              CLT is volunteer-maintained and community-funded. Your contribution supports trail repairs, trailhead improvements, and new connections. Southern Legends keeps a 15% platform fee; 85% goes directly to CLT.
             </p>
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1.25rem" }}>
               {[10, 25, 50, 100].map(amt => (
