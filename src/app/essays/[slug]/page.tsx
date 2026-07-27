@@ -35,6 +35,7 @@ import ReadingProgressBar from "@/app/components/ReadingProgressBar";
 import BookTeaser from "@/app/components/BookTeaser";
 import ArticleGate from "@/app/components/ArticleGate";
 import PhotoCarouselLoader from "@/app/components/PhotoCarouselLoader";
+import TestimonialBlock from "@/app/components/TestimonialBlock";
 
 function Dateline({ children }: { children: React.ReactNode }) {
   return (
@@ -137,6 +138,7 @@ const mdxComponents = {
   Dateline,
   Callout,
   PhotoCarouselLoader,
+  TestimonialBlock,
 };
 
 type Params = Promise<{ slug: string }>;
@@ -241,7 +243,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
       {/* Hero */}
       <section
-        className={`relative text-white overflow-hidden ${heroSrc ? "" : "gradient-hero"}`}
+        className={`relative text-white overflow-hidden min-h-[70vh] flex flex-col justify-end ${heroSrc ? "" : "gradient-hero"}`}
         style={{ ...(heroSrc ? { background: "var(--color-ll-dark)" } : {}), viewTransitionName: `journal-hero-${slug}` } as React.CSSProperties}
       >
         {heroSrc ? (
@@ -284,14 +286,13 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             </p>
           )}
 
-          {/* Byline — guest posts always run under the guest's byline;
-              Matt is credited as Founder & Editor. Site pieces run as Matt. */}
+          {/* Byline — guest posts run under their own byline; Matt's pieces just "By Matt Headley" */}
           <div className="flex flex-wrap items-center gap-4 mt-6 text-sm text-white/60">
             <span>By {frontmatter.author ?? siteConfig.author}</span>
             {frontmatter.author && frontmatter.author !== siteConfig.author && (
               <>
                 <span aria-hidden="true">&middot;</span>
-                <span>Edited by {siteConfig.author}, Founder &amp; Editor</span>
+                <span>Southern Legends</span>
               </>
             )}
             <span aria-hidden="true">&middot;</span>
