@@ -26,11 +26,7 @@ const nextConfig: NextConfig = {
     ],
   },
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "cdn.fourthwall.com" },
-      { protocol: "https", hostname: "imgproxy.fourthwall.com" },
-      { protocol: "https", hostname: "imgproxy.fourthwall.dev" },
-    ],
+    imageSizes: [16, 32, 48, 64, 96, 128, 160, 256, 384],
   },
   async redirects() {
     return [
