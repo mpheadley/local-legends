@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SL Merch Mockup Tool</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0e0c0b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #f0ede8; padding: 0 0 80px; max-width: 1500px; margin: 0 auto; }
+  .page-header { padding: 40px 32px 20px; border-bottom: 1px solid rgba(202,138,4,0.2); margin-bottom: 0; }
+  .page-header h1 { font-size: 22px; font-weight: 900; color: #f0ede8; margin-bottom: 4px; }
+  .page-header p { font-size: 12px; color: rgba(255,255,255,0.3); }
+  /* sticky nav */
+  .nav { position: sticky; top: 0; z-index: 99; background: #0e0c0b; border-bottom: 1px solid rgba(202,138,4,0.15); padding: 10px 32px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .nav a { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 4px 10px; border-radius: 99px; background: rgba(255,255,255,0.05); color: rgba(240,237,230,0.5); text-decoration: none; transition: all 0.15s; border: 1px solid transparent; }
+  .nav a:hover { background: rgba(202,138,4,0.12); color: #ca8a04; border-color: rgba(202,138,4,0.25); }
+  .sections { padding: 0 32px; }
+  .section { margin-top: 48px; margin-bottom: 12px; }
+  .section-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; }
+  .section-header h2 { font-size: 17px; font-weight: 800; color: #f0ede8; }
+  .section-sub { font-size: 11px; color: rgba(255,255,255,0.3); }
+  .section-rule { height: 1px; background: linear-gradient(to right, rgba(202,138,4,0.3), transparent); margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
+  .card { background: #1c1917; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; transition: border-color 0.15s; }
+  .card:hover { border-color: rgba(202,138,4,0.3); }
+  .img-row { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .img-panel { position: relative; aspect-ratio: 1; background: #141210; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .img-panel:first-child { border-right: 1px solid rgba(255,255,255,0.05); }
+  .img-panel img { width: 100%; height: 100%; object-fit: contain; padding: 10px; display: block; }
+  .pl { position: absolute; top: 6px; left: 6px; font-size: 8px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 2px 6px; border-radius: 99px; }
+  .pl-d { background: rgba(249,115,22,0.15); color: #f97316; border: 1px solid rgba(249,115,22,0.2); }
+  .pl-m { background: rgba(74,222,128,0.13); color: #4ade80; border: 1px solid rgba(74,222,128,0.18); }
+  .pl-s { background: rgba(107,114,128,0.15); color: #9ca3af; border: 1px solid rgba(107,114,128,0.2); }
+  .pl-b { background: rgba(239,68,68,0.13); color: #f87171; border: 1px solid rgba(239,68,68,0.18); }
+  .pl-n { background: rgba(202,138,4,0.13); color: #ca8a04; border: 1px solid rgba(202,138,4,0.2); }
+  .ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.13); font-size: 10px; text-align: center; padding: 12px; height: 100%; }
+  .card-body { padding: 11px 13px 13px; }
+  .card-name { font-size: 13px; font-weight: 700; color: #f0ede8; margin-bottom: 2px; line-height: 1.3; }
+  .card-sub { font-size: 10px; color: rgba(255,255,255,0.3); margin-bottom: 6px; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip { display: inline-block; font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.07em; }
+  .cg { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.18); }
+  .co { background: rgba(249,115,22,0.1); color: #f97316; border: 1px solid rgba(249,115,22,0.18); }
+  .cr { background: rgba(239,68,68,0.1); color: #f87171; border: 1px solid rgba(239,68,68,0.18); }
+  .ca { background: rgba(107,114,128,0.1); color: #9ca3af; border: 1px solid rgba(107,114,128,0.18); }
+  .ck { background: rgba(202,138,4,0.1); color: #ca8a04; border: 1px solid rgba(202,138,4,0.2); }
+  .cp { background: rgba(139,92,246,0.1); color: #a78bfa; border: 1px solid rgba(139,92,246,0.2); }
+  .ct { background: rgba(20,184,166,0.1); color: #2dd4bf; border: 1px solid rgba(20,184,166,0.2); }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>SL Merch Mockup Tool</h1>
+  <p>Left = design / transparent file &nbsp;·&nbsp; Right = product mockup &nbsp;·&nbsp; All categories · Backed by merch.ts</p>
+</div>
+
+<nav class="nav">
+  <a href="#trail">Trail & Outdoor</a>
+  <a href="#history">Community & History</a>
+  <a href="#schools">Schools & Events</a>
+  <a href="#sports">Universal Sports</a>
+  <a href="#ecclesia-press">Ecclesia Press Satire</a>
+  <a href="#faith">Attune / Broken Ground</a>
+  <a href="#forager">Mushroom & Forager</a>
+  <a href="#ecclesia">Ecclesia</a>
+  <a href="#evergreens">The Evergreens</a>
+  <a href="#editorial">Art & Editorial</a>
+  <a href="#other">Other Verticals</a>
+  <a href="#stickers">Stickers</a>
+  <a href="#hats">Hats & Hoodies</a>
+  <a href="#3d">3D Prints</a>
+  <a href="#accessories">Accessories</a>
+</nav>
+
+<div class="sections">
+
+<!-- TRAIL & OUTDOOR -->
+<div class="section" id="trail">
+  <div class="section-header"><h2>Trail &amp; Outdoor</h2><span class="section-sub">Chief Ladiga · Cheaha · Pinhoti · Coldwater</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-shirt-print.png" alt="CLT"></div>
+        <div class="img-panel"><span class="pl pl-m">Olive shirt</span><img src="../public/merch/clt-shirt-mockup.webp" alt="CLT mockup"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Ladiga's Land</div><div class="card-sub">Chief Ladiga Trail · NE Alabama</div><div class="chips"><span class="chip cg">Live · $35</span><span class="chip ck">Olive</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-hike-explore-trans.png" alt="CLT Hike"></div>
+        <div class="img-panel"><span class="pl pl-m">Teal shirt</span><img src="../public/merch/clt-hike-explore-shirt.png" alt="CLT Hike mockup"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Hike &amp; Explore — CLT</div><div class="card-sub">Chief Ladiga Trail</div><div class="chips"><span class="chip cg">Live · $35</span><span class="chip ck">Teal</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/cheaha-tower-badge.png" alt="Cheaha Tower"></div>
+        <div class="img-panel"><span class="pl pl-m">Black shirt</span><img src="../public/merch/cheaha-tower-mockup.webp" alt="Cheaha Tower mockup" onerror="this.parentElement.innerHTML='<div class=ph>Needs mockup</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Cheaha Tower</div><div class="card-sub">2,413 ft · Alabama's highest point</div><div class="chips"><span class="chip cg">Live · $35</span><span class="chip ck">Black</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/cheaha-building-skyway.png" alt="Cheaha Skyway"></div>
+        <div class="img-panel"><span class="pl pl-s">Print only</span><div class="ph">11×14 art print</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Building the Skyway</div><div class="card-sub">Cheaha Mountain · CCC 1933</div><div class="chips"><span class="chip ca">Print $15</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/cheaha-lasting-sanctuary.png" alt="Cheaha Sanctuary"></div>
+        <div class="img-panel"><span class="pl pl-s">Sticker</span><div class="ph">3" round · rust red</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">To Lasting Sanctuary</div><div class="card-sub">Cheaha Mountain sticker</div><div class="chips"><span class="chip cg">Sticker $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/coldwater-shirt.png" alt="Coldwater"></div>
+        <div class="img-panel"><span class="pl pl-m">Forest shirt</span><img src="../public/merch/coldwater-shirt-mockup.webp" alt="Coldwater mockup" onerror="this.parentElement.innerHTML='<div class=ph>Needs mockup</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Coldwater Mountain</div><div class="card-sub">Oxford, Alabama · IMBA Epic</div><div class="chips"><span class="chip cg">Live · $35</span><span class="chip ck">Forest</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/pinhoti-badge-sticker.png" alt="Pinhoti"></div>
+        <div class="img-panel"><span class="pl pl-s">Sticker</span><div class="ph">3" badge · Pinhoti</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Pinhoti Trail</div><div class="card-sub">172 Miles · Talladega National Forest</div><div class="chips"><span class="chip cg">Sticker $5</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- COMMUNITY & HISTORY -->
+<div class="section" id="history">
+  <div class="section-header"><h2>Community &amp; History</h2><span class="section-sub">Freedom Riders · Model City · Fort McClellan · Lickskillet</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../merch/freedom-riders/bus-woodcut.png" alt="Freedom Riders"></div>
+        <div class="img-panel"><span class="pl pl-m">Black shirt</span><img src="../public/merch/freedom-riders/shirt-mockup-dark.webp" alt="Freedom Riders mockup"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Freedom Riders — Anniston, 1961</div><div class="card-sub">May 14, 1961 · 25% → West Anniston Foundation</div><div class="chips"><span class="chip cg">Live · $40</span><span class="chip ck">Black</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/model-city-print.png" alt="Model City"></div>
+        <div class="img-panel"><span class="pl pl-m">Cream shirt</span><img src="../public/merch/model-city-mockup-cream.webp" alt="Model City mockup"></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Model City</div><div class="card-sub">Anniston, Alabama · Est. 1872</div><div class="chips"><span class="chip cg">Live · $29</span><span class="chip ck">Cream</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/fort-mcclellan-shirt.png" alt="Fort McClellan"></div>
+        <div class="img-panel"><span class="pl pl-m">Black shirt</span><img src="../public/merch/fort-mcclellan-shirt-mockup.webp" alt="Fort McClellan mockup" onerror="this.parentElement.innerHTML='<div class=ph>Needs mockup</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Fort McClellan</div><div class="card-sub">Anniston, Alabama · 1917–1999</div><div class="chips"><span class="chip cg">Live · $35</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/lickskillet-premium-shirt.png" alt="Lickskillet"></div>
+        <div class="img-panel"><span class="pl pl-m">Black shirt</span><img src="../public/merch/lickskillet-shirt-mockup.webp" alt="Lickskillet mockup" onerror="this.parentElement.innerHTML='<div class=ph>Needs mockup</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Lickskillet · Oxford, AL</div><div class="card-sub">The Frontier Original</div><div class="chips"><span class="chip cg">Live · $35</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/diaspora-shirt.webp" alt="Diaspora"></div>
+        <div class="img-panel"><span class="pl pl-s">Needs mockup</span><div class="ph">Dark olive shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">I left. I came back.</div><div class="card-sub">SL Diaspora line</div><div class="chips"><span class="chip ca">Coming soon</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/jacksonville-gamecock-shirt.webp" alt="Jacksonville"></div>
+        <div class="img-panel"><span class="pl pl-m">Navy shirt</span><img src="../public/merch/jacksonville-gamecock-mockup.webp" alt="Jacksonville mockup" onerror="this.parentElement.innerHTML='<div class=ph>Needs mockup</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Jacksonville — Home of JSU</div><div class="card-sub">Jacksonville, Alabama · Est. 1833</div><div class="chips"><span class="chip cg">Live · $35</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/piedmont-clt-banner-print.webp" alt="Piedmont CLT"></div>
+        <div class="img-panel"><span class="pl pl-s">Print only</span><div class="ph">11×14 art print</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Piedmont — CLT Mile 0</div><div class="card-sub">Trail Town · Art Print</div><div class="chips"><span class="chip cg">Print $15</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCHOOLS & EVENTS -->
+<div class="section" id="schools">
+  <div class="section-header"><h2>Schools &amp; Events</h2><span class="section-sub">PV Raiders · Woodstock 5K · Anniston 45</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/pv-raiders-xc.webp" alt="PV Raiders"></div>
+        <div class="img-panel"><span class="pl pl-m">Black shirt</span><img src="../public/merch/pv-shirt-mockup.webp" alt="PV mockup" onerror="this.parentElement.innerHTML='<div class=ph>FW photo</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">PV Raiders XC</div><div class="card-sub">25% → Raiders XC program</div><div class="chips"><span class="chip cg">Live · $30</span><span class="chip cg">Fundraiser</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/woodstock-shirt-v2.png" alt="Woodstock"></div>
+        <div class="img-panel"><span class="pl pl-m">Navy shirt</span><img src="../public/merch/woodstock-shirt-mockup.webp" alt="Woodstock mockup" onerror="this.parentElement.innerHTML='<div class=ph>Needs mockup</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">I Survived Woodstock Avenue</div><div class="card-sub">Woodstock 5K · Anniston · Aug 2, 2026</div><div class="chips"><span class="chip cg">Live · $30</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/anniston-45-shirt.png" alt="Anniston 45"></div>
+        <div class="img-panel"><span class="pl pl-s">Needs mockup</span><div class="ph">Navy shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Anniston 45</div><div class="card-sub">45 Years of Running · Aug 2026</div><div class="chips"><span class="chip ca">Coming soon</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- UNIVERSAL SPORTS -->
+<div class="section" id="sports">
+  <div class="section-header"><h2>Universal Sports</h2><span class="section-sub">XC · MTB · Triathlon · Pirate series — any school, any team</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Badge: crossed running legs + NE AL wordmark</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Run the Ridge</div><div class="card-sub">NE Alabama Cross Country · universal XC badge</div><div class="chips"><span class="chip ca">Stub · needs GPT design</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Skull + running shoes + crossed legs · Jolly Roger XC</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Jolly Roger XC — Run Like You're Haunted.</div><div class="card-sub">Universal pirate XC · any school, any team</div><div class="chips"><span class="chip ca">Stub · needs GPT design</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Skull + bike + crossed bones · Jolly Roger MTB</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Jolly Roger MTB — Ride Like You're Cursed.</div><div class="card-sub">Universal pirate MTB · any trail, any crew</div><div class="chips"><span class="chip ca">Stub · needs GPT design</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Swim/bike/run triathlon badge · NE Alabama</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Navy shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Swim. Bike. Run. NE Alabama.</div><div class="card-sub">Tri NE Alabama · universal triathlon</div><div class="chips"><span class="chip ca">Stub · needs GPT design</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ECCLESIA PRESS — CHRISTIAN SATIRE -->
+<div class="section" id="ecclesia-press">
+  <div class="section-header"><h2>Ecclesia Press — Funny &amp; Reverent</h2><span class="section-sub">NOTW / Kerusso-style · 8-bit pixel art · Black tees</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">8-bit pixelated demon shuddering · James 2:19</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · cream/gold pixels</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Even the demons believe.</div><div class="card-sub">James 2:19 · dry theological wit</div><div class="chips"><span class="chip cp">Ecclesia Press</span><span class="chip ca">Needs GPT/Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">8-bit podcast mic + cross + lightning · pixel art</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · gold pixels</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Repent, For the Podcast Is at Hand.</div><div class="card-sub">Ecclesia Press · satirically devout</div><div class="chips"><span class="chip cp">Ecclesia Press</span><span class="chip ca">Needs GPT/Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">8-bit open door with warm light spilling out</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · cream pixels</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Sinners Welcome. Especially You.</div><div class="card-sub">No exceptions. · Bold sans</div><div class="chips"><span class="chip cp">Ecclesia Press</span><span class="chip ca">Needs GPT/Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Has design</span><img src="../public/merch/ep-chewed-gum.webp" alt="Chewed Gum"></div>
+        <div class="img-panel"><span class="pl pl-m">Mockup</span><img src="../public/merch/ep-chewed-gum.webp" alt="Chewed Gum"></div>
+      </div>
+      <div class="card-body"><div class="card-name">You were not chewed gum.</div><div class="card-sub">Purity culture, corrected.</div><div class="chips"><span class="chip cg">Has mockup</span><span class="chip cp">Ecclesia Press</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Has design</span><img src="../public/merch/ep-here-i-stand.webp" alt="Here I Stand"></div>
+        <div class="img-panel"><span class="pl pl-m">Mockup</span><img src="../public/merch/ep-here-i-stand.webp" alt="Here I Stand"></div>
+      </div>
+      <div class="card-body"><div class="card-name">"Here I Stand." — Luther, probably.</div><div class="card-sub">Reformation merch · Black · Cream · Red</div><div class="chips"><span class="chip cg">Has mockup</span><span class="chip cp">Ecclesia Press</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Typography only · "Jesus Wept. I Get It." · DM Sans</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Navy shirt · cream type</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Jesus Wept. I Get It.</div><div class="card-sub">Shortest verse, deepest truth.</div><div class="chips"><span class="chip cp">Ecclesia Press</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">8-bit church interior · pews · warm light · SINNERS WELCOME sign</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Early Church Was Weird Too.</div><div class="card-sub">You're in good company.</div><div class="chips"><span class="chip cp">Ecclesia Press</span><span class="chip ca">Needs GPT/Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Typography · Luther woodcut silhouette · "Well-Behaved Christians..."</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black · Purple · Cream · Fraunces</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Well-Behaved Christians Rarely Make History.</div><div class="card-sub">Paraphrase. You know why.</div><div class="chips"><span class="chip cp">Ecclesia Press</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ATTUNE / BROKEN GROUND FAITH LINE -->
+<div class="section" id="faith">
+  <div class="section-header"><h2>Attune &amp; Broken Ground — Serious Faith</h2><span class="section-sub">Attune = contemplative formation · Broken Ground = memoir testimony</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept · Attune</span><div class="ph">Fraunces Black · "The Wound Is the Way." · Gold accent line · Dark navy</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · cream + gold</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Wound Is the Way.</div><div class="card-sub">Rohr · Nouwen · The mystics knew. · Attune</div><div class="chips"><span class="chip ct">Attune</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept · Attune</span><div class="ph">Minimal type · "Incarnational." · Fraunces italic · no illustration</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · cream type</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Incarnational.</div><div class="card-sub">God showed up in a body. We should too. · Attune</div><div class="chips"><span class="chip ct">Attune</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept · Attune</span><div class="ph">Quiet type · "The Kingdom Comes Quietly." · Dark olive · Fraunces serif</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Dark olive shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Kingdom Comes Quietly.</div><div class="card-sub">Against triumphalism. For the long work. · Attune</div><div class="chips"><span class="chip ct">Attune</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept · Broken Ground</span><div class="ph">Woodcut figure walking with staff · slight limp · "I Walk with a Limp."</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · cream woodcut</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">I Walk with a Limp.</div><div class="card-sub">Genesis 32 · The wrestling left a mark. · Broken Ground memoir</div><div class="chips"><span class="chip cr">Broken Ground</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept · Broken Ground</span><div class="ph">Bold Fraunces · "The Credential Is the Wreckage." · cream on near-black</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · cream serif</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Credential Is the Wreckage.</div><div class="card-sub">Not the podium. The wound. · Broken Ground memoir</div><div class="chips"><span class="chip cr">Broken Ground</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept · Broken Ground</span><div class="ph">DM Sans + Fraunces split · "Beloved and Broken." · both lines true</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Navy shirt · cream type</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Beloved and Broken.</div><div class="card-sub">Both things are true. · Broken Ground memoir</div><div class="chips"><span class="chip cr">Broken Ground</span><span class="chip ca">Needs GPT</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MUSHROOM & FORAGER -->
+<div class="section" id="forager">
+  <div class="section-header"><h2>Mushroom &amp; Forager</h2><span class="section-sub">NE Alabama · Talladega forest · botanical illustration · dark humor</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Vintage botanical: golden chanterelle · serif "Chanterelle Season · Alabama · July"</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Cream shirt · gold/orange</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Chanterelle Season</div><div class="card-sub">Alabama · July · Golden in the hollow.</div><div class="chips"><span class="chip cg">SL Forager</span><span class="chip ca">Needs Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Death cap Amanita · ornate border · "Death Cap Diner / Fine Dining in the Forest Floor"</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · cream illustration · gothic</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Death Cap Diner</div><div class="card-sub">Fine Dining in the Forest Floor. · dark humor</div><div class="chips"><span class="chip cg">SL Forager</span><span class="chip ca">Needs Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Teal root network illustration · "Mycelium Network" · everything connected underground</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Dark shirt · teal illustration</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Mycelium Network</div><div class="card-sub">Everything is connected underground.</div><div class="chips"><span class="chip cg">SL Forager</span><span class="chip ca">Needs Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Teal + cream · mycelium + cross fusion · "The Underground Church"</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Black shirt · faith × fungi</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Underground Church</div><div class="card-sub">First: the mycelium. Then: everything else.</div><div class="chips"><span class="chip cg">SL Forager</span><span class="chip ct">Faith × Fungi</span><span class="chip ca">Needs Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Field guide grid: 6 Alabama species · Chanterelle/Morel/Chicken/Lion's Mane/Oyster/Porcini</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Cream shirt · ink illustration</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">NE Alabama Mycology</div><div class="card-sub">Calhoun · Cleburne · Cherokee Counties · field guide</div><div class="chips"><span class="chip cg">SL Forager</span><span class="chip ca">Needs Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Minimal badge · "Forage the Ridge" · NE Alabama · Talladega National Forest</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Sage green shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Forage the Ridge</div><div class="card-sub">NE Alabama · Talladega National Forest</div><div class="chips"><span class="chip cg">SL Forager</span><span class="chip ca">Needs Gemini</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ECCLESIA COMMUNITY -->
+<div class="section" id="ecclesia">
+  <div class="section-header"><h2>Ecclesia Community</h2><span class="section-sub">Gathered community · fresh expression · 8-bit + photoreal</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/ecclesia-pilgrims.png" alt="Ecclesia Pilgrims"></div>
+        <div class="img-panel"><span class="pl pl-m">Mockup</span><img src="../public/merch/ecclesia-pilgrims-mockup.webp" alt="Ecclesia Pilgrims mockup" onerror="this.parentElement.innerHTML='<div class=ph>Green shirt</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Ecclesia — Pilgrims</div><div class="card-sub">We are all on the way.</div><div class="chips"><span class="chip ca">Coming soon</span><span class="chip ct">Ecclesia</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../../gather/assets/merch/mockups/ecclesia-stone.png" alt="Teal Stone"></div>
+        <div class="img-panel"><span class="pl pl-m">Canonical</span><img src="../../gather/assets/merch/mockups/ecclesia-stone-text-shirt.webp" alt="Teal Stone Shirt" onerror="this.parentElement.innerHTML='<div class=ph>Black shirt</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Ancient Paths ★</div><div class="card-sub">Canonical Ecclesia shirt · teal pixel stone</div><div class="chips"><span class="chip cg">Canonical</span><span class="chip ct">Ecclesia</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/ecclesia-coin.png" alt="Ecclesia Coin"></div>
+        <div class="img-panel"><span class="pl pl-m">8-bit shirt</span><img src="../public/merch/ecclesia-coin-shirt.webp" alt="Ecclesia Coin shirt" onerror="this.parentElement.innerHTML='<div class=ph>Black shirt</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">We are all on the way.</div><div class="card-sub">Ecclesia triskelion coin · 8-bit</div><div class="chips"><span class="chip ca">Coming soon</span><span class="chip ct">Ecclesia</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- THE EVERGREENS EP -->
+<div class="section" id="evergreens">
+  <div class="section-header"><h2>The Evergreens — EP Merch</h2><span class="section-sub">Jean Ellison + Jason Wright · Ecclesia music ministry · Ecclesia Collective</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/ep-chewed-gum-raw.webp" alt="Chewed Gum"></div>
+        <div class="img-panel"><span class="pl pl-m">Mockup</span><img src="../public/merch/ep-chewed-gum.webp" alt="Chewed Gum mockup"></div>
+      </div>
+      <div class="card-body"><div class="card-name">You were not chewed gum.</div><div class="card-sub">The Evergreens EP · purity culture, corrected</div><div class="chips"><span class="chip cg">Has mockup</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/ep-father-runs-raw.webp" alt="Father Runs"></div>
+        <div class="img-panel"><span class="pl pl-m">Mockup</span><img src="../public/merch/ep-father-runs.webp" alt="Father Runs mockup"></div>
+      </div>
+      <div class="card-body"><div class="card-name">The father runs.</div><div class="card-sub">Luke 15. He doesn't walk.</div><div class="chips"><span class="chip cg">Has mockup</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/ep-here-i-stand-raw.webp" alt="Here I Stand"></div>
+        <div class="img-panel"><span class="pl pl-m">Mockup</span><img src="../public/merch/ep-here-i-stand.webp" alt="Here I Stand mockup"></div>
+      </div>
+      <div class="card-body"><div class="card-name">"Here I stand." — Luther, probably.</div><div class="card-sub">Reformation merch · Black · Cream · Red</div><div class="chips"><span class="chip cg">Has mockup</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ART & EDITORIAL -->
+<div class="section" id="editorial">
+  <div class="section-header"><h2>Art &amp; Editorial — Gothic &amp; Literary</h2><span class="section-sub">Blossom &amp; Decay · Southern Gothic · Mental health line</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/blossom-and-decay-clean.png" alt="Blossom Gothic"></div>
+        <div class="img-panel"><span class="pl pl-m">Cream shirt</span><img src="../public/merch/blossom-decay-mockup.webp" alt="Blossom Gothic mockup" onerror="this.parentElement.innerHTML='<div class=ph>Cream shirt</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Blossom &amp; Decay — Gothic</div><div class="card-sub">Southern Legends · skull from vines</div><div class="chips"><span class="chip cg">Live · $35</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/blossom-decay-sugar-skull.png" alt="Sugar Skull"></div>
+        <div class="img-panel"><span class="pl pl-m">Cream shirt</span><img src="../public/merch/blossom-decay-sugar-mockup.webp" alt="Sugar Skull mockup" onerror="this.parentElement.innerHTML='<div class=ph>Cream shirt</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Blossom &amp; Decay — Sugar Skull</div><div class="card-sub">Día de los Muertos · marigolds</div><div class="chips"><span class="chip cg">Live · $35</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Vines + skull + "Everything Rots. That's the Point." · Fraunces italic · cream on dark</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Dark olive shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Everything Rots. That's the Point.</div><div class="card-sub">Southern Gothic · SL original</div><div class="chips"><span class="chip ca">Stub · needs design</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- OTHER VERTICALS -->
+<div class="section" id="other">
+  <div class="section-header"><h2>Other Verticals</h2><span class="section-sub">Theater · Food/Market · Agriculture · Music · Hunting · Small Town · Wedding</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Theater</span><div class="ph">"We're All Mad Here." · 8-bit Cheshire · black tee</div></div>
+        <div class="img-panel"><span class="pl pl-s">Has concept</span><img src="../public/merch/cheshire-shirt.webp" alt="Cheshire" onerror="this.parentElement.innerHTML='<div class=ph>8-bit Cheshire</div>'"></div>
+      </div>
+      <div class="card-body"><div class="card-name">We're All Mad Here.</div><div class="card-sub">Alice / theater kid creed · 8-bit</div><div class="chips"><span class="chip ca">Coming soon</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Market</span><div class="ph">"Dirt to Table." · Farmer badge · sage green · NE Alabama Growers</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Sage shirt</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Dirt to Table.</div><div class="card-sub">NE Alabama Growers · No middleman.</div><div class="chips"><span class="chip ca">Stub</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Florals</span><div class="ph">"I'm a Flower Farmer." · Sage green · Heather Florals · drip humor</div></div>
+        <div class="img-panel"><span class="pl pl-d">Design exists</span><img src="../public/merch/green-thumbs-club-sticker.webp" alt="Green Thumbs"></div>
+      </div>
+      <div class="card-body"><div class="card-name">I'm a Flower Farmer.</div><div class="card-sub">Not a florist. A farmer. · Heather Florals</div><div class="chips"><span class="chip ca">Stub · Heather Florals</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Small Town</span><div class="ph">"Born Here. Still Here." · Cream · Black · Fraunces bold</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Cream shirt · black type</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Born Here. Still Here.</div><div class="card-sub">NE Alabama · No apologies.</div><div class="chips"><span class="chip ca">Stub</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Wedding</span><div class="ph">"She Said Yes. She's In Charge." · cream + gold · Aisle trucker hat</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Cream trucker · gold embroidery</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">She Said Yes. She's In Charge.</div><div class="card-sub">The Aisle · Bride trucker cap</div><div class="chips"><span class="chip ck">The Aisle</span><span class="chip ca">Stub · needs blank</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">History</span><div class="ph">"Anniston, 1961." · woodcut bus burning · Black · Cream</div></div>
+        <div class="img-panel"><span class="pl pl-d">Design exists</span><img src="../public/merch/freedom-riders/shirt-mockup-dark.webp" alt="1961"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Anniston, 1961.</div><div class="card-sub">The bus burned. History didn't forget.</div><div class="chips"><span class="chip ca">Alt colorway · stub</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STICKERS -->
+<div class="section" id="stickers">
+  <div class="section-header"><h2>Stickers — All Designs</h2><span class="section-sub">Die-cut · 3" vinyl · matte · transparent backgrounds</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Trans</span><img src="../public/merch/coldwater-badge-sticker-trans.png" alt="Coldwater"></div>
+        <div class="img-panel"><span class="pl pl-m">Final</span><img src="../public/merch/coldwater-badge-sticker.png" alt="Coldwater final"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Coldwater Mountain Badge</div><div class="card-sub">Oxford · IMBA Epic · 3" badge</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Trans</span><img src="../public/merch/pinhoti-badge-sticker-trans.png" alt="Pinhoti"></div>
+        <div class="img-panel"><span class="pl pl-m">Final</span><img src="../public/merch/pinhoti-badge-sticker.png" alt="Pinhoti final"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Pinhoti Trail</div><div class="card-sub">172 Miles · Talladega NF</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Trans</span><img src="../public/merch/fort-mcclellan-sticker-trans.png" alt="Fort McClellan"></div>
+        <div class="img-panel"><span class="pl pl-m">Final</span><img src="../public/merch/fort-mcclellan-sticker.png" alt="Fort McClellan final"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Fort McClellan Badge</div><div class="card-sub">Anniston · 1917–1999</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Trans</span><img src="../public/merch/lickskillet-ox-sticker-trans.png" alt="Lickskillet"></div>
+        <div class="img-panel"><span class="pl pl-m">Final</span><img src="../public/merch/lickskillet-ox-sticker.png" alt="Lickskillet final"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Lickskillet Ox Sticker</div><div class="card-sub">Oxford, Alabama · teal/cream</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Trans</span><img src="../public/merch/skull-gothic-sticker-trans.png" alt="Gothic Skull"></div>
+        <div class="img-panel"><span class="pl pl-m">Final</span><img src="../public/merch/skull-gothic-sticker.png" alt="Gothic Skull final"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Blossom &amp; Decay — Gothic Skull</div><div class="card-sub">Dark moody · red rose</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Trans</span><img src="../public/merch/skull-marigold-sticker-trans.png" alt="Marigold Skull"></div>
+        <div class="img-panel"><span class="pl pl-m">Final</span><img src="../public/merch/skull-marigold-sticker.png" alt="Marigold Skull final"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Blossom &amp; Decay — Marigold</div><div class="card-sub">Full color · bright variant</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Trans</span><img src="../public/merch/blossom-and-decay-sticker-trans.png" alt="Blossom sticker"></div>
+        <div class="img-panel"><span class="pl pl-m">Final</span><img src="../public/merch/blossom-decay-sugar-skull.png" alt="Blossom sticker final"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Blossom &amp; Decay Sticker</div><div class="card-sub">Sugar skull + marigolds · 3" die-cut</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-sticker-print.png" alt="CLT sticker"></div>
+        <div class="img-panel"><span class="pl pl-m">3" round</span><img src="../public/merch/clt-sticker-print.png" alt="CLT sticker"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Chief Ladiga Trail Sticker</div><div class="card-sub">3" round · matte · weather-resistant</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/woodstock-badge.png" alt="Woodstock sticker"></div>
+        <div class="img-panel"><span class="pl pl-m">3" vinyl</span><img src="../public/merch/woodstock-badge.png" alt="Woodstock sticker"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Woodstock 5K Sticker</div><div class="card-sub">Anniston · Aug 2, 2026</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/jacksonville-water-tower-badge.webp" alt="Jacksonville sticker"></div>
+        <div class="img-panel"><span class="pl pl-m">3" round</span><img src="../public/merch/jacksonville-water-tower-badge.webp" alt="Jacksonville sticker"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Jacksonville Water Tower</div><div class="card-sub">Jacksonville, Alabama · Est. 1833</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">Chanterelle botanical illustration · "Chanterelle Season · Alabama" · 3" die-cut</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">SL Forager</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Chanterelle Forager Sticker</div><div class="card-sub">Alabama · 3" die-cut · botanical</div><div class="chips"><span class="chip ca">Stub · needs Gemini</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">"I Walk with a Limp" · Genesis 32 · Fraunces italic · 3" die-cut · Broken Ground</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">Broken Ground sticker</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">I Walk with a Limp — Sticker</div><div class="card-sub">Genesis 32 · 3" die-cut · Broken Ground</div><div class="chips"><span class="chip ca">Stub · needs GPT</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- HATS & HOODIES -->
+<div class="section" id="hats">
+  <div class="section-header"><h2>Hats &amp; Hoodies</h2><span class="section-sub">All stubs — waiting on blank product mockup images from GPT</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-sticker-print.png" alt="CLT hat"></div>
+        <div class="img-panel"><span class="pl pl-s">Needs blank</span><div class="ph">GPT: cream trucker hat blank · studio photo · no text</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Chief Ladiga Trail Trucker</div><div class="card-sub">Anniston to Piedmont · 33.5 mi</div><div class="chips"><span class="chip ca">Stub · needs GPT blank</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/pv-raiders-xc.webp" alt="PV hat"></div>
+        <div class="img-panel"><span class="pl pl-s">Needs blank</span><div class="ph">GPT: black snapback blank · studio photo</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">PV Raiders Snapback</div><div class="card-sub">Run Like You Stole It.</div><div class="chips"><span class="chip ca">Stub · needs GPT blank</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-n">Concept</span><div class="ph">"She Said Yes. She's In Charge." · cream + gold embroidery · Aisle bride cap</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs blank</span><div class="ph">GPT: cream trucker hat blank</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">She Said Yes. She's In Charge.</div><div class="card-sub">The Aisle · Bride trucker</div><div class="chips"><span class="chip ca">Stub · The Aisle</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-hike-explore-shirt.png" alt="CLT hoodie"></div>
+        <div class="img-panel"><span class="pl pl-s">Needs blank</span><div class="ph">GPT: black pullover hoodie blank · chest zone · studio photo</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">CLT Trail Hoodie</div><div class="card-sub">Chief Ladiga Trail · Pullover · $55</div><div class="chips"><span class="chip ca">Stub · needs GPT blank</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/diaspora-shirt.webp" alt="Diaspora hoodie"></div>
+        <div class="img-panel"><span class="pl pl-s">Needs blank</span><div class="ph">GPT: dark olive crewneck blank · chest zone</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Diaspora Pullover</div><div class="card-sub">I left. I came back. — Hoodie · $58</div><div class="chips"><span class="chip ca">Stub · needs GPT blank</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 3D PRINTS -->
+<div class="section" id="3d">
+  <div class="section-header"><h2>3D Prints — Headley Bros</h2><span class="section-sub">Noah + Soren · Bambu A1 · PLA · Desk pieces + coins</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/ecclesia-coin.png" alt="Triskelion coin"></div>
+        <div class="img-panel"><span class="pl pl-s">Printer arriving</span><div class="ph">PLA · 2" coin · triskelion emboss</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">SL Triskelion Coin</div><div class="card-sub">Headley Bros · PLA · 2" coin · $8</div><div class="chips"><span class="chip ca">Stub · Bambu arriving</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-sticker-print.png" alt="CLT marker"></div>
+        <div class="img-panel"><span class="pl pl-s">Printer arriving</span><div class="ph">PLA · trail marker desk piece</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">CLT Trail Marker</div><div class="card-sub">Headley Bros · PLA · Desk piece · $12</div><div class="chips"><span class="chip ca">Stub · Bambu arriving</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/cheaha-tower-badge.png" alt="Cheaha token"></div>
+        <div class="img-panel"><span class="pl pl-s">Printer arriving</span><div class="ph">PLA · 1.5" summit token</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Cheaha Summit Token</div><div class="card-sub">Headley Bros · PLA · 1.5" coin · $8</div><div class="chips"><span class="chip ca">Stub · Bambu arriving</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ACCESSORIES -->
+<div class="section" id="accessories">
+  <div class="section-header"><h2>Accessories</h2><span class="section-sub">Totes · Mugs · Patches · Pins · Socks · Pennants</span></div>
+  <div class="section-rule"></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-tote.webp" alt="CLT tote"></div>
+        <div class="img-panel"><span class="pl pl-m">In stock</span><img src="../public/merch/clt-tote.webp" alt="CLT tote"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Chief Ladiga Trail Tote</div><div class="card-sub">Cream canvas · trail map on back · $22</div><div class="chips"><span class="chip cg">In stock · $22</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/model-city-tote.webp" alt="Model City tote"></div>
+        <div class="img-panel"><span class="pl pl-m">In stock</span><img src="../public/merch/model-city-tote.webp" alt="Model City tote"></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Model City Tote</div><div class="card-sub">Anniston · cream canvas · $22</div><div class="chips"><span class="chip cg">In stock · $22</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/green-thumbs-club-sticker.webp" alt="Green Thumbs sticker"></div>
+        <div class="img-panel"><span class="pl pl-m">Sticker</span><img src="../public/merch/green-thumbs-club-sticker.webp" alt="Green Thumbs sticker"></div>
+      </div>
+      <div class="card-body"><div class="card-name">Green Thumbs Club Sticker</div><div class="card-sub">Heather Florals · botanical · 3" oval · $5</div><div class="chips"><span class="chip cg">Live · $5</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-s">Needs blank</span><div class="ph">GPT: white ceramic mug blank · handle right · studio photo</div></div>
+        <div class="img-panel"><span class="pl pl-s">Needs design</span><div class="ph">The Model City / Anniston mug</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">The Model City Mug</div><div class="card-sub">Anniston, Alabama · 11oz ceramic · $18</div><div class="chips"><span class="chip ca">Stub · needs GPT blank</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/clt-sticker-print.png" alt="CLT patch"></div>
+        <div class="img-panel"><span class="pl pl-s">POD</span><div class="ph">3" embroidered iron-on · Fourthwall</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">CLT Iron-On Patch</div><div class="card-sub">Chief Ladiga Trail · 3" embroidered · $8</div><div class="chips"><span class="chip ca">Stub</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="img-row">
+        <div class="img-panel"><span class="pl pl-d">Design</span><img src="../public/merch/sl-journal.webp" alt="SL journal" onerror="this.parentElement.innerHTML='<div class=ph>SL Journal design</div>'"></div>
+        <div class="img-panel"><span class="pl pl-s">POD</span><div class="ph">160 pages · Smyth-sewn · Fourthwall</div></div>
+      </div>
+      <div class="card-body"><div class="card-name">Southern Legends Journal</div><div class="card-sub">NE Alabama · 160 pages · $22</div><div class="chips"><span class="chip ca">Stub</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /sections -->
+</body>
+</html>

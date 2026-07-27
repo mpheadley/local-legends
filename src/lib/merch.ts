@@ -1,3 +1,10 @@
+export type MerchCategory =
+  | 'shirt' | 'hoodie' | 'hat'
+  | 'sticker' | 'patch' | 'pin'
+  | 'tote' | 'print' | 'poster'
+  | 'mug' | 'sock' | 'bandana' | 'pennant' | 'journal'
+  | '3d-print'
+
 export type MerchItem = {
   id: string
   name: string
@@ -7,11 +14,11 @@ export type MerchItem = {
   photo: string
   badge?: string
   badgeColor?: string
-  category: 'shirt' | 'sticker' | 'tote' | 'print'
+  category: MerchCategory
   fundraiser?: string
   sizes?: string[]
   available: boolean
-  // city slugs this item is relevant to; empty = SL-wide
+  comingSoon?: boolean   // shows in store with "Pre-order · Coming Soon" badge
   cities?: string[]
 }
 
@@ -41,6 +48,22 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#166534',
     category: 'sticker',
     available: true,
+    cities: ['anniston'],
+  },
+
+  // ── ANNISTON 45 ────────────────────────────────────────────
+  {
+    id: 'anniston-45-shirt',
+    name: 'Anniston 45',
+    tagline: 'Anniston, Alabama · August 2026',
+    sub: '45 Years of Running',
+    price: 35,
+    photo: '/merch/anniston-45-shirt.png',
+    badge: 'Coming Soon',
+    badgeColor: '#7f1d1d',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: false,
     cities: ['anniston'],
   },
 
@@ -207,6 +230,34 @@ export const MERCH: MerchItem[] = [
     cities: ['anniston'],
   },
 
+  // ── ECCLESIA 8-BIT ─────────────────────────────────────────
+  {
+    id: 'cheshire-shirt',
+    name: "We're all mad here.",
+    tagline: 'The Cheshire Cat · also the early church',
+    sub: 'Black tee · 8-bit grin',
+    price: 28,
+    photo: '/merch/cheshire-shirt.webp',
+    badge: '8-bit',
+    badgeColor: '#3b1f6a',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: false,
+  },
+  {
+    id: 'ecclesia-coin-8bit',
+    name: 'We are all on the way.',
+    tagline: 'Ecclesia coin · pilgrim community',
+    sub: 'Black tee · 8-bit coin',
+    price: 28,
+    photo: '/merch/ecclesia-coin-shirt.webp',
+    badge: '8-bit',
+    badgeColor: '#3b1f6a',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: false,
+  },
+
   // ── ECCLESIA PHOTOREAL ─────────────────────────────────────
   {
     id: 'ecclesia-stone-shirt',
@@ -219,7 +270,7 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#1a5a4a',
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    available: true,
+    available: false,
   },
   {
     id: 'ecclesia-coin-photoreal',
@@ -232,7 +283,7 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#1a5a4a',
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    available: true,
+    available: false,
   },
 
   // ── ECCLESIA PRESS SATIRE TEES ─────────────────────────────
@@ -291,7 +342,7 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#7f1d1d',
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    available: true,
+    available: false,
     cities: ['piedmont', 'gadsden'],
   },
 
@@ -383,14 +434,28 @@ export const MERCH: MerchItem[] = [
     cities: ['anniston', 'piedmont'],
   },
 
-  // ── BLOSSOM & DECAY ────────────────────────────────────────
+  // ── BLOSSOM & DECAY (clean regen 2026-07-26) ───────────────
   {
     id: 'blossom-decay-shirt',
-    name: 'Blossom & Decay',
+    name: 'Blossom & Decay — Gothic',
     tagline: 'Southern Legends · Thorns + roses + Southern Gothic',
-    sub: 'Mocha / tan shirt · Skull emerging from vines',
+    sub: 'Cream shirt · Skull emerging from vines',
     price: 35,
-    photo: '/merch/blossom-and-decay-shirt.png',
+    photo: '/merch/blossom-and-decay-clean.png',
+    badge: 'SL Original',
+    badgeColor: '#7f1d1d',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: [],
+  },
+  {
+    id: 'blossom-decay-sugar-shirt',
+    name: 'Blossom & Decay — Sugar Skull',
+    tagline: 'Southern Legends · Día de los Muertos · Full color',
+    sub: 'Cream shirt · Marigolds + sugar skull',
+    price: 35,
+    photo: '/merch/blossom-decay-sugar-skull.png',
     badge: 'SL Original',
     badgeColor: '#7f1d1d',
     category: 'shirt',
@@ -401,10 +466,10 @@ export const MERCH: MerchItem[] = [
   {
     id: 'blossom-decay-sticker',
     name: 'Blossom & Decay',
-    tagline: 'Southern Legends · Sugar skull + Alabama wildflowers',
-    sub: '3" die-cut · Matte · Roses + daisies + mountain laurel',
+    tagline: 'Southern Legends · Sugar skull + marigolds',
+    sub: '3" die-cut · Matte · Full color',
     price: 5,
-    photo: '/merch/blossom-and-decay-sticker.png',
+    photo: '/merch/blossom-decay-sugar-skull.png',
     badge: 'SL Original',
     badgeColor: '#7f1d1d',
     category: 'sticker',
@@ -533,12 +598,241 @@ export const MERCH: MerchItem[] = [
     tagline: 'Anniston, Alabama — Est. 1872',
     sub: 'Black · Navy · Sage · Mustard · Crimson · Ice Blue',
     price: 29,
-    photo: '/merch/model-city-mockup-navy.webp',
+    photo: '/merch/model-city-mockup-cream.webp',
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
     cities: ['anniston'],
   },
+
+  // ── COLDWATER MOUNTAIN ─────────────────────────────────────
+  {
+    id: 'coldwater-shirt',
+    name: 'Coldwater Mountain',
+    tagline: 'Oxford, Alabama · IMBA Epic',
+    sub: 'Forest green · Calhoun County',
+    price: 35,
+    photo: '/merch/coldwater-shirt.png',
+    badge: 'SL Woodcut',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: ['oxford', 'anniston'],
+  },
+  {
+    id: 'coldwater-sticker',
+    name: 'Coldwater Mountain Badge',
+    tagline: 'Oxford · IMBA Epic · Calhoun County',
+    price: 5,
+    photo: '/merch/coldwater-badge-sticker.png',
+    badge: 'SL Woodcut',
+    category: 'sticker',
+    available: true,
+    cities: ['oxford', 'anniston'],
+  },
+
+  // ── PINHOTI TRAIL ──────────────────────────────────────────
+  {
+    id: 'pinhoti-sticker',
+    name: 'Pinhoti Trail',
+    tagline: 'Alabama · 172 Miles · Talladega National Forest',
+    price: 5,
+    photo: '/merch/pinhoti-badge-sticker.png',
+    badge: 'SL Woodcut',
+    category: 'sticker',
+    available: true,
+  },
+
+  // ── NOCCALULA FALLS ────────────────────────────────────────
+  {
+    id: 'noccalula-print',
+    name: 'Noccalula Falls',
+    tagline: 'Gadsden, Alabama · Est. as a Park 1929',
+    price: 12,
+    photo: '/merch/noccalula-falls-print.png',
+    badge: 'SL Editorial',
+    category: 'print',
+    available: true,
+    cities: ['gadsden'],
+  },
+
+  {
+    id: 'noccalula-sticker',
+    name: 'Noccalula Falls',
+    tagline: 'Gadsden, Alabama · Est. as a Park 1929',
+    price: 5,
+    photo: '/merch/noccalula-falls-print.png',
+    badge: 'SL Editorial',
+    category: 'sticker',
+    available: true,
+    cities: ['gadsden'],
+  },
+
+  // ── FORT McCLELLAN ─────────────────────────────────────────
+  {
+    id: 'fort-mcclellan-shirt',
+    name: 'Fort McClellan',
+    tagline: 'Anniston, Alabama · 1917 – 1999',
+    price: 35,
+    photo: '/merch/fort-mcclellan-shirt.png',
+    badge: 'SL Editorial',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: ['anniston'],
+  },
+  {
+    id: 'fort-mcclellan-sticker',
+    name: 'Fort McClellan Badge',
+    tagline: 'Anniston · 1917 – 1999',
+    price: 5,
+    photo: '/merch/fort-mcclellan-sticker.png',
+    badge: 'SL Editorial',
+    category: 'sticker',
+    available: true,
+    cities: ['anniston'],
+  },
+
+  // ── HATS ───────────────────────────────────────────────────
+  { id: 'clt-trucker-hat', name: 'Chief Ladiga Trail Trucker', tagline: 'Anniston to Piedmont · 33.5 mi', price: 28, photo: '/merch/clt-sticker-print.png', badge: 'Coming Soon', category: 'hat', available: false, comingSoon: true, cities: ['anniston', 'piedmont'] },
+  { id: 'sl-5panel-hat', name: 'Southern Legends 5-Panel', tagline: 'NE Alabama · Est. 2023', price: 28, photo: '/merch/sl-run.webp', badge: 'Coming Soon', category: 'hat', available: false, comingSoon: true },
+  { id: 'ecclesia-hat', name: 'Ecclesia Coin Hat', tagline: 'Triskelion patch · Trucker', price: 28, photo: '/merch/ecclesia-coin.png', badge: 'Coming Soon', category: 'hat', available: false, comingSoon: true },
+  { id: 'pv-raiders-hat', name: 'PV Raiders Snapback', tagline: 'Run Like You Stole It.', price: 26, photo: '/merch/pv-raiders-xc.webp', badge: 'Coming Soon', category: 'hat', available: false, comingSoon: true, cities: ['anniston'] },
+
+  // ── HOODIES ────────────────────────────────────────────────
+  { id: 'clt-trail-hoodie', name: 'CLT Trail Hoodie', tagline: 'Chief Ladiga Trail · Pullover', price: 55, photo: '/merch/clt-hike-explore-shirt.png', badge: 'Coming Soon', category: 'hoodie', available: false, comingSoon: true, cities: ['anniston', 'piedmont'] },
+  { id: 'sl-crewneck', name: 'Southern Legends Crewneck', tagline: 'NE Alabama · Heavy cotton', price: 55, photo: '/merch/diaspora-shirt.webp', badge: 'Coming Soon', category: 'hoodie', available: false, comingSoon: true },
+  { id: 'diaspora-pullover', name: 'Diaspora Pullover', tagline: 'I left. I came back. — Hoodie', price: 58, photo: '/merch/diaspora-shirt.webp', badge: 'Coming Soon', category: 'hoodie', available: false, comingSoon: true },
+
+  // ── PATCHES ────────────────────────────────────────────────
+  { id: 'clt-patch', name: 'CLT Iron-On Patch', tagline: 'Chief Ladiga Trail · 3" embroidered', price: 8, photo: '/merch/clt-sticker-print.png', badge: 'Coming Soon', category: 'patch', available: false, comingSoon: true },
+  { id: 'pinhoti-patch', name: 'Pinhoti Trail Patch', tagline: '172 Miles · Iron-on', price: 8, photo: '/merch/pinhoti-badge-sticker.png', badge: 'Coming Soon', category: 'patch', available: false, comingSoon: true },
+  { id: 'sl-patch', name: 'SL Wordmark Patch', tagline: 'Southern Legends · Embroidered', price: 8, photo: '/merch/sl-run.webp', badge: 'Coming Soon', category: 'patch', available: false, comingSoon: true },
+
+  // ── ENAMEL PINS ────────────────────────────────────────────
+  { id: 'sl-triskelion-pin', name: 'SL Triskelion Pin', tagline: 'Hard enamel · 1.25"', price: 12, photo: '/merch/ecclesia-coin.png', badge: 'Coming Soon', category: 'pin', available: false, comingSoon: true },
+  { id: 'clt-boot-pin', name: 'CLT Boot Pin', tagline: 'Trail boot · Hard enamel · 1"', price: 12, photo: '/merch/clt-sticker-print.png', badge: 'Coming Soon', category: 'pin', available: false, comingSoon: true },
+  { id: 'fort-mcclellan-pin', name: 'Fort McClellan Badge Pin', tagline: 'Hard enamel · 1.25"', price: 12, photo: '/merch/fort-mcclellan-sticker.png', badge: 'Coming Soon', category: 'pin', available: false, comingSoon: true },
+
+  // ── MUGS ───────────────────────────────────────────────────
+  { id: 'model-city-mug', name: 'The Model City Mug', tagline: 'Anniston, Alabama · 11oz ceramic', price: 18, photo: '/merch/model-city-print.png', badge: 'Coming Soon', category: 'mug', available: false, comingSoon: true, cities: ['anniston'] },
+  { id: 'lickskillet-mug', name: 'Lickskillet Mug', tagline: 'Oxford, Alabama · 11oz', price: 18, photo: '/merch/lickskillet-premium-shirt.png', badge: 'Coming Soon', category: 'mug', available: false, comingSoon: true, cities: ['oxford'] },
+  { id: 'clt-trail-map-mug', name: 'CLT Trail Map Mug', tagline: 'Full trail · 11oz ceramic', price: 18, photo: '/merch/clt-trail-map-print.webp', badge: 'Coming Soon', category: 'mug', available: false, comingSoon: true },
+
+  // ── POSTERS ────────────────────────────────────────────────
+  { id: 'noccalula-poster', name: 'Noccalula Falls Poster', tagline: 'Gadsden, Alabama · 18×24 print', price: 22, photo: '/merch/noccalula-falls-print.png', badge: 'Coming Soon', category: 'poster', available: false, comingSoon: true, cities: ['gadsden'] },
+  { id: 'freedom-riders-poster', name: 'Freedom Riders Poster', tagline: 'Anniston, 1961 · 11×14 editorial', price: 18, photo: '/merch/freedom-riders/shirt-mockup-dark.webp', badge: 'Coming Soon', category: 'poster', available: false, comingSoon: true, cities: ['anniston'] },
+  { id: 'cheaha-tower-poster', name: 'Cheaha Tower Poster', tagline: '2,413 ft · 11×14 print', price: 18, photo: '/merch/cheaha-tower-badge.png', badge: 'Coming Soon', category: 'poster', available: false, comingSoon: true },
+
+  // ── SOCKS ──────────────────────────────────────────────────
+  { id: 'clt-trail-socks', name: 'CLT Trail Socks', tagline: 'Chief Ladiga Trail · Crew length', price: 18, photo: '/merch/clt-sticker-print.png', badge: 'Coming Soon', category: 'sock', available: false, comingSoon: true },
+  { id: 'raider-road-runners-socks', name: 'Raider Road Runners Socks', tagline: 'PV Raiders · Crew length', price: 18, photo: '/merch/raider-road-runners.webp', badge: 'Coming Soon', category: 'sock', available: false, comingSoon: true },
+
+  // ── 3D PRINTS — HEADLEY BROS ───────────────────────────────
+  { id: 'sl-triskelion-coin-3d', name: 'SL Triskelion Coin', tagline: 'Headley Bros · PLA · 2" coin', price: 8, photo: '/merch/ecclesia-coin.png', badge: 'Headley Bros', category: '3d-print', available: false, comingSoon: true },
+  { id: 'clt-trail-marker-3d', name: 'CLT Trail Marker', tagline: 'Headley Bros · PLA · Desk piece', price: 12, photo: '/merch/clt-sticker-print.png', badge: 'Headley Bros', category: '3d-print', available: false, comingSoon: true },
+  { id: 'cheaha-token-3d', name: 'Cheaha Summit Token', tagline: 'Headley Bros · PLA · 1.5" coin', price: 8, photo: '/merch/cheaha-tower-badge.png', badge: 'Headley Bros', category: '3d-print', available: false, comingSoon: true },
+  { id: 'ecclesia-stone-3d', name: 'Ecclesia Standing Stone', tagline: 'Headley Bros · PLA · 3" desktop', price: 14, photo: '/merch/ecclesia-stone.png', badge: 'Headley Bros', category: '3d-print', available: false, comingSoon: true },
+
+  // ── PENNANTS ───────────────────────────────────────────────
+  { id: 'jsu-gamecocks-pennant', name: 'Jacksonville · JSU Country', tagline: 'Felt pennant · 12"', price: 16, photo: '/merch/jacksonville-gamecock-shirt.webp', badge: 'Coming Soon', category: 'pennant', available: false, comingSoon: true, cities: ['jacksonville'] },
+  { id: 'pv-raiders-pennant', name: 'PV Raiders Pennant', tagline: 'Felt pennant · 12"', price: 16, photo: '/merch/pv-raiders-xc.webp', badge: 'Coming Soon', category: 'pennant', available: false, comingSoon: true, cities: ['anniston'] },
+
+  // ── JOURNALS ───────────────────────────────────────────────
+  { id: 'sl-journal', name: 'Southern Legends Journal', tagline: 'NE Alabama · 160 pages · Smyth-sewn', price: 22, photo: '/merch/model-city-print.png', badge: 'Coming Soon', category: 'journal', available: false, comingSoon: true },
+
+  // ── CHRISTIAN SATIRE — FUNNY & REVERENT (Kerusso/NOTW style) ──
+  { id: 'xian-early-church', name: 'The Early Church Was Weird Too', tagline: 'Ecclesia Press · You\'re in good company.', sub: 'Black · Cream · 8-bit pixel art', price: 28, photo: '/merch/ecclesia-pilgrims.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-demons-believe', name: 'Even the demons believe.', tagline: 'James 2:19 · And they shudder.', sub: 'Black tee · Cream type · Dry theological wit', price: 28, photo: '/merch/ecclesia-pilgrims.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-repent-podcast', name: 'Repent, For the Podcast Is at Hand.', tagline: 'Ecclesia Press · Satire for the digitally devout.', sub: 'Black tee · Gold type', price: 28, photo: '/merch/ecclesia-pilgrims.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-sinners-welcome', name: 'Sinners Welcome. Especially You.', tagline: 'Ecclesia Press · No exceptions.', sub: 'Black tee · Cream type · Bold sans', price: 28, photo: '/merch/ecclesia-pilgrims.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-jesus-wept', name: "Jesus Wept. I Get It.", tagline: 'Ecclesia Press · Shortest verse, deepest truth.', sub: 'Navy · Cream · DM Sans', price: 28, photo: '/merch/ep-father-runs.webp', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-table-room', name: 'There Is Room at the Table.', tagline: 'Ecclesia Press · Come as you are.', sub: 'Cream tee · Forest green type · Woodcut table illustration', price: 28, photo: '/merch/ecclesia-coin.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-left-unsupervised', name: 'In My Defense, I Was Left Unsupervised.', tagline: 'Ecclesia Press · A theological statement.', sub: 'Black tee · Cream · Dry humor', price: 28, photo: '/merch/ecclesia-pilgrims.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-well-behaved', name: 'Well-Behaved Christians Rarely Make History.', tagline: 'Ecclesia Press · Paraphrase. You know why.', sub: 'Black · Purple · Cream · Fraunces serif', price: 28, photo: '/merch/ep-here-i-stand.webp', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-door-open', name: 'The Door Is Always Open.', tagline: 'Ecclesia Press · Luke 15. He runs.', sub: 'Cream tee · Warm brown type · Woodcut door', price: 28, photo: '/merch/ep-father-runs.webp', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-not-religious', name: "I'm Not Religious. I Just Love the Lord.", tagline: "Ecclesia Press · There's a difference.", sub: 'Navy · Gold · Clean type', price: 28, photo: '/merch/ecclesia-coin.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'xian-sticker-demons', name: 'Even the Demons Believe — Sticker', tagline: 'James 2:19 · Die-cut 3"', price: 5, photo: '/merch/ecclesia-coin.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'sticker', available: false, comingSoon: true },
+  { id: 'xian-sticker-sinners', name: 'Sinners Welcome — Sticker', tagline: 'Ecclesia Press · 3" vinyl', price: 5, photo: '/merch/ecclesia-coin.png', badge: 'Ecclesia Press', badgeColor: '#5b21b6', category: 'sticker', available: false, comingSoon: true },
+
+  // ── MATT'S OWN — SERIOUS & REVERENT FAITH LINE ─────────────
+  // Broken Ground — memoir testimony (ships with the book as presell merch)
+  { id: 'faith-credential-wreckage', name: 'The Credential Is the Wreckage.', tagline: 'Not the podium. The wound.', sub: 'Black · Cream serif · Limping Guide line', price: 30, photo: '/merch/ep-father-runs.webp', badge: 'Broken Ground', badgeColor: '#7f1d1d', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'faith-limp', name: 'I Walk with a Limp.', tagline: 'Genesis 32 · The wrestling left a mark.', sub: 'Black · Ivory · Fraunces serif italic', price: 30, photo: '/merch/ep-father-runs.webp', badge: 'Broken Ground', badgeColor: '#7f1d1d', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'faith-beloved-broken', name: 'Beloved and Broken.', tagline: 'Both things are true.', sub: 'Navy · Cream · DM Sans + Fraunces', price: 30, photo: '/merch/ep-father-runs.webp', badge: 'Broken Ground', badgeColor: '#7f1d1d', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'faith-sticker-limp', name: 'I Walk with a Limp — Sticker', tagline: 'Genesis 32 · 3" die-cut', price: 5, photo: '/merch/ecclesia-coin.png', badge: 'Broken Ground', badgeColor: '#7f1d1d', category: 'sticker', available: false, comingSoon: true },
+  // Attune — formation / contemplative (ships with Attune product rollout)
+  { id: 'faith-wound-is-way', name: 'The Wound Is the Way.', tagline: 'Rohr. Nouwen. The mystics knew.', sub: 'Black · Gold · Fraunces italic', price: 30, photo: '/merch/ep-father-runs.webp', badge: 'Attune', badgeColor: '#c9a227', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'faith-sufficient', name: 'My grace is sufficient.', tagline: '2 Corinthians 12:9 · Not barely. Enough.', sub: 'Cream tee · Sage type · Quiet design', price: 30, photo: '/merch/ecclesia-stone-shirt.webp', badge: 'Attune', badgeColor: '#c9a227', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'faith-incarnational', name: 'Incarnational.', tagline: 'God showed up in a body. We should too.', sub: 'Black · Cream · Simple bold type', price: 30, photo: '/merch/ecclesia-stone-shirt.webp', badge: 'Attune', badgeColor: '#c9a227', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'faith-kingdom-quietly', name: 'The Kingdom Comes Quietly.', tagline: 'Against triumphalism. For the long work.', sub: 'Dark olive · Cream · Fraunces serif', price: 30, photo: '/merch/ecclesia-pilgrims.png', badge: 'Attune', badgeColor: '#c9a227', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'faith-sticker-wound', name: 'The Wound Is the Way — Sticker', tagline: '3" vinyl · Fraunces italic', price: 5, photo: '/merch/ecclesia-coin.png', badge: 'Attune', badgeColor: '#c9a227', category: 'sticker', available: false, comingSoon: true },
+
+  // ── MUSHROOM & FORAGER LINE ─────────────────────────────────
+  { id: 'forager-forage-ridge', name: 'Forage the Ridge', tagline: 'NE Alabama · Talladega National Forest', sub: 'Sage green · Cream · Botanical badge illustration', price: 30, photo: '/merch/blossom-and-decay-clean.png', badge: 'SL Forager', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'forager-chanterelle', name: 'Chanterelle Season', tagline: 'Alabama · July · Golden in the hollow.', sub: 'Cream tee · Gold + orange · Hand-drawn mushroom', price: 30, photo: '/merch/blossom-decay-sugar-skull.png', badge: 'SL Forager', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'forager-death-cap', name: 'Death Cap Diner', tagline: 'Fine Dining in the Forest Floor.', sub: 'Black tee · Cream · Dark humor · Amanita illustration', price: 30, photo: '/merch/skull-gothic-sticker.png', badge: 'SL Forager', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'forager-mycelium', name: 'Mycelium Network', tagline: 'Everything is connected underground.', sub: 'Dark tee · Teal · Root network illustration', price: 30, photo: '/merch/ecclesia-pilgrims.png', badge: 'SL Forager', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'forager-underground-church', name: 'The Underground Church', tagline: 'First: the mycelium. Then: everything else.', sub: 'Black tee · Teal + cream · Faith × fungi crossover', price: 30, photo: '/merch/ecclesia-pilgrims.png', badge: 'SL Forager', badgeColor: '#1a5a4a', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'forager-spore-season', name: 'Spore Season', tagline: 'Alabama · Spring & Fall · Pinhoti corridor', sub: 'Olive · Cream · Minimal mushroom badge', price: 28, photo: '/merch/blossom-and-decay-clean.png', badge: 'SL Forager', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'forager-ne-ala-mycology', name: 'NE Alabama Mycology', tagline: 'Calhoun · Cleburne · Cherokee Counties', sub: 'Cream tee · Field guide aesthetic · Species illustration', price: 30, photo: '/merch/blossom-decay-sugar-skull.png', badge: 'SL Forager', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'forager-sticker-chanterelle', name: 'Chanterelle — Alabama Forager Sticker', tagline: '3" die-cut · Botanical illustration', price: 5, photo: '/merch/blossom-and-decay-clean.png', badge: 'SL Forager', badgeColor: '#365314', category: 'sticker', available: false, comingSoon: true },
+  { id: 'forager-sticker-death-cap', name: 'Death Cap Diner — Sticker', tagline: '3" die-cut · Dark humor', price: 5, photo: '/merch/skull-gothic-sticker.png', badge: 'SL Forager', badgeColor: '#365314', category: 'sticker', available: false, comingSoon: true },
+  { id: 'forager-print', name: 'NE Alabama Field Guide — Mushroom Print', tagline: '11×14 · Field guide layout · 8 species', sub: 'Cream stock · Frame-ready', price: 18, photo: '/merch/clt-trail-map-print.webp', badge: 'SL Forager', badgeColor: '#365314', category: 'print', available: false, comingSoon: true },
+
+  // ── UNIVERSAL SPORTS — XC / MTB / TRAIL ────────────────────
+  { id: 'sport-run-ridge', name: 'Run the Ridge', tagline: 'NE Alabama Cross Country', sub: 'Black · Cream · Universal XC badge', price: 28, photo: '/merch/pv-raiders-xc.webp', badge: 'SL Sports', badgeColor: '#1e3a5f', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'sport-ride-coldwater', name: 'Ride Coldwater', tagline: 'Oxford, Alabama · IMBA Epic · MTB', sub: 'Forest green · Cream · Mountain badge', price: 28, photo: '/merch/coldwater-badge-sticker.png', badge: 'SL Sports', badgeColor: '#1e3a5f', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'sport-swim-bike-run', name: 'Swim. Bike. Run. NE Alabama.', tagline: 'Tri NE Alabama', sub: 'Navy · Gold · Triathlon badge', price: 28, photo: '/merch/pv-raiders-xc.webp', badge: 'SL Sports', badgeColor: '#1e3a5f', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'sport-al-xc', name: 'AL XC', tagline: 'Alabama Cross Country · Run Your Hills', sub: 'Crimson · Cream · Statewide XC design', price: 28, photo: '/merch/pv-raiders-xc.webp', badge: 'SL Sports', badgeColor: '#7f1d1d', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'sport-pirate-xc', name: 'Jolly Roger XC — Run Like You\'re Haunted.', tagline: 'Universal pirate XC · Any school, any team.', sub: 'Black · Cream · Skull + running legs badge', price: 28, photo: '/merch/pv-raiders-xc.webp', badge: 'SL Sports', badgeColor: '#1a1a2e', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'sport-pirate-mtb', name: 'Jolly Roger MTB — Ride Like You\'re Cursed.', tagline: 'Universal pirate MTB · Any trail, any crew.', sub: 'Black · Cream · Skull + bike badge', price: 28, photo: '/merch/coldwater-badge-sticker.png', badge: 'SL Sports', badgeColor: '#1a1a2e', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+
+  // ── THEATER & ARTS VERTICAL ─────────────────────────────────
+  { id: 'theater-all-mad', name: "We're All Mad Here.", tagline: 'Alice · The theater kid creed.', sub: 'Black · Purple · 8-bit Cheshire', price: 28, photo: '/merch/cheshire-shirt.webp', badge: 'SL Theater', badgeColor: '#3b1f6a', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'theater-break-leg', name: 'Break a Leg. It\'s a Blessing.', tagline: 'Ecclesia Press × Theater · Reverent break-a-leg.', sub: 'Black · Gold · Fraunces italic', price: 28, photo: '/merch/ep-here-i-stand.webp', badge: 'SL Theater', badgeColor: '#3b1f6a', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'theater-show-must', name: "The Show Must Go On. (It Doesn't.)", tagline: 'Community theater honesty.', sub: 'Black · Cream · Stage curtain graphic', price: 28, photo: '/merch/cheshire-shirt.webp', badge: 'SL Theater', badgeColor: '#3b1f6a', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'theater-sticker-curtain', name: 'Stage Curtain — Sticker', tagline: '3" die-cut · Red velvet graphic', price: 5, photo: '/merch/ecclesia-coin.png', badge: 'SL Theater', badgeColor: '#3b1f6a', category: 'sticker', available: false, comingSoon: true },
+
+  // ── FOOD & MARKET VERTICAL ─────────────────────────────────
+  { id: 'food-dirt-to-table', name: 'Dirt to Table.', tagline: 'NE Alabama Growers · No middleman.', sub: 'Sage green · Cream · Farmer badge', price: 28, photo: '/merch/diaspora-shirt.webp', badge: 'SL Market', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'food-eat-local', name: 'Eat Local or Eat Alone.', tagline: 'MarketDay · NE Alabama · Strong opinion.', sub: 'Black · Cream · Bold sans', price: 28, photo: '/merch/model-city-print.png', badge: 'SL Market', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'food-market-day', name: 'MarketDay', tagline: 'Gather Ground · NE Alabama Producers Market', sub: 'Cream · Sage · Market scene woodcut', price: 28, photo: '/merch/model-city-tote.webp', badge: 'SL Market', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'food-market-tote', name: 'Gather Ground Market Tote', tagline: 'Noble Street · Anniston, Alabama', sub: 'Cream canvas · Green handle · Market badge', price: 22, photo: '/merch/model-city-tote.webp', badge: 'SL Market', badgeColor: '#365314', category: 'tote', available: false, comingSoon: true, cities: ['anniston'] },
+
+  // ── AGRICULTURE & FARM VERTICAL ────────────────────────────
+  { id: 'farm-slow-grown', name: 'Slow Grown.', tagline: 'NE Alabama · The opposite of everything.', sub: 'Sage · Cream · Root system illustration', price: 28, photo: '/merch/diaspora-shirt.webp', badge: 'SL Farm', badgeColor: '#78350f', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'farm-bloom-bar', name: 'Bloom Bar', tagline: 'Heather Florals · Calhoun County · Est. 2014', sub: 'Sage · Cream · Botanical logo tee', price: 28, photo: '/merch/green-thumbs-club-sticker.webp', badge: 'Heather Florals', badgeColor: '#166534', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'farm-flower-farmer', name: "I'm a Flower Farmer.", tagline: 'Not a florist. A farmer. Ask me the difference.', sub: 'Sage · Cream · Drip humor', price: 28, photo: '/merch/green-thumbs-club-sticker.webp', badge: 'Heather Florals', badgeColor: '#166534', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+
+  // ── MUSIC VERTICAL ─────────────────────────────────────────
+  { id: 'music-sacred-secular', name: 'Sacred and Secular.', tagline: 'Ecclesia Collective · The Evergreens · NE Alabama', sub: 'Black · Cream · Music note + cross fusion', price: 28, photo: '/merch/ecclesia-stone-shirt.webp', badge: 'SL Music', badgeColor: '#1a5a4a', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'music-beat-studio', name: 'BeatStudio', tagline: 'Chord charts for the rest of us.', sub: 'Black · Pixel guitar · 8-bit', price: 28, photo: '/merch/ecclesia-coin-shirt.webp', badge: 'BeatStudio', badgeColor: '#3b1f6a', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'music-sticker-treble', name: 'Sacred & Secular — Sticker', tagline: 'Ecclesia Collective · 3" vinyl', price: 5, photo: '/merch/ecclesia-coin.png', badge: 'SL Music', badgeColor: '#1a5a4a', category: 'sticker', available: false, comingSoon: true },
+
+  // ── HUNTING & FISHING VERTICAL ─────────────────────────────
+  { id: 'hunt-calhoun-county', name: 'Calhoun County · Hunt. Fish. Stay.', tagline: 'NE Alabama · Talladega Forest corridor', sub: 'Olive · Cream · Oak + deer badge', price: 28, photo: '/merch/diaspora-shirt.webp', badge: 'SL Outdoors', badgeColor: '#365314', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'hunt-coosa-river', name: 'Coosa River. Always.', tagline: 'NE Alabama · Etowah · Gadsden · Weiss Lake', sub: 'Navy · Cream · River bass badge', price: 28, photo: '/merch/diaspora-shirt.webp', badge: 'SL Outdoors', badgeColor: '#1e3a5f', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+
+  // ── SMALL TOWN VERTICAL ────────────────────────────────────
+  { id: 'smalltown-born-here', name: "Born Here. Still Here.", tagline: 'NE Alabama · No apologies.', sub: 'Cream · Black · Diaspora counter-shirt', price: 28, photo: '/merch/diaspora-shirt.webp', badge: 'SL Small Town', badgeColor: '#7a5c1e', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'smalltown-piedmont', name: 'Piedmont, Alabama.', tagline: 'Pop. 4,600 · Trail Town · Enough.', sub: 'Cream · Green · Bold serif', price: 28, photo: '/merch/piedmont-clt-banner-print.webp', badge: 'SL Small Town', badgeColor: '#166534', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true, cities: ['piedmont'] },
+  { id: 'smalltown-oxford', name: 'Oxford, Alabama.', tagline: 'Lickskillet. Coldwater. Cold cuts.', sub: 'Black · Cream · Oxford badge', price: 28, photo: '/merch/lickskillet-premium-shirt.png', badge: 'SL Small Town', badgeColor: '#7a3c00', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true, cities: ['oxford'] },
+
+  // ── HISTORY & CIVIL RIGHTS VERTICAL ───────────────────────
+  { id: 'history-1961-anniston', name: 'Anniston, 1961.', tagline: 'The bus burned. History didn\'t forget.', sub: 'Black · Cream · Woodcut · Freedom Riders', price: 35, photo: '/merch/freedom-riders/shirt-mockup-dark.webp', badge: 'SL Editorial', badgeColor: '#1a1a2e', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true, cities: ['anniston'] },
+  { id: 'history-ccc-cheaha', name: 'CCC — Cheaha, 1933.', tagline: 'Civilian Conservation Corps · Built with hands.', sub: 'Olive · Cream · Woodcut tower illustration', price: 35, photo: '/merch/cheaha-building-skyway.png', badge: 'SL Editorial', badgeColor: '#78350f', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+
+  // ── GOTHIC / LITERARY VERTICAL ────────────────────────────
+  { id: 'gothic-southern-rot', name: "Everything Rots. That's the Point.", tagline: 'Blossom & Decay · Southern Gothic', sub: 'Cream · Black · Vines + skull + serif', price: 30, photo: '/merch/blossom-and-decay-clean.png', badge: 'SL Gothic', badgeColor: '#7f1d1d', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'gothic-pleasant-decay', name: "It Was Never Pleasant Valley.", tagline: 'Southern Gothic memoir tee · Broken Ground', sub: 'Dark olive · Cream italic · Fraunces', price: 30, photo: '/merch/blossom-and-decay-clean.png', badge: 'SL Gothic', badgeColor: '#7f1d1d', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true },
+  { id: 'gothic-sticker-rot', name: '"Everything Rots." — Sticker', tagline: 'Southern Legends Gothic · 3" die-cut', price: 5, photo: '/merch/skull-gothic-sticker.png', badge: 'SL Gothic', badgeColor: '#7f1d1d', category: 'sticker', available: false, comingSoon: true },
+
+  // ── WEDDING & AISLE VERTICAL ───────────────────────────────
+  { id: 'wedding-vendor-tee', name: 'The Aisle — Vendor Crew', tagline: 'Anniston Bridal Market · Oct 18, 2026', sub: 'Black · Gold · Aisle wordmark tee', price: 28, photo: '/merch/ecclesia-pilgrims.png', badge: 'The Aisle', badgeColor: '#c9a227', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true, cities: ['anniston'] },
+  { id: 'wedding-bloom-bar-shirt', name: 'Bloom Bar — Florals', tagline: 'Heather Florals · The Aisle · Anniston', sub: 'Cream · Sage · Bloom Bar logo tee', price: 28, photo: '/merch/green-thumbs-club-sticker.webp', badge: 'The Aisle', badgeColor: '#166534', category: 'shirt', sizes: ['S','M','L','XL','2XL'], available: false, comingSoon: true, cities: ['anniston'] },
+  { id: 'wedding-tote', name: 'The Aisle — Market Tote', tagline: 'Anniston Bridal Market · Cream canvas', sub: 'DTF print · Gold handle accent', price: 22, photo: '/merch/model-city-tote.webp', badge: 'The Aisle', badgeColor: '#c9a227', category: 'tote', available: false, comingSoon: true, cities: ['anniston'] },
+  { id: 'wedding-bride-cap', name: "She Said Yes. She's In Charge.", tagline: 'The Aisle · Bride trucker cap', sub: 'Cream · Gold embroidery · Trucker', price: 26, photo: '/merch/sl-run.webp', badge: 'The Aisle', badgeColor: '#c9a227', category: 'hat', available: false, comingSoon: true },
 ]
 
 

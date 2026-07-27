@@ -1,3 +1,32 @@
+---
+## 2026-07-27 — SL Merch Mockup Pipeline + Sticker Fixes + Print Catalog
+
+**Venture:** Southern Legends · The Aisle
+**Duration:** ~2h
+**Status:** COMPLETE — handed off to next session
+
+### Shipped
+- **`tools/merch-catalog-pages.html`** — 8-page 8.5×11 printable catalog: Cover / Available Now + Stickers / Trail & Outdoor / Community & History / Schools & Events / The Aisle / Art & Gothic + Full Sticker Grid / Order Back Cover
+- **Sticker bg removal + crop** — 7 stickers fixed: coldwater-badge, pinhoti-badge, fort-mcclellan (dark bg landscape → square transparent), lickskillet-ox (cream bg), skull-gothic, skull-marigold, blossom-and-decay (all `-trans.png` saved). Visual QC via `tools/sticker-trans-review.png` composite.
+- **Catalog wired** — all `-trans.png` refs updated in catalog HTML (13 replacements total)
+- **`PROMPTS/merch-mockup-tool-session.md`** — full handoff brief for next session
+
+### Assets
+- Compositor: `/Volumes/Samsung_T5/webdev/tools/shirt-mockup-gen.py`
+- Catalog: `/Volumes/Samsung_T5/webdev/southern-legends/tools/merch-catalog-pages.html`
+- Sticker review: `/Volumes/Samsung_T5/webdev/southern-legends/tools/sticker-trans-review.png`
+- Sticker trans files: `southern-legends/public/merch/*-trans.png` (7 new)
+
+### Decisions
+- **Merch mockup tool** (shirt-mockup-review.html) → rename + expand to cover hats, hoodies, 3D prints, patches, mugs, posters, socks, pennants in next session
+- **TypeScript-back the catalog** from `merch.ts` as a Next.js page at southernlegends.blog/merch/catalog — QUEUED
+- **Expand merch.ts category type** to include 12 new categories — QUEUED
+- Aisle merch included in catalog (vendor tee mockup generated, bloom bar shirt, tote spec)
+- No formal merch ideas list existed before this session — catalog + brief = now the canonical list
+
+### Next session trigger
+Read `PROMPTS/merch-mockup-tool-session.md` — starts with expand merch.ts types, then TypeScript catalog page, then expanded mockup tool.
+
 # Sessions — Southern Legends
 
 > **TLDR:** Session history, newest first. **Read when:** Need to know what shipped or what's deferred. **Skip if:** you're starting fresh and don't need continuity context.
