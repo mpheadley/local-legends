@@ -6,7 +6,9 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { Link } from "next-view-transitions";
 import { notFound } from "next/navigation";
 import { getListicle, getListicleSlugs, getAllListicles } from "@/lib/listicles";
+import { getMerchForCity } from "@/lib/merch";
 import ShareRow from "@/app/components/ShareRow";
+import { BusinessCard } from "@/app/components/BusinessCard";
 
 export function generateStaticParams() {
   return getListicleSlugs().map((slug) => ({ slug }));
@@ -32,10 +34,6 @@ const mdxComponents = {
   Script: (props: React.ComponentProps<"script">) => <script {...props} />,
 };
 
-function telHref(t: string) {
-  return "tel:" + t.replace(/[^0-9]/g, "");
-}
-
 export default async function ListiclePage({
   params,
 }: {
@@ -47,6 +45,7 @@ export default async function ListiclePage({
 
   const others = getAllListicles().filter((x) => x.slug !== slug).slice(0, 6);
   const isCard = l.businesses && l.businesses.length > 0;
+  const cityMerch = getMerchForCity(l.city.toLowerCase().replace(/\s+/g, "-"), 3);
 
   return (
     <main id="main-content" style={{ backgroundColor: "#F0EDE6", minHeight: "100vh" }}>
@@ -56,7 +55,7 @@ export default async function ListiclePage({
 
       {/* Header image */}
       {l.image && (
-        <div style={{ position: "relative", width: "100%", height: "clamp(220px, 38vw, 380px)" }}>
+        <div style={{ position: "relative", width: "100%", height: "clamp(480px, 65vh, 760px)" }}>
           <Image src={l.image} alt={l.title} fill priority style={{ objectFit: "cover" }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(26,18,8,.15) 0%, transparent 40%, rgba(26,18,8,.75) 100%)" }} />
           <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, padding: "0 1.5rem 1.75rem", maxWidth: "48rem", margin: "0 auto" }}>
@@ -82,47 +81,9 @@ export default async function ListiclePage({
         )}
 
         {isCard ? (
-          <div style={{ display: "grid", gap: "0.85rem" }}>
+          <div style={{ display: "grid", gap: "1.25rem" }}>
             {l.businesses.map((b, i) => (
-              <div key={b.name + i} style={{ display: "flex", gap: "0", alignItems: "stretch", background: "#fff", border: "1px solid rgba(154,108,47,0.15)", borderRadius: "10px", overflow: "hidden" }}>
-                {/* Photo */}
-                {b.image && (
-                  <div style={{ flexShrink: 0, width: "120px", position: "relative" }}>
-                    <Image src={b.image} alt={b.name} fill style={{ objectFit: "cover" }} sizes="120px" />
-                  </div>
-                )}
-                {/* Number badge when no photo */}
-                {!b.image && (
-                  <div style={{ flexShrink: 0, width: "3rem", background: "#F0EDE6", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#9a6c2f" }}>{i + 1}</span>
-                  </div>
-                )}
-                <div style={{ flex: 1, minWidth: 0, padding: "1rem 1.25rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  {b.image && (
-                    <span style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "0.2rem" }}>
-                      #{i + 1}
-                    </span>
-                  )}
-                  <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "1.25rem", fontWeight: 400, color: "#1a1208", lineHeight: 1.2, margin: 0 }}>
-                    {b.web ? <a href={b.web} target="_blank" rel="noopener" style={{ color: "#1a1208", textDecoration: "none" }}>{b.name}</a> : b.name}
-                  </h2>
-                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#6b5040", marginTop: "0.15rem", marginBottom: 0 }}>
-                    {b.city}{b.zip ? ` · ${b.zip}` : ""}
-                  </p>
-                  <div style={{ display: "flex", gap: "0.6rem", marginTop: "0.65rem", flexWrap: "wrap" }}>
-                    {b.tel && (
-                      <a href={telHref(b.tel)} style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", fontWeight: 600, color: "#9a6c2f", background: "#F0EDE6", padding: "0.3rem 0.7rem", borderRadius: "5px", textDecoration: "none" }}>
-                        {b.tel}
-                      </a>
-                    )}
-                    {b.web && (
-                      <a href={b.web} target="_blank" rel="noopener" style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", fontWeight: 600, color: "#F0EDE6", background: "#9a6c2f", padding: "0.3rem 0.8rem", borderRadius: "5px", textDecoration: "none" }}>
-                        Visit site →
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
+              <BusinessCard key={b.name + i} b={b} index={i} />
             ))}
           </div>
         ) : (
@@ -138,6 +99,38 @@ export default async function ListiclePage({
         <div style={{ marginTop: "2.5rem" }}>
           <ShareRow url={`/listicles/${slug}`} title={l.title} description={l.excerpt} />
         </div>
+
+        {/* Merch strip */}
+        {cityMerch.length > 0 && (
+          <div style={{ marginTop: "3rem", background: "#1a1208", borderRadius: "12px", padding: "1.5rem" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "1rem" }}>
+              From the Southern Legends Shop
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: "0.85rem" }}>
+              {cityMerch.map((item) => (
+                item.available ? (
+                  <a key={item.id} href={`/merch#${item.id}`} style={{ textDecoration: "none" }}>
+                    <div style={{ position: "relative", width: "100%", paddingBottom: "100%", borderRadius: "8px", overflow: "hidden", background: "#2a1f0e" }}>
+                      {item.photo && <Image src={item.photo} alt={item.name} fill style={{ objectFit: "cover", opacity: 0.9 }} sizes="200px" />}
+                    </div>
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#f0ede6", marginTop: "0.4rem" }}>{item.name}</p>
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9a6c2f", marginTop: "0.1rem" }}>{item.price}</p>
+                  </a>
+                ) : (
+                  <div key={item.id} style={{ opacity: 0.5 }}>
+                    <div style={{ position: "relative", width: "100%", paddingBottom: "100%", borderRadius: "8px", overflow: "hidden", background: "#2a1f0e" }}>
+                      {item.photo && <Image src={item.photo} alt={item.name} fill style={{ objectFit: "cover" }} sizes="200px" />}
+                      <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(26,18,8,0.5)" }}>
+                        <span style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#f0ede6", background: "rgba(26,18,8,0.7)", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>Coming soon</span>
+                      </div>
+                    </div>
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#9a6c2f", marginTop: "0.4rem" }}>{item.name}</p>
+                  </div>
+                )
+              ))}
+            </div>
+          </div>
+        )}
 
         {others.length > 0 && (
           <div style={{ marginTop: "3rem", borderTop: "1px solid rgba(154,108,47,0.18)", paddingTop: "2rem" }}>
