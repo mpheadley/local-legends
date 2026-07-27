@@ -121,6 +121,9 @@ export default function TrailPage() {
 
       {/* Hero */}
       <div style={{ background: "linear-gradient(to bottom, #1C1917, #2D1A0A)", padding: "4rem 1.5rem 3rem", position: "relative", overflow: "hidden" }}>
+        {trail.image && (
+          <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${trail.image})`, backgroundSize: "cover", backgroundPosition: "center", opacity: 0.25 }} />
+        )}
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url(/topo-7.png)", backgroundSize: "400px", opacity: 0.07 }} />
         <div style={{ position: "relative", maxWidth: "52rem", margin: "0 auto" }}>
           <Link href="/trails" style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(250,250,247,0.6)", textDecoration: "none", display: "inline-block", marginBottom: "1.5rem" }}>← All Trails</Link>

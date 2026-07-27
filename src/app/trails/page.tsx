@@ -118,9 +118,12 @@ function TrailCard({ trail, featured = false }: { trail: import("@/lib/trails").
         overflow: "hidden",
         transition: "box-shadow 0.15s",
       }}>
-        {/* Image placeholder / future photo */}
-        <div style={{ height: featured ? "160px" : "100px", background: "linear-gradient(135deg, #3D6B4F, #1C3A2A)", position: "relative", display: "flex", alignItems: "flex-end", padding: "0.75rem" }}>
-          <div style={{ position: "absolute", inset: 0, backgroundImage: "url(/topo-7.png)", backgroundSize: "300px", opacity: 0.1 }} />
+        {/* Trail photo */}
+        <div style={{ height: featured ? "160px" : "100px", background: "linear-gradient(135deg, #3D6B4F, #1C3A2A)", position: "relative", display: "flex", alignItems: "flex-end", padding: "0.75rem", overflow: "hidden" }}>
+          {trail.image && (
+            <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${trail.image})`, backgroundSize: "cover", backgroundPosition: "center", opacity: 0.6 }} />
+          )}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%)" }} />
           <div style={{ position: "relative", display: "flex", gap: "0.5rem", alignItems: "center" }}>
             <span style={{
               background: difficultyColor(trail.difficulty),
