@@ -326,6 +326,7 @@ export default function AboutPage() {
                   width={160}
                   height={160}
                   className="mx-auto rounded mb-1"
+                  unoptimized
                 />
                 <span className="text-xs text-ll-text-light">I Contain Multitudes</span>
               </Link>
@@ -336,6 +337,7 @@ export default function AboutPage() {
                   width={160}
                   height={160}
                   className="mx-auto rounded mb-1"
+                  unoptimized
                 />
                 <span className="text-xs text-ll-text-light">Chief Ladiga Trail</span>
               </Link>
@@ -346,6 +348,7 @@ export default function AboutPage() {
                   width={160}
                   height={160}
                   className="mx-auto rounded mb-1"
+                  unoptimized
                 />
                 <span className="text-xs text-ll-text-light">The Model City</span>
               </Link>

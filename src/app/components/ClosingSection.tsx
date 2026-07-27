@@ -76,6 +76,7 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
                 width={140}
                 height={140}
                 className="rounded hover:opacity-90 transition-opacity"
+                unoptimized
               />
             </Link>
             <span className="text-xs text-white/60">{primary.name}</span>
@@ -94,6 +95,7 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
                 width={140}
                 height={140}
                 className="rounded hover:opacity-90 transition-opacity"
+                unoptimized
               />
             </Link>
             <span className="text-xs text-white/60">{secondary.name}</span>
@@ -113,6 +115,7 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
                   width={140}
                   height={140}
                   className="rounded hover:opacity-90 transition-opacity"
+                  unoptimized
                 />
               </Link>
               <span className="text-xs text-white/60">{tertiary.name}</span>
