@@ -523,31 +523,35 @@ export default async function CityPage({ params }: Props) {
               {cityName} merch from Southern Legends
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: "1rem", marginBottom: "1.25rem" }}>
-              {cityMerch.map((item) => (
-                <a
-                  key={item.id}
-                  href={`/merch#${item.id}`}
-                  style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}
-                >
-                  <div style={{ position: "relative", width: "100%", aspectRatio: "1", borderRadius: "6px", overflow: "hidden", background: "#2a1e10" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={item.photo}
-                      alt={item.name}
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                    />
-                    {item.badge && (
-                      <span style={{ position: "absolute", top: "0.4rem", left: "0.4rem", background: item.badgeColor || "#7a5c1e", color: "#F0EDE6", fontSize: "0.55rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.15rem 0.45rem", borderRadius: "3px" }}>
-                        {item.badge}
-                      </span>
-                    )}
-                  </div>
-                  <div>
-                    <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.875rem", color: "#F0EDE6", lineHeight: 1.2, marginBottom: "0.15rem" }}>{item.name}</p>
-                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "rgba(240,237,230,0.5)" }}>${item.price}</p>
-                  </div>
-                </a>
-              ))}
+              {cityMerch.map((item) => {
+                const card = (
+                  <>
+                    <div style={{ position: "relative", width: "100%", aspectRatio: "1", borderRadius: "6px", overflow: "hidden", background: "#2a1e10" }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={item.photo} alt={item.name} style={{ width: "100%", height: "100%", objectFit: "cover", opacity: item.available ? 1 : 0.45 }} />
+                      {!item.available && (
+                        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <span style={{ fontFamily: "var(--font-body)", fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F0EDE6", background: "rgba(26,18,8,0.88)", padding: "0.2rem 0.5rem", borderRadius: "3px" }}>Coming soon</span>
+                        </div>
+                      )}
+                      {item.available && item.badge && (
+                        <span style={{ position: "absolute", top: "0.4rem", left: "0.4rem", background: item.badgeColor || "#7a5c1e", color: "#F0EDE6", fontSize: "0.55rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.15rem 0.45rem", borderRadius: "3px" }}>
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+                    <div>
+                      <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.875rem", color: item.available ? "#F0EDE6" : "rgba(240,237,230,0.4)", lineHeight: 1.2, marginBottom: "0.15rem" }}>{item.name}</p>
+                      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", color: "rgba(240,237,230,0.4)" }}>{item.available ? `$${item.price}` : "Notify me when ready"}</p>
+                    </div>
+                  </>
+                )
+                return item.available ? (
+                  <a key={item.id} href={`/merch#${item.id}`} style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}>{card}</a>
+                ) : (
+                  <div key={item.id} style={{ display: "flex", flexDirection: "column", gap: "0.5rem", cursor: "default" }}>{card}</div>
+                )
+              })}
             </div>
             <a
               href="/merch"

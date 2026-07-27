@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { getWideMerch } from "@/lib/merch";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function NotFound() {
+  const slMerch = getWideMerch(3)
   return (
     <main id="main-content">
       <section className="relative text-white overflow-hidden gradient-hero">
@@ -45,6 +47,30 @@ export default function NotFound() {
           </div>
         </div>
       </section>
+
+      {slMerch.length > 0 && (
+        <section style={{ background: "#1a1208", borderTop: "1px solid rgba(154,108,47,0.12)" }}>
+          <div style={{ maxWidth: "40rem", margin: "0 auto", padding: "3rem 1.5rem" }}>
+            <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "0.4rem", textAlign: "center" }}>While you&apos;re here</p>
+            <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#F0EDE6", fontWeight: 400, marginBottom: "1.25rem", textAlign: "center" }}>Southern Legends merch</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.75rem", marginBottom: "1rem" }}>
+              {slMerch.map((item) => (
+                <a key={item.id} href={`/merch#${item.id}`} style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+                  <div style={{ position: "relative", width: "100%", aspectRatio: "1", borderRadius: "5px", overflow: "hidden", background: "#2a1e10" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={item.photo} alt={item.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  </div>
+                  <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.8rem", color: "#F0EDE6", lineHeight: 1.2 }}>{item.name}</p>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", color: "rgba(240,237,230,0.5)" }}>${item.price}</p>
+                </a>
+              ))}
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <a href="/merch" style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#c4974a", fontWeight: 600, textDecoration: "none" }}>See all Southern Legends merch →</a>
+            </div>
+          </div>
+        </section>
+      )}
     </main>
   );
 }

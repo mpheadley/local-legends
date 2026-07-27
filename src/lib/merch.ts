@@ -207,6 +207,34 @@ export const MERCH: MerchItem[] = [
     cities: ['anniston'],
   },
 
+  // ── ECCLESIA PHOTOREAL ─────────────────────────────────────
+  {
+    id: 'ecclesia-stone-shirt',
+    name: 'Ancient paths.',
+    tagline: 'Ecclesia · A Fresh Expression',
+    sub: 'Black tee · teal pixel stone',
+    price: 32,
+    photo: '/merch/ecclesia-stone-shirt.webp',
+    badge: 'Ecclesia',
+    badgeColor: '#1a5a4a',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+  },
+  {
+    id: 'ecclesia-coin-photoreal',
+    name: 'Ecclesia Coin — We are all on the way.',
+    tagline: 'Celtic triskelion · photoreal · Fraunces type',
+    sub: 'Black · Navy',
+    price: 32,
+    photo: '/merch/ecclesia-coin-photoreal-shirt.webp',
+    badge: 'Ecclesia',
+    badgeColor: '#1a5a4a',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+  },
+
   // ── ECCLESIA PRESS SATIRE TEES ─────────────────────────────
   {
     id: 'ep-chewed-gum',
@@ -515,12 +543,17 @@ export const MERCH: MerchItem[] = [
 
 
 export function getMerchForCity(citySlug: string, limit = 4): MerchItem[] {
-  // First try items specifically tagged for this city
-  const cityItems = MERCH.filter(m => m.available && m.cities?.includes(citySlug))
-  if (cityItems.length >= 2) return cityItems.slice(0, limit)
-  // Fall back to SL-wide items (empty cities array)
+  const cityAvail = MERCH.filter(m => m.available && m.cities?.includes(citySlug))
+  const cityPending = MERCH.filter(m => !m.available && m.cities?.includes(citySlug))
   const wide = MERCH.filter(m => m.available && (!m.cities || m.cities.length === 0))
-  return [...cityItems, ...wide].slice(0, limit)
+  // city-tagged items first (available then coming-soon placeholders), fill with SL-wide if sparse
+  const result = [...cityAvail, ...cityPending]
+  if (result.length < 2) result.push(...wide)
+  return result.slice(0, limit)
+}
+
+export function getWideMerch(limit = 4): MerchItem[] {
+  return MERCH.filter(m => m.available && (!m.cities || m.cities.length === 0)).slice(0, limit)
 }
 
 export function getMerchItem(id: string): MerchItem | undefined {
