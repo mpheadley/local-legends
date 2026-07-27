@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Sans_3, Fraunces, Rock_Salt, Zeyada, Permanent_Marker, Caveat, Barlow_Condensed } from "next/font/google";
+import { Source_Sans_3, Fraunces, IM_Fell_English, Barlow_Condensed } from "next/font/google";
 import { ViewTransitions } from "next-view-transitions";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -25,29 +25,10 @@ const fraunces = Fraunces({
   axes: ["opsz"],
 });
 
-const rockSalt = Rock_Salt({
-  variable: "--font-rock-salt",
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const zeyada = Zeyada({
-  variable: "--font-zeyada",
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const permanentMarker = Permanent_Marker({
-  variable: "--font-permanent-marker",
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const caveat = Caveat({
-  variable: "--font-caveat",
+const imFell = IM_Fell_English({
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-im-fell",
   subsets: ["latin"],
   display: "swap",
 });
@@ -117,7 +98,7 @@ export default function RootLayout({
         />
       </head>
       {/* Built by Headley Web & SEO | headleyweb.com */}
-      <body className={`${sourceSans.variable} ${fraunces.variable} ${rockSalt.variable} ${zeyada.variable} ${permanentMarker.variable} ${caveat.variable} ${barlowCondensed.variable} antialiased`}>
+      <body className={`${sourceSans.variable} ${fraunces.variable} ${imFell.variable} ${barlowCondensed.variable} antialiased`}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-ll-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"
