@@ -319,17 +319,6 @@ export default function AboutPage() {
               I contain<br />multitudes.
             </p>
             <div className="flex gap-6 justify-center flex-wrap mb-5">
-              <Link href="/merch" className="text-center">
-                <Image
-                  src="/merch/i-contain-multitudes.webp"
-                  alt="I Contain Multitudes tee"
-                  width={160}
-                  height={160}
-                  className="mx-auto rounded mb-1"
-                  unoptimized
-                />
-                <span className="text-xs text-ll-text-light">I Contain Multitudes</span>
-              </Link>
               <Link href="/buy/clt-shirt" className="text-center">
                 <Image
                   src="/merch/clt-shirt-mockup.webp"

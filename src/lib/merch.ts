@@ -932,9 +932,9 @@ export function getMerchByCategory(cat: MerchItem['category']): MerchItem[] {
 
 // Merch product lookups for profile/essay crosslinks — all internal routes
 export const FW_PRODUCTS = {
-  ICM: { url: '/merch', name: 'I Contain Multitudes', image: '/merch/i-contain-multitudes.webp' },
-  SH:  { url: '/merch', name: 'Still Here', image: '/merch/still-here.webp' },
-  BP:  { url: '/merch', name: 'Bipolar & Proud', image: '/merch/bipolar-proud.webp' },
+  ICM: { url: '/merch', name: 'I Contain Multitudes', image: '/merch/model-city-mockup-cream.webp' },
+  SH:  { url: '/merch', name: 'Still Here', image: '/merch/clt-shirt-mockup.webp' },
+  BP:  { url: '/merch', name: 'Bipolar & Proud', image: '/merch/model-city-mockup-black.webp' },
   CLT: { url: '/buy/clt-shirt', name: "Ladiga's Land", image: '/merch/clt-shirt-mockup.webp' },
   MC:  { url: '/buy/model-city-shirt', name: 'The Model City', image: '/merch/model-city-mockup-cream.webp' },
   DD:  { url: '/merch/freedom-riders', name: 'Freedom Riders — Anniston, 1961', image: '/merch/freedom-riders/shirt-mockup-dark.webp' },
