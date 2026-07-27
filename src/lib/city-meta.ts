@@ -29,7 +29,7 @@ export const CITY_META: CityMeta[] = [
     region: "NE Alabama",
     nearbySlug: ["anniston", "jacksonville", "talladega"],
     population: 22000,
-    tagline: "Oxford, Alabama",
+    tagline: "Calhoun County's commercial spine — the city the highway built",
     heroImage: "/images/locations/oxford-hero.webp",
   },
   {
