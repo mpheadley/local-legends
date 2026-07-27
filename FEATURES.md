@@ -117,3 +117,17 @@
 - Team pricing: $25/shirt via checkbox
 - Pre-order: ships 2–3 weeks after Woodstock 5K (Aug 2)
 - 25% of PV Raiders XC sales donated to XC program
+
+## /trails (2026-07-27)
+- `/trails` — trail index: 7 regional trails (CLT, Silver Comet, Coldwater, Pinhoti, Cheaha, Oxford Lake, Choccolocco Greenway)
+- `/trails/[slug]` — individual trail page: full profile, highlights, difficulty stats, AllTrails link
+- Star ratings with avg + review count in hero
+- Review submission form: rating, conditions, difficulty felt, date hiked → Supabase (approved=false)
+- CLT support widget: Stripe checkout passthrough, $10/$25/$50/$100 tiers, 3% SL fee
+- Sponsor slot on every trail page: $75/mo
+- `/api/trails/review` — GET (approved reviews by slug) + POST (submit review)
+- `/api/trails/support` — Stripe checkout for CLT donations
+- Supabase: `trail_reviews` + `trail_support` tables
+- `src/lib/trails.ts` — typed trail data, helper fns
+- Trails added to SectionLinks nav
+- Daily trail scraper: `tools/trail-scraper.py` runs at 7:15am, SMS summary
