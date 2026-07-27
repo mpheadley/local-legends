@@ -938,7 +938,7 @@ export const FW_PRODUCTS = {
   BP:  { url: `${FW}/bipolar-proud`, name: 'Bipolar & Proud', image: '/merch/bipolar-proud.webp' },
   CLT: { url: `${FW}/chief-ladiga-trail`, name: "Ladiga's Land", image: '/merch/clt-trail.webp' },
   MC:  { url: `${FW}/the-model-city-anniston-alabama`, name: 'The Model City', image: '/merch/model-city-shirt.webp' },
-  DD:  { url: `${FW}/dave-dennis-freedom-rider-1961`, name: 'Dave Dennis — Freedom Rider, 1961', image: '/merch/freedom-riders/v2-ink-on-cream.png' },
+  DD:  { url: `${FW}/dave-dennis-freedom-rider-1961`, name: 'Dave Dennis — Freedom Rider, 1961', image: '/merch/freedom-riders/dennis-hedcut-canonical.png' },
 } as const
 
 type FWProduct = (typeof FW_PRODUCTS)[keyof typeof FW_PRODUCTS]
