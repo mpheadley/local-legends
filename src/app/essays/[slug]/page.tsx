@@ -26,7 +26,7 @@ import Comments from "@/app/components/Comments";
 import JournalCard from "@/app/components/JournalCard";
 import ProfileCardHero from "@/app/components/ProfileCardHero";
 import SubscribeCTA from "@/app/components/SubscribeCTA";
-import { getEssayMerch } from "@/lib/merch";
+import { getEssayMerch, getMerchForCity } from "@/lib/merch";
 import ClosingSection from "@/app/components/ClosingSection"
 import SpotifyEmbed from "@/app/components/SpotifyEmbed"
 import { getPlaylistId } from "@/lib/spotify-config";
@@ -374,6 +374,40 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
       {/* Subscribe */}
       <SubscribeCTA />
+
+      {/* Place-based merch — show city items when essay has a location */}
+      {(() => {
+        const fm = frontmatter as unknown as { location?: string }
+        if (!fm.location) return null
+        // Parse "Jacksonville, Alabama" → "jacksonville"
+        const cityName = fm.location.split(',')[0].trim().toLowerCase().replace(/\s+/g, '-')
+        const items = getMerchForCity(cityName, 3)
+        if (items.length === 0) return null
+        return (
+          <section style={{ background: '#1a1208', borderTop: '1px solid rgba(154,108,47,0.12)' }}>
+            <div className="max-w-3xl mx-auto px-6 py-10">
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#9a6c2f', marginBottom: '0.75rem' }}>
+                {fm.location.split(',')[0].trim()} merch
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1rem' }}>
+                {items.map((item) => (
+                  <a key={item.id} href={`/merch#${item.id}`} style={{ textDecoration: 'none' }}>
+                    <div style={{ background: '#2a1e10', borderRadius: '6px', overflow: 'hidden', marginBottom: '0.4rem', aspectRatio: '1' }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={item.photo} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <p style={{ fontFamily: 'var(--font-heading)', fontSize: '0.8rem', color: '#F0EDE6', lineHeight: 1.2 }}>{item.name}</p>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.65rem', color: 'rgba(240,237,230,0.45)' }}>${item.price}</p>
+                  </a>
+                ))}
+              </div>
+              <a href="/merch" style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', color: '#c4974a', fontWeight: 600, textDecoration: 'none' }}>
+                All Southern Legends merch →
+              </a>
+            </div>
+          </section>
+        )
+      })()}
 
       {/* More from the Journal */}
       {moreJournal.length > 0 && (

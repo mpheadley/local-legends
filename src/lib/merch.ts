@@ -11,6 +11,8 @@ export type MerchItem = {
   fundraiser?: string
   sizes?: string[]
   available: boolean
+  // city slugs this item is relevant to; empty = SL-wide
+  cities?: string[]
 }
 
 export const MERCH: MerchItem[] = [
@@ -27,6 +29,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
+    cities: ['anniston'],
   },
   {
     id: 'woodstock-sticker',
@@ -38,6 +41,7 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#166534',
     category: 'sticker',
     available: true,
+    cities: ['anniston'],
   },
 
   // ── PV RAIDERS XC ──────────────────────────────────────────
@@ -54,6 +58,7 @@ export const MERCH: MerchItem[] = [
     fundraiser: 'Raiders XC',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
+    cities: ['anniston'],
   },
 
   // ── CHIEF LADIGA TRAIL ─────────────────────────────────────
@@ -67,6 +72,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
+    cities: ['anniston', 'piedmont'],
   },
   {
     id: 'clt-tote',
@@ -79,6 +85,7 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#166534',
     category: 'tote',
     available: true,
+    cities: ['anniston', 'piedmont'],
   },
   {
     id: 'model-city-tote',
@@ -91,6 +98,7 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#166534',
     category: 'tote',
     available: true,
+    cities: ['anniston'],
   },
   {
     id: 'clt-sticker',
@@ -102,6 +110,7 @@ export const MERCH: MerchItem[] = [
     badgeColor: '#166534',
     category: 'sticker',
     available: true,
+    cities: ['anniston', 'piedmont'],
   },
   {
     id: 'clt-trail-map',
@@ -112,6 +121,7 @@ export const MERCH: MerchItem[] = [
     photo: '/merch/clt-trail-map-print.webp',
     category: 'print',
     available: true,
+    cities: ['anniston', 'piedmont'],
   },
 
   // ── ECCLESIA ────────────────────────────────────────────────
@@ -125,6 +135,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: false,
+    cities: ['anniston'],
   },
   {
     id: 'ecclesia-coin',
@@ -134,6 +145,7 @@ export const MERCH: MerchItem[] = [
     photo: '/merch/ecclesia-coin.png',
     category: 'sticker',
     available: false,
+    cities: ['anniston'],
   },
 
   // ── FREEDOM RIDERS ─────────────────────────────────────────
@@ -150,6 +162,7 @@ export const MERCH: MerchItem[] = [
     fundraiser: 'West Anniston Foundation',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
+    cities: ['anniston'],
   },
 
   // ── MENTAL HEALTH LINE — Fourthwall POD only, see /support ──
@@ -167,6 +180,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: false,
+    cities: [],
   },
   {
     id: 'jacksonville-shirt',
@@ -178,6 +192,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: false,
+    cities: ['jacksonville'],
   },
   {
     id: 'coldwater-shirt',
@@ -189,6 +204,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: false,
+    cities: ['anniston'],
   },
 
   // ── ECCLESIA PRESS SATIRE TEES ─────────────────────────────
@@ -204,6 +220,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: false,
+    cities: [],
   },
   {
     id: 'ep-father-runs',
@@ -217,6 +234,7 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: false,
+    cities: [],
   },
   {
     id: 'ep-here-i-stand',
@@ -230,6 +248,254 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: false,
+    cities: [],
+  },
+
+  // ── CHEAHA SUMMIT ──────────────────────────────────────────
+  {
+    id: 'cheaha-summit-shirt',
+    name: 'Cheaha — Alabama\'s Summit',
+    tagline: '2,413 ft · Cleburne County · Alabama\'s highest point',
+    sub: 'Black shirt · Crimson mountain woodcut · Bold serif',
+    price: 35,
+    photo: '/merch/cheaha-summit-shirt.webp',
+    badge: 'SL Woodcut',
+    badgeColor: '#7f1d1d',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: ['piedmont', 'gadsden'],
+  },
+
+  // ── JACKSONVILLE ────────────────────────────────────────────
+  {
+    id: 'jacksonville-gamecock-shirt',
+    name: 'Jacksonville — Home of JSU',
+    tagline: 'Jacksonville, Alabama · Est. 1833',
+    sub: 'Black shirt · Bold gamecock badge · Gold + crimson',
+    price: 35,
+    photo: '/merch/jacksonville-gamecock-shirt.webp',
+    badge: 'SL Woodcut',
+    badgeColor: '#7a3c00',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: ['jacksonville'],
+  },
+  {
+    id: 'jacksonville-water-tower-sticker',
+    name: 'Jacksonville Water Tower',
+    tagline: 'Jacksonville, Alabama · Est. 1833 · 3" round',
+    sub: 'Rust distressed badge · Gamecock weathervane · Crossed rifles',
+    price: 5,
+    photo: '/merch/jacksonville-water-tower-badge.webp',
+    badge: 'SL Woodcut',
+    badgeColor: '#7a3c00',
+    category: 'sticker',
+    available: true,
+    cities: ['jacksonville'],
+  },
+
+  // ── PIEDMONT / CLT ─────────────────────────────────────────
+  {
+    id: 'piedmont-clt-print',
+    name: 'Piedmont — Chief Ladiga Trail Mile 0',
+    tagline: 'Piedmont, Alabama · Population 4,600 · Trail Town',
+    sub: '11×14 · Matte cardstock · Pine forest + trail perspective woodcut',
+    price: 15,
+    photo: '/merch/piedmont-clt-banner-print.webp',
+    badge: 'Art Print',
+    badgeColor: '#166534',
+    category: 'print',
+    available: true,
+    cities: ['piedmont'],
+  },
+
+  // ── BLOSSOM & DECAY STICKER VARIANTS ───────────────────────
+  {
+    id: 'skull-marigold-sticker',
+    name: 'Blossom & Decay — Marigold',
+    tagline: 'Sugar skull + orange marigolds · Southern Gothic',
+    sub: '3" die-cut · Matte · Bright colorful variant',
+    price: 5,
+    photo: '/merch/skull-marigold-sticker.png',
+    badge: 'SL Original',
+    badgeColor: '#92400e',
+    category: 'sticker',
+    available: true,
+    cities: [],
+  },
+  {
+    id: 'skull-gothic-sticker',
+    name: 'Blossom & Decay — Gothic',
+    tagline: 'Dark skull + red rose · Southern Gothic',
+    sub: '3" die-cut · Matte · Dark moody variant',
+    price: 5,
+    photo: '/merch/skull-gothic-sticker.png',
+    badge: 'SL Original',
+    badgeColor: '#7f1d1d',
+    category: 'sticker',
+    available: true,
+    cities: [],
+  },
+
+  // ── CLT HIKE & EXPLORE ─────────────────────────────────────
+  {
+    id: 'clt-hike-explore-shirt',
+    name: 'Hike & Explore — Chief Ladiga Trail',
+    tagline: 'Chief Ladiga Trail · Alabama',
+    sub: 'Teal shirt · Vintage badge · Mountains + pines + sunset',
+    price: 35,
+    photo: '/merch/clt-hike-explore-shirt.png',
+    badge: 'SL Woodcut',
+    badgeColor: '#0f4c75',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: ['anniston', 'piedmont'],
+  },
+
+  // ── BLOSSOM & DECAY ────────────────────────────────────────
+  {
+    id: 'blossom-decay-shirt',
+    name: 'Blossom & Decay',
+    tagline: 'Southern Legends · Thorns + roses + Southern Gothic',
+    sub: 'Mocha / tan shirt · Skull emerging from vines',
+    price: 35,
+    photo: '/merch/blossom-and-decay-shirt.png',
+    badge: 'SL Original',
+    badgeColor: '#7f1d1d',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: [],
+  },
+  {
+    id: 'blossom-decay-sticker',
+    name: 'Blossom & Decay',
+    tagline: 'Southern Legends · Sugar skull + Alabama wildflowers',
+    sub: '3" die-cut · Matte · Roses + daisies + mountain laurel',
+    price: 5,
+    photo: '/merch/blossom-and-decay-sticker.png',
+    badge: 'SL Original',
+    badgeColor: '#7f1d1d',
+    category: 'sticker',
+    available: true,
+    cities: [],
+  },
+
+  // ── GREEN THUMBS CLUB (Heather Florals) ────────────────────
+  {
+    id: 'green-thumbs-club-sticker',
+    name: 'Green Thumbs Club',
+    tagline: 'Heather Florals · Est. 2014 · Alabama',
+    sub: '3" oval · Matte · Botanical illustration',
+    price: 5,
+    photo: '/merch/green-thumbs-club-sticker.webp',
+    badge: 'Heather Florals',
+    badgeColor: '#166534',
+    category: 'sticker',
+    available: true,
+    cities: ['anniston'],
+  },
+
+  // ── CHEAHA MOUNTAIN ────────────────────────────────────────
+  {
+    id: 'cheaha-tower-shirt',
+    name: 'Cheaha Tower',
+    tagline: '2,413 ft · State of Alabama Peak · Built with Muscle & Fire',
+    sub: 'Blue / gold badge · Black shirt · DTF print',
+    price: 35,
+    photo: '/merch/cheaha-tower-badge.png',
+    badge: 'SL Woodcut',
+    badgeColor: '#1e3a5f',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: ['piedmont', 'gadsden'],
+  },
+  {
+    id: 'cheaha-tower-sticker',
+    name: 'Cheaha Tower Sticker',
+    tagline: '3" round · Matte · Weather-resistant',
+    sub: 'Blue / gold / cream on dark',
+    price: 5,
+    photo: '/merch/cheaha-tower-badge.png',
+    badge: 'SL Woodcut',
+    badgeColor: '#1e3a5f',
+    category: 'sticker',
+    available: true,
+    cities: ['piedmont', 'gadsden'],
+  },
+  {
+    id: 'cheaha-sanctuary-sticker',
+    name: 'To Lasting Sanctuary',
+    tagline: 'Cheaha Mountain · CCC Built 1933 · From Ancient High Place',
+    sub: '3" round · Rust red · Matte',
+    price: 5,
+    photo: '/merch/cheaha-lasting-sanctuary.png',
+    badge: 'SL Woodcut',
+    badgeColor: '#7f1d1d',
+    category: 'sticker',
+    available: true,
+    cities: ['piedmont', 'gadsden'],
+  },
+  {
+    id: 'cheaha-skyway-print',
+    name: 'Building the Skyway',
+    tagline: 'Cheaha State Park · Blasted Through Solid Rock',
+    sub: '11×14 · Matte cardstock · Frame-ready',
+    price: 15,
+    photo: '/merch/cheaha-building-skyway.png',
+    badge: 'Art Print',
+    badgeColor: '#78350f',
+    category: 'print',
+    available: true,
+    cities: ['piedmont', 'gadsden'],
+  },
+
+  // ── OXFORD / LICKSKILLET ────────────────────────────────────
+  {
+    id: 'lickskillet-premium-shirt',
+    name: 'Lickskillet · Oxford, Alabama',
+    tagline: 'The Frontier Original · Legendary Hospitality Since Then',
+    sub: 'Black shirt · Premium circle badge · DTF print · Test print recommended',
+    price: 35,
+    photo: '/merch/lickskillet-premium-shirt.png',
+    badge: 'SL Woodcut',
+    badgeColor: '#7a3c00',
+    category: 'shirt',
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    available: true,
+    cities: ['oxford'],
+  },
+  {
+    id: 'lickskillet-ox-sticker',
+    name: "You'll Have to Lick the Skillet",
+    tagline: 'Oxford, Alabama · Historic nickname',
+    sub: '3" round · Teal / cream · Matte',
+    price: 5,
+    photo: '/merch/lickskillet-ox-sticker.png',
+    badge: 'SL Woodcut',
+    badgeColor: '#0f766e',
+    category: 'sticker',
+    available: true,
+    cities: ['oxford'],
+  },
+
+  // ── JACKSONVILLE ────────────────────────────────────────────
+  {
+    id: 'jacksonville-court-square-print',
+    name: 'Jacksonville — Historic Court Square',
+    tagline: 'The Heart of Benton County · Est. 1834',
+    sub: '11×14 · Matte cardstock · Frame-ready',
+    price: 12,
+    photo: '/merch/jacksonville-court-square.png',
+    badge: 'Art Print',
+    badgeColor: '#166534',
+    category: 'print',
+    available: true,
+    cities: ['jacksonville'],
   },
 
   // ── MODEL CITY ─────────────────────────────────────────────
@@ -243,8 +509,19 @@ export const MERCH: MerchItem[] = [
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
+    cities: ['anniston'],
   },
 ]
+
+
+export function getMerchForCity(citySlug: string, limit = 4): MerchItem[] {
+  // First try items specifically tagged for this city
+  const cityItems = MERCH.filter(m => m.available && m.cities?.includes(citySlug))
+  if (cityItems.length >= 2) return cityItems.slice(0, limit)
+  // Fall back to SL-wide items (empty cities array)
+  const wide = MERCH.filter(m => m.available && (!m.cities || m.cities.length === 0))
+  return [...cityItems, ...wide].slice(0, limit)
+}
 
 export function getMerchItem(id: string): MerchItem | undefined {
   return MERCH.find(m => m.id === id)
