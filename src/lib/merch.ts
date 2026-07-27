@@ -930,15 +930,14 @@ export function getMerchByCategory(cat: MerchItem['category']): MerchItem[] {
   return MERCH.filter(m => m.category === cat && m.available)
 }
 
-// Legacy Fourthwall product lookups — keep for profile/essay crosslinks
-const FW = 'https://matt-headley-shop.fourthwall.com/products'
+// Merch product lookups for profile/essay crosslinks — all internal routes
 export const FW_PRODUCTS = {
-  ICM: { url: `${FW}/i-contain-multitudes`, name: 'I Contain Multitudes', image: '/merch/i-contain-multitudes.webp' },
-  SH:  { url: `${FW}/still-here`, name: 'Still Here', image: '/merch/still-here.webp' },
-  BP:  { url: `${FW}/bipolar-proud`, name: 'Bipolar & Proud', image: '/merch/bipolar-proud.webp' },
-  CLT: { url: `${FW}/chief-ladiga-trail`, name: "Ladiga's Land", image: '/merch/clt-trail.webp' },
-  MC:  { url: `${FW}/the-model-city-anniston-alabama`, name: 'The Model City', image: '/merch/model-city-shirt.webp' },
-  DD:  { url: `${FW}/dave-dennis-freedom-rider-1961`, name: 'Dave Dennis — Freedom Rider, 1961', image: '/merch/freedom-riders/dennis-hedcut-canonical.png' },
+  ICM: { url: '/merch', name: 'I Contain Multitudes', image: '/merch/i-contain-multitudes.webp' },
+  SH:  { url: '/merch', name: 'Still Here', image: '/merch/still-here.webp' },
+  BP:  { url: '/merch', name: 'Bipolar & Proud', image: '/merch/bipolar-proud.webp' },
+  CLT: { url: '/buy/clt-shirt', name: "Ladiga's Land", image: '/merch/clt-shirt-mockup.webp' },
+  MC:  { url: '/buy/model-city-shirt', name: 'The Model City', image: '/merch/model-city-mockup-cream.webp' },
+  DD:  { url: '/merch/freedom-riders', name: 'Freedom Riders — Anniston, 1961', image: '/merch/freedom-riders/shirt-mockup-dark.webp' },
 } as const
 
 type FWProduct = (typeof FW_PRODUCTS)[keyof typeof FW_PRODUCTS]

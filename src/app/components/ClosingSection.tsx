@@ -69,7 +69,7 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
         </p>
         <div className="flex gap-8 justify-center items-start">
           <div className="flex flex-col items-center gap-3">
-            <a href={primary.url} target="_blank" rel="noopener noreferrer">
+            <Link href={primary.url}>
               <Image
                 src={primary.image}
                 alt={primary.name}
@@ -77,19 +77,17 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
                 height={140}
                 className="rounded hover:opacity-90 transition-opacity"
               />
-            </a>
+            </Link>
             <span className="text-xs text-white/60">{primary.name}</span>
-            <a
+            <Link
               href={primary.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
             >
               Get the shirt →
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col items-center gap-3">
-            <a href={secondary.url} target="_blank" rel="noopener noreferrer">
+            <Link href={secondary.url}>
               <Image
                 src={secondary.image}
                 alt={secondary.name}
@@ -97,20 +95,18 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
                 height={140}
                 className="rounded hover:opacity-90 transition-opacity"
               />
-            </a>
+            </Link>
             <span className="text-xs text-white/60">{secondary.name}</span>
-            <a
+            <Link
               href={secondary.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
             >
               Get the shirt →
-            </a>
+            </Link>
           </div>
           {tertiary && (
             <div className="flex flex-col items-center gap-3">
-              <a href={tertiary.url} target="_blank" rel="noopener noreferrer">
+              <Link href={tertiary.url}>
                 <Image
                   src={tertiary.image}
                   alt={tertiary.name}
@@ -118,16 +114,14 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
                   height={140}
                   className="rounded hover:opacity-90 transition-opacity"
                 />
-              </a>
+              </Link>
               <span className="text-xs text-white/60">{tertiary.name}</span>
-              <a
+              <Link
                 href={tertiary.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-block text-sm font-medium text-white border border-white/50 px-4 py-2 hover:bg-white hover:text-ll-dark transition-colors"
               >
                 Get the shirt →
-              </a>
+              </Link>
             </div>
           )}
         </div>

@@ -305,62 +305,58 @@ export default function AboutPage() {
 
           <hr className="my-10 border-ll-dark/10" />
 
-          {process.env.NEXT_PUBLIC_MERCH_STORE_URL && (
-            <div className="not-prose text-center my-10">
-              <p
-                className="text-xs uppercase tracking-widest text-ll-dark mb-1"
-                style={{ opacity: 0.32, letterSpacing: "0.22em" }}
-              >
-                Walt Whitman
-              </p>
-              <p
-                className="text-3xl text-ll-dark leading-snug mb-4"
-                style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300 }}
-              >
-                I contain<br />multitudes.
-              </p>
-              <div className="flex gap-6 justify-center flex-wrap mb-5">
-                <a href="https://matt-headley-shop.fourthwall.com/products/i-contain-multitudes" target="_blank" rel="noopener noreferrer" className="text-center">
-                  <Image
-                    src="https://imgproxy.fourthwall.dev/IMNy3eu4RC0MEIbGmpUUg-5yMjSRyFtKLGn1Mjh5S84/w:1920/sm:1/enc/ZedkaYftBaqinaIZ/Jr40_xy3Eb4tySwk/rScelYdmKxyZS6jZ/NJHeSvZlktqX-xYh/WSHRJ-RhgMHeSlMQ/27Iq7L_pckKRXOOp/v5oIB6B1Vnyt8g_D/jmvq7ZBuLrTpLBdn/gKhmeo_IvtrJEkf4/Yfl8j3qjiOOsC3F3/Z2VGxXEwJGMrAnzQ/2Xzk5fe0iRKeZTw2/UCV0r3RWKam0aN3r/8xpuJ8LPfqX3Axj4/fUq1cLuAVw8.jpg"
-                    alt="I Contain Multitudes tee"
-                    width={160}
-                    height={160}
-                    className="mx-auto rounded mb-1"
-                  />
-                  <span className="text-xs text-ll-text-light">I Contain Multitudes</span>
-                </a>
-                <a href="https://matt-headley-shop.fourthwall.com/products/chief-ladiga-trail" target="_blank" rel="noopener noreferrer" className="text-center">
-                  <Image
-                    src="https://imgproxy.fourthwall.dev/ZF3dCHiMwN_oLeMILCG_ZyO-yLWVBfdGdJMTSYB-VXY/w:1920/sm:1/enc/xbK5_Zj8qaLU0EP3/UfOi6qpauX8X4zZD/AWPss1Zx9hhOgARc/CZqplVE_aYujz1uM/epI7dRMx0-wU71TK/3ma_163k4tMHBodv/YrGnTZCy-6dzW-bm/mAPjyxMJSQCG5oDM/9dFf4zGHoj51RgVo/E53wJphu1Azmz6CY/uVVj-1cu4Ost7nHt/mSLxEtUbNZifhAY-/Jc8wVoo-eZhrCxWg/lW9fJ68l0YPLbqD5/8B9AixuIqDc.jpg"
-                    alt="Chief Ladiga Trail tee"
-                    width={160}
-                    height={160}
-                    className="mx-auto rounded mb-1"
-                  />
-                  <span className="text-xs text-ll-text-light">Chief Ladiga Trail</span>
-                </a>
-                <a href="https://matt-headley-shop.fourthwall.com/products/the-model-city-anniston-alabama" target="_blank" rel="noopener noreferrer" className="text-center">
-                  <Image
-                    src="https://imgproxy.fourthwall.dev/bCKGvDFomR4x6_Zlk-RenE-MeR-Zb6uKO6B8jy1nJ6A/w:1920/sm:1/enc/8Tc1-v11kCUQnxAj/xbkOwN2Vmv1CmS5b/iH46ky6mYZkr7k1T/sj-wL9p2g_mBO1xo/11U6ggMM2EaOCyuu/ZKr9z6B4zHOG8DIq/zuwI3c9jJmiOwIiV/VVBN7X34q-o7BDHm/mSLvFXaNgCicXSW1/oVoxxnVrSMwkzOC5/pb5-h4tqgXuvRrep/XjTo_ygy8ePtMBxI/mrLLJArS604vJop5/0ZWri4eShE8mN6Mk/R8CBRTe6q5c.jpg"
-                    alt="The Model City tee"
-                    width={160}
-                    height={160}
-                    className="mx-auto rounded mb-1"
-                  />
-                  <span className="text-xs text-ll-text-light">The Model City</span>
-                </a>
-              </div>
-              <a
-                href={process.env.NEXT_PUBLIC_MERCH_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
-              >
-                The store →
-              </a>
+          <div className="not-prose text-center my-10">
+            <p
+              className="text-xs uppercase tracking-widest text-ll-dark mb-1"
+              style={{ opacity: 0.32, letterSpacing: "0.22em" }}
+            >
+              Walt Whitman
+            </p>
+            <p
+              className="text-3xl text-ll-dark leading-snug mb-4"
+              style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontWeight: 300 }}
+            >
+              I contain<br />multitudes.
+            </p>
+            <div className="flex gap-6 justify-center flex-wrap mb-5">
+              <Link href="/merch" className="text-center">
+                <Image
+                  src="/merch/i-contain-multitudes.webp"
+                  alt="I Contain Multitudes tee"
+                  width={160}
+                  height={160}
+                  className="mx-auto rounded mb-1"
+                />
+                <span className="text-xs text-ll-text-light">I Contain Multitudes</span>
+              </Link>
+              <Link href="/buy/clt-shirt" className="text-center">
+                <Image
+                  src="/merch/clt-shirt-mockup.webp"
+                  alt="Chief Ladiga Trail tee"
+                  width={160}
+                  height={160}
+                  className="mx-auto rounded mb-1"
+                />
+                <span className="text-xs text-ll-text-light">Chief Ladiga Trail</span>
+              </Link>
+              <Link href="/buy/model-city-shirt" className="text-center">
+                <Image
+                  src="/merch/model-city-mockup-cream.webp"
+                  alt="The Model City tee"
+                  width={160}
+                  height={160}
+                  className="mx-auto rounded mb-1"
+                />
+                <span className="text-xs text-ll-text-light">The Model City</span>
+              </Link>
             </div>
-          )}
+            <Link
+              href="/merch"
+              className="inline-block text-sm font-medium text-ll-primary border border-ll-primary px-5 py-2.5 hover:bg-ll-primary hover:text-white transition-colors"
+            >
+              The store →
+            </Link>
+          </div>
 
           <hr className="my-10 border-ll-dark/10" />
 
