@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Link } from "next-view-transitions";
 import { getAllListicles } from "@/lib/listicles";
 import { siteConfig } from "@/lib/site-config";
@@ -55,30 +56,65 @@ export default function ListiclesIndex() {
         </p>
 
         {cities.map((city) => (
-          <div key={city} style={{ marginBottom: "2.5rem" }}>
+          <div key={city} style={{ marginBottom: "3rem" }}>
             <p style={{
               fontFamily: "var(--font-body)", fontSize: "0.7rem", fontWeight: 600,
               letterSpacing: "0.18em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "1rem",
             }}>
               {city}
             </p>
-            <div style={{ display: "grid", gap: "0.75rem" }}>
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+              gap: "1rem",
+            }}>
               {byCity[city].map((l) => (
                 <Link key={l.slug} href={`/listicles/${l.slug}`} style={{
-                  display: "block", background: "#fff", border: "1px solid rgba(154,108,47,0.15)",
-                  borderRadius: "6px", padding: "1rem 1.25rem", textDecoration: "none",
+                  display: "flex", flexDirection: "column",
+                  background: "#fff", border: "1px solid rgba(154,108,47,0.15)",
+                  borderRadius: "10px", overflow: "hidden", textDecoration: "none",
+                  transition: "box-shadow 0.15s",
                 }}>
-                  <span style={{
-                    fontFamily: "var(--font-heading)", fontSize: "1.2rem", color: "#1a1208", display: "block",
-                  }}>
-                    {l.title}
-                  </span>
-                  <span style={{
-                    fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "#6b5040",
-                    lineHeight: 1.5, marginTop: "0.35rem", display: "block",
-                  }}>
-                    {l.excerpt}
-                  </span>
+                  {/* Photo */}
+                  <div style={{ position: "relative", width: "100%", aspectRatio: "16/9", background: "#2a1e10", flexShrink: 0 }}>
+                    {l.image ? (
+                      <Image
+                        src={l.image}
+                        alt={l.title}
+                        fill
+                        style={{ objectFit: "cover" }}
+                        sizes="(max-width: 640px) 100vw, 300px"
+                      />
+                    ) : (
+                      <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <span style={{ fontFamily: "var(--font-heading)", fontSize: "2rem", color: "rgba(240,237,230,0.2)" }}>SL</span>
+                      </div>
+                    )}
+                    <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,18,8,0.55) 0%, transparent 60%)" }} />
+                  </div>
+                  {/* Text */}
+                  <div style={{ padding: "0.9rem 1.1rem 1rem", flex: 1 }}>
+                    <span style={{
+                      fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#1a1208",
+                      display: "block", lineHeight: 1.25, marginBottom: "0.35rem",
+                    }}>
+                      {l.title}
+                    </span>
+                    <span style={{
+                      fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#6b5040",
+                      lineHeight: 1.5, display: "block",
+                    }}>
+                      {l.excerpt}
+                    </span>
+                    {l.businesses && l.businesses.length > 0 && (
+                      <span style={{
+                        fontFamily: "var(--font-body)", fontSize: "0.68rem", color: "#9a6c2f",
+                        fontWeight: 600, letterSpacing: "0.08em", marginTop: "0.6rem", display: "block",
+                      }}>
+                        {l.businesses.length} places →
+                      </span>
+                    )}
+                  </div>
                 </Link>
               ))}
             </div>
