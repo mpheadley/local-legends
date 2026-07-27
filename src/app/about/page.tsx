@@ -327,6 +327,7 @@ export default function AboutPage() {
                   height={160}
                   className="mx-auto rounded mb-1"
                   unoptimized
+                  loading="eager"
                 />
                 <span className="text-xs text-ll-text-light">Chief Ladiga Trail</span>
               </Link>
@@ -338,6 +339,7 @@ export default function AboutPage() {
                   height={160}
                   className="mx-auto rounded mb-1"
                   unoptimized
+                  loading="eager"
                 />
                 <span className="text-xs text-ll-text-light">The Model City</span>
               </Link>
