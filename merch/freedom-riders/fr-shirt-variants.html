@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Freedom Riders — Shirt Variants</title>
+<style>
+  @font-face {
+    font-family: 'IMFell';
+    src: url('../fonts/IMFellEnglish-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'IMFell';
+    src: url('../fonts/IMFellEnglish-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #181818;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 60px 40px 100px;
+    min-height: 100dvh;
+  }
+
+  h1 {
+    font-family: 'IMFell', Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #ca8a04;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .variant-label {
+    color: #444;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .pair { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+
+  .side-label {
+    color: #333;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  /* Shirt shape */
+  .shirt {
+    width: 300px;
+    min-height: 380px;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 10%, 95% 16%, 88% 10%, 88% 100%, 12% 100%, 12% 10%, 5% 16%, 0% 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px 24px;
+    gap: 0;
+  }
+  .black   { background: #0f0f0f; }
+  .natural { background: #e8e0d0; }
+  .white   { background: #f9f9f9; outline: 1px solid #ddd; }
+
+  /* Images */
+  .hedcut     { width: 170px; height: auto; object-fit: contain; }
+  .bus        { width: 248px; height: auto; object-fit: contain; }
+  .bus-large  { width: 268px; height: auto; object-fit: contain; }
+
+  /* Invert hedcut for dark shirts (white ink on black) */
+  .black .hedcut { filter: invert(1); }
+
+  /* Bus on dark shirt = inverted woodcut; on light = original */
+  .black .bus, .black .bus-large { content: url('bus-woodcut-inverted.png'); }
+
+  .rule { width: 36px; height: 1px; opacity: 0.2; margin: 7px 0; }
+  .black .rule   { background: #e8e0d0; }
+  .natural .rule, .white .rule { background: #1c1917; }
+
+  /* Type — white versions */
+  .t { font-family: 'IMFell', Georgia, serif; font-weight: 400; text-align: center; display: block; }
+
+  .t-name    { font-size: 15px; letter-spacing: 0.1em; margin-bottom: 1px; }
+  .t-role    { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.55; }
+  .t-quote   { font-size: 11px; font-style: italic; line-height: 1.45; opacity: 0.7; margin: 0 8px; }
+  .t-loc     { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.45; margin-top: 7px; }
+  .t-booking { font-size: 9px; font-family: monospace; letter-spacing: 0.12em; opacity: 0.4; margin-top: 3px; }
+  .t-sl      { font-size: 8px; letter-spacing: 0.28em; text-transform: uppercase; opacity: 0.28; margin-top: 5px; }
+  .t-year    { font-size: 54px; letter-spacing: 4px; line-height: 1; }
+  .t-event   { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; margin-top: 3px; }
+
+  /* Dark shirt colors */
+  .black .t { color: #f0ede8; }
+  .black .t-role { color: #ca8a04; opacity: 0.9; }
+
+  /* Light shirt colors */
+  .natural .t, .white .t { color: #1c1917; }
+  .natural .t-role, .white .t-role { color: #7a4800; opacity: 0.9; }
+
+  .note {
+    color: #383838;
+    font-family: monospace;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 16px;
+    max-width: 640px;
+    line-height: 1.6;
+  }
+
+  hr.divider { border: none; border-top: 1px solid #222; width: 100%; max-width: 700px; }
+</style>
+</head>
+<body>
+
+<h1>Freedom Riders — Shirt Variants</h1>
+
+<!-- A: Black — portrait + quote front / bus back -->
+<div>
+  <div class="variant-label">A — Black · portrait + quote front · bus back</div>
+  <div class="pair">
+    <div>
+      <div class="side-label">Front</div>
+      <div class="shirt black">
+        <img class="hedcut" src="../dennis-shirt/dennis-hedcut-canonical.png" alt="David Dennis">
+        <div class="rule"></div>
+        <span class="t t-name">David Dennis</span>
+        <span class="t t-role">Freedom Rider · 1961</span>
+        <div class="rule"></div>
+        <span class="t t-quote">"I was trying to get<br>a date with a woman."</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+    <div>
+      <div class="side-label">Back</div>
+      <div class="shirt black">
+        <img class="bus" src="bus-woodcut.png" alt="Burning bus">
+        <span class="t t-loc">Anniston, Alabama · May 14, 1961</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+  </div>
+  <div class="note">Full text. Front = the man + quote. Back = what happened.</div>
+</div>
+
+<hr class="divider">
+
+<!-- B: Black — portrait + name only / bus back -->
+<div>
+  <div class="variant-label">B — Black · portrait + name only · bus back</div>
+  <div class="pair">
+    <div>
+      <div class="side-label">Front</div>
+      <div class="shirt black">
+        <img class="hedcut" src="../dennis-shirt/dennis-hedcut-canonical.png" alt="David Dennis">
+        <div class="rule"></div>
+        <span class="t t-name">David Dennis</span>
+        <span class="t t-role">Freedom Rider · 1961</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+    <div>
+      <div class="side-label">Back</div>
+      <div class="shirt black">
+        <img class="bus" src="bus-woodcut.png" alt="Burning bus">
+        <span class="t t-loc">Anniston, Alabama · May 14, 1961</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+  </div>
+  <div class="note">Quieter front. Let the portrait carry it.</div>
+</div>
+
+<hr class="divider">
+
+<!-- C: Natural — portrait + quote / bus back -->
+<div>
+  <div class="variant-label">C — Natural · portrait + quote front · bus back</div>
+  <div class="pair">
+    <div>
+      <div class="side-label">Front</div>
+      <div class="shirt natural">
+        <img class="hedcut" src="../dennis-shirt/dennis-hedcut-canonical.png" alt="David Dennis">
+        <div class="rule"></div>
+        <span class="t t-name">David Dennis</span>
+        <span class="t t-role">Freedom Rider · 1961</span>
+        <div class="rule"></div>
+        <span class="t t-quote">"I was trying to get<br>a date with a woman."</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+    <div>
+      <div class="side-label">Back</div>
+      <div class="shirt natural">
+        <img class="bus" src="bus-woodcut.png" alt="Burning bus">
+        <span class="t t-loc">Anniston, Alabama · May 14, 1961</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+  </div>
+  <div class="note">Natural colorway — dark ink on cream.</div>
+</div>
+
+<hr class="divider">
+
+<!-- D: Black — bus front only / name + year back -->
+<div>
+  <div class="variant-label">D — Black · bus front · year + name back · no portrait</div>
+  <div class="pair">
+    <div>
+      <div class="side-label">Front</div>
+      <div class="shirt black">
+        <img class="bus-large" src="bus-woodcut.png" alt="Burning bus">
+        <span class="t t-loc">Anniston, Alabama · May 14, 1961</span>
+      </div>
+    </div>
+    <div>
+      <div class="side-label">Back</div>
+      <div class="shirt black">
+        <span class="t t-year">1961</span>
+        <span class="t t-event">Anniston, Alabama</span>
+        <div class="rule" style="margin:12px 0;"></div>
+        <span class="t t-role">Freedom Rider</span>
+        <span class="t t-name" style="margin-top:4px;">David Dennis</span>
+        <span class="t t-booking">Jackson #20883 · 5-2461</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+  </div>
+  <div class="note">No portrait. The bus does the work. Dennis named on back.</div>
+</div>
+
+<hr class="divider">
+
+<!-- E: Black — type-only front / bus back -->
+<div>
+  <div class="variant-label">E — Black · type-only front · bus back · no portrait</div>
+  <div class="pair">
+    <div>
+      <div class="side-label">Front</div>
+      <div class="shirt black">
+        <span class="t t-role">Freedom Rider</span>
+        <div class="rule" style="margin:10px 0;"></div>
+        <span class="t t-year">1961</span>
+        <span class="t t-event">Anniston, Alabama</span>
+        <div class="rule" style="margin:12px 0;"></div>
+        <span class="t t-quote">"I was trying to get<br>a date with a woman."</span>
+        <span class="t t-name" style="margin-top:8px;">David Dennis</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+    <div>
+      <div class="side-label">Back</div>
+      <div class="shirt black">
+        <img class="bus-large" src="bus-woodcut.png" alt="Burning bus">
+        <span class="t t-name" style="margin-top:6px;">David Dennis</span>
+        <span class="t t-booking">Jackson #20883 · 5-2461</span>
+      </div>
+    </div>
+  </div>
+  <div class="note">All text front, all image back. Minimalist — no portrait.</div>
+</div>
+
+<hr class="divider">
+
+<!-- F: Natural — bus front / text back (no portrait) -->
+<div>
+  <div class="variant-label">F — Natural · bus front · text back · no portrait</div>
+  <div class="pair">
+    <div>
+      <div class="side-label">Front</div>
+      <div class="shirt natural">
+        <img class="bus-large" src="bus-woodcut.png" alt="Burning bus">
+        <span class="t t-loc">Anniston, Alabama · May 14, 1961</span>
+      </div>
+    </div>
+    <div>
+      <div class="side-label">Back</div>
+      <div class="shirt natural">
+        <span class="t t-year">1961</span>
+        <span class="t t-event">Anniston, Alabama</span>
+        <div class="rule" style="margin:12px 0; background:#1c1917;"></div>
+        <span class="t t-role">Freedom Rider</span>
+        <span class="t t-name" style="margin-top:4px;">David Dennis</span>
+        <span class="t t-sl">Southern Legends</span>
+      </div>
+    </div>
+  </div>
+  <div class="note">Natural cream. Warmer, less stark. No portrait.</div>
+</div>
+
+<hr class="divider">
+
+<!-- G: v2 sticker design — both -->
+<div>
+  <div class="variant-label">G — v2 Sticker / Print design · black + cream</div>
+  <div class="pair">
+    <div>
+      <div class="side-label">Black (inverted)</div>
+      <div class="shirt black" style="clip-path:none; border-radius:6px; min-height:auto; padding:12px;">
+        <img style="width:268px;display:block;" src="bus-woodcut-v2-inverted.png" alt="v2 sticker inverted">
+      </div>
+    </div>
+    <div>
+      <div class="side-label">Cream (original)</div>
+      <div class="shirt natural" style="clip-path:none; border-radius:6px; min-height:auto; padding:12px;">
+        <img style="width:268px;display:block;" src="bus-woodcut-v2.png" alt="v2 sticker original">
+      </div>
+    </div>
+  </div>
+  <div class="note">Bordered sticker / print design. "End Segregation Now" · Greyhound bus · both colorways.</div>
+</div>
+
+</body>
+</html>

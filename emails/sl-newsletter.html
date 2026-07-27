@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{subject}}</title>
+<style>
+  /* Reset */
+  body, table, td, p, a { margin: 0; padding: 0; }
+  body { background: #f0ede8; font-family: Georgia, 'Times New Roman', serif; -webkit-text-size-adjust: 100%; }
+  img { border: 0; display: block; }
+  table { border-collapse: collapse; }
+
+  /* Container */
+  .wrapper { background: #f0ede8; width: 100%; }
+  .container { max-width: 600px; margin: 0 auto; background: #fff; }
+
+  /* Header */
+  .header { background: #0a0f0b; padding: 32px 40px 28px; text-align: center; }
+  .header-label { color: #C9A227; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; display: block; margin-bottom: 10px; }
+  .header-title { color: #f0ede8; font-family: Georgia, serif; font-size: 28px; font-weight: normal; font-style: italic; margin: 0; line-height: 1.2; }
+  .header-sub { color: #5a7a5a; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; margin-top: 6px; }
+
+  /* Body */
+  .body-pad { padding: 40px 40px 0; }
+  @media (max-width: 480px) { .body-pad { padding: 28px 24px 0; } }
+
+  /* Intro */
+  .intro { font-size: 17px; line-height: 1.7; color: #1a2a1a; margin-bottom: 32px; }
+  .intro em { font-style: italic; }
+
+  /* Essay card */
+  .essay-card { border: 1px solid #e0ddd8; border-radius: 4px; overflow: hidden; margin-bottom: 32px; }
+  .essay-img { width: 100%; height: 200px; object-fit: cover; background: #e0ddd8; }
+  .essay-body { padding: 24px; }
+  .essay-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A227; margin-bottom: 8px; }
+  .essay-title { font-size: 22px; font-style: italic; line-height: 1.3; color: #0a0f0b; margin-bottom: 10px; font-weight: normal; }
+  .essay-excerpt { font-size: 15px; line-height: 1.65; color: #3a4a3a; margin-bottom: 20px; }
+  .read-link { display: inline-block; background: #0a0f0b; color: #f0ede8; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; padding: 10px 20px; border-radius: 2px; }
+
+  /* Separator */
+  .sep { border: none; border-top: 1px solid #e0ddd8; margin: 32px 40px; }
+
+  /* Playlist section */
+  .section-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #7a8a7a; margin-bottom: 12px; padding: 0 40px; }
+  .playlist-block { padding: 0 40px 32px; }
+  .playlist-inner { background: #0a0f0b; border-radius: 6px; padding: 20px 24px; display: flex; align-items: flex-start; gap: 16px; }
+  .playlist-cover { width: 80px; height: 80px; background: #1a2a1a; border-radius: 4px; flex-shrink: 0; object-fit: cover; }
+  .playlist-text { flex: 1; }
+  .playlist-name { color: #f0ede8; font-style: italic; font-size: 16px; margin-bottom: 6px; line-height: 1.3; }
+  .playlist-tracks { color: #5a7a5a; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; line-height: 1.8; margin-bottom: 12px; }
+  .spotify-link { color: #C9A227; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
+
+  /* Reading recs */
+  .reading-block { padding: 0 40px 32px; }
+  .reading-item { border-left: 2px solid #e0ddd8; padding: 8px 0 8px 16px; margin-bottom: 12px; }
+  .reading-item:last-child { margin-bottom: 0; }
+  .reading-title { font-style: italic; color: #0a0f0b; font-size: 15px; margin-bottom: 2px; }
+  .reading-author { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #7a8a7a; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+  .reading-why { font-size: 13px; color: #3a4a3a; line-height: 1.5; }
+
+  /* Roundup variant — three essay mini-cards */
+  .roundup-card { display: flex; gap: 16px; margin-bottom: 20px; padding: 0 40px; align-items: flex-start; }
+  .roundup-num { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 22px; color: #e0ddd8; font-weight: bold; flex-shrink: 0; width: 28px; line-height: 1; margin-top: 2px; }
+  .roundup-text .rt-title { font-style: italic; font-size: 16px; color: #0a0f0b; margin-bottom: 4px; font-weight: normal; }
+  .roundup-text .rt-excerpt { font-size: 13px; color: #5a6a5a; line-height: 1.5; margin-bottom: 6px; }
+  .roundup-text .rt-link { color: #C9A227; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
+
+  /* Footer */
+  .footer { background: #0a0f0b; padding: 32px 40px; text-align: center; }
+  .footer-mark { font-style: italic; color: #C9A227; font-size: 18px; margin-bottom: 8px; }
+  .footer-place { color: #5a7a5a; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-links { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #3a5a3a; }
+  .footer-links a { color: #5a7a5a; text-decoration: none; margin: 0 8px; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+<table class="container" width="600" cellpadding="0" cellspacing="0" role="presentation">
+
+  <!-- HEADER -->
+  <tr>
+    <td class="header">
+      <span class="header-label">From Anniston, Alabama</span>
+      <h1 class="header-title">Southern Legends</h1>
+      <div class="header-sub">Stories, places, and the people who stayed.</div>
+    </td>
+  </tr>
+
+  <!-- BODY -->
+  <tr>
+    <td class="body-pad">
+
+      <!-- Intro line — replace with Matt's voice each issue -->
+      <p class="intro">{{intro}}</p>
+
+      <!-- Essay card -->
+      <div class="essay-card">
+        <img class="essay-img" src="{{essay_image}}" alt="{{essay_image_alt}}" width="600">
+        <div class="essay-body">
+          <div class="essay-label">{{essay_category}}</div>
+          <h2 class="essay-title">{{essay_title}}</h2>
+          <p class="essay-excerpt">{{essay_excerpt}}</p>
+          <a class="read-link" href="{{essay_url}}">Read the essay</a>
+        </div>
+      </div>
+
+    </td>
+  </tr>
+
+  <!-- PLAYLIST SEPARATOR -->
+  <tr><td><hr class="sep"></td></tr>
+  <tr><td class="section-label">Listening while I wrote this</td></tr>
+  <tr>
+    <td class="playlist-block">
+      <div class="playlist-inner">
+        <!-- Replace src with screenshot of the Spotify playlist cover -->
+        <img class="playlist-cover" src="{{playlist_cover_url}}" alt="{{playlist_name}}">
+        <div class="playlist-text">
+          <div class="playlist-name">{{playlist_name}}</div>
+          <div class="playlist-tracks">{{playlist_tracks_text}}</div>
+          <a class="spotify-link" href="{{spotify_url}}">Listen on Spotify &rarr;</a>
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- READING RECS SEPARATOR -->
+  <tr><td><hr class="sep" style="margin-top:0;"></td></tr>
+  <tr><td class="section-label">If this made you want to read more</td></tr>
+  <tr>
+    <td class="reading-block">
+
+      <!-- Reading rec 1 -->
+      <div class="reading-item">
+        <div class="reading-title">{{rec1_title}}</div>
+        <div class="reading-author">{{rec1_author}}</div>
+        <div class="reading-why">{{rec1_why}}</div>
+      </div>
+
+      <!-- Reading rec 2 -->
+      <div class="reading-item">
+        <div class="reading-title">{{rec2_title}}</div>
+        <div class="reading-author">{{rec2_author}}</div>
+        <div class="reading-why">{{rec2_why}}</div>
+      </div>
+
+      <!-- Reading rec 3 -->
+      <div class="reading-item">
+        <div class="reading-title">{{rec3_title}}</div>
+        <div class="reading-author">{{rec3_author}}</div>
+        <div class="reading-why">{{rec3_why}}</div>
+      </div>
+
+    </td>
+  </tr>
+
+  <!-- FOOTER -->
+  <tr>
+    <td class="footer">
+      <div class="footer-mark">Southern Legends</div>
+      <div class="footer-place">From Anniston, Alabama</div>
+      <div class="footer-links">
+        <a href="{{site_url}}">Read the archive</a>
+        &middot;
+        <a href="{{unsubscribe_url}}">Unsubscribe</a>
+      </div>
+    </td>
+  </tr>
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 16px; }
+
+  .bumper {
+    width: 608px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #9A3412, #CA8A04 50%, #1C1917);
+  }
+
+  .topo {
+    position: absolute;
+    inset: 0;
+    background-image: url('/Volumes/Samsung_T5/webdev/southern-legends/topo-7.png');
+    background-repeat: repeat;
+    background-size: 320px;
+    opacity: 0.18;
+  }
+
+  .mark-bg {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.07;
+    pointer-events: none;
+  }
+
+  .vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.5) 100%);
+    pointer-events: none;
+  }
+
+  .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .mark-wrap {
+    perspective: 800px;
+    opacity: 0;
+    animation: mark-arc 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0s forwards;
+  }
+  @keyframes mark-arc {
+    0%   { opacity: 0;   transform: scale(0.03) rotateX(60deg) rotateY(-45deg) rotateZ(-30deg) translate(80px, 60px); }
+    25%  { opacity: 0.6; }
+    80%  { opacity: 1;   transform: scale(0.98) rotateX(8deg) rotateY(5deg) rotateZ(-1deg) translate(0,0); }
+    100% { opacity: 1;   transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0,0); }
+  }
+  .sl-mark {
+    width: 180px;
+    height: 180px;
+    display: block;
+  }
+
+  .wordmark {
+    font-family: 'Georgia', serif;
+    color: #F0EDE6;
+    font-size: 64px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    opacity: 0;
+    animation: word-arc 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+    text-shadow: 0 4px 60px rgba(0,0,0,0.5);
+  }
+  @keyframes word-arc {
+    0%   { opacity: 0; transform: translate(-80px, 60px) rotateX(40deg) rotateZ(-8deg) scale(0.1); }
+    60%  { opacity: 1; }
+    100% { opacity: 1; transform: translate(0,0) rotateX(0deg) rotateZ(0deg) scale(1); }
+  }
+
+  .rule {
+    width: 0;
+    height: 1.5px;
+    background: #CA8A04;
+    animation: rule-grow 0.6s ease 0.7s forwards;
+  }
+  @keyframes rule-grow { to { width: 300px; } }
+
+  .sub {
+    font-family: 'Georgia', serif;
+    color: rgba(240,237,230,0.8);
+    font-size: 22px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    animation: sub-arc 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+  }
+  @keyframes sub-arc {
+    0%   { opacity: 0; transform: translate(100px, -40px) rotateX(-30deg) rotateZ(6deg) scale(0.2); }
+    60%  { opacity: 1; }
+    100% { opacity: 1; transform: translate(0,0) rotateX(0deg) rotateZ(0deg) scale(1); }
+  }
+</style>
+</head>
+<body>
+<div class="bumper">
+  <div class="topo"></div>
+  <svg class="mark-bg" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="48" cy="48" r="44" fill="#F0EDE6"/>
+    <text x="48" y="63" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="40" fill="#1C1917" letter-spacing="-1">SL</text>
+    <line x1="20" y1="70" x2="76" y2="70" stroke="#CA8A04" stroke-width="1.5"/>
+  </svg>
+  <div class="vignette"></div>
+  <div class="content">
+    <div class="mark-wrap">
+      <img class="sl-mark" src="/Volumes/Samsung_T5/webdev/gather/assets/brand/southern-legends/southern-legends-primary.svg" alt="Southern Legends"/>
+    </div>
+    <div class="wordmark">Southern Legends</div>
+    <div class="rule"></div>
+    <div class="sub">Stories from Northeast Alabama</div>
+  </div>
+</div>
+</body>
+</html>

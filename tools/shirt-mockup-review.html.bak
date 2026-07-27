@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SL Shirt Mockup Review</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #111;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #f0ede8;
+    padding: 32px;
+  }
+  h1 {
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #ca8a04;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+  }
+  .legend {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+  }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot.composite { background: #4ade80; }
+  .dot.raw { background: #f97316; }
+  .dot.missing { background: #6b7280; }
+
+  /* ── Section dividers ── */
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(202,138,4,0.6);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* ── Grid ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 16px;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: #1c1917;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* ── Dual image row ── */
+  .img-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .img-panel {
+    position: relative;
+    aspect-ratio: 1;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .img-panel:first-child {
+    border-right: 1px solid rgba(255,255,255,0.05);
+  }
+  .img-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    display: block;
+  }
+  .img-panel .panel-label {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 99px;
+  }
+  .panel-label.raw-label { background: rgba(249,115,22,0.18); color: #f97316; border: 1px solid rgba(249,115,22,0.25); }
+  .panel-label.composite-label { background: rgba(74,222,128,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); }
+  .panel-label.missing-label { background: rgba(107,114,128,0.18); color: #9ca3af; border: 1px solid rgba(107,114,128,0.2); }
+
+  .img-panel .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.15);
+    font-size: 10px;
+    text-align: center;
+    padding: 12px;
+    height: 100%;
+  }
+  .img-panel .placeholder svg {
+    opacity: 0.2;
+  }
+
+  /* ── Card body ── */
+  .card-body {
+    padding: 10px 12px 12px;
+  }
+  .card-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f0ede8;
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+  .card-id {
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    font-family: monospace;
+    margin-bottom: 4px;
+  }
+  .card-paths {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+  }
+  .card-path {
+    font-size: 9px;
+    font-family: monospace;
+    word-break: break-all;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.2);
+  }
+  .card-path.has-mockup { color: rgba(74,222,128,0.5); }
+  .card-path.needs-mockup { color: rgba(249,115,22,0.5); }
+  .card-path.corrupted { color: rgba(239,68,68,0.5); }
+
+  .badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 99px;
+    margin-top: 6px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .badge.composite { background: rgba(74,222,128,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); }
+  .badge.raw { background: rgba(249,115,22,0.12); color: #f97316; border: 1px solid rgba(249,115,22,0.2); }
+  .badge.missing { background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
+  .badge.note { background: rgba(107,114,128,0.12); color: #9ca3af; border: 1px solid rgba(107,114,128,0.2); }
+
+  /* ── Ecclesia section ── */
+  .ecclesia-note {
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Southern Legends + Ecclesia — Shirt Mockup Review</h1>
+<p class="subtitle">Each card: left = raw design file · right = GPT composite mockup (or FW photo)</p>
+<div class="legend">
+  <span><div class="dot composite"></div> Composite / FW mockup ready</span>
+  <span><div class="dot raw"></div> Raw design only — needs mockup</span>
+  <span><div class="dot missing"></div> Corrupted / missing file</span>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ SL SHIRTS -->
+<div class="section-label">Southern Legends — Active + Booth Designs</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/survived-woodstock-trans.png" alt="Woodstock transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/woodstock-shirt-mockup.webp" alt="Woodstock mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">I Survived Woodstock Avenue</div>
+      <div class="card-id">woodstock-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/survived-woodstock-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/woodstock-shirt-mockup.webp (navy)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/pv-raiders-xc.webp" alt="PV Raiders raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label raw-label">FW photo</span>
+        <img src="../public/merch/pv-shirt-mockup.webp" alt="PV Raiders mockup" onerror="this.parentElement.innerHTML='<div class=placeholder><svg width=32 height=32 fill=none stroke=currentColor stroke-width=1.5 viewBox=&quot;0 0 24 24&quot;><rect x=3 y=3 width=18 height=18 rx=2/></svg>No mockup</div>'">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">PV Raiders XC</div>
+      <div class="card-id">pv-raiders-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/pv-raiders-xc.webp</div>
+        <div class="card-path has-mockup">mockup: /merch/pv-shirt-mockup.webp</div>
+      </div>
+      <span class="badge raw">Raw + photo</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/clt-shirt-print.png" alt="CLT raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/clt-shirt-mockup.webp" alt="CLT mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Ladiga's Land — Chief Ladiga Trail</div>
+      <div class="card-id">clt-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/clt-shirt-print.png</div>
+        <div class="card-path has-mockup">mockup: /merch/clt-shirt-mockup.webp (olive)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/freedom-riders/freedom-riders-bus-design.png" alt="Freedom Riders raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/freedom-riders/shirt-mockup-dark.webp" alt="Freedom Riders mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Freedom Riders — Anniston, 1961</div>
+      <div class="card-id">freedom-riders-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/freedom-riders/freedom-riders-bus-design.png</div>
+        <div class="card-path has-mockup">mockup: /merch/freedom-riders/shirt-mockup-dark.webp (black)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/model-city-print.png" alt="Model City raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/model-city-mockup-cream.webp" alt="Model City mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">The Model City — Anniston</div>
+      <div class="card-id">model-city-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/model-city-print.png</div>
+        <div class="card-path has-mockup">mockup: /merch/model-city-mockup-cream.webp (cream)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/coldwater-shirt.png" alt="Coldwater raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/coldwater-shirt-mockup.webp" alt="Coldwater mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Coldwater Mountain</div>
+      <div class="card-id">coldwater-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/coldwater-shirt.png (star artifact in margin)</div>
+        <div class="card-path has-mockup">mockup: /merch/coldwater-shirt-mockup.webp (forest — margins cropped)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/fort-mcclellan-shirt.png" alt="Fort McClellan raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/fort-mcclellan-shirt-mockup.webp" alt="Fort McClellan mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Fort McClellan</div>
+      <div class="card-id">fort-mcclellan-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/fort-mcclellan-shirt.png (star artifact in margin)</div>
+        <div class="card-path has-mockup">mockup: /merch/fort-mcclellan-shirt-mockup.webp (olive — margins cropped)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/cheaha-tower-badge-trans.png" alt="Cheaha Tower transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/cheaha-tower-mockup.webp" alt="Cheaha Tower mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Cheaha Tower — 2,413 ft</div>
+      <div class="card-id">cheaha-tower-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/cheaha-tower-badge-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/cheaha-tower-mockup.webp (forest)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/jacksonville-gamecock-trans.png" alt="Jacksonville Gamecock transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/jacksonville-gamecock-mockup.webp" alt="Jacksonville Gamecock mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Jacksonville — Home of JSU</div>
+      <div class="card-id">jacksonville-gamecock-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/jacksonville-gamecock-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/jacksonville-gamecock-mockup.webp (navy)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/clt-hike-explore-trans.png" alt="Hike Explore transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/clt-hike-explore-mockup.webp" alt="Hike Explore mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Hike & Explore — CLT</div>
+      <div class="card-id">clt-hike-explore-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/clt-hike-explore-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/clt-hike-explore-mockup.webp (olive)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/blossom-and-decay-trans.png" alt="Blossom Gothic transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/blossom-decay-mockup.webp" alt="Blossom Gothic mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Blossom & Decay — Gothic</div>
+      <div class="card-id">blossom-decay-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/blossom-and-decay-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/blossom-decay-mockup.webp (black)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/blossom-decay-sugar-trans.png" alt="Sugar Skull transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/blossom-decay-sugar-mockup.webp" alt="Sugar Skull mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Blossom & Decay — Sugar Skull</div>
+      <div class="card-id">blossom-decay-sugar-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/blossom-decay-sugar-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/blossom-decay-sugar-mockup.webp (black)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/lickskillet-trans.png" alt="Lickskillet transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/lickskillet-shirt-mockup.webp" alt="Lickskillet mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Lickskillet · Oxford, Alabama</div>
+      <div class="card-id">lickskillet-premium-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/lickskillet-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/lickskillet-shirt-mockup.webp (cream)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/pinhoti-trans.png" alt="Pinhoti transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/pinhoti-shirt-mockup.webp" alt="Pinhoti mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Pinhoti Trail</div>
+      <div class="card-id">pinhoti-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/pinhoti-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/pinhoti-shirt-mockup.webp (forest)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/noccalula-falls-print.png" alt="Noccalula raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label missing-label">Print only</span>
+        <div class="placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Print / sticker
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Noccalula Falls</div>
+      <div class="card-id">noccalula-print</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/noccalula-falls-print.png</div>
+      </div>
+      <span class="badge note">Print / sticker — no shirt</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/diaspora-trans.png" alt="Diaspora transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/diaspora-shirt-mockup.webp" alt="Diaspora mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Diaspora Shirt</div>
+      <div class="card-id">diaspora-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/diaspora-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/diaspora-shirt-mockup.webp (navy)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/jacksonville-trans.png" alt="Jacksonville transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/jacksonville-shirt-mockup.webp" alt="Jacksonville mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Jacksonville, Alabama</div>
+      <div class="card-id">jacksonville-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/jacksonville-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/jacksonville-shirt-mockup.webp (navy)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/piedmont-trans.png" alt="Piedmont transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/piedmont-shirt-mockup.webp" alt="Piedmont mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Piedmont Name Changes</div>
+      <div class="card-id">piedmont-name-changes-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/piedmont-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/piedmont-shirt-mockup.webp (navy)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/model-city-dark-trans.png" alt="Model City Dark transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/model-city-dark-mockup.webp" alt="Model City Dark mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">The Model City — Dark Version</div>
+      <div class="card-id">model-city-shirt-dark</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/model-city-dark-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/model-city-dark-mockup.webp (cream)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/anniston-45-trans.png" alt="Anniston 45 transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/anniston-45-mockup.webp" alt="Anniston 45 mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Anniston 45</div>
+      <div class="card-id">anniston-45</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/anniston-45-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/anniston-45-mockup.webp (navy)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/raider-road-runners-trans.png" alt="Raider Road Runners transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/raider-runners-mockup.webp" alt="Raider Road Runners mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Raider Road Runners</div>
+      <div class="card-id">raider-road-runners</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/raider-road-runners-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/raider-runners-mockup.webp (cream)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Transparent</span>
+        <img src="../public/merch/sl-run-trans.png" alt="SL Run transparent">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Composite</span>
+        <img src="../public/merch/sl-run-mockup.webp" alt="SL Run mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">SL Run</div>
+      <div class="card-id">sl-run</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/sl-run-trans.png</div>
+        <div class="card-path has-mockup">mockup: /merch/sl-run-mockup.webp (black)</div>
+      </div>
+      <span class="badge composite">GPT composite</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ FAMILY / PERSONAL -->
+<div class="section-label">Family / Personal — Not for Merch Page</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../../gather/assets/ecclesia/ecclesia-kids-beach-party.png" alt="Beach Party raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Mockup</span>
+        <img src="../../gather/assets/merch/mockups/headley-beach-party-shirt.webp" alt="Beach Party mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">PLAYER: 4 · LEVEL: BEACH PARTY</div>
+      <div class="card-id">headley-beach-party-shirt</div>
+      <div class="card-paths">
+        <div class="card-path has-mockup">mockup: gather/assets/merch/mockups/headley-beach-party-shirt.webp</div>
+        <div class="card-path needs-mockup">cream blank · landscape print</div>
+      </div>
+      <span class="badge composite">✓ Mockup ready</span>
+      <span class="badge note">Family only — not on merch page</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ SL EDITORIAL -->
+<div class="section-label">SL Editorial — Mental Health Series (files corrupted — need recreation)</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label missing-label">Corrupted</span>
+        <div class="placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          HTML doc (FW CDN error)
+        </div>
+      </div>
+      <div class="img-panel">
+        <span class="panel-label missing-label">No mockup</span>
+        <div class="placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Needs design first
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">I Contain Multitudes</div>
+      <div class="card-id">i-contain-multitudes</div>
+      <div class="card-paths">
+        <div class="card-path corrupted">⚠ /merch/i-contain-multitudes.webp — corrupted (HTML/CDN error page)</div>
+      </div>
+      <span class="badge missing">File corrupted</span>
+      <span class="badge note">Needs new design</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label missing-label">Corrupted</span>
+        <div class="placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          Gzip CDN error page
+        </div>
+      </div>
+      <div class="img-panel">
+        <span class="panel-label missing-label">No mockup</span>
+        <div class="placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Needs design first
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Bipolar &amp; Proud</div>
+      <div class="card-id">bipolar-proud</div>
+      <div class="card-paths">
+        <div class="card-path corrupted">⚠ /merch/bipolar-proud.webp — corrupted (gzip CDN error page)</div>
+      </div>
+      <span class="badge missing">File corrupted</span>
+      <span class="badge note">Needs new design</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label missing-label">Corrupted</span>
+        <div class="placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          Gzip CDN error page
+        </div>
+      </div>
+      <div class="img-panel">
+        <span class="panel-label missing-label">No mockup</span>
+        <div class="placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Needs design first
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Still Here</div>
+      <div class="card-id">still-here</div>
+      <div class="card-paths">
+        <div class="card-path corrupted">⚠ /merch/still-here.webp — corrupted (gzip CDN error page)</div>
+      </div>
+      <span class="badge missing">File corrupted</span>
+      <span class="badge note">Needs new design</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ ECCLESIA -->
+<div class="section-label">Ecclesia — Faith + Community</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/ecclesia-pilgrims.png" alt="Ecclesia Pilgrims raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Mockup</span>
+        <img src="../public/merch/ecclesia-pilgrims-mockup.webp" alt="Ecclesia Pilgrims mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Ecclesia — Pilgrims</div>
+      <div class="card-id">ecclesia-pilgrims-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/ecclesia-pilgrims.png</div>
+        <div class="card-path has-mockup">mockup: /merch/ecclesia-pilgrims-mockup.webp</div>
+      </div>
+      <span class="badge composite">Has mockup</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/ecclesia-coin.png" alt="Ecclesia Coin raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Mockup</span>
+        <img src="../public/merch/ecclesia-coin-shirt.webp" alt="Ecclesia Coin mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Ecclesia — Coin</div>
+      <div class="card-id">ecclesia-coin-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/ecclesia-coin.png</div>
+        <div class="card-path has-mockup">mockup: /merch/ecclesia-coin-shirt.webp</div>
+      </div>
+      <span class="badge composite">Has mockup</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/ecclesia-coin.png" alt="Ecclesia Coin Photoreal raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Photoreal</span>
+        <img src="../public/merch/ecclesia-coin-photoreal-shirt.webp" alt="Ecclesia Coin Photoreal mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Ecclesia — Coin (Photoreal)</div>
+      <div class="card-id">ecclesia-coin-photoreal-shirt</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/ecclesia-coin.png</div>
+        <div class="card-path has-mockup">mockup: /merch/ecclesia-coin-photoreal-shirt.webp</div>
+      </div>
+      <span class="badge composite">Has mockup</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw (non-canonical)</span>
+        <img src="../public/merch/ecclesia-stone-noncanonical.png" alt="Ecclesia Stone old">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label missing-label">Superseded</span>
+        <div class="placeholder">Use teal version below</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Ecclesia Stone — OLD (earthy, non-canonical)</div>
+      <div class="card-id">ecclesia-stone-noncanonical</div>
+      <span class="badge missing">Non-canonical — do not print</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label composite-label">Canonical raw</span>
+        <img src="../../gather/assets/ecclesia/ecclesia-standing-stone-teal.png" alt="Teal Stone">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">✓ Canonical mockup</span>
+        <img src="../../gather/assets/merch/mockups/ecclesia-stone-text-shirt.webp" alt="Stone text shirt">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">+ ANCIENT PATHS + · Teal Stone (CANONICAL)</div>
+      <div class="card-id">ecclesia-stone-text-shirt</div>
+      <div class="card-paths">
+        <div class="card-path has-mockup">print: gather/assets/merch/print-files/ecclesia-stone-print.png</div>
+        <div class="card-path has-mockup">mockup: gather/assets/merch/mockups/ecclesia-stone-text-shirt.webp</div>
+      </div>
+      <span class="badge composite">✓ Print-ready</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label composite-label">✓ Canonical mockup</span>
+        <img src="../../gather/assets/merch/mockups/ecclesia-coin-celtic-shirt.webp" alt="Celtic coin shirt">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">✓ Sticker</span>
+        <img src="../../gather/assets/merch/mockups/ecclesia-coin-sticker-celtic.png" alt="Celtic coin sticker">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Celtic Coin Shirt + Sticker (CANONICAL)</div>
+      <div class="card-id">ecclesia-coin-celtic-shirt / ecclesia-coin-sticker-celtic</div>
+      <div class="card-paths">
+        <div class="card-path has-mockup">mockup: gather/assets/merch/mockups/ecclesia-coin-celtic-shirt.webp</div>
+        <div class="card-path has-mockup">sticker: gather/assets/merch/mockups/ecclesia-coin-sticker-celtic.png</div>
+      </div>
+      <span class="badge composite">✓ Print-ready</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label composite-label">✓ Sticker</span>
+        <img src="../../gather/assets/merch/mockups/ecclesia-stone-sticker.png" alt="Stone sticker">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">✓ Sticker</span>
+        <img src="../../gather/assets/merch/mockups/matt-8bit-sticker.png" alt="Matt sticker">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Stone Sticker · Matt 8-bit Sticker</div>
+      <div class="card-id">ecclesia-stone-sticker / matt-8bit-sticker</div>
+      <div class="card-paths">
+        <div class="card-path has-mockup">gather/assets/merch/mockups/ecclesia-stone-sticker.png</div>
+        <div class="card-path has-mockup">gather/assets/merch/mockups/matt-8bit-sticker.png</div>
+      </div>
+      <span class="badge composite">✓ Stickers</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ EVERGREENS / EP -->
+<div class="section-label">Evergreens / EP Merch</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/ep-chewed-gum-raw.webp" alt="Chewed Gum raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Mockup</span>
+        <img src="../public/merch/ep-chewed-gum.webp" alt="Chewed Gum mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">EP — Chewed Gum</div>
+      <div class="card-id">ep-chewed-gum</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/ep-chewed-gum-raw.webp</div>
+        <div class="card-path has-mockup">mockup: /merch/ep-chewed-gum.webp</div>
+      </div>
+      <span class="badge composite">Has mockup</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/ep-father-runs-raw.webp" alt="Father Runs raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Mockup</span>
+        <img src="../public/merch/ep-father-runs.webp" alt="Father Runs mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">EP — Father Runs</div>
+      <div class="card-id">ep-father-runs</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/ep-father-runs-raw.webp</div>
+        <div class="card-path has-mockup">mockup: /merch/ep-father-runs.webp</div>
+      </div>
+      <span class="badge composite">Has mockup</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-row">
+      <div class="img-panel">
+        <span class="panel-label raw-label">Raw</span>
+        <img src="../public/merch/ep-here-i-stand-raw.webp" alt="Here I Stand raw">
+      </div>
+      <div class="img-panel">
+        <span class="panel-label composite-label">Mockup</span>
+        <img src="../public/merch/ep-here-i-stand.webp" alt="Here I Stand mockup">
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">EP — Here I Stand</div>
+      <div class="card-id">ep-here-i-stand</div>
+      <div class="card-paths">
+        <div class="card-path needs-mockup">raw: /merch/ep-here-i-stand-raw.webp</div>
+        <div class="card-path has-mockup">mockup: /merch/ep-here-i-stand.webp</div>
+      </div>
+      <span class="badge composite">Has mockup</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

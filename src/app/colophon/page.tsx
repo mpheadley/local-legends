@@ -52,16 +52,15 @@ export default function ColophonPage() {
               for a site that spends time with people who have been at something for a long time.
             </p>
             <p>
-              Pull quotes and accent elements use <strong>Rock Salt</strong>, a handwritten
-              typeface by Font Diner. It marks a shift in register — a breath between the
-              reported prose and whatever line a subject said that stopped the interview cold.
+              Section labels, eyebrow lines, and category tags use{" "}
+              <strong>Barlow Condensed</strong>, a compressed grotesque that keeps the
+              structural skeleton visible without competing with the prose.
             </p>
             <p>
-              The essays section draws on three additional handwritten faces —{" "}
-              <strong>Caveat</strong>, <strong>Zeyada</strong>, and{" "}
-              <strong>Permanent Marker</strong> — used sparingly for the kind of emphasis that
-              belongs in personal writing but would feel out of place in a reported profile.
-              Different content calls for different register. The type tries to follow.
+              Pull quotes use <strong>IM Fell English</strong> italic, a digital revival of a
+              17th-century English typeface. It marks a shift in register — a breath between
+              the reported prose and whatever line a subject said that stopped the interview
+              cold. It lives only in pull quotes. One job, one place.
             </p>
           </section>
 

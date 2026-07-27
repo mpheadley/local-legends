@@ -132,12 +132,12 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
           )}
         </div>
 
-        <Link
+        <a
           href="/support"
           className="btn-support inline-block mt-4 px-7 py-3 bg-ll-primary font-bold text-sm rounded-md hover:bg-ll-primary-dark transition-colors"
         >
           Support this work →
-        </Link>
+        </a>
       </div>
     </section>
   );

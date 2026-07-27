@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SL + The Aisle — Merch Catalog 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+  @page { size: 8.5in 11in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: #1c1917;
+    background: #e5e5e5;
+  }
+
+  /* ═══ PAGE SHELL ═══ */
+  .page {
+    width: 8.5in;
+    height: 11in;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+  }
+  .page:last-child { page-break-after: avoid; }
+
+  /* screen preview spacing */
+  @media screen {
+    .page { margin: 0 auto 32px; box-shadow: 0 4px 32px rgba(0,0,0,0.18); }
+  }
+
+  /* ═══ SHARED HEADER STRIP ═══ */
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.18in 0.4in 0.14in;
+    border-bottom: 0.5pt solid rgba(202,138,4,0.3);
+    flex-shrink: 0;
+  }
+  .page-header .brand {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 13pt;
+    font-weight: 900;
+    color: #1c1917;
+    letter-spacing: -0.01em;
+  }
+  .page-header .section-name {
+    font-size: 7pt;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(154,52,18,0.7);
+    font-weight: 600;
+  }
+  .page-header .pg-url {
+    font-size: 7pt;
+    color: rgba(28,25,23,0.35);
+    letter-spacing: 0.04em;
+  }
+
+  /* ═══ SHARED FOOTER STRIP ═══ */
+  .page-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1in 0.4in;
+    border-top: 0.5pt solid rgba(0,0,0,0.08);
+    background: #faf9f7;
+    flex-shrink: 0;
+  }
+  .footer-pay { font-size: 7pt; color: rgba(28,25,23,0.4); }
+  .footer-pay strong { color: rgba(28,25,23,0.65); }
+  .footer-qr { display: flex; align-items: center; gap: 7pt; }
+  .footer-qr img { width: 0.45in; height: 0.45in; }
+  .footer-qr-label { font-size: 6pt; color: rgba(28,25,23,0.35); line-height: 1.4; }
+  .footer-price-note { font-size: 6.5pt; color: rgba(28,25,23,0.4); font-style: italic; }
+
+  /* ═══ BODY AREA ═══ */
+  .page-body {
+    flex: 1;
+    padding: 0.22in 0.4in 0.15in;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ═══ SECTION RULE ═══ */
+  .section-rule {
+    height: 1px;
+    background: linear-gradient(to right, rgba(202,138,4,0.35), transparent);
+    margin-bottom: 0.14in;
+  }
+
+  /* ═══ PRODUCT GRIDS ═══ */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.15in; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.12in; }
+  .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.1in; }
+  .grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.1in; }
+
+  /* ═══ PRODUCT CARD ═══ */
+  .card {
+    border: 0.5pt solid rgba(0,0,0,0.1);
+    border-radius: 5pt;
+    overflow: hidden;
+    background: #fafaf9;
+  }
+  .card.live { border-color: rgba(154,52,18,0.2); background: #fff9f7; }
+  .card img {
+    width: 100%; aspect-ratio: 1;
+    object-fit: contain;
+    background: #f3f0ec;
+    padding: 6pt;
+    display: block;
+  }
+  .card .cb { padding: 5pt 6pt 6pt; border-top: 0.5pt solid rgba(0,0,0,0.06); }
+  .card .cn { font-size: 7.5pt; font-weight: 700; color: #1c1917; line-height: 1.25; margin-bottom: 1pt; }
+  .card .cs { font-size: 5.5pt; color: rgba(28,25,23,0.4); line-height: 1.3; margin-bottom: 3pt; }
+  .card .cp { font-size: 9pt; font-weight: 700; color: #9A3412; }
+  .card .csoon { font-size: 6pt; font-weight: 600; color: rgba(28,25,23,0.35); background: rgba(0,0,0,0.05); border: 0.5pt solid rgba(0,0,0,0.1); padding: 1pt 4pt; border-radius: 99pt; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; }
+  .card .cfund { font-size: 6pt; font-weight: 700; color: #166534; background: rgba(22,101,52,0.07); border: 0.5pt solid rgba(22,101,52,0.2); padding: 1pt 4pt; border-radius: 99pt; text-transform: uppercase; letter-spacing: 0.04em; display: inline-block; margin-left: 4pt; }
+  .dots { display: flex; gap: 3pt; margin-top: 3pt; }
+  .dot { width: 7pt; height: 7pt; border-radius: 50%; border: 0.5pt solid rgba(0,0,0,0.15); flex-shrink: 0; }
+  .d-black  { background: #1c1917; }
+  .d-navy   { background: #1e3a5f; }
+  .d-cream  { background: #f5f0e8; border-color: rgba(0,0,0,0.25); }
+  .d-olive  { background: #556b2f; }
+  .d-forest { background: #2d5016; }
+  .d-nat    { background: #e8dcc8; border-color: rgba(0,0,0,0.2); }
+  .d-white  { background: #fff; border-color: rgba(0,0,0,0.25); }
+
+  /* small cards (stickers) */
+  .card.sm img { padding: 4pt; }
+  .card.sm .cb { padding: 4pt 5pt 5pt; }
+  .card.sm .cn { font-size: 6.5pt; }
+  .card.sm .cs { font-size: 5pt; margin-bottom: 2pt; }
+  .card.sm .cp { font-size: 8pt; }
+
+  /* ═══ COVER PAGE ═══ */
+  .cover {
+    background: #1c1917;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .cover-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0.6in 0.55in 0.45in;
+  }
+  .cover-eyebrow {
+    font-size: 8pt;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(202,138,4,0.8);
+    margin-bottom: 0.12in;
+  }
+  .cover-rule {
+    width: 1.4in;
+    height: 2px;
+    background: linear-gradient(to right, #CA8A04, rgba(202,138,4,0.2));
+    margin-bottom: 0.12in;
+  }
+  .cover-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 58pt;
+    font-weight: 900;
+    color: #F0EDE8;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.18in;
+  }
+  .cover-title em {
+    font-style: italic;
+    color: rgba(240,237,232,0.5);
+    font-size: 0.6em;
+    letter-spacing: -0.01em;
+    display: block;
+    line-height: 1.1;
+  }
+  .cover-sub {
+    font-size: 10pt;
+    color: rgba(240,237,232,0.45);
+    line-height: 1.5;
+    max-width: 4.5in;
+    margin-bottom: 0.25in;
+  }
+  .cover-chips {
+    display: flex;
+    gap: 8pt;
+    flex-wrap: wrap;
+  }
+  .cover-chip {
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3pt 10pt;
+    border-radius: 99pt;
+    border: 0.5pt solid rgba(240,237,232,0.2);
+    color: rgba(240,237,232,0.5);
+  }
+  .cover-chip.gold { border-color: rgba(202,138,4,0.5); color: rgba(202,138,4,0.8); }
+  .cover-footer {
+    background: rgba(0,0,0,0.3);
+    padding: 0.2in 0.55in;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cover-footer-left { color: rgba(240,237,232,0.4); font-size: 8pt; }
+  .cover-footer-left strong { color: rgba(240,237,232,0.7); }
+  .cover-qr img { width: 0.6in; height: 0.6in; }
+
+  /* ═══ SECTION INTRO BAND ═══ */
+  .section-band {
+    display: flex;
+    align-items: baseline;
+    gap: 10pt;
+    margin-bottom: 0.1in;
+  }
+  .section-band h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 16pt;
+    font-weight: 900;
+    color: #1c1917;
+    line-height: 1;
+  }
+  .section-band .s-sub {
+    font-size: 8pt;
+    color: rgba(28,25,23,0.35);
+  }
+
+  /* ═══ SPACER ═══ */
+  .gap { margin-bottom: 0.18in; }
+  .gap-sm { margin-bottom: 0.1in; }
+
+  /* ═══ CALLOUT BOX ═══ */
+  .callout {
+    background: rgba(154,52,18,0.04);
+    border: 0.5pt solid rgba(154,52,18,0.15);
+    border-radius: 5pt;
+    padding: 8pt 10pt;
+    font-size: 7.5pt;
+    color: rgba(28,25,23,0.6);
+    line-height: 1.5;
+    margin-top: 0.12in;
+  }
+  .callout strong { color: #9A3412; font-weight: 700; }
+
+  /* ═══ AISLE COVER ACCENT ═══ */
+  .aisle-header {
+    background: #f0ede8;
+    padding: 0.22in 0.4in 0.18in;
+    border-bottom: 1pt solid rgba(202,138,4,0.3);
+    flex-shrink: 0;
+  }
+  .aisle-eyebrow { font-size: 7pt; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(154,52,18,0.6); margin-bottom: 4pt; }
+  .aisle-title { font-family: 'Fraunces', Georgia, serif; font-size: 24pt; font-weight: 900; color: #1c1917; line-height: 1; }
+  .aisle-sub { font-size: 9pt; color: rgba(28,25,23,0.45); margin-top: 4pt; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════ PAGE 1: COVER -->
+<div class="page cover">
+  <div class="cover-body">
+    <div class="cover-eyebrow">NE Alabama · Est. 2024</div>
+    <div class="cover-rule"></div>
+    <div class="cover-title">
+      Southern<br>Legends
+      <em>Merch Catalog · 2026</em>
+    </div>
+    <div class="cover-sub">
+      Shirts, totes, stickers, and prints rooted in NE Alabama — trails, schools, history, and the people who stayed.
+    </div>
+    <div class="cover-chips">
+      <span class="cover-chip gold">Shirts from $25</span>
+      <span class="cover-chip">Totes $22</span>
+      <span class="cover-chip">Stickers $5 · 3 for $12</span>
+      <span class="cover-chip">Cash · Square · Venmo</span>
+    </div>
+  </div>
+  <div class="cover-footer">
+    <div class="cover-footer-left">
+      Order online: <strong>southernlegends.blog/merch</strong><br>
+      Ships 2–3 weeks · In-person available at shows
+    </div>
+    <div class="cover-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://southernlegends.blog/merch&bgcolor=1c1917&color=f0ede8&margin=2" alt="QR">
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 2: AVAILABLE NOW -->
+<div class="page">
+  <div class="page-header">
+    <span class="brand">Southern Legends</span>
+    <span class="section-name">Available Now</span>
+    <span class="pg-url">southernlegends.blog/merch</span>
+  </div>
+
+  <div class="page-body">
+    <div class="section-band"><h2>Shirts — Order Now</h2><span class="s-sub">Ships 2–3 weeks after order · Sizes S–2XL</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-3 gap">
+
+      <div class="card live">
+        <img src="../public/merch/clt-shirt-mockup.webp" alt="CLT">
+        <div class="cb">
+          <div class="cn">Ladiga's Land</div>
+          <div class="cs">Chief Ladiga Trail · NE Alabama</div>
+          <span class="cp">$29</span>
+          <div class="dots"><span class="dot d-olive"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../public/merch/freedom-riders/shirt-mockup-dark.webp" alt="Freedom Riders">
+        <div class="cb">
+          <div class="cn">Freedom Riders</div>
+          <div class="cs">Anniston, Alabama · May 14, 1961</div>
+          <span class="cp">$29</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../public/merch/model-city-mockup-cream.webp" alt="Model City">
+        <div class="cb">
+          <div class="cn">The Model City</div>
+          <div class="cs">Anniston, Alabama · Est. 1872</div>
+          <span class="cp">$29</span>
+          <div class="dots"><span class="dot d-cream"></span><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../public/merch/pv-shirt-mockup.webp" alt="PV Raiders XC">
+        <div class="cb">
+          <div class="cn">PV Raiders XC</div>
+          <div class="cs">Pleasant Valley High School</div>
+          <span class="cp">$29</span>
+          <span class="cfund">25% → XC</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../public/merch/woodstock-shirt-mockup.webp" alt="Woodstock">
+        <div class="cb">
+          <div class="cn">I Survived Woodstock Ave</div>
+          <div class="cs">Woodstock 5K · Anniston · Aug 2</div>
+          <span class="cp">$25</span>
+          <div class="dots"><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../../gather/assets/merch/mockups/clanton-peach-tower-shirt.webp" alt="Clanton Peach Tower">
+        <div class="cb">
+          <div class="cn">Clanton, Alabama</div>
+          <div class="cs">Peach water tower · 8-bit pixel</div>
+          <span class="cp">$28</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-band"><h2>Stickers</h2><span class="s-sub">3″ vinyl · Matte · Weather-resistant</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-6">
+      <div class="card sm live">
+        <img src="../public/merch/clt-sticker.webp" alt="CLT Sticker">
+        <div class="cb"><div class="cn">Chief Ladiga</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live">
+        <img src="../public/merch/sl-sticker.webp" alt="SL Sticker">
+        <div class="cb"><div class="cn">Southern Legends</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live">
+        <img src="../public/merch/woodstock-sticker.webp" alt="Woodstock Sticker">
+        <div class="cb"><div class="cn">Woodstock 5K</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live">
+        <img src="../public/merch/blossom-and-decay-sticker.webp" alt="Blossom Sticker">
+        <div class="cb"><div class="cn">Blossom &amp; Decay</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live">
+        <img src="../public/merch/coldwater-badge-sticker-trans.png" alt="Coldwater Sticker">
+        <div class="cb"><div class="cn">Coldwater Mtn</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live">
+        <img src="../public/merch/pinhoti-badge-sticker-trans.png" alt="Pinhoti Sticker">
+        <div class="cb"><div class="cn">Pinhoti Trail</div><span class="cp">$5</span></div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:0.12in;">
+      <strong>Sticker bundle: $5 each · 3 for $12 · 5 for $18</strong> &nbsp;·&nbsp; Ask about bulk orders for teams, clubs, or events. Custom designs available — email matt@southernlegends.blog
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-pay"><strong>At the booth:</strong> Cash · Venmo · Square · Card &nbsp;·&nbsp; <strong>Online:</strong> southernlegends.blog/merch</span>
+    <div class="footer-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://southernlegends.blog/merch&margin=1" alt="QR">
+      <div class="footer-qr-label">Scan to<br>order online</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 3: TRAIL & OUTDOOR -->
+<div class="page">
+  <div class="page-header">
+    <span class="brand">Southern Legends</span>
+    <span class="section-name">Trail &amp; Outdoor</span>
+    <span class="pg-url">southernlegends.blog/merch</span>
+  </div>
+
+  <div class="page-body">
+    <div class="section-band"><h2>Trail &amp; Outdoor</h2><span class="s-sub">Chief Ladiga · Cheaha · Pinhoti · Coldwater Mountain</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-4">
+
+      <div class="card live">
+        <img src="../public/merch/clt-shirt-mockup.webp" alt="CLT">
+        <div class="cb">
+          <div class="cn">Ladiga's Land</div>
+          <div class="cs">Chief Ladiga Trail</div>
+          <span class="cp">$29</span>
+          <div class="dots"><span class="dot d-olive"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/clt-hike-explore-mockup.webp" alt="Hike & Explore">
+        <div class="cb">
+          <div class="cn">Hike &amp; Explore — CLT</div>
+          <div class="cs">Chief Ladiga Trail</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-olive"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/cheaha-tower-mockup.webp" alt="Cheaha Tower">
+        <div class="cb">
+          <div class="cn">Cheaha Tower</div>
+          <div class="cs">2,413 ft · Highest in Alabama</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-forest"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/pinhoti-shirt-mockup.webp" alt="Pinhoti">
+        <div class="cb">
+          <div class="cn">Pinhoti Trail</div>
+          <div class="cs">Alabama's longest trail</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-forest"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/coldwater-shirt-mockup.webp" alt="Coldwater Mountain">
+        <div class="cb">
+          <div class="cn">Coldwater Mountain</div>
+          <div class="cs">Oxford, Alabama · IMBA Epic</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-forest"></span></div>
+        </div>
+      </div>
+
+      <div class="card sm">
+        <img src="../public/merch/clt-sticker.webp" alt="CLT Sticker">
+        <div class="cb"><div class="cn">CLT Sticker</div><span class="cp">$5</span></div>
+      </div>
+
+      <div class="card sm">
+        <img src="../public/merch/coldwater-badge-sticker-trans.png" alt="Coldwater Sticker">
+        <div class="cb"><div class="cn">Coldwater Badge</div><span class="cp">$5</span></div>
+      </div>
+
+      <div class="card sm">
+        <img src="../public/merch/pinhoti-badge-sticker-trans.png" alt="Pinhoti Sticker">
+        <div class="cb"><div class="cn">Pinhoti Sticker</div><span class="cp">$5</span></div>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <strong>Trail shirts are pre-order.</strong> Order online → ships after production run closes. Prefer to buy in person? Find us at the next show — date at southernlegends.blog.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-pay"><strong>At the booth:</strong> Cash · Venmo · Square · Card</span>
+    <div class="footer-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://southernlegends.blog/merch&margin=1" alt="QR">
+      <div class="footer-qr-label">Pre-order<br>online</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 4: COMMUNITY & HISTORY -->
+<div class="page">
+  <div class="page-header">
+    <span class="brand">Southern Legends</span>
+    <span class="section-name">Community &amp; History</span>
+    <span class="pg-url">southernlegends.blog/merch</span>
+  </div>
+
+  <div class="page-body">
+    <div class="section-band"><h2>Community &amp; History</h2><span class="s-sub">Freedom Riders · Model City · Fort McClellan · Local legends</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-4">
+
+      <div class="card live">
+        <img src="../public/merch/freedom-riders/shirt-mockup-dark.webp" alt="Freedom Riders">
+        <div class="cb">
+          <div class="cn">Freedom Riders</div>
+          <div class="cs">Anniston · May 14, 1961</div>
+          <span class="cp">$29</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../public/merch/model-city-mockup-cream.webp" alt="Model City">
+        <div class="cb">
+          <div class="cn">The Model City</div>
+          <div class="cs">Anniston, Alabama · Est. 1872</div>
+          <span class="cp">$29</span>
+          <div class="dots"><span class="dot d-cream"></span><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/fort-mcclellan-shirt-mockup.webp" alt="Fort McClellan">
+        <div class="cb">
+          <div class="cn">Fort McClellan</div>
+          <div class="cs">Anniston, Alabama</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-olive"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/anniston-45-mockup.webp" alt="Anniston 45">
+        <div class="cb">
+          <div class="cn">Anniston 45</div>
+          <div class="cs">Anniston, Alabama</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/lickskillet-shirt-mockup.webp" alt="Lickskillet">
+        <div class="cb">
+          <div class="cn">Lickskillet</div>
+          <div class="cs">Oxford, Alabama</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-cream"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/piedmont-shirt-mockup.webp" alt="Piedmont">
+        <div class="cb">
+          <div class="cn">Piedmont Name Changes</div>
+          <div class="cs">Piedmont, Alabama</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/diaspora-shirt-mockup.webp" alt="Diaspora">
+        <div class="cb">
+          <div class="cn">Diaspora</div>
+          <div class="cs">NE Alabama · gone but not forgotten</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card sm">
+        <img src="../public/merch/fort-mcclellan-sticker-trans.png" alt="Fort McClellan Sticker">
+        <div class="cb"><div class="cn">Fort McClellan</div><span class="cp">$5</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-price-note">$29 shirts · Stickers $5 each, 3 for $12</span>
+    <div class="footer-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://southernlegends.blog/merch&margin=1" alt="QR">
+      <div class="footer-qr-label">southernlegends<br>.blog/merch</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 5: SCHOOLS & EVENTS -->
+<div class="page">
+  <div class="page-header">
+    <span class="brand">Southern Legends</span>
+    <span class="section-name">Schools &amp; Events</span>
+    <span class="pg-url">southernlegends.blog/merch</span>
+  </div>
+
+  <div class="page-body">
+    <div class="section-band"><h2>Schools &amp; Events</h2><span class="s-sub">PV Raiders · JSU · Woodstock 5K · Running clubs</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-3">
+
+      <div class="card live">
+        <img src="../public/merch/pv-shirt-mockup.webp" alt="PV Raiders XC">
+        <div class="cb">
+          <div class="cn">PV Raiders XC</div>
+          <div class="cs">Pleasant Valley High School</div>
+          <span class="cp">$29</span>
+          <span class="cfund">25% → XC</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../public/merch/woodstock-shirt-mockup.webp" alt="Woodstock">
+        <div class="cb">
+          <div class="cn">I Survived Woodstock Ave</div>
+          <div class="cs">Woodstock 5K · Anniston · Aug 2</div>
+          <span class="cp">$25</span>
+          <div class="dots"><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/jacksonville-gamecock-mockup.webp" alt="Jacksonville JSU">
+        <div class="cb">
+          <div class="cn">Jacksonville — Home of JSU</div>
+          <div class="cs">Jacksonville State · Gamecocks</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/jacksonville-shirt-mockup.webp" alt="Jacksonville">
+        <div class="cb">
+          <div class="cn">Jacksonville, Alabama</div>
+          <div class="cs">Jacksonville, Alabama</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-navy"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/raider-runners-mockup.webp" alt="Raider Road Runners">
+        <div class="cb">
+          <div class="cn">Raider Road Runners</div>
+          <div class="cs">NE Alabama running community</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-cream"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/sl-run-mockup.webp" alt="SL Run">
+        <div class="cb">
+          <div class="cn">SL Run</div>
+          <div class="cs">Southern Legends running series</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <strong>School groups &amp; teams:</strong> ask about bulk pricing and custom orders. 10+ shirts = 10% off. Custom designs for your school, club, or event — email matt@southernlegends.blog or stop by the booth.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-pay"><strong>PV Raiders XC:</strong> 25% of every shirt sold goes directly to the Pleasant Valley cross country program</span>
+    <div class="footer-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://southernlegends.blog/merch&margin=1" alt="QR">
+      <div class="footer-qr-label">Order<br>online</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 6: THE AISLE -->
+<div class="page">
+  <div class="aisle-header">
+    <div class="aisle-eyebrow">The Aisle · Bridal Show · Anniston, Alabama · Oct 18, 2026</div>
+    <div class="aisle-title">The Aisle Merch</div>
+    <div class="aisle-sub">Wedding-day gear for brides, vendors, and everyone who made it happen.</div>
+  </div>
+
+  <div class="page-body" style="padding-top:0.2in;">
+    <div class="section-band"><h2>Shirts &amp; Totes</h2><span class="s-sub">Vendor tees · Bride totes · Limited run</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-4">
+
+      <div class="card live">
+        <img src="../public/merch/aisle-vendor-tee-mockup.webp" alt="Aisle Vendor Tee">
+        <div class="cb">
+          <div class="cn">The Aisle — Vendor Tee</div>
+          <div class="cs">Oct 18, 2026 · Anniston</div>
+          <span class="cp">$29</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../public/merch/aisle-bloom-bar-shirt.webp" alt="Aisle Bloom Bar">
+        <div class="cb">
+          <div class="cn">Bloom Bar Collab Shirt</div>
+          <div class="cs">The Aisle × Heather Florals</div>
+          <span class="csoon">Limited run</span>
+          <div class="dots"><span class="dot d-cream"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cb" style="padding:12pt; aspect-ratio:1; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#f3f0ec; text-align:center; gap:6pt;">
+          <div style="font-size:16pt; color:rgba(28,25,23,0.2);">🛍</div>
+          <div style="font-size:7pt; font-weight:700; color:rgba(28,25,23,0.4);">I do. Eventually.</div>
+          <div style="font-size:6pt; color:rgba(28,25,23,0.3);">Bride Tote — Cream canvas</div>
+        </div>
+        <div class="cb">
+          <div class="cn">I do. Eventually. — Tote</div>
+          <div class="cs">Bride's planning tote · Cream canvas</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-nat"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cb" style="padding:12pt; aspect-ratio:1; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#f3f0ec; text-align:center; gap:6pt;">
+          <div style="font-size:16pt; color:rgba(28,25,23,0.2);">🧢</div>
+          <div style="font-size:7pt; font-weight:700; color:rgba(28,25,23,0.4);">Aisle Bride Cap</div>
+          <div style="font-size:6pt; color:rgba(28,25,23,0.3);">Structured cap · Cream</div>
+        </div>
+        <div class="cb">
+          <div class="cn">Aisle Bride Cap</div>
+          <div class="cs">For the bride who planned all of this</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-white"></span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout" style="margin-top:0.15in;">
+      <strong>The Aisle</strong> is a curated bridal show at Anniston Museums &amp; Gardens, October 18, 2026.
+      Vendor spots still open — <strong>theaisle.app</strong> · Couples: GA $25 · VIP $75
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-pay">theaisle.app &nbsp;·&nbsp; matt@theaisle.app &nbsp;·&nbsp; <strong>Oct 18, 2026 · Anniston Museums &amp; Gardens</strong></span>
+    <div class="footer-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://theaisle.app&margin=1" alt="QR">
+      <div class="footer-qr-label">theaisle<br>.app</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 7: ART & STICKERS -->
+<div class="page">
+  <div class="page-header">
+    <span class="brand">Southern Legends</span>
+    <span class="section-name">Art, Gothic &amp; Stickers</span>
+    <span class="pg-url">southernlegends.blog/merch</span>
+  </div>
+
+  <div class="page-body">
+    <div class="section-band"><h2>Art &amp; Gothic</h2><span class="s-sub">Southern Gothic series · Coming soon</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-4 gap-sm">
+      <div class="card">
+        <img src="../public/merch/blossom-and-decay-trans.png" alt="Blossom Gothic">
+        <div class="cb">
+          <div class="cn">Blossom &amp; Decay — Gothic</div>
+          <div class="cs">Southern Gothic art series</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../public/merch/blossom-decay-sugar-trans.png" alt="Sugar Skull">
+        <div class="cb">
+          <div class="cn">Blossom &amp; Decay — Sugar Skull</div>
+          <div class="cs">Southern Gothic art series</div>
+          <span class="csoon">Coming soon</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+      <div class="card sm">
+        <img src="../public/merch/skull-gothic-sticker-trans.png" alt="Gothic Skull Sticker">
+        <div class="cb"><div class="cn">Gothic Skull Sticker</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm">
+        <img src="../public/merch/skull-marigold-sticker-trans.png" alt="Marigold Skull Sticker">
+        <div class="cb"><div class="cn">Marigold Skull Sticker</div><span class="cp">$5</span></div>
+      </div>
+    </div>
+
+    <div class="gap-sm"></div>
+    <div class="section-band"><h2>Full Sticker Collection</h2><span class="s-sub">$5 each · 3 for $12 · 5 for $18</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-6">
+      <div class="card sm live"><img src="../public/merch/clt-sticker.webp" alt="CLT"><div class="cb"><div class="cn">Chief Ladiga</div><span class="cp">$5</span></div></div>
+      <div class="card sm live"><img src="../public/merch/sl-sticker.webp" alt="SL"><div class="cb"><div class="cn">Southern Legends</div><span class="cp">$5</span></div></div>
+      <div class="card sm live"><img src="../public/merch/woodstock-sticker.webp" alt="Woodstock"><div class="cb"><div class="cn">Woodstock 5K</div><span class="cp">$5</span></div></div>
+      <div class="card sm live"><img src="../public/merch/blossom-and-decay-sticker.webp" alt="Blossom"><div class="cb"><div class="cn">Blossom &amp; Decay</div><span class="cp">$5</span></div></div>
+      <div class="card sm live"><img src="../public/merch/coldwater-badge-sticker-trans.png" alt="Coldwater"><div class="cb"><div class="cn">Coldwater Mtn</div><span class="cp">$5</span></div></div>
+      <div class="card sm live"><img src="../public/merch/pinhoti-badge-sticker-trans.png" alt="Pinhoti"><div class="cb"><div class="cn">Pinhoti Trail</div><span class="cp">$5</span></div></div>
+      <div class="card sm"><img src="../public/merch/fort-mcclellan-sticker-trans.png" alt="Fort McClellan"><div class="cb"><div class="cn">Fort McClellan</div><span class="cp">$5</span></div></div>
+      <div class="card sm"><img src="../public/merch/lickskillet-ox-sticker-trans.png" alt="Lickskillet"><div class="cb"><div class="cn">Lickskillet Ox</div><span class="cp">$5</span></div></div>
+      <div class="card sm"><img src="../public/merch/skull-gothic-sticker-trans.png" alt="Gothic Skull"><div class="cb"><div class="cn">Gothic Skull</div><span class="cp">$5</span></div></div>
+      <div class="card sm"><img src="../public/merch/skull-marigold-sticker-trans.png" alt="Marigold"><div class="cb"><div class="cn">Marigold Skull</div><span class="cp">$5</span></div></div>
+      <div class="card sm"><img src="../public/merch/green-thumbs-club-sticker.webp" alt="Green Thumbs"><div class="cb"><div class="cn">Green Thumbs Club</div><span class="cp">$5</span></div></div>
+      <div class="card sm"><img src="../public/merch/noccalula-falls-print.png" alt="Noccalula"><div class="cb"><div class="cn">Noccalula Falls</div><span class="cp">$5</span></div></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-pay">Sticker bundles: 3 for $12 · 5 for $18 · Custom orders welcome</span>
+    <div class="footer-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://southernlegends.blog/merch&margin=1" alt="QR">
+      <div class="footer-qr-label">southernlegends<br>.blog/merch</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 8: ECCLESIA -->
+<div class="page">
+  <div class="page-header">
+    <span class="brand">Ecclesia</span>
+    <span class="section-name">Faith &amp; Community</span>
+    <span class="pg-url">ecclesiacommunity.org/merch</span>
+  </div>
+
+  <div class="page-body">
+    <div class="section-band"><h2>Ecclesia Shirts</h2><span class="s-sub">Ancient paths · A fresh expression · Locally printed in Alabama</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-4 gap-sm">
+
+      <div class="card live">
+        <img src="../../gather/assets/merch/mockups/ecclesia-stone-text-shirt.webp" alt="Teal Stone Shirt">
+        <div class="cb">
+          <div class="cn">Ancient Paths</div>
+          <div class="cs">Teal standing stone · 8-bit · dark forest</div>
+          <span class="cp">$32</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../../gather/assets/merch/mockups/ecclesia-coin-celtic-shirt.webp" alt="Celtic Coin Shirt">
+        <div class="cb">
+          <div class="cn">We are all on the way.</div>
+          <div class="cs">Celtic triskelion coin · Uncial Antiqua</div>
+          <span class="cp">$32</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../../gather/assets/merch/mockups/ecclesia-coin-shirt.webp" alt="8-bit Coin Shirt">
+        <div class="cb">
+          <div class="cn">We are all on the way.</div>
+          <div class="cs">Ecclesia coin · 8-bit pixel</div>
+          <span class="cp">$28</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../../gather/assets/merch/mockups/cheshire-shirt.webp" alt="Cheshire Shirt">
+        <div class="cb">
+          <div class="cn">We're all mad here.</div>
+          <div class="cs">The Cheshire Cat · also the early church</div>
+          <span class="cp">$28</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+      <div class="card live">
+        <img src="../../gather/assets/merch/mockups/ecclesia-he-is-not-here-shirt.webp" alt="He Is Not Here Shirt">
+        <div class="cb">
+          <div class="cn">He is not here.</div>
+          <div class="cs">8-bit skeleton · empty tomb · Easter</div>
+          <span class="cp">$28</span>
+          <div class="dots"><span class="dot d-black"></span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gap-sm"></div>
+    <div class="section-band"><h2>Stickers</h2><span class="s-sub">$5 each · vinyl · weatherproof</span></div>
+    <div class="section-rule"></div>
+
+    <div class="grid-6">
+      <div class="card sm live">
+        <img src="../../gather/assets/merch/mockups/ecclesia-stone-sticker.png" alt="Ancient Paths Sticker">
+        <div class="cb"><div class="cn">Ancient Paths</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live">
+        <img src="../../gather/assets/merch/mockups/ecclesia-coin-sticker-celtic.png" alt="Celtic Coin Sticker">
+        <div class="cb"><div class="cn">Ecclesia Coin</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live">
+        <img src="../../gather/assets/merch/mockups/matt-clergy-sticker.png" alt="Matt Clergy Sticker">
+        <div class="cb"><div class="cn">Matt — Clergy</div><span class="cp">$5</span></div>
+      </div>
+      <div class="card sm live" style="aspect-ratio: auto;">
+        <img src="../../gather/assets/merch/mockups/matt-hero-canonical-sticker.png" alt="Matt Hero Sticker" style="aspect-ratio: 3/4; object-fit: cover;">
+        <div class="cb"><div class="cn">Matt — Ecclesia</div><span class="cp">$5</span></div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:0.15in;">
+      <strong>Ecclesia</strong> is a fresh expression of church in NE Alabama — gathered, disclosed, on the way. Every shirt and sticker sustains the community. Orders: <strong>ecclesiacommunity.org/merch</strong> · matt@gatherstudio.app
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-pay">ecclesiacommunity.org/merch &nbsp;·&nbsp; Printed locally in Alabama &nbsp;·&nbsp; allow 1–2 weeks</span>
+    <div class="footer-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://ecclesiacommunity.org/merch&margin=1" alt="QR">
+      <div class="footer-qr-label">ecclesia<br>community.org</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 9: ORDER & BACK COVER -->
+<div class="page" style="background:#1c1917; display:flex; flex-direction:column; justify-content:space-between;">
+  <div style="padding:0.55in 0.55in 0; flex:1; display:flex; flex-direction:column; justify-content:center;">
+    <div style="font-size:7pt; letter-spacing:0.3em; text-transform:uppercase; color:rgba(202,138,4,0.7); margin-bottom:0.15in;">How to Order</div>
+    <div style="font-family:'Fraunces',Georgia,serif; font-size:32pt; font-weight:900; color:#F0EDE8; line-height:1; margin-bottom:0.2in; letter-spacing:-0.01em;">Three ways<br>to get your stuff.</div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.25in; margin-bottom:0.35in;">
+      <div>
+        <div style="font-size:8pt; letter-spacing:0.2em; text-transform:uppercase; color:rgba(202,138,4,0.7); margin-bottom:8pt;">At the booth</div>
+        <div style="font-size:9pt; color:rgba(240,237,232,0.65); line-height:1.6;">Cash · Venmo · Square<br>QR code on every sign<br>Ships after the show or<br>carry it out same day</div>
+      </div>
+      <div>
+        <div style="font-size:8pt; letter-spacing:0.2em; text-transform:uppercase; color:rgba(202,138,4,0.7); margin-bottom:8pt;">Online</div>
+        <div style="font-size:9pt; color:rgba(240,237,232,0.65); line-height:1.6;">southernlegends.blog/merch<br>Secure checkout via Stripe<br>Ships 2–3 weeks after order<br>Free returns on defects</div>
+      </div>
+      <div>
+        <div style="font-size:8pt; letter-spacing:0.2em; text-transform:uppercase; color:rgba(202,138,4,0.7); margin-bottom:8pt;">Custom orders</div>
+        <div style="font-size:9pt; color:rgba(240,237,232,0.65); line-height:1.6;">matt@southernlegends.blog<br>Schools · clubs · events<br>Min 10 shirts for bulk<br>2–3 week turnaround</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:0.35in; align-items:center;">
+      <div>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://southernlegends.blog/merch&bgcolor=1c1917&color=f0ede8&margin=3" alt="QR" style="width:1in; height:1in; display:block; margin-bottom:6pt;">
+        <div style="font-size:7pt; color:rgba(240,237,232,0.35); letter-spacing:0.05em;">southernlegends.blog/merch</div>
+      </div>
+      <div style="flex:1; font-size:9pt; color:rgba(240,237,232,0.4); line-height:1.7;">
+        <strong style="color:rgba(240,237,232,0.7);">Southern Legends</strong> is an independent publication covering NE Alabama — schools, trails, history, and the people who stayed. Every shirt tells a story. Every sticker stakes a claim. Built by <strong style="color:rgba(202,138,4,0.7);">Matt Headley</strong> · Anniston, Alabama.
+      </div>
+    </div>
+  </div>
+
+  <div style="background:rgba(0,0,0,0.3); padding:0.18in 0.55in; display:flex; align-items:center; justify-content:space-between;">
+    <div style="font-size:7.5pt; color:rgba(240,237,232,0.35);">southernlegends.blog &nbsp;·&nbsp; matt@southernlegends.blog &nbsp;·&nbsp; Anniston, Alabama</div>
+    <div style="font-size:7.5pt; color:rgba(202,138,4,0.5); font-family:'Fraunces',Georgia,serif; font-style:italic;">Southern Legends · 2026</div>
+  </div>
+</div>
+
+</body>
+</html>

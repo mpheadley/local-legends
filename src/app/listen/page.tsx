@@ -24,7 +24,7 @@ export default function ListenPage() {
         <div style={{ maxWidth: "580px", margin: "0 auto" }}>
           <p
             style={{
-              fontFamily: "var(--font-accent, 'Rock Salt', cursive)",
+              fontFamily: "var(--font-condensed)",
               fontSize: "0.65rem",
               color: "#CA8A04",
               letterSpacing: "0.1em",

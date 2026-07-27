@@ -70,6 +70,10 @@ export default function MerchPage() {
 
       <div className="relative mx-auto max-w-5xl px-6 pb-24 pt-2">
 
+        <p className="text-xs mb-8 leading-relaxed" style={{ color: 'rgba(240,237,230,0.3)', letterSpacing: '0.03em' }}>
+          Images are design mockups. Actual print colors, placement, and fabric may vary slightly. All items are made to order — no two prints are identical.
+        </p>
+
         <SectionHead label="Shirts" sub="Order online · Ships after Aug 2 · Sizes S–2XL" first />
         <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))' }}>
           {SHIRTS.map(item => <ProductCard key={item.id} item={item} />)}

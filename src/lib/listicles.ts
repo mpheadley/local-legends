@@ -11,6 +11,9 @@ export interface GuideBusiness {
   tel?: string;
   web?: string;
   image?: string;
+  photos?: string[];
+  quote?: string;
+  quoteAttrib?: string;
 }
 
 export interface Listicle {

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 16px; }
+
+  .bumper {
+    width: 960px;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #9A3412, #CA8A04 50%, #1C1917);
+  }
+
+  .topo {
+    position: absolute;
+    inset: 0;
+    background-image: url('/Volumes/Samsung_T5/webdev/southern-legends/topo-7.png');
+    background-repeat: repeat;
+    background-size: 320px;
+    opacity: 0.18;
+  }
+
+  /* huge bg mark — static */
+  .mark-bg {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -52%);
+    opacity: 0.07;
+    pointer-events: none;
+  }
+
+  .vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.5) 100%);
+    pointer-events: none;
+  }
+
+  .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  /* SL mark — arcs in from bottom-right */
+  .mark-wrap {
+    perspective: 800px;
+    opacity: 0;
+    animation: mark-arc 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0s forwards;
+  }
+  @keyframes mark-arc {
+    0%   { opacity: 0;   transform: scale(0.03) rotateX(60deg) rotateY(-45deg) rotateZ(-30deg) translate(80px, 60px); }
+    25%  { opacity: 0.6; }
+    80%  { opacity: 1;   transform: scale(0.98) rotateX(8deg) rotateY(5deg) rotateZ(-1deg) translate(0,0); }
+    100% { opacity: 1;   transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0,0); }
+  }
+  .sl-mark {
+    width: 140px;
+    height: 140px;
+    display: block;
+  }
+
+  /* SOUTHERN LEGENDS — arcs in from left */
+  .wordmark {
+    font-family: 'Georgia', serif;
+    color: #F0EDE6;
+    font-size: 74px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1;
+    opacity: 0;
+    animation: word-arc 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+    text-shadow: 0 4px 60px rgba(0,0,0,0.5);
+  }
+  @keyframes word-arc {
+    0%   { opacity: 0; transform: translate(-80px, 60px) rotateX(40deg) rotateZ(-8deg) scale(0.1) perspective(600px); }
+    60%  { opacity: 1; }
+    100% { opacity: 1; transform: translate(0, 0) rotateX(0deg) rotateZ(0deg) scale(1) perspective(600px); }
+  }
+
+  /* gold rule */
+  .rule {
+    width: 0;
+    height: 1.5px;
+    background: #CA8A04;
+    animation: rule-grow 0.6s ease 0.7s forwards;
+  }
+  @keyframes rule-grow {
+    to { width: 420px; }
+  }
+
+  /* Stories from Northeast Alabama */
+  .sub {
+    font-family: 'Georgia', serif;
+    color: rgba(240,237,230,0.8);
+    font-size: 26px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: sub-arc 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+  }
+  @keyframes sub-arc {
+    0%   { opacity: 0; transform: translate(100px, -40px) rotateX(-30deg) rotateZ(6deg) scale(0.2); }
+    60%  { opacity: 1; }
+    100% { opacity: 1; transform: translate(0, 0) rotateX(0deg) rotateZ(0deg) scale(1); }
+  }
+
+  /* ── Edit Panel ── */
+  #edit-panel {
+    width: 960px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #ccc;
+  }
+  #edit-toggle {
+    cursor: pointer;
+    padding: 8px 14px;
+    background: #222;
+    border-radius: 6px 6px 0 0;
+    user-select: none;
+    color: #CA8A04;
+    letter-spacing: 0.08em;
+  }
+  #edit-body { display: none; padding: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .ep-field { display: flex; flex-direction: column; gap: 4px; }
+  .ep-field label { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; }
+  .ep-field input[type=text], .ep-field input[type=range] { width: 100%; background: #111; border: 1px solid #333; color: #eee; padding: 4px 6px; border-radius: 3px; }
+  .ep-field input[type=color] { width: 100%; height: 30px; border: none; cursor: pointer; background: none; padding: 0; }
+  #ep-apply {
+    grid-column: 1/-1;
+    background: #9A3412;
+    color: #F0EDE6;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  #ep-apply:hover { background: #CA8A04; }
+</style>
+</head>
+<body>
+
+<div class="bumper" id="bumper">
+  <div class="topo" id="ep-topo"></div>
+
+  <!-- large bg mark, very faint -->
+  <svg class="mark-bg" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="48" cy="48" r="44" fill="#F0EDE6"/>
+    <text x="48" y="63" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="40" fill="#1C1917" letter-spacing="-1">SL</text>
+    <line x1="20" y1="70" x2="76" y2="70" stroke="#CA8A04" stroke-width="1.5"/>
+  </svg>
+
+  <div class="vignette"></div>
+
+  <div class="content">
+    <div class="mark-wrap">
+      <img class="sl-mark" src="/Volumes/Samsung_T5/webdev/gather/assets/brand/southern-legends/southern-legends-primary.svg" id="ep-mark" alt="Southern Legends"/>
+    </div>
+    <div class="wordmark" id="ep-wordmark">Southern Legends</div>
+    <div class="rule" id="ep-rule"></div>
+    <div class="sub" id="ep-sub">Stories from Northeast Alabama</div>
+  </div>
+</div>
+
+<!-- Edit Panel -->
+<div id="edit-panel">
+  <div id="edit-toggle" onclick="togglePanel()">&#9881; Edit Bumper</div>
+  <div id="edit-body">
+    <div class="ep-field">
+      <label>Wordmark Text</label>
+      <input type="text" id="in-wordmark" value="Southern Legends">
+    </div>
+    <div class="ep-field">
+      <label>Sub Text</label>
+      <input type="text" id="in-sub" value="Stories from Northeast Alabama">
+    </div>
+    <div class="ep-field">
+      <label>Wordmark Size (px)</label>
+      <input type="range" id="in-wsize" min="40" max="100" value="74">
+    </div>
+    <div class="ep-field">
+      <label>Gradient Start</label>
+      <input type="color" id="in-g1" value="#9A3412">
+    </div>
+    <div class="ep-field">
+      <label>Gradient Mid</label>
+      <input type="color" id="in-g2" value="#CA8A04">
+    </div>
+    <div class="ep-field">
+      <label>Gradient End</label>
+      <input type="color" id="in-g3" value="#1C1917">
+    </div>
+    <div class="ep-field">
+      <label>Wordmark Color</label>
+      <input type="color" id="in-wcolor" value="#F0EDE6">
+    </div>
+    <div class="ep-field">
+      <label>Rule Color</label>
+      <input type="color" id="in-rcolor" value="#CA8A04">
+    </div>
+    <div class="ep-field">
+      <label>Topo Opacity</label>
+      <input type="range" id="in-topo" min="0" max="40" value="18">
+    </div>
+    <button id="ep-apply" onclick="applyEdits()">Apply Changes</button>
+  </div>
+</div>
+
+<script>
+function togglePanel() {
+  const b = document.getElementById('edit-body');
+  b.style.display = b.style.display === 'none' ? 'grid' : 'none';
+}
+
+function applyEdits() {
+  const g1 = document.getElementById('in-g1').value;
+  const g2 = document.getElementById('in-g2').value;
+  const g3 = document.getElementById('in-g3').value;
+  document.getElementById('bumper').style.background =
+    `linear-gradient(to right, ${g1}, ${g2} 50%, ${g3})`;
+
+  document.getElementById('ep-wordmark').textContent =
+    document.getElementById('in-wordmark').value;
+  document.getElementById('ep-wordmark').style.color =
+    document.getElementById('in-wcolor').value;
+  document.getElementById('ep-wordmark').style.fontSize =
+    document.getElementById('in-wsize').value + 'px';
+
+  document.getElementById('ep-sub').textContent =
+    document.getElementById('in-sub').value;
+
+  document.getElementById('ep-rule').style.background =
+    document.getElementById('in-rcolor').value;
+
+  document.getElementById('ep-topo').style.opacity =
+    (parseInt(document.getElementById('in-topo').value) / 100).toFixed(2);
+}
+
+// Live preview on slider/color change
+document.querySelectorAll('#edit-body input').forEach(el => {
+  el.addEventListener('input', applyEdits);
+});
+</script>
+
+</body>
+</html>

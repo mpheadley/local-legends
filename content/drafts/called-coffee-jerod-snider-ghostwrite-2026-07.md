@@ -1,0 +1,52 @@
+# I Was Just Trying to Sell a Bag
+
+**GHOSTWRITE DRAFT — for Matt's hand, not for publish. 2026-07-21.**
+Built on the published spine (`journal/called-coffee-jerod-snider.mdx`) + verified deep research.
+Kill-list clean, no em dashes. Vulnerability passages left in Matt's existing words; new personal parallels flagged, not written.
+
+---
+
+I started getting five-gallon buckets of coffee grounds from Called Coffee for my flower farm.
+
+Not exactly how most customer relationships begin. But that's Jerod.
+
+I first met him in the spring of 2017 at a 5K benefit for international missionaries. He'd just come back from Peru and handed me a free bag of beans he had roasted himself. A few years later I ran into him again at the Anniston downtown farmers market, this time slinging espresso out of a van. Before the brick and mortar, before the big windows on Quintard, he was building something mobile and scrappy and determined.
+
+He'll tell you he didn't build any of it on purpose.
+
+Before the coffee he ran a painting business. As a kid he wanted to be a drummer, and then he became one, and then he changed his mind. He married Hannah in 2011. In 2015 the two of them sold what they had and moved to Huancayo, Peru, with a seven-month-old, to do mission work. That was supposed to be the story. Coffee was an accident that happened on the way to something else.
+
+The coffee starts in the mountains, with a farmer named Gregorio Torre.
+
+A woman in the church down there gave Jerod beans from her father's highland farm. He tasted it and said it was the best coffee he'd ever had, and then he did the thing that tells you who he is. He made a twelve-hour trip into the jungle to find the farm. He handed over six thousand dollars in cash, money given to a stranger on a handshake and a conviction that a supply line between a small Alabama town and a mountain in South America was worth building by hand.
+
+The math on coffee is punishing in a specific way. Gregorio had been selling his beans for about five soles a kilo. Last year Jerod paid him twenty-eight. "I'm super proud of that," he says, and it's the only time in an hour that he sounds like he's bragging, and he's bragging about someone else's pay.
+
+Gregorio's son Eddie once wanted nothing to do with the family business. He runs his own coffee shop now, in Huancayo, pouring his father's beans. That is what a fair relationship grows into.
+
+Back then I was pastoring in Weaver and would come to Anniston looking for a third place. Somewhere between home and work where you could sit with a cup of coffee, get something done, maybe meet somebody. Anniston didn't have many. Jerod is from Weaver too. We were in the same small town before either of us knew what the other was building.
+
+He built the cart in 2018. The truck in 2019. A holiday pop-up at the mall in 2021. Then he took the old Daylight Donuts building on Quintard and gutted it. I'd taken a job at the Methodist church two blocks down, so I watched the whole thing come apart and go back together. In February of 2023 it opened.
+
+I became a regular. The smell hits you first, beans roasting by the sackful, the aroma that means somebody's doing the work right. I brought my buckets. Those coffee ground runs gave us time to talk. He let us set out mason jar arrangements in the shop and used Heather's bud vases on the tables. When things got hard for me personally, he checked in. Kept up with me. Showed up.
+
+I sat by the big window at a small table more times than I can count. Working alone, meeting friends, meeting new ones. One afternoon I watched a man I'd never seen strike up a conversation with a stranger at the next table over croissants and cold brew. By the time I left they were trading business cards. That's what happens when you build a room where people feel like they belong.
+
+He has a podcast now. He calls it Called Coffee, same as the shop, and he sits down with people and asks them what they're called to do. Doctors, teachers, the mayor. He understands the interview from both chairs. The whole thing runs on one plain idea, that everybody is made to do something, and there's always something you can do for somebody else.
+
+He doesn't talk about the shop like he built it. There's no founding narrative, no brand story. When I asked him how he got from a 5K in 2017 to roasting coffee for a whole city, he said the thing I keep turning over.
+
+"I was just trying to sell a bag. Still don't know what's next."
+
+---
+
+*Called Coffee is at 1400 Quintard Avenue in Anniston. Open six to seven weekdays, eight to four on Saturday. If you haven't been, go on a Tuesday morning and sit by the window.*
+
+---
+
+## Editor notes for Matt
+
+- **New from deep research, folded in:** painting business + drummer line (Star Spotlight, his own facts); Hannah married 2011; moved 2015 with 7-month-old; 5→28 soles quote verbatim; Eddie Torre second-generation echo; cart/truck/pop-up/Feb-2023 timeline corrected and verified.
+- **Left for you — vulnerability + parallel:** Jerod ran a painting business before coffee. You painted decks for Preston at your lowest. That's a real rhyme, but it's yours to draw or leave. I did not write it in.
+- **Kill-list note:** your live version uses em dashes throughout; VOICE.md bans them. This draft removes them. If you want to keep your published version as-is, ignore.
+- **Two live files still to reconcile:** the mis-named `called-coffee.mdx` ("Jerod Horsley") is still published. Recommend deleting it.

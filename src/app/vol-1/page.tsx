@@ -188,7 +188,7 @@ export default function Vol1Page() {
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-accent, var(--font-heading))",
+                    fontFamily: "var(--font-heading)",
                     fontSize: "0.75rem",
                     color: "#CA8A04",
                     paddingTop: "0.15rem",

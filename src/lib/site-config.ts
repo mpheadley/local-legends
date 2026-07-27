@@ -5,6 +5,7 @@ export const siteConfig = {
     "Spotlighting the makers, builders, and business owners who define life in Alabama's Appalachian foothills.",
   url: "https://southernlegends.blog",
   author: "Matt Headley",
+  authorRole: "Founding Editor, Southern Legends",
   nav: [
     { label: "Stories", href: "/profiles" },
     { label: "Broken Ground", href: "/essays" },

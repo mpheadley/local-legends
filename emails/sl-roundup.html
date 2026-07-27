@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{subject}}</title>
+<style>
+  body, table, td, p, a { margin: 0; padding: 0; }
+  body { background: #f0ede8; font-family: Georgia, 'Times New Roman', serif; -webkit-text-size-adjust: 100%; }
+  img { border: 0; display: block; }
+  table { border-collapse: collapse; }
+  .wrapper { background: #f0ede8; width: 100%; }
+  .container { max-width: 600px; margin: 0 auto; background: #fff; }
+
+  .header { background: #0a0f0b; padding: 28px 40px 24px; }
+  .header-row { display: flex; justify-content: space-between; align-items: center; }
+  .header-title { color: #f0ede8; font-style: italic; font-size: 22px; font-weight: normal; }
+  .header-date { color: #5a7a5a; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; }
+
+  .roundup-label { background: #C9A227; padding: 6px 40px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #0a0f0b; }
+
+  .intro-pad { padding: 32px 40px 24px; }
+  .intro { font-size: 16px; line-height: 1.7; color: #1a2a1a; }
+
+  .sep { border: none; border-top: 1px solid #e0ddd8; margin: 0 40px 24px; }
+
+  /* Pieces section */
+  .section-head { padding: 0 40px 12px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #7a8a7a; }
+
+  .piece { padding: 0 40px 24px; }
+  .piece-num { font-family: 'Helvetica Neue', Arial, sans-serif; color: #e0ddd8; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+  .piece-title { font-style: italic; font-size: 19px; color: #0a0f0b; margin-bottom: 6px; font-weight: normal; line-height: 1.3; }
+  .piece-excerpt { font-size: 14px; color: #3a4a3a; line-height: 1.6; margin-bottom: 10px; }
+  .piece-link { color: #C9A227; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
+
+  /* Lately section — reading + listening */
+  .lately { padding: 24px 40px; background: #f8f6f2; border-top: 1px solid #e0ddd8; }
+  .lately-head { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #7a8a7a; margin-bottom: 16px; }
+  .lately-col { margin-bottom: 20px; }
+  .lately-col-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #0a0f0b; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; }
+  .lately-item { font-size: 14px; color: #3a4a3a; line-height: 1.6; padding-left: 12px; border-left: 2px solid #C9A227; margin-bottom: 8px; }
+  .lately-item strong { font-style: italic; color: #0a0f0b; }
+  .lately-item .who { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #7a8a7a; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px; }
+
+  .spotify-row { padding: 0 40px 32px; }
+  .spotify-inner { background: #0a0f0b; border-radius: 6px; padding: 16px 20px; }
+  .spotify-name { color: #f0ede8; font-style: italic; font-size: 15px; margin-bottom: 4px; }
+  .spotify-link { color: #C9A227; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
+
+  .footer { background: #0a0f0b; padding: 28px 40px; text-align: center; }
+  .footer-mark { font-style: italic; color: #C9A227; font-size: 16px; margin-bottom: 6px; }
+  .footer-place { color: #5a7a5a; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-links { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #3a5a3a; }
+  .footer-links a { color: #5a7a5a; text-decoration: none; margin: 0 8px; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+<table class="container" width="600" cellpadding="0" cellspacing="0" role="presentation">
+
+  <!-- HEADER -->
+  <tr>
+    <td class="header">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td class="header-title">Southern Legends</td>
+          <td align="right" class="header-date">{{month_year}}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ROUNDUP LABEL -->
+  <tr><td class="roundup-label">Monthly Roundup</td></tr>
+
+  <!-- INTRO -->
+  <tr>
+    <td class="intro-pad">
+      <p class="intro">{{intro}}</p>
+    </td>
+  </tr>
+
+  <!-- PIECES -->
+  <tr><td><hr class="sep"></td></tr>
+  <tr><td class="section-head">Three pieces this month</td></tr>
+
+  <tr>
+    <td class="piece">
+      <div class="piece-num">One</div>
+      <div class="piece-title">{{piece1_title}}</div>
+      <p class="piece-excerpt">{{piece1_excerpt}}</p>
+      <a class="piece-link" href="{{piece1_url}}">Read &rarr;</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="piece" style="border-top: 1px solid #e0ddd8; padding-top: 20px;">
+      <div class="piece-num">Two</div>
+      <div class="piece-title">{{piece2_title}}</div>
+      <p class="piece-excerpt">{{piece2_excerpt}}</p>
+      <a class="piece-link" href="{{piece2_url}}">Read &rarr;</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="piece" style="border-top: 1px solid #e0ddd8; padding-top: 20px;">
+      <div class="piece-num">Three</div>
+      <div class="piece-title">{{piece3_title}}</div>
+      <p class="piece-excerpt">{{piece3_excerpt}}</p>
+      <a class="piece-link" href="{{piece3_url}}">Read &rarr;</a>
+    </td>
+  </tr>
+
+  <!-- LATELY -->
+  <tr>
+    <td class="lately">
+      <div class="lately-head">Lately</div>
+
+      <div class="lately-col">
+        <div class="lately-col-label">Reading</div>
+        <div class="lately-item">
+          <span class="who">{{reading1_author}}</span>
+          <strong>{{reading1_title}}</strong> — {{reading1_note}}
+        </div>
+        <div class="lately-item">
+          <span class="who">{{reading2_author}}</span>
+          <strong>{{reading2_title}}</strong> — {{reading2_note}}
+        </div>
+      </div>
+
+      <div class="lately-col">
+        <div class="lately-col-label">Listening</div>
+        <div class="lately-item">{{listening1}}</div>
+        <div class="lately-item">{{listening2}}</div>
+      </div>
+
+    </td>
+  </tr>
+
+  <!-- SPOTIFY ROUNDUP PLAYLIST -->
+  <tr>
+    <td class="spotify-row">
+      <div class="spotify-inner">
+        <div class="spotify-name">{{playlist_name}}</div>
+        <a class="spotify-link" href="{{spotify_url}}">Listen on Spotify &rarr;</a>
+      </div>
+    </td>
+  </tr>
+
+  <!-- FOOTER -->
+  <tr>
+    <td class="footer">
+      <div class="footer-mark">Southern Legends</div>
+      <div class="footer-place">From Anniston, Alabama</div>
+      <div class="footer-links">
+        <a href="{{site_url}}">southernlegends.blog</a>
+        &middot;
+        <a href="{{unsubscribe_url}}">Unsubscribe</a>
+      </div>
+    </td>
+  </tr>
+
+</table>
+</div>
+</body>
+</html>

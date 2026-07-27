@@ -1,5 +1,5 @@
 /**
- * PullQuote — styled blockquote with Rock Salt font and oversized quote marks.
+ * PullQuote — styled blockquote in IM Fell English italic with oversized quote marks.
  * Used as an MDX component: <PullQuote>quote text</PullQuote>
  * or via markdown blockquote with a special class.
  */

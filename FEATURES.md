@@ -104,6 +104,11 @@
 - Live: southernlegends.blog
 - Email from address updated to noreply@gatherstudio.app (was noreply@plainspokenblueprint.com)
 
+## Sponsorship (2026-07-27)
+- `/sponsor` — sponsor page with tier info and Stripe checkout
+- `/api/sponsorship/checkout` — Stripe inline price_data checkout for sponsorship tiers
+- `SponsoredBadge` component — badge shown on sponsored content
+
 ## /merch (2026-07-26)
 - 6 shirts: PV Raiders XC, Survived Woodstock, Anniston 45yr, SL Run, Raider Road Runners, CLT Trail
 - 4 stickers: SL, Raiders, Woodstock, CLT — $4 each

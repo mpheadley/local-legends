@@ -383,3 +383,11 @@ The full block of Smith's election night remarks at the Anniston City Meeting Ce
 ## Status
 
 CRM: added as high-priority SL candidate. Do not reach out until Lewis profile is published and bandwidth allows. **Outreach approach** (per handoff doc): Jay Jenkins to make the introduction. Warm message referencing the daughter hug.
+
+## 2026 Refresh (added 2026-07-21)
+- **Full-term inauguration:** Nov 3, 2025 (city-wide, distinct from May 6 2025 council appointment).
+- **RMC / Orlando Health:** agreement announced April 7, 2026. Her quote: "After months of intentional work behind the scenes, we are proud to announce the acquisition of Regional Medical Center by Orlando Health." Regulatory approval pending; closes later 2026.
+- **Anniston Army Depot tour:** April 15, 2026.
+- **City Manager Matthew Caballero:** approved 4-1, May 5 2026 (Julie Moss dissent, wanted a professional search). Smith defended: "evaluate his leadership in real time while preserving the option of conducting a broader search later." New council names surfaced: Lewis Downing, Erica Tolson, Joe Harrington (for), Julie Moss (against).
+- **Called Coffee podcast Ep. 5** (early 2026): "her story goes much deeper than her title... roots of her grandfather in Anniston... wading through the political landscape as a young woman... purpose, perseverance, calling." Cross-link candidate. NOTE: promo mentions a grandFATHER in Anniston; JSU says grandMOTHER Gertrude Nettles raised her. Do not overclaim; verify in interview.
+- **Profile draft updated:** content/profiles/drafts/ciara-smith-roston-draft.mdx (opening+closing drafted in Matt's voice, his to finalize; aiWritten still true).
