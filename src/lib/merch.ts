@@ -943,26 +943,92 @@ export const FW_PRODUCTS = {
 
 type FWProduct = (typeof FW_PRODUCTS)[keyof typeof FW_PRODUCTS]
 const PROFILE_MERCH: Record<string, [FWProduct, FWProduct, FWProduct?]> = {
+  // trail / outdoor
   'chief-ladiga-trail': [FW_PRODUCTS.CLT, FW_PRODUCTS.ICM],
+  'otter-creek-farmstead': [FW_PRODUCTS.CLT, FW_PRODUCTS.MC],
+  'michele-hornsby-redbird-willow': [FW_PRODUCTS.CLT, FW_PRODUCTS.SH],
+  // history / civil rights
   'noccalula-falls': [FW_PRODUCTS.CLT, FW_PRODUCTS.MC],
-  'anniston-museums-gardens': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
-  'aquality-farms': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
   'freedom-riders-national-monument': [FW_PRODUCTS.DD, FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
   'interfaith-ministries-calhoun-county': [FW_PRODUCTS.DD, FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  // mental health / formation
+  'dale-clem': [FW_PRODUCTS.SH, FW_PRODUCTS.ICM],
+  'kelly-clem': [FW_PRODUCTS.SH, FW_PRODUCTS.ICM],
+  'dr-patricia-corbin': [FW_PRODUCTS.SH, FW_PRODUCTS.ICM],
+  'dr-renee-baptiste': [FW_PRODUCTS.SH, FW_PRODUCTS.ICM],
+  'ciara-smith-roston': [FW_PRODUCTS.SH, FW_PRODUCTS.ICM],
+  'blair-callaway': [FW_PRODUCTS.SH, FW_PRODUCTS.ICM],
+  'sherill-clontz': [FW_PRODUCTS.SH, FW_PRODUCTS.MC],
+  // Anniston / NE Alabama
+  'anniston-museums-gardens': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'aquality-farms': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
   'lewis-downing': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
   'mom-to-go': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
   'shannon-jenkins': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'karla-eden-main-street-anniston': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'peerless-saloon': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'katelyn-iron-city-bloomery': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'lori-floyd-the-right-place': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'connie-thompson': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'mickey-starling-kiwanis': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'patrick-wigley-wigs-wheels': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'aaron-norris-anniston': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'headley-flower-farm': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'leah-cleghorn-southern-girl-coffee': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'lee-kathryn-evancho-calhoun-journal': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'brian-howell': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'aubrey-fullbright-romarin': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'cathy-simpson-longleaf-bookshop': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'clinton-hubbard': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'eric-traynor': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'gadsden-state-show-band': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'jackson-hodges': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'jeremy-stovall': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'ken-bodiford': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'lucy-vandervoort-morris': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'martha-vandervoort': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'nathan-wight': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'scott-emmalie-whitney': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'teresa-stricklin': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'adlene-kufarimai': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'eli-yanson-jsu': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'james-spann': [FW_PRODUCTS.MC, FW_PRODUCTS.ICM],
+  'matt-mitchell-southern-humorist': [FW_PRODUCTS.ICM, FW_PRODUCTS.MC],
+  // Jacksonville
+  'mark-jones-jacksonville': [FW_PRODUCTS.CLT, FW_PRODUCTS.MC],
 }
 const ESSAY_MERCH: Record<string, FWProduct> = {
+  // mental health / survival
   'the-hospital': FW_PRODUCTS.SH,
   'hope-in-the-wilderness': FW_PRODUCTS.SH,
   'im-not-going-to-disappear': FW_PRODUCTS.SH,
+  'the-same-songs': FW_PRODUCTS.SH,
+  'five-fifteen': FW_PRODUCTS.SH,
+  // bipolar
   'the-same-domain': FW_PRODUCTS.BP,
+  // trail / outdoor
   'chief-ladiga-trail': FW_PRODUCTS.CLT,
+  'the-trail-at-night': FW_PRODUCTS.CLT,
+  // identity / multitudes
   'attempt-73': FW_PRODUCTS.ICM,
   'a-letter-never-sent': FW_PRODUCTS.ICM,
   'my-writing-has-a-new-home': FW_PRODUCTS.ICM,
   'no-shade': FW_PRODUCTS.ICM,
+  'heather': FW_PRODUCTS.ICM,
+  'the-woman-behind-the-flowers': FW_PRODUCTS.ICM,
+  'what-indiana-gave-me': FW_PRODUCTS.ICM,
+  'what-muncie-gave-me': FW_PRODUCTS.ICM,
+  'everything-is-running-under-the-same-shape': FW_PRODUCTS.ICM,
+  // Anniston / NE Alabama
+  'prestons-deck': FW_PRODUCTS.MC,
+  'noble-street-anniston': FW_PRODUCTS.MC,
+  'called-coffee-jerod-snider': FW_PRODUCTS.MC,
+  'camp-lee': FW_PRODUCTS.MC,
+  'anniston-farmers-market': FW_PRODUCTS.MC,
+  'woodstock-race-2016': FW_PRODUCTS.MC,
+  'the-church-ladies': FW_PRODUCTS.MC,
+  // civil rights / history
+  'one-cheer-from-inside-the-machine': FW_PRODUCTS.DD,
 }
 export function getProfileMerch(slug: string) {
   const [primary, secondary, tertiary] = PROFILE_MERCH[slug] ?? [FW_PRODUCTS.MC, FW_PRODUCTS.ICM]

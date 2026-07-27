@@ -19,6 +19,7 @@ export interface ProfileFrontmatter {
   heroAlt: string;
   published: boolean;
   featured?: boolean;
+  featuredOrder?: number;
   titleHtml?: string;
   aiWritten?: boolean;
   listed?: boolean;
@@ -113,7 +114,14 @@ export function getFeaturedProfile(): Profile | null {
 
 /** Returns all profiles with `featured: true`, sorted by date descending. */
 export function getFeaturedProfiles(): Profile[] {
-  return getAllProfiles().filter((p) => p.frontmatter.featured);
+  return getAllProfiles()
+    .filter((p) => p.frontmatter.featured)
+    .sort((a, b) => {
+      const oa = a.frontmatter.featuredOrder ?? 999
+      const ob = b.frontmatter.featuredOrder ?? 999
+      if (oa !== ob) return oa - ob
+      return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+    })
 }
 
 export function getCategories(): string[] {
