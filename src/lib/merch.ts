@@ -533,7 +533,7 @@ export const MERCH: MerchItem[] = [
     tagline: 'Anniston, Alabama — Est. 1872',
     sub: 'Black · Navy · Sage · Mustard · Crimson · Ice Blue',
     price: 29,
-    photo: '/merch/model-city-shirt.webp',
+    photo: '/merch/model-city-mockup-navy.webp',
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
