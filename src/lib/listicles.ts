@@ -16,6 +16,19 @@ export interface GuideBusiness {
   quoteAttrib?: string;
 }
 
+export interface GuideEvent {
+  name: string;
+  date: string;
+  location: string;
+  distances?: string;
+  category?: string;
+  web?: string;
+  image?: string;
+  description: string;
+  vendor?: string;
+  section?: string;
+}
+
 export interface Listicle {
   slug: string;
   title: string;
@@ -27,6 +40,7 @@ export interface Listicle {
   image?: string;
   intro?: string;
   businesses: GuideBusiness[];
+  events?: GuideEvent[];
   itemlist?: string; // JSON-LD ItemList string
   content: string; // legacy MDX body (empty for card-format guides)
 }
@@ -63,6 +77,7 @@ export function getListicle(slug: string): Listicle | null {
     image: data.image as string | undefined,
     intro: data.intro as string | undefined,
     businesses: (data.businesses as GuideBusiness[]) ?? [],
+    events: data.events as GuideEvent[] | undefined,
     itemlist: data.itemlist as string | undefined,
     content: content.replace(/^\s*import .*$/gm, "").trim(),
   };

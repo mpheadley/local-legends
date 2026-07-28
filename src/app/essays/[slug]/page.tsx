@@ -29,6 +29,7 @@ import SubscribeCTA from "@/app/components/SubscribeCTA";
 import { getEssayMerch, getMerchForCity } from "@/lib/merch";
 import ClosingSection from "@/app/components/ClosingSection"
 import SpotifyEmbed from "@/app/components/SpotifyEmbed"
+import AuthorSupport from "@/app/components/AuthorSupport"
 import { getPlaylistId } from "@/lib/spotify-config";
 import Callout from "@/app/components/Callout";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
@@ -452,6 +453,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
         </section>
       )}
 
+      <AuthorSupport />
     </main>
   );
 }

@@ -5,6 +5,36 @@ import { useParams } from "next/navigation"
 import Link from "next/link"
 import { TRAILS, getTrail, difficultyLabel, difficultyColor, surfaceLabel } from "@/lib/trails"
 
+const CLT_ESSAYS = [
+  {
+    slug: "chief-ladiga-trail",
+    title: "Chief Ladiga, 1832",
+    subtitle: "Ladiga's Story & Ours",
+    excerpt: "I used to call it 'la-dee-ga.' I didn't know how else to say it. I also didn't know whose land I was running on.",
+    image: "/images/journal/chief-ladiga-trail-snow-2017.webp",
+  },
+  {
+    slug: "the-trail-at-night",
+    title: "The Trail at Night",
+    subtitle: "Broken Ground",
+    excerpt: "For months I walked the Ladiga Trail at one and two in the morning, talking to an AI, losing the farm right beside it.",
+    image: "/images/journal/the-trail-at-night.webp",
+  },
+]
+
+const CLT_MERCH = [
+  { id: "clt-trail-hat", name: "Chief Ladiga Trail Hat", price: 32, note: "Navy trucker, white embroidery" },
+  { id: "clt-la-dee-ga", name: '"La-dee-ga" Tee', price: 28, note: "Heather gray · Sm–2XL" },
+  { id: "clt-trail-sticker", name: "CLT Trail Sticker", price: 5, note: "Waterproof · 3-inch die cut" },
+]
+
+const CLT_BACKER_TIERS = [
+  { label: "Trail Friend", amount: 10, perks: "Name in the annual trail report" },
+  { label: "Trailhead Sponsor", amount: 25, perks: "Name in report + digital trail map" },
+  { label: "Founding Backer", amount: 100, perks: "Name on trail signage + all above" },
+  { label: "Bicentennial Patron", amount: 500, perks: "Named in the 2032 reckoning project + all above" },
+]
+
 type Review = {
   id: string
   name: string
@@ -57,6 +87,10 @@ export default function TrailPage() {
   const [submitted, setSubmitted] = useState(false)
   const [supportAmount, setSupportAmount] = useState(25)
   const [news, setNews] = useState<Array<{title:string;url:string;source:string;date?:string}>>([])
+  const [backerEmail, setBackerEmail] = useState("")
+  const [backerTier, setBackerTier] = useState(25)
+  const [backerSubmitting, setBackerSubmitting] = useState(false)
+  const [backerDone, setBackerDone] = useState(false)
 
 
 
@@ -111,6 +145,29 @@ export default function TrailPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ trail_slug: slug, trail_name: trail.name, amount: supportAmount }),
+    })
+    const { url } = await res.json()
+    if (url) window.location.href = url
+  }
+
+  const handleBacker = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!backerEmail) return
+    setBackerSubmitting(true)
+    await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: backerEmail, source: `clt-backer-${backerTier}`, tags: ["clt-backer"] }),
+    })
+    setBackerSubmitting(false)
+    setBackerDone(true)
+  }
+
+  const handleMerchSupport = async (amount: number, name: string) => {
+    const res = await fetch("/api/trails/support", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ trail_slug: "chief-ladiga-trail", trail_name: "Chief Ladiga Trail — " + name, amount }),
     })
     const { url } = await res.json()
     if (url) window.location.href = url
@@ -221,6 +278,155 @@ export default function TrailPage() {
             >
               Support CLT — ${supportAmount}
             </button>
+          </section>
+        )}
+
+        {/* CLT Founding Backer — Kickstarter-style */}
+        {trail.slug === "chief-ladiga-trail" && (
+          <section style={{ background: "#0A1F12", border: "1px solid #2D4A30", borderRadius: "8px", padding: "2rem", marginBottom: "3rem" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#4ADE80", marginBottom: "0.5rem" }}>Founding Backer — 2026</p>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#FAFAF7", fontWeight: 400, marginBottom: "0.75rem" }}>Be part of the reckoning.</h2>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", color: "rgba(250,250,247,0.7)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+              In 2032, the Chief Ladiga Trail turns 200 years from the treaty that removed Ladiga's people. I{"'"}m writing the book. The trail deserves backers who know its name. Choose a tier — your donation goes to CLT (85%) and the research project (15%).
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "0.75rem", marginBottom: "1.5rem" }}>
+              {CLT_BACKER_TIERS.map(tier => (
+                <button
+                  key={tier.amount}
+                  onClick={() => setBackerTier(tier.amount)}
+                  style={{
+                    background: backerTier === tier.amount ? "#16A34A" : "rgba(255,255,255,0.05)",
+                    border: `1px solid ${backerTier === tier.amount ? "#16A34A" : "rgba(255,255,255,0.15)"}`,
+                    borderRadius: "6px",
+                    padding: "1rem",
+                    cursor: "pointer",
+                    textAlign: "left",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", fontWeight: 700, color: "#FAFAF7", margin: "0 0 0.25rem" }}>{tier.label}</p>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: backerTier === tier.amount ? "#BBF7D0" : "#CA8A04", fontWeight: 700, margin: "0 0 0.4rem" }}>${tier.amount}</p>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "rgba(250,250,247,0.6)", margin: 0 }}>{tier.perks}</p>
+                </button>
+              ))}
+            </div>
+            {!backerDone ? (
+              <form onSubmit={handleBacker} style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                <input
+                  type="email"
+                  required
+                  value={backerEmail}
+                  onChange={e => setBackerEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  style={{ flex: 1, minWidth: "200px", fontFamily: "var(--font-body)", fontSize: "0.9rem", padding: "0.75rem 1rem", borderRadius: "4px", border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.07)", color: "#FAFAF7", outline: "none" }}
+                />
+                <button
+                  type="submit"
+                  disabled={backerSubmitting}
+                  onClick={async (e) => {
+                    e.preventDefault()
+                    if (!backerEmail) return
+                    setBackerSubmitting(true)
+                    await fetch("/api/subscribe", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ email: backerEmail, source: `clt-backer-${backerTier}`, tags: ["clt-backer"] }),
+                    })
+                    const res = await fetch("/api/trails/support", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ trail_slug: "chief-ladiga-trail", trail_name: `CLT Founding Backer — ${CLT_BACKER_TIERS.find(t=>t.amount===backerTier)?.label}`, amount: backerTier }),
+                    })
+                    const { url } = await res.json()
+                    setBackerSubmitting(false)
+                    if (url) window.location.href = url
+                    else setBackerDone(true)
+                  }}
+                  style={{ background: "#16A34A", color: "#FAFAF7", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: "0.9rem", padding: "0.75rem 1.5rem", border: "none", cursor: "pointer", borderRadius: "4px", whiteSpace: "nowrap", opacity: backerSubmitting ? 0.6 : 1 }}
+                >
+                  {backerSubmitting ? "Processing…" : `Back at $${backerTier} →`}
+                </button>
+              </form>
+            ) : (
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", color: "#4ADE80" }}>✓ You{"'"}re in. Watch your inbox.</p>
+            )}
+          </section>
+        )}
+
+        {/* CLT From the Journal */}
+        {trail.slug === "chief-ladiga-trail" && (
+          <section style={{ marginBottom: "3rem" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9A3412", marginBottom: "1rem" }}>From the Journal</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1rem" }}>
+              {CLT_ESSAYS.map(essay => (
+                <Link key={essay.slug} href={`/essays/${essay.slug}`} style={{ display: "block", textDecoration: "none", background: "#FFFFFF", border: "1px solid var(--color-ll-border)", borderRadius: "6px", overflow: "hidden" }}>
+                  <div style={{ height: "160px", backgroundImage: `url(${essay.image})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+                  <div style={{ padding: "1.25rem" }}>
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9A3412", marginBottom: "0.4rem" }}>{essay.subtitle}</p>
+                    <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#1C1917", marginBottom: "0.5rem" }}>{essay.title}</p>
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "#6B6560", lineHeight: 1.6, margin: 0 }}>{essay.excerpt}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* CLT Merch */}
+        {trail.slug === "chief-ladiga-trail" && (
+          <section style={{ marginBottom: "3rem" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1rem" }}>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9A3412" }}>Trail Gear</p>
+              <Link href="/merch" style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "#9A3412", textDecoration: "none" }}>All merch →</Link>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "0.75rem" }}>
+              {CLT_MERCH.map(item => (
+                <div key={item.id} style={{ background: "#FFFFFF", border: "1px solid var(--color-ll-border)", borderRadius: "6px", padding: "1.25rem" }}>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", fontWeight: 600, color: "#1C1917", marginBottom: "0.25rem" }}>{item.name}</p>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9B8B7A", marginBottom: "0.75rem" }}>{item.note}</p>
+                  <button
+                    onClick={() => handleMerchSupport(item.price, item.name)}
+                    style={{ width: "100%", background: "#9A3412", color: "#FAFAF7", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: "0.8rem", padding: "0.5rem", border: "none", cursor: "pointer", borderRadius: "3px" }}
+                  >
+                    ${item.price} — Order
+                  </button>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9B8B7A", marginTop: "0.75rem" }}>Orders fulfilled via Southern Legends. Printed on demand, ships direct.</p>
+          </section>
+        )}
+
+        {/* CLT Products — Chapbook + SaaS */}
+        {trail.slug === "chief-ladiga-trail" && (
+          <section style={{ background: "#F5F0E8", borderRadius: "8px", padding: "1.75rem", marginBottom: "3rem" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9A3412", marginBottom: "1rem" }}>Products</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "1rem" }}>
+              {/* Chapbook */}
+              <div style={{ background: "#FFFFFF", border: "1px solid var(--color-ll-border)", borderRadius: "6px", padding: "1.5rem" }}>
+                <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#CA8A04", marginBottom: "0.4rem" }}>Digital Chapbook</p>
+                <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#1C1917", marginBottom: "0.5rem" }}>La-dee-ga: Three Essays</p>
+                <p style={{ fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "#6B6560", lineHeight: 1.6, marginBottom: "1rem" }}>Chief Ladiga, 1832 + The Trail at Night + a new introduction. The seed of the 2030 book. $4.99 PDF — instant delivery.</p>
+                <button
+                  onClick={() => handleMerchSupport(4.99, "La-dee-ga Chapbook")}
+                  style={{ width: "100%", background: "#CA8A04", color: "#1C1917", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: "0.875rem", padding: "0.625rem", border: "none", cursor: "pointer", borderRadius: "3px" }}
+                >
+                  Get the Chapbook — $4.99
+                </button>
+              </div>
+              {/* SaaS */}
+              <div style={{ background: "#FFFFFF", border: "1px solid var(--color-ll-border)", borderRadius: "6px", padding: "1.5rem" }}>
+                <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#3D6B4F", marginBottom: "0.4rem" }}>Coming — Trail Tools</p>
+                <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#1C1917", marginBottom: "0.5rem" }}>CLT Conditions Reporter</p>
+                <p style={{ fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "#6B6560", lineHeight: 1.6, marginBottom: "1rem" }}>Real-time trail conditions, volunteer coordination, and event calendar — embeddable on chiefladiga.com. Built for trail orgs.</p>
+                <a
+                  href="mailto:matt@gatherstudio.app?subject=CLT Trail Tools — Interest"
+                  style={{ display: "block", width: "100%", background: "transparent", color: "#3D6B4F", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: "0.875rem", padding: "0.6rem", border: "1px solid #3D6B4F", borderRadius: "3px", textAlign: "center", textDecoration: "none", boxSizing: "border-box" }}
+                >
+                  Notify me when it{"'"}s ready
+                </a>
+              </div>
+            </div>
           </section>
         )}
 

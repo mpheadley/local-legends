@@ -2,8 +2,8 @@ import { localBusinesses } from "@/lib/city-businesses"
 
 // Inline map — mirrors CATEGORY_AD_MAP in gather/packages/brand/house-ads.ts
 const CATEGORY_AD_MAP: Record<string, { text: string; cta: string; url: string; label: string }> = {
-  "Church":        { label: "SermonCoach", text: "Better sermons every week. AI that actually knows the pulpit.", cta: "Try SermonCoach", url: "https://sermoncoach.app" },
-  "Ministry":      { label: "SermonCoach", text: "Better sermons every week. AI that actually knows the pulpit.", cta: "Try SermonCoach", url: "https://sermoncoach.app" },
+  "Church":        { label: "Attune", text: "Daily contemplative practice for pastors. Examen, centering prayer, Lectio Divina.", cta: "Try Attune", url: "https://attuneprayer.app" },
+  "Ministry":      { label: "Attune", text: "Daily contemplative practice for pastors. Examen, centering prayer, Lectio Divina.", cta: "Try Attune", url: "https://attuneprayer.app" },
   "Wedding Venue": { label: "The Aisle",   text: "NE Alabama's bridal show is October 18. Your booth is still open.", cta: "Reserve a booth", url: "https://theaisle.app/vendor" },
   "Wedding":       { label: "The Aisle",   text: "NE Alabama's bridal show is October 18. Your booth is still open.", cta: "Reserve a booth", url: "https://theaisle.app/vendor" },
   "Florist":       { label: "Petal Studio", text: "Built for florists who are tired of guessing their recipes.", cta: "Try Petal Studio", url: "https://petalstudio.app" },

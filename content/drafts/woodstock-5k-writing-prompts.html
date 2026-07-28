@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woodstock 5K — Writing Prompts</title>
+<style>
+  :root{
+    --bg:#12100c; --panel:#1c1913; --ink:#f2ede3; --muted:#b3a892;
+    --accent:#e4c53f; /* canary */ --line:#332e24;
+    --font:18px; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+       font-size:var(--font);line-height:1.55;padding:0 0 120px}
+  header{position:sticky;top:0;z-index:10;background:rgba(18,16,12,.94);
+         backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:18px 26px}
+  h1{margin:0;font-size:1.55em;letter-spacing:.3px}
+  h1 .canary{color:var(--accent)}
+  .sub{color:var(--muted);font-size:.8em;margin-top:4px}
+  main{max-width:820px;margin:0 auto;padding:30px 26px}
+  .card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);
+        border-radius:10px;padding:20px 22px;margin:0 0 22px}
+  .tag{display:inline-block;font-family:system-ui,sans-serif;font-size:.62em;letter-spacing:1.4px;
+       text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .card h2{margin:.1em 0 .5em;font-size:1.18em}
+  .prompt{color:var(--muted);font-style:italic;margin:0 0 14px}
+  .write{background:#0d0b08;border:1px dashed #46402f;border-radius:8px;
+         padding:14px 16px;min-height:90px;outline:none;color:var(--ink);font-size:1em}
+  .write:focus{border-color:var(--accent)}
+  .write:empty:before{content:attr(data-ph);color:#5c5646;font-style:italic}
+  ul{color:var(--muted);margin:.2em 0 0;padding-left:1.1em}
+  li{margin:.3em 0}
+  /* controls */
+  .controls{position:fixed;bottom:0;left:0;right:0;background:#0d0b08;border-top:1px solid var(--line);
+            display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:12px 24px;
+            font-family:system-ui,sans-serif;font-size:13px;color:var(--muted)}
+  .controls label{display:flex;gap:7px;align-items:center}
+  button{background:var(--accent);color:#12100c;border:0;border-radius:6px;padding:8px 14px;
+         font-weight:600;cursor:pointer;font-family:system-ui,sans-serif}
+  button.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}
+  input[type=range]{accent-color:var(--accent)}
+  input[type=color]{width:34px;height:24px;border:0;background:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>Woodstock 5K <span class="canary">&#9679;</span> Writing Prompts</h1>
+  <div class="sub">Forty-Five Summers &middot; SL profile &middot; you write the openings, the ending, the &ldquo;I&rdquo;</div>
+</header>
+
+<main>
+  <div class="card">
+    <span class="tag">Opening &mdash; you write</span>
+    <h2>Put us on Woodstock Avenue before the gun</h2>
+    <p class="prompt">The heat already coming up off the pavement at 7 a.m. A thousand people who chose to be awake for this. One scene, no summary. Don&rsquo;t tell us it&rsquo;s old yet &mdash; show us the morning. If you&rsquo;ve run it, start there, first person.</p>
+    <div class="write" contenteditable="true" data-ph="Start here&hellip;"></div>
+  </div>
+
+  <div class="card">
+    <span class="tag">Middle &mdash; the real subject</span>
+    <h2>What it has outlasted</h2>
+    <p class="prompt">45 years in a town that lost its mills and its Army post. The race kept going. Report what closed around it. The universal question underneath: what keeps a thing going when the town around it kept losing things? Asked by someone who built something and couldn&rsquo;t keep it.</p>
+    <div class="write" contenteditable="true" data-ph="Write into it&hellip;"></div>
+  </div>
+
+  <div class="card">
+    <span class="tag">Reporting gaps &mdash; go find these</span>
+    <h2>The people</h2>
+    <ul>
+      <li>Who runs the Anniston Runners Club now? Who&rsquo;s set the cones the longest?</li>
+      <li>The oldest runner &mdash; the one who&rsquo;s run 30+ of these. What do they look like crossing the line?</li>
+      <li>Why the Arc of Calhoun &amp; Cleburne? Who chose that beneficiary &mdash; any runner or family with a stake?</li>
+      <li>First sensory hit: what does the start line look/sound/smell like at 7:25 a.m.?</li>
+    </ul>
+    <div class="write" contenteditable="true" data-ph="Notes from reporting&hellip;"></div>
+  </div>
+
+  <div class="card">
+    <span class="tag">Merch &mdash; the canary</span>
+    <h2>Work the bird in</h2>
+    <p class="prompt">45th-year mark is a canary &mdash; bright, small, stubborn, a bird that sings underground. On the shirt with the race name and year. The merch is a fundraiser, licensed through the club, cut back to the Arc. One clean line somewhere, not a sales pitch.</p>
+    <div class="write" contenteditable="true" data-ph="One line on the canary&hellip;"></div>
+  </div>
+
+  <div class="card">
+    <span class="tag">Ending &mdash; you write</span>
+    <h2>End on an image or a fact, not a lesson</h2>
+    <p class="prompt">The last runner across the line, volunteers already stacking cones. Or a kid in the Kidstock 1K. You lost a thing you built &mdash; sit with what it means to watch a town keep one going. Report it. Trust the reader.</p>
+    <div class="write" contenteditable="true" data-ph="End here&hellip;"></div>
+  </div>
+</main>
+
+<div class="controls">
+  <label>Text <input type="range" min="15" max="26" value="18" oninput="document.documentElement.style.setProperty('--font',this.value+'px')"></label>
+  <label>Ink <input type="color" value="#f2ede3" oninput="document.documentElement.style.setProperty('--ink',this.value)"></label>
+  <label>Accent <input type="color" value="#e4c53f" oninput="document.documentElement.style.setProperty('--accent',this.value)"></label>
+  <label>BG <input type="color" value="#12100c" oninput="document.documentElement.style.setProperty('--bg',this.value)"></label>
+  <button onclick="localStorage.setItem('woodstock-prompts',document.querySelector('main').innerHTML);this.textContent='Saved'">Save draft</button>
+  <button class="ghost" onclick="var w=document.querySelectorAll('.write');var t='';document.querySelectorAll('.card').forEach(c=>{t+=c.querySelector('h2').innerText+'\n\n'+(c.querySelector('.write').innerText||'')+'\n\n---\n\n'});navigator.clipboard.writeText(t);this.textContent='Copied'">Copy text</button>
+</div>
+
+<script>
+  var saved=localStorage.getItem('woodstock-prompts');
+  if(saved)document.querySelector('main').innerHTML=saved;
+</script>
+</body>
+</html>

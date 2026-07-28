@@ -24,6 +24,7 @@ export default function Nav() {
 
   const navLinks = [
     { label: "Stories", href: "/profiles" },
+    { label: "Map", href: "/map" },
     { label: "Places", href: "/places" },
     { label: "Essays", href: "/essays" },
     { label: "Books", href: "/books" },

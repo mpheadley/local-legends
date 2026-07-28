@@ -27,6 +27,9 @@ const nextConfig: NextConfig = {
   },
   images: {
     imageSizes: [16, 32, 48, 64, 96, 128, 160, 256, 384],
+    remotePatterns: [
+      { protocol: "https", hostname: "upload.wikimedia.org" },
+    ],
   },
   async redirects() {
     return [

@@ -22,6 +22,18 @@ export default function FreedomRidersMerchPage() {
   return (
     <main id="main-content" style={{ background: '#0d0b09', color: '#f0ede8', minHeight: '100vh' }}>
 
+      {/* ─── Print Package Download ─── */}
+      <div style={{ background: '#1a0f08', borderBottom: '1px solid rgba(154,52,18,0.25)', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
+        <span style={{ fontSize: '0.75rem', color: 'rgba(240,237,232,0.45)', letterSpacing: '0.05em' }}>PRINT FILES · Freedom Riders Collection</span>
+        <a
+          href="/merch/freedom-riders/freedom-riders-print-package.zip"
+          download
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: '#9A3412', color: '#f0ede8', fontWeight: 700, fontSize: '0.8rem', padding: '0.5rem 1.25rem', borderRadius: '6px', textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase' }}
+        >
+          ↓ Download Print Package
+        </a>
+      </div>
+
       {/* ─── Hero ─── */}
       <section style={{ position: 'relative', minHeight: '80vh', display: 'flex', alignItems: 'flex-end' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
@@ -91,7 +103,7 @@ export default function FreedomRidersMerchPage() {
           {/* Black shirt — live */}
           <ShirtCard
             href="/buy/freedom-riders-shirt"
-            image="/merch/freedom-riders/bus-woodcut-inverted.png"
+            image="/merch/freedom-riders/shirt-mockup-dark.webp"
             bg="#111"
             label="Bus Woodcut — Black"
             sub="White on black · Front print · S–2XL"
@@ -118,7 +130,7 @@ export default function FreedomRidersMerchPage() {
           {/* David Dennis */}
           <ShirtCard
             href="/merch"
-            image="/merch/freedom-riders/dennis-hedcut-canonical.png"
+            image="/merch/freedom-riders/dennis-shirt-mockup.webp"
             bg="#0d0b09"
             label="David Dennis — Freedom Rider"
             sub="Portrait shirt · Hedcut illustration"

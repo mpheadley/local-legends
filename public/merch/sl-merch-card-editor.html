@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SL Merch Card Editor</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1A0808; color: #f0ede8; font-family: 'DM Sans', Georgia, sans-serif; min-height: 100vh; }
+
+  header { padding: 20px 32px; border-bottom: 2px solid #8B1A1A; display: flex; align-items: center; gap: 16px; }
+  header h1 { font-size: 22px; font-weight: 700; color: #f0ede8; letter-spacing: 0.04em; }
+  header span { font-size: 13px; color: #8B1A1A; background: rgba(139,26,26,0.15); padding: 3px 10px; border-radius: 4px; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; padding: 32px; max-width: 1600px; margin: 0 auto; }
+
+  .card-block { background: #120404; border-radius: 12px; overflow: hidden; border: 1px solid rgba(139,26,26,0.3); }
+  .card-block h2 { padding: 14px 20px; font-size: 14px; font-weight: 600; color: #8B1A1A; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid rgba(139,26,26,0.2); }
+
+  .card-preview { position: relative; cursor: pointer; }
+  .card-preview img { width: 100%; display: block; border-radius: 0; }
+  .card-preview .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background 0.2s; display: flex; align-items: center; justify-content: center; opacity: 0; font-size: 14px; color: white; font-weight: 600; letter-spacing: 0.05em; }
+  .card-preview:hover .overlay { background: rgba(0,0,0,0.4); opacity: 1; }
+
+  .controls { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field label { font-size: 11px; color: #8B1A1A; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+  .field textarea { background: #1A0808; border: 1px solid rgba(139,26,26,0.4); border-radius: 6px; color: #f0ede8; font-size: 14px; padding: 10px 12px; resize: vertical; min-height: 60px; line-height: 1.5; }
+  .field textarea:focus { outline: none; border-color: #8B1A1A; }
+  .field input[type="text"] { background: #1A0808; border: 1px solid rgba(139,26,26,0.4); border-radius: 6px; color: #f0ede8; font-size: 14px; padding: 8px 12px; }
+  .field input[type="text"]:focus { outline: none; border-color: #8B1A1A; }
+  .field input[type="color"] { width: 100%; height: 36px; border: 1px solid rgba(139,26,26,0.4); border-radius: 6px; background: #1A0808; cursor: pointer; padding: 2px 4px; }
+  .field input[type="range"] { width: 100%; accent-color: #8B1A1A; }
+
+  .photo-row { display: flex; align-items: center; gap: 10px; }
+  .photo-row input[type="text"] { flex: 1; }
+  .photo-row button { background: #8B1A1A; color: #f0ede8; border: none; border-radius: 6px; padding: 8px 14px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+  .photo-row button:hover { background: #a82020; }
+
+  .btn-row { display: flex; gap: 10px; margin-top: 4px; }
+  .btn-row button { flex: 1; padding: 10px; border-radius: 6px; border: none; font-size: 13px; font-weight: 600; cursor: pointer; letter-spacing: 0.04em; }
+  .btn-dl { background: #8B1A1A; color: #f0ede8; }
+  .btn-dl:hover { background: #a82020; }
+  .btn-copy { background: rgba(139,26,26,0.2); color: #8B1A1A; border: 1px solid rgba(139,26,26,0.4) !important; }
+  .btn-copy:hover { background: rgba(139,26,26,0.3); }
+
+  .color-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  footer { padding: 24px 32px; border-top: 1px solid rgba(139,26,26,0.2); text-align: center; font-size: 12px; color: rgba(240,237,232,0.4); }
+  footer a { color: #8B1A1A; text-decoration: none; }
+
+  .badge { display: inline-block; background: rgba(139,26,26,0.2); color: #8B1A1A; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-left: 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>SL Merch Cards</h1>
+  <span>4 cards · southernlegends.blog/merch</span>
+  <span style="margin-left:auto;color:#f0ede8;opacity:0.5;font-size:12px;">Edit any field — cards update live</span>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+  Built by <a href="https://gatherstudio.app">Gather Studio by Matt Headley</a> · Southern Legends Merch · 2026
+</footer>
+
+<script>
+const CARDS = [
+  {
+    id: "lickskillet",
+    title: "Card 1 — Lickskillet / Oxford",
+    file: "sl-merch-card-1-lickskillet.png",
+    accent: "#8B1A1A",
+    bg: "#1A0808",
+    headline: "These places had names before they had highways. We just kept them.",
+    url: "southernlegends.blog/merch",
+    photo: "lick-oxford-alabama-badge.png",
+    event: "Woodstock 5K · Aug 2"
+  },
+  {
+    id: "cheaha",
+    title: "Card 2 — Cheaha",
+    file: "sl-merch-card-2-cheaha.png",
+    accent: "#1B3A1B",
+    bg: "#0A1A0A",
+    headline: "The only merch that knows Lickskillet is a place, not a punchline.",
+    url: "southernlegends.blog/merch",
+    photo: "cheaha-lasting-sanctuary-nobg.png",
+    event: "Coldwater Booth · Oct 31"
+  },
+  {
+    id: "blossom",
+    title: "Card 3 — Blossom Gothic",
+    file: "sl-merch-card-3-blossom.png",
+    accent: "#3A1A4A",
+    bg: "#120A1A",
+    headline: "Made for the people who stayed — and the ones who can't stop thinking about it.",
+    url: "southernlegends.blog/merch",
+    photo: "blossom-gothic-nobg.png",
+    event: "Evergreen / General"
+  },
+  {
+    id: "woodstock",
+    title: "Card 4 — Woodstock 5K",
+    file: "sl-merch-card-4-woodstock.png",
+    accent: "#2D5A1B",
+    bg: "#0A120A",
+    headline: "Survived Woodstock 5K. Still running.",
+    url: "southernlegends.blog/merch",
+    photo: "survived-woodstock.webp",
+    event: "Woodstock 5K · Aug 2 ⚡"
+  }
+];
+
+const grid = document.getElementById("grid");
+
+CARDS.forEach((card, i) => {
+  const block = document.createElement("div");
+  block.className = "card-block";
+  block.innerHTML = `
+    <h2>${card.title} <span class="badge">${card.event}</span></h2>
+    <div class="card-preview" onclick="window.open('${card.file}','_blank')">
+      <img id="img-${card.id}" src="${card.file}?t=${Date.now()}" alt="${card.title}">
+      <div class="overlay">Open full size ↗</div>
+    </div>
+    <div class="controls">
+      <div class="field">
+        <label>Headline</label>
+        <textarea id="txt-${card.id}" rows="3">${card.headline}</textarea>
+      </div>
+      <div class="field">
+        <label>URL text</label>
+        <input type="text" id="url-${card.id}" value="${card.url}">
+      </div>
+      <div class="field">
+        <label>Photo file</label>
+        <div class="photo-row">
+          <input type="text" id="photo-${card.id}" value="${card.photo}">
+          <button onclick="swapPhoto('${card.id}')">Swap</button>
+        </div>
+      </div>
+      <div class="color-row">
+        <div class="field">
+          <label>Accent color</label>
+          <input type="color" id="accent-${card.id}" value="${card.accent}">
+        </div>
+        <div class="field">
+          <label>BG color</label>
+          <input type="color" id="bg-${card.id}" value="${card.bg}">
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn-copy" onclick="copyCaption('${card.id}')">Copy Caption</button>
+        <button class="btn-dl" onclick="downloadCard('${card.id}')">Download PNG</button>
+      </div>
+    </div>
+  `;
+  grid.appendChild(block);
+});
+
+const CAPTIONS = {
+  lickskillet: `These places had names before they had highways. We just kept them. 🏔️\n\nShirts, stickers, and merch for the people who actually know Lickskillet, Ohatchee, and the way Cheaha looks on a clear morning.\n\nsouthernlegends.blog/merch`,
+  cheaha: `The only NE Alabama merch that knows Lickskillet is a place, not a punchline. 🌲\n\nBuilt for the people who stayed — and the ones who left and can't stop thinking about home.\n\nsouthernlegends.blog/merch`,
+  blossom: `Made for the people who stayed in NE Alabama — and the ones who can't stop thinking about it. 🌸\n\nEvery design tells a story. Because these places deserve more than a generic state outline shirt.\n\nsouthernlegends.blog/merch`,
+  woodstock: `Survived Woodstock 5K. Still running. 🏃‍♂️\n\nPickup a shirt at our booth August 2nd — or grab one online.\n\nsouthernlegends.blog/merch`
+};
+
+function copyCaption(id) {
+  const cap = CAPTIONS[id] || "";
+  navigator.clipboard.writeText(cap).then(() => {
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => btn.textContent = orig, 1500);
+  });
+}
+
+function downloadCard(id) {
+  const img = document.getElementById(`img-${id}`);
+  const link = document.createElement("a");
+  link.href = img.src;
+  link.download = `sl-merch-card-${id}.png`;
+  link.click();
+}
+
+function swapPhoto(id) {
+  alert(`To swap photo for card ${id}:\n\nUpdate the photo path in the field above, then regenerate the PNG using the Python script at:\n/Volumes/Samsung_T5/webdev/southern-legends/public/merch/\n\nOr drop a new image into the merch folder and update the filename.`);
+}
+</script>
+
+</body>
+</html>

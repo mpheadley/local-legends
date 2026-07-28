@@ -122,7 +122,11 @@ export default function ColophonPage() {
               <a href="/about" className="text-ll-primary hover:underline">
                 Matt Headley
               </a>
-              {" "}— Pastor of Ecclesia Community, flower farmer, and editor of Southern Legends. He lives with his family in Pleasant Valley, Alabama.
+              {" "}— Pastor of Ecclesia Community, a fresh expression of Christian community, flower farmer in Northeast Alabama, and author of{" "}
+              <a href="/author" className="text-ll-primary hover:underline">Tend: Before the Wedding</a>{" "}
+              and{" "}
+              <a href="/author" className="text-ll-primary hover:underline">God & the Algorithm</a>.{" "}
+              He is the founder and editor of Southern Legends.
             </p>
           </footer>
 

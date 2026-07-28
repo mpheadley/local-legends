@@ -36,7 +36,15 @@ export default function ClosingSection({ shareUrl, title, excerpt, primary, seco
             <Link href="/about" className="profile-closing-name">
               Matt Headley
             </Link>
-            {" "}is a former pastor and flower farmer from Northeast Alabama. He is the founder and editor of Southern Legends, the founder of{" "}
+            {" "}is pastor of Ecclesia Community, a fresh expression of Christian community, a flower farmer in Northeast Alabama, and the author of{" "}
+            <Link href="/author" className="profile-closing-link">
+              Tend: Before the Wedding
+            </Link>
+            {" "}and{" "}
+            <Link href="/author" className="profile-closing-link">
+              God & the Algorithm
+            </Link>
+            . He is the founder and editor of Southern Legends, the founder of{" "}
             <a href="https://plainspokenblueprint.com" target="_blank" rel="noopener noreferrer" className="profile-closing-link">
               Gather Studio
             </a>

@@ -136,3 +136,13 @@
 - `/admin/trail-reviews` — approve/reject/delete reviews, PIN-gated
 - `/api/admin/trail-reviews` — GET/PATCH/DELETE for review moderation
 - Stripe webhook updated: logs trail_support donations to Supabase on checkout.session.completed
+
+## 2026-07-28 — CLT Trail Page Full Build
+- CLT founding backer section (Kickstarter-style, 4 tiers $10/$25/$100/$500)
+  - Backer email capture → /api/subscribe + Stripe checkout in one click
+- "From the Journal" section (chief-ladiga-trail + the-trail-at-night essays)
+- Trail gear / merch section (hat $32, la-dee-ga tee $28, sticker $5) → trails/support Stripe
+- Products section:
+  - La-dee-ga Chapbook $4.99 (3 essays, instant PDF)
+  - CLT Conditions Reporter (trail SaaS, notify-me email capture for interest list)
+- All CLT sections gate on `trail.slug === "chief-ladiga-trail"` — safe for other trails

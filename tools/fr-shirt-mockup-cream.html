@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Freedom Riders — Cream Shirt</title>
+<style>
+@font-face {
+  font-family: 'IMFell';
+  src: url('../merch/fonts/IMFellEnglish-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'IMFell';
+  src: url('../merch/fonts/IMFellEnglish-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0e0c0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.shirt-wrap {
+  position: relative;
+  width: 700px;
+  height: 780px;
+}
+
+.shirt-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.shirt-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 195px;
+}
+
+.woodcut {
+  width: 340px;
+}
+
+.shirt-text {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.shirt-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2a1a0a;
+}
+
+.rule {
+  width: 120px;
+  height: 1px;
+  background: rgba(42,26,10,0.35);
+  margin: 10px auto 10px;
+}
+
+.shirt-date {
+  font-family: 'IMFell', Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(42,26,10,0.6);
+  letter-spacing: 0.06em;
+}
+
+.shirt-sub {
+  font-family: 'IMFell', Georgia, serif;
+  font-size: 11px;
+  color: rgba(42,26,10,0.4);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+</style>
+</head>
+<body>
+
+<div class="shirt-wrap">
+
+  <svg class="shirt-svg" viewBox="0 0 700 780" xmlns="http://www.w3.org/2000/svg">
+    <!-- Cream shirt body -->
+    <path d="
+      M 215 30
+      C 260 30 300 60 350 60
+      C 400 60 440 30 485 30
+      L 560 80
+      L 670 130
+      L 660 280
+      L 560 260
+      L 560 730
+      L 140 730
+      L 140 260
+      L 40 280
+      L 30 130
+      L 140 80
+      Z
+    " fill="#f0ebe0" />
+    <!-- Collar -->
+    <path d="M 285 42 Q 350 110 415 42 Q 380 30 350 60 Q 320 30 285 42 Z" fill="#e8e2d4"/>
+    <!-- Subtle stitching -->
+    <line x1="140" y1="260" x2="560" y2="260" stroke="#d8d2c4" stroke-width="1.5"/>
+    <line x1="140" y1="725" x2="560" y2="725" stroke="#d8d2c4" stroke-width="1"/>
+    <!-- Side seams -->
+    <line x1="140" y1="260" x2="140" y2="730" stroke="#d8d2c4" stroke-width="1"/>
+    <line x1="560" y1="260" x2="560" y2="730" stroke="#d8d2c4" stroke-width="1"/>
+  </svg>
+
+  <div class="shirt-content">
+    <img class="woodcut" src="../public/merch/freedom-riders/bus-woodcut.png" alt="Freedom Riders bus woodcut">
+    <div class="shirt-text">
+      <div class="shirt-title">Freedom Riders</div>
+      <div class="rule"></div>
+      <div class="shirt-date">Anniston, Alabama &middot; May 14, 1961</div>
+      <div class="shirt-sub">Highway 202 &middot; The Burning Bus</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

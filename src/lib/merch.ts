@@ -162,12 +162,22 @@ export const MERCH: MerchItem[] = [
   },
   {
     id: 'ecclesia-coin',
-    name: 'Ecclesia Coin Sticker',
-    tagline: 'Teal triskelion · 3" vinyl',
+    name: 'Ecclesia Coin · 8-bit Sticker',
+    tagline: 'Triskelion · distressed · 3" vinyl',
     price: 5,
-    photo: '/merch/ecclesia-coin.png',
+    photo: '/merch/ecclesia-coin-sticker-8bit-v2.png',
     category: 'sticker',
-    available: false,
+    available: true,
+    cities: ['anniston'],
+  },
+  {
+    id: 'ecclesia-coin-sticker-photoreal',
+    name: 'Ecclesia Coin · Celtic Sticker',
+    tagline: 'Photoreal triskelion · Uncial · 3" vinyl',
+    price: 5,
+    photo: '/merch/ecclesia-coin-sticker-photoreal-v2.png',
+    category: 'sticker',
+    available: true,
     cities: ['anniston'],
   },
 
@@ -210,7 +220,7 @@ export const MERCH: MerchItem[] = [
     tagline: '"I was trying to get a date with a woman." — David Dennis, 1961',
     sub: 'Jackson, Mississippi arrest photo · May 1961 · Portrait shirt',
     price: 40,
-    photo: '/merch/freedom-riders/dennis-hedcut-canonical.png',
+    photo: '/merch/freedom-riders/dennis-shirt-mockup.webp',
     badge: 'SL Editorial',
     badgeColor: '#1a1a2e',
     category: 'shirt',
@@ -928,6 +938,12 @@ export function getMerchItem(id: string): MerchItem | undefined {
 
 export function getMerchByCategory(cat: MerchItem['category']): MerchItem[] {
   return MERCH.filter(m => m.category === cat && m.available)
+}
+
+export function getMerchForOutdoors(limit = 6): MerchItem[] {
+  const clt = MERCH.filter(m => m.id.startsWith('clt') || m.id.includes('ladiga') || m.id.includes('chief'))
+  const anniston = MERCH.filter(m => m.available && m.cities?.includes('anniston') && !clt.find(c => c.id === m.id))
+  return [...clt, ...anniston].slice(0, limit)
 }
 
 // Merch product lookups for profile/essay crosslinks — all internal routes

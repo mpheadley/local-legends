@@ -74,6 +74,30 @@ export default function MerchPage() {
           Images are design mockups. Actual print colors, placement, and fabric may vary slightly. All items are made to order — no two prints are identical.
         </p>
 
+        {/* Featured collections */}
+        <div className="grid gap-4 mb-10" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+          <Link href="/merch/pvxc" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', position: 'relative', minHeight: '160px', background: '#111' }}>
+            <Image src="/merch/pv-shirt-mockup.webp" alt="PV Raiders XC" fill className="object-cover" style={{ objectPosition: 'center 20%', opacity: 0.55 }} sizes="320px" />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 100%)' }} />
+            <div style={{ position: 'relative', padding: '1.5rem' }}>
+              <span style={{ fontSize: '0.6rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C8102E', fontWeight: 700 }}>Aug 2 · Woodstock 5K</span>
+              <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 900, color: '#f0ede8', margin: '0.35rem 0 0.25rem', lineHeight: 1.1 }}>PV Raiders XC</p>
+              <p style={{ fontSize: '0.78rem', color: 'rgba(240,237,232,0.5)', marginBottom: '0.75rem' }}>25% → Raiders XC program</p>
+              <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#C8102E', letterSpacing: '0.04em' }}>Shop the collection →</span>
+            </div>
+          </Link>
+          <Link href="/merch/freedom-riders" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', position: 'relative', minHeight: '160px', background: '#111' }}>
+            <Image src="/merch/freedom-riders/shirt-mockup-dark.webp" alt="Freedom Riders" fill className="object-cover" style={{ objectPosition: 'center 30%', opacity: 0.55 }} sizes="320px" />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 100%)' }} />
+            <div style={{ position: 'relative', padding: '1.5rem' }}>
+              <span style={{ fontSize: '0.6rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#9A3412', fontWeight: 700 }}>Anniston, Alabama · 1961</span>
+              <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 900, color: '#f0ede8', margin: '0.35rem 0 0.25rem', lineHeight: 1.1 }}>Freedom Riders</p>
+              <p style={{ fontSize: '0.78rem', color: 'rgba(240,237,232,0.5)', marginBottom: '0.75rem' }}>25% → West Anniston Foundation</p>
+              <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#9A3412', letterSpacing: '0.04em' }}>Shop the collection →</span>
+            </div>
+          </Link>
+        </div>
+
         <SectionHead label="Shirts" sub="Order online · Ships after Aug 2 · Sizes S–2XL" first />
         <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))' }}>
           {SHIRTS.map(item => <ProductCard key={item.id} item={item} />)}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Foothills — Farm Profiles Board</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#9A3412;--accent:#CA8A04;--dark:#1C1917;--warm:#F0EDE6;--paper:#FAFAF7;--text:#3F3B36;--border:#E5E5E0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#2b2723;color:var(--text);padding:40px 24px}
+.wrap{max-width:1160px;margin:0 auto}
+header{color:var(--warm);margin-bottom:28px}
+.eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:11px;color:var(--accent);font-weight:700}
+h1{font-family:'Fraunces';font-weight:900;font-size:40px;line-height:1.05;margin:6px 0}
+.sub{color:#b8b0a4;font-size:15px;max-width:720px;line-height:1.5}
+.rule-note{background:#3a2418;border:1px solid var(--primary);border-radius:10px;padding:14px 18px;margin:18px 0 30px;color:#f0d9c8;font-size:13px;line-height:1.5}
+.rule-note b{color:#fff}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:22px;font-size:12px;color:#b8b0a4}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:22px}
+.card{background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.card .photo{height:150px;background:#d8d2c6 center/cover;position:relative;display:flex;align-items:flex-end}
+.card .photo .status{position:absolute;top:10px;right:10px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:20px;color:#fff}
+.card .photo .needpic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#8a8378;font-size:12px;font-style:italic}
+.st-ready{background:#166534}.st-live{background:#9A3412}.st-draft{background:#CA8A04;color:#1C1917}.st-todo{background:#6B6560}
+.card .body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
+.card h3{font-family:'Fraunces';font-weight:900;font-size:21px;line-height:1.1;color:var(--dark);margin-bottom:4px}
+.card .meta{font-size:12px;color:var(--primary);font-weight:700;letter-spacing:.03em;margin-bottom:10px}
+.card p{font-size:13.5px;line-height:1.5;color:var(--text);flex:1}
+.card .foot{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;font-size:11px}
+.tag{background:#efe9dd;color:#6B6560;padding:3px 9px;border-radius:20px}
+.card .actions{margin-top:12px;font-size:12px;color:#8a8378}
+.card .slug{font-family:monospace;font-size:11px;color:#a8a196;margin-top:6px}
+[contenteditable]:hover{outline:1px dashed rgba(202,138,4,.6);outline-offset:3px}
+footer{color:#8a8378;font-size:12px;margin-top:34px;line-height:1.6}
+</style></head>
+<body><div class="wrap">
+<header>
+  <div class="eyebrow">Southern Legends · for Foothills Magazine (Lisa Davis)</div>
+  <h1 contenteditable>Farm Profiles — Draft Board</h1>
+  <p class="sub" contenteditable>Working farm profiles for the region. Editorial subjects with a real story — the diaspora "came back" frame, not a directory. Pick which run in Foothills.</p>
+</header>
+
+<div class="rule-note">
+  ⚠️ <b>Outlet-first rule:</b> anything written FOR Foothills submits to Lisa → runs there → <i>then</i> posts on SL with a "Originally published in Foothills" line. Do not SL-publish a Foothills-bound piece first. <b>Indigo Ridge</b> is correctly staged (<code>published:false</code>) for exactly this.
+</div>
+
+<div class="legend">
+  <span><span class="dot" style="background:#166534"></span>Ready to submit</span>
+  <span><span class="dot" style="background:#CA8A04"></span>Drafted / staged</span>
+  <span><span class="dot" style="background:#9A3412"></span>Already live on SL</span>
+  <span><span class="dot" style="background:#6B6560"></span>Candidate — to write</span>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="photo" style="background-image:url('../public/images/journal/chickens-pasture.webp')">
+      <span class="status st-ready">Ready · staged</span>
+    </div>
+    <div class="body">
+      <h3 contenteditable>Cale &amp; Kelly Crosby Believe Their Land Is a Covenant</h3>
+      <div class="meta">Indigo Ridge Farms · White Plains, Calhoun Co.</div>
+      <p contenteditable>Kelly was a family nurse practitioner in the Colorado high country. They came back to White Plains, bought ground in the foothills, and raise pastured chicken, beef, and pork the way their theology says the land is owed. The Return frame. Full draft written.</p>
+      <div class="slug">indigo-ridge-farms-profile.mdx · published:false ✓</div>
+      <div class="foot"><span class="tag">regenerative</span><span class="tag">the return</span><span class="tag">grass-fed</span></div>
+      <div class="actions">Photo: need Crosby family shot (their FB/site) — currently placeholder.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="photo"><span class="needpic">real farm photo needed</span><span class="status st-live">Live on SL</span></div>
+    <div class="body">
+      <h3 contenteditable>What the Tornado Left</h3>
+      <div class="meta">Otter Creek Farmstead · Frank &amp; Jane Brown, Ohatchee</div>
+      <p contenteditable>April 27, 2011: a tornado destroyed 2,200 hardwoods. They rebuilt from 2013. The clearcut accidentally became ideal quail habitat. Garden &amp; Gun named it one of 25 Dream Trips of a Lifetime. Farm + distillery + agritourism + wedding venue.</p>
+      <div class="slug">otter-creek-farmstead.mdx · published:true</div>
+      <div class="foot"><span class="tag">agritourism</span><span class="tag">distillery</span><span class="tag">Garden &amp; Gun</span></div>
+      <div class="actions">Already ran on SL — for Foothills, needs a fresh angle or reprint OK from Lisa.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="photo"><span class="needpic">real farm photo needed</span><span class="status st-live">Live on SL</span></div>
+    <div class="body">
+      <h3 contenteditable>The Farm at the End of the Hard Thing</h3>
+      <div class="meta">Redbird Willow Farm · Michele Hornsby, Saks</div>
+      <p contenteditable>In 2017 Michele's son Justin died by suicide at 26. The spot on their Saks property became Redbird Willow — a 501(c)(3) healing farm, 120 animals, where grieving people come to breathe. Grief + land + mental health.</p>
+      <div class="slug">michele-hornsby-redbird-willow.mdx · published:true</div>
+      <div class="foot"><span class="tag">healing farm</span><span class="tag">nonprofit</span><span class="tag">grief</span></div>
+      <div class="actions">Sensitive subject — confirm Michele's OK before any outlet re-run.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="photo"><span class="needpic">real farm photo needed</span><span class="status st-live">Live on SL</span></div>
+    <div class="body">
+      <h3 contenteditable>130 Acres at the Foot of Cheaha</h3>
+      <div class="meta">Johnny Ponder · Munford, Talladega Co.</div>
+      <p contenteditable>Forty years a forester, came home, joined the school board, built a 130-acre outdoor classroom so the next Munford kids get some version of what he had. Land as education + legacy.</p>
+      <div class="slug">johnny-ponder-munford.mdx · published:true</div>
+      <div class="foot"><span class="tag">forestry</span><span class="tag">education</span><span class="tag">Cheaha</span></div>
+      <div class="actions">Land steward more than farm — good Foothills fit if she wants range.</div>
+    </div>
+  </div>
+
+  <div class="card" style="opacity:.9">
+    <div class="photo" style="background:#413a32"><span class="needpic" style="color:#b8a">Redbird Willow / your own farm?</span><span class="status st-draft">Draft in progress</span></div>
+    <div class="body">
+      <h3 contenteditable>Headley Flower Farm — "The Farm That's Gone"</h3>
+      <div class="meta">Your own · Chief Ladiga Trail, Anniston</div>
+      <p contenteditable>Careful: the lost flower farm belongs to Broken Ground (memoir) + The Back Forty (book). Probably NOT a Foothills third-party profile — you're the writer, not the subject. Flagged so it doesn't get double-spent.</p>
+      <div class="slug">→ Broken Ground / Back Forty, not Foothills</div>
+      <div class="foot"><span class="tag">memoir</span><span class="tag">do not double-spend</span></div>
+    </div>
+  </div>
+
+  <div class="card" style="border:2px dashed #6B6560;background:#efe9dd">
+    <div class="body" style="padding:22px">
+      <h3 style="color:#6B6560">+ Candidates to research</h3>
+      <div class="meta" style="color:#6B6560">free sources — no Google API spend</div>
+      <p contenteditable>Pull the shortlist from: Sweet Grown Alabama directory · Alabama Farm Co-op members · Anniston/Jacksonville farmers-market vendors · aquality-farms.json (already on disk). Score for STORY, not just existence. Write 3–6 well.</p>
+      <div class="actions" contenteditable>Add names here as we confirm them ↓</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Board is fully editable — click any text to rewrite. · Photos marked "needed" = pull from each farm's own website/Facebook (public business info, free), not Google Places API.<br>
+  Built by Gather Studio · Southern Legends
+</footer>
+</div></body></html>

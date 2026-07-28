@@ -198,7 +198,7 @@ export default function BookstorePage() {
           lineHeight: 1.6,
           marginBottom: "3rem",
         }}>
-          — Matt Headley, flower farmer, former pastor, Northeast Alabama
+          — Matt Headley, pastor of Ecclesia Community, a fresh expression of Christian community. Flower farmer, Northeast Alabama. Author of Tend: Before the Wedding.
         </p>
 
         {/* Matt's own books */}

@@ -37,6 +37,7 @@ import MerchBlock from "@/app/components/MerchBlock";
 import ArtCredit from "@/app/components/ArtCredit";
 import Callout from "@/app/components/Callout";
 import NextProfileCard from "@/app/components/NextProfileCard";
+import AuthorSupport from "@/app/components/AuthorSupport";
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => {
@@ -571,6 +572,7 @@ export default async function ProfilePage({
       {/* Subscribe */}
       <NewsletterCapture source="profile" />
 
+      <AuthorSupport />
     </main>
   );
 }
