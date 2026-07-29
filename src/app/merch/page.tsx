@@ -74,27 +74,6 @@ export default function MerchPage() {
           Images are design mockups. Actual print colors, placement, and fabric may vary slightly. All items are made to order — no two prints are identical.
         </p>
 
-        {/* Booth banner preview */}
-        <div className="mb-10 rounded-xl overflow-hidden" style={{ border: '1px solid rgba(200,16,46,0.2)' }}>
-          <div style={{ position: 'relative' }}>
-            <Image
-              src="/print-files/SL-BOOTH-BANNER-evergreen.png"
-              alt="Southern Legends booth banner — Woodstock 5K Aug 2"
-              width={1920}
-              height={600}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
-            />
-          </div>
-          <div style={{ background: 'rgba(200,16,46,0.06)', borderTop: '1px solid rgba(200,16,46,0.15)', padding: '0.65rem 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
-            <p style={{ fontSize: '0.78rem', color: 'rgba(240,237,232,0.45)', letterSpacing: '0.04em' }}>
-              <span style={{ color: '#C8102E', fontWeight: 700 }}>Find us at the booth</span> · Woodstock 5K · Aug 2, Anniston AL
-            </p>
-            <a href="/print/woodstock" style={{ fontSize: '0.75rem', fontWeight: 700, color: '#C8102E', letterSpacing: '0.06em', textDecoration: 'none' }}>
-              View all designs →
-            </a>
-          </div>
-        </div>
-
         {/* Featured collections */}
         <div className="grid gap-4 mb-10" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
           <Link href="/merch/pvxc" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', position: 'relative', minHeight: '160px', background: '#111' }}>
