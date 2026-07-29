@@ -27,7 +27,7 @@ export default function ArticleImage({
   caption,
   captionHtml,
   priority = false,
-  layout = "full",
+  layout = "right",
   width = 900,
   height = 675,
 }: ArticleImageProps) {
