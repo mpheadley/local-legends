@@ -49,7 +49,6 @@ const ECCLESIA: Shirt[] = [
   { id: 'E3',  label: 'We are all on the way. — Celtic',    note: 'Black shirt · Celtic triskelion',               img: '/print-files/ECCLESIA-03-coin-celtic-BLACK.png',          bg: '#0c0c0c', price: '$32', method: 'DTF', dims: '10" × 10"',   file: 'ECCLESIA-03-coin-celtic-BLACK.png',          sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 } },
   { id: 'E4',  label: 'We are all on the way. — 8-bit',    note: 'Black shirt · pixel art triskelion · glowing',  img: '/print-files/ECCLESIA-04-coin-8bit-BLACK.png',            bg: '#0c0c0c', price: '$28', method: 'DTF', dims: '10" × 10"',   file: 'ECCLESIA-04-coin-8bit-BLACK.png',            sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 } },
   { id: 'E5',  label: 'Ecclesia — Pilgrims',                note: 'Black shirt · forest scene · pilgrims',         img: '/print-files/ECCLESIA-05-pilgrims-BLACK.png',             bg: '#0c0c0c', price: '$30', method: 'DTF', dims: '10" × 10"',   file: 'ECCLESIA-05-pilgrims-BLACK.png',             sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 } },
-  { id: 'E6',  label: 'You were not chewed gum.',           note: 'Black shirt · Ecclesia Press · Psalm 139:14',   img: '/print-files/ECCLESIA-06-chewed-gum-BLACK.png',           bg: '#0c0c0c', price: '$28', method: 'DTF', dims: '10" × 12"',   file: 'ECCLESIA-06-chewed-gum-BLACK.png',           sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 } },
   { id: 'E7',  label: 'We are all on the way. — Photoreal', note: 'Black shirt · Celtic knotwork · photoreal',    img: '/print-files/ECCLESIA-07-coin-photoreal-BLACK.png',       bg: '#0c0c0c', price: '$32', method: 'DTF', dims: '10" × 10"',   file: 'ECCLESIA-07-coin-photoreal-BLACK.png',       sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 } },
   { id: 'E8',  label: 'He is not here.',                    note: 'Black shirt · 8-bit skeleton · Easter',         img: '/print-files/ECCLESIA-08-he-is-not-here-BLACK.png',       bg: '#0c0c0c', price: '$28', method: 'DTF', dims: '10" × 10"',   file: 'ECCLESIA-08-he-is-not-here-BLACK.png',       sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 } },
   { id: 'E9',  label: 'The Wound Is the Way.',              note: 'Kintsugi brass bowl · Attune · Rohr · Nouwen',  img: '/print-files/ECCLESIA-09-wound-is-the-way-BLACK.png',     bg: '#111',    price: '$32', method: 'DTF', dims: '10" × 12"',   file: 'ECCLESIA-09-wound-is-the-way-BLACK.png',     sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 } },
@@ -182,7 +181,7 @@ export default function WoodstockPrintPage() {
           download="Woodstock-All-Prints-SL-Ecclesia.zip"
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', background: '#C8102E', color: '#fff', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.04em', padding: '0.9rem 1.5rem', borderRadius: '8px', textDecoration: 'none', marginBottom: '1.25rem' }}
         >
-          ↓ Download All Print Files (ZIP · 21 designs)
+          ↓ Download All Print Files (ZIP · {ALL_SHIRTS.length} designs)
         </a>
 
         <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: '0.95rem', marginBottom: '1.75rem' }}>
