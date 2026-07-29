@@ -16,6 +16,7 @@ interface PhotoCarouselProps {
 
 export default function PhotoCarousel({ slides, title }: PhotoCarouselProps) {
   const [idx, setIdx] = useState(0);
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
   const [touchStartX, setTouchStartX] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -98,23 +99,27 @@ export default function PhotoCarousel({ slides, title }: PhotoCarouselProps) {
     }
   }, [idx]);
 
-  // Keyboard
+  // Keyboard — carousel nav + lightbox close
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === "ArrowLeft") {
-        stopAuto();
-        goTo(idx - 1);
-        restartAuto();
+      if (lightboxIdx !== null) {
+        if (e.key === "Escape") { setLightboxIdx(null); return; }
+        if (e.key === "ArrowLeft") { setLightboxIdx(((lightboxIdx - 1) + total) % total); return; }
+        if (e.key === "ArrowRight") { setLightboxIdx((lightboxIdx + 1) % total); return; }
+        return;
       }
-      if (e.key === "ArrowRight") {
-        stopAuto();
-        goTo(idx + 1);
-        restartAuto();
-      }
+      if (e.key === "ArrowLeft") { stopAuto(); goTo(idx - 1); restartAuto(); }
+      if (e.key === "ArrowRight") { stopAuto(); goTo(idx + 1); restartAuto(); }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [idx, goTo, stopAuto, restartAuto]);
+  }, [idx, lightboxIdx, total, goTo, stopAuto, restartAuto]);
+
+  // Lock body scroll when lightbox open
+  useEffect(() => {
+    document.body.style.overflow = lightboxIdx !== null ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [lightboxIdx]);
 
   return (
     <div className="my-12">
@@ -150,12 +155,15 @@ export default function PhotoCarousel({ slides, title }: PhotoCarouselProps) {
               key={slide.src}
               className={`carousel-slide ${i === idx ? "active" : ""}`}
               onClick={() => {
-                if (i !== idx) {
+                if (i === idx) {
+                  setLightboxIdx(i);
+                } else {
                   stopAuto();
                   goTo(i);
                   restartAuto();
                 }
               }}
+              style={i === idx ? { cursor: "zoom-in" } : {}}
             >
               <img
                 src={slide.src}
@@ -294,6 +302,63 @@ export default function PhotoCarousel({ slides, title }: PhotoCarouselProps) {
           </svg>
         </button>
       </div>
+
+      {/* Lightbox */}
+      {lightboxIdx !== null && (
+        <div
+          className="lightbox-overlay"
+          onClick={() => setLightboxIdx(null)}
+          aria-modal="true"
+          role="dialog"
+        >
+          {/* Close */}
+          <button
+            className="lightbox-close"
+            aria-label="Close"
+            onClick={(e) => { e.stopPropagation(); setLightboxIdx(null); }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+
+          {/* Prev */}
+          <button
+            className="lightbox-nav lightbox-prev"
+            aria-label="Previous"
+            onClick={(e) => { e.stopPropagation(); setLightboxIdx(((lightboxIdx - 1) + total) % total); }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          {/* Image */}
+          <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={slides[lightboxIdx].src}
+              alt={slides[lightboxIdx].alt}
+              className="lightbox-img"
+            />
+            {slides[lightboxIdx].caption && (
+              <p className="lightbox-caption">{slides[lightboxIdx].caption}</p>
+            )}
+            <p className="lightbox-counter">{lightboxIdx + 1} / {total}</p>
+          </div>
+
+          {/* Next */}
+          <button
+            className="lightbox-nav lightbox-next"
+            aria-label="Next"
+            onClick={(e) => { e.stopPropagation(); setLightboxIdx((lightboxIdx + 1) % total); }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
