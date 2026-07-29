@@ -16,35 +16,33 @@
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1920px; height: 600px; overflow: hidden; }
+  html, body { width: 1920px; height: 720px; overflow: hidden; }
 
   .banner {
     position: relative;
     width: 1920px;
-    height: 600px;
+    height: 720px;
     background: #1C1917;
     overflow: hidden;
   }
 
-  /* Left gradient zone — hard stop at 920px */
+  /* Left watercolor zone */
   .left-bg {
     position: absolute;
     top: 0; left: 0;
     width: 920px;
     height: 100%;
-    background: linear-gradient(115deg, #3D6B4F 0%, #9A3412 100%);
     z-index: 0;
+    overflow: hidden;
   }
-  .topo {
-    position: absolute;
-    top: 0; left: 0;
-    width: 920px;
+  .left-bg img {
+    width: 100%;
     height: 100%;
-    background-image: url('../topo-7.png');
-    background-repeat: repeat;
-    background-size: 420px auto;
-    opacity: 0.11;
-    z-index: 1;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transform: scale(1.1);
+    transform-origin: center center;
   }
 
   /* Gold bars — full width */
@@ -65,7 +63,7 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "big  jean  shan  sam"
-      "big  lewis wood  sam";
+      "big  lewis wood  bus";
     overflow: hidden;
     background: #111;
   }
@@ -87,16 +85,8 @@
   .c-shan  { grid-area: shan; }
   .c-sam   { grid-area: sam; }
   .c-lewis { grid-area: lewis; }
-  .c-wood  {
-    grid-area: wood;
-    background: #0c0c0c;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .c-wood img {
-    width: 80%; height: 80%;
-    object-fit: contain;
-    object-position: center;
-  }
+  .c-bus   { grid-area: bus; }
+  .c-wood { grid-area: wood; }
 
   /* Subtle dark vignette on each face cell — deepens toward edges */
   .cc::after {
@@ -155,6 +145,11 @@
     text-transform: uppercase;
     letter-spacing: -5px;
     color: #9B1C1C;
+    text-shadow:
+      0 2px 4px rgba(0,0,0,0.9),
+      0 4px 12px rgba(0,0,0,0.8),
+      0 8px 24px rgba(0,0,0,0.6),
+      2px 2px 0px rgba(0,0,0,0.7);
   }
 
   .tagline {
@@ -209,49 +204,51 @@
 <body>
 <div class="banner">
 
-  <div class="left-bg"></div>
-  <div class="topo"></div>
+  <div class="left-bg">
+    <img src="sl-watercolor-bg-16x9.png" alt="" />
+  </div>
   <div class="bar-top"></div>
   <div class="bar-bottom"></div>
 
   <!-- Bento collage — face-forward, 4-col × 2-row -->
   <div class="collage">
-    <!-- Big hero — Michele, RBWF — spans both rows -->
+    <!-- Big hero — Jean Ellison — spans both rows -->
     <div class="cc c-big">
-      <img src="../images/essays/rbwf-hero-face.jpg" alt="Michele — Redbird Willow Farm" style="object-position:center 18%;" />
+      <img src="../images/profiles/jean-ellison/jean-ellison-brand-fistpump.jpg" alt="Jean Ellison" style="object-position:65% 10%;" />
+      <!-- Dark overlay on left edge where SOUTHERN LEGENDS text hangs over -->
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(10,6,4,0.72) 0%, rgba(10,6,4,0.35) 38%, transparent 65%);pointer-events:none;"></div>
     </div>
     <!-- Row 1 small cells -->
     <div class="cc c-jean">
-      <img src="../images/profiles/jean-ellison/jean-ellison-brand-fistpump.jpg" alt="Jean Ellison" style="object-position:center 10%;" />
+      <img src="../images/essays/rbwf-hero-face.jpg" alt="Michele — Redbird Willow Farm" style="object-position:center 18%;" />
     </div>
     <div class="cc c-shan">
       <img src="../images/profiles/shannon-jenkins/shannon-jenkins-headshot-v4.webp" alt="Shannon Jenkins" style="object-position:center 8%;" />
     </div>
-    <!-- Samuel spans both rows on far right -->
+    <!-- Freedom Riders mugshots — top right -->
     <div class="cc c-sam">
-      <img src="../images/profiles/aquality-farms/sam-farmers-market-cropped.webp" alt="Samuel — AQuality Farms" style="object-position:center 12%;" />
+      <img src="dennis-closeup-banner.png" alt="David Dennis — Freedom Rider mugshot 1961" style="object-position:center center;" />
     </div>
     <!-- Row 2 small cells -->
     <div class="cc c-lewis">
-      <img src="../images/profiles/lewis-downing/lewis-at-counter.webp" alt="Lewis Downing" style="object-position:20% 10%;" />
+      <img src="../images/profiles/jay-jenkins/jay-market-ciara.webp" alt="Jay Jenkins and Ciara Smith" style="object-fit:cover; object-position:center 20%; transform:scale(1.2); transform-origin:50% 15%;" />
     </div>
-    <!-- Pilgrims photo -->
-    <div class="cc c-wood" style="background:#0e1710;">
-      <img src="../images/profiles/ecclesia-community/pilgrims-forest.webp" alt="Pilgrims in the forest" style="object-fit:cover; width:100%; height:100%; object-position:center center; filter:none; opacity:1;" />
+    <!-- Samuel — bottom right -->
+    <div class="cc c-bus">
+      <img src="sam-closeup-banner.png" alt="Samuel — AQuality Farms" style="object-position:center top;" />
+    </div>
+    <!-- CLT snow trail -->
+    <div class="cc c-wood">
+      <img src="../images/journal/chief-ladiga-trail-snow-2017.webp" alt="Chief Ladiga Trail in snow" style="object-position:center 30%;" />
     </div>
   </div>
 
   <!-- Text -->
   <div class="content">
     <div>
-      <div class="eyebrow">Northeast Alabama</div>
+      <div class="eyebrow">Appalachian Foothills of Northeast Alabama</div>
       <span class="wm">Southern</span>
       <span class="wm">Legends</span>
-      <div class="tagline">
-        Shirts <span class="dot"></span>
-        Stickers <span class="dot"></span>
-        Stories
-      </div>
     </div>
   </div>
 
@@ -260,12 +257,27 @@
     <div class="url-text">southern<em>legends</em>.org</div>
   </div>
 
-  <!-- SL crimson mark — top-left, anchored on text side -->
-  <img src="../images/sl-mark-crimson.svg"
-    alt="Southern Legends mark"
-    style="position:absolute; top:22px; left:30px; width:54px; height:54px; z-index:8; opacity:0.92;" />
+  <!-- SL crimson square mark — top-left -->
+  <div style="position:absolute; top:20px; left:28px; z-index:8;
+    width:58px; height:58px; background:#9B1C1C; border-radius:6px;
+    display:flex; align-items:center; justify-content:center;">
+    <span style="font-family:'Fraunces',Georgia,serif; font-weight:700; font-size:22px;
+      color:#FAFAF7; letter-spacing:-1px; line-height:1;">SL</span>
+  </div>
 
-  <div class="spec">8′ × 2.5′ · vinyl · evergreen</div>
+  <!-- Matt hedcut signature — bottom left of watercolor zone -->
+  <div style="position:absolute; bottom:22px; left:28px; z-index:9;
+    display:flex; align-items:center; gap:20px; opacity:0.85;">
+    <img src="../images/about/headshot-hedcut-matt-headley.webp"
+      style="width:57px; height:57px; border-radius:50%; object-fit:cover; filter:grayscale(20%);" />
+    <span style="font-family:'SourceSans',system-ui,sans-serif; font-size:15px;
+      letter-spacing:0.18em; text-transform:uppercase; color:#F0EDE6; line-height:1.4;">
+      Matt Headley<br>
+      <span style="color:#CA8A04; letter-spacing:0.22em; font-size:14px;">southernlegends.org</span>
+    </span>
+  </div>
+
+  <div class="spec">8′ × 3′ · vinyl · evergreen</div>
 
 </div>
 </body>
