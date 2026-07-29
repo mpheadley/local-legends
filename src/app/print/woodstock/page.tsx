@@ -110,7 +110,7 @@ type PrintItem = {
 }
 
 const PRINT_PACKAGE: PrintItem[] = [
-  { id: 'BANNER',     label: 'Booth Banner',                    category: 'signage',  spec: "8′ × 2.5′ vinyl",                    qty: 1,   status: 'needs-design', notes: 'SL wordmark + southernlegends.org — order Vistaprint or local sign shop' },
+  { id: 'BANNER',     label: 'Booth Banner',                    category: 'signage',  spec: "8′ × 2.5′ vinyl",                    qty: 1,   status: 'ready',        file: '/print-files/SL-BOOTH-BANNER-evergreen.png', notes: 'SL evergreen design — order at Vistaprint or local sign shop · allow 2–3 days' },
   { id: 'PRICE-SIGN', label: 'Shirt Price Sign',                category: 'signage',  spec: '11″ × 17″ laminated',                qty: 2,   status: 'needs-design', notes: 'Adult $30–$40 · Youth $20 · Stickers $5' },
   { id: 'PV-SIGN',    label: 'PV Raiders Fundraiser Sign',      category: 'signage',  spec: '8.5″ × 11″ laminated',               qty: 1,   status: 'needs-design', notes: '"25% of every PV Raiders shirt supports Raiders XC"' },
   { id: 'QR-SIGN',    label: 'QR Code — Order More Online',     category: 'signage',  spec: '5″ × 7″ card or laminated',          qty: 2,   status: 'needs-design', notes: 'QR → southernlegends.org/merch · "More designs · all sizes"' },
