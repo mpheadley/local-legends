@@ -4,339 +4,268 @@
 <meta charset="UTF-8">
 <title>Southern Legends — Booth Banner 8′ × 2.5′ (Evergreen)</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap');
+  @font-face {
+    font-family: 'Fraunces';
+    src: url('../../src/app/fonts/Fraunces-SemiBold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'SourceSans';
+    src: url('../../src/app/fonts/SourceSans3-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html, body {
-    width: 1920px;
-    height: 600px;
-    overflow: hidden;
-    background: #0c0808;
-  }
+  html, body { width: 1920px; height: 600px; overflow: hidden; }
 
   .banner {
     position: relative;
     width: 1920px;
     height: 600px;
-    background: #0c0808;
+    background: #1C1917;
     overflow: hidden;
-    display: flex;
-    align-items: center;
   }
 
-  /* Topo texture */
+  /* Left gradient zone — hard stop at 920px */
+  .left-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 920px;
+    height: 100%;
+    background: linear-gradient(115deg, #3D6B4F 0%, #9A3412 100%);
+    z-index: 0;
+  }
   .topo {
     position: absolute;
-    inset: 0;
+    top: 0; left: 0;
+    width: 920px;
+    height: 100%;
     background-image: url('../topo-7.png');
     background-repeat: repeat;
-    background-size: 480px auto;
-    opacity: 0.07;
-    z-index: 0;
-  }
-
-  /* Crimson bars */
-  .bar-top {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 10px;
-    background: linear-gradient(90deg, #8b1a1a 0%, #C8102E 50%, #8b1a1a 100%);
-    z-index: 10;
-  }
-  .bar-bottom {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 10px;
-    background: linear-gradient(90deg, #8b1a1a 0%, #C8102E 50%, #8b1a1a 100%);
-    z-index: 10;
-  }
-
-  /* Pilgrims figure — ghost in the center-right */
-  .pilgrims-wrap {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 800px;
+    background-size: 420px auto;
+    opacity: 0.11;
     z-index: 1;
+  }
+
+  /* Gold bars — full width */
+  .bar-top    { position: absolute; top: 0;    left: 0; right: 0; height: 7px; background: #CA8A04; z-index: 20; }
+  .bar-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 7px; background: #CA8A04; z-index: 20; }
+
+  /* ─── BENTO COLLAGE ─── */
+  /* 4-col × 2-row grid, right 1000px. Face-first crop on every cell. */
+  .collage {
+    position: absolute;
+    right: 0; top: 0;
+    width: 1000px;
+    height: 100%;
+    z-index: 2;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "big  jean  shan  sam"
+      "big  lewis wood  sam";
+    overflow: hidden;
+    background: #111;
+  }
+  .cc {
+    position: relative;
     overflow: hidden;
   }
-  .pilgrims-wrap img {
+  .cc img {
+    width: 100%;
     height: 100%;
-    width: auto;
+    object-fit: cover;
+    object-position: center 15%; /* bias toward faces */
+    display: block;
+  }
+
+  /* Named grid placements */
+  .c-big   { grid-area: big; }
+  .c-jean  { grid-area: jean; }
+  .c-shan  { grid-area: shan; }
+  .c-sam   { grid-area: sam; }
+  .c-lewis { grid-area: lewis; }
+  .c-wood  {
+    grid-area: wood;
+    background: #0c0c0c;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .c-wood img {
+    width: 80%; height: 80%;
     object-fit: contain;
-    object-position: bottom right;
-    opacity: 0.09;
-    filter: invert(1);
-    transform: translateX(80px);
+    object-position: center;
   }
 
-  /* Decorative horizontal rules */
-  .rule {
-    position: absolute;
-    left: 0; right: 0;
-    height: 1px;
-    background: rgba(139,26,26,0.18);
-    z-index: 1;
+  /* Subtle dark vignette on each face cell — deepens toward edges */
+  .cc::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, transparent 40%, rgba(28,25,23,0.45) 100%);
+    pointer-events: none;
   }
-  .rule-top    { top: 80px; }
-  .rule-bottom { bottom: 80px; }
+  .c-wood::after { display: none; }
 
-  /* Decorative vertical rule — center divider */
-  .v-rule {
-    position: absolute;
-    top: 80px; bottom: 80px;
-    width: 1px;
-    background: rgba(139,26,26,0.3);
-    z-index: 3;
-    left: 1100px;
+  /* Gold seam at left edge of collage */
+  .collage::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 2px; height: 100%;
+    background: #CA8A04;
+    z-index: 10;
   }
 
-  /* Left glow */
-  .glow {
-    position: absolute;
-    left: -200px; top: 50%;
-    transform: translateY(-50%);
-    width: 700px; height: 700px;
-    background: radial-gradient(ellipse, rgba(139,26,26,0.12) 0%, transparent 70%);
-    z-index: 0;
-  }
-
-  /* Main layout */
+  /* ─── TEXT ─── */
   .content {
-    position: relative;
+    position: absolute;
+    top: 0; left: 0;
+    width: 920px;
+    height: 100%;
     z-index: 5;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
     padding: 60px 80px;
   }
 
-  /* ── LEFT BLOCK ── */
-  .left {
-    flex: 1;
-    padding-right: 60px;
-  }
-
   .eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.32em;
+    font-family: 'SourceSans', system-ui, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.34em;
     text-transform: uppercase;
-    color: #C8102E;
-    margin-bottom: 20px;
+    color: #CA8A04;
+    margin-bottom: 18px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
   }
   .eyebrow::before {
     content: '';
-    display: inline-block;
-    width: 28px;
-    height: 2px;
-    background: #C8102E;
+    width: 20px; height: 2px;
+    background: #CA8A04;
     flex-shrink: 0;
   }
 
-  .headline {
+  .wm {
+    display: block;
     font-family: 'Fraunces', Georgia, serif;
-    font-weight: 900;
-    line-height: 0.88;
-    color: #FAFAF7;
+    font-weight: 700;
+    font-size: 178px;
+    line-height: 0.86;
     text-transform: uppercase;
     letter-spacing: -5px;
-  }
-  .hl-southern {
-    font-size: 192px;
-    display: block;
-    color: #FAFAF7;
-  }
-  .hl-legends {
-    font-size: 192px;
-    display: block;
-    color: #C8102E;
-    -webkit-text-stroke: 0px transparent;
+    color: #9B1C1C;
   }
 
   .tagline {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 19px;
-    color: rgba(250,250,247,0.35);
-    letter-spacing: 0.18em;
+    font-family: 'SourceSans', system-ui, sans-serif;
+    font-size: 15px;
+    color: rgba(240,237,230,0.44);
+    letter-spacing: 0.24em;
     text-transform: uppercase;
-    margin-top: 28px;
+    margin-top: 24px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
   }
-  .tagline-dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #8b1a1a;
-    flex-shrink: 0;
-  }
+  .dot { width: 3px; height: 3px; border-radius: 50%; background: #CA8A04; flex-shrink: 0; }
 
-  /* ── RIGHT BLOCK ── */
-  .right {
-    width: 660px;
-    flex-shrink: 0;
-    padding-left: 80px;
+  /* URL chip — bottom-right of collage */
+  .url-block {
+    position: absolute;
+    right: 18px; bottom: 18px;
+    z-index: 15;
+    background: rgba(28,25,23,0.82);
+    padding: 9px 15px 11px;
+    border-radius: 5px;
+    border-top: 2px solid #CA8A04;
+    text-align: right;
   }
-
-  .right-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
+  .url-label {
+    font-family: 'SourceSans', system-ui, sans-serif;
+    font-size: 8.5px;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: rgba(250,250,247,0.25);
-    margin-bottom: 18px;
+    color: rgba(250,250,247,0.28);
+    margin-bottom: 3px;
   }
-
-  .right-url {
+  .url-text {
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 52px;
+    font-size: 30px;
     font-weight: 700;
-    color: #FAFAF7;
-    letter-spacing: -1px;
-    margin-bottom: 36px;
+    color: #F0EDE6;
+    letter-spacing: -0.5px;
     line-height: 1;
   }
-  .right-url span {
-    color: #C8102E;
-  }
+  .url-text em { font-style: normal; color: #9A3412; }
 
-  .right-items {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .right-items li {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
-    color: rgba(250,250,247,0.45);
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    line-height: 1.4;
-  }
-  .right-items li .dash {
-    width: 22px;
-    height: 2px;
-    background: #8b1a1a;
-    flex-shrink: 0;
-  }
-
-  /* SL mark — bottom right corner */
-  .sl-mark {
-    position: absolute;
-    bottom: 28px;
-    right: 36px;
-    z-index: 6;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    opacity: 0.35;
-  }
-  .sl-box {
-    width: 36px;
-    height: 36px;
-    border-radius: 4px;
-    background: #9B1C1C;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 14px;
-    font-weight: 900;
-    color: #FAFAF7;
-    letter-spacing: -1px;
-  }
-  .sl-text {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: rgba(250,250,247,0.6);
-    font-weight: 700;
-  }
-
-  /* Print spec bar — top right (visible in HTML preview only) */
-  .spec-bar {
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    font-family: 'DM Sans', monospace, sans-serif;
-    font-size: 10px;
-    color: rgba(250,250,247,0.15);
-    letter-spacing: 0.06em;
-    z-index: 20;
+  .spec {
+    position: absolute; bottom: 14px; left: 80px;
+    font-family: 'SourceSans', system-ui, sans-serif;
+    font-size: 9px; color: rgba(250,250,247,0.08); letter-spacing: 0.06em; z-index: 9;
   }
 </style>
 </head>
 <body>
 <div class="banner">
 
+  <div class="left-bg"></div>
   <div class="topo"></div>
   <div class="bar-top"></div>
   <div class="bar-bottom"></div>
-  <div class="rule rule-top"></div>
-  <div class="rule rule-bottom"></div>
-  <div class="v-rule"></div>
-  <div class="glow"></div>
 
-  <!-- Ghost pilgrims figure -->
-  <div class="pilgrims-wrap">
-    <img src="./ECCLESIA-05-pilgrims-BLACK.png" alt="" />
+  <!-- Bento collage — face-forward, 4-col × 2-row -->
+  <div class="collage">
+    <!-- Big hero — Michele, RBWF — spans both rows -->
+    <div class="cc c-big">
+      <img src="../images/essays/rbwf-hero-face.jpg" alt="Michele — Redbird Willow Farm" style="object-position:center 18%;" />
+    </div>
+    <!-- Row 1 small cells -->
+    <div class="cc c-jean">
+      <img src="../images/profiles/jean-ellison/jean-ellison-brand-fistpump.jpg" alt="Jean Ellison" style="object-position:center 10%;" />
+    </div>
+    <div class="cc c-shan">
+      <img src="../images/profiles/shannon-jenkins/shannon-jenkins-headshot-v4.webp" alt="Shannon Jenkins" style="object-position:center 8%;" />
+    </div>
+    <!-- Samuel spans both rows on far right -->
+    <div class="cc c-sam">
+      <img src="../images/profiles/aquality-farms/sam-farmers-market-cropped.webp" alt="Samuel — AQuality Farms" style="object-position:center 12%;" />
+    </div>
+    <!-- Row 2 small cells -->
+    <div class="cc c-lewis">
+      <img src="../images/profiles/lewis-downing/lewis-at-counter.webp" alt="Lewis Downing" style="object-position:20% 10%;" />
+    </div>
+    <!-- Pilgrims photo -->
+    <div class="cc c-wood" style="background:#0e1710;">
+      <img src="../images/profiles/ecclesia-community/pilgrims-forest.webp" alt="Pilgrims in the forest" style="object-fit:cover; width:100%; height:100%; object-position:center center; filter:none; opacity:1;" />
+    </div>
   </div>
 
-  <!-- Main content -->
+  <!-- Text -->
   <div class="content">
-
-    <!-- LEFT — Brand name -->
-    <div class="left">
+    <div>
       <div class="eyebrow">Northeast Alabama</div>
-      <div class="headline">
-        <span class="hl-southern">Southern</span>
-        <span class="hl-legends">Legends</span>
-      </div>
+      <span class="wm">Southern</span>
+      <span class="wm">Legends</span>
       <div class="tagline">
-        Shirts
-        <span class="tagline-dot"></span>
-        Stickers
-        <span class="tagline-dot"></span>
+        Shirts <span class="dot"></span>
+        Stickers <span class="dot"></span>
         Stories
       </div>
     </div>
-
-    <!-- RIGHT — URL + offerings -->
-    <div class="right">
-      <div class="right-label">Shop the full catalog</div>
-      <div class="right-url">
-        southern<span>legends</span>.org
-      </div>
-      <ul class="right-items">
-        <li><span class="dash"></span> Local designs · printed in Alabama</li>
-        <li><span class="dash"></span> More sizes &amp; designs available online</li>
-        <li><span class="dash"></span> Custom orders welcome</li>
-      </ul>
-    </div>
-
-  </div><!-- /content -->
-
-  <!-- SL mark -->
-  <div class="sl-mark">
-    <div class="sl-box">SL</div>
-    <div class="sl-text">Southern Legends</div>
   </div>
 
-  <!-- Print spec (visible in preview) -->
-  <div class="spec-bar">8′ × 2.5′ · 150 DPI · vinyl banner · evergreen</div>
+  <div class="url-block">
+    <div class="url-label">Shop the full catalog</div>
+    <div class="url-text">southern<em>legends</em>.org</div>
+  </div>
+
+  <!-- SL crimson mark — top-left, anchored on text side -->
+  <img src="../images/sl-mark-crimson.svg"
+    alt="Southern Legends mark"
+    style="position:absolute; top:22px; left:30px; width:54px; height:54px; z-index:8; opacity:0.92;" />
+
+  <div class="spec">8′ × 2.5′ · vinyl · evergreen</div>
 
 </div>
 </body>
