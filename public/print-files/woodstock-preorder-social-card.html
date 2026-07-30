@@ -2,285 +2,293 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Woodstock Pre-Order Social Card</title>
+<title>Woodstock Pre-Order — Social Cards</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Fraunces:ital,wght@0,900;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,wght@0,900;1,900&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #1c1814; display: flex; flex-direction: column; gap: 32px; padding: 32px; font-family: 'DM Sans', sans-serif; }
+  body { background: #111; font-family: 'DM Sans', system-ui, sans-serif; padding: 24px; display: flex; flex-direction: column; gap: 40px; }
 
-  /* 1200×630 landscape (Twitter / OG) */
-  .card-og {
-    width: 1200px; height: 630px;
-    position: relative; overflow: hidden;
-    background: #0f0d0b;
-  }
-  /* 1080×1080 square (Instagram / Facebook) */
-  .card-sq {
-    width: 1080px; height: 1080px;
-    position: relative; overflow: hidden;
-    background: #0f0d0b;
-  }
-  /* 1080×1920 portrait (Stories / Reels) */
-  .card-story {
-    width: 1080px; height: 1920px;
-    position: relative; overflow: hidden;
-    background: #0f0d0b;
-  }
+  /* Controls */
+  .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; background: #1a1a1a; padding: 12px 16px; border-radius: 10px; border: 1px solid #222; }
+  .controls label { font-size: 11px; color: #666; letter-spacing: 0.2em; text-transform: uppercase; }
+  .controls select, .controls input { background: #0f0f0f; color: #f0ede8; border: 1px solid #333; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-family: inherit; }
+  .controls button { background: #9A3412; color: #f0ede8; border: none; padding: 7px 16px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  .controls button:hover { background: #c2410c; }
 
-  .topo-bg {
-    position: absolute; inset: 0;
-    background-image: url('../images/topo-7.png');
-    background-size: 320px;
-    opacity: 0.07;
-  }
+  .card-label { font-size: 10px; color: #555; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 10px; }
 
-  .card-label {
-    font-size: 12px; color: #888; letter-spacing: 0.3em; text-transform: uppercase;
-    margin-bottom: 8px; font-family: 'DM Sans', sans-serif;
-  }
+  /* ── Card base ── */
+  .card { position: relative; overflow: hidden; background: #0d0b09; font-family: 'DM Sans', sans-serif; }
+  .topo { position: absolute; inset: 0; background-image: url('../images/topo-7.png'); background-size: 320px; opacity: 0.06; pointer-events: none; }
+  .vignette { position: absolute; inset: 0; pointer-events: none; }
 
-  /* ── Shared layout helpers ── */
-  .graphic {
+  /* ── Shirt zone (shared) ── */
+  .shirt-zone { position: absolute; display: flex; align-items: center; justify-content: center; }
+  .shirt-wrap { position: relative; }
+  .shirt-svg { display: block; }
+  .design-on-shirt {
     position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
     object-fit: contain;
   }
 
-  .text-block {
-    position: absolute;
-    color: #f0ede8;
-    font-family: 'DM Sans', sans-serif;
-  }
+  /* ── OG 1200×630 ── */
+  .card-og { width: 1200px; height: 630px; }
+  .card-og .shirt-zone { right: 0; top: 0; bottom: 0; width: 580px; }
+  .card-og .shirt-wrap { width: 380px; height: 440px; }
+  .card-og .design-on-shirt { width: 210px; top: 80px; }
+  .card-og .vignette { background: linear-gradient(to right, #0d0b09 0%, #0d0b09 25%, rgba(13,11,9,0.55) 48%, rgba(13,11,9,0) 100%); }
+  .card-og .text-zone { position: absolute; left: 56px; top: 0; bottom: 0; width: 560px; display: flex; flex-direction: column; justify-content: center; }
+  .card-og .headline { font-size: 88px; }
+  .card-og .subline  { font-size: 15px; max-width: 440px; margin-top: 16px; }
+  .card-og .url-line { margin-top: 24px; }
 
-  .headline {
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 900;
-    line-height: 0.92;
-    color: #f0ede8;
-  }
+  /* ── Square 1080×1080 ── */
+  .card-sq { width: 1080px; height: 1080px; }
+  .card-sq .shirt-zone { top: 40px; left: 50%; transform: translateX(-50%); width: 860px; height: 640px; }
+  .card-sq .shirt-wrap { width: 520px; height: 600px; }
+  .card-sq .design-on-shirt { width: 290px; top: 110px; }
+  .card-sq .vignette { background: linear-gradient(to bottom, rgba(13,11,9,0) 48%, #0d0b09 75%); }
+  .card-sq .text-zone { position: absolute; bottom: 72px; left: 0; right: 0; padding: 0 72px; text-align: center; }
+  .card-sq .eyebrow  { font-size: 13px; margin-bottom: 18px; }
+  .card-sq .headline { font-size: 104px; }
+  .card-sq .subline  { font-size: 17px; margin-top: 16px; }
+  .card-sq .url-line { margin-top: 22px; font-size: 13px; }
 
-  .pill {
-    display: inline-block;
-    font-size: inherit;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 6px 16px;
-    border-radius: 99px;
-  }
+  /* ── Story 1080×1920 ── */
+  .card-story { width: 1080px; height: 1920px; }
+  .card-story .shirt-zone { top: 120px; left: 50%; transform: translateX(-50%); width: 1000px; height: 880px; }
+  .card-story .shirt-wrap { width: 760px; height: 880px; }
+  .card-story .design-on-shirt { width: 420px; top: 158px; }
+  .card-story .vignette { background: linear-gradient(to bottom, rgba(13,11,9,0.55) 0%, rgba(13,11,9,0) 12%, rgba(13,11,9,0) 50%, #0d0b09 72%); }
+  .card-story .text-zone { position: absolute; bottom: 120px; left: 0; right: 0; padding: 0 96px; text-align: center; }
+  .card-story .eyebrow  { font-size: 16px; margin-bottom: 22px; }
+  .card-story .headline { font-size: 138px; }
+  .card-story .subline  { font-size: 22px; margin-top: 22px; }
+  .card-story .pill     { font-size: 15px; padding: 7px 20px; }
+  .card-story .url-line { font-size: 17px; margin-top: 28px; }
 
-  .pill-green { background: #166534; color: #f0ede8; }
-  .pill-rust  { background: #9A3412; color: #f0ede8; }
-  .pill-gold  { background: #ca8a04; color: #0f0d0b; }
+  /* Type */
+  .eyebrow { font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(202,138,4,0.7); font-weight: 700; margin-bottom: 14px; }
+  .headline { font-family: 'Fraunces', Georgia, serif; font-weight: 900; color: #f0ede8; line-height: 0.9; }
+  .subline { color: rgba(240,237,232,0.42); line-height: 1.6; }
+  .pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+  .pills.center { justify-content: center; }
+  .pill { font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 14px; border-radius: 99px; color: #f0ede8; }
+  .pill-green { background: #166534; }
+  .pill-gold  { background: rgba(202,138,4,0.85); color: #0d0b09; }
+  .url-line { font-size: 12px; color: rgba(202,138,4,0.55); letter-spacing: 0.14em; font-weight: 700; }
+  .divider { position: absolute; background: linear-gradient(to right, rgba(202,138,4,0.4), transparent); }
 
-  .divider {
-    position: absolute;
-    height: 2px;
-    background: linear-gradient(to right, #ca8a04, transparent);
-  }
-  .divider-v {
-    position: absolute;
-    width: 2px;
-    background: linear-gradient(to bottom, #ca8a04, transparent);
-  }
-
-  .sl-mark {
-    position: absolute;
-    opacity: 0.12;
-  }
-
-  .race-info {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(202,138,4,0.75);
-    line-height: 2;
-  }
-
-  /* ── Controls ── */
-  .controls {
-    display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
-    margin-bottom: 8px;
-  }
-  .controls label { font-size: 11px; color: #aaa; letter-spacing: 0.15em; text-transform: uppercase; }
-  .controls select, .controls input[type=text] {
-    background: #1c1814; color: #f0ede8; border: 1px solid #333;
-    padding: 4px 8px; border-radius: 6px; font-size: 12px;
-  }
-  button.action {
-    background: #9A3412; color: #f0ede8; border: none;
-    padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 700;
-    letter-spacing: 0.06em;
-  }
-  button.action:hover { background: #c2410c; }
-
-  .card-wrap { display: inline-block; }
+  .sl-mark { position: absolute; opacity: 0.12; }
+  .scaled-wrap { overflow: hidden; }
 </style>
 </head>
 <body>
 
-<!-- Controls -->
 <div class="controls">
-  <label>Design:</label>
+  <label>Design</label>
   <select id="design-sel" onchange="updateDesign()">
-    <option value="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png" data-name="Woodstock Avenue Oval" data-bg="#f5f0e8">Woodstock Oval (cream)</option>
-    <option value="WOODSTOCK-00-woodstock-avenue-oval-BLACK.png" data-name="Woodstock Avenue Oval" data-bg="#1a1a1a">Woodstock Oval (black)</option>
-    <option value="../merch/woodstock-shirt-v2.png" data-name="I Survived Woodstock Avenue" data-bg="#f5f0e8">I Survived Woodstock (cream)</option>
-    <option value="SL-03-anniston-45-NAVY.png" data-name="Anniston 45" data-bg="#1e3a5f">Anniston 45 (navy)</option>
+    <option value="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png" data-shirt="#f5f0e8" data-shadow="rgba(0,0,0,0.06)">Woodstock Oval (cream)</option>
+    <option value="WOODSTOCK-01-survived-woodstock-BLACK.png"    data-shirt="#1c1c1c" data-shadow="rgba(255,255,255,0.04)">I Survived (black)</option>
+    <option value="../merch/pv-raiders-xc.webp"                 data-shirt="#C8102E" data-shadow="rgba(0,0,0,0.15)">PV Raiders XC (red)</option>
+    <option value="SL-03-anniston-45-NAVY.png"                  data-shirt="#1e3a5f" data-shadow="rgba(0,0,0,0.15)">Anniston 45 (navy)</option>
+    <option value="WOODSTOCK-11-cheaha-skyway-BLACK.png"         data-shirt="#1c1c1c" data-shadow="rgba(255,255,255,0.04)">Cheaha Skyway (black)</option>
+    <option value="WOODSTOCK-06-pinhoti-trail-BLACK.png"         data-shirt="#1c1c1c" data-shadow="rgba(255,255,255,0.04)">Pinhoti Trail (black)</option>
+    <option value="WOODSTOCK-12-blossom-decay-roses-MOCHA.png"  data-shirt="#6b4c35" data-shadow="rgba(0,0,0,0.12)">Blossom Roses (mocha)</option>
   </select>
-  <label>URL:</label>
-  <input type="text" id="url-input" value="southernlegends.blog/merch" oninput="updateURL()">
-  <button class="action" onclick="printAll()">Print / Save all 3</button>
+  <label>Headline</label>
+  <input type="text" id="hl-input" value="Pre-order your shirt." oninput="updateHeadline()" style="width:200px">
+  <label>URL</label>
+  <input type="text" id="url-input" value="southernlegends.blog/merch" oninput="updateURL()" style="width:180px">
+  <button onclick="window.print()">Print / Save all</button>
 </div>
 
-<!-- OG / Twitter 1200×630 -->
+<!-- ── T-SHIRT SVG TEMPLATE (hidden, cloned per card) ── -->
+<!-- viewBox 400×460: collar, sleeves, body, hem -->
+<template id="shirt-tpl">
+  <svg class="shirt-svg" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg">
+    <!-- Drop shadow -->
+    <defs>
+      <filter id="shad" x="-5%" y="-5%" width="110%" height="115%">
+        <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="rgba(0,0,0,0.22)"/>
+      </filter>
+    </defs>
+    <!-- Shirt body + sleeves as one path -->
+    <path class="shirt-body" filter="url(#shad)"
+      d="M148,32
+         C132,18 82,20 58,48
+         L2,90 L36,124
+         C78,107 90,126 90,154
+         L90,432 L310,432 L310,154
+         C310,126 322,107 364,124
+         L398,90 L342,48
+         C318,20 268,18 252,32
+         C238,60 220,74 200,74
+         C180,74 162,60 148,32 Z"
+      stroke-width="0.5"/>
+    <!-- Subtle collar highlight -->
+    <path class="shirt-collar"
+      d="M152,35 C165,58 183,72 200,72 C217,72 235,58 248,35"
+      fill="none" stroke-width="1.5" stroke-linecap="round" opacity="0.18"/>
+    <!-- Sleeve seam lines -->
+    <line class="shirt-seam" x1="90" y1="134" x2="90" y2="154" stroke-width="1" opacity="0.12"/>
+    <line class="shirt-seam" x1="310" y1="134" x2="310" y2="154" stroke-width="1" opacity="0.12"/>
+  </svg>
+</template>
+
+<!-- ── OG 1200×630 ── -->
 <div>
-  <p class="card-label">1200 × 630 — OG / Twitter</p>
-  <div class="card-wrap">
-    <div class="card-og" id="og-card">
-      <div class="topo-bg"></div>
+  <p class="card-label">1200 × 630 — Twitter / OG / Facebook</p>
+  <div class="card card-og">
+    <div class="topo"></div>
 
-      <!-- Left: text block -->
-      <div class="text-block" style="left:60px;top:60px;max-width:540px;">
-        <p class="race-info" id="og-race">Woodstock 5K · Anniston, AL · Aug 2, 2026<br>RRCA Alabama State Championship</p>
-        <h1 class="headline" id="og-headline" style="font-size:86px;margin:18px 0 22px;">Pre-order<br>your shirt.</h1>
-        <p style="font-size:18px;color:rgba(240,237,232,0.55);line-height:1.6;margin-bottom:28px;">Shirts arrive at the booth Aug 2. Order by July 31 to guarantee your size.</p>
-        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
-          <span class="pill pill-green" style="font-size:13px;">Shirts from $30</span>
-          <span class="pill pill-gold" style="font-size:13px;">Ships to booth</span>
-        </div>
-        <p style="margin-top:24px;font-size:14px;color:rgba(202,138,4,0.6);letter-spacing:0.12em;font-weight:700;" id="og-url">southernlegends.blog/merch</p>
+    <div class="shirt-zone">
+      <div class="shirt-wrap">
+        <!-- shirt injected by JS -->
+        <img class="design-on-shirt" id="og-img" src="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png" alt="">
       </div>
-
-      <!-- Divider -->
-      <div class="divider-v" style="left:640px;top:40px;height:550px;opacity:0.25;"></div>
-
-      <!-- Right: shirt graphic -->
-      <div style="position:absolute;right:0;top:0;width:560px;height:630px;display:flex;align-items:center;justify-content:center;">
-        <div style="position:relative;width:440px;height:440px;border-radius:50%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;" id="og-shirt-bg">
-          <img class="graphic" id="og-img" src="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png"
-               alt="shirt" style="width:380px;height:380px;object-fit:contain;">
-        </div>
-      </div>
-
-      <!-- SL mark watermark -->
-      <svg class="sl-mark" style="right:32px;bottom:28px;width:48px;" viewBox="0 0 60 60">
-        <circle cx="30" cy="30" r="28" fill="none" stroke="#f0ede8" stroke-width="2"/>
-        <text x="30" y="36" text-anchor="middle" font-size="14" fill="#f0ede8" font-weight="700" font-family="Georgia">SL</text>
-      </svg>
     </div>
+    <div class="vignette"></div>
+    <div class="divider" style="left:56px;top:52px;width:56px;height:3px;"></div>
+
+    <div class="text-zone">
+      <p class="eyebrow">Woodstock 5K · Anniston, AL · Aug 2</p>
+      <h1 class="headline" id="og-hl">Pre-order<br>your shirt.</h1>
+      <p class="subline">Race booth pickup Aug 2.<br>Order by July 31 — sizes guaranteed.</p>
+      <div class="pills">
+        <span class="pill pill-green">From $30</span>
+        <span class="pill pill-gold">Ships to booth</span>
+      </div>
+      <p class="url-line" id="og-url">southernlegends.blog/merch</p>
+    </div>
+    <svg class="sl-mark" style="right:20px;bottom:18px;width:40px;height:40px;" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="27" fill="none" stroke="#f0ede8" stroke-width="2"/>
+      <text x="30" y="36" text-anchor="middle" font-size="13" fill="#f0ede8" font-weight="700" font-family="Georgia,serif">SL</text>
+    </svg>
   </div>
 </div>
 
-<!-- Square 1080×1080 -->
+<!-- ── Square 1080×1080 ── -->
 <div>
-  <p class="card-label">1080 × 1080 — Instagram / Facebook</p>
-  <div class="card-wrap" style="transform-origin:top left;transform:scale(0.55);">
-    <div class="card-sq" id="sq-card">
-      <div class="topo-bg"></div>
-
-      <!-- Top: shirt graphic -->
-      <div style="position:absolute;top:80px;left:50%;transform:translateX(-50%);width:700px;height:600px;display:flex;align-items:center;justify-content:center;">
-        <div style="width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;" id="sq-shirt-bg">
-          <img id="sq-img" src="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png"
-               alt="shirt" style="width:520px;height:520px;object-fit:contain;">
+  <p class="card-label">1080 × 1080 — Instagram / Facebook (55% preview)</p>
+  <div class="scaled-wrap" style="width:594px;height:594px;">
+  <div style="transform-origin:top left;transform:scale(0.55);width:1080px;height:1080px;">
+    <div class="card card-sq">
+      <div class="topo"></div>
+      <div class="shirt-zone">
+        <div class="shirt-wrap">
+          <img class="design-on-shirt" id="sq-img" src="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png" alt="">
         </div>
       </div>
-
-      <!-- Divider -->
-      <div class="divider" style="left:60px;right:60px;top:720px;opacity:0.35;"></div>
-
-      <!-- Bottom: text -->
-      <div style="position:absolute;bottom:100px;left:0;right:0;text-align:center;padding:0 80px;">
-        <p class="race-info" style="margin-bottom:12px;">Woodstock 5K · Anniston, AL · Aug 2, 2026</p>
-        <h2 class="headline" style="font-size:96px;margin-bottom:20px;">Pre-order<br>your shirt.</h2>
-        <div style="display:flex;gap:14px;justify-content:center;margin-bottom:24px;">
-          <span class="pill pill-green" style="font-size:15px;">Shirts from $30</span>
-          <span class="pill pill-gold" style="font-size:15px;">Ships to booth Aug 2</span>
+      <div class="vignette"></div>
+      <div class="text-zone">
+        <p class="eyebrow">Woodstock 5K · Anniston, AL · Aug 2, 2026</p>
+        <h2 class="headline" id="sq-hl">Pre-order<br>your shirt.</h2>
+        <p class="subline">Order by July 31. Pick up at the booth race day.</p>
+        <div class="pills center">
+          <span class="pill pill-green">From $30</span>
+          <span class="pill pill-gold">Ships to booth Aug 2</span>
         </div>
-        <p style="font-size:17px;color:rgba(202,138,4,0.65);letter-spacing:0.12em;font-weight:700;" id="sq-url">southernlegends.blog/merch</p>
+        <p class="url-line" id="sq-url">southernlegends.blog/merch</p>
       </div>
-
-      <!-- SL mark -->
-      <svg class="sl-mark" style="right:40px;bottom:40px;width:52px;" viewBox="0 0 60 60">
-        <circle cx="30" cy="30" r="28" fill="none" stroke="#f0ede8" stroke-width="2"/>
-        <text x="30" y="36" text-anchor="middle" font-size="14" fill="#f0ede8" font-weight="700" font-family="Georgia">SL</text>
+      <svg class="sl-mark" style="right:30px;bottom:30px;width:44px;height:44px;" viewBox="0 0 60 60">
+        <circle cx="30" cy="30" r="27" fill="none" stroke="#f0ede8" stroke-width="2"/>
+        <text x="30" y="36" text-anchor="middle" font-size="13" fill="#f0ede8" font-weight="700" font-family="Georgia,serif">SL</text>
       </svg>
     </div>
   </div>
+  </div>
 </div>
 
-<!-- Story 1080×1920 -->
+<!-- ── Story 1080×1920 ── -->
 <div>
-  <p class="card-label">1080 × 1920 — Stories / Reels</p>
-  <div class="card-wrap" style="transform-origin:top left;transform:scale(0.3);">
-    <div class="card-story" id="story-card">
-      <div class="topo-bg" style="opacity:0.09;"></div>
-
-      <!-- Top eyebrow -->
-      <div style="position:absolute;top:120px;left:0;right:0;text-align:center;">
-        <p class="race-info" style="font-size:16px;">Southern Legends · NE Alabama</p>
-      </div>
-
-      <!-- Shirt graphic center -->
-      <div style="position:absolute;top:220px;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;">
-        <div style="width:900px;height:900px;border-radius:50%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;" id="story-shirt-bg">
-          <img id="story-img" src="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png"
-               alt="shirt" style="width:820px;height:820px;object-fit:contain;">
+  <p class="card-label">1080 × 1920 — Stories / Reels (30% preview)</p>
+  <div class="scaled-wrap" style="width:324px;height:576px;">
+  <div style="transform-origin:top left;transform:scale(0.3);width:1080px;height:1920px;">
+    <div class="card card-story">
+      <div class="topo"></div>
+      <p style="position:absolute;top:80px;left:0;right:0;text-align:center;font-size:15px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(202,138,4,0.58);font-weight:700;">Southern Legends · NE Alabama</p>
+      <div class="shirt-zone">
+        <div class="shirt-wrap">
+          <img class="design-on-shirt" id="story-img" src="WOODSTOCK-00-woodstock-avenue-oval-CREAM.png" alt="">
         </div>
       </div>
-
-      <!-- Divider -->
-      <div class="divider" style="left:80px;right:80px;top:1180px;opacity:0.4;"></div>
-
-      <!-- Bottom text -->
-      <div style="position:absolute;bottom:160px;left:0;right:0;text-align:center;padding:0 100px;">
-        <p class="race-info" style="font-size:17px;margin-bottom:18px;">Woodstock 5K · Anniston, AL · Aug 2, 2026<br>RRCA Alabama State Championship</p>
-        <h2 class="headline" style="font-size:130px;margin-bottom:28px;">Pre-order<br>your shirt.</h2>
-        <p style="font-size:24px;color:rgba(240,237,232,0.45);margin-bottom:32px;line-height:1.55;">Shirts arrive at the booth Aug 2. Order by July 31 to guarantee your size.</p>
-        <div style="display:flex;gap:18px;justify-content:center;margin-bottom:36px;">
-          <span class="pill pill-green" style="font-size:18px;">From $30</span>
-          <span class="pill pill-gold" style="font-size:18px;">Ships to booth</span>
+      <div class="vignette"></div>
+      <div class="text-zone">
+        <p class="eyebrow">Woodstock 5K · Anniston, AL · Aug 2, 2026<br>RRCA Alabama State Championship</p>
+        <h2 class="headline" id="story-hl">Pre-order<br>your shirt.</h2>
+        <p class="subline">Race booth pickup Aug 2.<br>Order by July 31 to guarantee your size.</p>
+        <div class="pills center">
+          <span class="pill pill-green">From $30</span>
+          <span class="pill pill-gold">Ships to booth</span>
         </div>
-        <p style="font-size:22px;color:rgba(202,138,4,0.65);letter-spacing:0.14em;font-weight:700;" id="story-url">southernlegends.blog/merch</p>
+        <p class="url-line" id="story-url">southernlegends.blog/merch</p>
       </div>
-
-      <!-- SL mark -->
-      <svg class="sl-mark" style="right:60px;bottom:60px;width:60px;" viewBox="0 0 60 60">
-        <circle cx="30" cy="30" r="28" fill="none" stroke="#f0ede8" stroke-width="2"/>
-        <text x="30" y="36" text-anchor="middle" font-size="14" fill="#f0ede8" font-weight="700" font-family="Georgia">SL</text>
+      <svg class="sl-mark" style="right:44px;bottom:44px;width:52px;height:52px;" viewBox="0 0 60 60">
+        <circle cx="30" cy="30" r="27" fill="none" stroke="#f0ede8" stroke-width="2"/>
+        <text x="30" y="36" text-anchor="middle" font-size="13" fill="#f0ede8" font-weight="700" font-family="Georgia,serif">SL</text>
       </svg>
     </div>
+  </div>
   </div>
 </div>
 
 <script>
+const DESIGNS = {
+  'WOODSTOCK-00-woodstock-avenue-oval-CREAM.png': { shirt: '#f5f0e8', stroke: 'rgba(0,0,0,0.08)', collar: '#d4cfc9', seam: '#b0a89e' },
+  'WOODSTOCK-01-survived-woodstock-BLACK.png':    { shirt: '#1c1c1c', stroke: 'rgba(255,255,255,0.06)', collar: '#333', seam: '#444' },
+  '../merch/pv-raiders-xc.webp':                  { shirt: '#C8102E', stroke: 'rgba(0,0,0,0.12)', collar: '#a00d25', seam: '#8b0a1f' },
+  'SL-03-anniston-45-NAVY.png':                   { shirt: '#1e3a5f', stroke: 'rgba(255,255,255,0.06)', collar: '#162c4a', seam: '#1a3254' },
+  'WOODSTOCK-11-cheaha-skyway-BLACK.png':          { shirt: '#1c1c1c', stroke: 'rgba(255,255,255,0.06)', collar: '#333', seam: '#444' },
+  'WOODSTOCK-06-pinhoti-trail-BLACK.png':          { shirt: '#1c1c1c', stroke: 'rgba(255,255,255,0.06)', collar: '#333', seam: '#444' },
+  'WOODSTOCK-12-blossom-decay-roses-MOCHA.png':    { shirt: '#6b4c35', stroke: 'rgba(0,0,0,0.1)', collar: '#543b27', seam: '#4a3320' },
+}
+
+function injectShirts() {
+  const tpl = document.getElementById('shirt-tpl')
+  document.querySelectorAll('.shirt-wrap').forEach(wrap => {
+    const svg = tpl.content.firstElementChild.cloneNode(true)
+    svg.style.width = '100%'
+    svg.style.height = '100%'
+    wrap.insertBefore(svg, wrap.firstChild)
+  })
+  applyShirtColor(Object.keys(DESIGNS)[0])
+}
+
+function applyShirtColor(src) {
+  const d = DESIGNS[src] || DESIGNS[Object.keys(DESIGNS)[0]]
+  document.querySelectorAll('.shirt-body').forEach(el => {
+    el.setAttribute('fill', d.shirt)
+    el.setAttribute('stroke', d.stroke)
+  })
+  document.querySelectorAll('.shirt-collar').forEach(el => {
+    el.setAttribute('stroke', d.collar)
+  })
+  document.querySelectorAll('.shirt-seam').forEach(el => {
+    el.setAttribute('stroke', d.seam)
+  })
+}
+
 function updateDesign() {
-  const sel = document.getElementById('design-sel')
-  const opt = sel.options[sel.selectedIndex]
-  const src = opt.value
-  const bg = opt.dataset.bg || 'transparent'
+  const src = document.getElementById('design-sel').value
+  ;['og-img','sq-img','story-img'].forEach(id => document.getElementById(id).src = src)
+  applyShirtColor(src)
+}
 
-  document.getElementById('og-img').src    = src
-  document.getElementById('sq-img').src    = src
-  document.getElementById('story-img').src = src
-
-  // Always blank bg on promo cards — design renders on dark, not shirt color
-  const tint = 'rgba(255,255,255,0.03)'
-  document.getElementById('og-shirt-bg').style.background    = tint
-  document.getElementById('sq-shirt-bg').style.background    = tint
-  document.getElementById('story-shirt-bg').style.background = tint
+function updateHeadline() {
+  const raw = document.getElementById('hl-input').value
+  const html = raw.replace(' your ', '<br>your ')
+  ;['og-hl','sq-hl','story-hl'].forEach(id => document.getElementById(id).innerHTML = html)
 }
 
 function updateURL() {
   const url = document.getElementById('url-input').value
-  document.getElementById('og-url').textContent    = url
-  document.getElementById('sq-url').textContent    = url
-  document.getElementById('story-url').textContent = url
+  ;['og-url','sq-url','story-url'].forEach(id => document.getElementById(id).textContent = url)
 }
 
-function printAll() {
-  window.print()
-}
+injectShirts()
 </script>
 </body>
 </html>

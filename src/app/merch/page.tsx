@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MERCH, type MerchItem } from '@/lib/merch'
+import ShirtMockup from '@/components/ShirtMockup'
 
 const SHIRTS   = MERCH.filter(m => m.category === 'shirt' && m.available)
 const TOTES    = MERCH.filter(m => m.category === 'tote' && m.available)
@@ -206,9 +207,7 @@ export default function MerchPage() {
 
 function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
   const [hovered, setHovered] = useState(false)
-  // Default: raw design on blank bg. Hover: shirt color shows.
-  const showSrc = !hovered && item.rawGraphic ? item.rawGraphic : item.photo
-  const imgBg = hovered ? (item.bg ?? 'transparent') : 'transparent'
+  const isShirt = item.category === 'shirt' || item.category === 'hoodie'
 
   return (
     <Link href={`/buy/${item.id}`}
@@ -216,25 +215,54 @@ function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
       style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', border: '1px solid rgba(240,237,230,0.08)', boxShadow: '0 2px 16px rgba(0,0,0,0.3)', textDecoration: 'none', color: 'inherit' }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}>
-      <div className="relative overflow-hidden transition-colors duration-300"
-        style={{ aspectRatio: small ? '1' : '4/5', background: imgBg }}>
-        <Image src={showSrc} alt={item.name} fill
-          className="object-contain transition-transform duration-500 group-hover:scale-[1.04]"
-          sizes={small ? '220px' : '(max-width: 640px) 100vw, 320px'} style={{ padding: 16 }} />
-        {item.badge && (
-          <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full"
-            style={{ background: item.badgeColor ?? '#9A3412', color: '#fff', letterSpacing: '0.06em' }}>
-            {item.badge}
-          </span>
-        )}
-        <div className="absolute inset-0 flex items-end justify-center pb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)' }}>
-          <span className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-lg"
-            style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)' }}>
-            Buy now →
-          </span>
+
+      {/* Shirt items: blank shirt mockup; hover shows shirt color */}
+      {isShirt ? (
+        <div className="relative flex items-center justify-center overflow-hidden"
+          style={{ aspectRatio: small ? '1' : '4/5', background: 'rgba(255,255,255,0.015)', padding: small ? 8 : 16 }}>
+          <ShirtMockup
+            src={item.photo}
+            alt={item.name}
+            shirtColor={hovered ? (item.bg ?? '#f5f0e8') : undefined}
+            size={small ? 160 : 260}
+          />
+          {item.badge && (
+            <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full z-10"
+              style={{ background: item.badgeColor ?? '#9A3412', color: '#fff', letterSpacing: '0.06em' }}>
+              {item.badge}
+            </span>
+          )}
+          <div className="absolute inset-0 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }}>
+            <span className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-lg"
+              style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)' }}>
+              Buy now →
+            </span>
+          </div>
         </div>
-      </div>
+      ) : (
+        /* Non-shirt items (stickers, totes, prints): plain image */
+        <div className="relative overflow-hidden"
+          style={{ aspectRatio: small ? '1' : '4/5', background: item.bg ?? 'transparent' }}>
+          <Image src={item.photo} alt={item.name} fill
+            className="object-contain transition-transform duration-500 group-hover:scale-[1.04]"
+            sizes={small ? '220px' : '(max-width: 640px) 100vw, 320px'} style={{ padding: 16 }} />
+          {item.badge && (
+            <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full"
+              style={{ background: item.badgeColor ?? '#9A3412', color: '#fff', letterSpacing: '0.06em' }}>
+              {item.badge}
+            </span>
+          )}
+          <div className="absolute inset-0 flex items-end justify-center pb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)' }}>
+            <span className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-lg"
+              style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)' }}>
+              Buy now →
+            </span>
+          </div>
+        </div>
+      )}
+
       <div className="p-4">
         <div className="flex items-start justify-between mb-1">
           <h2 className="font-black text-sm leading-tight flex-1 mr-2" style={{ fontFamily: 'var(--font-heading)' }}>{item.name}</h2>

@@ -4,21 +4,18 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getMerchForContext, type MerchContext, type MerchItem } from '@/lib/merch'
+import ShirtMockup from './ShirtMockup'
 
 type Props = {
   ctx: MerchContext
-  /** Override heading. Default: "From the SL Shop" */
   heading?: string
-  /** Show in compact row vs 2-col grid. Default: grid */
   layout?: 'row' | 'grid'
 }
 
-/** Shirt-on-background card with raw-graphic-on-hover */
 function MerchCard({ item, compact }: { item: MerchItem; compact?: boolean }) {
   const [hovered, setHovered] = useState(false)
-  // Default: raw design on blank bg; hover: shirt color shows
-  const src   = !hovered && item.rawGraphic ? item.rawGraphic : item.photo
-  const imgBg = hovered ? (item.bg ?? 'transparent') : 'transparent'
+  const isShirt = item.category === 'shirt' || item.category === 'hoodie'
+  const size = compact ? 120 : 190
 
   return (
     <Link
@@ -34,23 +31,40 @@ function MerchCard({ item, compact }: { item: MerchItem; compact?: boolean }) {
         transition: 'transform 0.15s, box-shadow 0.15s',
       }}
     >
+      {/* Photo zone */}
       <div style={{
-        position: 'relative', aspectRatio: compact ? '1' : '4/5',
-        background: imgBg, transition: 'background 0.25s',
+        position: 'relative',
+        aspectRatio: compact ? '1' : '4/5',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        background: isShirt ? 'rgba(255,255,255,0.015)' : (item.bg ?? 'transparent'),
+        padding: compact ? 6 : 12,
+        overflow: 'hidden',
       }}>
-        <Image
-          src={src} alt={item.name} fill
-          style={{ objectFit: 'contain', padding: 12, transition: 'transform 0.4s' }}
-          sizes="(max-width: 640px) 50vw, 280px"
-        />
+        {isShirt ? (
+          <ShirtMockup
+            src={item.photo}
+            alt={item.name}
+            shirtColor={hovered ? (item.bg ?? '#f5f0e8') : undefined}
+            size={size}
+          />
+        ) : (
+          <Image
+            src={item.photo} alt={item.name} fill
+            style={{ objectFit: 'contain', padding: compact ? 8 : 12, transition: 'transform 0.4s' }}
+            sizes={compact ? '150px' : '280px'}
+          />
+        )}
         {item.badge && (
           <span style={{
-            position: 'absolute', top: 10, left: 10, fontSize: 10, fontWeight: 700,
+            position: 'absolute', top: 8, left: 8, fontSize: 9, fontWeight: 700,
             padding: '3px 8px', borderRadius: 99,
             background: item.badgeColor ?? '#9A3412', color: '#fff', letterSpacing: '0.06em',
+            zIndex: 1,
           }}>{item.badge}</span>
         )}
       </div>
+
+      {/* Info */}
       <div style={{ padding: compact ? '8px 10px' : '12px 14px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 6, marginBottom: 2 }}>
           <p style={{ fontFamily: 'var(--font-heading, Georgia)', fontWeight: 900, fontSize: compact ? '0.78rem' : '0.88rem', lineHeight: 1.2, flex: 1 }}>
@@ -71,7 +85,6 @@ function MerchCard({ item, compact }: { item: MerchItem; compact?: boolean }) {
   )
 }
 
-/** Drop-in contextual merch block — put below any profile, essay, or city section */
 export default function ContextualMerchGrid({ ctx, heading, layout = 'grid' }: Props) {
   const items = getMerchForContext(ctx)
   if (!items.length) return null
