@@ -31,7 +31,7 @@ export default function AffiliateSignup() {
         body: JSON.stringify({
           name,
           email,
-          venture: 'southern-legends',
+          venture_slug: 'southern-legends',
           notes: handle ? `${platform || 'social'}: ${handle}` : '',
         }),
       })

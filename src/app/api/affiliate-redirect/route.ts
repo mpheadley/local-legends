@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         name,
         email,
-        venture: 'southern-legends',
+        venture_slug: 'southern-legends',
         notes: notes || '',
       }),
     })
