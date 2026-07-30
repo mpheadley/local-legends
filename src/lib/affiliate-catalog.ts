@@ -140,6 +140,19 @@ export const AFFILIATE_CATALOG: AffiliateProduct[] = [
     category: 'event',
   },
 
+  // ── ECCLESIA MERCH ────────────────────────────────────────────────────────
+  {
+    key: 'ecclesia-shirts',
+    label: 'Ecclesia Shirts — Ancient Paths, Coin, Pilgrims',
+    venture: 'Ecclesia Studio',
+    price: '$28–$35',
+    commission: '12%',
+    commissionNote: '$3.36–$4.20 per sale',
+    dest: 'https://southernlegends.blog/merch',
+    description: '8-bit coin, pilgrims in the forest, Celtic knot. For the church that walks a different road.',
+    category: 'merch',
+  },
+
   // ── ECCLESIA SHOP ─────────────────────────────────────────────────────────
   {
     key: 'advent-kit',

@@ -4,38 +4,35 @@ import { AFFILIATE_CATALOG, CATEGORY_LABELS, type AffiliateProduct } from '@/lib
 
 const REGISTRY_API = 'https://gather-registry.vercel.app/api/affiliate'
 
-// YouTube demo videos per product key — add as you record them
+// YouTube demo videos per product key — add real IDs as you record demos
 const YOUTUBE_IDS: Record<string, string> = {
-  'blueprint-session': 'dQw4w9WgXcQ', // placeholder — swap with real ID
-  'gather-os': '',
-  'cadence': '',
-  'advent-kit': '',
-  'heather-florals': '',
-  'aisle-tickets': '',
+  // 'blueprint-session': 'REAL_YT_ID',
+  // 'gather-os': 'REAL_YT_ID',
+  // 'heather-florals': 'REAL_YT_ID',
 }
 
-// Thumbnail images per product key
+// Thumbnail images per product key — all paths verified on disk
 const THUMBNAILS: Record<string, string> = {
-  'merch': '/print-files/freedom-riders/dennis-shirt-design.png',
-  'freedom-riders-shirt': '/print-files/freedom-riders/dennis-shirt-design.png',
-  'anniston-45-shirt': '/print-files/anniston-45-shirt.png',
-  'woodstock-shirt': '/merch/woodstock-shirt-v2.png',
-  'pv-raiders-shirt': '/merch/pv-raiders-xc.webp',
+  'freedom-riders-shirt': '/print-files/FREEDOM-RIDERS-02-dennis-portrait-BLACK.png',
+  'anniston-45-shirt': '/merch/anniston-45-mockup.webp',
+  'woodstock-shirt': '/merch/20260726_182840_gpt_vintage-t-shirt-mockup-on-black-shirt,-d.webp',
+  'pv-raiders-shirt': '/merch/clt-shirt-mockup.webp',
   'clt-shirt': '/merch/clt-shirt-mockup.webp',
   'sl-stickers': '/merch/clt-sticker-stack.webp',
   'headley-bros': '/images/headshot-hedcut.webp',
   'heather-florals': '/images/heather-headshot.webp',
-  'bloom-bar': '/images/heather-headshot.webp',
+  'bloom-bar': '/merch/bloom-bar-tee.webp',
   'blueprint-session': '/images/headshot-hedcut.webp',
   'gather-os': '/images/headshot-hedcut.webp',
   'cadence': '/images/headshot-hedcut.webp',
-  'advent-kit': '/images/arts/ecclesia/ecclesia-coin-glow.png',
-  'ecclesia-marketing': '/images/arts/ecclesia/ecclesia-coin-glow.png',
+  'ecclesia-shirts': '/print-files/ECCLESIA-05-pilgrims-shirt.webp',
+  'advent-kit': '/print-files/ECCLESIA-04-coin-8bit-shirt.webp',
+  'ecclesia-marketing': '/print-files/ECCLESIA-03-coin-celtic-shirt.webp',
   'sermoncoach': '/images/headshot-hedcut.webp',
   'tend-presell': '/images/headshot-hedcut.webp',
-  'sl-books': '/images/journal/broken-ground-hero.webp',
+  'sl-books': '/images/essays/broken-ground-book-hero.webp',
   'silver-run': '/images/headshot-hedcut.webp',
-  'aisle-tickets': '/images/headshot-hedcut.webp',
+  'aisle-tickets': '/merch/aisle-vendor-tee-mockup.webp',
 }
 
 const CATEGORY_ORDER: AffiliateProduct['category'][] = ['service', 'event', 'shop', 'product', 'merch']
