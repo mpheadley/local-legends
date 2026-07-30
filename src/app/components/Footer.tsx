@@ -59,6 +59,12 @@ export default function Footer() {
               >
                 Ecclesia Community
               </a>
+              <Link
+                href="/affiliate"
+                className="text-sm text-white/80 hover:text-white transition-colors"
+              >
+                Partner Program
+              </Link>
             </div>
 
             <div className="flex flex-col gap-3">

@@ -4,6 +4,14 @@
 
 ---
 
+## Affiliate Partner Program (2026-07-30)
+
+- **`/affiliate`** — Signup form: name, email, optional social handle/platform → POSTs to Gather Registry Turso API (`gather-registry.vercel.app/api/affiliate`) → returns unique affiliate code + referral link. Shows code, copy-to-clipboard, and link to Registry affiliate dashboard.
+- **`/r/[code]`** — Server-side referral redirect: records click via Registry API, then redirects to destination (merch, shop, or books) with `?ref=<code>` appended for downstream tracking. `noindex` metadata.
+- **`/api/affiliate-redirect`** — Thin proxy: POST to create affiliate (proxies to Registry), GET to look up code. Keeps SL client-side code clean.
+- **Footer** — Partner Program link added under Get Involved.
+- **Backend** — Unified across ventures via Gather Registry Turso DB (not SL Supabase). All commissions tracked in one place.
+
 ## Email Growth System (2026-07-21)
 
 - **`SubscribePopup`** — fires at 45% scroll depth, localStorage-gated (14-day cooldown), dark SL aesthetic, email + firstName → `/api/subscribe`. Wired in root `layout.tsx`.
