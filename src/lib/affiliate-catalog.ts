@@ -13,14 +13,69 @@ export type AffiliateProduct = {
 export const AFFILIATE_CATALOG: AffiliateProduct[] = [
   // ── MERCH ──────────────────────────────────────────────────────────────────
   {
-    key: 'merch',
-    label: 'Southern Legends Merch',
+    key: 'freedom-riders-shirt',
+    label: 'Freedom Riders — Anniston, 1961',
     venture: 'Southern Legends',
-    price: '$18–$35',
-    commission: '10–15%',
-    commissionNote: '$2–5 per sale',
+    price: '$40',
+    commission: '15%',
+    commissionNote: '$6 per sale · 25% → civil rights ed.',
+    dest: 'https://southernlegends.blog/buy/freedom-riders-shirt',
+    description: 'The shirt that started SL merch. Anniston, 1961. A quarter of every sale funds local civil rights education.',
+    category: 'merch',
+  },
+  {
+    key: 'anniston-45-shirt',
+    label: 'Anniston 45 — 45 Years of Running',
+    venture: 'Southern Legends',
+    price: '$35',
+    commission: '15%',
+    commissionNote: '$5.25 per sale',
+    dest: 'https://southernlegends.blog/buy/anniston-45-shirt',
+    description: 'Anniston, Alabama — 45 years of road racing. Navy shirt, DTF print.',
+    category: 'merch',
+  },
+  {
+    key: 'woodstock-shirt',
+    label: 'I Survived Woodstock Avenue',
+    venture: 'Southern Legends',
+    price: '$30',
+    commission: '15%',
+    commissionNote: '$4.50 per sale',
+    dest: 'https://southernlegends.blog/buy/woodstock-shirt',
+    description: 'Woodstock 5K — RRCA Alabama State Championship. Aug 2, 2026, Anniston.',
+    category: 'merch',
+  },
+  {
+    key: 'pv-raiders-shirt',
+    label: 'PV Raiders XC — Run Like You Stole It',
+    venture: 'Southern Legends',
+    price: '$30',
+    commission: '10%',
+    commissionNote: '$3 per sale · 25% → Raiders XC program',
+    dest: 'https://southernlegends.blog/buy/pv-raiders-shirt',
+    description: 'Every sale puts money back into the Pleasant Valley XC program. Real fundraiser, not just a slogan.',
+    category: 'merch',
+  },
+  {
+    key: 'clt-shirt',
+    label: "Ladiga's Land — Chief Ladiga Trail",
+    venture: 'Southern Legends',
+    price: '$35',
+    commission: '15%',
+    commissionNote: '$5.25 per sale',
+    dest: 'https://southernlegends.blog/buy/clt-shirt',
+    description: '61 miles, Anniston to Cleburne County. The best trail in Alabama that nobody talks about.',
+    category: 'merch',
+  },
+  {
+    key: 'sl-stickers',
+    label: 'Southern Legends Stickers',
+    venture: 'Southern Legends',
+    price: '$5–$8',
+    commission: '15%',
+    commissionNote: '$0.75–$1.20 per sale',
     dest: 'https://southernlegends.blog/merch',
-    description: 'Shirts, stickers, prints. Freedom Riders, Pinhoti Trail, Anniston 45.',
+    description: 'CLT trail sticker, Ecclesia coin sticker, Woodstock badge. Vinyl, waterproof.',
     category: 'merch',
   },
   {
@@ -191,6 +246,11 @@ DESTINATIONS['default'] = 'https://southernlegends.blog/merch'
 DESTINATIONS['merch'] = 'https://southernlegends.blog/merch'
 DESTINATIONS['shop'] = 'https://ecclesiacommunity.org/shop'
 DESTINATIONS['books'] = 'https://southernlegends.blog/books'
+DESTINATIONS['freedom-riders'] = 'https://southernlegends.blog/buy/freedom-riders-shirt'
+DESTINATIONS['anniston-45'] = 'https://southernlegends.blog/buy/anniston-45-shirt'
+DESTINATIONS['woodstock'] = 'https://southernlegends.blog/buy/woodstock-shirt'
+DESTINATIONS['pv-raiders'] = 'https://southernlegends.blog/buy/pv-raiders-shirt'
+DESTINATIONS['clt'] = 'https://southernlegends.blog/buy/clt-shirt'
 
 export const CATEGORY_LABELS: Record<AffiliateProduct['category'], string> = {
   merch: 'Merch',

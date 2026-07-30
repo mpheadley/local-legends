@@ -16,7 +16,14 @@ const YOUTUBE_IDS: Record<string, string> = {
 
 // Thumbnail images per product key
 const THUMBNAILS: Record<string, string> = {
-  'merch': '/images/merch/freedom-riders-shirt.webp',
+  'merch': '/print-files/freedom-riders/dennis-shirt-design.png',
+  'freedom-riders-shirt': '/print-files/freedom-riders/dennis-shirt-design.png',
+  'anniston-45-shirt': '/print-files/anniston-45-shirt.png',
+  'woodstock-shirt': '/merch/woodstock-shirt-v2.png',
+  'pv-raiders-shirt': '/merch/pv-raiders-xc.webp',
+  'clt-shirt': '/merch/clt-shirt-mockup.webp',
+  'sl-stickers': '/merch/clt-sticker-stack.webp',
+  'headley-bros': '/images/headshot-hedcut.webp',
   'heather-florals': '/images/heather-headshot.webp',
   'bloom-bar': '/images/heather-headshot.webp',
   'blueprint-session': '/images/headshot-hedcut.webp',
@@ -27,6 +34,8 @@ const THUMBNAILS: Record<string, string> = {
   'sermoncoach': '/images/headshot-hedcut.webp',
   'tend-presell': '/images/headshot-hedcut.webp',
   'sl-books': '/images/journal/broken-ground-hero.webp',
+  'silver-run': '/images/headshot-hedcut.webp',
+  'aisle-tickets': '/images/headshot-hedcut.webp',
 }
 
 const CATEGORY_ORDER: AffiliateProduct['category'][] = ['service', 'event', 'shop', 'product', 'merch']
