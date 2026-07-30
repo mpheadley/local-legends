@@ -4,6 +4,7 @@ const SECTIONS = [
   { label: "Stories", href: "/profiles", desc: "People and places of the South" },
   { label: "Places", href: "/places", desc: "Cities and towns across Alabama" },
   { label: "Trails", href: "/trails", desc: "Chief Ladiga, Silver Comet, and NE Alabama trails" },
+  { label: "Parks", href: "/parks", desc: "Cheaha, Noccalula, Little River Canyon, and more" },
   { label: "Arts", href: "/arts", desc: "Poetry, music, and theater" },
   { label: "Books", href: "/books", desc: "Literature from and about the South" },
   { label: "Land", href: "/land", desc: "Farming, gardening, and homesteading" },

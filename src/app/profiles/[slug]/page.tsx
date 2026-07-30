@@ -24,6 +24,8 @@ import ScrollytellingProfile from "@/app/components/ScrollytellingProfile";
 import ParallaxHero from "@/app/components/ParallaxHero";
 import NewsletterCapture from "@/app/components/NewsletterCapture";
 import Comments from "@/app/components/Comments";
+import PlaylistEmbed from "@/app/components/PlaylistEmbed";
+import { getPlaylist } from "@/lib/playlists";
 import { getProfileMerch, getMerchForCity } from "@/lib/merch";
 import ClosingSection from "@/app/components/ClosingSection";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
@@ -450,6 +452,19 @@ export default async function ProfilePage({
       <article className="bg-ll-light">
         <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 prose-profile">
           <MDXRemote source={content} components={mdxComponents} />
+          {(() => {
+            const pl = getPlaylist(slug);
+            return pl ? (
+              <div className="mt-10 not-prose">
+                <PlaylistEmbed
+                  playlistId={pl.playlistId}
+                  videoId={pl.videoId}
+                  title={pl.title}
+                  caption={pl.caption}
+                />
+              </div>
+            ) : null;
+          })()}
         </div>
       </article>
       <div id="share-bar-sentinel" aria-hidden="true" />

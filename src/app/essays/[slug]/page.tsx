@@ -37,6 +37,8 @@ import BookTeaser from "@/app/components/BookTeaser";
 import ArticleGate from "@/app/components/ArticleGate";
 import PhotoCarouselLoader from "@/app/components/PhotoCarouselLoader";
 import TestimonialBlock from "@/app/components/TestimonialBlock";
+import PlaylistEmbed from "@/app/components/PlaylistEmbed";
+import { getPlaylist } from "@/lib/playlists";
 
 function Dateline({ children }: { children: React.ReactNode }) {
   return (
@@ -48,17 +50,18 @@ function Dateline({ children }: { children: React.ReactNode }) {
 
 function FeaturedImage({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
   return (
-    <div className="not-prose my-10">
-      <Image
-        src={src}
-        alt={alt}
-        width={900}
-        height={600}
-        className="w-full rounded-lg object-cover"
-        priority
-      />
+    <div className="not-prose -mx-4 md:-mx-8 lg:-mx-16 mb-10">
+      <div className="relative w-full" style={{ height: "50vh", minHeight: 320 }}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover object-top"
+          priority
+        />
+      </div>
       {caption && (
-        <p className="mt-2 text-xs text-center italic text-ll-text-light">{caption}</p>
+        <p className="mt-2 text-xs text-center italic text-ll-text-light px-4">{caption}</p>
       )}
     </div>
   );
@@ -140,6 +143,7 @@ const mdxComponents = {
   Callout,
   PhotoCarouselLoader,
   TestimonialBlock,
+  PlaylistEmbed,
 };
 
 type Params = Promise<{ slug: string }>;
@@ -256,6 +260,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
               priority
               sizes="100vw"
               className="object-cover"
+              style={{ objectPosition: (frontmatter as { heroFocus?: string }).heroFocus ?? "center 20%" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ll-dark/95 via-ll-dark/60 to-ll-dark/30 z-[1]" aria-hidden="true" />
           </>
@@ -306,7 +311,7 @@ export default async function JournalPostPage({ params }: { params: Params }) {
 
       {/* Article */}
       <article className="bg-ll-light">
-        <div className="relative max-w-3xl mx-auto px-6 py-12 md:py-16 prose-journal">
+        <div className="relative max-w-3xl mx-auto px-6 py-12 md:py-16 prose-journal after:content-[''] after:block after:clear-both">
           <ArticleGate slug={slug} />
           {frontmatter.image && frontmatter.image !== heroSrc && (
             <div className="not-prose mb-10">
@@ -337,6 +342,21 @@ export default async function JournalPostPage({ params }: { params: Params }) {
             </div>
           )}
           <MDXRemote source={content} components={mdxComponents} />
+
+          {/* Auto-inject YouTube playlist if one is configured for this slug */}
+          {(() => {
+            const pl = getPlaylist(slug);
+            return pl ? (
+              <div className="mt-10">
+                <PlaylistEmbed
+                  playlistId={pl.playlistId}
+                  videoId={pl.videoId}
+                  title={pl.title}
+                  caption={pl.caption}
+                />
+              </div>
+            ) : null;
+          })()}
         </div>
       </article>
 

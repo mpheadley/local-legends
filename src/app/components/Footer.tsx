@@ -51,6 +51,14 @@ export default function Footer() {
               >
                 Support This Work
               </Link>
+              <a
+                href="https://ecclesiacommunity.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-white/80 hover:text-white transition-colors"
+              >
+                Ecclesia Community
+              </a>
             </div>
 
             <div className="flex flex-col gap-3">

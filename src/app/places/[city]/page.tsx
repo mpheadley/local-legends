@@ -17,6 +17,8 @@ import SpotifyEmbed from "@/app/components/SpotifyEmbed"
 import CityThemePlayer from "@/app/components/CityThemePlayer"
 import { getPlaylistId } from "@/lib/spotify-config"
 import { getMerchForCity } from "@/lib/merch"
+import PlaylistEmbed from "@/app/components/PlaylistEmbed"
+import { getPlaylist } from "@/lib/playlists"
 
 export const revalidate = 86400 // revalidate daily
 
@@ -234,6 +236,17 @@ export default async function CityPage({ params }: Props) {
           title="Listening — Southern Legends"
           compact
         />
+        {(() => {
+          const pl = getPlaylist(citySlug)
+          return pl ? (
+            <PlaylistEmbed
+              playlistId={pl.playlistId}
+              videoId={pl.videoId}
+              title={pl.title}
+              caption={pl.caption}
+            />
+          ) : null
+        })()}
       </div>
 
       {/* HERO PHOTO */}

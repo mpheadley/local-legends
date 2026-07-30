@@ -103,6 +103,52 @@ export default function MinistryPage() {
 
       {/* Directory */}
       <section style={{ maxWidth: "900px", margin: "0 auto", padding: "3rem 1.5rem" }}>
+        {/* Featured: Ecclesia — fresh expression */}
+        <a
+          href="https://ecclesiacommunity.org"
+          style={{
+            display: "block",
+            textDecoration: "none",
+            background: "linear-gradient(135deg, #1a3a1a 0%, #2d1a0a 100%)",
+            borderRadius: "8px",
+            padding: "1.75rem 1.75rem",
+            marginBottom: "3rem",
+            color: "#f0ede6",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "0.7rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              color: "#c79a4a",
+              marginBottom: "0.6rem",
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            A Fresh Expression · Anniston
+          </p>
+          <h2
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(1.4rem, 4vw, 2rem)",
+              fontWeight: 900,
+              lineHeight: 1.15,
+              marginBottom: "0.6rem",
+              color: "#f0ede6",
+            }}
+          >
+            Ecclesia Community
+          </h2>
+          <p style={{ fontSize: "0.95rem", color: "#d4c9b8", lineHeight: 1.65, maxWidth: "560px" }}>
+            A fresh expression of Christian community in Northeast Alabama — gathered around the table,
+            the land, and the work of walking together. Pastored by Matt Headley.
+          </p>
+          <p style={{ fontSize: "0.85rem", color: "#c79a4a", marginTop: "1rem", fontFamily: "var(--font-body)" }}>
+            Visit ecclesiacommunity.org →
+          </p>
+        </a>
+
         <p
           style={{
             fontSize: "0.7rem",
