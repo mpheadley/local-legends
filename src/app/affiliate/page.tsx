@@ -4,11 +4,10 @@ import { AFFILIATE_CATALOG, CATEGORY_LABELS, type AffiliateProduct } from '@/lib
 
 const REGISTRY_API = 'https://gather-registry.vercel.app/api/affiliate'
 
-// YouTube demo videos per product key — add real IDs as you record demos
+// YouTube demo videos per product key
 const YOUTUBE_IDS: Record<string, string> = {
-  // 'blueprint-session': 'REAL_YT_ID',
-  // 'gather-os': 'REAL_YT_ID',
-  // 'heather-florals': 'REAL_YT_ID',
+  'freedom-riders-shirt': '147xvOixWd0',  // Freedom Riders National Monument essay
+  'sermoncoach': 'upVG97BpaFw',           // The Digital Gym — SermonCoach in context
 }
 
 // Thumbnail images per product key — all paths verified on disk
@@ -19,19 +18,19 @@ const THUMBNAILS: Record<string, string> = {
   'pv-raiders-shirt': '/merch/clt-shirt-mockup.webp',
   'clt-shirt': '/merch/clt-shirt-mockup.webp',
   'sl-stickers': '/merch/clt-sticker-stack.webp',
-  'headley-bros': '/images/headshot-hedcut.webp',
-  'heather-florals': '/images/heather-headshot.webp',
+  'headley-bros': '/images/about/headshot-hedcut-matt-headley.webp',
+  'heather-florals': '/images/heather/heather-headshot.webp',
   'bloom-bar': '/merch/bloom-bar-tee.webp',
-  'blueprint-session': '/images/headshot-hedcut.webp',
-  'gather-os': '/images/headshot-hedcut.webp',
-  'cadence': '/images/headshot-hedcut.webp',
+  'blueprint-session': '/images/about/headshot-hedcut-matt-headley.webp',
+  'gather-os': '/images/about/headshot-hedcut-matt-headley.webp',
+  'cadence': '/images/about/headshot-hedcut-matt-headley.webp',
   'ecclesia-shirts': '/print-files/ECCLESIA-05-pilgrims-shirt.webp',
   'advent-kit': '/print-files/ECCLESIA-04-coin-8bit-shirt.webp',
   'ecclesia-marketing': '/print-files/ECCLESIA-03-coin-celtic-shirt.webp',
-  'sermoncoach': '/images/headshot-hedcut.webp',
-  'tend-presell': '/images/headshot-hedcut.webp',
+  'sermoncoach': '/images/about/headshot-hedcut-matt-headley.webp',
+  'tend-presell': '/images/about/headshot-hedcut-matt-headley.webp',
   'sl-books': '/images/essays/broken-ground-book-hero.webp',
-  'silver-run': '/images/headshot-hedcut.webp',
+  'silver-run': '/images/about/headshot-hedcut-matt-headley.webp',
   'aisle-tickets': '/merch/aisle-vendor-tee-mockup.webp',
 }
 
