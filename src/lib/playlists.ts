@@ -32,6 +32,12 @@ const playlists: Record<string, PlaylistConfig> = {
     title: "Redbird Willow Farm — on camera",
     caption: "News coverage and farm videos from Redbird Willow Farm, Anniston, AL.",
   },
+  "michele-hornsby-redbird-willow": {
+    playlistId: "PLRBWFarm",
+    videoId: "gHePXlmAOOo",
+    title: "Redbird Willow Farm — on camera",
+    caption: "News coverage and farm videos from Redbird Willow Farm, Anniston, AL.",
+  },
 
   // ── CITIES ── (search YouTube "[city] Alabama"; drop the real list= id here) ──
   anniston: {
