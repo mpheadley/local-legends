@@ -71,6 +71,26 @@ export default function NotFound() {
           </div>
         </section>
       )}
+
+      {/* Iris easter egg */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes iris-in  { from { opacity:0; transform:translateY(16px) scale(0.85); } to { opacity:1; transform:translateY(0) scale(1); } }
+        @keyframes iris-out { from { opacity:1; } to { opacity:0; } }
+        #iris-egg { position:fixed; bottom:20px; right:20px; width:88px; height:auto;
+          image-rendering:pixelated; opacity:0; pointer-events:none; z-index:9999; }
+        #iris-egg.show { animation: iris-in 0.5s ease forwards; }
+        #iris-egg.hide { animation: iris-out 0.7s ease forwards; }
+      `}} />
+      <img id="iris-egg" src="/images/iris-cat-jump.gif" alt="" aria-hidden="true" />
+      <script dangerouslySetInnerHTML={{ __html: `
+        (function(){
+          var el = document.getElementById('iris-egg');
+          if(!el) return;
+          setTimeout(function(){ el.classList.add('show'); }, 3000);
+          setTimeout(function(){ el.classList.add('hide'); }, 9500);
+          setTimeout(function(){ el.style.display='none'; }, 10300);
+        })();
+      `}} />
     </main>
   );
 }
