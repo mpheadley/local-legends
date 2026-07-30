@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { MERCH, type MerchItem } from '@/lib/merch'
 import ShirtMockup from '@/components/ShirtMockup'
@@ -61,8 +62,7 @@ function DesignCard({ item }: { item: MerchItem }) {
           />
         ) : (
           <div style={{ position: 'relative', width: '100%', aspectRatio: '1' }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={item.photo} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 12 }} />
+            <Image src={item.photo} alt={item.name} fill style={{ objectFit: 'contain', padding: 12 }} sizes="320px" />
           </div>
         )}
         {item.badge && (

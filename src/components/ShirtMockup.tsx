@@ -1,5 +1,6 @@
 'use client'
 
+import { useId } from 'react'
 import Image from 'next/image'
 
 /**
@@ -43,6 +44,7 @@ function isDark(hex: string): boolean {
 const BLANK: ShirtColor = '#f5f0e8'
 
 export default function ShirtMockup({ src, alt, shirtColor, size = 320, className }: Props) {
+  const uid   = useId().replace(/:/g, '')
   const fill  = shirtColor ?? BLANK
   const dark  = isDark(fill)
   const pal   = shirtPalette(fill)
@@ -64,7 +66,7 @@ export default function ShirtMockup({ src, alt, shirtColor, size = 320, classNam
         style={{ display: 'block', position: 'absolute', inset: 0 }}
       >
         <defs>
-          <filter id={`shad-${size}`} x="-6%" y="-4%" width="112%" height="116%">
+          <filter id={`shad-${uid}`} x="-6%" y="-4%" width="112%" height="116%">
             <feDropShadow dx="0" dy="5" stdDeviation="10" floodColor="rgba(0,0,0,0.18)" />
           </filter>
         </defs>
@@ -83,7 +85,7 @@ export default function ShirtMockup({ src, alt, shirtColor, size = 320, classNam
           fill={fill}
           stroke={pal.stroke}
           strokeWidth="0.5"
-          filter={`url(#shad-${size})`}
+          filter={`url(#shad-${uid})`}
         />
         {/* Collar highlight arc */}
         <path
