@@ -13,7 +13,7 @@
     --primary: #9A3412;
     --primary-lt: #f97316;
     --gold: #ca8a04;
-    --topo: url('/images/topo-7.png');
+    --topo: url('../images/topo-7.png');
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -137,7 +137,7 @@
 </head>
 <body>
 <div class="page">
-  <p class="page-title">Woodstock Merch — SL Context Preview · Hover = raw graphic on plain bg</p>
+  <p class="page-title">Woodstock Merch — SL Context Preview · Blank by default · Hover = shirt on</p>
 
   <!-- ────── SCENE 1: Below a profile ────── -->
   <div class="scene">
@@ -160,7 +160,7 @@
       <div class="line rev"></div>
     </div>
 
-    <p class="hover-note">Default: graphic on <span>shirt color</span> · Hover: raw graphic on plain background</p>
+    <p class="hover-note">Default: raw design on <span>blank</span> · Hover: see it on shirt color</p>
 
     <div class="merch-grid" id="profile-grid"></div>
 
@@ -183,7 +183,7 @@
     </div>
 
     <p class="scene-label" style="margin-bottom:14px;">Shirts section</p>
-    <p class="hover-note">Graphic on shirt bg · Hover → raw graphic isolated</p>
+  <p class="hover-note">Default: blank bg · Hover: <span>shirt color</span></p>
     <div class="merch-grid" id="store-grid"></div>
     <div class="more-link"><a href="/merch">View all items →</a></div>
   </div>
@@ -192,13 +192,16 @@
 
 <script>
 // Woodstock + Anniston merch items — mirrors merch.ts scored output
+// Paths relative to public/print-files/ (for file:// preview)
+// /print-files/X → X (same dir)
+// /merch/X → ../merch/X
 const WOODSTOCK_ITEMS = [
   {
     id: 'woodstock-oval-shirt',
     name: 'Woodstock Avenue Oval',
     tagline: 'Anniston, AL · Aug 2, 2026',
     price: 35,
-    photo: '/print-files/WOODSTOCK-00-woodstock-avenue-oval-CREAM.png',
+    photo: 'WOODSTOCK-00-woodstock-avenue-oval-CREAM.png',
     bg: '#f5f0e8',
     badge: 'Event',
     badgeColor: '#166534',
@@ -209,7 +212,7 @@ const WOODSTOCK_ITEMS = [
     name: 'I Survived Woodstock Avenue',
     tagline: 'Woodstock 5K · RRCA Alabama State Champ',
     price: 30,
-    photo: '/merch/woodstock-shirt-v2.png',
+    photo: '../merch/woodstock-shirt-v2.png',
     bg: '#f5f0e8',
     badge: 'Event',
     badgeColor: '#166534',
@@ -220,7 +223,7 @@ const WOODSTOCK_ITEMS = [
     name: 'PV Raiders XC',
     tagline: 'Run Like You Stole It.',
     price: 30,
-    photo: '/merch/pv-raiders-xc.webp',
+    photo: '../merch/pv-raiders-xc.webp',
     bg: '#C8102E',
     badge: 'Fundraiser',
     badgeColor: '#9A3412',
@@ -231,7 +234,7 @@ const WOODSTOCK_ITEMS = [
     name: 'Anniston 45',
     tagline: 'Anniston, Alabama · 45 Years of Running',
     price: 35,
-    photo: '/print-files/SL-03-anniston-45-NAVY.png',
+    photo: 'SL-03-anniston-45-NAVY.png',
     bg: '#1e3a5f',
     badge: 'Local Pride',
     badgeColor: '#1e3a5f',
@@ -246,7 +249,7 @@ const STORE_ITEMS = [
     name: 'Cheaha — Building the Skyway',
     tagline: 'Blasted Through Solid Rock · Cheaha State Park',
     price: 35,
-    photo: '/print-files/WOODSTOCK-11-cheaha-skyway-BLACK.png',
+    photo: 'WOODSTOCK-11-cheaha-skyway-BLACK.png',
     bg: '#1a1a1a',
     badge: 'SL Woodcut',
     badgeColor: '#78350f',
@@ -257,7 +260,7 @@ const STORE_ITEMS = [
     name: 'Noccalula Falls',
     tagline: 'Gadsden, Alabama · Yellow Creek Falls',
     price: 35,
-    photo: '/print-files/SL-07-noccalula-falls-BLACK.png',
+    photo: 'SL-07-noccalula-falls-BLACK.png',
     bg: '#1a1a1a',
     badge: 'SL Woodcut',
     badgeColor: '#0f4c75',
@@ -268,7 +271,7 @@ const STORE_ITEMS = [
     name: 'Pinhoti Trail',
     tagline: 'Alabama · 172 Miles · Talladega National Forest',
     price: 35,
-    photo: '/print-files/WOODSTOCK-06-pinhoti-trail-BLACK.png',
+    photo: 'WOODSTOCK-06-pinhoti-trail-BLACK.png',
     bg: '#1a1a1a',
     badge: 'SL Woodcut',
     badgeColor: '#78350f',
@@ -279,7 +282,7 @@ const STORE_ITEMS = [
     name: 'Blossom & Decay — Roses',
     tagline: 'Southern Gothic · Roses on Mocha',
     price: 35,
-    photo: '/print-files/WOODSTOCK-12-blossom-decay-roses-MOCHA.png',
+    photo: 'WOODSTOCK-12-blossom-decay-roses-MOCHA.png',
     bg: '#6b4c35',
     badge: 'SL Original',
     badgeColor: '#7f1d1d',
@@ -292,12 +295,12 @@ function buildCard(item) {
   card.href = `/buy/${item.id}`
   card.className = 'merch-card'
 
-  // Default: graphic on shirt bg
+  // Default: raw graphic on blank bg; hover: shirt color
   let hovered = false
 
   function setHover(h) {
     hovered = h
-    photo.style.background = h ? 'transparent' : (item.bg || 'transparent')
+    photo.style.background = h ? (item.bg || 'transparent') : 'transparent'
   }
 
   card.addEventListener('mouseenter', () => setHover(true))
@@ -305,7 +308,7 @@ function buildCard(item) {
 
   const photo = document.createElement('div')
   photo.className = 'card-photo'
-  photo.style.background = item.bg || 'transparent'
+  photo.style.background = 'transparent'
 
   const img = document.createElement('img')
   img.src = item.photo
