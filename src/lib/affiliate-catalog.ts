@@ -85,7 +85,7 @@ export const AFFILIATE_CATALOG: AffiliateProduct[] = [
     price: '$8–$45',
     commission: '12%',
     commissionNote: '$1–5 per sale',
-    dest: 'https://headleybros.com',
+    dest: 'https://matthewheadley.com/bros',
     description: "Noah and Soren's 3D printing business. Custom prints, keychains, figurines.",
     category: 'merch',
   },
