@@ -90,6 +90,30 @@ export const AFFILIATE_CATALOG: AffiliateProduct[] = [
     category: 'merch',
   },
 
+  // ── MENTAL HEALTH / NEUROSPICY MERCH ─────────────────────────────────────
+  {
+    key: 'multitudes-shirt',
+    label: 'I Contain Multitudes — Mental Health Shirt',
+    venture: 'Southern Legends',
+    price: '$32',
+    commission: '15%',
+    commissionNote: '$4.80 per sale',
+    dest: 'https://southernlegends.blog/buy/multitudes-shirt',
+    description: '"I contain multitudes." For the people holding more than one thing at once.',
+    category: 'merch',
+  },
+  {
+    key: 'neurospicy-shirt',
+    label: 'Neurospicy — Nutrition Label Shirt',
+    venture: 'Southern Legends',
+    price: '$32',
+    commission: '15%',
+    commissionNote: '$4.80 per sale',
+    dest: 'https://southernlegends.blog/buy/neurospicy-shirt',
+    description: 'Nutrition label for the neurospicy mind. ADHD/autism community shirt.',
+    category: 'merch',
+  },
+
   // ── HEATHER FLORALS ────────────────────────────────────────────────────────
   {
     key: 'heather-florals',

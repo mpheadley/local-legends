@@ -32,6 +32,8 @@ const THUMBNAILS: Record<string, string> = {
   'sl-books': '/images/essays/broken-ground-book-hero.webp',
   'silver-run': '/images/about/headshot-hedcut-matt-headley.webp',
   'aisle-tickets': '/merch/aisle-vendor-tee-mockup.webp',
+  'multitudes-shirt': '/print-files/MENTAL-HEALTH-01-i-contain-multitudes-CREAM.png',
+  'neurospicy-shirt': '/print-files/NEUROSPICY-01-nutrition-label-CREAM.png',
 }
 
 const CATEGORY_ORDER: AffiliateProduct['category'][] = ['service', 'event', 'shop', 'product', 'merch']
