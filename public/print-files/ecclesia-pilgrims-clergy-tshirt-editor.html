@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ecclesia Pilgrims Clergy — T-Shirt Preview</title>
+<style>
+  @font-face { font-family: 'EcclesiaUncialChunky'; src: url('../../gather/assets/fonts/EcclesiaUncial-Chunky.ttf') format('truetype'); }
+  @font-face { font-family: 'UncialAntiqua'; src: url('../../gather/assets/fonts/UncialAntiqua-Regular.ttf') format('truetype'); }
+  @font-face { font-family: 'Fraunces'; src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype'); font-weight: 900; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; display: flex; gap: 40px; min-height: 100vh; align-items: flex-start; padding: 40px; font-family: system-ui, sans-serif; }
+
+  /* ── Shirt canvas ── */
+  #canvas {
+    width: 640px; height: 720px; flex-shrink: 0;
+    background: #1a1a1a;
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    padding: 48px 48px 40px;
+    gap: 20px;
+    box-shadow: 0 0 0 2px rgba(240,237,232,0.12), 0 12px 48px rgba(0,0,0,0.7);
+    border-radius: 4px;
+  }
+
+  #header-text {
+    font-family: 'EcclesiaUncialChunky', serif;
+    font-size: 38px;
+    color: #2dd4bf;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+  }
+
+  #graphic-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #graphic-img {
+    max-width: 440px;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+  }
+
+  #footer-text {
+    font-family: 'UncialAntiqua', serif;
+    font-size: 22px;
+    color: rgba(45,212,191,0.65);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    flex: 1; min-width: 270px; display: flex; flex-direction: column; gap: 14px; padding-top: 16px; color: #f0ede8;
+  }
+  .controls h2 { font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; color: #2dd4bf; margin-bottom: 2px; }
+  label { font-size: 0.76rem; color: rgba(240,237,232,0.45); display: block; margin-bottom: 3px; }
+  input[type=text], input[type=range], select {
+    width: 100%; padding: 7px 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,237,232,0.14); border-radius: 6px; color: #f0ede8; font-size: 0.86rem;
+  }
+  select option { background: #222; }
+  .row { display: flex; gap: 8px; }
+  .row > div { flex: 1; }
+  button { padding: 9px 16px; border-radius: 6px; border: none; font-weight: 700; font-size: 0.83rem; cursor: pointer; background: #2dd4bf; color: #111; }
+  button.sec { background: rgba(240,237,232,0.1); color: #f0ede8; border: 1px solid rgba(240,237,232,0.18); }
+  hr { border: none; border-top: 1px solid rgba(240,237,232,0.08); }
+</style>
+</head>
+<body>
+
+<div id="canvas">
+  <div id="header-text">Ecclesia</div>
+  <div id="graphic-wrap">
+    <img id="graphic-img" src="ECCLESIA-01-pilgrims-clergy-BLACK.png" alt="Pilgrims Clergy" />
+  </div>
+  <div id="footer-text">We Are All on the Way</div>
+</div>
+
+<div class="controls">
+  <h2>Pilgrims Clergy — Shirt</h2>
+
+  <div>
+    <label>Header text</label>
+    <input type="text" id="headerTxt" value="Ecclesia" oninput="document.getElementById('header-text').textContent=this.value" />
+  </div>
+  <div>
+    <label>Header size: <span id="hfsVal">38</span>px</label>
+    <input type="range" id="hfs" min="16" max="80" value="38" oninput="upHfs()" />
+  </div>
+
+  <hr />
+
+  <div>
+    <label>Graphic scale: <span id="gsVal">440</span>px</label>
+    <input type="range" id="gs" min="160" max="580" value="440" oninput="upGs()" />
+  </div>
+
+  <hr />
+
+  <div>
+    <label>Footer text</label>
+    <input type="text" id="footerTxt" value="We Are All on the Way" oninput="document.getElementById('footer-text').textContent=this.value" />
+  </div>
+  <div>
+    <label>Footer size: <span id="ffsVal">22</span>px</label>
+    <input type="range" id="ffs" min="10" max="48" value="22" oninput="upFfs()" />
+  </div>
+
+  <hr />
+
+  <div>
+    <label>Shirt / bg color</label>
+    <select id="bgSel" onchange="upBg()">
+      <option value="#1a1a1a">Black</option>
+      <option value="#f5f0e8">Cream</option>
+      <option value="#0d2c1f">Forest</option>
+      <option value="#1a3040">Navy</option>
+      <option value="#2c1a0e">Brown</option>
+      <option value="#ffffff">White</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>Header color</label>
+      <input type="color" id="hCol" value="#2dd4bf" oninput="document.getElementById('header-text').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+    <div>
+      <label>Footer color</label>
+      <input type="color" id="fCol" value="#2dd4bf" oninput="document.getElementById('footer-text').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+  </div>
+
+  <div>
+    <label>Font</label>
+    <select id="fontSel" onchange="upFont()">
+      <option value="EcclesiaUncialChunky">Ecclesia Uncial Chunky</option>
+      <option value="UncialAntiqua">Uncial Antiqua</option>
+      <option value="Fraunces">Fraunces Black</option>
+    </select>
+  </div>
+
+  <button onclick="alert('Chrome DevTools → right-click #canvas → Capture node screenshot')">↓ Export PNG</button>
+</div>
+
+<script>
+function upHfs() {
+  const v = document.getElementById('hfs').value;
+  document.getElementById('hfsVal').textContent = v;
+  document.getElementById('header-text').style.fontSize = v + 'px';
+}
+function upGs() {
+  const v = document.getElementById('gs').value;
+  document.getElementById('gsVal').textContent = v;
+  const img = document.getElementById('graphic-img');
+  img.style.maxWidth = v + 'px';
+  img.style.maxHeight = (Number(v) * 0.95) + 'px';
+}
+function upFfs() {
+  const v = document.getElementById('ffs').value;
+  document.getElementById('ffsVal').textContent = v;
+  document.getElementById('footer-text').style.fontSize = v + 'px';
+}
+function upBg() {
+  document.getElementById('canvas').style.background = document.getElementById('bgSel').value;
+}
+function upFont() {
+  const f = document.getElementById('fontSel').value + ', serif';
+  document.getElementById('header-text').style.fontFamily = f;
+  document.getElementById('footer-text').style.fontFamily = f;
+}
+</script>
+</body>
+</html>

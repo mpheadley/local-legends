@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ecclesia Pilgrims Clergy — Solo Graphic / Sticker</title>
+<style>
+  @font-face { font-family: 'EcclesiaUncialChunky'; src: url('../../gather/assets/fonts/EcclesiaUncial-Chunky.ttf') format('truetype'); }
+  @font-face { font-family: 'UncialAntiqua'; src: url('../../gather/assets/fonts/UncialAntiqua-Regular.ttf') format('truetype'); }
+  @font-face { font-family: 'Fraunces'; src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype'); font-weight: 900; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; display: flex; gap: 40px; min-height: 100vh; align-items: flex-start; padding: 40px; font-family: system-ui, sans-serif; }
+
+  /* ── Canvas — square, for sticker / solo graphic ── */
+  #canvas {
+    width: 700px; height: 700px; flex-shrink: 0;
+    background: transparent;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 2px rgba(240,237,232,0.1), 0 12px 48px rgba(0,0,0,0.7);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  #graphic-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  #caption-top {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-family: 'EcclesiaUncialChunky', serif;
+    font-size: 42px;
+    color: #2dd4bf;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    display: none;
+  }
+
+  #caption-bottom {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-family: 'UncialAntiqua', serif;
+    font-size: 26px;
+    color: rgba(45,212,191,0.75);
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    display: none;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    flex: 1; min-width: 270px; display: flex; flex-direction: column; gap: 14px; padding-top: 16px; color: #f0ede8;
+  }
+  .controls h2 { font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; color: #2dd4bf; margin-bottom: 2px; }
+  label { font-size: 0.76rem; color: rgba(240,237,232,0.45); display: block; margin-bottom: 3px; }
+  input[type=text], input[type=range], select, input[type=checkbox] {
+    padding: 7px 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,237,232,0.14); border-radius: 6px; color: #f0ede8; font-size: 0.86rem;
+  }
+  input[type=text], select { width: 100%; }
+  input[type=range] { width: 100%; }
+  select option { background: #222; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .row > div { flex: 1; }
+  button { padding: 9px 16px; border-radius: 6px; border: none; font-weight: 700; font-size: 0.83rem; cursor: pointer; background: #2dd4bf; color: #111; }
+  button.sec { background: rgba(240,237,232,0.1); color: #f0ede8; border: 1px solid rgba(240,237,232,0.18); }
+  hr { border: none; border-top: 1px solid rgba(240,237,232,0.08); }
+  .check-row { display: flex; align-items: center; gap: 8px; }
+  .check-row input { width: auto; padding: 0; }
+  .check-row label { margin: 0; color: #f0ede8; }
+</style>
+</head>
+<body>
+
+<div id="canvas">
+  <img id="graphic-img" src="ECCLESIA-S1-pilgrims-clergy-sticker.png" alt="Pilgrims Clergy Solo" />
+  <div id="caption-top">Ecclesia</div>
+  <div id="caption-bottom">We Are All on the Way</div>
+</div>
+
+<div class="controls">
+  <h2>Pilgrims Clergy — Solo / Sticker</h2>
+
+  <div>
+    <label>Source image</label>
+    <select id="srcSel" onchange="upSrc()">
+      <option value="ECCLESIA-S1-pilgrims-clergy-sticker.png">Sticker (1344×1344)</option>
+      <option value="ECCLESIA-01-pilgrims-clergy-BLACK.png">T-shirt graphic (1502×1344)</option>
+    </select>
+  </div>
+
+  <hr />
+
+  <div>
+    <label>Canvas size: <span id="csVal">700</span>px</label>
+    <input type="range" id="cs" min="300" max="900" value="700" oninput="upCs()" />
+  </div>
+
+  <div>
+    <label>Background</label>
+    <select id="bgSel" onchange="upBg()">
+      <option value="transparent">Transparent</option>
+      <option value="#1a1a1a">Black</option>
+      <option value="#f5f0e8">Cream</option>
+      <option value="#0d2c1f">Forest</option>
+      <option value="#1a3040">Navy</option>
+      <option value="#ffffff">White</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Border radius: <span id="brVal">12</span>px (0 = square, 350 = circle)</label>
+    <input type="range" id="br" min="0" max="450" value="12" oninput="upBr()" />
+  </div>
+
+  <hr />
+
+  <div class="check-row">
+    <input type="checkbox" id="showTop" onchange="toggleTop()" />
+    <label for="showTop">Show top caption</label>
+  </div>
+  <div>
+    <label>Top text</label>
+    <input type="text" id="topTxt" value="Ecclesia" oninput="document.getElementById('caption-top').textContent=this.value" />
+  </div>
+  <div>
+    <label>Top size: <span id="tfsVal">42</span>px</label>
+    <input type="range" id="tfs" min="14" max="100" value="42" oninput="upTfs()" />
+  </div>
+
+  <hr />
+
+  <div class="check-row">
+    <input type="checkbox" id="showBot" onchange="toggleBot()" />
+    <label for="showBot">Show bottom caption</label>
+  </div>
+  <div>
+    <label>Bottom text</label>
+    <input type="text" id="botTxt" value="We Are All on the Way" oninput="document.getElementById('caption-bottom').textContent=this.value" />
+  </div>
+  <div>
+    <label>Bottom size: <span id="bfsVal">26</span>px</label>
+    <input type="range" id="bfs" min="10" max="60" value="26" oninput="upBfs()" />
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div>
+      <label>Top color</label>
+      <input type="color" id="tCol" value="#2dd4bf" oninput="document.getElementById('caption-top').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+    <div>
+      <label>Bottom color</label>
+      <input type="color" id="bCol" value="#2dd4bf" oninput="document.getElementById('caption-bottom').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+  </div>
+
+  <div>
+    <label>Font</label>
+    <select id="fontSel" onchange="upFont()">
+      <option value="EcclesiaUncialChunky">Ecclesia Uncial Chunky</option>
+      <option value="UncialAntiqua">Uncial Antiqua</option>
+      <option value="Fraunces">Fraunces Black</option>
+    </select>
+  </div>
+
+  <button onclick="alert('Chrome DevTools → right-click #canvas → Capture node screenshot')">↓ Export PNG</button>
+</div>
+
+<script>
+function upSrc() {
+  document.getElementById('graphic-img').src = document.getElementById('srcSel').value;
+}
+function upCs() {
+  const v = document.getElementById('cs').value;
+  document.getElementById('csVal').textContent = v;
+  const c = document.getElementById('canvas');
+  c.style.width = v + 'px';
+  c.style.height = v + 'px';
+}
+function upBg() {
+  document.getElementById('canvas').style.background = document.getElementById('bgSel').value;
+}
+function upBr() {
+  const v = document.getElementById('br').value;
+  document.getElementById('brVal').textContent = v;
+  document.getElementById('canvas').style.borderRadius = v + 'px';
+}
+function toggleTop() {
+  document.getElementById('caption-top').style.display = document.getElementById('showTop').checked ? 'block' : 'none';
+}
+function toggleBot() {
+  document.getElementById('caption-bottom').style.display = document.getElementById('showBot').checked ? 'block' : 'none';
+}
+function upTfs() {
+  const v = document.getElementById('tfs').value;
+  document.getElementById('tfsVal').textContent = v;
+  document.getElementById('caption-top').style.fontSize = v + 'px';
+}
+function upBfs() {
+  const v = document.getElementById('bfs').value;
+  document.getElementById('bfsVal').textContent = v;
+  document.getElementById('caption-bottom').style.fontSize = v + 'px';
+}
+function upFont() {
+  const f = document.getElementById('fontSel').value + ', serif';
+  document.getElementById('caption-top').style.fontFamily = f;
+  document.getElementById('caption-bottom').style.fontFamily = f;
+}
+</script>
+</body>
+</html>
