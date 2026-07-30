@@ -172,6 +172,17 @@ export default function MerchPage() {
           </a>
         </div>
 
+        {/* Affiliate cross-link */}
+        <div className="rounded-2xl p-6" style={{ background: 'rgba(154,52,18,0.08)', border: '1px solid rgba(154,52,18,0.18)' }}>
+          <p className="text-xs tracking-[0.3em] uppercase mb-2" style={{ color: 'rgba(202,138,4,0.5)' }}>Partner Program</p>
+          <h2 className="text-xl font-black mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Earn when you share.</h2>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(240,237,230,0.5)' }}>Share any product — shirts, the Ecclesia shop, Blueprint Sessions, Heather Florals — and earn 10–20% on every sale. One link, everything in the catalog.</p>
+          <Link href="/affiliate" className="inline-block px-5 py-2.5 rounded-xl text-sm font-bold hover:opacity-90"
+            style={{ background: '#9A3412', color: '#FAFAF7' }}>
+            Get your affiliate link →
+          </Link>
+        </div>
+
         <div className="rounded-2xl p-6" style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(240,237,230,0.05)' }}>
           <p className="text-xs tracking-[0.3em] uppercase mb-2" style={{ color: 'rgba(202,138,4,0.5)' }}>Southern Legends</p>
           <h2 className="text-xl font-black mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Support the publication</h2>
