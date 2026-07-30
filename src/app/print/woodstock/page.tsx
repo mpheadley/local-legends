@@ -73,7 +73,6 @@ const FR_STICKERS: Shirt[] = [
 ]
 
 const BD_STICKERS: Shirt[] = [
-  { id: 'BD3', label: 'Blossom & Decay — Clean',           color: 'Vinyl',        note: 'Gothic skull + text · cream bg',   img: '/print-files/BD-S3-blossom-decay-clean.png',                   bg: '#e8dfd0', price: '$5',  method: 'DTF', dims: '3" × 3"', file: 'BD-S3-blossom-decay-clean.png',             sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 }, sticker: true, qty: 25 },
   { id: 'BD4', label: 'Blossom & Decay — Sugar Skull',     color: 'Vinyl',        note: 'Sugar skull · curved text',        img: '/print-files/BD-S4-sugar-skull.png',                           bg: '#1a0a14', price: '$5',  method: 'DTF', dims: '3" × 3"', file: 'BD-S4-sugar-skull.png',                     sizes: { s: 0, m: 0, l: 0, xl: 0, xxl: 0 }, sticker: true, qty: 25 },
 ]
 

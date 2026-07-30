@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BD-S3 — Blossom & Decay Clean Editor</title>
+<style>
+  @font-face { font-family: 'Fraunces'; src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype'); font-weight: 900; }
+  @font-face { font-family: 'UncialAntiqua'; src: url('../../gather/assets/fonts/UncialAntiqua-Regular.ttf') format('truetype'); }
+  @font-face { font-family: 'EcclesiaUncialChunky'; src: url('../../gather/assets/fonts/EcclesiaUncial-Chunky.ttf') format('truetype'); }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; display: flex; gap: 40px; min-height: 100vh; align-items: flex-start; padding: 40px; font-family: system-ui, sans-serif; color: #1a1a1a; }
+
+  /* ── Sticker canvas — portrait to match 1824×2368 ── */
+  #canvas {
+    width: 600px; height: 779px; flex-shrink: 0;
+    background: #f0ebe0;
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    padding: 40px 32px;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.15), 0 8px 40px rgba(0,0,0,0.5);
+  }
+
+  #h1-text {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 0.9;
+    text-align: center;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    width: 100%;
+  }
+
+  .skull-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .skull-img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+  }
+
+  #sub-text {
+    font-family: 'UncialAntiqua', serif;
+    font-size: 28px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #5a3a1a;
+    text-align: center;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 14px; padding-top: 20px; color: #f0ede8;
+  }
+  .controls h2 { font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #c9a227; margin-bottom: 4px; }
+  label { font-size: 0.78rem; color: rgba(240,237,232,0.5); display: block; margin-bottom: 3px; }
+  input[type=text], input[type=range], select {
+    width: 100%; padding: 7px 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,237,232,0.15); border-radius: 6px; color: #f0ede8; font-size: 0.88rem;
+  }
+  select option { background: #222; }
+  .row { display: flex; gap: 8px; }
+  .row > div { flex: 1; }
+  button {
+    padding: 10px 18px; border-radius: 6px; border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer;
+    background: #c9a227; color: #111;
+  }
+</style>
+</head>
+<body>
+
+<div id="canvas">
+  <div id="h1-text">Blossom<br>&amp; Decay</div>
+  <div class="skull-wrap">
+    <!-- Use the actual PNG as the skull graphic source — drag your file here -->
+    <img class="skull-img" src="/Volumes/Samsung_T5/DownloadsT5/BD-S3-blossom-decay-clean.png" alt="Blossom Skull"
+      onerror="this.style.display='none'; document.getElementById('skull-placeholder').style.display='flex'" />
+    <div id="skull-placeholder" style="display:none; width:300px; height:300px; border: 2px dashed rgba(0,0,0,0.2); border-radius:8px; align-items:center; justify-content:center; font-size:0.8rem; color:rgba(0,0,0,0.35); text-align:center; padding:20px;">
+      Skull graphic<br>(drag PNG here or update src path)
+    </div>
+  </div>
+  <div id="sub-text">Est. 2026</div>
+</div>
+
+<div class="controls">
+  <h2>BD-S3 Editor</h2>
+  <p style="font-size:0.75rem;color:rgba(240,237,232,0.4);line-height:1.5;">H1 set to 2 lines: "Blossom / &amp; Decay". Edit below.</p>
+
+  <div>
+    <label>H1 Line 1</label>
+    <input type="text" id="h1l1" value="Blossom" oninput="updateH1()" />
+  </div>
+  <div>
+    <label>H1 Line 2</label>
+    <input type="text" id="h1l2" value="&amp; Decay" oninput="updateH1()" />
+  </div>
+
+  <div>
+    <label>H1 font size: <span id="h1fsVal">96</span>px</label>
+    <input type="range" id="h1fs" min="40" max="160" value="96" oninput="upH1Fs()" />
+  </div>
+
+  <div>
+    <label>H1 font</label>
+    <select id="h1font" onchange="updateH1Font()">
+      <option value="Fraunces">Fraunces Black</option>
+      <option value="EcclesiaUncialChunky">Ecclesia Uncial Chunky</option>
+      <option value="UncialAntiqua">Uncial Antiqua</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>H1 color</label>
+      <input type="color" id="h1color" value="#1a1a1a" oninput="document.getElementById('h1-text').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+    <div>
+      <label>Background</label>
+      <input type="color" id="bg" value="#f0ebe0" oninput="document.getElementById('canvas').style.background=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+  </div>
+
+  <div>
+    <label>Subline text</label>
+    <input type="text" id="subText" value="Est. 2026" oninput="document.getElementById('sub-text').textContent=this.value" />
+  </div>
+
+  <div>
+    <label>Subline font size: <span id="subFsVal">28</span>px</label>
+    <input type="range" id="subFs" min="12" max="60" value="28" oninput="upSubFs()" />
+  </div>
+
+  <button onclick="alert('Screenshot #canvas or use Chrome → right-click #canvas → Capture node screenshot')">↓ Export PNG</button>
+</div>
+
+<script>
+function updateH1() {
+  const l1 = document.getElementById('h1l1').value;
+  const l2 = document.getElementById('h1l2').value;
+  document.getElementById('h1-text').innerHTML = l1 + (l2 ? '<br>' + l2 : '');
+}
+function upH1Fs() {
+  const v = document.getElementById('h1fs').value;
+  document.getElementById('h1fsVal').textContent = v;
+  document.getElementById('h1-text').style.fontSize = v + 'px';
+}
+function updateH1Font() {
+  document.getElementById('h1-text').style.fontFamily = document.getElementById('h1font').value + ', serif';
+}
+function upSubFs() {
+  const v = document.getElementById('subFs').value;
+  document.getElementById('subFsVal').textContent = v;
+  document.getElementById('sub-text').style.fontSize = v + 'px';
+}
+</script>
+</body>
+</html>

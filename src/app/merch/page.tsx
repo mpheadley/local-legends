@@ -205,12 +205,19 @@ export default function MerchPage() {
 }
 
 function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
+  const [hovered, setHovered] = useState(false)
+  const showSrc = hovered && item.rawGraphic ? item.rawGraphic : item.photo
+  const imgBg = hovered && item.bg ? item.bg : undefined
+
   return (
     <Link href={`/buy/${item.id}`}
       className="rounded-2xl overflow-hidden block transition-all duration-200 group"
-      style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', border: '1px solid rgba(240,237,230,0.08)', boxShadow: '0 2px 16px rgba(0,0,0,0.3)', textDecoration: 'none', color: 'inherit' }}>
-      <div className="relative overflow-hidden" style={{ aspectRatio: small ? '1' : '4/5' }}>
-        <Image src={item.photo} alt={item.name} fill
+      style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', border: '1px solid rgba(240,237,230,0.08)', boxShadow: '0 2px 16px rgba(0,0,0,0.3)', textDecoration: 'none', color: 'inherit' }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}>
+      <div className="relative overflow-hidden transition-colors duration-300"
+        style={{ aspectRatio: small ? '1' : '4/5', background: imgBg ?? 'transparent' }}>
+        <Image src={showSrc} alt={item.name} fill
           className="object-contain transition-transform duration-500 group-hover:scale-[1.04]"
           sizes={small ? '220px' : '(max-width: 640px) 100vw, 320px'} style={{ padding: 16 }} />
         {item.badge && (
@@ -220,7 +227,7 @@ function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
           </span>
         )}
         <div className="absolute inset-0 flex items-end justify-center pb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)' }}>
+          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)' }}>
           <span className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-lg"
             style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)' }}>
             Buy now →

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ECCLESIA-S1 — Stone Sticker Editor</title>
+<style>
+  @font-face { font-family: 'EcclesiaUncial'; src: url('../../gather/assets/fonts/EcclesiaUncial.ttf') format('truetype'); }
+  @font-face { font-family: 'EcclesiaUncialChunky'; src: url('../../gather/assets/fonts/EcclesiaUncial-Chunky.ttf') format('truetype'); }
+  @font-face { font-family: 'UncialAntiqua'; src: url('../../gather/assets/fonts/UncialAntiqua-Regular.ttf') format('truetype'); }
+  @font-face { font-family: 'Fraunces'; src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype'); font-weight: 900; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; display: flex; gap: 40px; min-height: 100vh; align-items: flex-start; padding: 40px; font-family: system-ui, sans-serif; color: #f0ede8; }
+
+  /* ── Sticker canvas ── */
+  #canvas {
+    width: 900px; height: 900px; flex-shrink: 0;
+    border-radius: 12px;
+    background: #1a1a1a;
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    overflow: hidden;
+    gap: 16px;
+    box-shadow: 0 0 0 3px rgba(240,237,232,0.15), 0 8px 40px rgba(0,0,0,0.7);
+  }
+
+  .stone-img {
+    width: 480px; height: 480px;
+    object-fit: contain;
+    display: block;
+  }
+
+  #top-text {
+    font-family: 'EcclesiaUncialChunky', serif;
+    font-size: 224px;
+    color: #f0ede8;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 0.85;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+  }
+
+  #bottom-text {
+    font-family: 'EcclesiaUncialChunky', serif;
+    font-size: 52px;
+    color: #c9a227;
+    text-align: center;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+  }
+
+  .ring-label {
+    position: absolute;
+    width: 860px; height: 860px;
+    border-radius: 50%;
+    border: 3px solid rgba(201,162,39,0.25);
+    top: 20px; left: 20px;
+    pointer-events: none;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 14px; padding-top: 20px;
+  }
+  .controls h2 { font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #c9a227; margin-bottom: 4px; }
+  label { font-size: 0.78rem; color: rgba(240,237,232,0.5); display: block; margin-bottom: 3px; }
+  input[type=text], input[type=range], select {
+    width: 100%; padding: 7px 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,237,232,0.15); border-radius: 6px; color: #f0ede8; font-size: 0.88rem;
+  }
+  select option { background: #222; }
+  .row { display: flex; gap: 8px; }
+  .row > div { flex: 1; }
+  button {
+    padding: 10px 18px; border-radius: 6px; border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer;
+    background: #c9a227; color: #111;
+  }
+  button.sec { background: rgba(240,237,232,0.1); color: #f0ede8; border: 1px solid rgba(240,237,232,0.2); }
+</style>
+</head>
+<body>
+
+<div id="canvas">
+  <div id="top-text">E</div>
+  <img class="stone-img" src="ECCLESIA-S1-stone-sticker.png" alt="Stone" />
+  <div id="bottom-text">Ancient Paths</div>
+  <div class="ring-label"></div>
+</div>
+
+<div class="controls">
+  <h2>ECCLESIA-S1 Editor</h2>
+  <p style="font-size:0.75rem;color:rgba(240,237,232,0.4);line-height:1.5;">Celtic 224px font applied to top letter. Adjust all values below.</p>
+
+  <div>
+    <label>Top letter/word</label>
+    <input type="text" id="topText" value="E" oninput="document.getElementById('top-text').textContent=this.value" />
+  </div>
+
+  <div>
+    <label>Top font size: <span id="topFsVal">224</span>px</label>
+    <input type="range" id="topFs" min="60" max="400" value="224" oninput="upTopFs()" />
+  </div>
+
+  <div>
+    <label>Bottom text</label>
+    <input type="text" id="botText" value="Ancient Paths" oninput="document.getElementById('bottom-text').textContent=this.value" />
+  </div>
+
+  <div>
+    <label>Bottom font size: <span id="botFsVal">52</span>px</label>
+    <input type="range" id="botFs" min="20" max="120" value="52" oninput="upBotFs()" />
+  </div>
+
+  <div>
+    <label>Font</label>
+    <select id="fontSel" onchange="updateFont()">
+      <option value="EcclesiaUncialChunky">Ecclesia Uncial Chunky ← (new celtic)</option>
+      <option value="EcclesiaUncial">Ecclesia Uncial Regular</option>
+      <option value="UncialAntiqua">Uncial Antiqua</option>
+      <option value="Fraunces">Fraunces Black</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>Top color</label>
+      <input type="color" id="topColor" value="#f0ede8" oninput="document.getElementById('top-text').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+    <div>
+      <label>Bottom color</label>
+      <input type="color" id="botColor" value="#c9a227" oninput="document.getElementById('bottom-text').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+  </div>
+
+  <div>
+    <label>Stone image scale: <span id="stoneVal">480</span>px</label>
+    <input type="range" id="stoneScale" min="200" max="800" value="480" oninput="upStone()" />
+  </div>
+
+  <div>
+    <label>Background</label>
+    <select id="bgSel" onchange="document.getElementById('canvas').style.background=this.value">
+      <option value="#1a1a1a">Black</option>
+      <option value="transparent">Transparent</option>
+      <option value="#f5f0e8">Cream</option>
+      <option value="#2c4a2c">Forest</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Border radius: <span id="brVal">12</span>px</label>
+    <input type="range" id="br" min="0" max="450" value="12" oninput="upBr()" />
+  </div>
+
+  <button onclick="alert('Screenshot #canvas at 900×900 or use Chrome → Capture node screenshot')">↓ Export 900×900</button>
+</div>
+
+<script>
+function upTopFs() {
+  const v = document.getElementById('topFs').value;
+  document.getElementById('topFsVal').textContent = v;
+  document.getElementById('top-text').style.fontSize = v + 'px';
+}
+function upBotFs() {
+  const v = document.getElementById('botFs').value;
+  document.getElementById('botFsVal').textContent = v;
+  document.getElementById('bottom-text').style.fontSize = v + 'px';
+}
+function updateFont() {
+  const f = document.getElementById('fontSel').value + ', serif';
+  document.getElementById('top-text').style.fontFamily = f;
+  document.getElementById('bottom-text').style.fontFamily = f;
+}
+function upStone() {
+  const v = document.getElementById('stoneScale').value;
+  document.getElementById('stoneVal').textContent = v;
+  document.querySelector('.stone-img').style.width = v + 'px';
+  document.querySelector('.stone-img').style.height = v + 'px';
+}
+function upBr() {
+  const v = document.getElementById('br').value;
+  document.getElementById('brVal').textContent = v;
+  document.getElementById('canvas').style.borderRadius = v + 'px';
+}
+</script>
+</body>
+</html>

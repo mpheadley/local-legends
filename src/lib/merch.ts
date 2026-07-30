@@ -12,6 +12,8 @@ export type MerchItem = {
   sub?: string
   price: number
   photo: string
+  rawGraphic?: string    // on hover: show this graphic on bg color
+  bg?: string            // hover background color (shirt/product color)
   badge?: string
   badgeColor?: string
   category: MerchCategory
@@ -31,6 +33,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Cream shirt · DTG · RRCA Alabama State Championship',
     price: 35,
     photo: '/print-files/WOODSTOCK-00-woodstock-avenue-oval-CREAM.png',
+    bg: '#f5f0e8',
     badge: 'Event',
     badgeColor: '#166534',
     category: 'shirt',
@@ -45,6 +48,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Woodstock 5K · RRCA Alabama State Championship',
     price: 30,
     photo: '/merch/woodstock-shirt-v2.png',
+    bg: '#f5f0e8',
     badge: 'Event',
     badgeColor: '#166534',
     category: 'shirt',
@@ -73,6 +77,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Navy shirt · DTF print',
     price: 35,
     photo: '/print-files/SL-03-anniston-45-NAVY.png',
+    bg: '#1e3a5f',
     badge: 'Local Pride',
     badgeColor: '#1e3a5f',
     category: 'shirt',
@@ -89,6 +94,7 @@ export const MERCH: MerchItem[] = [
     sub: '25% of every sale → Raiders XC program',
     price: 30,
     photo: '/merch/pv-raiders-xc.webp',
+    bg: '#C8102E',
     badge: 'Fundraiser',
     badgeColor: '#9A3412',
     category: 'shirt',
@@ -219,6 +225,7 @@ export const MERCH: MerchItem[] = [
     sub: '100% → West Anniston Foundation · White shirt · Woodcut · 1-color',
     price: 40,
     photo: '/print-files/FREEDOM-RIDERS-01-burning-bus-WHITE.png',
+    bg: '#f5f0e8',
     badge: 'Memorial',
     badgeColor: '#1a1a2e',
     category: 'shirt',
@@ -234,6 +241,7 @@ export const MERCH: MerchItem[] = [
     sub: '100% → West Anniston Foundation · White shirt · Hedcut portrait',
     price: 40,
     photo: '/print-files/FREEDOM-RIDERS-02-dennis-portrait-BLACK.png',
+    bg: '#1a1a1a',
     badge: 'SL Editorial',
     badgeColor: '#1a1a2e',
     category: 'shirt',
@@ -251,6 +259,7 @@ export const MERCH: MerchItem[] = [
     sub: 'For the neurodivergent, the twice exceptional, the sensory-rich.',
     price: 35,
     photo: '/print-files/NEUROSPICY-01-nutrition-label-CREAM.png',
+    bg: '#f5f0e8',
     badge: 'Mental Health',
     badgeColor: '#6d28d9',
     category: 'shirt',
@@ -402,6 +411,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Black tee · 8-bit grin · DTF print',
     price: 35,
     photo: '/print-files/ECCLESIA-02-cheshire-cat-BLACK.png',
+    bg: '#1a1a1a',
     badge: 'Ecclesia',
     badgeColor: '#1a5a4a',
     category: 'shirt',
@@ -502,6 +512,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Black shirt · DTF print · CCC era engineering',
     price: 35,
     photo: '/print-files/WOODSTOCK-11-cheaha-skyway-BLACK.png',
+    bg: '#1a1a1a',
     badge: 'SL Woodcut',
     badgeColor: '#78350f',
     category: 'shirt',
@@ -636,6 +647,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Mocha shirt · DTF print',
     price: 35,
     photo: '/print-files/WOODSTOCK-12-blossom-decay-roses-MOCHA.png',
+    bg: '#6b4c35',
     badge: 'SL Original',
     badgeColor: '#7f1d1d',
     category: 'shirt',
@@ -847,6 +859,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Black shirt · DTF print',
     price: 35,
     photo: '/print-files/WOODSTOCK-06-pinhoti-trail-BLACK.png',
+    bg: '#1a1a1a',
     badge: 'SL Woodcut',
     category: 'shirt',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
@@ -871,6 +884,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Black shirt · DTF print',
     price: 35,
     photo: '/print-files/SL-07-noccalula-falls-BLACK.png',
+    bg: '#1a1a1a',
     badge: 'SL Woodcut',
     badgeColor: '#0f4c75',
     category: 'shirt' as const,
@@ -885,6 +899,7 @@ export const MERCH: MerchItem[] = [
     sub: 'Black shirt · Woodcut badge · DTF print',
     price: 35,
     photo: '/print-files/SL-08-noccalula-water-thunders-BLACK.png',
+    bg: '#1a1a1a',
     badge: 'SL Woodcut',
     badgeColor: '#0f4c75',
     category: 'shirt' as const,

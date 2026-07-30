@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ECCLESIA-S6 — Wound Bowl Sticker Editor</title>
+<style>
+  @font-face { font-family: 'EcclesiaUncial'; src: url('../../gather/assets/fonts/EcclesiaUncial.ttf') format('truetype'); }
+  @font-face { font-family: 'EcclesiaUncialChunky'; src: url('../../gather/assets/fonts/EcclesiaUncial-Chunky.ttf') format('truetype'); }
+  @font-face { font-family: 'UncialAntiqua'; src: url('../../gather/assets/fonts/UncialAntiqua-Regular.ttf') format('truetype'); }
+  @font-face { font-family: 'Fraunces'; src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype'); font-weight: 900; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; display: flex; gap: 40px; min-height: 100vh; align-items: flex-start; padding: 40px; font-family: system-ui, sans-serif; color: #f0ede8; }
+
+  /* ── Sticker canvas ── */
+  #canvas {
+    width: 900px; height: 900px; flex-shrink: 0;
+    border-radius: 50%;
+    background: #f5f0e8;
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px #c9a227, 0 8px 40px rgba(0,0,0,0.6);
+  }
+
+  .bowl-img {
+    width: 520px; height: 520px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  #sticker-text {
+    font-family: 'EcclesiaUncialChunky', serif;
+    font-size: 72px;
+    color: #2c1a0e;
+    text-align: center;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    padding: 0 60px;
+    text-transform: uppercase;
+  }
+
+  .border-ring {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    border: 8px solid #c9a227;
+    pointer-events: none;
+  }
+  .border-ring-inner {
+    position: absolute; inset: 16px;
+    border-radius: 50%;
+    border: 2px solid rgba(201,162,39,0.4);
+    pointer-events: none;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 16px; padding-top: 20px;
+  }
+  .controls h2 { font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #c9a227; margin-bottom: 4px; }
+  label { font-size: 0.8rem; color: rgba(240,237,232,0.5); display: block; margin-bottom: 4px; }
+  input[type=text], input[type=range], select {
+    width: 100%; padding: 8px 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,237,232,0.15); border-radius: 6px; color: #f0ede8; font-size: 0.9rem;
+  }
+  select option { background: #222; }
+  .row { display: flex; gap: 8px; }
+  .row > div { flex: 1; }
+  button {
+    padding: 10px 18px; border-radius: 6px; border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer;
+    background: #c9a227; color: #111;
+  }
+  button.sec { background: rgba(240,237,232,0.1); color: #f0ede8; border: 1px solid rgba(240,237,232,0.2); }
+</style>
+</head>
+<body>
+
+<div id="canvas">
+  <img class="bowl-img" src="ECCLESIA-S6-wound-bowl-sticker.png" alt="Wound Bowl" id="bowl-src" />
+  <div id="sticker-text">The Wound<br>Is the Way</div>
+  <div class="border-ring"></div>
+  <div class="border-ring-inner"></div>
+</div>
+
+<div class="controls">
+  <h2>ECCLESIA-S6 Editor</h2>
+
+  <div>
+    <label>Line 1</label>
+    <input type="text" id="line1" value="The Wound" oninput="updateText()" />
+  </div>
+  <div>
+    <label>Line 2</label>
+    <input type="text" id="line2" value="Is the Way" oninput="updateText()" />
+  </div>
+
+  <div>
+    <label>Font</label>
+    <select id="fontSel" onchange="updateFont()">
+      <option value="EcclesiaUncialChunky">Ecclesia Uncial Chunky</option>
+      <option value="EcclesiaUncial">Ecclesia Uncial Regular</option>
+      <option value="UncialAntiqua">Uncial Antiqua</option>
+      <option value="Fraunces">Fraunces Black</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>Font size: <span id="fsVal">72</span>px</label>
+      <input type="range" id="fontSize" min="32" max="120" value="72" oninput="updateSize()" />
+    </div>
+    <div>
+      <label>Letter spacing: <span id="lsVal">4</span>%</label>
+      <input type="range" id="ls" min="-2" max="20" value="4" oninput="updateLS()" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>Text color</label>
+      <input type="color" id="textColor" value="#2c1a0e" oninput="updateColor()" style="height:38px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+    <div>
+      <label>Ring color</label>
+      <input type="color" id="ringColor" value="#c9a227" oninput="updateRing()" style="height:38px;padding:2px;width:100%;cursor:pointer;" />
+    </div>
+  </div>
+
+  <div>
+    <label>Bowl image scale: <span id="scaleVal">520</span>px</label>
+    <input type="range" id="bowlScale" min="200" max="700" value="520" oninput="updateBowl()" />
+  </div>
+
+  <div>
+    <label>Background</label>
+    <select id="bgSel" onchange="updateBg()">
+      <option value="#f5f0e8">Cream</option>
+      <option value="transparent">Transparent</option>
+      <option value="#ffffff">White</option>
+      <option value="#1a1a1a">Black</option>
+      <option value="#2c1a0e">Dark Brown</option>
+    </select>
+  </div>
+
+  <button onclick="exportPNG()">↓ Export PNG (900×900)</button>
+  <button class="sec" onclick="window.print()">Print</button>
+
+  <p style="font-size:0.72rem; color:rgba(240,237,232,0.3); line-height:1.5;">
+    Gray rectangle: removed (now using the bowl PNG directly as the graphic layer — no bg rect).
+    Export uses html2canvas or screenshot the canvas.
+  </p>
+</div>
+
+<script>
+function updateText() {
+  const l1 = document.getElementById('line1').value;
+  const l2 = document.getElementById('line2').value;
+  const el = document.getElementById('sticker-text');
+  el.innerHTML = l1 + (l2 ? '<br>' + l2 : '');
+}
+function updateFont() {
+  document.getElementById('sticker-text').style.fontFamily = document.getElementById('fontSel').value + ', serif';
+}
+function updateSize() {
+  const v = document.getElementById('fontSize').value;
+  document.getElementById('fsVal').textContent = v;
+  document.getElementById('sticker-text').style.fontSize = v + 'px';
+}
+function updateLS() {
+  const v = document.getElementById('ls').value;
+  document.getElementById('lsVal').textContent = v;
+  document.getElementById('sticker-text').style.letterSpacing = (v/100) + 'em';
+}
+function updateColor() {
+  document.getElementById('sticker-text').style.color = document.getElementById('textColor').value;
+}
+function updateRing() {
+  const c = document.getElementById('ringColor').value;
+  document.querySelector('.border-ring').style.borderColor = c;
+  document.querySelector('.border-ring-inner').style.borderColor = c + '66';
+}
+function updateBowl() {
+  const v = document.getElementById('bowlScale').value;
+  document.getElementById('scaleVal').textContent = v;
+  document.querySelector('.bowl-img').style.width = v + 'px';
+  document.querySelector('.bowl-img').style.height = v + 'px';
+}
+function updateBg() {
+  document.getElementById('canvas').style.background = document.getElementById('bgSel').value;
+}
+function exportPNG() {
+  alert('Screenshot the canvas at 900×900 or use Chrome devtools to capture the #canvas element.');
+}
+</script>
+</body>
+</html>
