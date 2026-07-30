@@ -301,7 +301,7 @@ export default function WoodstockPrintPage() {
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.84rem', minWidth: '560px' }}>
             <thead>
               <tr style={{ background: 'rgba(255,255,255,0.04)' }}>
-                {['ID', 'Design', 'Color', 'Method', 'S', 'M', 'L', 'XL', '2XL', 'Total'].map((h) => (
+                {['ID', 'Design', 'Color', 'Method', 'S', 'M', 'L', 'XL', '2XL', 'Total', '↓'].map((h) => (
                   <th key={h} style={{ padding: '0.55rem 0.6rem', textAlign: ['ID','Design','Color','Method'].includes(h) ? 'left' : 'center', color: 'rgba(240,237,232,0.3)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>{h}</th>
                 ))}
               </tr>
@@ -324,6 +324,16 @@ export default function WoodstockPrintPage() {
                       <td key={j} style={{ padding: '0.45rem 0.55rem', textAlign: 'center', color: v > 0 ? '#CA8A04' : 'rgba(240,237,232,0.15)', fontWeight: v > 0 ? 700 : 400 }}>{v > 0 ? v : '—'}</td>
                     ))}
                     <td style={{ padding: '0.45rem 0.55rem', textAlign: 'center', fontWeight: 700, color: total > 0 ? '#4ade80' : 'rgba(240,237,232,0.2)' }}>{total > 0 ? total : '—'}</td>
+                    <td style={{ padding: '0.35rem 0.4rem', textAlign: 'center' }}>
+                      {s.backFile ? (
+                        <span style={{ display: 'flex', gap: '0.25rem', justifyContent: 'center' }}>
+                          <a href={`/print-files/${s.file}`} download={s.file} title="Download front" style={{ fontSize: '0.68rem', fontWeight: 700, padding: '0.2rem 0.4rem', borderRadius: '4px', background: 'rgba(240,237,232,0.08)', color: '#f0ede8', textDecoration: 'none', border: '1px solid rgba(240,237,232,0.12)', whiteSpace: 'nowrap' }}>↓ F</a>
+                          <a href={`/print-files/${s.backFile}`} download={s.backFile} title="Download back" style={{ fontSize: '0.68rem', fontWeight: 700, padding: '0.2rem 0.4rem', borderRadius: '4px', background: 'rgba(240,237,232,0.08)', color: '#f0ede8', textDecoration: 'none', border: '1px solid rgba(240,237,232,0.12)', whiteSpace: 'nowrap' }}>↓ B</a>
+                        </span>
+                      ) : s.file ? (
+                        <a href={`/print-files/${s.file}`} download={s.file} style={{ fontSize: '0.68rem', fontWeight: 700, padding: '0.2rem 0.5rem', borderRadius: '4px', background: 'rgba(240,237,232,0.08)', color: '#f0ede8', textDecoration: 'none', border: '1px solid rgba(240,237,232,0.12)' }}>↓</a>
+                      ) : <span style={{ color: 'rgba(240,237,232,0.15)', fontSize: '0.65rem' }}>—</span>}
+                    </td>
                   </tr>
                 )
               })}
@@ -333,6 +343,7 @@ export default function WoodstockPrintPage() {
                   <td key={j} style={{ padding: '0.6rem 0.55rem', textAlign: 'center', fontWeight: 700, color: '#4ade80' }}>{v}</td>
                 ))}
                 <td style={{ padding: '0.6rem 0.55rem', textAlign: 'center', fontWeight: 800, color: '#4ade80', fontSize: '0.9rem' }}>{grandTotal}</td>
+                <td />
               </tr>
             </tbody>
           </table>
@@ -349,7 +360,7 @@ export default function WoodstockPrintPage() {
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.84rem', minWidth: '480px' }}>
             <thead>
               <tr style={{ background: 'rgba(255,255,255,0.04)' }}>
-                {['ID', 'Design', 'Color', 'Method', 'YS', 'YM', 'YL', 'Total'].map((h) => (
+                {['ID', 'Design', 'Color', 'Method', 'YS', 'YM', 'YL', 'Total', '↓'].map((h) => (
                   <th key={h} style={{ padding: '0.55rem 0.6rem', textAlign: ['ID','Design','Color','Method'].includes(h) ? 'left' : 'center', color: 'rgba(240,237,232,0.3)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>{h}</th>
                 ))}
               </tr>
@@ -372,6 +383,11 @@ export default function WoodstockPrintPage() {
                       <td key={j} style={{ padding: '0.45rem 0.55rem', textAlign: 'center', color: v > 0 ? '#CA8A04' : 'rgba(240,237,232,0.15)', fontWeight: v > 0 ? 700 : 400 }}>{v > 0 ? v : '—'}</td>
                     ))}
                     <td style={{ padding: '0.45rem 0.55rem', textAlign: 'center', fontWeight: 700, color: '#4ade80' }}>{total}</td>
+                    <td style={{ padding: '0.35rem 0.4rem', textAlign: 'center' }}>
+                      {s.file ? (
+                        <a href={`/print-files/${s.file}`} download={s.file} style={{ fontSize: '0.68rem', fontWeight: 700, padding: '0.2rem 0.5rem', borderRadius: '4px', background: 'rgba(240,237,232,0.08)', color: '#f0ede8', textDecoration: 'none', border: '1px solid rgba(240,237,232,0.12)' }}>↓</a>
+                      ) : <span style={{ color: 'rgba(240,237,232,0.15)', fontSize: '0.65rem' }}>—</span>}
+                    </td>
                   </tr>
                 )
               })}
@@ -381,6 +397,7 @@ export default function WoodstockPrintPage() {
                   <td key={j} style={{ padding: '0.6rem 0.55rem', textAlign: 'center', fontWeight: 700, color: '#4ade80' }}>{v}</td>
                 ))}
                 <td style={{ padding: '0.6rem 0.55rem', textAlign: 'center', fontWeight: 800, color: '#4ade80', fontSize: '0.9rem' }}>{yGrandTotal}</td>
+                <td />
               </tr>
             </tbody>
           </table>
@@ -394,8 +411,8 @@ export default function WoodstockPrintPage() {
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.84rem' }}>
             <thead>
               <tr style={{ background: 'rgba(255,255,255,0.04)' }}>
-                {['ID', 'Design', 'Size', 'QTY'].map((h) => (
-                  <th key={h} style={{ padding: '0.55rem 0.6rem', textAlign: h === 'QTY' ? 'center' : 'left', color: 'rgba(240,237,232,0.3)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.05em' }}>{h}</th>
+                {['ID', 'Design', 'Size', 'QTY', '↓'].map((h) => (
+                  <th key={h} style={{ padding: '0.55rem 0.6rem', textAlign: ['QTY','↓'].includes(h) ? 'center' : 'left', color: 'rgba(240,237,232,0.3)', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.05em' }}>{h}</th>
                 ))}
               </tr>
             </thead>
@@ -407,6 +424,11 @@ export default function WoodstockPrintPage() {
                   <td style={{ padding: '0.45rem 0.6rem', fontSize: '0.78rem', color: 'rgba(240,237,232,0.4)', fontFamily: 'monospace' }}>{s.dims}</td>
                   <td style={{ padding: '0.45rem 0.6rem', textAlign: 'center', fontWeight: 700, color: s.qty && s.qty > 0 ? '#CA8A04' : 'rgba(240,237,232,0.2)' }}>
                     {s.qty && s.qty > 0 ? s.qty : '—'}
+                  </td>
+                  <td style={{ padding: '0.35rem 0.4rem', textAlign: 'center' }}>
+                    {s.file ? (
+                      <a href={`/print-files/${s.file}`} download={s.file} style={{ fontSize: '0.68rem', fontWeight: 700, padding: '0.2rem 0.5rem', borderRadius: '4px', background: 'rgba(240,237,232,0.08)', color: '#f0ede8', textDecoration: 'none', border: '1px solid rgba(240,237,232,0.12)' }}>↓</a>
+                    ) : <span style={{ color: 'rgba(240,237,232,0.15)', fontSize: '0.65rem' }}>—</span>}
                   </td>
                 </tr>
               ))}
