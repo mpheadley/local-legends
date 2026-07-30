@@ -16,9 +16,9 @@ type Props = {
 /** Shirt-on-background card with raw-graphic-on-hover */
 function MerchCard({ item, compact }: { item: MerchItem; compact?: boolean }) {
   const [hovered, setHovered] = useState(false)
-  // Default: graphic on shirt bg color; hover: raw graphic on plain bg
-  const src   = hovered && item.rawGraphic ? item.rawGraphic : item.photo
-  const imgBg = hovered ? 'transparent' : (item.bg ?? 'transparent')
+  // Default: raw design on blank bg; hover: shirt color shows
+  const src   = !hovered && item.rawGraphic ? item.rawGraphic : item.photo
+  const imgBg = hovered ? (item.bg ?? 'transparent') : 'transparent'
 
   return (
     <Link

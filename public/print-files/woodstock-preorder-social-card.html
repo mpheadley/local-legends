@@ -264,8 +264,8 @@ function updateDesign() {
   document.getElementById('sq-img').src    = src
   document.getElementById('story-img').src = src
 
-  // Soft shirt circle bg tint
-  const tint = bg !== 'transparent' ? bg + '18' : 'rgba(255,255,255,0.03)'
+  // Always blank bg on promo cards — design renders on dark, not shirt color
+  const tint = 'rgba(255,255,255,0.03)'
   document.getElementById('og-shirt-bg').style.background    = tint
   document.getElementById('sq-shirt-bg').style.background    = tint
   document.getElementById('story-shirt-bg').style.background = tint

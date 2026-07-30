@@ -206,9 +206,9 @@ export default function MerchPage() {
 
 function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
   const [hovered, setHovered] = useState(false)
-  // Default: graphic on shirt bg. Hover: raw graphic on plain bg.
-  const showSrc = hovered && item.rawGraphic ? item.rawGraphic : item.photo
-  const imgBg = hovered ? 'transparent' : (item.bg ?? 'transparent')
+  // Default: raw design on blank bg. Hover: shirt color shows.
+  const showSrc = !hovered && item.rawGraphic ? item.rawGraphic : item.photo
+  const imgBg = hovered ? (item.bg ?? 'transparent') : 'transparent'
 
   return (
     <Link href={`/buy/${item.id}`}
