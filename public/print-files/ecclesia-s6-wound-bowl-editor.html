@@ -18,27 +18,34 @@
     border-radius: 50%;
     background: #f5f0e8;
     position: relative;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    /* No flex — use absolute positioning for all children to prevent overflow leaking outside circle */
     overflow: hidden;
-    box-shadow: 0 0 0 3px #c9a227, 0 8px 40px rgba(0,0,0,0.6);
+    clip-path: circle(50%);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
   }
 
   .bowl-img {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -62%);
     width: 520px; height: 520px;
     object-fit: contain;
     display: block;
-    margin-bottom: 24px;
   }
 
   #sticker-text {
+    position: absolute;
+    left: 50%; bottom: 120px;
+    transform: translateX(-50%);
+    width: 760px;
     font-family: 'EcclesiaUncialChunky', serif;
     font-size: 72px;
     color: #2c1a0e;
     text-align: center;
     letter-spacing: 0.04em;
     line-height: 1.1;
-    padding: 0 60px;
     text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .border-ring {
@@ -46,12 +53,14 @@
     border-radius: 50%;
     border: 8px solid #c9a227;
     pointer-events: none;
+    z-index: 10;
   }
   .border-ring-inner {
     position: absolute; inset: 16px;
     border-radius: 50%;
     border: 2px solid rgba(201,162,39,0.4);
     pointer-events: none;
+    z-index: 10;
   }
 
   /* ── Controls ── */

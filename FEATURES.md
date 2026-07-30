@@ -1,6 +1,15 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-07-21. Source of truth for what's built.*
+*Last updated: 2026-07-30. Source of truth for what's built.*
+
+---
+
+## Contextual Merch Engine + Cross-Site API (2026-07-30)
+
+- **`getMerchForContext(ctx)`** in `src/lib/merch.ts` — scores all 100+ items by city/tag/venture/slug signals. Replaces hardcoded `FW_PRODUCTS` lookup for essays/profiles/city pages.
+- **`/api/merch` (edge route)** — GET `?cities=&tags=&venture=&slug=&limit=` → returns scored `MerchItem[]`. CORS open. Any gather app (Attune, Ecclesia, GS) can call this to get contextual merch.
+- **`ContextualMerchGrid` component** — drop-in merch block: shows shirt-bg-by-default + hover-raw-graphic, labeled section with `heading` override. Used on essays, profiles, city pages.
+- **Merch card hover behavior flip** — ProductCard: default = graphic on shirt color bg; hover = raw graphic on plain/transparent bg.
 
 ---
 

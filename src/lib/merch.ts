@@ -1099,6 +1099,97 @@ export const MERCH: MerchItem[] = [
 ]
 
 
+// ─────────────────────────────────────────────────────────────────────────────
+// CONTEXTUAL SCORING ENGINE
+// Called by: city pages, essay pages, profile pages, /api/merch (cross-site)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export type MerchContext = {
+  cities?:   string[]   // e.g. ['anniston']
+  tags?:     string[]   // e.g. ['trail','history','mental-health','ecclesia','faith','running']
+  venture?:  string     // 'ecclesia' | 'attune' | 'aisle' | 'heather' | 'sl'
+  slug?:     string     // essay or profile slug — enables exact lookup overrides
+  category?: MerchCategory  // force a category
+  limit?:    number     // default 4
+  includeUnavailable?: boolean  // default false
+}
+
+function scoreItem(item: MerchItem, ctx: MerchContext): number {
+  let s = 0
+
+  // availability base
+  if (!item.available && !ctx.includeUnavailable) return -999
+  if (!item.available) s -= 5
+
+  // city match — strongest signal
+  const cityHits = (item.cities ?? []).filter(c => ctx.cities?.includes(c)).length
+  s += cityHits * 5
+
+  // tag scoring against name, tagline, badge, sub
+  const haystack = [
+    item.name, item.tagline, item.sub ?? '', item.badge ?? ''
+  ].join(' ').toLowerCase()
+
+  for (const tag of ctx.tags ?? []) {
+    const t = tag.toLowerCase()
+    if (haystack.includes(t)) s += 3
+  }
+
+  // venture match against badge
+  if (ctx.venture) {
+    const v = ctx.venture.toLowerCase()
+    const b = (item.badge ?? '').toLowerCase()
+    if (b === v || b.includes(v)) s += 4
+  }
+
+  // category preference — shirts first, then stickers, totes, prints
+  const catScore: Partial<Record<MerchCategory, number>> = {
+    shirt: 2, tote: 1, sticker: 0, print: -1
+  }
+  s += catScore[item.category] ?? 0
+
+  // fundraiser items get a bump (good community story)
+  if (item.fundraiser) s += 1
+
+  return s
+}
+
+/** Main context-aware scorer — used by all surfaces and the /api/merch endpoint */
+export function getMerchForContext(ctx: MerchContext): MerchItem[] {
+  // 1. exact slug overrides (keep these for hand-tuned editorial picks)
+  if (ctx.slug) {
+    const profileHit = PROFILE_MERCH[ctx.slug]
+    const essayHit   = ESSAY_MERCH[ctx.slug]
+    // If we have an override, seed with those then fill from scorer
+    if (profileHit || essayHit) {
+      const overrideIds = profileHit
+        ? profileHit.filter(Boolean).map(p => p!.url.replace('/buy/', ''))
+        : [essayHit!.url.replace('/buy/', '')]
+
+      const overrides = overrideIds
+        .map(id => MERCH.find(m => m.id === id))
+        .filter((m): m is MerchItem => !!m && m.available)
+
+      const rest = MERCH
+        .filter(m => !overrideIds.includes(m.id))
+        .map(m => ({ item: m, score: scoreItem(m, ctx) }))
+        .filter(x => x.score > -999)
+        .sort((a, b) => b.score - a.score)
+        .map(x => x.item)
+
+      return [...overrides, ...rest].slice(0, ctx.limit ?? 4)
+    }
+  }
+
+  // 2. Pure scoring path
+  return MERCH
+    .map(m => ({ item: m, score: scoreItem(m, ctx) }))
+    .filter(x => x.score > -999)
+    .sort((a, b) => b.score - a.score)
+    .map(x => x.item)
+    .slice(0, ctx.limit ?? 4)
+}
+
 export function getMerchForCity(citySlug: string, limit = 4): MerchItem[] {
   const cityAvail = MERCH.filter(m => m.available && m.cities?.includes(citySlug))
   const cityPending = MERCH.filter(m => !m.available && m.cities?.includes(citySlug))

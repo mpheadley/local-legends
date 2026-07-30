@@ -2,198 +2,478 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ecclesia Pilgrims Clergy — Solo Graphic / Sticker</title>
+<title>Ecclesia Asset Studio — Solo / Sticker / Card Editor</title>
 <style>
   @font-face { font-family: 'EcclesiaUncialChunky'; src: url('../../gather/assets/fonts/EcclesiaUncial-Chunky.ttf') format('truetype'); }
   @font-face { font-family: 'UncialAntiqua'; src: url('../../gather/assets/fonts/UncialAntiqua-Regular.ttf') format('truetype'); }
   @font-face { font-family: 'Fraunces'; src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype'); font-weight: 900; }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #111; display: flex; gap: 40px; min-height: 100vh; align-items: flex-start; padding: 40px; font-family: system-ui, sans-serif; }
+  body { background: #0a0a0a; display: flex; gap: 0; min-height: 100vh; font-family: system-ui, sans-serif; }
 
-  /* ── Canvas — square, for sticker / solo graphic ── */
+  /* ── Left: Canvas ── */
+  .canvas-col {
+    width: 720px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center;
+    padding: 40px 32px; gap: 20px; border-right: 1px solid rgba(45,212,191,0.12);
+  }
+
   #canvas {
-    width: 700px; height: 700px; flex-shrink: 0;
-    background: transparent;
+    width: 680px; height: 680px;
+    background: #1a1a1a;
     position: relative;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 0 2px rgba(240,237,232,0.1), 0 12px 48px rgba(0,0,0,0.7);
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 0 0 2px rgba(45,212,191,0.2), 0 16px 60px rgba(0,0,0,0.8);
+    transition: background 0.3s, border-radius 0.3s;
   }
 
   #graphic-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    position: relative;
-    z-index: 2;
+    max-width: 88%; max-height: 88%;
+    object-fit: contain; display: block;
+    position: relative; z-index: 2;
+    transition: filter 0.2s;
   }
 
-  #caption-top {
-    position: absolute;
-    top: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    font-family: 'EcclesiaUncialChunky', serif;
-    font-size: 42px;
-    color: #2dd4bf;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-align: center;
-    white-space: nowrap;
-    display: none;
+  /* BIT DEPTH FILTERS */
+  #graphic-img.bit-8  { image-rendering: pixelated; filter: contrast(1.15) saturate(1.3); transform: scale(1.01); }
+  #graphic-img.bit-16 { image-rendering: pixelated; filter: contrast(1.05) saturate(1.1); }
+  #graphic-img.bit-24 { image-rendering: auto; filter: none; }
+  #graphic-img.bit-32 { image-rendering: auto; filter: none; }
+
+  #caption-top, #caption-bottom {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    z-index: 3; font-family: 'EcclesiaUncialChunky', serif;
+    text-align: center; white-space: nowrap;
+  }
+  #caption-top    { top: 20px; font-size: 40px; color: #2dd4bf; letter-spacing: 0.2em; text-transform: uppercase; display: none; }
+  #caption-bottom { bottom: 20px; font-size: 24px; color: rgba(45,212,191,0.7); letter-spacing: 0.26em; text-transform: uppercase; display: none; }
+
+  /* Bit depth badge */
+  .bit-badge {
+    position: absolute; top: 12px; right: 12px; z-index: 10;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
+    padding: 4px 8px; border-radius: 4px;
+    background: rgba(45,212,191,0.15); color: #2dd4bf;
+    border: 1px solid rgba(45,212,191,0.3);
+    pointer-events: none;
   }
 
-  #caption-bottom {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    font-family: 'UncialAntiqua', serif;
-    font-size: 26px;
-    color: rgba(45,212,191,0.75);
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    text-align: center;
-    white-space: nowrap;
-    display: none;
+  /* ── Right: Controls ── */
+  .controls-col {
+    flex: 1; overflow-y: auto; padding: 32px 28px;
+    display: flex; flex-direction: column; gap: 0;
   }
 
-  /* ── Controls ── */
-  .controls {
-    flex: 1; min-width: 270px; display: flex; flex-direction: column; gap: 14px; padding-top: 16px; color: #f0ede8;
+  .section { padding: 16px 0; border-bottom: 1px solid rgba(240,237,232,0.07); }
+  .section:last-child { border-bottom: none; }
+  .section-title {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(45,212,191,0.6); font-weight: 700; margin-bottom: 12px;
   }
-  .controls h2 { font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; color: #2dd4bf; margin-bottom: 2px; }
-  label { font-size: 0.76rem; color: rgba(240,237,232,0.45); display: block; margin-bottom: 3px; }
-  input[type=text], input[type=range], select, input[type=checkbox] {
-    padding: 7px 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,237,232,0.14); border-radius: 6px; color: #f0ede8; font-size: 0.86rem;
+
+  label { font-size: 0.75rem; color: rgba(240,237,232,0.4); display: block; margin-bottom: 4px; margin-top: 10px; }
+  label:first-child { margin-top: 0; }
+  input[type=text], input[type=range], select {
+    width: 100%; padding: 7px 10px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(240,237,232,0.12);
+    border-radius: 6px; color: #f0ede8; font-size: 0.85rem;
   }
-  input[type=text], select { width: 100%; }
-  input[type=range] { width: 100%; }
-  select option { background: #222; }
-  .row { display: flex; gap: 8px; align-items: center; }
+  select option { background: #1a1a1a; }
+  input[type=color] { height: 34px; padding: 2px; width: 100%; cursor: pointer; border-radius: 5px; border: 1px solid rgba(240,237,232,0.12); background: none; }
+  .row { display: flex; gap: 8px; }
   .row > div { flex: 1; }
-  button { padding: 9px 16px; border-radius: 6px; border: none; font-weight: 700; font-size: 0.83rem; cursor: pointer; background: #2dd4bf; color: #111; }
-  button.sec { background: rgba(240,237,232,0.1); color: #f0ede8; border: 1px solid rgba(240,237,232,0.18); }
-  hr { border: none; border-top: 1px solid rgba(240,237,232,0.08); }
+
+  /* Bit depth buttons */
+  .bit-row { display: flex; gap: 6px; }
+  .bit-btn {
+    flex: 1; padding: 8px 4px; border: 1px solid rgba(45,212,191,0.25);
+    background: rgba(45,212,191,0.06); color: #2dd4bf;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em;
+    border-radius: 6px; cursor: pointer; transition: all 0.15s;
+    text-align: center;
+  }
+  .bit-btn:hover { background: rgba(45,212,191,0.15); }
+  .bit-btn.active { background: #2dd4bf; color: #111; border-color: #2dd4bf; }
+
+  /* Asset gallery */
+  .asset-gallery {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px;
+  }
+  .asset-thumb {
+    aspect-ratio: 1; border-radius: 6px; overflow: hidden; cursor: pointer;
+    border: 2px solid transparent; background: rgba(255,255,255,0.04);
+    transition: border-color 0.15s, transform 0.1s;
+    display: flex; align-items: center; justify-content: center;
+    padding: 4px;
+  }
+  .asset-thumb:hover { border-color: rgba(45,212,191,0.4); transform: scale(1.04); }
+  .asset-thumb.selected { border-color: #2dd4bf; }
+  .asset-thumb img { width: 100%; height: 100%; object-fit: contain; }
+  .asset-label { font-size: 0.62rem; color: rgba(240,237,232,0.3); text-align: center; margin-top: 2px; }
+  .asset-group { margin-top: 8px; }
+  .asset-group-title { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(45,212,191,0.4); margin-bottom: 6px; }
+
   .check-row { display: flex; align-items: center; gap: 8px; }
-  .check-row input { width: auto; padding: 0; }
+  .check-row input { width: auto; }
   .check-row label { margin: 0; color: #f0ede8; }
+
+  button.export { width: 100%; padding: 11px; border-radius: 8px; border: none; font-weight: 700; font-size: 0.88rem; cursor: pointer; background: #2dd4bf; color: #111; margin-top: 8px; }
+  button.sec { width: 100%; padding: 9px; border-radius: 8px; border: 1px solid rgba(240,237,232,0.15); background: rgba(255,255,255,0.04); color: #f0ede8; font-size: 0.82rem; cursor: pointer; margin-top: 6px; font-weight: 600; }
 </style>
 </head>
 <body>
 
-<div id="canvas">
-  <img id="graphic-img" src="ECCLESIA-S1-pilgrims-clergy-sticker.png" alt="Pilgrims Clergy Solo" />
-  <div id="caption-top">Ecclesia</div>
-  <div id="caption-bottom">We Are All on the Way</div>
+<div class="canvas-col">
+  <div id="canvas">
+    <div class="bit-badge" id="bitBadge">24-bit</div>
+    <img id="graphic-img" class="bit-24" src="ECCLESIA-S1-pilgrims-clergy-sticker.png" alt="Ecclesia Asset" />
+    <div id="caption-top">Ecclesia</div>
+    <div id="caption-bottom">We Are All on the Way</div>
+  </div>
+  <p style="font-size:0.7rem;color:rgba(240,237,232,0.25);text-align:center;line-height:1.5;">
+    680×680px preview · Chrome: right-click #canvas → Capture node screenshot to export
+  </p>
 </div>
 
-<div class="controls">
-  <h2>Pilgrims Clergy — Solo / Sticker</h2>
+<div class="controls-col">
 
-  <div>
-    <label>Source image</label>
-    <select id="srcSel" onchange="upSrc()">
-      <option value="ECCLESIA-S1-pilgrims-clergy-sticker.png">Sticker (1344×1344)</option>
-      <option value="ECCLESIA-01-pilgrims-clergy-BLACK.png">T-shirt graphic (1502×1344)</option>
-    </select>
+  <!-- BIT DEPTH -->
+  <div class="section">
+    <div class="section-title">Render Mode</div>
+    <div class="bit-row">
+      <button class="bit-btn" onclick="setBit(8)">8-bit</button>
+      <button class="bit-btn" onclick="setBit(16)">16-bit</button>
+      <button class="bit-btn active" onclick="setBit(24)">24-bit</button>
+      <button class="bit-btn" onclick="setBit(32)">32-bit</button>
+    </div>
+    <p style="font-size:0.65rem;color:rgba(240,237,232,0.25);margin-top:8px;line-height:1.5;">
+      8-bit: pixelated + boosted contrast · 16-bit: soft pixel · 24-bit: crisp (default) · 32-bit: full alpha
+    </p>
   </div>
 
-  <hr />
+  <!-- ASSET LIBRARY -->
+  <div class="section">
+    <div class="section-title">Asset Library</div>
 
-  <div>
-    <label>Canvas size: <span id="csVal">700</span>px</label>
-    <input type="range" id="cs" min="300" max="900" value="700" oninput="upCs()" />
+    <div class="asset-group">
+      <div class="asset-group-title">Pilgrims + Clergy</div>
+      <div class="asset-gallery">
+        <div>
+          <div class="asset-thumb selected" onclick="setAsset('ECCLESIA-S1-pilgrims-clergy-sticker.png', this)">
+            <img src="ECCLESIA-S1-pilgrims-clergy-sticker.png" />
+          </div>
+          <div class="asset-label">Clergy Sticker</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('ECCLESIA-01-pilgrims-clergy-BLACK.png', this)">
+            <img src="ECCLESIA-01-pilgrims-clergy-BLACK.png" />
+          </div>
+          <div class="asset-label">Clergy Shirt</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-pilgrims-forest.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-pilgrims-forest.png" />
+          </div>
+          <div class="asset-label">Pilgrims Forest</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('ECCLESIA-05-pilgrims-BLACK.png', this)">
+            <img src="ECCLESIA-05-pilgrims-BLACK.png" />
+          </div>
+          <div class="asset-label">Pilgrims Black</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="asset-group">
+      <div class="asset-group-title">Coins — 8-bit</div>
+      <div class="asset-gallery">
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-8bit-trans.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-8bit-trans.png" />
+          </div>
+          <div class="asset-label">8-bit Trans</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-8bit-v2-trans.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-8bit-v2-trans.png" />
+          </div>
+          <div class="asset-label">8-bit v2</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-8bit.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-8bit.png" />
+          </div>
+          <div class="asset-label">8-bit Solid</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('ECCLESIA-S2-coin-sticker-8bit.png', this)">
+            <img src="ECCLESIA-S2-coin-sticker-8bit.png" />
+          </div>
+          <div class="asset-label">Coin Sticker 8-bit</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="asset-group">
+      <div class="asset-group-title">Coins — Photoreal + 3D</div>
+      <div class="asset-gallery">
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-3d-photoreal.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-3d-photoreal.png" />
+          </div>
+          <div class="asset-label">Photoreal</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-merged-v1.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-merged-v1.png" />
+          </div>
+          <div class="asset-label">Merged Coin</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-mossy-hero.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-mossy-hero.png" />
+          </div>
+          <div class="asset-label">Mossy Hero</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-glowing.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-glowing.png" />
+          </div>
+          <div class="asset-label">Glowing</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('ECCLESIA-S3-coin-sticker-photoreal.png', this)">
+            <img src="ECCLESIA-S3-coin-sticker-photoreal.png" />
+          </div>
+          <div class="asset-label">Coin Sticker Photoreal</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/3d-print/ecclesia-coin-v4-iso.png', this)">
+            <img src="../../gather/assets/ecclesia/3d-print/ecclesia-coin-v4-iso.png" />
+          </div>
+          <div class="asset-label">3D Render v4</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/3d-print/coin-glow.png', this)">
+            <img src="../../gather/assets/ecclesia/3d-print/coin-glow.png" />
+          </div>
+          <div class="asset-label">3D Glow</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-coin-nobg.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-coin-nobg.png" />
+          </div>
+          <div class="asset-label">No BG</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="asset-group">
+      <div class="asset-group-title">Standing Stones</div>
+      <div class="asset-gallery">
+        <div>
+          <div class="asset-thumb" onclick="setAsset('ECCLESIA-S1-stone-sticker.png', this)">
+            <img src="ECCLESIA-S1-stone-sticker.png" />
+          </div>
+          <div class="asset-label">Stone Sticker</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-standing-stone-8bit.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-standing-stone-8bit.png" />
+          </div>
+          <div class="asset-label">Stone 8-bit</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-standing-stone-teal.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-standing-stone-teal.png" />
+          </div>
+          <div class="asset-label">Stone Teal</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-stone-hero-photoreal.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-stone-hero-photoreal.png" />
+          </div>
+          <div class="asset-label">Stone Photoreal</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-stone-pixel.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-stone-pixel.png" />
+          </div>
+          <div class="asset-label">Stone Pixel</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-tablet-8bit-teal.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-tablet-8bit-teal.png" />
+          </div>
+          <div class="asset-label">Tablet 8-bit</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="asset-group">
+      <div class="asset-group-title">Matt — Pixel Headshots</div>
+      <div class="asset-gallery">
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-final.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-final.png" />
+          </div>
+          <div class="asset-label">Clergy Final</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-stone.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-stone.png" />
+          </div>
+          <div class="asset-label">Clergy Stone</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-v2.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-v2.png" />
+          </div>
+          <div class="asset-label">Clergy v2</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-v3.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-headshot-pixel-clergy-v3.png" />
+          </div>
+          <div class="asset-label">Clergy v3</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-matt-woodcut-canonical.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-matt-woodcut-canonical.png" />
+          </div>
+          <div class="asset-label">Woodcut</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-matt-canonical.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-matt-canonical.png" />
+          </div>
+          <div class="asset-label">Matt Canonical</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="asset-group">
+      <div class="asset-group-title">Cheshire + Marks</div>
+      <div class="asset-gallery">
+        <div>
+          <div class="asset-thumb" onclick="setAsset('ECCLESIA-02-cheshire-cat-BLACK.png', this)">
+            <img src="ECCLESIA-02-cheshire-cat-BLACK.png" />
+          </div>
+          <div class="asset-label">Cheshire Black</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-mark-pixel.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-mark-pixel.png" />
+          </div>
+          <div class="asset-label">Mark Pixel</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('../../gather/assets/ecclesia/ecclesia-mark-pixel-trans.png', this)">
+            <img src="../../gather/assets/ecclesia/ecclesia-mark-pixel-trans.png" />
+          </div>
+          <div class="asset-label">Mark Trans</div>
+        </div>
+        <div>
+          <div class="asset-thumb" onclick="setAsset('ECCLESIA-S6-wound-bowl-sticker.png', this)">
+            <img src="ECCLESIA-S6-wound-bowl-sticker.png" />
+          </div>
+          <div class="asset-label">Wound Bowl</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
+  <!-- CANVAS SETTINGS -->
+  <div class="section">
+    <div class="section-title">Canvas</div>
     <label>Background</label>
     <select id="bgSel" onchange="upBg()">
-      <option value="transparent">Transparent</option>
       <option value="#1a1a1a">Black</option>
+      <option value="transparent">Transparent</option>
       <option value="#f5f0e8">Cream</option>
       <option value="#0d2c1f">Forest</option>
       <option value="#1a3040">Navy</option>
+      <option value="#2c1a0e">Brown</option>
       <option value="#ffffff">White</option>
+      <option value="#0f1f1a">Dark Teal</option>
     </select>
+    <label>Border radius (0=square · 340=circle): <span id="brVal">12</span>px</label>
+    <input type="range" id="br" min="0" max="340" value="12" oninput="upBr()" />
+    <label>Graphic scale: <span id="gsVal">88</span>%</label>
+    <input type="range" id="gs" min="20" max="100" value="88" oninput="upGs()" />
   </div>
 
-  <div>
-    <label>Border radius: <span id="brVal">12</span>px (0 = square, 350 = circle)</label>
-    <input type="range" id="br" min="0" max="450" value="12" oninput="upBr()" />
-  </div>
-
-  <hr />
-
-  <div class="check-row">
-    <input type="checkbox" id="showTop" onchange="toggleTop()" />
-    <label for="showTop">Show top caption</label>
-  </div>
-  <div>
+  <!-- CAPTIONS -->
+  <div class="section">
+    <div class="section-title">Captions</div>
+    <div class="check-row">
+      <input type="checkbox" id="showTop" onchange="toggleTop()" />
+      <label for="showTop">Top caption</label>
+    </div>
     <label>Top text</label>
     <input type="text" id="topTxt" value="Ecclesia" oninput="document.getElementById('caption-top').textContent=this.value" />
-  </div>
-  <div>
-    <label>Top size: <span id="tfsVal">42</span>px</label>
-    <input type="range" id="tfs" min="14" max="100" value="42" oninput="upTfs()" />
-  </div>
+    <label>Top size: <span id="tfsVal">40</span>px</label>
+    <input type="range" id="tfs" min="14" max="120" value="40" oninput="upTfs()" />
 
-  <hr />
-
-  <div class="check-row">
-    <input type="checkbox" id="showBot" onchange="toggleBot()" />
-    <label for="showBot">Show bottom caption</label>
-  </div>
-  <div>
+    <div class="check-row" style="margin-top:10px;">
+      <input type="checkbox" id="showBot" onchange="toggleBot()" />
+      <label for="showBot">Bottom caption</label>
+    </div>
     <label>Bottom text</label>
     <input type="text" id="botTxt" value="We Are All on the Way" oninput="document.getElementById('caption-bottom').textContent=this.value" />
-  </div>
-  <div>
-    <label>Bottom size: <span id="bfsVal">26</span>px</label>
-    <input type="range" id="bfs" min="10" max="60" value="26" oninput="upBfs()" />
-  </div>
+    <label>Bottom size: <span id="bfsVal">24</span>px</label>
+    <input type="range" id="bfs" min="10" max="72" value="24" oninput="upBfs()" />
 
-  <hr />
-
-  <div class="row">
-    <div>
-      <label>Top color</label>
-      <input type="color" id="tCol" value="#2dd4bf" oninput="document.getElementById('caption-top').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
-    </div>
-    <div>
-      <label>Bottom color</label>
-      <input type="color" id="bCol" value="#2dd4bf" oninput="document.getElementById('caption-bottom').style.color=this.value" style="height:36px;padding:2px;width:100%;cursor:pointer;" />
-    </div>
-  </div>
-
-  <div>
     <label>Font</label>
     <select id="fontSel" onchange="upFont()">
       <option value="EcclesiaUncialChunky">Ecclesia Uncial Chunky</option>
       <option value="UncialAntiqua">Uncial Antiqua</option>
       <option value="Fraunces">Fraunces Black</option>
     </select>
+
+    <div class="row" style="margin-top:8px;">
+      <div>
+        <label>Top color</label>
+        <input type="color" id="tCol" value="#2dd4bf" oninput="document.getElementById('caption-top').style.color=this.value" />
+      </div>
+      <div>
+        <label>Bottom color</label>
+        <input type="color" id="bCol" value="#2dd4bf" oninput="document.getElementById('caption-bottom').style.color=this.value" />
+      </div>
+    </div>
   </div>
 
-  <button onclick="alert('Chrome DevTools → right-click #canvas → Capture node screenshot')">↓ Export PNG</button>
+  <!-- EXPORT -->
+  <div class="section">
+    <div class="section-title">Export</div>
+    <button class="export" onclick="showExport()">↓ Export PNG</button>
+    <button class="sec" onclick="copyCSS()">Copy CSS filter</button>
+    <p id="exportTip" style="font-size:0.65rem;color:rgba(240,237,232,0.3);margin-top:8px;line-height:1.6;display:none;">
+      Chrome: F12 → Elements → right-click <strong>#canvas</strong> → Capture node screenshot
+    </p>
+  </div>
+
 </div>
 
 <script>
-function upSrc() {
-  document.getElementById('graphic-img').src = document.getElementById('srcSel').value;
+let currentBit = 24;
+
+function setBit(n) {
+  currentBit = n;
+  const img = document.getElementById('graphic-img');
+  img.className = 'bit-' + n;
+  document.getElementById('bitBadge').textContent = n + '-bit';
+  document.querySelectorAll('.bit-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
 }
-function upCs() {
-  const v = document.getElementById('cs').value;
-  document.getElementById('csVal').textContent = v;
-  const c = document.getElementById('canvas');
-  c.style.width = v + 'px';
-  c.style.height = v + 'px';
+
+function setAsset(src, thumb) {
+  document.getElementById('graphic-img').src = src;
+  document.querySelectorAll('.asset-thumb').forEach(t => t.classList.remove('selected'));
+  thumb.classList.add('selected');
 }
+
 function upBg() {
   document.getElementById('canvas').style.background = document.getElementById('bgSel').value;
 }
@@ -201,6 +481,13 @@ function upBr() {
   const v = document.getElementById('br').value;
   document.getElementById('brVal').textContent = v;
   document.getElementById('canvas').style.borderRadius = v + 'px';
+}
+function upGs() {
+  const v = document.getElementById('gs').value;
+  document.getElementById('gsVal').textContent = v;
+  const img = document.getElementById('graphic-img');
+  img.style.maxWidth = v + '%';
+  img.style.maxHeight = v + '%';
 }
 function toggleTop() {
   document.getElementById('caption-top').style.display = document.getElementById('showTop').checked ? 'block' : 'none';
@@ -222,6 +509,15 @@ function upFont() {
   const f = document.getElementById('fontSel').value + ', serif';
   document.getElementById('caption-top').style.fontFamily = f;
   document.getElementById('caption-bottom').style.fontFamily = f;
+}
+function showExport() {
+  document.getElementById('exportTip').style.display = 'block';
+}
+function copyCSS() {
+  const filters = {8:'contrast(1.15) saturate(1.3)', 16:'contrast(1.05) saturate(1.1)', 24:'none', 32:'none'};
+  const ir = currentBit < 24 ? 'image-rendering: pixelated;' : 'image-rendering: auto;';
+  const css = `${ir} filter: ${filters[currentBit]};`;
+  navigator.clipboard.writeText(css).then(() => alert('CSS copied: ' + css));
 }
 </script>
 </body>

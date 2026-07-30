@@ -206,8 +206,9 @@ export default function MerchPage() {
 
 function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
   const [hovered, setHovered] = useState(false)
+  // Default: graphic on shirt bg. Hover: raw graphic on plain bg.
   const showSrc = hovered && item.rawGraphic ? item.rawGraphic : item.photo
-  const imgBg = hovered && item.bg ? item.bg : undefined
+  const imgBg = hovered ? 'transparent' : (item.bg ?? 'transparent')
 
   return (
     <Link href={`/buy/${item.id}`}
@@ -216,7 +217,7 @@ function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}>
       <div className="relative overflow-hidden transition-colors duration-300"
-        style={{ aspectRatio: small ? '1' : '4/5', background: imgBg ?? 'transparent' }}>
+        style={{ aspectRatio: small ? '1' : '4/5', background: imgBg }}>
         <Image src={showSrc} alt={item.name} fill
           className="object-contain transition-transform duration-500 group-hover:scale-[1.04]"
           sizes={small ? '220px' : '(max-width: 640px) 100vw, 320px'} style={{ padding: 16 }} />
