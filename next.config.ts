@@ -37,6 +37,7 @@ const nextConfig: NextConfig = {
       { source: "/journal", destination: "/essays", permanent: true },
       { source: "/journal/:slug", destination: "/essays/:slug", permanent: true },
       { source: "/essays/the-return", destination: "/essays/five-fifteen", permanent: true },
+      { source: "/woodstock", destination: "/print/woodstock", permanent: false },
     ];
   },
   async headers() {

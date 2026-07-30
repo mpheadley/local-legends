@@ -1,0 +1,116 @@
+{
+  "description": "NE Alabama regional artist, photographer, and content creator database. Source of truth for SL profile candidates, barter partners, and contributors.",
+  "last_updated": "2026-07-30",
+  "artists": [
+    {
+      "name": "Michelle McGrady",
+      "slug": "michelle-mcgrady",
+      "type": ["painter"],
+      "medium": ["oil", "acrylic", "watercolor"],
+      "location": "Anniston, AL",
+      "subjects": ["historic buildings", "downtown architecture", "local landmarks"],
+      "bio_short": "Retired Anniston City Schools third-grade teacher turned full-time painter. Known for whimsical, colorful depictions of Anniston's historic downtown buildings.",
+      "website": "https://michellemcgradyart.com",
+      "where_to_find": ["Old Noble (Noble St, Anniston)", "Nunnally's Noble Frame & Gallery (Noble St, Anniston)"],
+      "press": ["Anniston Star — 'Anniston teacher paints a new chapter with art'"],
+      "sl_profile_status": "draft — published: false",
+      "sl_profile_path": "content/profiles/michelle-mcgrady.mdx",
+      "barter_pitch": "SL profile + attribution in exchange for art usage on city/church pages",
+      "contact": null,
+      "images_needed": ["portrait", "sample paintings"],
+      "notes": "Featured at Anniston Downtown Market. Sells at Old Noble and Nunnally's. Contact via website."
+    },
+    {
+      "name": "Joseph Giri",
+      "slug": "joseph-giri",
+      "type": ["muralist", "sculptor", "painter"],
+      "medium": ["mural", "cast concrete mosaic", "mixed media", "painting", "sculpture"],
+      "location": "Anniston, AL (16+ years in Calhoun County; born Mobile 1957)",
+      "subjects": ["Civil Rights history", "jazz and music", "public art", "architecture"],
+      "bio_short": "BFA Auburn 1983. Known for Freedom Riders bus mural on Gurnee Ave and jazz mural near Anniston courthouse. 40+ years experience. Also worked in LA, Atlanta, Chattanooga, NASA JPL Pasadena.",
+      "website": "https://josephgiri.com",
+      "instagram": "josephgiriartworks",
+      "facebook": "https://www.facebook.com/josephgiriartworks/",
+      "press": ["NMR Artist in Residence 2024", "Anniston Star — multiple features", "vacationsalabama.com feature"],
+      "public_art": [
+        "Freedom Riders Greyhound bus mural — Gurnee Ave, Anniston (Civil Rights Heritage Trail / NPS)",
+        "Jazz mural — near courthouse, downtown Anniston",
+        "'A City Within A City' — Sacred Place (artist John Davis, Giri adjacent)"
+      ],
+      "sl_profile_status": "draft — published: false",
+      "sl_profile_path": "content/profiles/joseph-giri.mdx",
+      "barter_pitch": "SL profile + attribution in exchange for art usage on city pages / civil rights content",
+      "contact": null,
+      "images_needed": ["portrait", "mural photos"],
+      "notes": "Highly connected in NE AL arts community. 2024 NMR artist in residence."
+    },
+    {
+      "name": "Jason Wright",
+      "slug": "jason-wright-piedmont-theater",
+      "type": ["visual artist", "graphic designer", "theater director", "choir"],
+      "medium": ["poster design", "graphic art", "set design"],
+      "location": "Anniston / Piedmont, AL",
+      "subjects": ["theater", "arts education", "church music", "visual design"],
+      "bio_short": "Bass-baritone, theater director at Piedmont High School (Piedmont Centerstage Society), art instructor, worship arts director at AFUMC. Designed JSU opera posters 2007-2008. Has extensive visual art portfolio.",
+      "website": "https://client-jason-wright.gatherstudio.app",
+      "sl_profile_status": "published: true (unlisted)",
+      "sl_profile_path": "content/journal/jason-wright-piedmont-theater.mdx",
+      "barter_pitch": "Already profiled. Follow-up: request poems + visual art portfolio for SL contributor role.",
+      "contact": "jason.wright@piedmontcityschools.net or via AFUMC",
+      "images_needed": ["visual art portfolio samples", "interview video (YouTube ID pending)"],
+      "notes": "Interview recorded 2026-07-01 at Called Coffee. Video file at transcripts/jason-wright-interview-final.mp4 — needs YouTube upload. Has offered to send poems. Extensive visual art portfolio exists."
+    },
+    {
+      "name": "Wayne Sides",
+      "slug": "wayne-sides",
+      "type": ["photographer", "mixed media artist", "educator"],
+      "medium": ["photography", "mixed media", "documentary"],
+      "location": "Anniston born; now Florence, AL (UNA Professor of Art)",
+      "subjects": ["abandoned architecture", "documentary", "civil rights", "landscapes"],
+      "bio_short": "Anniston-born photographer/artist. BA visual/performing arts UA; MFA photography Pratt Institute 1983. Known for KKK documentary photographs exhibited at Birmingham Civil Rights Institute. Professor of Art at UNA.",
+      "website": null,
+      "press": ["UA News", "Birmingham Civil Rights Institute"],
+      "sl_profile_status": "candidate — no draft yet",
+      "sl_profile_path": null,
+      "barter_pitch": "SL profile + attribution for use of architecture/documentary photos on city/history pages",
+      "contact": "University of North Alabama art dept",
+      "images_needed": ["portrait", "sample documentary photos"],
+      "notes": "NE Alabama connection is strong (Anniston-born) but now based in Florence. Worth a profile as diaspora story."
+    },
+    {
+      "name": "Michelle McGrady (Downtown Market)",
+      "slug": null,
+      "notes": "Same person as above — she appears at Anniston Downtown Market regularly."
+    }
+  ],
+  "photographers": [
+    {
+      "name": "Wayne Sides",
+      "notes": "See artists above"
+    }
+  ],
+  "content_creators": [
+    {
+      "name": "TBD — local figures artist",
+      "status": "UNRESOLVED — Matt mentioned 'artist who did local Anniston figures' was documented somewhere. Check compressed session history. Matt to clarify.",
+      "search_terms": ["local Anniston figures artist", "Anniston portrait painter", "Anniston historic figures"]
+    }
+  ],
+  "contributor_candidates": [
+    {
+      "name": "Jason Wright",
+      "contribution": "poetry, visual art, theater essays",
+      "status": "pending outreach — he offered poems 2026-07-xx"
+    },
+    {
+      "name": "Michelle McGrady",
+      "contribution": "art for city/church pages",
+      "status": "pending outreach — profile draft done, barter pitch not sent"
+    },
+    {
+      "name": "Joseph Giri",
+      "contribution": "art for civil rights / city pages",
+      "status": "pending outreach — profile draft done, barter pitch not sent"
+    }
+  ]
+}
