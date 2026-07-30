@@ -407,6 +407,26 @@ export default function BooksPage() {
         </div>
       )}
 
+      {/* Gather Registry — Reading List CTA */}
+      <div className="border border-amber-200 dark:border-amber-900/40 bg-amber-50 dark:bg-amber-950/20 rounded-lg p-6 mb-10">
+        <p className="text-xs font-bold tracking-widest uppercase text-amber-700 dark:text-amber-500 mb-2">Free · Takes 2 minutes</p>
+        <h2 className="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-2">Build a reading list on Gather Registry.</h2>
+        <p className="text-stone-500 dark:text-stone-400 text-sm mb-4 leading-relaxed">
+          Share one link. Anyone can gift you the books you actually want to read — perfect for birthdays, anniversaries, or just telling people what&apos;s on your nightstand.
+        </p>
+        <a
+          href="https://gather-registry.vercel.app/create?type=reading&ref=southern-legends"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-amber-700 text-white px-5 py-2 rounded font-medium hover:bg-amber-800 transition text-sm"
+        >
+          Create a reading list →
+        </a>
+        <p className="text-xs text-stone-400 dark:text-stone-500 mt-3">
+          Powered by <a href="https://gather-registry.vercel.app" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-700">Gather Registry</a>. All Bookshop.org links support independent bookstores and Southern Legends.
+        </p>
+      </div>
+
       {/* Contribute */}
       <div className="bg-stone-50 dark:bg-stone-800 rounded-lg p-8 mt-4">
         <h2 className="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-2">Contribute a Review or Reading Note</h2>
