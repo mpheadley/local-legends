@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { MERCH, type MerchItem } from '@/lib/merch'
+import ShirtMockup from '@/components/ShirtMockup'
 
 const WOODSTOCK_IDS = [
   'woodstock-oval-shirt',
@@ -24,16 +24,8 @@ type CartEntry = { item: MerchItem; size: string; qty: number }
 function DesignCard({ item }: { item: MerchItem }) {
   const [hovered, setHovered] = useState(false)
   const [size, setSize] = useState('')
-  const [added, setAdded] = useState(false)
 
-  const imgBg = hovered ? (item.bg ?? 'transparent') : 'transparent'
-
-  function handleAdd() {
-    if (!size && item.sizes?.length) return
-    setAdded(true)
-    setTimeout(() => setAdded(false), 1800)
-  }
-
+  const isShirt = item.category === 'shirt' || item.category === 'hoodie'
   const hasSizes = !!item.sizes?.length
 
   return (
@@ -53,34 +45,44 @@ function DesignCard({ item }: { item: MerchItem }) {
         onMouseLeave={() => setHovered(false)}
         style={{
           position: 'relative',
-          aspectRatio: '4/5',
-          background: imgBg,
-          transition: 'background 0.25s ease',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: isShirt ? 'rgba(255,255,255,0.015)' : 'transparent',
+          padding: isShirt ? 8 : 20,
+          minHeight: 280,
           cursor: 'default',
         }}
       >
-        <Image
-          src={item.photo}
-          alt={item.name}
-          fill
-          style={{ objectFit: 'contain', padding: 20, transition: 'transform 0.35s' }}
-          sizes="(max-width: 768px) 100vw, 400px"
-        />
+        {isShirt ? (
+          <ShirtMockup
+            src={item.photo}
+            alt={item.name}
+            shirtColor={hovered ? (item.bg ?? '#f5f0e8') : undefined}
+            size={240}
+          />
+        ) : (
+          <div style={{ position: 'relative', width: '100%', aspectRatio: '1' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={item.photo} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 12 }} />
+          </div>
+        )}
         {item.badge && (
           <span style={{
             position: 'absolute', top: 12, left: 12,
             fontSize: 10, fontWeight: 700, letterSpacing: '0.07em',
             padding: '4px 10px', borderRadius: 99,
             background: item.badgeColor ?? '#9A3412', color: '#fff',
+            zIndex: 1,
           }}>{item.badge}</span>
         )}
-        <p style={{
-          position: 'absolute', bottom: 10, left: 0, right: 0,
-          textAlign: 'center', fontSize: 10, letterSpacing: '0.18em',
-          color: 'rgba(240,237,232,0.3)', textTransform: 'uppercase',
-        }}>
-          {hovered ? 'Shirt color preview' : 'Hover to see on shirt'}
-        </p>
+        {isShirt && (
+          <p style={{
+            position: 'absolute', bottom: 10, left: 0, right: 0,
+            textAlign: 'center', fontSize: 10, letterSpacing: '0.18em',
+            color: 'rgba(240,237,232,0.3)', textTransform: 'uppercase',
+          }}>
+            {hovered ? 'Shirt color preview' : 'Hover to see on shirt'}
+          </p>
+        )}
       </div>
 
       {/* Info + buy */}

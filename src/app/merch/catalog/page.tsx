@@ -1,6 +1,8 @@
 'use client'
-import { MERCH, MerchItem, MerchCategory } from '@/lib/merch'
+import { useState } from 'react'
 import Image from 'next/image'
+import { MERCH, MerchItem, MerchCategory } from '@/lib/merch'
+import ShirtMockup from '@/components/ShirtMockup'
 
 const CATEGORY_LABELS: Record<MerchCategory, string> = {
   'shirt':    'Shirts',
@@ -55,12 +57,32 @@ function StatusChip({ item }: { item: MerchItem }) {
 }
 
 function MerchCard({ item }: { item: MerchItem }) {
+  const [hovered, setHovered] = useState(false)
+  const isShirt = item.category === 'shirt' || item.category === 'hoodie'
+
   return (
     <div style={{ background: '#1c1917', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 12, overflow: 'hidden' }}>
-      <div style={{ position: 'relative', aspectRatio: '1', background: '#141210' }}>
-        <Image src={item.photo} alt={item.name} fill style={{ objectFit: 'contain', padding: 12 }} />
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          position: 'relative', aspectRatio: '1',
+          background: isShirt ? 'rgba(255,255,255,0.015)' : '#141210',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}
+      >
+        {isShirt ? (
+          <ShirtMockup
+            src={item.photo}
+            alt={item.name}
+            shirtColor={hovered ? (item.bg ?? '#f5f0e8') : undefined}
+            size={180}
+          />
+        ) : (
+          <Image src={item.photo} alt={item.name} fill style={{ objectFit: 'contain', padding: 12 }} sizes="240px" />
+        )}
         {item.comingSoon && (
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1 }}>
             <span style={{ fontSize: 11, fontWeight: 800, color: '#ca8a04', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Coming Soon</span>
           </div>
         )}
