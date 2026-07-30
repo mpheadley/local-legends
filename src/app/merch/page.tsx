@@ -159,6 +159,19 @@ export default function MerchPage() {
           </form>
         </div>
 
+        {/* Ecclesia Resource Shop cross-link */}
+        <div className="rounded-2xl p-6 mb-4" style={{ background: 'rgba(13,26,15,0.6)', border: '1px solid rgba(45,212,191,0.12)' }}>
+          <p className="text-xs tracking-[0.3em] uppercase mb-2" style={{ color: 'rgba(45,212,191,0.5)' }}>Ecclesia Resource Shop</p>
+          <h2 className="text-xl font-black mb-2" style={{ fontFamily: 'var(--font-heading)', color: '#f0ede8' }}>&ldquo;In the Meantime&rdquo; — Advent 2026 Kit</h2>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(240,237,230,0.4)' }}>
+            Sermon series art, slides, liturgy, kids curriculum. Made by a pastor for the next church that can&apos;t afford to make their own. $49.
+          </p>
+          <a href="https://ecclesiacommunity.org/shop" className="inline-block px-5 py-2.5 rounded-xl text-sm font-bold hover:opacity-90"
+            style={{ background: 'rgba(45,212,191,0.1)', color: '#2dd4bf', border: '1px solid rgba(45,212,191,0.25)', textDecoration: 'none' }}>
+            Pre-order — $49 →
+          </a>
+        </div>
+
         <div className="rounded-2xl p-6" style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(240,237,230,0.05)' }}>
           <p className="text-xs tracking-[0.3em] uppercase mb-2" style={{ color: 'rgba(202,138,4,0.5)' }}>Southern Legends</p>
           <h2 className="text-xl font-black mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Support the publication</h2>
