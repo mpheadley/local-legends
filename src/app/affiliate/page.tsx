@@ -17,7 +17,7 @@ const THUMBNAILS: Record<string, string> = {
   'woodstock-shirt': '/merch/20260726_182840_gpt_vintage-t-shirt-mockup-on-black-shirt,-d.webp',
   'pv-raiders-shirt': '/merch/clt-shirt-mockup.webp',
   'clt-shirt': '/merch/clt-shirt-mockup.webp',
-  'sl-stickers': '/merch/clt-sticker-stack.webp',
+  'sl-stickers': '/print-files/FREEDOM-RIDERS-S1-burning-bus-sticker.png',
   'headley-bros': '/images/about/headshot-hedcut-matt-headley.webp',
   'heather-florals': '/images/heather/heather-headshot.webp',
   'bloom-bar': '/merch/bloom-bar-tee.webp',
