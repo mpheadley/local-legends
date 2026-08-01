@@ -34,6 +34,8 @@ const THUMBNAILS: Record<string, string> = {
   'aisle-tickets': '/merch/aisle-vendor-tee-mockup.webp',
   'multitudes-shirt': '/print-files/MENTAL-HEALTH-01-i-contain-multitudes-CREAM.png',
   'neurospicy-shirt': '/print-files/NEUROSPICY-01-nutrition-label-CREAM.png',
+  'gather-registry': '/images/about/headshot-hedcut-matt-headley.webp',
+  'church-custom-shirt': '/print-files/ECCLESIA-05-pilgrims-shirt.webp',
 }
 
 const CATEGORY_ORDER: AffiliateProduct['category'][] = ['service', 'event', 'shop', 'product', 'merch']

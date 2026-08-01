@@ -260,6 +260,32 @@ export const AFFILIATE_CATALOG: AffiliateProduct[] = [
     category: 'product',
   },
 
+  // ── GATHER REGISTRY ───────────────────────────────────────────────────────
+  {
+    key: 'gather-registry',
+    label: 'Gather Registry — Local Gift Registry',
+    venture: 'Gather Studio',
+    price: 'Free to create',
+    commission: '3%',
+    commissionNote: 'on vendor-package gifts purchased',
+    dest: 'https://gather-registry.vercel.app/create',
+    description: 'Create a registry with local NE Alabama businesses — florists, venues, caterers, artists.',
+    category: 'product',
+  },
+
+  // ── CHURCH WHITELIST SHIRTS ───────────────────────────────────────────────
+  {
+    key: 'church-custom-shirt',
+    label: 'Church Custom Shirt — Your Logo, Your Community',
+    venture: 'Ecclesia Studio',
+    price: '$10–$14/shirt (qty 12+)',
+    commission: '10%',
+    commissionNote: 'on first order, per referral',
+    dest: 'https://ecclesiacommunity.org/studio',
+    description: 'Whitelabeled church shirts through Ecclesia Studio — your logo, your colors, Madi Lou DTF printing. Min 12 shirts.',
+    category: 'service',
+  },
+
   // ── SERMONCOACH ───────────────────────────────────────────────────────────
   {
     key: 'sermoncoach',
