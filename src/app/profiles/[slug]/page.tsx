@@ -18,6 +18,7 @@ import ArticleImage from "@/app/components/ArticleImage";
 import InlineImage from "@/app/components/InlineImage";
 import PhotoCarouselLoader from "@/app/components/PhotoCarouselLoader";
 import PullQuote from "@/app/components/PullQuote";
+import FacebookEmbed from "@/app/components/FacebookEmbed";
 import VideoLoop from "@/app/components/VideoLoop";
 import ShareButtons from "@/app/components/ShareButtons";
 import ScrollytellingProfile from "@/app/components/ScrollytellingProfile";
@@ -26,7 +27,8 @@ import NewsletterCapture from "@/app/components/NewsletterCapture";
 import Comments from "@/app/components/Comments";
 import PlaylistEmbed from "@/app/components/PlaylistEmbed";
 import { getPlaylist } from "@/lib/playlists";
-import { getProfileMerch, getMerchForCity } from "@/lib/merch";
+import { getProfileMerch } from "@/lib/merch";
+import ContextualMerchGrid from "@/components/ContextualMerchGrid";
 import ClosingSection from "@/app/components/ClosingSection";
 import ReadingProgressBar from "@/app/components/ReadingProgressBar";
 import ProfileCardHero from "@/app/components/ProfileCardHero";
@@ -104,6 +106,7 @@ const mdxComponents = {
   InlineImage,
   PhotoCarousel: PhotoCarouselLoader,
   PullQuote,
+  FacebookEmbed,
   VideoLoop,
   VideoEmbed,
   MerchBlock,
@@ -514,42 +517,19 @@ export default async function ProfilePage({
         );
       })()}
 
-      {/* City merch strip */}
+      {/* Contextual merch — graphic-on-blank shirts via ContextualMerchGrid (ShirtMockup + hover color) */}
       {(() => {
         const rawCity = frontmatter.location?.split(",")[0]?.trim()
         const citySlug = rawCity?.toLowerCase().replace(/\s+/g, '-')
-        const cityMerch = citySlug ? getMerchForCity(citySlug, 3) : []
-        if (cityMerch.length === 0) return null
         return (
           <section style={{ background: "#1a1208", borderTop: "1px solid rgba(154,108,47,0.12)" }}>
             <div style={{ maxWidth: "48rem", margin: "0 auto", padding: "2.5rem 1.5rem" }}>
-              <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "0.35rem" }}>Wear it</p>
-              <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.1rem", color: "#F0EDE6", fontWeight: 400, marginBottom: "1.1rem" }}>{rawCity} merch from Southern Legends</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.75rem", marginBottom: "0.875rem" }}>
-                {cityMerch.map((item) => {
-                  const card = (
-                    <>
-                      <div style={{ position: "relative", width: "100%", aspectRatio: "1", borderRadius: "5px", overflow: "hidden", background: "#2a1e10" }}>
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={item.photo} alt={item.name} style={{ width: "100%", height: "100%", objectFit: "cover", opacity: item.available ? 1 : 0.45 }} />
-                        {!item.available && (
-                          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.55rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F0EDE6", background: "rgba(26,18,8,0.88)", padding: "0.15rem 0.4rem", borderRadius: "3px" }}>Coming soon</span>
-                          </div>
-                        )}
-                      </div>
-                      <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.8rem", color: item.available ? "#F0EDE6" : "rgba(240,237,230,0.4)", lineHeight: 1.2, marginTop: "0.35rem" }}>{item.name}</p>
-                      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", color: "rgba(240,237,230,0.4)", marginTop: "0.12rem" }}>{item.available ? `$${item.price}` : "Coming soon"}</p>
-                    </>
-                  )
-                  return item.available ? (
-                    <a key={item.id} href={`/merch#${item.id}`} style={{ textDecoration: "none" }}>{card}</a>
-                  ) : (
-                    <div key={item.id}>{card}</div>
-                  )
-                })}
-              </div>
-              <a href="/merch" style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "#c4974a", fontWeight: 600, textDecoration: "none" }}>See all merch →</a>
+              <ContextualMerchGrid
+                ctx={{ slug, cities: citySlug ? [citySlug] : undefined, limit: 6 }}
+                heading={`Wear it — ${rawCity ?? "Southern Legends"} merch`}
+                layout="grid"
+              />
+              <a href="/merch" style={{ display: "inline-block", marginTop: "0.875rem", fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "#c4974a", fontWeight: 600, textDecoration: "none" }}>See all merch →</a>
             </div>
           </section>
         )
