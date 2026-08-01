@@ -6,10 +6,11 @@ import Link from 'next/link'
 import { MERCH, type MerchItem } from '@/lib/merch'
 import ShirtMockup from '@/components/ShirtMockup'
 
-const SHIRTS   = MERCH.filter(m => m.category === 'shirt' && m.available)
-const TOTES    = MERCH.filter(m => m.category === 'tote' && m.available)
-const STICKERS = MERCH.filter(m => m.category === 'sticker' && m.available)
-const PRINTS   = MERCH.filter(m => m.category === 'print' && m.available)
+const SHIRTS    = MERCH.filter(m => m.category === 'shirt' && m.available)
+const TOTES     = MERCH.filter(m => m.category === 'tote' && m.available)
+const STICKERS  = MERCH.filter(m => m.category === 'sticker' && m.available)
+const PRINTS    = MERCH.filter(m => m.category === 'print' && m.available)
+const MAGAZINES = MERCH.filter(m => m.category === 'magazine' && m.available)
 
 export default function MerchPage() {
   const [notifyEmail, setNotifyEmail] = useState('')
@@ -39,23 +40,35 @@ export default function MerchPage() {
   return (
     <main id="main-content" className="min-h-screen relative" style={{ background: 'var(--color-ll-dark)', color: 'var(--color-ll-warm)' }}>
 
-      <div ref={heroRef} className="gradient-hero no-pseudo-topo relative overflow-hidden" style={{ minHeight: '60vh' }}>
+      <div ref={heroRef} className="gradient-hero no-pseudo-topo relative overflow-hidden" style={{ minHeight: '72vh' }}>
         <div aria-hidden="true" className="grid-topo" />
-        <div className="absolute inset-0 z-[1]" style={{ background: 'linear-gradient(155deg, rgba(28,25,23,0.88) 0%, rgba(154,52,18,0.12) 55%, rgba(28,25,23,0.95) 100%)' }} />
+        <div className="absolute inset-0 z-[1]" style={{ background: 'linear-gradient(155deg, rgba(6,13,9,0.96) 0%, rgba(154,52,18,0.08) 50%, rgba(6,13,9,0.55) 100%)' }} />
         <div className="absolute inset-x-0 bottom-0 h-40 z-[1]" style={{ background: 'linear-gradient(to bottom, transparent, var(--color-ll-dark))' }} />
-        <div className="relative z-10 mx-auto max-w-5xl px-6 pt-32 pb-20 pointer-events-auto">
+
+        {/* ── Right-side shirt collage (desktop only) ── */}
+        <div className="hidden md:block absolute right-0 top-0 bottom-0 z-[2]" style={{ width: '44%', overflow: 'hidden' }}>
+          {/* gradient edge fade left */}
+          <div className="absolute inset-y-0 left-0 w-24 z-10" style={{ background: 'linear-gradient(to right, var(--color-ll-dark), transparent)' }} />
+          <div className="grid h-full" style={{ gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', gap: 4 }}>
+            <img src="/merch/clt-hike-explore-mockup.webp" alt="CLT Hike & Explore tee" className="w-full h-full object-cover" style={{ objectPosition: 'center top' }} />
+            <img src="/merch/model-city-mockup-cream.webp" alt="Model City Anniston tee" className="w-full h-full object-cover" style={{ objectPosition: 'center top' }} />
+            <img src="/merch/freedom-riders/shirt-mockup-dark.webp" alt="Freedom Riders tee" className="w-full h-full object-cover" style={{ objectPosition: 'center top' }} />
+            <img src="/merch/clt-shirt-front-mockup.jpg" alt="CLT Trail shirt" className="w-full h-full object-cover" style={{ objectPosition: 'center top' }} />
+          </div>
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-5xl px-6 pt-32 pb-20 pointer-events-auto" style={{ maxWidth: 'min(960px, 56vw)' }}>
           {success && (
             <div className="mb-8 px-5 py-4 rounded-xl text-sm" style={{ background: 'rgba(34,85,34,0.3)', border: '1px solid rgba(100,200,100,0.25)', color: '#6dcf6d' }}>
               Order received — check your email for confirmation.
             </div>
           )}
           <p className="text-xs tracking-[0.4em] uppercase mb-4" style={{ color: 'rgba(202,138,4,0.7)' }}>Southern Legends · NE Alabama</p>
-          <h1 className="font-black leading-none mb-5" style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(3.2rem, 8vw, 5.5rem)', color: 'var(--color-ll-warm)', textShadow: '0 2px 24px rgba(0,0,0,0.5)' }}>
-            Local Merch.
+          <h1 className="font-black leading-[0.92] mb-6" style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(3.4rem, 8vw, 6rem)', color: 'var(--color-ll-warm)', textShadow: '0 2px 24px rgba(0,0,0,0.5)' }}>
+            Wear<br />the Story.
           </h1>
-          <p className="text-base max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(240,237,230,0.5)' }}>
-            Shirts, totes, stickers, and prints rooted in NE Alabama — schools, trails, races, and the stories behind them.
-            Find us at the Woodstock 5K booth Aug 2, or order online.
+          <p className="text-base max-w-lg leading-relaxed mb-8" style={{ color: 'rgba(240,237,230,0.6)' }}>
+            Shirts, totes, stickers, and prints from NE Alabama — schools, trails, races, and the stories behind them.
           </p>
           <div className="flex flex-wrap gap-3">
             {[
@@ -74,6 +87,17 @@ export default function MerchPage() {
         <p className="text-xs mb-8 leading-relaxed" style={{ color: 'rgba(240,237,230,0.3)', letterSpacing: '0.03em' }}>
           Images are design mockups. Actual print colors, placement, and fabric may vary slightly. All items are made to order — no two prints are identical.
         </p>
+
+        {/* Featured — CLT hero banner */}
+        <Link href="/merch/chief-ladiga" style={{ display: 'block', borderRadius: '14px', overflow: 'hidden', textDecoration: 'none', position: 'relative', minHeight: '200px', background: '#0d1a0e', marginBottom: '1rem' }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(6,13,9,0.95) 0%, rgba(45,90,48,0.35) 60%, rgba(6,13,9,0.7) 100%)' }} />
+          <div style={{ position: 'relative', padding: '2rem', maxWidth: '520px' }}>
+            <span style={{ fontSize: '0.6rem', letterSpacing: '0.35em', textTransform: 'uppercase', color: '#C9A227', fontWeight: 700 }}>Aug 2 · Woodstock 5K · LIMITED RUN</span>
+            <p style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 900, color: '#f0ede8', margin: '0.5rem 0 0.4rem', lineHeight: 1.1 }}>Chief Ladiga Trail Shirt</p>
+            <p style={{ fontSize: '0.85rem', color: 'rgba(240,237,230,0.55)', marginBottom: '1.1rem' }}>Natural triblend sublimation · Front badge + back trail map · 55 made</p>
+            <span style={{ display: 'inline-block', background: '#E8722A', color: '#fff', fontWeight: 900, fontSize: '0.85rem', padding: '0.55rem 1.25rem', borderRadius: '8px', letterSpacing: '0.04em' }}>Get yours — $40 →</span>
+          </div>
+        </Link>
 
         {/* Featured collections */}
         <div className="grid gap-4 mb-10" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
@@ -97,6 +121,14 @@ export default function MerchPage() {
               <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#9A3412', letterSpacing: '0.04em' }}>Shop the collection →</span>
             </div>
           </Link>
+          <Link href="/merch#magazines" style={{ display: 'block', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', position: 'relative', minHeight: '160px', background: '#1a1410', border: '1px solid rgba(202,138,4,0.2)' }}>
+            <div style={{ position: 'relative', padding: '1.5rem' }}>
+              <span style={{ fontSize: '0.6rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C9A227', fontWeight: 700 }}>Digital · $9.95 — Print · $20</span>
+              <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 900, color: '#f0ede8', margin: '0.35rem 0 0.25rem', lineHeight: 1.1 }}>SL Magazine</p>
+              <p style={{ fontSize: '0.78rem', color: 'rgba(240,237,232,0.5)', marginBottom: '0.75rem' }}>Stories, profiles, and places from NE Alabama</p>
+              <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#C9A227', letterSpacing: '0.04em' }}>Read now →</span>
+            </div>
+          </Link>
         </div>
 
         <SectionHead label="Shirts" sub="Order online · Ships after Aug 2 · Sizes S–2XL" first />
@@ -109,10 +141,40 @@ export default function MerchPage() {
           {TOTES.map(item => <ProductCard key={item.id} item={item} />)}
         </div>
 
-        <SectionHead label="Stickers" sub="3″ vinyl · Matte · Weather-resistant · $5 each" />
-        <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
-          {STICKERS.map(item => <ProductCard key={item.id} item={item} small />)}
+        <div id="stickers">
+          <SectionHead label="Stickers" sub="3″ vinyl · Matte · Weather-resistant · $5 each" />
+          {/* Sticker pack visual strip */}
+          <div className="flex gap-4 overflow-x-auto pb-3 mb-6" style={{ scrollbarWidth: 'none' }}>
+            {STICKERS.slice(0,8).map((s, i) => (
+              <a key={s.id} href={`/buy/${s.id}`}
+                style={{
+                  flexShrink: 0,
+                  transform: `rotate(${[-4,3,-6,5,-3,7,-5,2][i % 8]}deg)`,
+                  filter: 'drop-shadow(0 3px 8px rgba(0,0,0,.5))',
+                  transition: 'transform .15s ease',
+                  display: 'block',
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = `rotate(0deg) scale(1.1)` }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = `rotate(${[-4,3,-6,5,-3,7,-5,2][i % 8]}deg)` }}
+              >
+                <img src={s.photo} alt={s.name} width={90} height={90}
+                  style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
+              </a>
+            ))}
+          </div>
+          <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
+            {STICKERS.map(item => <ProductCard key={item.id} item={item} small />)}
+          </div>
         </div>
+
+        {MAGAZINES.length > 0 && (
+          <div id="magazines">
+            <SectionHead label="Magazines" sub="Digital PDF download · $9.95 — Full-color print edition · $20" />
+            <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))' }}>
+              {MAGAZINES.map(item => <ProductCard key={item.id} item={item} />)}
+            </div>
+          </div>
+        )}
 
         {PRINTS.length > 0 && (
           <>
