@@ -1,6 +1,15 @@
 # Southern Legends — Shipped Features
 
-*Last updated: 2026-07-30. Source of truth for what's built.*
+*Last updated: 2026-08-03. Source of truth for what's built.*
+
+---
+
+## Empire Build: Entity Graph + Newsletter Tier + Column Syndication (2026-08-03)
+
+- **Entity graph** — Supabase `subjects` table: 8 entity types (person/place/business/church/venue/trail/organization/event). GIN index on `ventures[]`. 50 NE Alabama subjects seeded. Server query lib at `src/lib/entity-graph.ts`.
+- **Column syndication engine** — `tools/column-syndicate.py`: parses `columns.ts`, routes by tag to ventures (SL/Ecclesia/Aisle/Attune) and external pubs (Garden & Gun, Oxford American, Sojourners, Image Journal, etc.). Writes MDX with Star attribution. `--send` flag broadcasts via Resend.
+- **Newsletter $7/mo tier** — `/api/newsletter/checkout` Stripe checkout route. `/newsletter` page with hero + sample issues + Matt bio. `/newsletter/welcome` success page. Requires `STRIPE_NEWSLETTER_PRICE_ID` env var (create in Stripe dashboard: $7/mo recurring).
+- **4 new column candidates** in `src/data/columns.ts`: farming/place, Southern diaspora, AI/small biz, music/arts.
 
 ---
 
