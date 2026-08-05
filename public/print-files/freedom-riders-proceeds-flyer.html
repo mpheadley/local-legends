@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Freedom Riders — West Anniston Foundation Flyer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 32px;
+    font-family: 'IM Fell English', Georgia, serif;
+  }
+
+  /* ── 8.5×11 flyer at 96dpi ── */
+  .flyer {
+    width: 816px;
+    min-height: 1056px;
+    background: #f5f0e8;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top bar */
+  .top-rule {
+    height: 6px;
+    background: #1a1a1a;
+    width: 100%;
+  }
+  .sub-rule {
+    height: 2px;
+    background: #8b0000;
+    width: 100%;
+    margin-top: 3px;
+  }
+
+  /* Masthead */
+  .masthead {
+    padding: 20px 48px 0;
+    text-align: center;
+  }
+  .sl-label {
+    font-family: 'IM Fell English SC', Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: #8b0000;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .masthead-title {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: #1a1a1a;
+    font-style: italic;
+    opacity: 0.5;
+  }
+
+  /* Divider rule */
+  .rule-line {
+    margin: 14px 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .rule-line::before, .rule-line::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #1a1a1a;
+    opacity: 0.25;
+  }
+  .rule-diamond {
+    width: 6px;
+    height: 6px;
+    background: #8b0000;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  /* Hero headline */
+  .headline-block {
+    padding: 0 48px;
+    text-align: center;
+  }
+  .kicker {
+    font-family: 'IM Fell English SC', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: #8b0000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .headline {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.05;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+  }
+  .subhead {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #3a3a3a;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .dateline {
+    font-family: 'IM Fell English SC', Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: #666;
+    margin-bottom: 0;
+  }
+
+  /* Main image */
+  .bus-image {
+    margin: 16px 48px;
+    border: 1px solid rgba(0,0,0,0.15);
+    overflow: hidden;
+    position: relative;
+  }
+  .bus-image img {
+    width: 100%;
+    display: block;
+    filter: contrast(1.1);
+  }
+  .image-caption {
+    background: #1a1a1a;
+    color: #f5f0e8;
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 10px;
+    font-style: italic;
+    padding: 5px 12px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Two-column body */
+  .body-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 0 48px;
+    flex: 1;
+  }
+  .col {
+    padding: 0 16px 0 0;
+  }
+  .col:last-child {
+    padding: 0 0 0 16px;
+    border-left: 1px solid rgba(0,0,0,0.15);
+  }
+  .col p {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .col p:first-child::first-letter {
+    font-size: 3.5em;
+    float: left;
+    line-height: 0.8;
+    margin: 2px 6px 0 0;
+    color: #8b0000;
+    font-family: 'IM Fell English', Georgia, serif;
+  }
+  .col .pull-quote {
+    font-style: italic;
+    font-size: 15px;
+    border-left: 3px solid #8b0000;
+    padding: 4px 0 4px 12px;
+    color: #3a3a3a;
+    margin: 14px 0;
+  }
+
+  /* Dennis portrait inset */
+  .portrait-inset {
+    float: right;
+    width: 140px;
+    margin: 0 0 10px 14px;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  .portrait-inset img {
+    width: 100%;
+    display: block;
+    filter: contrast(1.1) grayscale(0.1);
+  }
+  .portrait-caption {
+    background: #1a1a1a;
+    color: #f5f0e8;
+    font-size: 8.5px;
+    font-style: italic;
+    padding: 3px 6px;
+    font-family: 'IM Fell English', Georgia, serif;
+  }
+
+  /* Foundation callout box */
+  .foundation-box {
+    margin: 18px 48px 0;
+    background: #1a1a1a;
+    color: #f5f0e8;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .foundation-seal {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #8b0000;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IM Fell English SC', Georgia, serif;
+    font-size: 7px;
+    letter-spacing: 0.1em;
+    color: #f5f0e8;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .foundation-text {
+    flex: 1;
+  }
+  .foundation-text .ftitle {
+    font-family: 'IM Fell English SC', Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: #8b0000;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .foundation-text p {
+    font-size: 14px;
+    font-family: 'IM Fell English', Georgia, serif;
+    line-height: 1.5;
+    color: #f5f0e8;
+  }
+  .foundation-text strong {
+    color: #fff;
+  }
+
+  /* Footer */
+  .footer {
+    margin: 16px 48px 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+  }
+  .footer-left {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 10px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .footer-right {
+    font-family: 'IM Fell English SC', Georgia, serif;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: #8b0000;
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  /* Bottom rules */
+  .bottom-rules {
+    margin-top: auto;
+  }
+
+  /* Edit panel */
+  #ep {
+    position: fixed;
+    top: 20px; right: 20px;
+    background: #222;
+    color: #f0ede8;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: system-ui;
+    font-size: 12px;
+    z-index: 999;
+    min-width: 220px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  }
+  #ep h3 { margin-bottom: 10px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #CA8A04; }
+  #ep label { display: block; margin-bottom: 8px; color: rgba(240,237,232,0.6); }
+  #ep input, #ep textarea, #ep select {
+    width: 100%; padding: 4px 6px; background: #333; border: 1px solid #444;
+    color: #f0ede8; border-radius: 4px; font-family: inherit; font-size: 11px; margin-top: 2px;
+  }
+  #ep textarea { height: 48px; resize: vertical; }
+  #ep button { margin-top: 10px; width: 100%; padding: 6px; background: #C8102E; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 11px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="flyer" id="flyer">
+  <div class="top-rule"></div>
+  <div class="sub-rule"></div>
+
+  <div class="masthead">
+    <div class="sl-label">Southern Legends · Anniston, Alabama</div>
+    <div class="masthead-title">Woodstock 5K · August 2, 2026</div>
+  </div>
+
+  <div class="rule-line"><div class="rule-diamond"></div></div>
+
+  <div class="headline-block">
+    <div class="kicker">Special Edition Merch</div>
+    <div class="headline" id="headline">Freedom Riders</div>
+    <div class="subhead" id="subhead">Anniston, Alabama · May 14, 1961</div>
+    <div class="dateline" id="dateline">Every shirt sold benefits the West Anniston Foundation</div>
+  </div>
+
+  <div class="rule-line"><div class="rule-diamond"></div></div>
+
+  <div class="bus-image">
+    <img src="/print-files/FREEDOM-RIDERS-01-burning-bus-WHITE.png" alt="Freedom Riders — Burning Bus, Anniston 1961" />
+    <div class="image-caption">The burning bus on U.S. Highway 78, Anniston, Alabama, May 14, 1961. The moment that changed the Civil Rights Movement.</div>
+  </div>
+
+  <div class="body-cols">
+    <div class="col">
+      <p id="col1">On Mother's Day 1961, a Greyhound bus carrying Freedom Riders was firebombed outside Anniston, Alabama. The riders — Black and white Americans testing federal desegregation law — were beaten and left choking in smoke. The burning bus became one of the most iconic photographs of the Civil Rights era.</p>
+      <div class="pull-quote">"We will not stop. We have come too far to turn back now."</div>
+      <p>These shirts carry that moment. The woodcut design and the portrait of David Dennis, a Freedom Rider who stood in Anniston that day, are printed as a permanent act of witness.</p>
+    </div>
+    <div class="col">
+      <div class="portrait-inset">
+        <img src="/print-files/FREEDOM-RIDERS-02-dennis-portrait-BLACK.png" alt="David Dennis — Freedom Rider" />
+        <div class="portrait-caption">David Dennis, Freedom Rider, Anniston 1961</div>
+      </div>
+      <p id="col2">David Dennis rode into Anniston knowing the risk. He went on to help organize Mississippi's Freedom Summer in 1964. His eulogy for James Chaney — one of three civil rights workers murdered that summer — is considered one of the most powerful speeches of the era.</p>
+      <p>These shirts honor that courage. And every dollar goes back to the community where it happened.</p>
+    </div>
+  </div>
+
+  <div class="foundation-box">
+    <div class="foundation-seal">WEST<br>ANNISTON<br>FOUNDATION</div>
+    <div class="foundation-text">
+      <div class="ftitle">100% of Proceeds</div>
+      <p><strong>Every Freedom Riders shirt sold at Woodstock 5K</strong> goes directly to the <strong>West Anniston Foundation</strong> — investing in the community where the Freedom Riders made history.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      Shirts available at the Southern Legends merch booth · Woodstock 5K · Aug 2, 2026<br>
+      Burning Bus · $40 &nbsp;|&nbsp; David Dennis Portrait · $40<br>
+      <em>WATERPRINT method · 1-color black on white · separate print vendor</em>
+    </div>
+    <div class="footer-right">
+      southernlegends.blog<br>
+      Built by Gather Studio
+    </div>
+  </div>
+
+  <div class="bottom-rules">
+    <div class="sub-rule"></div>
+    <div class="top-rule"></div>
+  </div>
+</div>
+
+<!-- Edit panel -->
+<div id="ep">
+  <h3>Edit Flyer</h3>
+  <label>Headline
+    <input id="e-headline" value="Freedom Riders" oninput="document.getElementById('headline').textContent=this.value">
+  </label>
+  <label>Subhead
+    <input id="e-subhead" value="Anniston, Alabama · May 14, 1961" oninput="document.getElementById('subhead').textContent=this.value">
+  </label>
+  <label>Dateline
+    <input id="e-dateline" value="Every shirt sold benefits the West Anniston Foundation" oninput="document.getElementById('dateline').textContent=this.value">
+  </label>
+  <label>Body (col 1)
+    <textarea oninput="document.getElementById('col1').textContent=this.value">On Mother's Day 1961, a Greyhound bus carrying Freedom Riders was firebombed outside Anniston, Alabama. The riders — Black and white Americans testing federal desegregation law — were beaten and left choking in smoke. The burning bus became one of the most iconic photographs of the Civil Rights era.</textarea>
+  </label>
+  <label>Body (col 2)
+    <textarea oninput="document.getElementById('col2').textContent=this.value">David Dennis rode into Anniston knowing the risk. He went on to help organize Mississippi's Freedom Summer in 1964. His eulogy for James Chaney — one of three civil rights workers murdered that summer — is considered one of the most powerful speeches of the era.</textarea>
+  </label>
+  <button onclick="window.print()">Print / Save PDF</button>
+</div>
+
+</body>
+</html>

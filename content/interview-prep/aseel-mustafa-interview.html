@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Prep — Aseel Mohammad Mustafa · Southern Legends</title>
+<style>
+  :root{
+    --crimson:#8b1a1a; --ink:#1a1512; --paper:#f6f1e7; --card:#fffdf8;
+    --muted:#6b5d4f; --line:#d8cdb8; --gold:#b8860b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif;line-height:1.55;padding:40px 20px}
+  .wrap{max-width:820px;margin:0 auto}
+  .masthead{border-bottom:3px double var(--crimson);padding-bottom:16px;margin-bottom:8px}
+  .kicker{font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;
+    letter-spacing:.22em;font-size:11px;color:var(--crimson);font-weight:700}
+  h1{font-size:34px;margin:6px 0 4px;line-height:1.1}
+  .sub{color:var(--muted);font-style:italic;font-size:16px}
+  .meta{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:var(--muted);
+    margin-top:10px;display:flex;gap:18px;flex-wrap:wrap}
+  .toolbar{position:sticky;top:0;background:var(--paper);padding:10px 0;
+    border-bottom:1px solid var(--line);margin-bottom:24px;z-index:5;
+    font-family:Arial,sans-serif;font-size:13px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  button{font-family:Arial,sans-serif;font-size:13px;border:1px solid var(--crimson);
+    background:var(--card);color:var(--crimson);padding:6px 12px;border-radius:4px;cursor:pointer}
+  button:hover{background:var(--crimson);color:#fff}
+  .hint{color:var(--muted)}
+  section{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--crimson);
+    border-radius:6px;padding:20px 24px;margin-bottom:20px}
+  section h2{font-size:13px;font-family:Arial,sans-serif;text-transform:uppercase;
+    letter-spacing:.14em;color:var(--crimson);margin:0 0 4px}
+  section .vector{font-family:Arial,sans-serif;font-size:11px;color:var(--gold);
+    text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+  ol{margin:0;padding-left:22px}
+  li{margin-bottom:14px}
+  li .q{font-size:17px}
+  li .note{display:block;font-size:13px;color:var(--muted);font-style:italic;margin-top:3px}
+  .fact{background:#f0e9d8;border:1px dashed var(--line);border-radius:6px;
+    padding:14px 18px;font-size:13px;font-family:Arial,sans-serif;color:var(--muted);margin-bottom:20px}
+  .fact b{color:var(--ink)}
+  .logistics{border-left-color:var(--gold)}
+  .logistics h2{color:var(--gold)}
+  footer{text-align:center;font-family:Arial,sans-serif;font-size:11px;color:var(--muted);
+    margin-top:30px;border-top:1px solid var(--line);padding-top:16px}
+  [contenteditable]:focus{outline:2px solid var(--gold);outline-offset:2px;background:#fffef9}
+  @media print{.toolbar{display:none}body{background:#fff;padding:0}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="toolbar">
+    <button onclick="document.designMode='on';this.textContent='✎ Editing ON'">✎ Edit anything</button>
+    <button onclick="window.print()">⎙ Print / PDF</button>
+    <button onclick="addQ()">+ Add question to focused section</button>
+    <span class="hint">Everything on this page is editable — click any text and type.</span>
+  </div>
+
+  <div class="masthead">
+    <div class="kicker">Southern Legends · Oral History Interview Prep</div>
+    <h1 contenteditable>Aseel Mohammad Mustafa</h1>
+    <div class="sub" contenteditable>Computer scientist · JSU Fall 2024 · From Jordan by way of Anniston High</div>
+    <div class="meta" contenteditable>
+      <span>Interviewer: Matt Headley</span>
+      <span>Date: __________</span>
+      <span>Location: __________</span>
+      <span>Recording: __________</span>
+    </div>
+  </div>
+
+  <div class="fact" contenteditable>
+    <b>What we already have (public record — confirm each with her):</b> From Jordan · Anniston High School class of 2019 (Calhoun County Scholars' Bowl, National Honor Society, Bear Book Club, Pre-AP History &amp; Psychology awards) · JSU Gamecock Prestige &amp; Excellence scholarships · B.S. Computer Science, JSU (Ayers Hall) · Dean's List Spring 2023 · President's List Spring 2024 · Fall 2024 graduate · 2024 JSU Student Symposium (Feb 15): oral presentation <i>"Emotion in Human-Computer Interaction"</i> · mentor Dr. Monica Trifas.
+  </div>
+
+  <section>
+    <h2>Opening</h2>
+    <div class="vector">Warm-up · get her talking</div>
+    <ol>
+      <li><span class="q" contenteditable>Tell me where you're from, and what it was like there before Alabama was ever on the map for you.</span></li>
+      <li><span class="q" contenteditable>How did your family end up in Northeast Alabama? What's the short version of that story?</span></li>
+      <li><span class="q" contenteditable>What do you remember about the first few weeks here? What was strange, and what surprised you?</span><span class="note" contenteditable>Let her run. This is where the real material is.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The International Story</h2>
+    <div class="vector">Vector: International — migration &amp; adaptation</div>
+    <ol>
+      <li><span class="q" contenteditable>What did you have to leave behind to come here? What did you carry with you that you refused to leave?</span></li>
+      <li><span class="q" contenteditable>Were you part of JSU's International House or the International Student Organization? What did that community mean to you?</span><span class="note" contenteditable>If yes, ask for a specific scene — a meal, a UN Day Tea, a roommate.</span></li>
+      <li><span class="q" contenteditable>Was there a moment you felt like an outsider here? Was there a moment you felt at home? Which came first?</span></li>
+      <li><span class="q" contenteditable>What do people in Alabama get wrong about Jordan, or about where you're from?</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Anniston &amp; School</h2>
+    <div class="vector">Vector: Local — Anniston High, the corridor</div>
+    <ol>
+      <li><span class="q" contenteditable>You did a lot at Anniston High — Scholars' Bowl, Honor Society, book club. Which of those mattered most to you and why?</span></li>
+      <li><span class="q" contenteditable>You won awards in both history and psychology, then chose computer science. How do those fit together in your head?</span></li>
+      <li><span class="q" contenteditable>Was there a teacher or a person in Anniston who saw something in you before you saw it in yourself?</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The Work — Ayers Hall</h2>
+    <div class="vector">Vector: Institutional — JSU, computer science, mentorship</div>
+    <ol>
+      <li><span class="q" contenteditable>What made you choose computer science, and did anyone try to talk you out of it?</span></li>
+      <li><span class="q" contenteditable>You earned honors doing technical work in what I assume is not your first language. What was hard about that that people don't think about?</span></li>
+      <li><span class="q" contenteditable>Dr. Monica Trifas mentored your research. What did she teach you, in a sentence?</span></li>
+      <li><span class="q" contenteditable>Walk me through "Emotion in Human-Computer Interaction" like I've never touched a computer. What were you actually trying to do?</span></li>
+      <li><span class="q" contenteditable>Why does it matter whether a machine can tell what a person is feeling? Where would that change someone's actual life?</span><span class="note" contenteditable>Listen for a healthcare answer — nurse, hospital, patient. Don't feed it to her.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The Bigger Picture</h2>
+    <div class="vector">Vector: Folkloric — what a Southern legend is now</div>
+    <ol>
+      <li><span class="q" contenteditable>When you hear "Southern legend," what picture comes to mind? Do you see yourself anywhere near it?</span></li>
+      <li><span class="q" contenteditable>Do you plan to stay in this region, or go? What would make you stay?</span></li>
+      <li><span class="q" contenteditable>What do you want a girl who moves to Anniston from somewhere else — five years from now — to know?</span></li>
+      <li><span class="q" contenteditable>What's next for you? What are you building toward?</span></li>
+    </ol>
+  </section>
+
+  <section class="logistics">
+    <h2>Consent &amp; Logistics</h2>
+    <div class="vector">Ethical standards — do not skip</div>
+    <ol>
+      <li><span class="q" contenteditable>Signed release / informed consent for archival + digital publication.</span></li>
+      <li><span class="q" contenteditable>Confirm she may review her direct quotes and any technical detail for accuracy before we publish.</span></li>
+      <li><span class="q" contenteditable>Photo: get a portrait, or permission to use one. (We have no photo on file yet.)</span></li>
+      <li><span class="q" contenteditable>Ask if there's anyone else we should talk to — a mentor, a friend, family.</span></li>
+      <li><span class="q" contenteditable>Best contact for follow-up: __________</span></li>
+    </ol>
+  </section>
+
+  <footer contenteditable>Southern Legends — Interview Prep — Aseel Mohammad Mustafa · Built by Gather Studio by Matt Headley</footer>
+
+</div>
+<script>
+  function addQ(){
+    const secs=[...document.querySelectorAll('section')];
+    const active=document.activeElement.closest('section')||secs[0];
+    const ol=active.querySelector('ol');
+    const li=document.createElement('li');
+    li.innerHTML='<span class="q" contenteditable>New question…</span>';
+    ol.appendChild(li);
+    li.querySelector('.q').focus();
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Aisle — Llama Shirt Design</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0d0d0d;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    gap: 32px;
+    flex-wrap: wrap;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  .shirt {
+    width: 400px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 44px 36px 36px;
+    border-radius: 6px;
+  }
+  .shirt.ivory { background: #fdf9f4; border: 1px solid #ede8e0; }
+  .shirt.blush { background: #f4e8e0; border: 1px solid #e8d4c4; }
+  .shirt.sage { background: #d8e4d2; border: 1px solid #c4d6bc; }
+
+  .art-wrap {
+    width: 280px;
+    margin-bottom: 22px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .art-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .rule {
+    width: 70%;
+    height: 1px;
+    background: rgba(60,40,20,0.15);
+    margin-bottom: 16px;
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(60,40,20,0.4);
+    margin-bottom: 8px;
+  }
+
+  .headline {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 1.1;
+    color: #2a1810;
+    margin-bottom: 6px;
+  }
+
+  .sub-rule {
+    width: 30px;
+    height: 1px;
+    background: rgba(60,40,20,0.2);
+    margin: 8px auto;
+  }
+
+  .subline {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: rgba(60,40,20,0.45);
+  }
+
+  .attribution {
+    font-size: 9px;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    color: rgba(60,40,20,0.28);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .label {
+    color: #999;
+    font-size: 10px;
+    margin-top: 14px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .controls {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    color: #ccc;
+    font-size: 12px;
+    width: 230px;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+  .controls h3 { color: #f0ede8; margin-bottom: 12px; font-size: 13px; }
+  .controls .note {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #222;
+    color: #555;
+    line-height: 1.6;
+  }
+  .controls strong { color: #f0ede8; }
+</style>
+</head>
+<body>
+
+<!-- IVORY — bright wedding whites -->
+<div class="shirt ivory">
+  <div class="art-wrap">
+    <img src="redbird-willow-farm/assets/rbwf-llamas.png" alt="Llama illustration — The Aisle">
+  </div>
+  <div class="rule"></div>
+  <div class="eyebrow">The Aisle · Anniston</div>
+  <div class="headline">Here for<br>the Party</div>
+  <div class="sub-rule"></div>
+  <div class="subline">Oct 18, 2026</div>
+  <div class="attribution">Illustration: Matt Headley, directed with GPT-4o · circa July 2026</div>
+  <div class="label">Ivory / full-color print</div>
+</div>
+
+<!-- BLUSH -->
+<div class="shirt blush">
+  <div class="art-wrap">
+    <img src="redbird-willow-farm/assets/rbwf-llamas.png" alt="Llama illustration — The Aisle">
+  </div>
+  <div class="rule"></div>
+  <div class="eyebrow">The Aisle · Anniston</div>
+  <div class="headline">Here for<br>the Party</div>
+  <div class="sub-rule"></div>
+  <div class="subline">Oct 18, 2026</div>
+  <div class="attribution">Illustration: Matt Headley, directed with GPT-4o · circa July 2026</div>
+  <div class="label">Blush / full-color print</div>
+</div>
+
+<!-- SAGE -->
+<div class="shirt sage">
+  <div class="art-wrap">
+    <img src="redbird-willow-farm/assets/rbwf-llamas.png" alt="Llama illustration — The Aisle">
+  </div>
+  <div class="rule"></div>
+  <div class="eyebrow">The Aisle · Anniston</div>
+  <div class="headline">Here for<br>the Party</div>
+  <div class="sub-rule"></div>
+  <div class="subline">Oct 18, 2026</div>
+  <div class="attribution">Illustration: Matt Headley, directed with GPT-4o · circa July 2026</div>
+  <div class="label">Sage / full-color print</div>
+</div>
+
+<div class="controls">
+  <h3>The Aisle Llama Shirt</h3>
+  <p style="color:#555;font-size:11px;margin-bottom:12px;line-height:1.5">AI pastoral art. Aisle tokens (Fraunces + DM Sans). Light colorways.</p>
+  <div class="note">
+    <strong>Copy:</strong> "Here for the Party"<br><br>
+    <strong>Event tag:</strong> Oct 18, 2026<br><br>
+    <strong>Print:</strong> DTF full-color, Printify<br><br>
+    <strong>Price:</strong> $34–38<br><br>
+    <strong>Audience:</strong> Guests, staff, fun vendor perks<br><br>
+    <strong>Also try:</strong> "I said yes" / "Plus One" / "Bridal Show 2026"<br><br>
+    <strong>Attribution:</strong> Matt Headley, directed with GPT-4o · circa July 2026
+  </div>
+</div>
+
+</body>
+</html>

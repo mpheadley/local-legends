@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redbird Willow Farm — Shirt Design</title>
+<style>
+  @font-face {
+    font-family: 'IMFell';
+    src: url('../fonts/IMFellEnglish-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'IMFell';
+    src: url('../fonts/IMFellEnglish-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #111;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    gap: 32px;
+    flex-wrap: wrap;
+    font-family: system-ui, sans-serif;
+  }
+
+  .shirt {
+    width: 420px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 44px 36px 36px;
+    border-radius: 4px;
+  }
+  .shirt.black { background: #0d0d0d; border: 1px solid #222; }
+  .shirt.cream { background: #f0ede8; border: 1px solid #e0ddd8; }
+  .shirt.forest { background: #1c2e1a; border: 1px solid #2a4027; }
+
+  /* Illustration */
+  .art-wrap {
+    width: 300px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .art-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .rule {
+    width: 75%;
+    height: 1px;
+    margin-bottom: 18px;
+  }
+  .black .rule, .forest .rule { background: rgba(240,237,232,0.18); }
+  .cream .rule { background: rgba(0,0,0,0.15); }
+
+  .eyebrow {
+    font-family: 'IMFell', Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .black .eyebrow, .forest .eyebrow { color: rgba(240,237,232,0.45); }
+  .cream .eyebrow { color: rgba(0,0,0,0.38); }
+
+  .headline {
+    font-family: 'IMFell', Georgia, serif;
+    font-size: 34px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    line-height: 1.12;
+    margin-bottom: 8px;
+  }
+  .black .headline, .forest .headline { color: #f0ede8; }
+  .cream .headline { color: #1a1a1a; }
+
+  .sub-rule {
+    width: 36px;
+    height: 1px;
+    margin: 8px auto 8px;
+  }
+  .black .sub-rule, .forest .sub-rule { background: rgba(240,237,232,0.25); }
+  .cream .sub-rule { background: rgba(0,0,0,0.22); }
+
+  .subline {
+    font-family: 'IMFell', Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .black .subline, .forest .subline { color: rgba(240,237,232,0.5); }
+  .cream .subline { color: rgba(0,0,0,0.42); }
+
+  .label {
+    color: #666;
+    font-size: 10px;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  /* Attribution */
+  .attribution {
+    font-size: 9px;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  .black .attribution, .forest .attribution { color: rgba(240,237,232,0.25); }
+  .cream .attribution { color: rgba(0,0,0,0.28); }
+
+  /* Variant tabs */
+  .tabs {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .tab {
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    border: 1px solid #444;
+    background: #222;
+    color: #ccc;
+  }
+  .tab:hover { background: #2a2a2a; }
+
+  /* Controls */
+  .controls {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    color: #ccc;
+    font-size: 12px;
+    width: 220px;
+  }
+  .controls h3 { color: #f0ede8; margin-bottom: 12px; font-size: 13px; }
+  .controls .note {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #222;
+    color: #555;
+    line-height: 1.5;
+  }
+  .controls strong { color: #f0ede8; }
+
+  /* Highlight the "tender" variant */
+  .tender-badge {
+    font-size: 9px;
+    background: rgba(139,28,28,0.3);
+    color: #c8102e;
+    border: 1px solid rgba(139,28,28,0.4);
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: system-ui, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<!-- BLACK VERSION — SL editorial dark -->
+<div class="shirt black">
+  <div class="art-wrap">
+    <img src="assets/rbwf-ghibli.png" alt="Redbird Willow Farm — Ghibli illustration">
+  </div>
+  <div class="rule"></div>
+  <div class="eyebrow">Southern Legends</div>
+  <div class="headline">Redbird<br>Willow Farm</div>
+  <div class="sub-rule"></div>
+  <div class="subline">Anniston, Alabama</div>
+  <div class="attribution">Illustration: Matt Headley, directed with GPT-4o · circa July 2026</div>
+  <div class="label">Black tee / full-color front print</div>
+</div>
+
+<!-- CREAM VERSION -->
+<div class="shirt cream">
+  <div class="art-wrap">
+    <img src="assets/rbwf-ghibli.png" alt="Redbird Willow Farm — Ghibli illustration">
+  </div>
+  <div class="rule"></div>
+  <div class="eyebrow">Southern Legends</div>
+  <div class="headline">Redbird<br>Willow Farm</div>
+  <div class="sub-rule"></div>
+  <div class="subline">Anniston, Alabama</div>
+  <div class="attribution">Illustration: Matt Headley, directed with GPT-4o · circa July 2026</div>
+  <div class="label">Natural cream / full-color print</div>
+</div>
+
+<!-- FOREST VERSION — SL editorial dark green -->
+<div class="shirt forest">
+  <div class="art-wrap">
+    <img src="assets/rbwf-ghibli.png" alt="Redbird Willow Farm — Ghibli illustration">
+  </div>
+  <div class="rule"></div>
+  <div class="eyebrow">Southern Legends</div>
+  <div class="headline">Redbird<br>Willow Farm</div>
+  <div class="sub-rule"></div>
+  <div class="subline">Anniston, Alabama</div>
+  <div class="attribution">Illustration: Matt Headley, directed with GPT-4o · circa July 2026</div>
+  <div class="label">Forest green / full-color print</div>
+</div>
+
+<!-- HEDCUT variant — the "tender" one Matt liked -->
+<div class="shirt black">
+  <div class="tender-badge">Alt · Hedcut style</div>
+  <div class="art-wrap">
+    <img src="assets/rbwf-hedcut.png" alt="Redbird Willow Farm — Hedcut illustration">
+  </div>
+  <div class="rule"></div>
+  <div class="eyebrow">Southern Legends</div>
+  <div class="headline">Redbird<br>Willow Farm</div>
+  <div class="sub-rule"></div>
+  <div class="subline">Anniston, Alabama</div>
+  <div class="attribution">Illustration: Matt Headley, directed with GPT-4o · circa July 2026</div>
+  <div class="label">Hedcut/stipple alt · also DTF-ready</div>
+</div>
+
+<div class="controls">
+  <h3>RBWF Shirt Variants</h3>
+  <p style="color:#555;font-size:11px;margin-bottom:12px;line-height:1.5">Ghibli Ghibli (3 colorways) + Hedcut alt. SL tokens.</p>
+  <div class="note">
+    <strong>Print method:</strong> DTF (full color, no minimum)<br><br>
+    <strong>Platform:</strong> Printify POD → southernlegends.blog/merch<br><br>
+    <strong>Suggested price:</strong> $36–42<br><br>
+    <strong>Story tag:</strong> "She planted a willow tree where they found him."<br><br>
+    <strong>Attribution:</strong> Matt Headley, directed with GPT-4o · circa July 2026
+  </div>
+</div>
+
+</body>
+</html>

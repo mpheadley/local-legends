@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SL Banner Editor</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; font-family: system-ui, sans-serif; background: #0e0e0e; color: #e8e4dc; overflow: hidden; }
+
+  #app { display: flex; flex-direction: column; height: 100vh; }
+
+  /* ── TOOLBAR ── */
+  #toolbar {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    padding: 8px 16px; background: #1a1a1a; border-bottom: 1px solid #2a2a2a; flex-shrink: 0;
+  }
+  #toolbar h1 { font-size: 13px; font-weight: 700; color: #CA8A04; letter-spacing: 0.1em; margin-right: 8px; }
+  .tb-btn {
+    font-size: 11px; padding: 5px 12px; border-radius: 5px; border: 1px solid #3a3a3a;
+    background: #252525; color: #ccc; cursor: pointer; letter-spacing: 0.04em;
+  }
+  .tb-btn:hover { background: #333; color: #fff; }
+  .tb-btn.primary { background: #9A3412; border-color: #9A3412; color: #fff; }
+  .tb-btn.primary:hover { background: #b04016; }
+  #cell-label { font-size: 11px; color: #CA8A04; margin-left: 4px; min-width: 120px; }
+
+  /* Sliders */
+  .slider-group { display: flex; align-items: center; gap: 6px; }
+  .slider-group label { font-size: 10px; color: #888; letter-spacing: 0.06em; text-transform: uppercase; width: 14px; }
+  .slider-group input[type=range] {
+    width: 120px; accent-color: #CA8A04; cursor: pointer;
+  }
+  .slider-group span { font-size: 10px; color: #555; font-family: monospace; width: 28px; }
+
+  /* ── MAIN AREA ── */
+  #main { display: flex; flex: 1; overflow: hidden; }
+
+  /* ── CANVAS ── */
+  #canvas-area {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    padding: 20px; overflow: auto; background: #111; position: relative;
+  }
+  #scale-hint { font-size: 10px; color: #444; margin-bottom: 8px; letter-spacing: 0.05em; flex-shrink: 0; }
+
+  /* Container: sized to scaled dimensions so overflow never clips hits */
+  #banner-container {
+    position: relative; flex-shrink: 0;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.8);
+    overflow: visible;
+  }
+
+  /* The banner wrapper — scaled down, origin top-left inside container */
+  #banner-wrap {
+    transform-origin: top left;
+    position: absolute; top: 0; left: 0;
+    width: 1920px; height: 600px;
+  }
+  /* The actual banner iframe */
+  #banner-iframe {
+    width: 1920px; height: 600px;
+    border: none; display: block;
+    pointer-events: none; /* cells overlay handles events */
+  }
+
+  /* Cell overlays — positioned on top of the iframe to catch clicks */
+  #overlay {
+    position: absolute; top: 0; left: 0; width: 1920px; height: 600px;
+    pointer-events: none;
+  }
+  .cell-hit {
+    position: absolute;
+    pointer-events: all;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .cell-hit:hover { border-color: rgba(202,138,4,0.4); }
+  .cell-hit.active { border-color: #CA8A04; }
+  .cell-hit.active::after {
+    content: attr(data-label);
+    position: absolute; top: 6px; left: 6px;
+    font-size: 11px; font-weight: 700; color: #CA8A04;
+    background: rgba(0,0,0,0.7); padding: 2px 6px; border-radius: 3px;
+    letter-spacing: 0.06em; pointer-events: none;
+  }
+
+  /* ── PHOTO PICKER ── */
+  #picker {
+    width: 280px; flex-shrink: 0; background: #161616;
+    border-left: 1px solid #222; display: flex; flex-direction: column; overflow: hidden;
+  }
+  #picker-header {
+    padding: 10px 12px; border-bottom: 1px solid #222; flex-shrink: 0;
+  }
+  #picker-header h2 { font-size: 11px; font-weight: 700; color: #CA8A04; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  #picker-search {
+    width: 100%; padding: 5px 8px; font-size: 11px; border-radius: 4px;
+    background: #222; border: 1px solid #333; color: #ddd; outline: none;
+  }
+  #picker-search::placeholder { color: #555; }
+
+  #category-tabs {
+    display: flex; flex-wrap: wrap; gap: 4px; padding: 8px 10px;
+    border-bottom: 1px solid #222; flex-shrink: 0;
+  }
+  .cat-tab {
+    font-size: 9px; padding: 3px 7px; border-radius: 3px; cursor: pointer;
+    background: #222; border: 1px solid #2e2e2e; color: #888; letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .cat-tab:hover { color: #ccc; background: #2a2a2a; }
+  .cat-tab.active { background: #9A3412; border-color: #9A3412; color: #fff; }
+
+  #photo-grid {
+    flex: 1; overflow-y: auto; display: grid;
+    grid-template-columns: repeat(2, 1fr); gap: 6px; padding: 8px;
+    align-content: start;
+  }
+  #photo-grid::-webkit-scrollbar { width: 4px; }
+  #photo-grid::-webkit-scrollbar-track { background: #111; }
+  #photo-grid::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+  .photo-thumb {
+    aspect-ratio: 3/4; overflow: hidden; border-radius: 5px; cursor: pointer;
+    border: 2px solid transparent; position: relative; background: #1a1a1a;
+  }
+  .photo-thumb:hover { border-color: rgba(202,138,4,0.6); }
+  .photo-thumb.used { border-color: #CA8A04; }
+  .photo-thumb img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 15%;
+    display: block;
+  }
+  .photo-thumb .thumb-name {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    font-size: 9px; color: #eee; background: rgba(0,0,0,0.75);
+    padding: 4px 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* ── DRAG INSTRUCTION ── */
+  #drag-tip {
+    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+    font-size: 10px; color: #444; letter-spacing: 0.06em; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- TOOLBAR -->
+<div id="toolbar">
+  <h1>SL BANNER EDITOR</h1>
+  <span id="cell-label">← click a cell</span>
+  <div class="slider-group">
+    <label>X</label>
+    <input type="range" id="slider-x" min="0" max="100" value="50" oninput="onSlider('ox', this.value)" disabled />
+    <span id="val-x">50%</span>
+  </div>
+  <div class="slider-group">
+    <label>Y</label>
+    <input type="range" id="slider-y" min="0" max="100" value="15" oninput="onSlider('oy', this.value)" disabled />
+    <span id="val-y">15%</span>
+  </div>
+  <div style="flex:1"></div>
+  <button class="tb-btn" onclick="resetPos()">Reset</button>
+  <button class="tb-btn primary" onclick="exportHTML()">Export HTML</button>
+  <button class="tb-btn" onclick="openLive()">Full size</button>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+  <!-- CANVAS -->
+  <div id="canvas-area">
+    <div id="scale-hint">— drag to reposition · click photo to swap —</div>
+    <div id="banner-container">
+    <div id="banner-wrap">
+      <iframe id="banner-iframe" src="SL-BOOTH-BANNER-evergreen.html" scrolling="no"></iframe>
+      <div id="overlay">
+        <!-- Cell hit zones — match the bento grid exactly -->
+        <!-- Grid: right 1000px, 4 cols [2fr 1fr 1fr 1fr], 2 rows, gap 4px -->
+        <!-- Col widths: 2fr=~497px, 1fr=~166px each. Starts at x=920 -->
+        <!-- Row heights: 298px each -->
+      </div>
+    </div>
+    </div><!-- /banner-container -->
+    <div id="drag-tip">drag within a cell to reposition · click photo in picker to swap</div>
+  </div>
+
+  <!-- PICKER -->
+  <div id="picker">
+    <div id="picker-header">
+      <h2>Photo Library</h2>
+      <input id="picker-search" type="text" placeholder="Search photos…" oninput="filterPhotos(this.value)" />
+    </div>
+    <div id="category-tabs"></div>
+    <div id="photo-grid"></div>
+  </div>
+
+</div>
+</div>
+
+<script>
+// ── BANNER STATE ──
+// Matches the bento layout in the banner HTML exactly.
+// Grid: collage starts at x=920, width=1000px
+// 4 cols: [2fr, 1fr, 1fr, 1fr] with gap=4px → ~497, 166, 166, 166px approx
+// 2 rows: 298px each (600px total, gap 4px at seam)
+// Cell areas:
+//   big  = col 1, rows 1-2  (x=920, y=0, w=497, h=600)
+//   jean = col 2, row 1     (x=1421, y=0, w=166, h=298)
+//   shan = col 3, row 1     (x=1591, y=0, w=166, h=298)
+//   sam  = col 4, rows 1-2  (x=1757, y=0, w=163, h=600)
+//   lewis= col 2, row 2     (x=1421, y=302, w=166, h=298)
+//   wood = col 3, row 2     (x=1591, y=302, w=166, h=298)
+
+const GAP = 4;
+const COL_START = 920;
+const COL_TOTAL = 1000;
+// 4-col 2fr+1fr+1fr+1fr with gap=4 → total usable = 1000-3*4=988, 2fr=988*(2/5)=395, 1fr=988*(1/5)=197 approx
+// Actually: grid-template-columns: 2fr 1fr 1fr 1fr = ratio 2:1:1:1 = 5 parts
+// 5 parts + 3 gaps = 988px usable → 1 part = 988/5 = 197.6, 2 parts = 395.2
+const UNIT = (COL_TOTAL - 3 * GAP) / 5; // ~197.6
+const C0 = COL_START;
+const C1 = C0 + UNIT * 2 + GAP;  // after big col
+const C2 = C1 + UNIT + GAP;
+const C3 = C2 + UNIT + GAP;
+const ROW_H = (600 - GAP) / 2; // ~298
+
+const CELLS = [
+  { id: 'big',   x: Math.round(C0), y: 0,             w: Math.round(UNIT*2), h: 600,              label: 'Michele (Hero)' },
+  { id: 'jean',  x: Math.round(C1), y: 0,             w: Math.round(UNIT),   h: Math.round(ROW_H),label: 'Jean Ellison' },
+  { id: 'shan',  x: Math.round(C2), y: 0,             w: Math.round(UNIT),   h: Math.round(ROW_H),label: 'Shannon Jenkins' },
+  { id: 'sam',   x: Math.round(C3), y: 0,             w: Math.round(COL_TOTAL-Math.round(UNIT*2)-Math.round(UNIT)*2-3*GAP), h: 600, label: 'Samuel (Hero)' },
+  { id: 'lewis', x: Math.round(C1), y: Math.round(ROW_H+GAP), w: Math.round(UNIT), h: Math.round(ROW_H), label: 'Lewis Downing' },
+  { id: 'wood',  x: Math.round(C2), y: Math.round(ROW_H+GAP), w: Math.round(UNIT), h: Math.round(ROW_H), label: 'Pilgrims' },
+];
+
+// Current state for each cell: src + object-position
+const state = {
+  big:   { src: '../images/essays/rbwf-hero-face.jpg',                              ox: 50, oy: 18 },
+  jean:  { src: '../images/profiles/jean-ellison/jean-ellison-brand-fistpump.jpg',  ox: 50, oy: 15 },
+  shan:  { src: '../images/profiles/shannon-jenkins/shannon-jenkins-headshot-v4.webp', ox: 50, oy: 8 },
+  sam:   { src: '../images/profiles/aquality-farms/sam-farmers-market-cropped.webp', ox: 50, oy: 12 },
+  lewis: { src: '../images/profiles/lewis-downing/lewis-at-counter.webp',           ox: 20, oy: 10 },
+  wood:  { src: '../images/profiles/ecclesia-community/pilgrims-forest.webp',        ox: 50, oy: 50 },
+};
+
+let activeCell = null;
+
+// ── BUILD OVERLAY CELLS ──
+function buildOverlay() {
+  const overlay = document.getElementById('overlay');
+  CELLS.forEach(cell => {
+    const div = document.createElement('div');
+    div.className = 'cell-hit';
+    div.id = 'hit-' + cell.id;
+    div.dataset.cellId = cell.id;
+    div.dataset.label = cell.label;
+    div.style.cssText = `left:${cell.x}px;top:${cell.y}px;width:${cell.w}px;height:${cell.h}px;`;
+    div.addEventListener('click', () => selectCell(cell.id));
+    overlay.appendChild(div);
+  });
+}
+
+function selectCell(id) {
+  activeCell = id;
+  document.querySelectorAll('.cell-hit').forEach(el => el.classList.remove('active'));
+  document.getElementById('hit-' + id).classList.add('active');
+  const cell = CELLS.find(c => c.id === id);
+  document.getElementById('cell-label').textContent = '✦ ' + cell.label;
+  // Sync sliders to current state
+  const s = state[id];
+  const sx = document.getElementById('slider-x');
+  const sy = document.getElementById('slider-y');
+  sx.value = s.ox; sy.value = s.oy;
+  sx.disabled = false; sy.disabled = false;
+  document.getElementById('val-x').textContent = Math.round(s.ox) + '%';
+  document.getElementById('val-y').textContent = Math.round(s.oy) + '%';
+}
+
+// ── SLIDER HANDLER ──
+function onSlider(axis, val) {
+  if (!activeCell) return;
+  state[activeCell][axis] = parseFloat(val);
+  document.getElementById('val-x').textContent = Math.round(state[activeCell].ox) + '%';
+  document.getElementById('val-y').textContent = Math.round(state[activeCell].oy) + '%';
+  applyToIframe();
+}
+
+// ── APPLY STATE TO IFRAME ──
+function applyToIframe() {
+  const doc = document.getElementById('banner-iframe').contentDocument;
+  if (!doc) return;
+  Object.entries(state).forEach(([id, s]) => {
+    const cell = doc.querySelector('.c-' + id);
+    if (!cell) return;
+    const img = cell.querySelector('img');
+    if (!img) return;
+    img.src = s.src;
+    img.style.objectPosition = `${s.ox}% ${s.oy}%`;
+  });
+}
+
+// ── PHOTO LIBRARY ──
+const PHOTOS = [
+  // Essays / RBWF
+  { cat: 'essays', src: '../images/essays/rbwf-hero-face.jpg', name: 'Michele — RBWF face' },
+  { cat: 'essays', src: '../images/essays/rbwf-farm-exterior.jpg', name: 'RBWF exterior' },
+  { cat: 'essays', src: '../images/essays/rbwf-barn-interior.jpg', name: 'RBWF barn' },
+  { cat: 'essays', src: '../images/essays/rbwf-alpaca-feeding.jpg', name: 'RBWF alpacas' },
+  { cat: 'essays', src: '../images/essays/rbwf-llama-sign.jpg', name: 'RBWF llama sign' },
+  { cat: 'essays', src: '../images/essays/rbwf-main-building.jpg', name: 'RBWF main building' },
+  { cat: 'essays', src: '../images/essays/rbwf-michele-raccoon.jpg', name: 'Michele & raccoon' },
+  { cat: 'essays', src: '../images/essays/redbird-willow-farm-hero.jpg', name: 'RBWF hero' },
+  { cat: 'essays', src: '../images/essays/headley-farm-selfie.webp', name: 'Farm selfie' },
+  { cat: 'essays', src: '../images/essays/the-lazy-river-hero.webp', name: 'Lazy river' },
+
+  // Jean Ellison
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jean-ellison-brand-fistpump.jpg', name: 'Jean — fistpump' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jean-ellison-brand-fistpump.webp', name: 'Jean — fistpump (webp)' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jean-ellison-kitchen-cutting-hires.jpg', name: 'Jean — kitchen' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jean-ellison-kitchen-cutting-hires.webp', name: 'Jean — kitchen (webp)' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jean-ellison-cookbook-selfie.jpg', name: 'Jean — cookbook selfie' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jean-ellison-cooking-lessons-promo.jpg', name: 'Jean — lessons' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jsu-encore-performance-2007.jpg', name: 'Jean — JSU encore' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/jsu-hansel-gretel-backstage-2007.jpg', name: 'Jean — Hansel backstage' },
+  { cat: 'jean', src: '../images/profiles/jean-ellison/selfie-jean.jpg', name: 'Jean — selfie' },
+
+  // Shannon Jenkins
+  { cat: 'shannon', src: '../images/profiles/shannon-jenkins/shannon-jenkins-headshot-v4.webp', name: 'Shannon — headshot v4' },
+  { cat: 'shannon', src: '../images/profiles/shannon-jenkins/shannon-jenkins-headshot-v3.webp', name: 'Shannon — headshot v3' },
+  { cat: 'shannon', src: '../images/profiles/shannon-jenkins/shannon-brian-united-for-hope.webp', name: 'Shannon & Brian' },
+  { cat: 'shannon', src: '../images/profiles/shannon-jenkins/shannon-jenkins-meeting.webp', name: 'Shannon — meeting' },
+  { cat: 'shannon', src: '../images/profiles/shannon-jenkins/shannon-kyle-bryan.webp', name: 'Shannon & Kyle' },
+  { cat: 'shannon', src: '../images/profiles/shannon-jenkins/united-for-hope-panel.webp', name: 'United for Hope panel' },
+
+  // Samuel / AQuality
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/sam-farmers-market-cropped.webp', name: 'Sam — market hero' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/sam-farmers-market.webp', name: 'Sam — full market' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/sam-chaha-trail.webp', name: 'Sam — Chaha trail' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/samuel-in-lab.webp', name: 'Sam — in lab' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/samuel-in-incubation-room.webp', name: 'Sam — incubation' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/samuel-fruiting-room.webp', name: 'Sam — fruiting room' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/samuel-john-mark.webp', name: 'Sam + John Mark' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/sawyer-brothers-grow-room-upscaled.webp', name: 'Sawyer brothers' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/chestnut-mushrooms-pinning.webp', name: 'Chestnut mushrooms' },
+  { cat: 'samuel', src: '../images/profiles/aquality-farms/harvest-box.webp', name: 'Harvest box' },
+
+  // Lewis Downing
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/lewis-at-counter.webp', name: 'Lewis — at counter' },
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/lewis-setting-out-plants.webp', name: 'Lewis — setting plants' },
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/rd-on-bench.webp', name: 'RD — on bench' },
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/rd-lewis-delivery-unloading.webp', name: 'Lewis — delivery' },
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/yellow-mums-sign-blue-sky.webp', name: 'Yellow mums' },
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/downing-and-sons-storefront.webp', name: 'Storefront' },
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/fall-mums-storefront-exterior.webp', name: 'Fall mums' },
+  { cat: 'lewis', src: '../images/profiles/lewis-downing/tomato-plants-exterior-rack.webp', name: 'Tomatoes' },
+
+  // Pilgrims / Ecclesia
+  { cat: 'ecclesia', src: '../images/profiles/ecclesia-community/pilgrims-forest.webp', name: 'Pilgrims — forest' },
+
+  // Freedom Riders
+  { cat: 'freedom', src: '../images/profiles/freedom-riders-national-monument/bus-burning-1961.webp', name: 'Bus burning 1961' },
+  { cat: 'freedom', src: '../images/profiles/freedom-riders-national-monument/burning-bus-painting.webp', name: 'Burning bus painting' },
+  { cat: 'freedom', src: '../images/profiles/freedom-riders-national-monument/freedom-riders-mugshots.webp', name: 'Freedom Riders mugshots' },
+  { cat: 'freedom', src: '../images/profiles/freedom-riders-national-monument/gurnee-mural.webp', name: 'Gurnee mural' },
+  { cat: 'freedom', src: '../images/profiles/freedom-riders-national-monument/nps-ranger-bus-mural.webp', name: 'NPS ranger + mural' },
+  { cat: 'freedom', src: '../images/profiles/freedom-riders-national-monument/soren-headley-painting-burning-bus.jpg', name: 'Soren — painting' },
+
+  // Jay Jenkins
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-anniston-podium.webp', name: 'Jay — podium' },
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-ice-cream.webp', name: 'Jay — ice cream' },
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-jenkins-interview.webp', name: 'Jay — interview' },
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-market-ciara.webp', name: 'Jay + Ciara market' },
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-market-flowers-rain.webp', name: 'Jay — flowers rain' },
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-market-group.webp', name: 'Jay — market group' },
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-truck.webp', name: 'Jay — truck' },
+  { cat: 'jay', src: '../images/profiles/jay-jenkins/jay-veterans-memorial.webp', name: 'Jay — veterans' },
+
+  // Bloom Bar / Farm
+  { cat: 'farm', src: '../images/bloom-bar/bloom-bar-in-operation-market.webp', name: 'Bloom Bar market' },
+  { cat: 'farm', src: '../images/bloom-bar/bloom-bar-heather-full-trailer.jpg', name: 'Heather — trailer' },
+  { cat: 'farm', src: '../images/bloom-bar/bloom-bar-downtown-anniston-full-shelves.webp', name: 'Bloom Bar — shelves' },
+  { cat: 'farm', src: '../images/bloom-bar/bloom-bar-three-people-market.jpg', name: 'Bloom Bar — market crowd' },
+  { cat: 'farm', src: '../images/about/matt-and-heather-flower-farm.webp', name: 'Matt + Heather — farm' },
+  { cat: 'farm', src: '../images/about/headley-flower-farm-field.webp', name: 'Farm field' },
+  { cat: 'farm', src: '../images/bloom-bar/bloom-bar-llamas.png', name: 'Bloom Bar llamas' },
+
+  // Matt Headley
+  { cat: 'matt', src: '../images/about/headshot-matt-headley.webp', name: 'Matt — headshot' },
+  { cat: 'matt', src: '../images/about/headshot-hedcut-matt-headley.webp', name: 'Matt — hedcut' },
+  { cat: 'matt', src: '../images/about/matt-jsu-theater-performance.jpg', name: 'Matt — theater' },
+  { cat: 'matt', src: '../images/about/jsu-opera-pirates.webp', name: 'JSU — Pirates' },
+  { cat: 'matt', src: '../images/about/jsu-opera-hansel.webp', name: 'JSU — Hansel' },
+  { cat: 'matt', src: '../images/about/matt-heather-engagement-noccalula-falls-original.jpg', name: 'Engagement — Noccalula' },
+  { cat: 'matt', src: '../images/about/matt-heather-wedding-recessional-beaming.jpg', name: 'Wedding — recessional' },
+  { cat: 'matt', src: '../images/about/headley-family-800w.webp', name: 'Headley family' },
+
+  // Landscapes / Places
+  { cat: 'places', src: '../images/profiles/noccalula-falls/falls-dusk.webp', name: 'Noccalula — dusk' },
+  { cat: 'places', src: '../images/profiles/noccalula-falls/falls-from-gorge.webp', name: 'Noccalula — gorge' },
+  { cat: 'places', src: '../images/profiles/noccalula-falls/festival-of-lights.webp', name: 'Festival of lights' },
+  { cat: 'places', src: '../images/profiles/camp-sumatanga/camp-sumatanga-chapel-mountain-2016.webp', name: 'Sumatanga chapel' },
+  { cat: 'places', src: '../images/profiles/camp-sumatanga/camp-sumatanga-celtic-cross-grove-2018.webp', name: 'Celtic cross grove' },
+  { cat: 'places', src: '../images/profiles/anniston-museums-gardens/gardens-longleaf.webp', name: 'Anniston Gardens' },
+  { cat: 'places', src: '../images/profiles/anniston-museums-gardens/matt-dahlias.webp', name: 'Matt — dahlias' },
+  { cat: 'places', src: '../images/profiles/jay-jenkins/caldwell-building-1001-noble.webp', name: 'Noble St — Caldwell' },
+];
+
+const CATS = [
+  { id: 'all',      label: 'All' },
+  { id: 'essays',   label: 'RBWF' },
+  { id: 'jean',     label: 'Jean' },
+  { id: 'shannon',  label: 'Shannon' },
+  { id: 'samuel',   label: 'Samuel' },
+  { id: 'lewis',    label: 'Lewis' },
+  { id: 'ecclesia', label: 'Pilgrims' },
+  { id: 'freedom',  label: 'Freedom' },
+  { id: 'jay',      label: 'Jay' },
+  { id: 'farm',     label: 'Farm' },
+  { id: 'matt',     label: 'Matt' },
+  { id: 'places',   label: 'Places' },
+];
+
+let activeCat = 'all';
+let searchQuery = '';
+
+function buildCategoryTabs() {
+  const tabs = document.getElementById('category-tabs');
+  CATS.forEach(c => {
+    const el = document.createElement('div');
+    el.className = 'cat-tab' + (c.id === activeCat ? ' active' : '');
+    el.textContent = c.label;
+    el.onclick = () => { activeCat = c.id; buildCategoryTabs(); renderPhotos(); };
+    tabs.appendChild(el);
+  });
+}
+
+function filterPhotos(q) {
+  searchQuery = q.toLowerCase();
+  renderPhotos();
+}
+
+function renderPhotos() {
+  const grid = document.getElementById('photo-grid');
+  grid.innerHTML = '';
+
+  // Mark used srcs
+  const usedSrcs = new Set(Object.values(state).map(s => s.src));
+
+  const filtered = PHOTOS.filter(p => {
+    if (activeCat !== 'all' && p.cat !== activeCat) return false;
+    if (searchQuery && !p.name.toLowerCase().includes(searchQuery) && !p.src.toLowerCase().includes(searchQuery)) return false;
+    return true;
+  });
+
+  filtered.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'photo-thumb' + (usedSrcs.has(p.src) ? ' used' : '');
+    div.innerHTML = `<img src="${p.src}" alt="${p.name}" loading="lazy" /><div class="thumb-name">${p.name}</div>`;
+    div.onclick = () => assignPhoto(p.src);
+    grid.appendChild(div);
+  });
+}
+
+function assignPhoto(src) {
+  if (!activeCell) {
+    alert('Click a cell on the banner first, then pick a photo.');
+    return;
+  }
+  state[activeCell].src = src;
+  state[activeCell].ox = 50;
+  state[activeCell].oy = 15;
+  applyToIframe();
+  updatePosDisplay();
+  renderPhotos();
+}
+
+function resetPos() {
+  if (!activeCell) return;
+  state[activeCell].ox = 50;
+  state[activeCell].oy = 15;
+  document.getElementById('slider-x').value = 50;
+  document.getElementById('slider-y').value = 15;
+  document.getElementById('val-x').textContent = '50%';
+  document.getElementById('val-y').textContent = '15%';
+  applyToIframe();
+}
+
+// ── SCALE BANNER TO FIT ──
+function scaleBanner() {
+  const area = document.getElementById('canvas-area');
+  const wrap = document.getElementById('banner-wrap');
+  const container = document.getElementById('banner-container');
+  const aw = area.clientWidth - 40;
+  // Scale to fit width; allow vertical scroll if too tall
+  const scale = Math.min(aw / 1920, 1);
+  wrap.style.transform = `scale(${scale})`;
+  // Size the container to the scaled visual dimensions so overflow never clips events
+  container.style.width  = Math.round(1920 * scale) + 'px';
+  container.style.height = Math.round(600  * scale) + 'px';
+}
+
+// ── EXPORT HTML ──
+function exportHTML() {
+  // Read the banner HTML, update the src + object-position for each cell
+  fetch('SL-BOOTH-BANNER-evergreen.html')
+    .then(r => r.text())
+    .then(html => {
+      // Update each cell's img src and object-position
+      const replacements = {
+        big:   { selector: /(<div class="cc c-big">[\s\S]*?<img )([^>]*?)(>)/m },
+        jean:  { selector: /(<div class="cc c-jean">[\s\S]*?<img )([^>]*?)(>)/m },
+        shan:  { selector: /(<div class="cc c-shan">[\s\S]*?<img )([^>]*?)(>)/m },
+        sam:   { selector: /(<div class="cc c-sam">[\s\S]*?<img )([^>]*?)(>)/m },
+        lewis: { selector: /(<div class="cc c-lewis">[\s\S]*?<img )([^>]*?)(>)/m },
+        wood:  { selector: /(<div class="cc c-wood[^"]*">[\s\S]*?<img )([^>]*?)(>)/m },
+      };
+
+      // Build a new HTML by going through the iframe's live document
+      const iDoc = document.getElementById('banner-iframe').contentDocument;
+      let out = html;
+      Object.entries(state).forEach(([id, s]) => {
+        const cell = iDoc.querySelector('.c-' + id);
+        if (!cell) return;
+        const img = cell.querySelector('img');
+        if (!img) return;
+        // Replace src in html
+        out = out.replace(
+          new RegExp(`(class="c-${id}[^"]*">[\\s\\S]*?<img )([^>]*?)(>)`, 'm'),
+          (match, pre, attrs, close) => {
+            attrs = attrs.replace(/src="[^"]*"/, `src="${s.src}"`);
+            attrs = attrs.replace(/style="[^"]*"/, `style="object-position:${s.ox}% ${s.oy}%;"`);
+            if (!attrs.includes('style=')) attrs += ` style="object-position:${s.ox}% ${s.oy}%;"`;
+            return pre + attrs + close;
+          }
+        );
+      });
+
+      // Download
+      const blob = new Blob([out], { type: 'text/html' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'SL-BOOTH-BANNER-evergreen.html';
+      a.click();
+    });
+}
+
+function openLive() {
+  window.open('SL-BOOTH-BANNER-evergreen.html', '_blank');
+}
+
+// ── INIT ──
+window.onload = () => {
+  buildOverlay();
+  scaleBanner();
+  window.addEventListener('resize', scaleBanner);
+  buildCategoryTabs();
+  renderPhotos();
+
+  // Wait for iframe to load, then apply state
+  const iframe = document.getElementById('banner-iframe');
+  iframe.onload = () => applyToIframe();
+};
+</script>
+</body>
+</html>

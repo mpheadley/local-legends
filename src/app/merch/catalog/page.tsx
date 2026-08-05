@@ -20,12 +20,13 @@ const CATEGORY_LABELS: Record<MerchCategory, string> = {
   'bandana':  'Bandanas',
   'pennant':  'Pennants',
   'journal':  'Journals',
+  'magazine': 'Magazines',
 }
 
 const CATEGORY_ORDER: MerchCategory[] = [
   'shirt', 'hoodie', 'hat', 'tote',
   'sticker', 'patch', 'pin',
-  'print', 'poster', 'mug', 'sock',
+  'print', 'poster', 'magazine', 'mug', 'sock',
   '3d-print', 'pennant', 'journal', 'bandana',
 ]
 

@@ -3,7 +3,7 @@ export type MerchCategory =
   | 'sticker' | 'patch' | 'pin'
   | 'tote' | 'print' | 'poster'
   | 'mug' | 'sock' | 'bandana' | 'pennant' | 'journal'
-  | '3d-print'
+  | '3d-print' | 'magazine'
 
 export type MerchItem = {
   id: string
@@ -12,15 +12,17 @@ export type MerchItem = {
   sub?: string
   price: number
   photo: string
-  rawGraphic?: string    // on hover: show this graphic on bg color
-  bg?: string            // hover background color (shirt/product color)
+  rawGraphic?: string
+  bg?: string
   badge?: string
   badgeColor?: string
   category: MerchCategory
+  /** Mediums this design is available on — shown in click overlay. Defaults to category label. */
+  mediums?: string[]
   fundraiser?: string
   sizes?: string[]
   available: boolean
-  comingSoon?: boolean   // shows in store with "Pre-order · Coming Soon" badge
+  comingSoon?: boolean
   cities?: string[]
 }
 
@@ -111,8 +113,10 @@ export const MERCH: MerchItem[] = [
     tagline: '1832 · 2032 · Anniston to Piedmont',
     sub: '33.5 miles. Ivory, Moss, Denim.',
     price: 35,
-    photo: '/merch/clt-shirt-mockup.webp',
+    photo: '/merch/clt-front-badge.png',
+    bg: '#f5f0e8',
     category: 'shirt',
+    mediums: ['T-Shirt', 'Tote Bag', 'Sticker', 'Art Print', 'Hat'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,
     cities: ['anniston', 'piedmont'],
@@ -208,10 +212,12 @@ export const MERCH: MerchItem[] = [
     tagline: 'May 14, 1961. Highway 202. The bus burned.',
     sub: '25% of every sale → West Anniston Foundation',
     price: 40,
-    photo: '/merch/freedom-riders/shirt-mockup-dark.webp',
+    photo: '/print-files/FREEDOM-RIDERS-01-burning-bus-WHITE.png',
+    bg: '#1a1a2e',
     badge: 'Memorial',
     badgeColor: '#1a1a2e',
     category: 'shirt',
+    mediums: ['T-Shirt', 'Hoodie', 'Art Print', 'Poster', 'Sticker'],
     fundraiser: 'West Anniston Foundation',
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     available: true,

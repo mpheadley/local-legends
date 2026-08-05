@@ -3,8 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MERCH, type MerchItem } from '@/lib/merch'
-import ShirtMockup from '@/components/ShirtMockup'
+import { MERCH, type MerchItem, type MerchCategory } from '@/lib/merch'
 
 const SHIRTS    = MERCH.filter(m => m.category === 'shirt' && m.available)
 const TOTES     = MERCH.filter(m => m.category === 'tote' && m.available)
@@ -267,65 +266,92 @@ export default function MerchPage() {
   )
 }
 
+const CATEGORY_LABELS: Record<MerchCategory, string> = {
+  shirt: 'T-Shirt', hoodie: 'Hoodie', hat: 'Hat',
+  sticker: 'Sticker', patch: 'Patch', pin: 'Pin / Coin',
+  tote: 'Tote Bag', print: 'Art Print', poster: 'Poster',
+  mug: 'Mug', sock: 'Socks', bandana: 'Bandana',
+  pennant: 'Pennant', journal: 'Journal', '3d-print': '3D Print',
+  magazine: 'Magazine',
+}
+
 function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
-  const [hovered, setHovered] = useState(false)
-  const isShirt = item.category === 'shirt' || item.category === 'hoodie'
+  const [showMediums, setShowMediums] = useState(false)
+  const mediumLabel = CATEGORY_LABELS[item.category] ?? item.category
+  const allMediums = item.mediums ?? [mediumLabel]
 
   return (
-    <Link href={`/buy/${item.id}`}
-      className="rounded-2xl overflow-hidden block transition-all duration-200 group"
-      style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', border: '1px solid rgba(240,237,230,0.08)', boxShadow: '0 2px 16px rgba(0,0,0,0.3)', textDecoration: 'none', color: 'inherit' }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}>
+    <div
+      className="rounded-2xl overflow-hidden transition-all duration-200"
+      style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', border: '1px solid rgba(240,237,230,0.08)', boxShadow: '0 2px 16px rgba(0,0,0,0.3)' }}
+    >
+      {/* Image area — click shows/hides mediums overlay */}
+      <div
+        className="relative overflow-hidden cursor-pointer group"
+        style={{ aspectRatio: small ? '1' : '4/5', background: item.bg ?? '#12190f' }}
+        onClick={() => setShowMediums(s => !s)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={e => e.key === 'Enter' && setShowMediums(s => !s)}
+      >
+        <Image
+          src={item.photo}
+          alt={item.name}
+          fill
+          className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+          sizes={small ? '220px' : '(max-width: 640px) 100vw, 320px'}
+          style={{ padding: small ? 8 : 14 }}
+        />
 
-      {/* Shirt items: blank shirt mockup; hover shows shirt color */}
-      {isShirt ? (
-        <div className="relative flex items-center justify-center overflow-hidden"
-          style={{ aspectRatio: small ? '1' : '4/5', background: 'rgba(255,255,255,0.015)', padding: small ? 8 : 16 }}>
-          <ShirtMockup
-            src={item.photo}
-            alt={item.name}
-            shirtColor={hovered ? (item.bg ?? '#f5f0e8') : undefined}
-            size={small ? 160 : 260}
-          />
-          {item.badge && (
-            <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full z-10"
-              style={{ background: item.badgeColor ?? '#9A3412', color: '#fff', letterSpacing: '0.06em' }}>
-              {item.badge}
-            </span>
-          )}
-          <div className="absolute inset-0 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }}>
-            <span className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-lg"
-              style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)' }}>
-              Buy now →
-            </span>
-          </div>
-        </div>
-      ) : (
-        /* Non-shirt items (stickers, totes, prints): plain image */
-        <div className="relative overflow-hidden"
-          style={{ aspectRatio: small ? '1' : '4/5', background: item.bg ?? 'transparent' }}>
-          <Image src={item.photo} alt={item.name} fill
-            className="object-contain transition-transform duration-500 group-hover:scale-[1.04]"
-            sizes={small ? '220px' : '(max-width: 640px) 100vw, 320px'} style={{ padding: 16 }} />
-          {item.badge && (
-            <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full"
-              style={{ background: item.badgeColor ?? '#9A3412', color: '#fff', letterSpacing: '0.06em' }}>
-              {item.badge}
-            </span>
-          )}
-          <div className="absolute inset-0 flex items-end justify-center pb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)' }}>
-            <span className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-lg"
-              style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)' }}>
-              Buy now →
-            </span>
-          </div>
-        </div>
-      )}
+        {/* Badge — top left */}
+        {item.badge && (
+          <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full z-10"
+            style={{ background: item.badgeColor ?? '#9A3412', color: '#fff', letterSpacing: '0.06em' }}>
+            {item.badge}
+          </span>
+        )}
 
-      <div className="p-4">
+        {/* Medium label — top right */}
+        <span className="absolute top-3 right-3 text-xs font-semibold px-2 py-0.5 rounded z-10"
+          style={{ background: 'rgba(6,13,9,0.75)', color: 'rgba(240,237,230,0.7)', border: '1px solid rgba(240,237,230,0.15)', backdropFilter: 'blur(6px)' }}>
+          {mediumLabel}
+        </span>
+
+        {/* Mediums overlay */}
+        {showMediums ? (
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center"
+            style={{ background: 'rgba(6,13,9,0.93)', backdropFilter: 'blur(4px)', padding: '1.25rem' }}>
+            <p className="text-xs uppercase mb-3" style={{ color: 'rgba(240,237,230,0.45)', letterSpacing: '0.2em' }}>Available on</p>
+            <div className="flex flex-wrap gap-2 justify-center mb-4">
+              {allMediums.map(m => (
+                <span key={m} className="text-xs font-semibold px-3 py-1.5 rounded-full"
+                  style={{ border: '1px solid rgba(202,138,4,0.5)', color: '#C9A227', background: 'rgba(202,138,4,0.08)' }}>
+                  {m}
+                </span>
+              ))}
+            </div>
+            <Link href={`/buy/${item.id}`} onClick={e => e.stopPropagation()}
+              className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-lg"
+              style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)', textDecoration: 'none' }}>
+              Buy now →
+            </Link>
+            <p className="text-[10px] mt-3" style={{ color: 'rgba(240,237,230,0.28)' }}>tap again to close</p>
+          </div>
+        ) : (
+          <div className="absolute inset-0 flex items-end justify-between pb-3 px-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%)' }}>
+            <span className="text-[10px]" style={{ color: 'rgba(240,237,230,0.4)' }}>tap · see mediums</span>
+            <Link href={`/buy/${item.id}`} onClick={e => e.stopPropagation()}
+              className="text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-lg"
+              style={{ background: 'var(--color-ll-primary)', color: 'var(--color-ll-warm)', textDecoration: 'none' }}>
+              Buy →
+            </Link>
+          </div>
+        )}
+      </div>
+
+      {/* Text + buy link */}
+      <Link href={`/buy/${item.id}`} style={{ display: 'block', padding: '1rem', textDecoration: 'none', color: 'inherit' }}>
         <div className="flex items-start justify-between mb-1">
           <h2 className="font-black text-sm leading-tight flex-1 mr-2" style={{ fontFamily: 'var(--font-heading)' }}>{item.name}</h2>
           <span className="font-black text-sm flex-shrink-0" style={{ color: 'var(--color-ll-primary-light)' }}>${item.price}</span>
@@ -333,8 +359,8 @@ function ProductCard({ item, small }: { item: MerchItem; small?: boolean }) {
         <p className="text-xs mb-0.5" style={{ color: 'rgba(240,237,230,0.4)' }}>{item.tagline}</p>
         {item.sub && <p className="text-xs" style={{ color: 'rgba(202,138,4,0.6)' }}>{item.sub}</p>}
         {item.fundraiser && <p className="text-xs mt-1" style={{ color: '#4ade80' }}>25% → {item.fundraiser}</p>}
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

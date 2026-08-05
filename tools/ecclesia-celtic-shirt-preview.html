@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ecclesia Celtic Coin — WE ARE ALL ON THE WAY.</title>
+<style>
+@font-face { font-family: 'Fraunces'; src: url('../../gather/assets/fonts/Fraunces-Black.ttf') format('truetype'); font-weight: 900; }
+@font-face { font-family: 'IMFell'; src: url('../merch/fonts/IMFellEnglish-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'IMFell'; src: url('../merch/fonts/IMFellEnglish-Italic.ttf') format('truetype'); font-style: italic; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #111; display: flex; align-items: center; justify-content: center; min-height: 100vh; gap: 48px; flex-wrap: wrap; padding: 40px; }
+
+/* ── Raw graphic (print artwork) ── */
+#raw-graphic {
+  width: 800px;
+  height: 800px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+}
+
+.coin-wrap {
+  width: 480px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coin-img { width: 100%; height: 100%; object-fit: contain; }
+
+.text-block {
+  margin-top: 28px;
+  text-align: center;
+}
+.main-line {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 900;
+  font-size: 54px;
+  letter-spacing: 0.10em;
+  color: #4aba8a;
+  text-transform: uppercase;
+  line-height: 1.05;
+  display: block;
+}
+.rule {
+  width: 200px;
+  height: 1.5px;
+  background: rgba(74,186,138,0.35);
+  margin: 18px auto 16px;
+}
+.sub-line {
+  font-family: 'IMFell', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: rgba(74,186,138,0.6);
+  letter-spacing: 0.12em;
+}
+
+/* ── Shirt mockup ── */
+.shirt-wrap {
+  position: relative;
+  width: 560px;
+  height: 640px;
+  flex-shrink: 0;
+}
+.shirt-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.shirt-content {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center;
+  padding-top: 148px;
+}
+.shirt-coin { width: 260px; height: 260px; object-fit: contain; }
+.shirt-text { margin-top: 18px; text-align: center; }
+.shirt-main {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 0.10em;
+  color: #4aba8a;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.shirt-rule { width: 120px; height: 1px; background: rgba(74,186,138,0.3); margin: 10px auto; }
+.shirt-sub { font-family: 'IMFell', Georgia, serif; font-style: italic; font-size: 13px; color: rgba(74,186,138,0.5); letter-spacing: 0.1em; }
+
+/* ── Controls ── */
+.controls {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 12px; background: rgba(0,0,0,0.8); padding: 12px 20px; border-radius: 8px;
+}
+button {
+  background: #4aba8a; color: #0a1a0d; border: none; padding: 10px 22px;
+  font-weight: 700; font-size: 13px; border-radius: 5px; cursor: pointer;
+}
+button:hover { background: #3da070; }
+button.sec { background: rgba(255,255,255,0.08); color: #f0ede8; }
+button.sec:hover { background: rgba(255,255,255,0.15); }
+label { color: rgba(240,237,232,0.5); font-size: 12px; align-self: center; font-family: sans-serif; }
+input[type=range] { width: 100px; }
+input[type=color] { width: 36px; height: 28px; border: none; background: none; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<!-- Raw print graphic -->
+<div id="raw-graphic">
+  <div class="coin-wrap">
+    <img class="coin-img" id="coin-img" src="../../gather/assets/ecclesia/ecclesia-coin-merged-v1.png" alt="Celtic triskelion">
+  </div>
+  <div class="text-block">
+    <span class="main-line" id="line1">WE ARE ALL</span>
+    <span class="main-line" id="line2">ON THE WAY.</span>
+    <div class="rule" id="rule-el"></div>
+    <span class="sub-line" id="sub-el">Ecclesia · A Fresh Expression</span>
+  </div>
+</div>
+
+<!-- Shirt mockup -->
+<div class="shirt-wrap">
+  <svg class="shirt-svg" viewBox="0 0 560 640" xmlns="http://www.w3.org/2000/svg">
+    <path d="M172 24 C210 24 245 50 280 50 C315 50 350 24 388 24 L448 64 L536 104 L528 224 L448 208 L448 596 L112 596 L112 208 L32 224 L24 104 L112 64 Z" fill="#0a0a0a"/>
+    <path d="M228 34 Q280 88 332 34 Q304 24 280 50 Q256 24 228 34 Z" fill="#0d0d0d"/>
+    <line x1="112" y1="208" x2="448" y2="208" stroke="#1a1a1a" stroke-width="1.5"/>
+    <line x1="112" y1="592" x2="448" y2="592" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="112" y1="208" x2="112" y2="596" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="448" y1="208" x2="448" y2="596" stroke="#1a1a1a" stroke-width="1"/>
+  </svg>
+  <div class="shirt-content">
+    <img class="shirt-coin" src="../../gather/assets/ecclesia/ecclesia-coin-merged-v1.png" alt="">
+    <div class="shirt-text">
+      <div class="shirt-main">WE ARE ALL<br>ON THE WAY.</div>
+      <div class="shirt-rule"></div>
+      <div class="shirt-sub">Ecclesia · A Fresh Expression</div>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <label>Color</label>
+  <input type="color" id="color-pick" value="#4aba8a" oninput="setColor(this.value)">
+  <label>Size</label>
+  <input type="range" id="font-size" min="32" max="72" value="54" oninput="setSize(this.value)">
+  <button class="sec" onclick="toggleSub()">Sub ±</button>
+  <button onclick="exportPNG()">↓ Export PNG</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+function setColor(v) {
+  document.querySelectorAll('.main-line,.shirt-main').forEach(el => el.style.color = v);
+  document.querySelectorAll('.rule,.shirt-rule').forEach(el => el.style.background = v + '55');
+  document.querySelectorAll('.sub-line,.shirt-sub').forEach(el => el.style.color = v + '88');
+}
+function setSize(v) {
+  document.querySelectorAll('.main-line').forEach(el => el.style.fontSize = v + 'px');
+}
+let subVisible = true;
+function toggleSub() {
+  subVisible = !subVisible;
+  document.querySelectorAll('.sub-line,.shirt-sub,.rule,.shirt-rule').forEach(el => el.style.display = subVisible ? '' : 'none');
+}
+async function exportPNG() {
+  const el = document.getElementById('raw-graphic');
+  const canvas = await html2canvas(el, { backgroundColor: null, scale: 2, useCORS: true });
+  const a = document.createElement('a');
+  a.download = 'ECCLESIA-03-coin-celtic-BLACK.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+}
+</script>
+</body>
+</html>
