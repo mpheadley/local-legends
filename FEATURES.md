@@ -172,3 +172,9 @@
   - La-dee-ga Chapbook $4.99 (3 essays, instant PDF)
   - CLT Conditions Reporter (trail SaaS, notify-me email capture for interest list)
 - All CLT sections gate on `trail.slug === "chief-ladiga-trail"` — safe for other trails
+
+## 2026-08-05 — Masthead + Deepgram TTS
+- /masthead — editorial statement, contributor grid (8 contributors), per-contributor record modal with webcam + teleprompter overlay
+- /api/masthead/speak — Deepgram TTS proxy (aura-asteria-en); "Listen" button on editorial statement
+- Camera device selector on masthead (DSLR-ready via HDMI capture card)
+- Links to ReelStudio /dialogue for full podcast dialogue mode
