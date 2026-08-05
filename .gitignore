@@ -75,3 +75,5 @@ content/businesses/
 # National guides — staged for review, not for SL
 content/listicles-national-staging/
 public/print-files/*.zip
+*.zip.bak
+*.zip.bak2
