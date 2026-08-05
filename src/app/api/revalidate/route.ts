@@ -8,6 +8,11 @@ export async function POST(request: Request) {
   if (!secret || secret !== process.env.CMS_ADMIN_TOKEN) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
+  const body = await request.json().catch(() => ({}));
+  const path = body?.path as string | undefined;
+  if (path) {
+    revalidatePath(path);
+  }
   revalidatePath("/", "layout");
-  return NextResponse.json({ revalidated: true });
+  return NextResponse.json({ revalidated: true, path: path ?? "layout" });
 }
