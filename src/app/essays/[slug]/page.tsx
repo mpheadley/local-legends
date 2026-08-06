@@ -160,7 +160,12 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const post = getJournalPostBySlug(slug);
   if (!post || !post.frontmatter.published) return {};
 
+  const unlistedRobots = post.frontmatter.unlisted
+    ? { robots: { index: false, follow: false } }
+    : {};
+
   return {
+    ...unlistedRobots,
     title: post.frontmatter.title,
     description: post.frontmatter.excerpt,
     alternates: { canonical: `/essays/${slug}` },
