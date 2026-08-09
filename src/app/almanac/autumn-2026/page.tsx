@@ -36,12 +36,12 @@ const p: React.CSSProperties = {
 };
 
 const cal = [
-  ["Sep – Oct", "Kentuck Festival of the Arts", "Northport — the big one, worth the drive west. [EDIT: confirm 2026 dates]"],
-  ["Early Oct", "Jacksonville fall gatherings & JSU homecoming", "Jacksonville [EDIT: confirm dates]"],
-  ["Mid Oct", "Piedmont & Calhoun County fall festivals", "Piedmont / countywide [EDIT: confirm dates + names]"],
-  ["Oct 17", "The Aisle — fall event anchor", "Gadsden area — bridal + gathering"],
-  ["Late Oct", "Church fall festivals & trunk-or-treats", "Countywide — the small ones that matter"],
-  ["Nov", "Harvest suppers & first-frost markets", "Regional [EDIT: confirm]"],
+  ["Oct 3", "Oxfordfest", "Downtown Oxford, first Saturday — 33 years of arts, crafts, music, and food on Main Street. [EDIT: confirm 2026 date]"],
+  ["Oct", "Taste of the Town", "Jacksonville — the City, JSU, and area folks benefiting the Jacksonville Christian Outreach Center. [EDIT: confirm date]"],
+  ["Oct 17", "The Aisle", "Gadsden area — bridal + gathering, our own fall anchor"],
+  ["Oct 17–18", "Kentuck Festival of the Arts", "Now in Tuscaloosa (Snow Hinton Park) — 270+ artists, worth the drive west. Note the clash with The Aisle"],
+  ["Oct 24–25", "Neewhollah on Noble", "Noble Street, Anniston — hay rides, costume contests for folks and pets, treat walks. The local one. [EDIT: confirm last-weekend date]"],
+  ["Nov", "Harvest suppers & first-frost markets", "Countywide — the small church-and-fire-hall ones that matter"],
 ];
 
 const lore = [
@@ -100,14 +100,9 @@ export default function AutumnIssue() {
         <h2 style={h2}>When It Blooms &mdash; and When It Goes Hard</h2>
         <p style={p}>
           Northeast Alabama sits where the mountains break the frost line. The first killing
-          frost for Calhoun County usually lands in the <strong>last week of October into
-          the first days of November</strong>, and the low spots &mdash; the hollows off the
-          Coosa and along the creeks &mdash; take it a week before the ridges do. If you farm
-          a bottom, you already knew that.{" "}
-          <span style={{ color: "var(--color-ll-text-light)" }}>
-            [EDIT: confirm local median first-frost date from NWS/climate normals for
-            Anniston/Calhoun.]
-          </span>
+          frost for Calhoun County usually lands in the <strong>first two weeks of
+          November</strong>, and the low spots &mdash; the hollows and the creek bottoms &mdash;
+          take it a week before the ridges do. If you farm a bottom, you already knew that.
         </p>
         <p style={p}>
           Put in before the ground goes hard: garlic and shallots (set the cloves a
@@ -119,10 +114,10 @@ export default function AutumnIssue() {
         </p>
         <p style={p}>
           What&rsquo;s turning: the sourwoods and black gums go first and reddest, then the
-          maples, then the oaks hold their brown into December. Dogwood berries redden for
-          the birds. If you want the color drive, the ridges above Jacksonville and up
-          toward the Talladega National Forest peak{" "}
-          <span style={{ color: "var(--color-ll-text-light)" }}>[EDIT: confirm peak-color window]</span>.
+          sweetgums and maples flare, the hickories glow gold, the oaks hold deep orange and
+          then brown into December. Dogwood berries redden for the birds. For the color
+          drive, the Talladega Scenic Drive (AL 281), Cheaha State Park, and the Rock Garden
+          overlook peak from <strong>the end of October through mid-November</strong>.
         </p>
 
         {/* THE CALENDAR */}
