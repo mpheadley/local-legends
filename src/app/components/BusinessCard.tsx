@@ -13,6 +13,10 @@ export interface GuideBusiness {
   photos?: string[];
   quote?: string;
   quoteAttrib?: string;
+  badge?: string;
+  profile?: string;
+  aisleUrl?: string;
+  registryUrl?: string;
 }
 
 function telHref(t: string) {
@@ -31,9 +35,15 @@ export function BusinessCard({ b, index }: { b: GuideBusiness; index: number }) 
   return (
     <div style={{
       display: "flex", flexDirection: "column", background: "#fff",
-      border: "1px solid rgba(154,108,47,0.15)", borderRadius: "12px",
+      border: b.badge ? "2px solid #9a6c2f" : "1px solid rgba(154,108,47,0.15)", borderRadius: "12px",
       overflow: "hidden",
     }}>
+      {/* Expo vendor badge */}
+      {b.badge && (
+        <div style={{ background: "#9a6c2f", color: "#fff", fontFamily: "var(--font-body)", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.35rem 1rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
+          ★ {b.badge}
+        </div>
+      )}
       {/* Photo / Carousel */}
       {hasPhoto && (
         <div style={{ position: "relative", width: "100%", height: "220px", background: "#f0ede6" }}>
@@ -143,7 +153,26 @@ export function BusinessCard({ b, index }: { b: GuideBusiness; index: number }) 
               Visit site →
             </a>
           )}
+          {b.aisleUrl && (
+            <a href={b.aisleUrl} target="_blank" rel="noopener" style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", fontWeight: 600, color: "#9a6c2f", background: "#fff5e6", border: "1px solid #9a6c2f", padding: "0.3rem 0.8rem", borderRadius: "5px", textDecoration: "none" }}>
+              See at The Aisle →
+            </a>
+          )}
         </div>
+        {(b.profile || b.registryUrl) && (
+          <div style={{ display: "flex", gap: "1rem", marginTop: "0.75rem", flexWrap: "wrap" }}>
+            {b.profile && (
+              <a href={b.profile} style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#9a6c2f", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.25rem" }}>
+                Read their story →
+              </a>
+            )}
+            {b.registryUrl && (
+              <a href={b.registryUrl} style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", color: "#6b5040", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.25rem" }}>
+                Add to registry →
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

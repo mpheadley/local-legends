@@ -134,6 +134,8 @@ export default async function ListiclePage({
   const others = getAllListicles().filter((x) => x.slug !== slug).slice(0, 6);
   const isEvent = l.events && l.events.length > 0;
   const isCard = !isEvent && l.businesses && l.businesses.length > 0;
+  const weddingCategories = ["photographer", "florist", "venue", "catering", "bridal", "chapel", "jeweler", "jewelry", "bakery", "cake", "hair salon", "salon", "spa", "rental", "music", "alterations", "boutique", "nail", "wedding planner", "planner"];
+  const showAisleAd = weddingCategories.some(c => (l.category ?? "").toLowerCase().includes(c) || l.tags.some(t => t.toLowerCase().includes(c)));
   const isOutdoors = l.category === "outdoors";
   const cityMerch = isOutdoors
     ? getMerchForOutdoors(6)
@@ -240,6 +242,26 @@ export default async function ListiclePage({
           <article className="prose prose-lg max-w-none" style={{ fontFamily: "var(--font-body)" }}>
             <MDXRemote source={l.content} components={mdxComponents} />
           </article>
+        )}
+
+        {/* The Aisle Expo house ad — wedding-category listicles only */}
+        {showAisleAd && (
+          <div style={{ marginTop: "2rem", background: "#1a1208", borderRadius: "12px", padding: "1.5rem 1.75rem", display: "grid", gridTemplateColumns: "1fr auto", gap: "1rem", alignItems: "center" }}>
+            <div>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9a6c2f", marginBottom: "0.35rem" }}>
+                The Aisle · Bridal Expo · Oct 18, 2026
+              </p>
+              <p style={{ fontFamily: "var(--font-heading)", fontSize: "1.15rem", color: "#f0ede6", lineHeight: 1.35, marginBottom: "0.4rem" }}>
+                Meet these vendors in person at Anniston Museums &amp; Gardens.
+              </p>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "rgba(240,237,230,0.7)", lineHeight: 1.55 }}>
+                Free admission. Local vendors. Northeast Alabama's bridal expo.
+              </p>
+            </div>
+            <a href="https://theaisle.app" target="_blank" rel="noopener" style={{ display: "inline-block", background: "#9a6c2f", color: "#f0ede6", fontFamily: "var(--font-body)", fontSize: "0.8rem", fontWeight: 600, padding: "0.65rem 1.2rem", borderRadius: "6px", textDecoration: "none", whiteSpace: "nowrap" }}>
+              Get tickets →
+            </a>
+          </div>
         )}
 
         {isEvent && (

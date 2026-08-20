@@ -14,6 +14,10 @@ export interface GuideBusiness {
   photos?: string[];
   quote?: string;
   quoteAttrib?: string;
+  badge?: string;       // e.g. "Featured at The Aisle · Oct 18"
+  profile?: string;     // SL profile URL, e.g. /profiles/rons-goode-bbq
+  aisleUrl?: string;    // theaisle.app vendor or expo URL
+  registryUrl?: string; // Gather Registry link
 }
 
 export interface GuideEvent {
