@@ -209,7 +209,25 @@ export default function FeaturedTilt({ cards }: { cards: FeaturedCard[] }) {
         ref={sectionRef}
         style={{ perspective: "1200px" }}
       >
-        <h1 className="sr-only">Featured Stories</h1>
+        <h1
+          style={{
+            position: "absolute",
+            top: "1.5rem",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 10,
+            fontFamily: "var(--font-heading)",
+            fontSize: "clamp(0.75rem, 1.5vw, 1rem)",
+            fontWeight: 400,
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "rgba(250,250,247,0.55)",
+            whiteSpace: "nowrap",
+            pointerEvents: "none",
+          }}
+        >
+          Southern Legends
+        </h1>
 
         {/* Profile cards */}
         {cards.map((card, i) => (

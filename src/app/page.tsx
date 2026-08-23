@@ -178,38 +178,39 @@ export default function HomePage() {
                 </p>
               </Link>
 
-              {/* Right — shirt full height */}
-              {featuredJournal.frontmatter.merchImage && featuredJournal.frontmatter.merchUrl && (
-                <a
-                  href={featuredJournal.frontmatter.merchUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative shrink-0 self-stretch overflow-hidden transition-opacity hover:opacity-80"
-                  style={{ width: "9rem" }}
-                >
-                  <Image
-                    src={featuredJournal.frontmatter.merchImage}
-                    alt="I Contain Multitudes shirt"
-                    fill
-                    className="object-cover"
-                    style={{ objectPosition: "center center" }}
-                    sizes="144px"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0"
-                    style={{ background: "linear-gradient(to top, rgba(20,16,14,0.75) 0%, transparent 50%)" }}
-                  />
-                  <p
-                    className="absolute bottom-0 left-0 right-0 text-center text-xs pb-3 px-2"
-                    style={{ fontFamily: "var(--font-heading)", color: "rgba(250,220,150,0.9)" }}
-                  >
-                    Support this work &rarr;
-                  </p>
-                </a>
-              )}
             </div>
 
+          </div>
+        </section>
+      )}
+
+      {/* ─── Merch / Support section (split from journal teaser) ─── */}
+      {featuredJournal && featuredJournal.frontmatter.merchImage && featuredJournal.frontmatter.merchUrl && (
+        <section className="gradient-hero no-pseudo-topo" style={{ position: "relative" }}>
+          <div aria-hidden="true" className="grid-topo" />
+          <div className="mx-auto max-w-3xl px-6 py-8 md:py-10" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(250,220,150,0.8)", marginBottom: "0.75rem" }}>
+              Support This Work
+            </p>
+            <a
+              href={featuredJournal.frontmatter.merchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                border: "1px solid rgba(250,250,247,0.25)",
+                color: "#FAFAF7",
+                padding: "0.75rem 1.5rem",
+                fontSize: "0.7rem",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                fontFamily: "var(--font-body)",
+              }}
+            >
+              Get the shirt &rarr;
+            </a>
           </div>
         </section>
       )}
@@ -406,6 +407,25 @@ export default function HomePage() {
           </Link>
         </p>
       </div>
+
+      {/* ─── Guide Band ─── */}
+      <section style={{ padding: "4rem 2rem", background: "rgba(0,0,0,0.02)" }}>
+        <div style={{ maxWidth: "640px", margin: "0 auto", display: "flex", gap: "2rem", alignItems: "center", flexWrap: "wrap" }}>
+          <img src="/images/matt-headshot-studio-canonical.jpg" alt="Matt Headley — Southern Legends" width={96} height={96}
+               style={{ borderRadius: "50%", objectFit: "cover", border: "2px solid rgba(0,0,0,0.1)", flexShrink: 0 }} />
+          <div>
+            <h2 style={{ fontFamily: "Georgia, serif", fontSize: "1.4rem", fontWeight: 700, marginBottom: "0.5rem" }}>
+              I write these stories so they&rsquo;re not lost.
+            </h2>
+            <p style={{ opacity: 0.65, lineHeight: 1.7, marginBottom: "1rem" }}>
+              Matt Headley, founder. Northeast Alabama history and culture — told by someone who lives here.
+            </p>
+            <a href="mailto:matt@gatherstudio.app" style={{ fontWeight: 600, color: "var(--primary, #c9a96e)", textDecoration: "none" }}>
+              Get in touch →
+            </a>
+          </div>
+        </div>
+      </section>
 
       <NewsletterCapture source="homepage" />
     </main>
