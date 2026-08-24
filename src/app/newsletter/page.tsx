@@ -67,7 +67,7 @@ export default function NewsletterPage() {
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: "url('/images/topo-bg.png')",
+            backgroundImage: "url('/images/topo-7.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -260,7 +260,7 @@ export default function NewsletterPage() {
             }}
           >
             <Image
-              src="/images/headshots/ghibli-gs-portrait-v3.png"
+              src="/images/matt-headshot-pro.webp"
               alt="Matt Headley"
               width={80}
               height={80}
